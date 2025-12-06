@@ -62,9 +62,7 @@ async function renderDetailView(localityName) {
 
         <div class="detail-header">
                 <a href="#/" class="back-button">← Back to Rankings</a>
-                <div class="detail-hero-image" style="width: 100%; height: 300px; overflow: hidden; border-radius: 12px; margin-top: 1rem; margin-bottom: 1rem;">
-                     <img src="${getLocalityImage(locality.name)}" alt="${locality.name}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='images/skyline.png'">
-                </div>
+                <div class="detail-hero-map" id="detail-map-hero" style="width: 100%; height: 350px; border-radius: 12px; margin-top: 1rem; margin-bottom: 1rem; z-index: 1;"></div>
                 <div class="detail-title">
                     <span class="category-icon-large">${categoryIcon}</span>
                     <div>
@@ -72,6 +70,7 @@ async function renderDetailView(localityName) {
                         <p class="category-label-large">${primaryCategory}</p>
                     </div>
                 </div>
+                <!-- ... existing header content ... -->
                 <div class="tags-container-large">
                     ${tags.map(tag => `<span class="tag-large">${tag}</span>`).join('')}
                 </div>
@@ -80,6 +79,7 @@ async function renderDetailView(localityName) {
             <div class="detail-grid">
                 <!-- Left column: Scores and key metrics -->
                 <div class="detail-main">
+                    <!-- ... existing content ... -->
                     <div class="metric-card">
                         <h3>📊 Overall Score</h3>
                         <div class="score-display">${val(locality.overall_score, 2)}</div>
@@ -239,18 +239,25 @@ async function renderDetailView(localityName) {
         app.innerHTML = html;
         console.log('[Debug] renderDetailView COMPLETE');
 
+        // Initialize Leaflet Map for Hero Section
+        const lat = locality.latitude;
+        const lng = locality.longitude;
+
+        if (lat && lng) {
+            const map = L.map('detail-map-hero').setView([lat, lng], 14);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+
+            L.marker([lat, lng]).addTo(map)
+                .bindPopup(`<b>${locality.name}</b><br>Rank #${locality.rank || 'N/A'}`)
+                .openPopup();
+        }
+
+
     } catch (err) {
         console.error('[Debug] Error in renderDetailView:', err);
         app.innerHTML = `<div class="error">JavaScript Error: ${err.message}</div>`;
     }
-}
-
-// Helper to get image based on locality name
-function getLocalityImage(name) {
-    const n = name.toLowerCase();
-    if (n.includes('technopark') || n.includes('kazhak') || n.includes('akkulam')) return 'images/tech.png';
-    if (n.includes('kovalam') || n.includes('beach') || n.includes('shangumugham') || n.includes('veli')) return 'images/beach.png';
-    if (n.includes('kowdiar') || n.includes('fort') || n.includes('padmanabha')) return 'images/palace.png';
-    if (n.includes('sreekaryam')) return 'images/skyline.png';
-    return 'images/skyline.png';
 }

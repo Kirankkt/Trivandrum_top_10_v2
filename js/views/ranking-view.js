@@ -59,9 +59,7 @@ async function renderRankingView() {
           ${medal ? `<span class="rank-medal">${medal}</span>` : ''}
         </div>
         
-        <div class="locality-image-container">
-            <img src="${getLocalityImage(locality.name)}" alt="${locality.name}" class="locality-img" onerror="this.src='images/skyline.png'">
-        </div>
+        <div class="locality-map-container" id="map-list-${index}" onclick="event.stopPropagation()"></div>
 
         <div class="locality-info">
           <div class="locality-header">
@@ -150,9 +148,42 @@ async function renderRankingView() {
 
   app.innerHTML = html;
 
+  // Initialize Maps for Top 10
+  top10.forEach((locality, index) => {
+    const lat = locality.latitude || locality.data?.latitude;
+    const lng = locality.longitude || locality.data?.longitude;
+
+    if (lat && lng) {
+      setTimeout(() => {
+        const map = L.map(`map-list-${index}`, {
+          center: [lat, lng],
+          zoom: 13,
+          zoomControl: false,
+          dragging: false,
+          scrollWheelZoom: false,
+          doubleClickZoom: false,
+          boxZoom: false,
+          keyboard: false,
+          attributionControl: false
+        });
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // Add a marker
+        L.marker([lat, lng]).addTo(map);
+      }, 100 * index); // Stagger initialization slightly
+    }
+  });
+
+
   // Add click handlers for detail view
   document.querySelectorAll('.locality-card').forEach(card => {
     card.addEventListener('click', (e) => {
+      // Don't navigate if clicking map (managed by stopPropagation above, but safety check)
+      if (e.target.closest('.locality-map-container')) return;
+
       const name = card.dataset.locality;
       window.location.hash = `/locality/${name}`;
     });
@@ -198,15 +229,5 @@ function recalculateRankings(localities, weights) {
 
 
   return recalculated;
-}
-
-// Helper to get image based on locality name
-function getLocalityImage(name) {
-  const n = name.toLowerCase();
-  if (n.includes('technopark') || n.includes('kazhak') || n.includes('akkulam')) return 'images/tech.png';
-  if (n.includes('kovalam') || n.includes('beach') || n.includes('shangumugham') || n.includes('veli')) return 'images/beach.png';
-  if (n.includes('kowdiar') || n.includes('fort') || n.includes('padmanabha')) return 'images/palace.png';
-  if (n.includes('sreekaryam')) return 'images/skyline.png'; // Use general for Sreekaryam
-  return 'images/skyline.png';
 }
 
