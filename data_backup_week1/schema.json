@@ -1,0 +1,324 @@
+{
+  "categories": {
+    "localities": {
+      "id": "localities",
+      "name": "Localities",
+      "description": "Residential areas in Trivandrum",
+      "icon": "🏘️",
+      "scoringCategories": [
+        {
+          "id": "accessibility",
+          "name": "Accessibility & Connectivity",
+          "weight": 0.25,
+          "icon": "🚗",
+          "metrics": [
+            {
+              "id": "city_centre_time",
+              "name": "Travel time to City Centre",
+              "description": "Average peak-time drive to Palayam/Statue/East Fort",
+              "unit": "minutes",
+              "min": 5,
+              "max": 45,
+              "invertScale": true,
+              "weight": 0.3,
+              "inputType": "number"
+            },
+            {
+              "id": "technopark_time",
+              "name": "Travel time to Technopark",
+              "description": "Commute time to major IT hub",
+              "unit": "minutes",
+              "min": 10,
+              "max": 60,
+              "invertScale": true,
+              "weight": 0.25,
+              "inputType": "number"
+            },
+            {
+              "id": "airport_time",
+              "name": "Travel time to Airport",
+              "description": "Drive time to TRV airport",
+              "unit": "minutes",
+              "min": 5,
+              "max": 60,
+              "invertScale": true,
+              "weight": 0.15,
+              "inputType": "number"
+            },
+            {
+              "id": "public_transport",
+              "name": "Public Transport Score",
+              "description": "Availability of KSRTC buses and proximity to major junctions",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.2,
+              "inputType": "slider"
+            },
+            {
+              "id": "road_quality",
+              "name": "Road Quality & Traffic",
+              "description": "Surface quality and typical congestion level",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.1,
+              "inputType": "slider"
+            }
+          ]
+        },
+        {
+          "id": "safety",
+          "name": "Safety & Cleanliness",
+          "weight": 0.2,
+          "icon": "🛡️",
+          "metrics": [
+            {
+              "id": "safety_score",
+              "name": "Safety Score",
+              "description": "Overall safety including crime rates and street lighting",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.4,
+              "inputType": "slider"
+            },
+            {
+              "id": "cleanliness",
+              "name": "Cleanliness & Waste Management",
+              "description": "Garbage collection effectiveness and overall maintenance",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.3,
+              "inputType": "slider"
+            },
+            {
+              "id": "flooding_risk",
+              "name": "Flooding Risk",
+              "description": "Monsoon waterlogging and drainage quality",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": true,
+              "weight": 0.3,
+              "inputType": "slider"
+            }
+          ]
+        },
+        {
+          "id": "amenities",
+          "name": "Basic Services & Amenities",
+          "weight": 0.2,
+          "icon": "🏫",
+          "metrics": [
+            {
+              "id": "schools",
+              "name": "Education Access",
+              "description": "Quality and quantity of schools nearby",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.25,
+              "inputType": "slider"
+            },
+            {
+              "id": "healthcare",
+              "name": "Healthcare Access",
+              "description": "Proximity to hospitals and clinics",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.25,
+              "inputType": "slider"
+            },
+            {
+              "id": "shopping",
+              "name": "Shopping & Daily Necessities",
+              "description": "Supermarkets, groceries, pharmacies, banks",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.2,
+              "inputType": "slider"
+            },
+            {
+              "id": "lifestyle",
+              "name": "Lifestyle Amenities",
+              "description": "Cafes, restaurants, gyms, parks, entertainment",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.15,
+              "inputType": "slider"
+            },
+            {
+              "id": "walkability",
+              "name": "Walkability",
+              "description": "Sidewalks, safe crossings, pedestrian-friendly",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.15,
+              "inputType": "slider"
+            }
+          ]
+        },
+        {
+          "id": "environment",
+          "name": "Environment & Urban Form",
+          "weight": 0.15,
+          "icon": "🌳",
+          "metrics": [
+            {
+              "id": "green_cover",
+              "name": "Green Cover & Open Space",
+              "description": "Tree cover, parks, visible greenery",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.35,
+              "inputType": "slider"
+            },
+            {
+              "id": "air_quality",
+              "name": "Air Quality",
+              "description": "Relative air quality and pollution levels",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.25,
+              "inputType": "slider"
+            },
+            {
+              "id": "noise_level",
+              "name": "Noise & Traffic Stress",
+              "description": "Noise pollution and traffic congestion stress",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": true,
+              "weight": 0.25,
+              "inputType": "slider"
+            },
+            {
+              "id": "microclimate",
+              "name": "Topography & Microclimate",
+              "description": "Elevation, breeziness, natural cooling",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.15,
+              "inputType": "slider"
+            }
+          ]
+        },
+        {
+          "id": "realestate",
+          "name": "Housing & Real Estate",
+          "weight": 0.1,
+          "icon": "🏠",
+          "metrics": [
+            {
+              "id": "land_price",
+              "name": "Land Price per Cent",
+              "description": "Median land price",
+              "unit": "lakhs",
+              "min": 5,
+              "max": 100,
+              "invertScale": false,
+              "weight": 0.2,
+              "inputType": "number"
+            },
+            {
+              "id": "apartment_price",
+              "name": "Apartment Price per Sq Ft",
+              "description": "Median apartment rate",
+              "unit": "₹",
+              "min": 2000,
+              "max": 10000,
+              "invertScale": false,
+              "weight": 0.2,
+              "inputType": "number"
+            },
+            {
+              "id": "prestige",
+              "name": "Prestige & Brand",
+              "description": "Aspirational value and social standing",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.35,
+              "inputType": "slider"
+            },
+            {
+              "id": "housing_variety",
+              "name": "Housing Variety",
+              "description": "Mix of apartments, villas, independent houses",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.25,
+              "inputType": "slider"
+            }
+          ]
+        },
+        {
+          "id": "growth",
+          "name": "Economy & Future Growth",
+          "weight": 0.1,
+          "icon": "📈",
+          "metrics": [
+            {
+              "id": "job_access",
+              "name": "Job Access Score",
+              "description": "Weighted access to major employment hubs",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.4,
+              "inputType": "slider"
+            },
+            {
+              "id": "commercial_vibrancy",
+              "name": "Local Commercial Activity",
+              "description": "Offices, institutions, employers in locality",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.3,
+              "inputType": "slider"
+            },
+            {
+              "id": "infrastructure_pipeline",
+              "name": "Future Infrastructure",
+              "description": "Smart City projects and planned developments",
+              "unit": "rating",
+              "min": 1,
+              "max": 5,
+              "invertScale": false,
+              "weight": 0.3,
+              "inputType": "slider"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

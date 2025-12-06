@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivandrum Top 10 - Best Localities Ranked</title>
+    <meta name="description"
+        content="Data-driven ranking of Trivandrum's best localities based on quality of life, economic factors, and sustainability.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <!-- Top Row: Logo, Search, Actions -->
+            <div class="header-top">
+                <a href="#/" class="logo">
+                    <span class="logo-icon">🏆</span>
+                    <span class="logo-text">Trivandrum Top 10</span>
+                </a>
+
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-input" placeholder="Search localities..." id="search-input">
+                </div>
+
+                <div class="header-actions">
+                    <a href="#/customize" class="header-btn btn-text">Customize</a>
+                    <a href="#/methodology" class="header-btn btn-text">How it Works</a>
+                </div>
+            </div>
+
+            <!-- Category Tabs -->
+            <nav class="category-tabs">
+                <a href="#/" class="category-tab active" data-category="localities">
+                    <span class="tab-icon">🏘️</span>
+                    <span>Localities</span>
+                </a>
+                <a href="#" class="category-tab disabled" data-category="restaurants">
+                    <span class="tab-icon">🍽️</span>
+                    <span>Restaurants</span>
+                </a>
+                <a href="#" class="category-tab disabled" data-category="hotels">
+                    <span class="tab-icon">🏨</span>
+                    <span>Hotels</span>
+                </a>
+                <a href="#" class="category-tab disabled" data-category="experiences">
+                    <span class="tab-icon">🎭</span>
+                    <span>Experiences</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="app" class="container">
+        <!-- Dynamic content will be loaded here -->
+        <div class="loading">Loading rankings...</div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 FairRate Kerala. Powered by 41 data points per locality.</p>
+            <p class="small">Rankings based on EoLI framework • Updated Dec 2024</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/utils/data-manager.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/views/ranking-view.js"></script>
+    <script src="js/views/customize-view.js"></script>
+    <script src="js/views/methodology-view.js"></script>
+    <script src="js/views/detail-view.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
