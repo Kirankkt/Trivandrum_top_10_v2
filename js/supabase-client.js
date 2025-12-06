@@ -45,3 +45,40 @@ async function trackLocalityView(localityName) {
 
 // Make helper global so views can use it
 window.trackLocalityView = trackLocalityView;
+
+// Get trending localities (most viewed in last 7 days)
+async function getTrendingLocalities(limit = 3) {
+    if (!supabase) return [];
+
+    try {
+        const oneWeekAgo = new Date();
+        oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+
+        const { data, error } = await supabase
+            .from('locality_views')
+            .select('locality_name')
+            .gte('viewed_at', oneWeekAgo.toISOString());
+
+        if (error) throw error;
+
+        // Count occurrences
+        const counts = {};
+        data.forEach(row => {
+            counts[row.locality_name] = (counts[row.locality_name] || 0) + 1;
+        });
+
+        // Sort by count and return top N
+        const sorted = Object.entries(counts)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, limit)
+            .map(entry => entry[0]);
+
+        console.log('[Supabase] Trending localities:', sorted);
+        return sorted;
+    } catch (err) {
+        console.warn('[Supabase] Failed to get trending:', err.message);
+        return [];
+    }
+}
+
+window.getTrendingLocalities = getTrendingLocalities;

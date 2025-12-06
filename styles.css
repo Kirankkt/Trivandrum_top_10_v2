@@ -1763,3 +1763,31 @@ footer .small {
 .view-details-btn {
   display: none;
 }
+
+/* Trending Badge */
+.trending-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  margin-left: 0.5rem;
+  animation: pulse-glow 2s infinite;
+  vertical-align: middle;
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(255, 107, 53, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.8);
+  }
+}

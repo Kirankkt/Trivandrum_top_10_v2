@@ -9,6 +9,10 @@ async function renderRankingView() {
     return;
   }
 
+  // Get trending localities from Supabase
+  const trendingLocalities = window.getTrendingLocalities ? await window.getTrendingLocalities(3) : [];
+  console.log('[Ranking] Trending localities:', trendingLocalities);
+
   const weights = getWeights();
   const isCustom = weights.qol !== 0.55 || weights.economic !== 0.20 || weights.sustainability !== 0.25;
 
@@ -63,7 +67,7 @@ async function renderRankingView() {
 
         <div class="locality-info">
           <div class="locality-header">
-            <h3 class="locality-name">${locality.name}</h3>
+            <h3 class="locality-name">${locality.name}${trendingLocalities.includes(locality.name) ? ' <span class="trending-badge">🔥 Trending</span>' : ''}</h3>
             <span class="category-badge">
               <span>${categoryIcon}</span>
               <span>${primaryCategory}</span>
