@@ -8,7 +8,7 @@ let supabase = null;
 try {
     if (window.supabase) {
         supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-        console.log('[Supabase] Client initialized successfully');
+        console.log('✅ [Supabase] Connected to project:', SUPABASE_URL);
     } else {
         console.error('[Supabase] Library not found. Check script tag in index.html');
     }

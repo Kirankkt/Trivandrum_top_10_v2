@@ -29,7 +29,9 @@
                 "housing_variety": 4,
                 "job_access": 3,
                 "commercial_vibrancy": 2,
-                "infrastructure_pipeline": 4
+                "infrastructure_pipeline": 4,
+                "latitude": 8.5241,
+                "longitude": 76.9538
             }
         },
         {
@@ -61,7 +63,9 @@
                 "housing_variety": 5,
                 "job_access": 5,
                 "commercial_vibrancy": 5,
-                "infrastructure_pipeline": 5
+                "infrastructure_pipeline": 5,
+                "latitude": 8.5215,
+                "longitude": 76.9360
             }
         },
         {
@@ -93,7 +97,9 @@
                 "housing_variety": 4,
                 "job_access": 5,
                 "commercial_vibrancy": 4,
-                "infrastructure_pipeline": 4
+                "infrastructure_pipeline": 4,
+                "latitude": 8.4988,
+                "longitude": 76.9577
             }
         }
     ]
