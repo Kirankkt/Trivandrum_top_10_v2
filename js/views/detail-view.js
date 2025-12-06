@@ -38,10 +38,15 @@ async function renderDetailView(localityName) {
         // }
         // We merge them for easier access
         const locality = {
-            ...rankedLocality.data, // Raw metrics (schools_count, etc)
-            ...rankedLocality,      // Scores (overall_score, qol_score, etc)
-            data: undefined         // Remove nested duplication
+            ...rankedLocality.data,
+            ...rankedLocality,
+            data: undefined
         };
+
+        console.log('[Debug] Locality Merged:', locality);
+        console.log('[Debug] Coordinates:', locality.latitude, locality.longitude);
+        console.log('[Debug] Data Source:', rankedLocality.data ? 'Has Data Object' : 'No Data Object');
+
 
         const categoryIcon = locality.category_icon || '🏘️';
         const primaryCategory = locality.primary_category || 'Residential';
@@ -239,7 +244,33 @@ async function renderDetailView(localityName) {
         app.innerHTML = html;
         console.log('[Debug] renderDetailView COMPLETE');
 
+        // Initialize Leaflet Map for Hero Section
+        const lat = locality.latitude;
+        const lng = locality.longitude;
+        console.log('[Debug] Map Coords:', lat, lng);
 
+        if (lat && lng) {
+            const map = L.map('detail-map-hero').setView([lat, lng], 14);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+
+            L.marker([lat, lng]).addTo(map)
+                .bindPopup(`<b>${locality.name}</b><br>Rank #${locality.rank || 'N/A'}`)
+                .openPopup();
+        } else {
+            console.warn('[Debug] No coordinates available for map');
+        }
+
+        // --- TRACKING ---
+        // Log this view to Supabase for the Recommendation Engine
+        if (window.trackLocalityView) {
+            console.log('[Supabase] Tracking view for:', locality.name);
+            window.trackLocalityView(locality.name);
+        } else {
+            console.warn('[Supabase] trackLocalityView function not found');
+        }
 
     } catch (err) {
         console.error('[Debug] Error in renderDetailView:', err);
