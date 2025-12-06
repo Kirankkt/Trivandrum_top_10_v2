@@ -257,7 +257,7 @@ async function renderDetailView(localityName) {
             }).addTo(map);
 
             L.marker([lat, lng]).addTo(map)
-                .bindPopup(`<b>${locality.name}</b><br>Rank #${locality.rank || 'N/A'}`)
+                .bindPopup(`<b>${locality.name}</b>`)
                 .openPopup();
         } else {
             console.warn('[Debug] No coordinates available for map');
