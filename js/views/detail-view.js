@@ -239,21 +239,6 @@ async function renderDetailView(localityName) {
         app.innerHTML = html;
         console.log('[Debug] renderDetailView COMPLETE');
 
-        // Initialize Leaflet Map for Hero Section
-        const lat = locality.latitude;
-        const lng = locality.longitude;
-
-        if (lat && lng) {
-            const map = L.map('detail-map-hero').setView([lat, lng], 14);
-
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© OpenStreetMap'
-            }).addTo(map);
-
-            L.marker([lat, lng]).addTo(map)
-                .bindPopup(`<b>${locality.name}</b><br>Rank #${locality.rank || 'N/A'}`)
-                .openPopup();
-        }
 
 
     } catch (err) {
