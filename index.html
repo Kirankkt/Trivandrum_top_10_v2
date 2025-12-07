@@ -23,62 +23,62 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <!-- Top Row: Logo, Search, Actions -->
-            <div class="header-top">
-                <a href="#/" class="logo">
-                    <span class="logo-icon">🏆</span>
-                    <span class="logo-text">Trivandrum Top 10</span>
-                </a>
-
-                <div class="search-bar">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" class="search-input" placeholder="Search localities..." id="search-input">
-                </div>
-
-                <div class="header-actions">
-                    <a href="#/customize" class="header-btn btn-text">Customize</a>
-                    <a href="#/methodology" class="header-btn btn-text">How it Works</a>
-                </div>
+    <!-- Dark Top Bar - Like americathebeautiful.com -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-left">
+                <span>🌴 God's Own Capital</span>
             </div>
+            <div class="top-bar-right">
+                <a href="#/methodology">Methodology</a>
+                <a href="#/about">About</a>
+            </div>
+        </div>
+    </div>
 
-            <!-- Category Tabs -->
-            <nav class="category-tabs">
-                <a href="#/" class="category-tab active" data-category="localities">
-                    <span class="tab-icon">🏘️</span>
-                    <span>Localities</span>
-                </a>
-                <a href="#" class="category-tab disabled" data-category="restaurants">
-                    <span class="tab-icon">🍽️</span>
-                    <span>Restaurants</span>
-                </a>
-                <a href="#" class="category-tab disabled" data-category="hotels">
-                    <span class="tab-icon">🏨</span>
-                    <span>Hotels</span>
-                </a>
-                <a href="#" class="category-tab disabled" data-category="experiences">
-                    <span class="tab-icon">🎭</span>
-                    <span>Experiences</span>
-                </a>
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <a href="#/" class="logo-new">
+                <span class="logo-text-new">TRIVANDRUM<br><strong>TOP 10</strong></span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="#/" class="nav-link active">Localities</a>
+                <a href="#/map" class="nav-link">Map</a>
+                <a href="#/methodology" class="nav-link">How We Rank</a>
             </nav>
+
+            <a href="#/customize" class="btn-plan">
+                <span>✨</span> Customize
+            </a>
         </div>
     </header>
 
-    <main id="app" class="container">
+    <main id="app">
         <!-- Dynamic content will be loaded here -->
         <div class="loading">Loading rankings...</div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 FairRate Kerala. Powered by 41 data points per locality.</p>
-            <p class="small">Rankings based on EoLI framework • Updated Dec 2024</p>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">TRIVANDRUM TOP 10</span>
+                <p>Data-driven locality rankings for Thiruvananthapuram</p>
+            </div>
+            <div class="footer-links">
+                <a href="#/methodology">Methodology</a>
+                <a href="#/customize">Customize</a>
+                <a href="#/about">About</a>
+            </div>
+            <div class="footer-copy">
+                <p>© 2024 FairRate Kerala. 41 data points per locality.</p>
+            </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/supabase-client.js"></script> <!-- Supabase Client Init -->
+    <script src="js/supabase-client.js"></script>
     <script src="js/utils/data-manager.js"></script>
     <script src="js/search.js"></script>
     <script src="js/views/ranking-view.js"></script>

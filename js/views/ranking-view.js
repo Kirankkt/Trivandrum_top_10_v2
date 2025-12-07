@@ -67,7 +67,7 @@ async function renderRankingView() {
             <span class="stat-label">Pillars</span>
           </div>
         </div>
-        <a href="#localities-section" class="hero-cta">Explore Localities</a>
+        <button class="hero-cta" id="explore-btn">Explore Localities</button>
       </div>
     </section>
 
@@ -227,6 +227,14 @@ async function renderRankingView() {
     resetBtn.addEventListener('click', () => {
       localStorage.removeItem('customWeights');
       window.location.reload();
+    });
+  }
+
+  // Explore button - scroll to localities
+  const exploreBtn = document.getElementById('explore-btn');
+  if (exploreBtn) {
+    exploreBtn.addEventListener('click', () => {
+      document.getElementById('localities-section').scrollIntoView({ behavior: 'smooth' });
     });
   }
 }
