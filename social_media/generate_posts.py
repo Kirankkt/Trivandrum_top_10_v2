@@ -29,7 +29,7 @@ except ImportError:
 # Configuration
 SUPABASE_URL = os.getenv('SUPABASE_URL', 'https://jhygaazqujzufiklqaah.supabase.co')
 SUPABASE_KEY = os.getenv('SUPABASE_ANON_KEY', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpoeWdhYXpxdWp6dWZpa2xxYWFoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUwMzEyMTksImV4cCI6MjA4MDYwNzIxOX0.rR_FePTK4iHQyjVSVokPX6LsKpZY-mFI0KEkfdX1Jno')
-SITE_URL = 'trivandrumtoptne.netlify.app'
+SITE_URL = 'trivandrumtop10.netlify.app'
 
 # Path to rankings data
 RANKINGS_PATH = os.path.join(os.path.dirname(__file__), '..', 'data', 'rankings.json')
