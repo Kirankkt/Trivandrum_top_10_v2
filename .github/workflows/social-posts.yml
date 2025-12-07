@@ -26,38 +26,34 @@ jobs:
           pip install python-dotenv
       
       - name: Generate social media posts
-        id: generate
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: |
           python social_media/generate_posts.py
-          echo "posts<<EOF" >> $GITHUB_OUTPUT
-          cat social_posts/latest_posts.txt >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
       
-      - name: Send email notification
+      - name: Send email with attachment
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 587
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "🔥 Trivandrum Top 10 - Social Media Posts Ready!"
+          subject: "Trivandrum Top 10 - Social Media Posts Ready!"
           to: kthomaskiran3@gmail.com, roymmathew@hotmail.com, jotmc2fmab@gmail.com
           from: Trivandrum Top 10 Bot <${{ secrets.EMAIL_USERNAME }}>
+          attachments: social_posts/latest_posts.txt
           body: |
             Hi Team!
             
-            Your social media posts for this week are ready.
-            Copy-paste them to LinkedIn, Instagram, and Facebook.
+            Your social media posts for this week are ready!
             
-            ${{ steps.generate.outputs.posts }}
+            Please open the attached file (latest_posts.txt) to see the posts for:
+            - LinkedIn
+            - Instagram  
+            - Facebook
             
+            Just copy-paste each post to the respective platform.
+            
+            Happy posting!
             - Trivandrum Top 10 Bot
-          
-      - name: Upload posts as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: social-posts
-          path: social_posts/latest_posts.txt
