@@ -1,4 +1,4 @@
-// Ranking View - TripAdvisor-Style List Layout
+// Ranking View - America The Beautiful Inspired Design
 async function renderRankingView() {
   const app = document.getElementById('app');
 
@@ -11,7 +11,6 @@ async function renderRankingView() {
 
   // Get trending localities from Supabase
   const trendingLocalities = window.getTrendingLocalities ? await window.getTrendingLocalities(3) : [];
-  console.log('[Ranking] Trending localities:', trendingLocalities);
 
   const weights = getWeights();
   const isCustom = weights.qol !== 0.55 || weights.economic !== 0.20 || weights.sustainability !== 0.25;
@@ -21,217 +20,213 @@ async function renderRankingView() {
     recalculateRankings(rankingsData.all_rankings, weights) :
     rankingsData.all_rankings;
 
-  const top10 = localities.slice(0, 10);
+  // Locality image mapping
+  const localityImages = {
+    'Sreekaryam': 'images/localities/locality_sreekaryam_1765123690965.png',
+    'Kovalam': 'images/localities/locality_kovalam_1765123711609.png',
+    'Kowdiar': 'images/localities/locality_kowdiar_1765123730297.png',
+    'Pattom': 'images/localities/locality_pattom_1765123772540.png',
+    'Varkala': 'images/localities/locality_varkala_1765123795478.png',
+    'Kazhakuttom': 'images/localities/locality_technopark_1765123812360.png',
+    'default': 'images/skyline.png'
+  };
+
+  function getLocalityImage(name) {
+    return localityImages[name] || localityImages['default'];
+  }
+
+  // Experience categories
+  const categories = [
+    { name: 'IT Professional', icon: '💻', localities: ['Sreekaryam', 'Kazhakuttom', 'Technopark'], image: 'images/tech.png' },
+    { name: 'Beach Life', icon: '🏖️', localities: ['Kovalam', 'Varkala'], image: 'images/beach.png' },
+    { name: 'Heritage & Culture', icon: '🏛️', localities: ['Kowdiar', 'Statue', 'Medical College'], image: 'images/palace.png' },
+    { name: 'Family Living', icon: '👨‍👩‍👧', localities: ['Sasthamangalam', 'Pattom', 'Vellayambalam'], image: 'images/skyline.png' }
+  ];
 
   let html = `
-    <div class="rankings-header">
-      <h2>Best Places to Live in Thiruvananthapuram</h2>
-      <p class="subtitle">Ranked by 41 data points across Quality of Life, Economic Value, and Environment & Charm</p>
-      ${isCustom ? `
-        <div class="custom-weights-indicator">
-          <span class="custom-badge">✨ Custom weights applied</span>
-          <button class="btn btn-reset-weights" id="reset-weights-btn">
-            ↺ Reset to Defaults
-          </button>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-image">
+        <img src="images/hero.png" alt="Thiruvananthapuram" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">Discover Thiruvananthapuram</h1>
+        <p class="hero-subtitle">Find Your Perfect Neighborhood in God's Own Capital</p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="stat-number">20</span>
+            <span class="stat-label">Localities</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-number">41</span>
+            <span class="stat-label">Data Points</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Pillars</span>
+          </div>
         </div>
-      ` : ''}
-    </div>
-    
-    <div class="rankings-list">
+        <a href="#localities-section" class="hero-cta">Explore Localities</a>
+      </div>
+    </section>
+
+    <!-- Experience Categories Section -->
+    <section class="categories-section">
+      <h2 class="section-title">Choose Your Lifestyle</h2>
+      <div class="categories-grid">
+        ${categories.map(cat => `
+          <div class="category-card" data-category="${cat.name}">
+            <div class="category-image">
+              <img src="${cat.image}" alt="${cat.name}" />
+              <div class="category-overlay"></div>
+            </div>
+            <h3 class="category-name">${cat.icon} ${cat.name}</h3>
+          </div>
+        `).join('')}
+      </div>
+    </section>
+
+    <!-- Localities Grid Section -->
+    <section class="localities-section" id="localities-section">
+      <div class="section-header">
+        <h2 class="section-title">Top Localities</h2>
+        <p class="section-subtitle">Ranked by Quality of Life, Economic Value & Environment</p>
+        ${isCustom ? `
+          <div class="custom-weights-banner">
+            <span>✨ Custom weights applied</span>
+            <button class="btn-reset" id="reset-weights-btn">Reset to Defaults</button>
+          </div>
+        ` : ''}
+      </div>
+      
+      <div class="localities-grid">
   `;
 
-  top10.forEach((locality, index) => {
+  // Top 10 in featured grid
+  localities.slice(0, 10).forEach((locality, index) => {
     const rank = index + 1;
-    const medal = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '';
-
-    // Get category info from locality.data
-    const categoryIcon = locality.data?.category_icon || '🏘️';
-    const primaryCategory = locality.data?.primary_category || 'Residential';
-    const tags = locality.data?.tags || [];
-
-    // Get price info safely
-    const landPrice = locality.land_price || locality.data?.land_price_per_cent_lakhs || 'N/A';
-    const aptPrice = locality.apartment_price || locality.data?.apartment_price_per_sqft || 'N/A';
-
-    // Get travel time
-    const techTime = locality.data?.technopark_time || 'N/A';
+    const isTrending = trendingLocalities.includes(locality.name);
+    const image = getLocalityImage(locality.name);
 
     html += `
-      <div class="locality-card" data-locality="${locality.name}">
-        <div class="rank-badge">
-          <span class="rank-number">#${rank}</span>
-          ${medal ? `<span class="rank-medal">${medal}</span>` : ''}
+      <div class="locality-card-new" data-locality="${locality.name}">
+        <div class="locality-image">
+          <img src="${image}" alt="${locality.name}" onerror="this.src='images/skyline.png'" />
+          <div class="locality-overlay"></div>
+          <div class="locality-rank">#${rank}</div>
+          ${isTrending ? '<div class="trending-badge-new">🔥 Trending</div>' : ''}
         </div>
-        
-        <div class="locality-map-container" id="map-list-${index}" onclick="event.stopPropagation()"></div>
-
-        <div class="locality-info">
-          <div class="locality-header">
-            <h3 class="locality-name">${locality.name}${trendingLocalities.includes(locality.name) ? ' <span class="trending-badge">🔥 Trending</span>' : ''}</h3>
-            <span class="category-badge">
-              <span>${categoryIcon}</span>
-              <span>${primaryCategory}</span>
-            </span>
+        <div class="locality-info-new">
+          <h3 class="locality-name-new">${locality.name}</h3>
+          <div class="locality-score">
+            <span class="score-value">${locality.overall_score?.toFixed(1) || 'N/A'}</span>
+            <span class="score-label">/ 10</span>
           </div>
-          
-          <div class="locality-meta">
-            <span>🏠 ₹${landPrice}L/cent</span>
-            <span>🏢 ₹${aptPrice}/sqft</span>
-            <span>🚗 ${techTime} min to Technopark</span>
+          <div class="locality-meta-new">
+            <span>🏠 ₹${locality.land_price || 'N/A'}L</span>
+            <span>🚗 ${locality.data?.technopark_time || 'N/A'} min</span>
           </div>
-          
-          ${tags.length > 0 ? `
-          <div class="tags-container">
-            ${tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-          </div>
-          ` : ''}
-          
-          <div class="score-bars">
-            <div class="score-bar-item">
-              <span class="score-bar-label">Quality of Life</span>
-              <div class="score-bar">
-                <div class="score-fill qol" style="width: ${(locality.qol_score / 10) * 100}%"></div>
-              </div>
-              <span class="score-value">${locality.qol_score.toFixed(1)}</span>
-            </div>
-            <div class="score-bar-item">
-              <span class="score-bar-label">Economic</span>
-              <div class="score-bar">
-                <div class="score-fill economic" style="width: ${(locality.economic_score / 10) * 100}%"></div>
-              </div>
-              <span class="score-value">${locality.economic_score.toFixed(1)}</span>
-            </div>
-            <div class="score-bar-item">
-              <span class="score-bar-label">Charm</span>
-              <div class="score-bar">
-                <div class="score-fill charm" style="width: ${(locality.sustainability_score / 10) * 100}%"></div>
-              </div>
-              <span class="score-value">${locality.sustainability_score.toFixed(1)}</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="overall-score">
-          <div class="score-circle">
-            <span class="score-number">${locality.overall_score.toFixed(1)}</span>
-          </div>
-          <div class="score-label">Overall</div>
         </div>
       </div>
     `;
   });
 
-  html += '</div>';
+  html += `
+      </div>
+      
+      <!-- Show More Button -->
+      <div class="show-more-container">
+        <button class="btn-show-more" id="show-more-btn">View All 20 Localities</button>
+      </div>
+      
+      <!-- Hidden: Remaining localities -->
+      <div class="localities-grid hidden" id="more-localities">
+  `;
 
-  // Show "Also worth considering"
-  if (localities.length > 10) {
+  // Remaining localities (11-20)
+  localities.slice(10, 20).forEach((locality, index) => {
+    const rank = index + 11;
+    const isTrending = trendingLocalities.includes(locality.name);
+    const image = getLocalityImage(locality.name);
+
     html += `
-      <div class="also-consider">
-        <h3>Also Worth Considering</h3>
-        <div class="minor-rankings">
-    `;
-
-    localities.slice(10).forEach((locality, index) => {
-      const rank = index + 11;
-      const categoryIcon = locality.data?.category_icon || '🏘️';
-      html += `
-        <div class="minor-rank-item" data-locality="${locality.name}">
-          <span class="minor-rank">#${rank}</span>
-          <span class="minor-icon">${categoryIcon}</span>
-          <span class="minor-name">${locality.name}</span>
-          <span class="minor-score">${locality.overall_score.toFixed(2)}</span>
+      <div class="locality-card-new" data-locality="${locality.name}">
+        <div class="locality-image">
+          <img src="${image}" alt="${locality.name}" onerror="this.src='images/skyline.png'" />
+          <div class="locality-overlay"></div>
+          <div class="locality-rank">#${rank}</div>
+          ${isTrending ? '<div class="trending-badge-new">🔥 Trending</div>' : ''}
         </div>
-      `;
-    });
-
-    html += `
+        <div class="locality-info-new">
+          <h3 class="locality-name-new">${locality.name}</h3>
+          <div class="locality-score">
+            <span class="score-value">${locality.overall_score?.toFixed(1) || 'N/A'}</span>
+            <span class="score-label">/ 10</span>
+          </div>
+          <div class="locality-meta-new">
+            <span>🏠 ₹${locality.land_price || 'N/A'}L</span>
+            <span>🚗 ${locality.data?.technopark_time || 'N/A'} min</span>
+          </div>
         </div>
       </div>
     `;
-  }
+  });
+
+  html += `
+      </div>
+    </section>
+
+    <!-- Methodology CTA -->
+    <section class="cta-section">
+      <h2>How We Rank</h2>
+      <p>Our transparent, data-driven methodology uses 41 metrics across Quality of Life, Economic Value, and Environment & Charm.</p>
+      <div class="cta-buttons">
+        <a href="#/methodology" class="btn-primary">Learn Our Methodology</a>
+        <a href="#/customize" class="btn-secondary">Customize Rankings</a>
+      </div>
+    </section>
+  `;
 
   app.innerHTML = html;
 
-  // Initialize Maps for Top 10
-  top10.forEach((locality, index) => {
-    const lat = locality.latitude || locality.data?.latitude;
-    const lng = locality.longitude || locality.data?.longitude;
+  // Event Listeners
 
-    if (lat && lng) {
-      setTimeout(() => {
-        const map = L.map(`map-list-${index}`, {
-          center: [lat, lng],
-          zoom: 13,
-          zoomControl: false,
-          dragging: false,
-          scrollWheelZoom: false,
-          doubleClickZoom: false,
-          boxZoom: false,
-          keyboard: false,
-          attributionControl: false
-        });
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '© OpenStreetMap'
-        }).addTo(map);
-
-        // Add a marker
-        L.marker([lat, lng]).addTo(map);
-      }, 100 * index); // Stagger initialization slightly
-    }
-  });
-
-
-  // Add click handlers for detail view
-  document.querySelectorAll('.locality-card').forEach(card => {
-    card.addEventListener('click', (e) => {
-      // Don't navigate if clicking map (managed by stopPropagation above, but safety check)
-      if (e.target.closest('.locality-map-container')) return;
-
+  // Locality card clicks
+  document.querySelectorAll('.locality-card-new').forEach(card => {
+    card.addEventListener('click', () => {
       const name = card.dataset.locality;
-      window.location.hash = `/locality/${name}`;
+      window.location.hash = `#/locality/${encodeURIComponent(name)}`;
     });
   });
 
-  // Add click handlers for minor rank items
-  document.querySelectorAll('.minor-rank-item').forEach(item => {
-    item.addEventListener('click', (e) => {
-      const name = item.dataset.locality;
-      window.location.hash = `/locality/${name}`;
+  // Category card clicks
+  document.querySelectorAll('.category-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const category = card.dataset.category;
+      // TODO: Filter localities by category
+      document.getElementById('localities-section').scrollIntoView({ behavior: 'smooth' });
     });
   });
 
-  // Add click handler for reset weights button
+  // Show more button
+  const showMoreBtn = document.getElementById('show-more-btn');
+  const moreLocalities = document.getElementById('more-localities');
+  if (showMoreBtn && moreLocalities) {
+    showMoreBtn.addEventListener('click', () => {
+      moreLocalities.classList.toggle('hidden');
+      showMoreBtn.textContent = moreLocalities.classList.contains('hidden')
+        ? 'View All 20 Localities'
+        : 'Show Less';
+    });
+  }
+
+  // Reset weights button
   const resetBtn = document.getElementById('reset-weights-btn');
   if (resetBtn) {
-    resetBtn.addEventListener('click', (e) => {
-      e.stopPropagation(); // Prevent any parent click handlers
-      resetWeights(); // Reset to default weights
-      renderRankingView(); // Re-render the rankings
+    resetBtn.addEventListener('click', () => {
+      localStorage.removeItem('customWeights');
+      window.location.reload();
     });
   }
 }
-
-// Recalculate rankings with custom weights
-function recalculateRankings(localities, weights) {
-  const recalculated = localities.map(loc => {
-    // Recalculate overall score with new weights
-    const newOverall = (
-      (loc.qol_score * weights.qol) +
-      (loc.economic_score * weights.economic) +
-      (loc.sustainability_score * weights.sustainability)
-    );
-
-    return {
-      ...loc,
-      overall_score: newOverall
-    };
-  });
-
-  // Re-sort by new overall score
-  recalculated.sort((a, b) => b.overall_score - a.overall_score);
-
-
-  return recalculated;
-}
-
