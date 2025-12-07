@@ -1791,3 +1791,39 @@ footer .small {
     box-shadow: 0 0 15px rgba(255, 107, 53, 0.8);
   }
 }
+
+/* Disclaimer Section */
+.disclaimer-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #fff8e6;
+  border-left: 4px solid #f5a623;
+  border-radius: 8px;
+}
+
+.disclaimer-section h3 {
+  color: #b8860b;
+  margin-bottom: 1rem;
+}
+
+.disclaimer-box {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.disclaimer-box ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.disclaimer-box li {
+  margin-bottom: 0.5rem;
+}
+
+.disclaimer-note {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(245, 166, 35, 0.15);
+  border-radius: 6px;
+  font-style: italic;
+}

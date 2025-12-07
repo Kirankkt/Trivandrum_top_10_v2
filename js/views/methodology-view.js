@@ -290,6 +290,20 @@ async function renderMethodologyView() {
                 </ul>
             </div>
             
+            <div class="disclaimer-section">
+                <h3>⚠️ Important Disclaimer</h3>
+                <div class="disclaimer-box">
+                    <p>Rankings are based on a combination of <strong>Google Places data</strong>, <strong>travel time analysis</strong>, and <strong>AI-assisted qualitative assessments</strong>.</p>
+                    <ul>
+                        <li>📍 <strong>Amenity counts</strong> are limited to a 1.5km radius and may not capture all establishments.</li>
+                        <li>🏠 <strong>Property prices</strong> are estimates based on web-scraped listings and can vary significantly.</li>
+                        <li>🤖 <strong>Subjective scores</strong> (safety, cleanliness, prestige) are AI-generated estimates, not verified surveys.</li>
+                        <li>📊 <strong>Actual conditions</strong> may differ from our data. Always verify with local sources before making decisions.</li>
+                    </ul>
+                    <p class="disclaimer-note">This tool is meant for <strong>informational purposes only</strong> and should not be the sole basis for real estate or relocation decisions.</p>
+                </div>
+            </div>
+            
             <div class="cta-section">
                 <h3>Ready to explore?</h3>
                 <div class="cta-buttons">
