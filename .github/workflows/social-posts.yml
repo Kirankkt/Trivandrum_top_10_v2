@@ -26,12 +26,15 @@ jobs:
           pip install python-dotenv
       
       - name: Generate social media posts
+        id: generate
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: |
           python social_media/generate_posts.py
-          cat social_posts/latest_posts.txt
+          echo "posts<<EOF" >> $GITHUB_OUTPUT
+          cat social_posts/latest_posts.txt >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
       
       - name: Send email notification
         uses: dawidd6/action-send-mail@v3
@@ -42,18 +45,14 @@ jobs:
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "🔥 Trivandrum Top 10 - Social Media Posts Ready!"
           to: kthomaskiran3@gmail.com, roymmathew@hotmail.com, jotmc2fmab@gmail.com
-          from: Trivandrum Top 10 Bot
+          from: Trivandrum Top 10 Bot <${{ secrets.EMAIL_USERNAME }}>
           body: |
             Hi Team!
             
-            Your social media posts for this week are ready. 
+            Your social media posts for this week are ready.
             Copy-paste them to LinkedIn, Instagram, and Facebook.
             
-            ============================================
-            
-            ${{ steps.generate-posts.outputs.posts }}
-            
-            ============================================
+            ${{ steps.generate.outputs.posts }}
             
             - Trivandrum Top 10 Bot
           
