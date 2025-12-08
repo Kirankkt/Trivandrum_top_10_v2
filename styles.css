@@ -197,6 +197,11 @@ a:hover {
   color: white;
 }
 
+.logo-new:hover {
+  text-decoration: none;
+  color: white;
+}
+
 .logo-text-new {
   font-family: var(--font-serif);
   font-size: 0.9rem;
@@ -2628,5 +2633,71 @@ footer .small {
 
   .map-container {
     height: 400px;
+  }
+}
+
+/* ==================== METHODOLOGY PAGE ==================== */
+.methodology-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.methodology-header h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.methodology-header .subtitle {
+  color: var(--color-text-muted);
+}
+
+.methodology-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 3rem;
+}
+
+.intro-section {
+  margin-bottom: 2rem;
+}
+
+.intro-section h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.stat-box {
+  background: var(--color-bg-secondary);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.stat-box .stat-number {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.stat-box .stat-label {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
