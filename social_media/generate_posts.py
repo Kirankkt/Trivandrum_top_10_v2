@@ -8,7 +8,7 @@ Usage:
 
 import os
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 # Try to load from .env if python-dotenv is available
 try:
@@ -204,7 +204,9 @@ def main():
     output = []
     
     output.append("=" * 60)
-    output.append(f"📅 Generated: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    # Convert to IST (UTC+5:30)
+    ist_time = datetime.now(timezone.utc) + timedelta(hours=5, minutes=30)
+    output.append(f"📅 Generated: {ist_time.strftime('%Y-%m-%d %H:%M')} IST")
     output.append(f"🏆 Trending Locality: {top_locality_name} ({top_views} views)")
     output.append("=" * 60)
     output.append("")
