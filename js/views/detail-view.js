@@ -63,6 +63,9 @@ async function renderDetailView(localityName) {
             return v >= 20 ? '20+' : v;
         };
 
+        // Scroll to top when detail page loads
+        window.scrollTo(0, 0);
+
         let html = `
 
         <div class="detail-header">
@@ -75,6 +78,13 @@ async function renderDetailView(localityName) {
                             <h1>${locality.name}</h1>
                             <p class="category-label-large">${primaryCategory}</p>
                         </div>
+                    </div>
+                    <!-- Floating Discover Button -->
+                    <div id="discover-floating-btn" class="discover-floating-btn" style="display: none;">
+                        <a href="#/discover/${encodeURIComponent(locality.name)}" class="discover-float-link">
+                            ✨ Discover ${locality.name}
+                            <span class="discover-float-arrow">→</span>
+                        </a>
                     </div>
                 </div>
                 <div class="tags-container-large">
@@ -278,8 +288,8 @@ async function renderDetailView(localityName) {
             console.warn('[Supabase] trackLocalityView function not found');
         }
 
-        // --- PREMIUM SPOTS CTA ---
-        // Show a prominent CTA card that links to the Discover page
+        // --- PREMIUM SPOTS FLOATING BUTTON ---
+        // Show floating Discover button if spots are available for this locality
         try {
             const spotsResponse = await fetch('data/premium_spots.json');
             if (spotsResponse.ok) {
@@ -287,42 +297,16 @@ async function renderDetailView(localityName) {
                 const localitySpots = allSpots.find(s => s.locality === locality.name);
 
                 if (localitySpots && localitySpots.spots && localitySpots.spots.length > 0) {
-                    const spotsContainer = document.getElementById('premium-spots-container');
-
-                    // Get category counts
-                    const categoryCounts = {};
-                    localitySpots.spots.forEach(spot => {
-                        categoryCounts[spot.category] = (categoryCounts[spot.category] || 0) + 1;
-                    });
-
-                    // Get a sample photo from the spots
-                    const sampleSpot = localitySpots.spots.find(s => s.photo_url) || localitySpots.spots[0];
-                    const bgStyle = sampleSpot.photo_url ? `background-image: url('${sampleSpot.photo_url}')` : 'background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-gold) 100%)';
-
-                    const ctaHtml = `
-                        <a href="#/discover/${encodeURIComponent(locality.name)}" class="discover-cta-card">
-                            <div class="discover-cta-image" style="${bgStyle}">
-                                <div class="discover-cta-overlay"></div>
-                                <div class="discover-cta-content">
-                                    <h3>✨ Discover ${locality.name}</h3>
-                                    <p>${localitySpots.spots.length} places to explore</p>
-                                    <div class="discover-cta-categories">
-                                        ${Object.entries(categoryCounts).map(([cat, count]) =>
-                        `<span class="discover-cat-badge">${getCategoryIcon(cat)} ${count}</span>`
-                    ).join('')}
-                                    </div>
-                                    <span class="discover-cta-button">Explore Places →</span>
-                                </div>
-                            </div>
-                        </a>
-                    `;
-
-                    spotsContainer.innerHTML = ctaHtml;
-                    console.log('[Discover CTA] Added for', locality.name);
+                    // Show the floating discover button
+                    const floatingBtn = document.getElementById('discover-floating-btn');
+                    if (floatingBtn) {
+                        floatingBtn.style.display = 'block';
+                    }
+                    console.log('[Discover] Floating button shown for', locality.name, '(' + localitySpots.spots.length + ' spots)');
                 }
             }
         } catch (spotsErr) {
-            console.warn('[Discover CTA] Could not load spots:', spotsErr);
+            console.warn('[Discover] Could not check spots:', spotsErr);
         }
 
     } catch (err) {
