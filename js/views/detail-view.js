@@ -67,15 +67,16 @@ async function renderDetailView(localityName) {
 
         <div class="detail-header">
                 <a href="#/" class="back-button">← Back to Rankings</a>
-                <div class="detail-hero-map" id="detail-map-hero" style="width: 100%; height: 350px; border-radius: 12px; margin-top: 1rem; margin-bottom: 1rem; z-index: 1;"></div>
-                <div class="detail-title">
-                    <span class="category-icon-large">${categoryIcon}</span>
-                    <div>
-                        <h1>${locality.name}</h1>
-                        <p class="category-label-large">${primaryCategory}</p>
+                <div class="detail-hero-photo" id="detail-hero-image" style="width: 100%; height: 400px; border-radius: 12px; margin-top: 1rem; margin-bottom: 1rem; background-size: cover; background-position: center; background-color: var(--color-bg-tertiary); position: relative;">
+                    <div class="hero-photo-overlay"></div>
+                    <div class="hero-photo-content">
+                        <span class="category-icon-large">${categoryIcon}</span>
+                        <div>
+                            <h1>${locality.name}</h1>
+                            <p class="category-label-large">${primaryCategory}</p>
+                        </div>
                     </div>
                 </div>
-                <!-- ... existing header content ... -->
                 <div class="tags-container-large">
                     ${tags.map(tag => `<span class="tag-large">${tag}</span>`).join('')}
                 </div>
@@ -247,23 +248,25 @@ async function renderDetailView(localityName) {
         app.innerHTML = html;
         console.log('[Debug] renderDetailView COMPLETE');
 
-        // Initialize Leaflet Map for Hero Section
-        const lat = locality.latitude;
-        const lng = locality.longitude;
-        console.log('[Debug] Map Coords:', lat, lng);
+        // Load locality photo for hero section
+        try {
+            const photosResponse = await fetch('data/locality_photos.json');
+            if (photosResponse.ok) {
+                const allPhotos = await photosResponse.json();
+                const photoData = allPhotos[locality.name];
 
-        if (lat && lng) {
-            const map = L.map('detail-map-hero').setView([lat, lng], 14);
-
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© OpenStreetMap'
-            }).addTo(map);
-
-            L.marker([lat, lng]).addTo(map)
-                .bindPopup(`<b>${locality.name}</b>`)
-                .openPopup();
-        } else {
-            console.warn('[Debug] No coordinates available for map');
+                if (photoData && photoData.photo_url) {
+                    const heroElement = document.getElementById('detail-hero-image');
+                    if (heroElement) {
+                        heroElement.style.backgroundImage = `url('${photoData.photo_url}')`;
+                        console.log('[Photo] Loaded photo for:', locality.name);
+                    }
+                } else {
+                    console.warn('[Photo] No photo available for:', locality.name);
+                }
+            }
+        } catch (photoErr) {
+            console.warn('[Photo] Could not load photos:', photoErr);
         }
 
         // --- TRACKING ---

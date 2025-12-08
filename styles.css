@@ -2837,3 +2837,65 @@ footer .small {
     font-size: 1.5rem;
   }
 }
+
+/* ==================== DETAIL PAGE PHOTO HERO ==================== */
+.detail-hero-photo {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%);
+  z-index: 1;
+}
+
+.hero-photo-content {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+}
+
+.hero-photo-content h1 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-photo-content .category-label-large {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  margin: 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-photo-content .category-icon-large {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hero-photo-content {
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .hero-photo-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-photo-content .category-icon-large {
+    font-size: 2rem;
+  }
+}
