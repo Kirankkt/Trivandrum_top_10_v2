@@ -126,11 +126,10 @@
     "search_query": "Poojappura Stadium Trivandrum"
   },
   "Kovalam": {
-    "photo_reference": "AZLasHp0qkggMFt8ai8XffCZmXcVQ4Xx6docTLJRIS9wqHAvT_LhKm6KXSCEm_pO2OAJ5xc0fGOH6GTdiI0stNuXL7GvNgfgFa1KDI_PAtSDPp-dgRgMRoXLEpginuT19DdgLWl0uXUJ4EW-2p4nANGB6OKJVbS7pxBljlXcPbqLrkqSDxJHCOpG6jjh-WwiC3iiGsgJYzetYwTfETzqxHDPQrSAWFcTECVlZWZA2qe3Otr4tglpaZXymnYT8KliqgN6yn8t-LFOIJh1iJM4ge5UCuT9lQyTfKWAMqAj8IB2QNVjy-uChyg",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHp0qkggMFt8ai8XffCZmXcVQ4Xx6docTLJRIS9wqHAvT_LhKm6KXSCEm_pO2OAJ5xc0fGOH6GTdiI0stNuXL7GvNgfgFa1KDI_PAtSDPp-dgRgMRoXLEpginuT19DdgLWl0uXUJ4EW-2p4nANGB6OKJVbS7pxBljlXcPbqLrkqSDxJHCOpG6jjh-WwiC3iiGsgJYzetYwTfETzqxHDPQrSAWFcTECVlZWZA2qe3Otr4tglpaZXymnYT8KliqgN6yn8t-LFOIJh1iJM4ge5UCuT9lQyTfKWAMqAj8IB2QNVjy-uChyg&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
-    "place_id": "ChIJLxzKTaWlBTsRcpWT5Abko_o",
-    "place_name": "Sunset beach hotel and restaurant",
-    "search_query": "Kovalam Lighthouse sunset"
+    "photo_url": "images/localities/kovalam.png",
+    "place_name": "Kovalam Lighthouse Beach",
+    "search_query": "User Provided Image",
+    "is_local": true
   },
   "Varkala": {
     "photo_reference": "AZLasHqWv0Nsp_s2ZUoU8sb5IN-m3dTxMDIHyDkfc3KtGjE7HyGve9uuxQkgE34bPHlVofVG0uMgS4urUPOZcsyaztFrYHxwqemi3VexK9AMjV9GQnyadNabqQO4U_iS88CmBAgITxjezV6p79JDYeTpv8Tc7knPhl4AUx1SazWwBFja_HNVe1hlR_MIZ-ZvwvxOrxx1BgesrPMCx7yiSpiItld8WwcA0ZhT2vE4x_5enpRFBfI8Prg0SD9Nk6g1t_JaCH-T3sssme3hYSpb6oS4Nops-R9bj5FWivQ3BWeHFYFJ9Wwj7t6DHpMaXN3Es8Vkpe0gBGeGd0Ac-x-UBYT3ly7vJeND6iH-CO5RFdL9VJWG040y7Vu4-cZrZ5uySVoG3GzEht3UE352d04QyiJv_VuaXZ-JeyY5JaAm-tS5r3EKbwLnPhOFTPzz8gDEnew7kpPLXSFXM9I6OPA0dxHUOLsW1elJqGH4Pv63gA8NzJ8Mn0sYuSmkWRo1McpNovf8HcDG1uAnjaj8H5RELjPT2O77DmDyD3RrUcYLJ0azbVe3F_R2L6dYP_dkqOcLqkfpgdH3MS0Q",
