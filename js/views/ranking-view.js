@@ -175,6 +175,11 @@ async function renderRankingView() {
 
   html += `
       </div>
+      
+      <!-- Show Less Button (appears after expanding) -->
+      <div class="show-less-container hidden" id="show-less-container">
+        <button class="btn-show-less" id="show-less-btn">Show Less</button>
+      </div>
     </section>
 
     <!-- Methodology CTA -->
@@ -209,15 +214,27 @@ async function renderRankingView() {
     });
   });
 
-  // Show more button
+  // Show more/less buttons
   const showMoreBtn = document.getElementById('show-more-btn');
+  const showLessBtn = document.getElementById('show-less-btn');
   const moreLocalities = document.getElementById('more-localities');
+  const showLessContainer = document.getElementById('show-less-container');
+
   if (showMoreBtn && moreLocalities) {
     showMoreBtn.addEventListener('click', () => {
-      moreLocalities.classList.toggle('hidden');
-      showMoreBtn.textContent = moreLocalities.classList.contains('hidden')
-        ? 'View All 20 Localities'
-        : 'Show Less';
+      moreLocalities.classList.remove('hidden');
+      showMoreBtn.parentElement.classList.add('hidden'); // Hide "View All" button
+      if (showLessContainer) showLessContainer.classList.remove('hidden'); // Show "Show Less" at bottom
+    });
+  }
+
+  if (showLessBtn && moreLocalities) {
+    showLessBtn.addEventListener('click', () => {
+      moreLocalities.classList.add('hidden');
+      showMoreBtn.parentElement.classList.remove('hidden'); // Show "View All" button again
+      if (showLessContainer) showLessContainer.classList.add('hidden'); // Hide "Show Less"
+      // Scroll back to top of localities section
+      document.getElementById('localities-section').scrollIntoView({ behavior: 'smooth' });
     });
   }
 
