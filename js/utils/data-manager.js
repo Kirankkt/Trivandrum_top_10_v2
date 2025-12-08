@@ -50,3 +50,29 @@ function resetWeights() {
         sustainability: 0.25
     };
 }
+
+// Recalculate rankings with custom weights
+function recalculateRankings(localities, weights) {
+    // Deep copy to avoid mutating original
+    const recalculated = localities.map(loc => {
+        const qolScore = loc.qol_score || 0;
+        const economicScore = loc.economic_score || 0;
+        const sustainabilityScore = loc.sustainability_score || 0;
+
+        // Calculate new overall score with custom weights
+        const newOverallScore =
+            (qolScore * weights.qol) +
+            (economicScore * weights.economic) +
+            (sustainabilityScore * weights.sustainability);
+
+        return {
+            ...loc,
+            overall_score: newOverallScore
+        };
+    });
+
+    // Sort by new overall score (descending)
+    recalculated.sort((a, b) => b.overall_score - a.overall_score);
+
+    return recalculated;
+}
