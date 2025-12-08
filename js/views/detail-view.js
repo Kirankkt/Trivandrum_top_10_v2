@@ -278,8 +278,8 @@ async function renderDetailView(localityName) {
             console.warn('[Supabase] trackLocalityView function not found');
         }
 
-        // --- PREMIUM SPOTS ---
-        // Load and display premium spots for this locality
+        // --- PREMIUM SPOTS CTA ---
+        // Show a prominent CTA card that links to the Discover page
         try {
             const spotsResponse = await fetch('data/premium_spots.json');
             if (spotsResponse.ok) {
@@ -289,57 +289,40 @@ async function renderDetailView(localityName) {
                 if (localitySpots && localitySpots.spots && localitySpots.spots.length > 0) {
                     const spotsContainer = document.getElementById('premium-spots-container');
 
-                    // Group spots by category
-                    const categories = {};
+                    // Get category counts
+                    const categoryCounts = {};
                     localitySpots.spots.forEach(spot => {
-                        if (!categories[spot.category]) {
-                            categories[spot.category] = [];
-                        }
-                        categories[spot.category].push(spot);
+                        categoryCounts[spot.category] = (categoryCounts[spot.category] || 0) + 1;
                     });
 
-                    let spotsHtml = `
-                        <div class="premium-spots-section">
-                            <h2 class="spots-title">✨ Discover ${locality.name}</h2>
-                            <p class="spots-subtitle">Top-rated places nearby</p>
-                            <div class="spots-grid">
-                    `;
+                    // Get a sample photo from the spots
+                    const sampleSpot = localitySpots.spots.find(s => s.photo_url) || localitySpots.spots[0];
+                    const bgStyle = sampleSpot.photo_url ? `background-image: url('${sampleSpot.photo_url}')` : 'background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-gold) 100%)';
 
-                    localitySpots.spots.forEach(spot => {
-                        const hasPhoto = spot.photo_url;
-                        const placeholderColor = spot.category === 'heritage' ? '#8B4513' :
-                            spot.category === 'dining' ? '#d35400' :
-                                spot.category === 'shopping' ? '#9b59b6' :
-                                    spot.category === 'recreation' ? '#27ae60' : '#3498db';
-
-                        spotsHtml += `
-                            <a href="${spot.google_maps_url}" target="_blank" class="spot-card" rel="noopener noreferrer">
-                                <div class="spot-image" style="${hasPhoto ? `background-image: url('${spot.photo_url}')` : `background: ${placeholderColor}`}">
-                                    ${!hasPhoto ? `<span class="spot-icon-large">${spot.icon}</span>` : ''}
-                                    <span class="spot-category-badge">${spot.icon} ${spot.category}</span>
-                                </div>
-                                <div class="spot-info">
-                                    <h4 class="spot-name">${spot.name}</h4>
-                                    <div class="spot-meta">
-                                        ${spot.rating ? `<span class="spot-rating">⭐ ${spot.rating}</span>` : ''}
-                                        <span class="spot-maps-link">View on Maps →</span>
+                    const ctaHtml = `
+                        <a href="#/discover/${encodeURIComponent(locality.name)}" class="discover-cta-card">
+                            <div class="discover-cta-image" style="${bgStyle}">
+                                <div class="discover-cta-overlay"></div>
+                                <div class="discover-cta-content">
+                                    <h3>✨ Discover ${locality.name}</h3>
+                                    <p>${localitySpots.spots.length} places to explore</p>
+                                    <div class="discover-cta-categories">
+                                        ${Object.entries(categoryCounts).map(([cat, count]) =>
+                        `<span class="discover-cat-badge">${getCategoryIcon(cat)} ${count}</span>`
+                    ).join('')}
                                     </div>
+                                    <span class="discover-cta-button">Explore Places →</span>
                                 </div>
-                            </a>
-                        `;
-                    });
-
-                    spotsHtml += `
                             </div>
-                        </div>
+                        </a>
                     `;
 
-                    spotsContainer.innerHTML = spotsHtml;
-                    console.log('[Premium Spots] Loaded', localitySpots.spots.length, 'spots for', locality.name);
+                    spotsContainer.innerHTML = ctaHtml;
+                    console.log('[Discover CTA] Added for', locality.name);
                 }
             }
         } catch (spotsErr) {
-            console.warn('[Premium Spots] Could not load spots:', spotsErr);
+            console.warn('[Discover CTA] Could not load spots:', spotsErr);
         }
 
     } catch (err) {

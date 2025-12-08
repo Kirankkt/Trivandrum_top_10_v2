@@ -45,6 +45,15 @@ function route() {
             <p>Top experiences in Trivandrum coming soon!</p>
             <a href="#/" class="btn-primary">← Back to Localities</a>
           </div>`;
+    } else if (hash.startsWith('/discover/')) {
+        const localityName = decodeURIComponent(hash.replace('/discover/', ''));
+        console.log('[Debug] Routing to Discover View for:', localityName);
+        if (typeof renderDiscoverView === 'function') {
+            renderDiscoverView(localityName);
+        } else {
+            console.error('[Debug] renderDiscoverView is NOT a function!');
+            app.innerHTML = '<div class="error">Discover page not available. Refresh page.</div>';
+        }
     } else if (hash.startsWith('/locality/')) {
         const localityName = decodeURIComponent(hash.replace('/locality/', ''));
         console.log('[Debug] Routing to Detail View for:', localityName);
