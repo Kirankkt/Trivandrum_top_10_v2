@@ -1,0 +1,357 @@
+[
+  {
+    "id": "ChIJVc0GaQi9BTsRc4jmW1iagkI",
+    "name": "Flame'N'Go",
+    "score": 86.3,
+    "rating": 4.9,
+    "reviews": 2026,
+    "price_level": 2,
+    "address": "Store #J09, Lulu International Shopping Mall Pvt. Ltd, Akkulam Bridge, Anayara, Post, Thiruvananthapuram, Kerala 695029, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqxYdcWo6SGc4BI8XIPdi8m-0jtj4MI6rJ7d_FVtgLwKV3z_G6kFXtExqRehCXbtOPeEp0fB4axNtP7CvWw6xErdExp6Yz4oXcROhsJDO1va_nyETBQE77WDl78PS5Yh3ROYqroObFwqWHAWMpwT3f5zb2GQc57wDHBMLrAtfgLmv0knkI80A_JspDN7Nn0cWp-RNCUJEkCO1jLcN2aLbcoMmIBujUBxWgcwIZ3kHb831vNtQsAPZl25gyZAn7CCdjDrmB3tX-sk86xS5WEfDOhlJbLKbdoVVw8wncTcWmnlQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Family",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": "https://flamengoasia.com/trivandrum",
+    "phone": "070254 97000",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 32.7,
+      "popularity": 2026,
+      "convenience": 10
+    }
+  },
+  {
+    "id": "ChIJw53uI-25BTsRb51bTZnB3IQ",
+    "name": "Nadan Restaurant",
+    "score": 80.5,
+    "rating": 4.8,
+    "reviews": 1445,
+    "price_level": 2,
+    "address": "Lawish Groceries- RESTAURANT, Kesavadasapuram-Ulloor Rd, Kesavadasapuram, Thiruvananthapuram, Kerala 695004, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHr3JEgi2zdRlczMxGN92dQhIBwH1jN4IBnYLu8hVJoswqzNaLC0GbYVPfz-TyBuQCGpz84QpUZGxHScRa-4n0Q5PQbl7xWLTLhK6GTNcZQ9kx1QMqw9S3Ev15BBzm-2ulkvZxMz9lQSBT4aoRlFqfsH1it4JPLLdGzivUvtBLMGlKPeOoSoDfkDDHRzKs8EDdiWRVTrTx3aDWatkwVpc1VZlzN-ZsK7UsGgDNknzDamE2LTd7jWuSpeXCrWZe1bLXlP16IuHsaNxppvOQrgyBgd_IzSmmUPMhv9quiE9Sj_X6KTbma6WzfglFurR8YK5aIqPCWXpQGynAmtL3LTHK1nKU8ZrMYuexsfMLbCv-CcUl9R4xU5080vEzpQBn-pkVq8LQomltj6NRK9AyJmFZpVJ39O0e6_qb-wKI0DqtCcsw&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Work Friendly",
+      "Family",
+      "Trendy"
+    ],
+    "website": null,
+    "phone": null,
+    "map_url": null,
+    "metrics": {
+      "sentiment": 30.3,
+      "popularity": 1445,
+      "convenience": 8
+    }
+  },
+  {
+    "id": "ChIJ7UB_kq-7BTsRgD8-oW6durU",
+    "name": "Cafe Jade - All Day Dining (24X7)",
+    "score": 77.1,
+    "rating": 4.6,
+    "reviews": 2618,
+    "price_level": 3,
+    "address": "Hycinth Hotels, Manorama Office, Manorama Rd, near Malayala Manorama, Aristo, Thampanoor, Thiruvananthapuram, Kerala 695001, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHpMzQKoWgh4X_WaFjZsCkaTrkKdaKsP-VmMla5MHfeAHIgodNZFB-9qy9wa1_z4iI9ZOL7bffhgT0omYItknBOMsiOVuPkeiBZRcMfbzxJHIbzoBRK5rdPkEgLjK711SN5orhXYwK4jtvc_MN5IMW-VFz9O3B7Wr1AXwtyk4uz-S16qMUNXI5_F-Vq-2Uznil2SpGxPmyx0rkQ5euzxIBZ0_UtUt8XOvBv-jEaS7YRipwHtyZVBwpqbtGr4wT_jX00JMCVcuFIp49s9lU1o1Vgt7AzaJSS5o-sg8i5GSwDHww&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Romantic",
+      "Trendy"
+    ],
+    "website": "http://www.hycinthhotels.com/",
+    "phone": "0471 255 2999",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 25.7,
+      "popularity": 2618,
+      "convenience": 10
+    }
+  },
+  {
+    "id": "ChIJL2mD7XW7BTsR1hJP__FqJPQ",
+    "name": "Villa Maya",
+    "score": 73.5,
+    "rating": 4.5,
+    "reviews": 7799,
+    "price_level": 4,
+    "address": "No-120 Palayam Airport Road Near, MUTHOOT SKY CHEF, Perunthanni, Vallakkadavu, Thiruvananthapuram, Kerala 695008, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHoi1WbBCNDDGwQvGKsP0nuSM_wV5dDSwC36Dsy845yCASjBne6TOMBq3VCp0HsK8Qgl3zKg_38NqoDhPZc1BC2jZvbT8OXAEPx8_jSHD3mNR_E1btB83RDLN5KHgQdLg_WwRw-R-WnODHqMg_RcV9OHF4T3T6IUZtT9DinqdhOuDfl7V_FKrwRlFp-8B_qXBM6Gc8LC1sh2Y_FdpFIFbiYi32d_WBIIfmBggsx09W6A4qh-ORSsGidwhTpE5nPdavxlkf7HVLpggjGYaDgHakdxMVrqq0IRaum9mVWa0Dxcug&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Romantic",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": "http://www.villamaya.in/",
+    "phone": "0471 257 8901",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 23.3,
+      "popularity": 7799,
+      "convenience": 10
+    }
+  },
+  {
+    "id": "ChIJR-rx9Aa_BTsR02HP96sAYnw",
+    "name": "Thanjavur Kitchen",
+    "score": 73.3,
+    "rating": 4.5,
+    "reviews": 2923,
+    "price_level": 2,
+    "address": "Technovalley, Kulathoor, Thiruvananthapuram, Kerala 695583, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHoN4XVS6DD7idZ23ml84eJ-mYNBIQ5O1QcC8u_oP6yuDBaFx_pc6QBRllYAOGxfN2uNJ39v8MJSSu0454KoTjdXRaBa-KEsnpejIFv18nNgHv_ZtVzV0pQgYNVm0o7OrwAkkMlnxEMfko614iHyoLivs6LvIqAEK4wB73YipGZLXoJVoKZh86cRigl9jwyopxhCZ97KBDkB6BmxX2uepuwwwiQfv943pp30yWSl61K5dbAZ5l-Fo3KkWRSwVyj4_Bb3zVAvMxaKxoRj67MZLyzVNF9pWrN587m6GMVqI_tJcg&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Family",
+      "Authentic"
+    ],
+    "website": "https://instagram.com/thanjavurkitchen",
+    "phone": "099959 96682",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 23.3,
+      "popularity": 2923,
+      "convenience": 8
+    }
+  },
+  {
+    "id": "ChIJpS6Xiqy_BTsRwIik-5vAdzU",
+    "name": "BLND Restobar",
+    "score": 72.4,
+    "rating": 4.5,
+    "reviews": 2082,
+    "price_level": 3,
+    "address": "SFS Cyber Palms Rd, near Nexa Motors, Karimanal, Kochuveli, Thiruvananthapuram, Kerala 695583, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHrgNwKo9GTKJvX5_brDPfgw6-MeG0CHrF7EwWDD469BSJ8EA-GYDTr3rp3Xj3hU6TVkbAGB6-unANv9xUVL9Ka-JP3q4IQQFYTBtuV_EYJbO0lzrLo96YZQ7eq2AxrcoXbouATlLFKn5jqzMJztKWj44lRxqb6lyERIPn9ex3-VifmOVt7A-pjBQ4kZ7mx0PDywUSEBCqIiTGoyBmZDvNggXIY6foyZCSeOur2e6gN3wZEg8zUXtXD1rELdhL8UYFUItEpG_JAyOy2MX52aZi3iYYY1RjOu74soP9rQc8rviN6zAbyXbSL7vA-vV75aeewB73P3eT9OP3LQnqeKTtcXHVr7Vy7gZGjoqKGd7WCzAhW4_JTytVZf6xxpm1hoFc1z-jdGk_Rd2i8JBP3GQMUTY2kCwSsj9Uw66yr5mX-J-4l8&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Work Friendly",
+      "Family",
+      "Trendy"
+    ],
+    "website": "https://sfshomebridge.in/pyramid/restobar",
+    "phone": "096330 53222",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 23.3,
+      "popularity": 2082,
+      "convenience": 8
+    }
+  },
+  {
+    "id": "ChIJEYvwzNe7BTsRHGirI5Gjc6g",
+    "name": "Huddles Cafe",
+    "score": 71.7,
+    "rating": 4.4,
+    "reviews": 2683,
+    "price_level": 3,
+    "address": "TC25, First floor, Capitol building, 2850/3-4, Nalanda Ln, Nanthancodu, Thiruvananthapuram, Kerala 695003, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHpU0vFcNz20DeLN1-sHeEEAfFQF9bVO1t_ENB8LV1Nvu8O5IyC7wJDgEXnNx8-pTze-OQ6N8uFP2Wdjbk3YW-dSd0lB4FhKNrM7C36v7FWj4qjTs2K0UOEMJQRw3U8FdxKbwm2Jx4909nYy7IcGeoagl05qgKcQ5twOR2Hq07hz6rp_xy7y7_DgypOHPhFzGnIjQAPzkdJS8McmMKaBaJ-iiMJD29CUGZZHlw8xIqCI11YD0mtaXetzBUZeLprvfDQ5GHuDdOB4vSk9IKFgOqbxG8F-3Mn0Pr5FreAdmDPHMQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Romantic",
+      "Family",
+      "Trendy"
+    ],
+    "website": "https://huddlescafe.com/",
+    "phone": "081291 21007",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 21.0,
+      "popularity": 2683,
+      "convenience": 10
+    }
+  },
+  {
+    "id": "ChIJJ3ihytm7BTsR3oJaX65B--g",
+    "name": "Supreme Upper Crust",
+    "score": 67.0,
+    "rating": 4.3,
+    "reviews": 3478,
+    "price_level": 3,
+    "address": "Kuravankonam - Maruthoor Rd, opposite Welgate organic, Kowdiar, Thiruvananthapuram, Kerala 695003, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHoNV4myxOgFtyulO2tPXTnVUZQLzFestSWSQfK1wYb4Q6rdlNUrHdUO6SzoRT9JfFC-dw2jlxySxs1kDWJ8GhILjnCuT4UGuGFwK4RVuQWVWlEek9ToSLVfOeH4auf0g0wQIcsdPqgCqTknt8DmerdwyvHHzeSufYbIdykyv8xjO8a6qeTZZScILdmxvJoE-JN5Vmstw4O2pmm1i7RBVILs6vTR0OsV4do9TCSVZU1aIkvgFvD_bZ-UmFAw0Wt1oXSmoNB9c4H4XgyZxnbdBNtibqKxc2aQlJ2i05RlUEVbVg&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Work Friendly",
+      "Family",
+      "Trendy"
+    ],
+    "website": null,
+    "phone": "0471 272 7722",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 18.7,
+      "popularity": 3478,
+      "convenience": 8
+    }
+  },
+  {
+    "id": "ChIJofE3hri7BTsRAIPxl2Wb8kU",
+    "name": "Zam Zam Restaurant",
+    "score": 64.4,
+    "rating": 4.1,
+    "reviews": 31077,
+    "price_level": 2,
+    "address": "opp. MLA Hostel, University of Kerala Senate House Campus, Palayam, Thiruvananthapuram, Kerala 695034, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHr8NQ1bc1QJU-HLe6EVJxafnNh7Q2K2TAevJXfhiO0YrVf0lETMgUk836zBk3ZXkNS9Bj1_crPuN4UZz7A4pd0ctgQsn_bFVgO1lwr--TAtzDsxQ-mwf-HR7Mie32RalEboiG6UM4ogRX2GjCMuJO-Keq-BbfyLtvR-RQKn5rtSbl4OQEDqeUcFyOwHEnLzGDNm-49JgGloqiNILA1p3t9476FjzuxZtCUWPxTPIhQ-qKUsxB4VYZGB95w16k5g0AB56KTIbMqGaKSbtwSXYkA1GI1ARHmOEUfFuNp32HgBIA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Family",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": "http://www.zamzamrestaurants.com/",
+    "phone": "0471 247 6611",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 14.0,
+      "popularity": 31077,
+      "convenience": 10
+    }
+  },
+  {
+    "id": "ChIJ_7zPKsy_BTsRTSAC6hXw574",
+    "name": "Zam Zam Restaurant",
+    "score": 64.4,
+    "rating": 4.1,
+    "reviews": 10437,
+    "price_level": 2,
+    "address": "NH Bypass Between Kunnil, &, Infosys, Kulathoor, Thiruvananthapuram, Kerala 695583, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHrfX0wmRKYcpkv8qkxBWSC3chsj51Zn9mKkJf9ey3yFbm1h4roEQb-q9w99BHuoVd7yhh2_IEOaoXGLA3_ZRPHNyfSD6J2K93oixpj5mFMWkiys8odMV8hEj89I6IaKoFx5O-QQx6Q1w4rVX38MkXU7a-RaYnmiMYvpfadVWlLvyVkvgX_FwdUt9iESblDZnpGDY2JArh4WO48hMioEyiFI-Nk4Tud5dW3MmekEkT9zLbWa8ry4MrIbmnPjNnBCRKcTKDmmYLd6EcjxHxuHo61DttCKtH9p97OCvqfXMjbzyMpujJEHTYavNa60gpnBQ9Mr0zl_7kHxTKQ8nq4PBjWHbQcl6u6qfr_p81ycfaf5PhHHcHJdNedbe7HOIAGwMhVppd3uAqdbMQ7xQUoRXt9ZFJn6ynWU1C1dkZJi2cfxuA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Family"
+    ],
+    "website": "http://www.zamzamrestaurants.com/",
+    "phone": "0471 241 3337",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 14.0,
+      "popularity": 10437,
+      "convenience": 10
+    }
+  },
+  {
+    "id": "ChIJYXR1S1m5BTsR8EpNyZe6-vg",
+    "name": "Paragon Restaurant",
+    "score": 64.3,
+    "rating": 4.2,
+    "reviews": 16219,
+    "price_level": 3,
+    "address": "5,OPPO, TC 2, South Indian Bank, 44, Ulloor Brg, Kesavadasapuram, Thiruvananthapuram, Kerala 695004, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqQ25VJSDge-NFlbef2a32fR4bhlvUbMvV9GSXLvueOVLnOFbTJ77VCsGvOU6lnlUilN1bkHIHqyjDCD1M8qkbeYI1N1Kd-RvS6yxyfiTcjh3mpXCRoGZ4RZTH3Px6-k5AWlc6sy6wZRiqb3UpCdDOYlyQ5YgujLjjY1deg3hKHD0Peql-uwROTymYtzPpg5B5kygOdl5pLR-EXAXWK_ZXBGVg5yxltrHA-dSg_4rYuqoJTfEF-_4enNLNWvY_bgt_w0jJzL6V4ZM-J5irVNjYgl3c6c7IFh2s_U8n0mH9C0OT-0y7xmHN2kOkfKz3YDL_Mn_RfaiC_0CDvgH3uoBsN7Za3nhcuTa8YOUsEqv8_AQGbZGp57IE4fxtTmXT6tNLj_poXvTfi-p3Hkf63K6BTLET84Mwyj77xBJWzvjU0kQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Romantic",
+      "Work Friendly",
+      "Family",
+      "Authentic"
+    ],
+    "website": "https://paragonrestaurant.in/",
+    "phone": "089439 97755",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 16.3,
+      "popularity": 16219,
+      "convenience": 8
+    }
+  },
+  {
+    "id": "ChIJV1Lgd-K_BTsRYfUrJrp4zUY",
+    "name": "Terrace By Makkawao",
+    "score": 61.6,
+    "rating": 4.1,
+    "reviews": 6606,
+    "price_level": 3,
+    "address": "7th Floor, Asiatic Business Center, Attinkuzhy Rd, near Toyota Showroom, Kazhakkoottam, Thiruvananthapuram, Kerala 695583, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqS8ChKA76pEQ36yjLE-JM4k8CSRCDUE0hAfMwVuIWLMxG1svD36ceFzy3S_fWaVu96mqndq58OULkd9wAMzLX2MU0yd0tQjM7o6CHBxZvVw9l9rvV0b3Ordic0ZN5EfUgyv7ZhLRw4upkQ0inDbfV2etflao1V4SMRd_8_ZeNGvOfwQIHrFhiA1swfTRoWXvyWoAkiUXRfIiVC2ZUs7fbQuzSeCYDH1jvQ3n_nc2ThuMKVaiBnLsv1vcOHzF_HwmGYlzJXAmVhj0yPPyxCIGNlYtJ2YonX712nj7NFEp9S8IvcxbsGrmrq77b-u4CllG89Wl1s7tXdaNGwSGnvKGP0q0IRgb2-OXhh6pXLQZEBTnBY3PUYyvxpxUnSzvll_2_moG02PoLOXKOe1KePcO-8cMm7HNUiUNOsD1G7b6OAzrK-&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Romantic",
+      "Family",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": "https://m.facebook.com/terracemakkawao/",
+    "phone": "075590 06605",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 14.0,
+      "popularity": 6606,
+      "convenience": 8
+    }
+  },
+  {
+    "id": "ChIJ_5og1qW_BTsRngXCrM9GQ_E",
+    "name": "Thakkaaram Restaurant, Trivandrum",
+    "score": 60.9,
+    "rating": 4,
+    "reviews": 10620,
+    "price_level": 3,
+    "address": "HVH8+CGM, NH 66, opposite Block Office, Kazhakkoottam, Thiruvananthapuram, Kerala 695582, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHo5BleR5jgW1SunazdVs1JiB0xhYVhwvaDtZNT8qujjJRZCNO7R4U7SbcAgH_kHOqmHBACjttrFXlAHSH18A6hP_6VuZwJU3jf2y5pmJTo9Hu6F5As-BLtpKJSPKkO7NB3EXig-s5zqBsQ2b_VtUhQ2IE-mrIgNEx7mjTNJo3VlF45LmSdl_mheXXVccJUrFCxTSmAAcFXrpvloTSdvacqjCt4xnTWU18_gPc-BGJoABPDTieM5NT85Z_UXvZKTFEmCU5Qo_J8Pqs98M4rnHbqM1nZlh-R25OdOSjAvjLFbS55MHEauYgYSZGHfqOf6wJ_DpfJ90Iil9sczT_Dj9_WrSWM1fuCPOGKrfrq6HUOsAs7gy2IqAsd9o3vGo8qiRJ8OHt3kUdfCCnIGGVG5MNFkP2hASuucSl_eDe6XvBg&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Family"
+    ],
+    "website": null,
+    "phone": null,
+    "map_url": null,
+    "metrics": {
+      "sentiment": 11.7,
+      "popularity": 10620,
+      "convenience": 10
+    }
+  },
+  {
+    "id": "ChIJ09tElOS7BTsRyC5Ae_rPOj0",
+    "name": "Pankayam",
+    "score": 59.7,
+    "rating": 4,
+    "reviews": 17612,
+    "price_level": 2,
+    "address": "JUST AFTER UNDERPASS, Bakery Flyover, Nandavanam, Palayam, Thiruvananthapuram, Kerala 695033, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqi6bQCwrIT06jIVmnldkwTrg_1xwndtpPz93RTFOykwkiJCBXFEr8qm53rJMfOEEO4O71QY08V2uih_PtHWoAhrS82hAgAklTyNGV7nigeyzehoTPmYK3dc8gQStOV4CZvGEXDOeqmciELhcfKsVqy3C_2GyHR_zF-lts84ylFXVxnOg4C65Ra-WNfXiX6iOk56HUJXd_qUi7kHrYlkdfGWaM8Y-yB5N_GFEY86xC79csQ5qbwhUTjd21Ivk86gXh2CoXHUp9QXyp0abQ7v-JqNatKEFGa47CDkOwknuBOCA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Family",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": "http://pankayamindia.com/",
+    "phone": "094950 29029",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 11.7,
+      "popularity": 17612,
+      "convenience": 8
+    }
+  },
+  {
+    "id": "ChIJZ13V1aW7BTsRHr1XJDaJkTI",
+    "name": "Aryaas Park Veg Restaurant",
+    "score": 59.7,
+    "rating": 4,
+    "reviews": 13845,
+    "price_level": 2,
+    "address": "FXQ2+634, Theatre Station Road, near Apollo Dimora & Sreekumar, Overbridge, Thampanoor, Thiruvananthapuram, Kerala 695001, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHrCJkGWx03hfUhYGHMtcEsPZiGPmdDq1JgowHC78fjKInEgjDDqiBR1cnWnk49OjcpbyiW8yyP0cQt48Nrq8uRfoGemUzC2_I3Er58xjhh2TNZ4nQXKCWxpWGajvtnE4lCu3MmVcUWrPmOEE1ER8hlCw__YiNTOKqYZ6gFrluqdF0Yzf_VNOqdDyjbxcA1whTTC0JjA7YqVX74lbiLWwBgm0AM8ibx3f9RVU5-o-IIdzq2EFTI5b75qdAUVxf0sHoGpJqfEJ_jMBgb-rLVixk-KaOSEfJYgajBmDxzp5Gub7AyFT2N_3-B7HvxmiBaNVLYpJQbOL1czKbe2MztPDmOT5lnNhganPBQ8E7Fx74fImiZlrYhjA2Xgw5aHZ5QZFMoWUkWXLflAyu5UUEc9XCoI3cnV7kezQdelEaleYcPwbg&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Family",
+      "Authentic"
+    ],
+    "website": null,
+    "phone": "090728 63449",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 11.7,
+      "popularity": 13845,
+      "convenience": 8
+    }
+  }
+]

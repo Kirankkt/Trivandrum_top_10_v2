@@ -18,26 +18,14 @@ function route() {
         console.log('[Debug] Routing to Map');
         renderMapView();
     } else if (hash === '/restaurants') {
-        app.innerHTML = `
-          <div class="coming-soon">
-            <h1>🍽️ Restaurants</h1>
-            <p>Top 10 restaurants in Trivandrum coming soon!</p>
-            <a href="#/" class="btn-primary">← Back to Localities</a>
-          </div>`;
+        console.log('[Debug] Routing to Restaurants');
+        renderDiningView('restaurants');
     } else if (hash === '/hotels') {
-        app.innerHTML = `
-          <div class="coming-soon">
-            <h1>🏨 Hotels</h1>
-            <p>Top 10 hotels in Trivandrum coming soon!</p>
-            <a href="#/" class="btn-primary">← Back to Localities</a>
-          </div>`;
+        console.log('[Debug] Routing to Hotels');
+        renderDiningView('hotels');
     } else if (hash === '/cafes') {
-        app.innerHTML = `
-          <div class="coming-soon">
-            <h1>☕ Cafes</h1>
-            <p>Top 10 cafes in Trivandrum coming soon!</p>
-            <a href="#/" class="btn-primary">← Back to Localities</a>
-          </div>`;
+        console.log('[Debug] Routing to Cafes');
+        renderDiningView('cafes');
     } else if (hash === '/experiences') {
         app.innerHTML = `
           <div class="coming-soon">

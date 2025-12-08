@@ -1,0 +1,366 @@
+[
+  {
+    "id": "ChIJtZZMRAC7BTsRCEd_2o-q_Fg",
+    "name": "Kadalas Cafe",
+    "score": 79.5,
+    "rating": 4.7,
+    "reviews": 1364,
+    "price_level": 2,
+    "address": "Pattom - Kowdiar Rd, Marappalam, Thiruvananthapuram, Kerala 695004, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHp7ua4gkOk-R_4AHicBr8g7mqoFwgb4cZfeZw8z3OhDoA28yyQpVF90eN-20CKoNwSfX_ACU-Ly27HHdYU8y3lC9GY8FSeXlUIrI-e3sgFj7KJP2v85rI5FtRbDLJanFHZA7rDcwfZwRMDhSzKvSJvvB85bP_fUZ0qX3dley4clD9Kg7ovToayeeHLIsmGNYhMrtRL8eRIXzX9y7lc3g926VByWcxyTmzl6fIarg1MMrtLbrKTDLZd6iHDUeRZdzE3hkz7QKLQPYgaKx9kv_8Qj1zMrARrI4XmmJL2vr9kwAQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "cafes",
+    "vibes": [
+      "Family",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": "https://kadalascafe.com/",
+    "phone": "079948 55502",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 28.0,
+      "popularity": 1364,
+      "convenience": 10
+    }
+  },
+  {
+    "id": "ChIJlZElW8-7BTsREcllH6Vl5ks",
+    "name": "Cafe Sarwaa",
+    "score": 78.8,
+    "rating": 4.7,
+    "reviews": 4845,
+    "price_level": 2,
+    "address": "Sarwaa, Bal mahal, to, DPI Rd, opposite All India Radio Road, DPI, Vazhuthacaud, Thiruvananthapuram, Kerala 695014, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHpV-yaEObAUUqJ80XVylg1PK1BA6c4Ay-OxJl_qJO5Y4FuS3ahdUMOjcbvCnYILWDL89hKVSe6c7r0nRv4NEYOw8-3Tebkz7JC9tOdmD6Du2e0Rm8EW584ZeQGIvlXN7Sku7P8VE9wQA3uWlfew7PD1vJaDwQSBiuvYLEOntaodpr9GzFzykhYW9TuCCEL9-Q9xW_iAc8PL9E4t0wPpLmYqmAZCZNdsKSNM-EO5AqT2Kvy_Wc-IqfHtLofGFtKVW_9gQ_gwd2AuOuVl8kQt96Ri21jRi03e8HOXbaU49jEAwg&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "cafes",
+    "vibes": [
+      "Romantic",
+      "Work Friendly",
+      "Trendy"
+    ],
+    "website": null,
+    "phone": "095622 90006",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 28.0,
+      "popularity": 4845,
+      "convenience": 8
+    }
+  },
+  {
+    "id": "ChIJZ2qttYq7BTsR7GAsBcrrtAg",
+    "name": "Eve's Coffee",
+    "score": 76.8,
+    "rating": 4.7,
+    "reviews": 3631,
+    "price_level": 2,
+    "address": "Pettah - Venpalavattom Road Opp Govenment Model LP School & Pre Primary Anayara, Kallummoodu, Pettah, Thiruvananthapuram, Kerala 695029, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHrEN455m6iJZgHRnezjrD_3K0rKR8JslidtnOFq57By8HJMxozdpTRchLmgjyz2C01-DneQUJuu_-eO6vF617YNb-rAxAw45V86wZEfa_2N2_Vt4gNEYqF6DghqIQlennFG9lXL3OsNwh3pLgxiJ00WATMFINgUCUR1JeyfKtJb1joCVIJv2quUVSt_4zMQYvwtS8ZA-Cr-1tu-STBBFywWXFPSUKO6stsYenWb9FgV7iEgUfSAEGk05pTzRDZmcT9i-EaexFEH1e9EGIYDstDlBidUPtlH66OV8v95mHFFMw&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "cafes",
+    "vibes": [
+      "Family",
+      "Trendy"
+    ],
+    "website": null,
+    "phone": "096452 63333",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 28.0,
+      "popularity": 3631,
+      "convenience": 6
+    }
+  },
+  {
+    "id": "ChIJMR0IAI-_BTsRKjxYAK2W2Uw",
+    "name": "The Great Chatsby",
+    "score": 75.9,
+    "rating": 4.6,
+    "reviews": 1049,
+    "price_level": 2,
+    "address": "St Andrews Rd, CHITTATTUMUKKU, Thiruvananthapuram, Kerala 695586, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHr0brAyVjDSjqOLQJvLiVr_74u9RLyoJcTHiF1NyjlEs8P_J3yf1eilJBNf_5ZwPSYWnueINE6XYI-72jRYys4nSGDGFfDcYd1qOw_6Cy4nO9pd5DwrnjVJqT3k2JEjTMclKUuc8bKXPsFQeyiqKi9q3s8HWhW-SzfQkKTfWrXLjjlxa3JzL0BVxpDJXmZwLxzHXOCeg-QloxTiAew5WigFsOWRujgSuPTZD5BKH-BpLNr555CSdcHJFT5cSRwgqP32aJRF795pnlZqgcNHKcknbPAUSiuMrhKheoTSTPenwJLU3-K0faFHgHuphE5q-pxWt434RxuVp7pDqEXJS5u_ZvGt_9VBb7Bfo5wx7ULVhZ1SjHo18sCJBi10S-z5v5Zrj1O0rzsdLw91LmWRCk4qDnRTYSJ9AremGsOhfdQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "cafes",
+    "vibes": [
+      "Romantic",
+      "Work Friendly",
+      "Family",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": null,
+    "phone": "097464 21656",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 25.7,
+      "popularity": 1049,
+      "convenience": 10
+    }
+  },
+  {
+    "id": "ChIJDQLIMJu7BTsR9UVXo4xvsfg",
+    "name": "Frost & Toast",
+    "score": 75.1,
+    "rating": 4.7,
+    "reviews": 649,
+    "price_level": 2,
+    "address": "Devaswom Board, YMR Nanthancode Rd, Jn, Kowdiar, Thiruvananthapuram, Kerala 695003, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqbtrUnPv4RUxn44Vi6e5SunPJ9j-NSoZF8Wrqm4NP9oRITzCaYzv5BU-mk95T9kkDV8c15kMTCe4RPcgkH_op2gKo1_yzDx0cIJveWu99jY_mJbEYeI3ES4imk35y6qiEuEWAXuNN4gLVJGkDjLkanMFXI3TulX9AC01KCF6MtY0KoBn0kpI4IFyFAT9f2IwrTkys1Fnbi_PObFdB6gKBhXnbqsIGYDQkBkEGh2yS2s7XZBgytGMCLg0OUOaKGgLakm6yGTeKjFZBaK0fpItrah8wQ2nV8VMKnYAA_RTCHSw&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "cafes",
+    "vibes": [
+      "Romantic"
+    ],
+    "website": null,
+    "phone": "080752 02208",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 28.0,
+      "popularity": 649,
+      "convenience": 8
+    }
+  },
+  {
+    "id": "ChIJEYvwzNe7BTsRHGirI5Gjc6g",
+    "name": "Huddles Cafe",
+    "score": 71.7,
+    "rating": 4.4,
+    "reviews": 2683,
+    "price_level": 3,
+    "address": "TC25, First floor, Capitol building, 2850/3-4, Nalanda Ln, Nanthancodu, Thiruvananthapuram, Kerala 695003, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHrhptcDxzcAo0Sbz9mlkYh5_vc5HakwVss1A7DPKFmpZTYM4op4UNa04UtCEJxEvtrPbeJj4g_yhmPFnkZjUCS4gwPP6npQk2Qu_GSUt-DHUNJnS5G99Zg-HWIVIqxdOep03KL1lwl2XgM8mzU1plwC4K--qpH0OW7j2vtgxuL3sEemiBj2lg64_DTmdprq51tZNigRoJjMsUkP9X3aud1Gs3hwaF1wZ33ZLGgpZ88KJh2_pSZva2XkCkMD4F4RvRgnQcmx4IzpoRDKkNvO04gf1KzkzX_MbPUva78WJObTcQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "cafes",
+    "vibes": [
+      "Romantic",
+      "Family",
+      "Trendy"
+    ],
+    "website": "https://huddlescafe.com/",
+    "phone": "081291 21007",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 21.0,
+      "popularity": 2683,
+      "convenience": 10
+    }
+  },
+  {
+    "id": "ChIJq6qqanq5BTsRj7x7phWVYdk",
+    "name": "La Forno Cafe",
+    "score": 70.1,
+    "rating": 4.4,
+    "reviews": 948,
+    "price_level": 2,
+    "address": "Paruthipara Road, Peroorkada Rd, Samithy Nagar, Ambalamukku, Thiruvananthapuram, Kerala 695003, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHoFEEeo-DqJQWnAvxO8Yzz7qTiVVFgJvwNB6EzQ-3pgrq7XftIFK9crFroxdNoJvw3bCNOyPo5P2k0YKjUt2TsGVux3jiXfdQvmpHRA-DUSRh2GFaUNNWHvLoPKxOY6N9G_N5KfPMVUJw9EhnKUV-OeBYfA_y9xtpDjD84Bz2g9H2DJ4x6xaURSzxf8DL_c8ubpjpn8-2lA-NCr0ZP3HcM0kjHS89GejV0NnYElD-TSw6-7At733bg9cCUuhapsMVLdDNIl4b-B95x3A9njAWs6WcxD1ck5v40E8RSK1o4Hqw&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "cafes",
+    "vibes": [
+      "Romantic",
+      "Family",
+      "Trendy"
+    ],
+    "website": "http://lafornocafe.com/",
+    "phone": "070123 12262",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 21.0,
+      "popularity": 948,
+      "convenience": 10
+    }
+  },
+  {
+    "id": "ChIJz_j_H7e7BTsR6oQE2eR-mY8",
+    "name": "Ma Cafe Vellayambalam",
+    "score": 69.8,
+    "rating": 4.5,
+    "reviews": 683,
+    "price_level": 2,
+    "address": "Vellayambalam - Sasthamangalam Rd, Althara Nagar, Vellayambalam, Thiruvananthapuram, Kerala 695010, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHoURKwrl2G7d3MbVpMboXWQ7YGtsnntgVhcg8cDVmhARU2JuPlTZcoz4McHfS1khB6nWygVHbkDT3ryrYnA-uPitzk4asQsHbLcIBB4v1Of4mZZTybdoAaOBxQJuTjwQB3oxS8KIo2TNRunbkPNUiP1xNfYDKQqyvQBvXSHvQv430qArMJESWApgjtjgfBl0MYzLKo9eBsr-55RB1d-EkdF4a9Hg-iDF5u0QOhCcZBMIEucenmJ-xPSn3RzcX19Ui8arNFg0Q2PyJaG9xO7DT31JuM_WsIOjnHnzbmO90WQvA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "cafes",
+    "vibes": [
+      "Work Friendly",
+      "Family",
+      "Trendy"
+    ],
+    "website": null,
+    "phone": "099475 68833",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 23.3,
+      "popularity": 683,
+      "convenience": 8
+    }
+  },
+  {
+    "id": "ChIJB3tgqrq7BTsRBo2j5GepZ5E",
+    "name": "M M Cafe/Franchise of Kumbakonam Degree Coffee",
+    "score": 68.2,
+    "rating": 4.4,
+    "reviews": 977,
+    "price_level": 2,
+    "address": "KSHB Shopping Complex, Junction, opposite Trafic Police Station, Vrindavan Gardens, Pattom, Thiruvananthapuram, Kerala 695004, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqifqYUpOhVnCLpkPPfz_dCBFr1dufXUZiiLdr9H4MBwQq0o0P8A1QrM18WaWrJ7eixvVkqq3kFZKngfBxxESIXZ6bpx9-6A-zShYuUznhVye6tFOuVAnnhSgW4gtMhfzgOg9Xr6BO4pnJb_rYkLEpIAR40BzaRGwk-WTQP5Fl_Nb2w2F8xzwc7RKqO4tmI-vvR8PcabGKJVCUi4pukoYzth6s6qr7MZ0yNTV8wUV3Jx-K2QgOYPAF2eQzQ2chtKNB8P_uIInnXwUVgynxZzGi7AS1M4VE7tAhc5H9m5ILtKA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "cafes",
+    "vibes": [
+      "Romantic",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": "http://www.mmcafe.com/",
+    "phone": "073562 75996",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 21.0,
+      "popularity": 977,
+      "convenience": 8
+    }
+  },
+  {
+    "id": "ChIJDVgfd_S-BTsRDrX9PGGPDgA",
+    "name": "Turf Cafe",
+    "score": 67.0,
+    "rating": 4.3,
+    "reviews": 2652,
+    "price_level": 3,
+    "address": "Ground Floor Haans Apartments NH-66, New Entrance, near, Technopark Phase III Main Rd, Gate, Kulathoor, Thiruvananthapuram, Kerala 695583, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHonI0IXyBrHWz59SWThyy3Yc-Yd98bEe7xXLzFK21uO99rtSEgSFJAFaWM_DbAecWnEMvpIxDI5ySf-oORNGVG7fH0Po3ibSiBLkmnEQPRcSLr4o2HTO0HpfPHcmxdwsem_TSQRGp76DXDyEBcvbtcfNt2JQ5wUMthIjNh8p5Qlll5LvURqgcKk6EVuwJ9Q-J9820spMTE4Y7a-5DTHemwqJgRUYUzmAGEKnRZWCeVNtSNkHGg1anMarN-b6zZgvlIl8ehZtqL-p9zjbJ-xVbNpAqNAatbPmQi5VDDjwJyeZw&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "cafes",
+    "vibes": [
+      "Family",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": "https://www.turfcafe.in/",
+    "phone": "099950 77280",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 18.7,
+      "popularity": 2652,
+      "convenience": 8
+    }
+  },
+  {
+    "id": "ChIJPROsmAS7BTsRe5QY7UCdiyU",
+    "name": "Baker's Arch Garden Cafe",
+    "score": 65.7,
+    "rating": 4.4,
+    "reviews": 760,
+    "price_level": 4,
+    "address": "18/1400-1, Chandrasekharan Nair Rd, Kowdiar P.O, Kuravankonam, Thiruvananthapuram, Kerala 695004, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqm7WqsF38Zgg36OyO2aaZsjOYEbcYOX6XkEWBTFxL26xHVNMe8RgGW7SjDCasY1XGEhYmzGbahBg8qByRfR4kniWMkMcUsGxSynAcdgKXTfI89WlJwvoaZCLutjI0lzgavD29fFpUWSZSGXbQSu3StWWL76iqJ7Xu3Z1wLVl61yPEwfZgy6h6pj2yPMdyHTbQoxD6uPg3AN7iVQgBjep6yt5e9tUqjAdlvLfyMN8fKhqyR7sWHMnAu9oM4k3kFWwCQ7zYg-_utN7sTfI22bW8iMgnkl2TbD_Uvi9Jt2QCmTrcPrdo0SqKDpjhkelLxo1Y4nK8zesAekyVhHxjm_qQKZR4mjCpDmfozb-mVRbCsAb6mpiLOsH_K3Ojpuy8NCntaLBBcqV5NlTyucXbvjX_CLOJ68JxFvlGNouH6h-2CtvTcgNGsIptUNhVodXNy&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "cafes",
+    "vibes": [
+      "Romantic",
+      "Work Friendly",
+      "Family",
+      "Trendy"
+    ],
+    "website": "https://www.bakersarch.in/",
+    "phone": "087146 42900",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 21.0,
+      "popularity": 760,
+      "convenience": 8
+    }
+  },
+  {
+    "id": "ChIJ_____9i7BTsRYOcrYQMAjrQ",
+    "name": "OldSkool Café & Diner",
+    "score": 65.1,
+    "rating": 4.2,
+    "reviews": 4085,
+    "price_level": 2,
+    "address": "First Floor, TC 18/1820 Near Curry Chatty Express Take-away Pattom-Kowdiar Road, Kuravankonam, P.O, Kowdiar, Thiruvananthapuram, Kerala 695003, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHoa1tWW5buI9g-cH5lrfJPVEcg98WsB3-kJwoBReAy3Fz1FfzYg1eh7thdUm7LWyq3ARhYuh5kmx6bbmy3QwhrvRz0xQcn2MMBPblpoWgAPTnENv03lpGmRubTHV0H9MrXfEO9m97qpE6W-EaDcgbiMYohW8wjTKn1IN_I2pc6x8F8bEePszYkNfIWzqXLLUj2xmHUXj_jlSZSfvMnlto1Pun7pg4mN4-MB4XydXe5gTRPQUjMGnZlbYWBms-VfuBrM_mMpunu3K5HmmM61mFdHfIn0N09CIYODNomuo0s7n7HSpv11924IHfKgOgVYvirnZ4S8-biXODp9Xo29zMhESdecKMo1_-oXw6ViPFCqSDGfA9_Zt99RecKi3gwzuWg5plkK9ZG6ZPyWKOtpZALPESmKpFqwwdVkO47Y8lX2ow&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "cafes",
+    "vibes": [
+      "Romantic",
+      "Family",
+      "Trendy"
+    ],
+    "website": "https://oldskooldiner.com/dark-contact/",
+    "phone": "097456 69111",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 16.3,
+      "popularity": 4085,
+      "convenience": 8
+    }
+  },
+  {
+    "id": "ChIJkbuTrF-5BTsRZdwMvgujjlM",
+    "name": "Cofi Club",
+    "score": 64.2,
+    "rating": 4.2,
+    "reviews": 1921,
+    "price_level": 3,
+    "address": "1st Floor Kiliyileth Building TC 2/3592 NH Road Opposite Big Bazar Pattom, Kailash Nagar, Vivekananda Nagar, Kesavadasapuram, Thiruvananthapuram, Kerala 695004, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHpY32eHZZEJ_inwtsBtlFCIpZsPS-CTjQyZXv_uXs4seUm92D6K1vYQUdFuD13P4naWixNo9RF1RydT3CnfqH0xh8bhdhrdgNXtI1Jt3AjUWq4o4oglKu6lwQMXKTH7oZOpjRmFbst1kclcM3vhzImGCwwq19arIEGyzUfosUPgkmnTpsYHq5zix1IFNJF-pm2cl3evTSEL0Q15j2bpXkeUQR-Vz2G0317xSo6HpijTEOD1aAXuAvtQk2gc9otM2cPR7JRFBUynqhR5syEXTig9YAGxWSsXuOlDpO6Onyo-GoiES1BEfpTILe-6bgP7F-MNvaRSxd-H1IF6NlcGAbinCVQY4Z9pHVWhHKlgLcakm1ZFd0Aao0cPCg7F68jHfsM4ATiqqZXmZKyJMQ9arLTZxjjopa1ftDNgtf5JNaWyTg&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "cafes",
+    "vibes": [
+      "Romantic",
+      "Family",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": null,
+    "phone": "0471 400 0040",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 16.3,
+      "popularity": 1921,
+      "convenience": 8
+    }
+  },
+  {
+    "id": "ChIJrbbNZH6_BTsR31E5Xoxk3OQ",
+    "name": "Beachills Cafe",
+    "score": 61.7,
+    "rating": 4.2,
+    "reviews": 1281,
+    "price_level": 2,
+    "address": "Menamkulam, Thiruvananthapuram, Kerala 695586, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqpT0SouiVkWmN4RTa-ajOhzuxhw7CWdZYiPFyJYImUvg-HPOF5yZm2Cb2kU9wzVNBnBqU4Ld5M1zIC_YpKRsrjLjKxPttc4V_S3-lJraeE-SoOU2AzU2NVDI35daly0NDv9tqkvxlZDDGmSs-kome4VDFq5WBZ0RheqytMI0XvW_mss73E3159FmAD1SobfKs-e3ET-QfFovr1Yp_jggiwvuSJ0xVQ7kHlDIISu7VBO9DZvf872Kx5Lr1JBOri4HDlKSxNFNEg1LXbl_ywZ3b2Ps9iM9fNHxpQJgpTS_2E4B8cR1F-MV3Bmvh1Az7MamwMOeVMhrxsaIsh7pISvljvgImZ4_UBO2Zqeh0A03vGBJMNtce94XKf-Q8iBs5uvuQCX6EX6f4U1UHxtHPBP08uqy23hxx3KQpSUbKJAV4ZW1A&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "cafes",
+    "vibes": [
+      "Romantic",
+      "Work Friendly",
+      "Family",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": null,
+    "phone": "070128 45954",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 16.3,
+      "popularity": 1281,
+      "convenience": 6
+    }
+  },
+  {
+    "id": "ChIJO7J8jte7BTsRMTYgCWwiul0",
+    "name": "Café Mojo",
+    "score": 61.6,
+    "rating": 4.1,
+    "reviews": 2988,
+    "price_level": 3,
+    "address": "Shaheen Building Pattom Kowdiar Road Near Kuravankonam, Kowdiar, Thiruvananthapuram, Kerala 695003, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHr6PmVTdVk4kC7Kj5hsag4QhpTlT4fj_nuKijry4iowVQ937Xz-313WUXlXEV47tsGoVncYuXgk52iIix0lC5uL9pzHoiVdwtFuXvNXjT2GlCqoHUTWdyGV_0gjIhOQWnVcSM5FzappBFzFD769tlFJa0-r5HEkDOPWg0JdZKoP-FiTatJ5mSqlS_X9aCbaX-k2CNNp6hOA1lfhMNyLIe2fCBCASLq4pbv7clb-OuKA0viRKsCbUIzC4zLQw0uX8TpIQvZmMgBqxcpa5pC_1pbphL7RdiyGIjl-dd_p8GaIFA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "cafes",
+    "vibes": [
+      "Work Friendly",
+      "Family",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": "https://m.facebook.com/Cafemojotrv/",
+    "phone": "0471 243 0437",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 14.0,
+      "popularity": 2988,
+      "convenience": 8
+    }
+  }
+]

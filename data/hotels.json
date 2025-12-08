@@ -1,0 +1,366 @@
+[
+  {
+    "id": "ChIJByCQrkQSpjsRV6u1HDVXotk",
+    "name": "Jungle Beats Resorts",
+    "score": 72.8,
+    "rating": 4.7,
+    "reviews": 2520,
+    "price_level": 2,
+    "address": "Thanjilod, Via Soojipara Waterfalls, Meppadi P.O, G4FW+R82, Meppadi, Vellarimala, Kerala 673577, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHq1wE63EOlkD9srPeNleOvkQhXTa-FsWLamHcxeOLMu6Gv--Z_mQWbAbtNjrAGx04gB73x4g8r3vvj5iUqFkQjvUyNf_JCafNPSfWsB8PI_ieCD0NZbnQn8hl-0e6u74WXmrkXGVgYKnBAhACp1TdN5Gwx3j5k7GBOkMDruP1QBAExkafS-O_gZFDf4Y53_an070T0MtF_obYf_Gxa-drGTveMli7aSzNayMm2_Kh9sF5m1tEyFf_I7kVxJyuAbGJD0pTgJlnxxTxfNo7Lii6sNMYIvP5Ty2kZZB9t8wPpK8Q&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "hotels",
+    "vibes": [
+      "Romantic",
+      "Work Friendly",
+      "Trendy"
+    ],
+    "website": null,
+    "phone": "090721 52415",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 28.0,
+      "popularity": 2520,
+      "convenience": 2
+    }
+  },
+  {
+    "id": "ChIJy6V8ja-7BTsRo5R8ioXgQCo",
+    "name": "Hycinth Hotels",
+    "score": 72.1,
+    "rating": 4.6,
+    "reviews": 16660,
+    "price_level": 2,
+    "address": "Manorama Office, near Manorama Road, Aristo, Thampanoor, Thiruvananthapuram, Kerala 695001, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHpkB_xZ-H6YohrV6B9JgM_hPwuQgjY7-L-vt8LRegCq8PNdym_hmqeADJSk5qPBiE201TYiY6j7WPMXiWebXwZP_3M1h8kGvlHnRTT-QotgXKNg2Z-3bdaOwUVy5b-r-vwTevAAumYvEv--VIgEzvinKthYdJoAm_cOmU3PGms4UF3ShsgXWFzgVYsIn8J2x7e0-pV8UDcQzHCF9aWiQQuuSErKI2LfRCtbvncSQGnAisBwa3KSdv1qup7wumytKkBtMI1GbX5imm-P8iP8QeN6Aee0IsfblhcQHzYdxgPdxA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "hotels",
+    "vibes": [
+      "Work Friendly",
+      "Family"
+    ],
+    "website": "https://www.hycinthhotels.com/",
+    "phone": "0471 666 2999",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 25.7,
+      "popularity": 16660,
+      "convenience": 4
+    }
+  },
+  {
+    "id": "ChIJFYjFxQWlBTsRQJAiGdinmxE",
+    "name": "Taj Green Cove Resort & Spa, Kovalam",
+    "score": 72.1,
+    "rating": 4.6,
+    "reviews": 3601,
+    "price_level": 2,
+    "address": "GV Raja Rd, Kovalam, Thiruvananthapuram, Kerala 695527, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHpYSRFxM5FMh0DamPrCcMvMRfBH2j_UW01s6y-GEdTEVaT8zlxqE9ZiTScw4jT1rZxBo3XcLXgGwreY0NsmyRyGxXNDt41BgL1D1dPVqjkz1XCz3_lmrCYbWVuD2jHSLjcz0TGkO8N1KQ4rWrNYwwtDse2PgaX3rc53D0NNCwayNHBZNdqWOs-OduY_O6D0zmJblCHra663dhy6-zhaYkX-3dPuTEsH1HUOHTs0hn1gJptf_beUMrH3ma3-vIn-fXF8ORs0agULlt_lEGbeoiteKNvNnBOxsbvoxHIavzo&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "hotels",
+    "vibes": [
+      "Romantic",
+      "Family",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": "https://www.tajhotels.com/en-in/hotels/taj-green-cove?utm_source=Google&utm_campaign=Taj-Green-Cove-Kovalam&utm_medium=Local",
+    "phone": "0471 661 3000",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 25.7,
+      "popularity": 3601,
+      "convenience": 4
+    }
+  },
+  {
+    "id": "ChIJt_IAEbulBTsR1S7_90ceP5Q",
+    "name": "The Leela Kovalam, a Raviz Hotel",
+    "score": 70.1,
+    "rating": 4.6,
+    "reviews": 12194,
+    "price_level": 2,
+    "address": "Beach Rd, Kovalam, Thiruvananthapuram, Kerala 695527, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqe9xBZ3ynbkcRSl7gKF43gFgC26dkCzcySqRkeka_u9kxti4Q8ZNjyp8zSnM_ZJpbxymch9mrIUUIOSUCraET44SKd8MABFXRwGk5n8_fBZ-ZuJp00w0GaULHlbB0drXL02pn41F3oXUC9ZV2KZzMTN0ehPv7is1BT_-HN3Vzxm5olgHYnXTWl5ayCAhilu42x0SRX1BFgW3V3RepABVtB-9EZ2_PjRiIjoO5tcwDDK8RRdtpmh73aOZleJGKJ8Nv_T4phuZdJwalXkVQ-dOexa7TFjjQpO394vhNDxoFkfA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "hotels",
+    "vibes": [
+      "Romantic",
+      "Family",
+      "Trendy"
+    ],
+    "website": "https://www.theleela.com/the-leela-kovalam-a-raviz-hotel",
+    "phone": "0471 669 1111",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 25.7,
+      "popularity": 12194,
+      "convenience": 2
+    }
+  },
+  {
+    "id": "ChIJ3aIFmeq9BTsRb821r6M3_gM",
+    "name": "O by Tamara Trivandrum",
+    "score": 69.3,
+    "rating": 4.5,
+    "reviews": 5378,
+    "price_level": 2,
+    "address": "Oruvathilkotta, Aakkulam, Thiruvananthapuram, Kerala 695029, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHoh2zVFA5RegAWxf8O5dbw_J66YtNpUoHRebgxrbzCKymbnVcB3na9A1ru9mNpfV6TM4c1CAbZomjuyjfcGNNn6gpJkHsdMTQGAT4dlGb4dBx9ZwHJ9Jozwiu5-36RSQbTQkbKnFBH6gSE3LJsTtxc-6rvMSkBtPI1tkjObpqz6K798lGKmChj9LN5RLvPjmGBUwkh7bA3qb37dewzkkEhB1TYGr3uoMMsJAmsYiVOkqUoxL79u_K-tNBg5Fw8Yj_UD5zytC_cdDWjVb7hwxakQ42UjLLtrjNu0JmbrGvQ1rw&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "hotels",
+    "vibes": [
+      "Romantic",
+      "Work Friendly",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": "https://www.obytamara.com/hotel-trivandrum/",
+    "phone": "080 6555 1111",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 23.3,
+      "popularity": 5378,
+      "convenience": 4
+    }
+  },
+  {
+    "id": "ChIJ9aVTRTClBTsRamf8KYOgRUs",
+    "name": "Uday Samudra Leisure Beach Hotel",
+    "score": 66.6,
+    "rating": 4.4,
+    "reviews": 10196,
+    "price_level": 2,
+    "address": "UDS Corporate Office, Samudra Beach, GV Raja Rd, Thiruvananthapuram, Kerala 695527, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHp_bHZBirGmJQ6gTguP8AwUNuA0K3PoV_wU-tWMQSyhhDAFkYyXQyJgR4SFG1IXDZLMAd-DfzCff7c4BLDPUcaLQZBlnvW0lwbIFGXNot3Mbmd2oy2sVF3s1IboRAqZXZGlvTe4KsVl5tNsv2uCvv5-wNgFL2mqquowEqZ6wZtsICGiLLBWXKeLtUfo_AE6n9x4mnLG3IVU2gi3iXouvMaexFtkINRFGoMfjHa4M37S6rZeJ8B_D2sbWGqkjcliLIrjD7oSNDG6y636XEHaiZVeMseFGso61hx2uIgoHHKRFQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "hotels",
+    "vibes": [
+      "Romantic",
+      "Work Friendly",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": "https://www.udshotels.com/uday-samudra-leisure-beach-hotel-spa/",
+    "phone": "0471 248 3111",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 21.0,
+      "popularity": 10196,
+      "convenience": 4
+    }
+  },
+  {
+    "id": "ChIJ45D40KW7BTsRtP_CnoND3Pc",
+    "name": "Hotel Dimora Thiruvananthapuram",
+    "score": 66.6,
+    "rating": 4.4,
+    "reviews": 8425,
+    "price_level": 2,
+    "address": "Opp. Central Railway Station, Overbridge, Thampanoor, Thiruvananthapuram, Kerala 695001, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqJOqa1KN04CR0N-tbjPwpCyGjOBZPm9XsTDcNEyowqEn0-h40t_H6g0Ki1fwXnML1nFaUQOxCK84tivDZlbW5IAd4lPXu37tL0Q-EnP_bzrQBFkZQ3G_NzjDIB-_obWHNSFFuJQuRXU3Wr5he-ZPVmw2oEMWeyr9VhWb5_ceN8m1657zSTkNlOeFMrXekYkpDo4Y4ls8XTSxCpo1bEGrQkdwhrHinYeUw3642u6HQ0Nnw70uKgPJ5F7xwhr4Y7v6S3jcqbI5nw_Mhc8ajzhNFAKssXnaA3BCCNxA_jFX_Jlg&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "hotels",
+    "vibes": [
+      "Romantic",
+      "Work Friendly",
+      "Family"
+    ],
+    "website": "https://www.thedimorahotels.com/apollo-dimora-thiruvananthapuram/",
+    "phone": "0471 666 5333",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 21.0,
+      "popularity": 8425,
+      "convenience": 4
+    }
+  },
+  {
+    "id": "ChIJg-yPMHy8BTsRQMiNz0ebWwY",
+    "name": "UDAY SUITES - THE GARDEN HOTEL",
+    "score": 66.6,
+    "rating": 4.4,
+    "reviews": 5719,
+    "price_level": 2,
+    "address": "T.C. 34, 757/3, Watts Ln, Shangumukham, Kannanthura, Thiruvananthapuram, Kerala 695007, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHr2BPHKIdAnznZ2yqmrStP86z48FgYpdUmo-RrrZLTuR6zMImyAJLpBRbObDv-fARR65WnbH5hYfo1V5NZBxaPzfZfh0Shuv9Ehl-djePH3mY_fanbMge-iCf7wvTQnZnZkSN0CNpIR38TDoAwpxFi3lcJvPL-2CeQSxqGIScgu3-YbHpZQ8XMC0EwpKJVQDI6BV9Dwyf1lBpBnA0ckzLnIJm9l-A-Nm2wMhhcnHR4eshjxZkS41SmQqvLeSseuK2HisZ7VS79fBtQxBtV2JOV69AQYy53lF-VtP6cPURsgtA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "hotels",
+    "vibes": [
+      "Romantic",
+      "Work Friendly",
+      "Family",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": "https://www.udshotels.com/uday-suites-airport-hotel/",
+    "phone": "085905 04355",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 21.0,
+      "popularity": 5719,
+      "convenience": 4
+    }
+  },
+  {
+    "id": "ChIJ18A3jmFSBDsRfY7SJQmysWU",
+    "name": "Anantya By The Lake",
+    "score": 66.6,
+    "rating": 4.4,
+    "reviews": 3639,
+    "price_level": 2,
+    "address": "State Highway 45, Chittar Lake, Kaliel Village, Alancholai, Tamil Nadu 629101, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHpdOvAIgmRK16ZtqIJU3_8zS19RCf_OhVu1hiD2x-5rArIiKkjEEqG_FFL9IHOaRybAd0ma3sBkC2HxPdofAYh9v59-jzaaApnmKlvVsdQR3OVklpN7_f2HasDcRReO9rDe6I9kTiPZqrBkEBbAxVDc3sdu61zgQEk98INCc-ytYJ6s-yCDu8qNd66xcw-V4qV-04REwh5rTFU5Fd9vXdw0GLg4MtIbevC05hzd5yhc31Eq6VCOf4EkATmvDJG4Ulsr6lL_xjLRC2LOpiHW_p4aKjpBBQk89I90tgNpqH3KXg&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "hotels",
+    "vibes": [
+      "Romantic",
+      "Work Friendly",
+      "Family",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": "https://anantyaresorts.com/lake/",
+    "phone": "093634 96964",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 21.0,
+      "popularity": 3639,
+      "convenience": 4
+    }
+  },
+  {
+    "id": "ChIJdRy1grm7BTsRsSA7NDgD6ec",
+    "name": "Hilton Garden Inn Trivandrum",
+    "score": 64.6,
+    "rating": 4.4,
+    "reviews": 5888,
+    "price_level": 2,
+    "address": "FWXX+QW8, Punnen Rd, Statue, Palayam, Thiruvananthapuram, Kerala 695001, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHrv53HYiM13xuPg31yerz2LjZlqyhxqWXSAO08cLvmuFSGNRGdfh2GO3-5qENWSAE3YUrfl7AWu0fdKoOjSxCuZ1xLylz-zkQ3rDq9JdisrWuyvRd3FL020MajJmnz5XMcWo4ffb7-tp0ffqBMLPWMivd5OQTsorQTrg6I3lgv-OApW31XftBOHfsZ_srCR0za45MIPxeCeVP04IO_APgnG334AbyEVXDrN11brHZUvnnQJfpBdVAKtodRIQ5knzCxGSZmE9N6O2f1xR0OcIugWXuY7Vv89EQzanDfHTNCorw&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "hotels",
+    "vibes": [
+      "Family",
+      "Authentic"
+    ],
+    "website": "https://www.hilton.com/en/hotels/trvgigi-hilton-garden-inn-trivandrum/?SEO_id=GMB-APAC-GI-TRVGIGI",
+    "phone": "0471 660 0000",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 21.0,
+      "popularity": 5888,
+      "convenience": 2
+    }
+  },
+  {
+    "id": "ChIJ38GoeK-lBTsRFvOwhqovUGM",
+    "name": "Gokulam Grand Turtle on the Beach",
+    "score": 63.9,
+    "rating": 4.3,
+    "reviews": 3763,
+    "price_level": 2,
+    "address": "TC 63, 512 TO 523, Beach Rd, Kovalam, Thiruvananthapuram, Kerala 695527, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHrR4eVY9A7b9y1dwxRduAzplim1RyXJQMzFSv6P1yi3muO_wket_aLwpFZRiUC8EICd7muhy0O9gI40OV-kjAWb2aBUUMrwF-guz33o-gKsK2GNd4EigW9Dhzq_oHskv-pOmbUzXyLW7ncOe629L2VYQ8-sBYyUoBxtQ6CXCQqRGXBxjaEp6QEsKSUm2A8G5O3LP0ZVBoCbQRCR7aVX_djh34nufJunRPgwASVjtUJOu8f4Le5_GhZuTyeIpbZhP4cB9LAHz4wTp2f_5NU0AxW7OncBkqocs1VXQEces7T1nQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "hotels",
+    "vibes": [
+      "Romantic",
+      "Work Friendly",
+      "Family",
+      "Trendy"
+    ],
+    "website": "https://www.turtleonthebeach.com/",
+    "phone": "0471 251 4000",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 18.7,
+      "popularity": 3763,
+      "convenience": 4
+    }
+  },
+  {
+    "id": "ChIJ8S4RB7m7BTsRT-ZmZnN7wI0",
+    "name": "The South Park",
+    "score": 61.1,
+    "rating": 4.2,
+    "reviews": 5664,
+    "price_level": 2,
+    "address": "GW2X+9VV, Mahatma Gandhi Rd, Near University College Thiruvananthapuram, University of Kerala Senate House Campus, Palayam, Thiruvananthapuram, Kerala 695001, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHr93LU-uui-oq9jbtbSciwBl25AkmJqk3HuTZojlU79IQj1Z9QQbvHeT-e8AF5zpvc41K1S_SwdT2xrqFK24--t9hkjMOr1TQA32bf9ltUsxQ5CfNoARtQa8xyCKv3e6ndRRTTQRcehkWgJQLU5xPrImWx5D1IG03MnncLIKDyqbvVgHLmcICdLRffTqAjNR4NBm5W_zcmAWaiK8ue6p2tFX6DeFHWe4mz1C5AZtKWfPKopE4D8qvoAYpY3jGmYag8e0LqhoJXiFzRYfq_TF-HB0zVRY74fbxuqKozVzoy_TA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "hotels",
+    "vibes": [
+      "Romantic"
+    ],
+    "website": "http://thesouthpark.com/",
+    "phone": "0471 233 3333",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 16.3,
+      "popularity": 5664,
+      "convenience": 4
+    }
+  },
+  {
+    "id": "ChIJL7UPLf6-BTsR-EtsxXtpzJ4",
+    "name": "Hotel Karthika Park",
+    "score": 61.1,
+    "rating": 4.2,
+    "reviews": 4818,
+    "price_level": 2,
+    "address": "Police station, Panvel - Kochi - Kanyakumari Hwy, near Kazhakkoottam, Kazhakuttam, |, Vadakkumbhagam, Kazhakkoottam, Thiruvananthapuram, Kerala 695582, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHrscoEOZxvf5SC8yPDyVVsefmxrK4_2BmvHG6WHCRqaGTuUfV8AVpClzaLRABqXE4U7LkQYU-bRC9dLMsqDyIwlnVJ4u0CKlGR8HEvv1MFZmNP7bProl9l3BC5ptRQafFFlhm4JxDiFziQsuMdE-mPWyGIieUbILKwKEdUPGseF2bt8siF-o_mpTxrazZQgDrUlHCOKkqMKvG3NB12h-R1OGGeYD5H8134gejbonRXg4NnQS6lTeZhtBQXbq3tPIMJnuGOdH-nAJDTspRRanrrFOeFb_fYgVuC7lFKhsrVqlUNlvt6mwV4ek-YYAuhUS8v_BAKLmvx_xQmRybHrw1pveYi88wsF-PdH5WoporMdI1a1Nk0dbgwNHP7OJrH7wgkdBNqgonNbdVDqjNkk3N55aLEMwkAQKXBRf4cwFm4UVg&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "hotels",
+    "vibes": [
+      "Romantic",
+      "Family",
+      "Authentic"
+    ],
+    "website": "https://hotelkarthikapark.com/",
+    "phone": "081370 33636",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 16.3,
+      "popularity": 4818,
+      "convenience": 4
+    }
+  },
+  {
+    "id": "ChIJRRcR1sW7BTsRmNKmMlX2BrM",
+    "name": "KTDC MASCOT HOTEL",
+    "score": 59.1,
+    "rating": 4.2,
+    "reviews": 5530,
+    "price_level": 2,
+    "address": "PMG Road Near Kerala University Stadium, GX52+J65 Mascot Square, Cantonment House Rd, LMS Compound, PMG, Thiruvananthapuram, Kerala 695033, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHp9oCTihk-MqLmf-4M7fxEIwtHVS9ahqSgJha_uu9HrCVlmYPWtNwevZmvPHaetSG_J4CeDDfgBzCmFwh_bgOYCMjBhr0h8R4bsXn4zI99xN51XaeqGJj7dtfbXexsw-snpBkhhBzUZpT5u94cusB7W6bcoFqjMF0ynNFuY_pRAPQkFk7dcw3G44-2LV0VAJjOTmgTmrQlh33OPDVqytvWUOSyyHStWDFF8U4_5lAUK2FnKIT0Ow21iELcRAJ4ItQEamshwj-RvRGdoXw51omSEAhkbZ8dUMl_kCSk_bPnK1Q&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "hotels",
+    "vibes": [
+      "Work Friendly",
+      "Family",
+      "Authentic"
+    ],
+    "website": "https://www.ktdc.com/mascot",
+    "phone": "094000 08770",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 16.3,
+      "popularity": 5530,
+      "convenience": 2
+    }
+  },
+  {
+    "id": "ChIJpYqqvX-8BTsRJboBae82h6Y",
+    "name": "Maurya Rajadhani",
+    "score": 58.4,
+    "rating": 4.1,
+    "reviews": 4049,
+    "price_level": 2,
+    "address": "Maurya Rajadhani Building, General Hospital Rd, Statue, Palayam, Thiruvananthapuram, Kerala 695001, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHq3TsNdUw3O5D6LLdcDqMmIv6xiH5XIzkFfRsFiGJSX5PnCVV1FkwS5WD4Iph83vv66rRPNbrixcAum3W3sRdYoaKi-LxKkHLzznnHYI9gkYD5F7G-p2eFJ7_lTZaw73JgQHWi5ORGJzU9-HVK47Do8Lu49w8TFPLoHr9J41kcfZuGRGzUgLMc7TCH-0snlTZhJ9hVi-B7Qf2-pVCGaURPvlYP0Qgx0CE-d7Hns2DKMaaOq5f4n05qEH7jNKgogd8pH-Y7XuYGBGbolzgjsFngbOFi2SzPqNrZIz-SnN5vt-Q&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "hotels",
+    "vibes": [
+      "Romantic",
+      "Work Friendly",
+      "Trendy"
+    ],
+    "website": "http://www.rajadhanihotels.com/hotels-kerala-trivandrum/Maurya-Rajadhani",
+    "phone": "0471 246 9469",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 14.0,
+      "popularity": 4049,
+      "convenience": 4
+    }
+  }
+]
