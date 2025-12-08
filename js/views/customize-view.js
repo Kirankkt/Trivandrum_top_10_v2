@@ -171,6 +171,13 @@ async function renderCustomizeView() {
     };
     saveWeights(newWeights);
     window.location.hash = '/';
+    // Scroll to localities section after a short delay to let the page render
+    setTimeout(() => {
+      const localitiesSection = document.getElementById('localities-section');
+      if (localitiesSection) {
+        localitiesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   });
 
   // Preset buttons
