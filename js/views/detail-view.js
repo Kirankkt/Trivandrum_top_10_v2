@@ -238,6 +238,9 @@ async function renderDetailView(localityName) {
                     ` : ''}
                 </div>
             </div>
+            
+            <!-- Premium Spots Section - Will be populated dynamically -->
+            <div id="premium-spots-container"></div>
         `;
 
         console.log('[Debug] Setting app.innerHTML...');
@@ -270,6 +273,70 @@ async function renderDetailView(localityName) {
             window.trackLocalityView(locality.name);
         } else {
             console.warn('[Supabase] trackLocalityView function not found');
+        }
+
+        // --- PREMIUM SPOTS ---
+        // Load and display premium spots for this locality
+        try {
+            const spotsResponse = await fetch('data/premium_spots.json');
+            if (spotsResponse.ok) {
+                const allSpots = await spotsResponse.json();
+                const localitySpots = allSpots.find(s => s.locality === locality.name);
+
+                if (localitySpots && localitySpots.spots && localitySpots.spots.length > 0) {
+                    const spotsContainer = document.getElementById('premium-spots-container');
+
+                    // Group spots by category
+                    const categories = {};
+                    localitySpots.spots.forEach(spot => {
+                        if (!categories[spot.category]) {
+                            categories[spot.category] = [];
+                        }
+                        categories[spot.category].push(spot);
+                    });
+
+                    let spotsHtml = `
+                        <div class="premium-spots-section">
+                            <h2 class="spots-title">✨ Discover ${locality.name}</h2>
+                            <p class="spots-subtitle">Top-rated places nearby</p>
+                            <div class="spots-grid">
+                    `;
+
+                    localitySpots.spots.forEach(spot => {
+                        const hasPhoto = spot.photo_url;
+                        const placeholderColor = spot.category === 'heritage' ? '#8B4513' :
+                            spot.category === 'dining' ? '#d35400' :
+                                spot.category === 'shopping' ? '#9b59b6' :
+                                    spot.category === 'recreation' ? '#27ae60' : '#3498db';
+
+                        spotsHtml += `
+                            <a href="${spot.google_maps_url}" target="_blank" class="spot-card" rel="noopener noreferrer">
+                                <div class="spot-image" style="${hasPhoto ? `background-image: url('${spot.photo_url}')` : `background: ${placeholderColor}`}">
+                                    ${!hasPhoto ? `<span class="spot-icon-large">${spot.icon}</span>` : ''}
+                                    <span class="spot-category-badge">${spot.icon} ${spot.category}</span>
+                                </div>
+                                <div class="spot-info">
+                                    <h4 class="spot-name">${spot.name}</h4>
+                                    <div class="spot-meta">
+                                        ${spot.rating ? `<span class="spot-rating">⭐ ${spot.rating}</span>` : ''}
+                                        <span class="spot-maps-link">View on Maps →</span>
+                                    </div>
+                                </div>
+                            </a>
+                        `;
+                    });
+
+                    spotsHtml += `
+                            </div>
+                        </div>
+                    `;
+
+                    spotsContainer.innerHTML = spotsHtml;
+                    console.log('[Premium Spots] Loaded', localitySpots.spots.length, 'spots for', locality.name);
+                }
+            }
+        } catch (spotsErr) {
+            console.warn('[Premium Spots] Could not load spots:', spotsErr);
         }
 
     } catch (err) {
