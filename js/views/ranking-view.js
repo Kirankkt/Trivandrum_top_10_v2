@@ -52,7 +52,7 @@ async function renderRankingView() {
       </div>
       <div class="hero-content">
         <h1 class="hero-title">Discover Thiruvananthapuram</h1>
-        <p class="hero-subtitle">Find Your Perfect Neighborhood in God's Own Capital</p>
+        <p class="hero-subtitle">Find Your Perfect Neighborhood in Kerala's Capital</p>
         <div class="hero-stats">
           <div class="hero-stat">
             <span class="stat-number">20</span>

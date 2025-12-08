@@ -14,6 +14,37 @@ function route() {
     } else if (hash === '/methodology') {
         console.log('[Debug] Routing to Methodology');
         renderMethodologyView();
+    } else if (hash === '/map') {
+        console.log('[Debug] Routing to Map');
+        renderMapView();
+    } else if (hash === '/restaurants') {
+        app.innerHTML = `
+          <div class="coming-soon">
+            <h1>🍽️ Restaurants</h1>
+            <p>Top 10 restaurants in Trivandrum coming soon!</p>
+            <a href="#/" class="btn-primary">← Back to Localities</a>
+          </div>`;
+    } else if (hash === '/hotels') {
+        app.innerHTML = `
+          <div class="coming-soon">
+            <h1>🏨 Hotels</h1>
+            <p>Top 10 hotels in Trivandrum coming soon!</p>
+            <a href="#/" class="btn-primary">← Back to Localities</a>
+          </div>`;
+    } else if (hash === '/cafes') {
+        app.innerHTML = `
+          <div class="coming-soon">
+            <h1>☕ Cafes</h1>
+            <p>Top 10 cafes in Trivandrum coming soon!</p>
+            <a href="#/" class="btn-primary">← Back to Localities</a>
+          </div>`;
+    } else if (hash === '/experiences') {
+        app.innerHTML = `
+          <div class="coming-soon">
+            <h1>🎭 Experiences</h1>
+            <p>Top experiences in Trivandrum coming soon!</p>
+            <a href="#/" class="btn-primary">← Back to Localities</a>
+          </div>`;
     } else if (hash.startsWith('/locality/')) {
         const localityName = decodeURIComponent(hash.replace('/locality/', ''));
         console.log('[Debug] Routing to Detail View for:', localityName);
