@@ -2902,26 +2902,30 @@ footer .small {
   align-items: center;
   gap: 1rem;
   color: #fff;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
 }
 
 .hero-photo-content h1 {
   font-family: var(--font-serif);
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin: 0;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  text-shadow: none;
 }
 
 .hero-photo-content .category-label-large {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
   margin: 0;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 0.25rem;
 }
 
 .hero-photo-content .category-icon-large {
-  font-size: 3rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 2.5rem;
 }
 
 @media (max-width: 768px) {
