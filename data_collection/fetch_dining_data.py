@@ -182,12 +182,12 @@ def main():
                     all_candidates[pid] = place
             time.sleep(1) # Be nice to API
             
-        print(f"   ✨ Found {len(all_candidates)} unique candidates. Fetching details for Top 15...")
+        print(f"   ✨ Found {len(all_candidates)} unique candidates. Fetching details for Top 25...")
         
         # Sort by raw rating*reviews to pick top candidates to detail fetch
         sorted_candidates = sorted(all_candidates.values(), 
                                    key=lambda x: x.get('rating', 0) * math.log(x.get('user_ratings_total', 0) or 1), 
-                                   reverse=True)[:15]
+                                   reverse=True)[:25]
         
         final_data = []
         

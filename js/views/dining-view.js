@@ -5,21 +5,21 @@ async function renderDiningView(type) {
     // Config based on type
     const config = {
         restaurants: {
-            title: "Top 10 Restaurants",
+            title: "Top 20 Restaurants",
             subtitle: "Curated by Taste, Vibe & Authentic Reviews",
             icon: "🍽️",
             filename: "data/restaurants.json",
             badgeColor: "#ff6b6b"
         },
         cafes: {
-            title: "Top 10 Cafes",
+            title: "Top 20 Cafes",
             subtitle: "Best Spots for Coffee, Work & Conversation",
             icon: "☕",
             filename: "data/cafes.json",
             badgeColor: "#4ecdc4"
         },
         hotels: {
-            title: "Top 10 Hotels",
+            title: "Top 20 Hotels",
             subtitle: "Luxury Stays & Premium Comfort",
             icon: "🏨",
             filename: "data/hotels.json",
@@ -35,10 +35,10 @@ async function renderDiningView(type) {
         const response = await fetch(config.filename);
         if (!response.ok) throw new Error("Data not found");
         const data = await response.json();
-        const top10 = data.slice(0, 10);
+        const top20 = data.slice(0, 20);
 
         let html = `
-            <div class="dining-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('${top10[0].image}') center/cover fixed;">
+            <div class="dining-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('${top20[0].image}') center/cover fixed;">
                 <div class="hero-content">
                     <h1>${config.icon} ${config.title}</h1>
                     <p class="hero-subtitle">${config.subtitle}</p>
@@ -47,7 +47,7 @@ async function renderDiningView(type) {
 
             <div class="dining-container">
                 <main class="dining-grid">
-                    ${top10.map((place, index) => createDiningCard(place, index + 1, config)).join('')}
+                    ${top20.map((place, index) => createDiningCard(place, index + 1, config)).join('')}
                 </main>
             </div>
         `;
@@ -98,7 +98,7 @@ function createDiningCard(place, rank, config) {
                     <div class="score-pill" style="border-color: ${config.badgeColor}; color: ${config.badgeColor}">
                          Foodie Score: ${place.score}/100
                     </div>
-                    <a href="${place.map_url}" target="_blank" class="btn-map">View Map ↗</a>
+                    <a href="https://www.google.com/maps/place/?q=place_id:${place.id}" target="_blank" class="btn-map">View Map ↗</a>
                 </div>
             </div>
         </div>
