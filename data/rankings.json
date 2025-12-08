@@ -4315,12 +4315,12 @@
         "smart_city_projects": 2,
         "developer_activity": 3,
         "evidence": "20 Hospitals and 20 Schools demonstrate high amenity density; Reviews mention 'peaceful and serene environment' but also proximity to major transport hubs (Railway/Bus Stand); Travel time to Technopark is 21min; Web search confirms major city-wide flooding/drainage issues near the core.",
-        "primary_category": "IT Professional Hub",
+        "primary_category": "Transit/Residential",
         "tags": [
-          "IT Corridor",
-          "Upmarket"
+          "Transit Hub",
+          "Central"
         ],
-        "category_icon": "💼"
+        "category_icon": "🚉"
       }
     },
     {
@@ -13067,12 +13067,12 @@
         "smart_city_projects": 2,
         "developer_activity": 3,
         "evidence": "20 Hospitals and 20 Schools demonstrate high amenity density; Reviews mention 'peaceful and serene environment' but also proximity to major transport hubs (Railway/Bus Stand); Travel time to Technopark is 21min; Web search confirms major city-wide flooding/drainage issues near the core.",
-        "primary_category": "IT Professional Hub",
+        "primary_category": "Transit/Residential",
         "tags": [
-          "IT Corridor",
-          "Upmarket"
+          "Transit Hub",
+          "Central"
         ],
-        "category_icon": "💼"
+        "category_icon": "🚉"
       }
     },
     {
@@ -22302,12 +22302,12 @@
         "smart_city_projects": 1,
         "developer_activity": 3,
         "evidence": "6min travel time to City; Amenities count is extremely high (20 Schools, 20 Hospitals, 2 Police); Reviews mention 'busy part of town' and 'ensuing madness from thr road'; Web search confirms persistent, severe flooding and clogged drains.",
-        "primary_category": "IT Professional Hub",
+        "primary_category": "Central Residential",
         "tags": [
-          "IT Corridor",
-          "Central Location"
+          "Central Location",
+          "Family Friendly"
         ],
-        "category_icon": "💼"
+        "category_icon": "🏘️"
       }
     },
     {
