@@ -3684,3 +3684,58 @@ footer .small {
   padding: 0.75rem 0;
   border-bottom: 1px solid var(--color-border);
 }
+
+/* Fix methodology hero subtitle */
+.methodology-hero .hero-subtitle {
+  font-size: 1.25rem;
+  background: rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* CTA Buttons in methodology - ensure visibility */
+.methodology-section .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.methodology-section .btn-primary,
+.methodology-section .btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.methodology-section .btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.methodology-section .btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.methodology-section .btn-secondary:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Excluded list styling */
+.excluded-list li strong {
+  color: var(--color-error, #e53e3e);
+}
+
+/* Transparency section code blocks */
+.methodology-section ul code {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+}

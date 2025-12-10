@@ -124,7 +124,7 @@ async function renderRankingView() {
             <span class="score-label">/ 10</span>
           </div>
           <div class="locality-meta-new">
-            <span>🏠 ₹${locality.land_price || 'N/A'}L</span>
+            <span>🏫 ${locality.data?.school_count || 'N/A'} schools</span>
             <span>🚗 ${locality.data?.technopark_time || 'N/A'} min</span>
           </div>
         </div>
@@ -165,7 +165,7 @@ async function renderRankingView() {
             <span class="score-label">/ 10</span>
           </div>
           <div class="locality-meta-new">
-            <span>🏠 ₹${locality.land_price || 'N/A'}L</span>
+            <span>🏫 ${locality.data?.school_count || 'N/A'} schools</span>
             <span>🚗 ${locality.data?.technopark_time || 'N/A'} min</span>
           </div>
         </div>
