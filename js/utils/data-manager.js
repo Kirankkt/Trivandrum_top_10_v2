@@ -1,12 +1,31 @@
-// Data Manager - Load rankings and locality data
+// Data Manager - Load objective rankings and locality data
 async function loadRankings() {
     try {
-        const response = await fetch('data/rankings.json');
+        // Load new objective rankings (100% API-sourced data)
+        const response = await fetch('data/objective_rankings.json');
         const data = await response.json();
-        return data;
+
+        // Transform to expected format for backwards compatibility
+        return {
+            methodology: data.methodology,
+            category_weights: data.category_weights,
+            all_rankings: data.rankings,
+            top_10: data.rankings.slice(0, 10),
+            rankings: data.rankings
+        };
     } catch (error) {
         console.error('Error loading rankings:', error);
-        return null;
+        console.log('Falling back to legacy rankings...');
+
+        // Fallback to old rankings if new file doesn't exist
+        try {
+            const fallback = await fetch('data/rankings.json');
+            const fallbackData = await fallback.json();
+            return fallbackData;
+        } catch (fallbackError) {
+            console.error('Fallback also failed:', fallbackError);
+            return null;
+        }
     }
 }
 
@@ -22,17 +41,24 @@ async function loadLocalitiesData() {
 }
 
 // Get custom weights from localStorage or use defaults
+// NEW: 5-category system (Accessibility, Amenities, Safety, Environment, Economy)
 function getWeights() {
     const saved = localStorage.getItem('customWeights');
     if (saved) {
-        return JSON.parse(saved);
+        const parsed = JSON.parse(saved);
+        // Check if it's new format
+        if (parsed.accessibility !== undefined) {
+            return parsed;
+        }
     }
 
-    // Default weights
+    // Default weights (match objective_scoring_engine.py)
     return {
-        qol: 0.55,
-        economic: 0.20,
-        sustainability: 0.25
+        accessibility: 0.25,
+        amenities: 0.25,
+        safety: 0.15,
+        environment: 0.15,
+        economy: 0.20
     };
 }
 
@@ -45,9 +71,11 @@ function saveWeights(weights) {
 function resetWeights() {
     localStorage.removeItem('customWeights');
     return {
-        qol: 0.55,
-        economic: 0.20,
-        sustainability: 0.25
+        accessibility: 0.25,
+        amenities: 0.25,
+        safety: 0.15,
+        environment: 0.15,
+        economy: 0.20
     };
 }
 
@@ -55,15 +83,15 @@ function resetWeights() {
 function recalculateRankings(localities, weights) {
     // Deep copy to avoid mutating original
     const recalculated = localities.map(loc => {
-        const qolScore = loc.qol_score || 0;
-        const economicScore = loc.economic_score || 0;
-        const sustainabilityScore = loc.sustainability_score || 0;
+        const breakdown = loc.breakdown || {};
 
         // Calculate new overall score with custom weights
         const newOverallScore =
-            (qolScore * weights.qol) +
-            (economicScore * weights.economic) +
-            (sustainabilityScore * weights.sustainability);
+            (breakdown.accessibility || 0) * weights.accessibility +
+            (breakdown.amenities || 0) * weights.amenities +
+            (breakdown.safety || 0) * weights.safety +
+            (breakdown.environment || 0) * weights.environment +
+            (breakdown.economy || 0) * weights.economy;
 
         return {
             ...loc,
@@ -74,5 +102,39 @@ function recalculateRankings(localities, weights) {
     // Sort by new overall score (descending)
     recalculated.sort((a, b) => b.overall_score - a.overall_score);
 
+    // Reassign ranks
+    recalculated.forEach((loc, index) => {
+        loc.rank = index + 1;
+    });
+
     return recalculated;
 }
+
+// Category metadata for display
+const CATEGORY_INFO = {
+    accessibility: {
+        name: 'Accessibility',
+        icon: '🚗',
+        description: 'Travel times to Technopark, City Centre, Airport'
+    },
+    amenities: {
+        name: 'Amenities',
+        icon: '🏫',
+        description: 'Schools, hospitals, supermarkets, pharmacies nearby'
+    },
+    safety: {
+        name: 'Safety',
+        icon: '🛡️',
+        description: 'Police & fire stations within 5km radius'
+    },
+    environment: {
+        name: 'Environment',
+        icon: '🌳',
+        description: 'Parks, green cover, noise level, flood safety'
+    },
+    economy: {
+        name: 'Economy',
+        icon: '💼',
+        description: 'Job proximity, commercial activity, development'
+    }
+};

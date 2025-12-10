@@ -53,20 +53,20 @@ async function renderRankingView() {
       <div class="hero-content">
         <h1 class="hero-title">Discover Thiruvananthapuram</h1>
         <p class="hero-subtitle">Find Your Perfect Neighborhood in Kerala's Capital</p>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="stat-number">20</span>
-            <span class="stat-label">Localities</span>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="stat-number">20</span>
+              <span class="stat-label">Localities</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-number">5</span>
+              <span class="stat-label">Categories</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Objective Data</span>
+            </div>
           </div>
-          <div class="hero-stat">
-            <span class="stat-number">41</span>
-            <span class="stat-label">Data Points</span>
-          </div>
-          <div class="hero-stat">
-            <span class="stat-number">3</span>
-            <span class="stat-label">Pillars</span>
-          </div>
-        </div>
         <button class="hero-cta" id="explore-btn">Explore Localities</button>
       </div>
     </section>
@@ -91,7 +91,7 @@ async function renderRankingView() {
     <section class="localities-section" id="localities-section">
       <div class="section-header">
         <h2 class="section-title">Top Localities</h2>
-        <p class="section-subtitle">Ranked by Quality of Life, Economic Value & Environment</p>
+        <p class="section-subtitle">Ranked by Accessibility, Amenities, Safety, Environment & Economy</p>
         ${isCustom ? `
           <div class="custom-weights-banner">
             <span>✨ Custom weights applied</span>
@@ -185,7 +185,7 @@ async function renderRankingView() {
     <!-- Methodology CTA -->
     <section class="cta-section">
       <h2>How We Rank</h2>
-      <p>Our transparent, data-driven methodology uses 41 metrics across Quality of Life, Economic Value, and Environment & Charm.</p>
+      <p>Our transparent, data-driven methodology uses 100% API-sourced metrics. No AI guessing, no subjective ratings.</p>
       <div class="cta-buttons">
         <a href="#/methodology" class="btn-primary">Learn Our Methodology</a>
         <a href="#/customize" class="btn-secondary">Customize Rankings</a>
