@@ -69,9 +69,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 8.1
+        "job_proximity_score": 8.1,
+        "land_price_per_cent_lakhs": 28.0,
+        "apartment_price_per_sqft": 6843.5
       },
-      "rank": 1
+      "rank": 1,
+      "land_price": 28.0,
+      "apartment_price": 6843.5
     },
     {
       "name": "Kesavadasapuram",
@@ -133,9 +137,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 7.7
+        "job_proximity_score": 7.7,
+        "land_price_per_cent_lakhs": 12.5,
+        "apartment_price_per_sqft": 7500
       },
-      "rank": 2
+      "rank": 2,
+      "land_price": 12.5,
+      "apartment_price": 7500
     },
     {
       "name": "Vazhuthacaud",
@@ -197,9 +205,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 7.8
+        "job_proximity_score": 7.8,
+        "land_price_per_cent_lakhs": 15.0,
+        "apartment_price_per_sqft": 9060.0
       },
-      "rank": 3
+      "rank": 3,
+      "land_price": 15.0,
+      "apartment_price": 9060.0
     },
     {
       "name": "Enchakkal",
@@ -261,9 +273,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 7.9
+        "job_proximity_score": 7.9,
+        "land_price_per_cent_lakhs": 25,
+        "apartment_price_per_sqft": 8130
       },
-      "rank": 4
+      "rank": 4,
+      "land_price": 25,
+      "apartment_price": 8130
     },
     {
       "name": "PMG",
@@ -325,9 +341,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 7.7
+        "job_proximity_score": 7.7,
+        "land_price_per_cent_lakhs": 16.0,
+        "apartment_price_per_sqft": 10128.0
       },
-      "rank": 5
+      "rank": 5,
+      "land_price": 16.0,
+      "apartment_price": 10128.0
     },
     {
       "name": "Pattom",
@@ -389,9 +409,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 7.7
+        "job_proximity_score": 7.7,
+        "land_price_per_cent_lakhs": 30.0,
+        "apartment_price_per_sqft": 8500
       },
-      "rank": 6
+      "rank": 6,
+      "land_price": 30.0,
+      "apartment_price": 8500
     },
     {
       "name": "Vellayambalam",
@@ -453,9 +477,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 7.5
+        "job_proximity_score": 7.5,
+        "land_price_per_cent_lakhs": 25,
+        "apartment_price_per_sqft": 7004
       },
-      "rank": 7
+      "rank": 7,
+      "land_price": 25,
+      "apartment_price": 7004
     },
     {
       "name": "Ambalamukku",
@@ -517,9 +545,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 7.5
+        "job_proximity_score": 7.5,
+        "land_price_per_cent_lakhs": 14,
+        "apartment_price_per_sqft": 6029
       },
-      "rank": 8
+      "rank": 8,
+      "land_price": 14,
+      "apartment_price": 6029
     },
     {
       "name": "Jagathy",
@@ -581,9 +613,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 7.6
+        "job_proximity_score": 7.6,
+        "land_price_per_cent_lakhs": 20,
+        "apartment_price_per_sqft": 9604
       },
-      "rank": 9
+      "rank": 9,
+      "land_price": 20,
+      "apartment_price": 9604
     },
     {
       "name": "Kuravankonam",
@@ -645,9 +681,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 7.4
+        "job_proximity_score": 7.4,
+        "land_price_per_cent_lakhs": 18,
+        "apartment_price_per_sqft": 9107
       },
-      "rank": 10
+      "rank": 10,
+      "land_price": 18,
+      "apartment_price": 9107
     },
     {
       "name": "Kowdiar",
@@ -709,9 +749,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 7.3
+        "job_proximity_score": 7.3,
+        "land_price_per_cent_lakhs": 16.0,
+        "apartment_price_per_sqft": 7719.0
       },
-      "rank": 11
+      "rank": 11,
+      "land_price": 16.0,
+      "apartment_price": 7719.0
     },
     {
       "name": "Sasthamangalam",
@@ -773,9 +817,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 7.1
+        "job_proximity_score": 7.1,
+        "land_price_per_cent_lakhs": 16.0,
+        "apartment_price_per_sqft": 6760.0
       },
-      "rank": 12
+      "rank": 12,
+      "land_price": 16.0,
+      "apartment_price": 6760.0
     },
     {
       "name": "Medical College",
@@ -837,9 +885,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 7.5
+        "job_proximity_score": 7.5,
+        "land_price_per_cent_lakhs": 12,
+        "apartment_price_per_sqft": 8269
       },
-      "rank": 13
+      "rank": 13,
+      "land_price": 12,
+      "apartment_price": 8269
     },
     {
       "name": "Ulloor",
@@ -901,9 +953,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 7.9
+        "job_proximity_score": 7.9,
+        "land_price_per_cent_lakhs": 10,
+        "apartment_price_per_sqft": 5960.0
       },
-      "rank": 14
+      "rank": 14,
+      "land_price": 10,
+      "apartment_price": 5960.0
     },
     {
       "name": "Poojapura",
@@ -965,9 +1021,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 6.6
+        "job_proximity_score": 6.6,
+        "land_price_per_cent_lakhs": 17.0,
+        "apartment_price_per_sqft": 5800
       },
-      "rank": 15
+      "rank": 15,
+      "land_price": 17.0,
+      "apartment_price": 5800
     },
     {
       "name": "Sreekaryam",
@@ -1029,9 +1089,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 7.9
+        "job_proximity_score": 7.9,
+        "land_price_per_cent_lakhs": 8,
+        "apartment_price_per_sqft": 6450
       },
-      "rank": 16
+      "rank": 16,
+      "land_price": 8,
+      "apartment_price": 6450
     },
     {
       "name": "Peroorkada",
@@ -1093,9 +1157,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 6.5
+        "job_proximity_score": 6.5,
+        "land_price_per_cent_lakhs": 12,
+        "apartment_price_per_sqft": 5500
       },
-      "rank": 17
+      "rank": 17,
+      "land_price": 12,
+      "apartment_price": 5500
     },
     {
       "name": "Kazhakuttom",
@@ -1157,9 +1225,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 7.7
+        "job_proximity_score": 7.7,
+        "land_price_per_cent_lakhs": 14.25,
+        "apartment_price_per_sqft": 6250
       },
-      "rank": 18
+      "rank": 18,
+      "land_price": 14.25,
+      "apartment_price": 6250
     },
     {
       "name": "Kovalam",
@@ -1221,9 +1293,13 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 2,
-        "job_proximity_score": 5.5
+        "job_proximity_score": 5.5,
+        "land_price_per_cent_lakhs": 10.0,
+        "apartment_price_per_sqft": 8720.0
       },
-      "rank": 19
+      "rank": 19,
+      "land_price": 10.0,
+      "apartment_price": 8720.0
     },
     {
       "name": "Varkala",
@@ -1285,9 +1361,14 @@
         "education_score": 10,
         "commercial_score": 10,
         "developer_score": 10,
-        "job_proximity_score": 1
+        "job_proximity_score": 1,
+        "land_price_per_cent_lakhs": 8,
+        "apartment_price_per_sqft": 4500
       },
-      "rank": 20
+      "rank": 20,
+      "land_price": 8,
+      "apartment_price": 4500
     }
-  ]
+  ],
+  "price_source": "Serper Web Search + Gemini Extraction + Manual Review"
 }

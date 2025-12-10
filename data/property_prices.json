@@ -1,0 +1,186 @@
+{
+  "last_updated": "2024-12-10",
+  "source": "Serper Web Search + Gemini Extraction",
+  "prices": [
+    {
+      "land_price_per_cent_lakhs": null,
+      "apartment_price_per_sqft": 6450,
+      "land_price_range": "1.55-2.5 in lakhs",
+      "apartment_price_range": "4000000-8000000",
+      "confidence": "medium",
+      "source_notes": "Multiple sources indicate land and apartment prices. Land price range is broad, apartment price per sqft derived from range of 6100-6800.",
+      "locality": "Sreekaryam"
+    },
+    {
+      "land_price_per_cent_lakhs": 28.0,
+      "apartment_price_per_sqft": 6843.5,
+      "land_price_range": "45-145000 in lakhs",
+      "apartment_price_range": "6000000-10000000",
+      "confidence": "medium",
+      "source_notes": "Multiple sources found, averaging sqft price. Highest land price probably incorrect (145000 lakhs).",
+      "locality": "Statue"
+    },
+    {
+      "land_price_per_cent_lakhs": 14.25,
+      "apartment_price_per_sqft": 6250,
+      "land_price_range": "5.5-17 in lakhs",
+      "apartment_price_range": "39.2 Lac-96.6 Lac",
+      "confidence": "medium",
+      "source_notes": "Multiple sources with overlapping price ranges for both land and apartments. Land price per cent is an estimate from available data. Apartment price per sqft is average from available ranges. Land Price range combines different search results.",
+      "locality": "Kazhakuttom"
+    },
+    {
+      "land_price_per_cent_lakhs": null,
+      "apartment_price_per_sqft": 8130,
+      "land_price_range": "15-25 lakhs",
+      "apartment_price_range": "59.75 lakhs-3 Cr",
+      "confidence": "medium",
+      "source_notes": "Land price based on limited data points. Apartment sqft price from new projects; price range from apartment listings.",
+      "locality": "Enchakkal"
+    },
+    {
+      "land_price_per_cent_lakhs": 30.0,
+      "apartment_price_per_sqft": 17814.0,
+      "land_price_range": "10-300",
+      "apartment_price_range": "6000000-17000000",
+      "confidence": "medium",
+      "source_notes": "Land prices are per cent. Apartment prices are from multiple listings, one average price per sqft listed.",
+      "locality": "Pattom"
+    },
+    {
+      "land_price_per_cent_lakhs": 12.5,
+      "apartment_price_per_sqft": 8.13,
+      "land_price_range": "1-112",
+      "apartment_price_range": "6800000-6800000",
+      "confidence": "medium",
+      "source_notes": "Land prices extracted from multiple listings. Apartment price based on average price per sqft and specific listing. Price ranges extracted for both land and apartment listings.",
+      "locality": "Kesavadasapuram"
+    },
+    {
+      "land_price_per_cent_lakhs": 16.0,
+      "apartment_price_per_sqft": 10128.0,
+      "land_price_range": null,
+      "apartment_price_range": "2000000-155000000",
+      "confidence": "medium",
+      "source_notes": "Land price from first search result. Apartment price per sqft is average from Housing. Apartment price range is broad, using highest and lowest prices mentioned.",
+      "locality": "PMG"
+    },
+    {
+      "land_price_per_cent_lakhs": 16.0,
+      "apartment_price_per_sqft": 6760.0,
+      "land_price_range": null,
+      "apartment_price_range": "18.9 L-1.57 Cr",
+      "confidence": "medium",
+      "source_notes": "Multiple mentions of prices. Apartment price per sqft calculated as average from available information.",
+      "locality": "Sasthamangalam"
+    },
+    {
+      "land_price_per_cent_lakhs": 20,
+      "apartment_price_per_sqft": 9604,
+      "land_price_range": "35-350",
+      "apartment_price_range": "5000000-9000000",
+      "confidence": "medium",
+      "source_notes": "Mixed data sources, some price ranges and averages calculated. Apartment sqft price calculated as the average of given ranges.",
+      "locality": "Jagathy"
+    },
+    {
+      "land_price_per_cent_lakhs": null,
+      "apartment_price_per_sqft": 7004,
+      "land_price_range": "2.3-16",
+      "apartment_price_range": "5380000-5000000",
+      "confidence": "medium",
+      "source_notes": "Land price range extracted from multiple listings. Apartment price from sqft average and lower bound price listing. Converted lakhs to rupees.",
+      "locality": "Vellayambalam"
+    },
+    {
+      "land_price_per_cent_lakhs": 16.0,
+      "apartment_price_per_sqft": 7719.0,
+      "land_price_range": null,
+      "apartment_price_range": "4424-11234",
+      "confidence": "medium",
+      "source_notes": "Land price based on single data point. Apartment prices based on multiple listings.",
+      "locality": "Kowdiar"
+    },
+    {
+      "land_price_per_cent_lakhs": 12,
+      "apartment_price_per_sqft": 2250,
+      "land_price_range": "1.65-3.15",
+      "apartment_price_range": "6500000-13000000",
+      "confidence": "medium",
+      "source_notes": "Land price range is from '2025' prediction. Apartment sqft from '2025' prediction. Per cent price from listing.",
+      "locality": "Peroorkada"
+    },
+    {
+      "land_price_per_cent_lakhs": null,
+      "apartment_price_per_sqft": 5960.0,
+      "land_price_range": "1-14.0",
+      "apartment_price_range": "6000000-17800000",
+      "confidence": "medium",
+      "source_notes": "Apartment sqft price is based on a single data point. Land price range has a low value of 1 lakh which seems like an outlier from a different location.",
+      "locality": "Ulloor"
+    },
+    {
+      "land_price_per_cent_lakhs": 15.0,
+      "apartment_price_per_sqft": 9060.0,
+      "land_price_range": null,
+      "apartment_price_range": "5380000-19900000",
+      "confidence": "medium",
+      "source_notes": "Land price is clear. Apartment prices vary, using range from the search results. Other prices marked 'price on request' are ignored.",
+      "locality": "Vazhuthacaud"
+    },
+    {
+      "land_price_per_cent_lakhs": null,
+      "apartment_price_per_sqft": 8269,
+      "land_price_range": "3.5-45 in lakhs",
+      "apartment_price_range": "6600000-18000000",
+      "confidence": "medium",
+      "source_notes": "Extracted from search results. Land price is a range, apartment price per sqft from average price.",
+      "locality": "Medical College"
+    },
+    {
+      "land_price_per_cent_lakhs": 55,
+      "apartment_price_per_sqft": 9107,
+      "land_price_range": null,
+      "apartment_price_range": "61 Lac-61 Lac",
+      "confidence": "medium",
+      "source_notes": "Land price varies widely. Apartment data seems recent.",
+      "locality": "Kuravankonam"
+    },
+    {
+      "land_price_per_cent_lakhs": null,
+      "apartment_price_per_sqft": 6029,
+      "land_price_range": "12.5-16 in lakhs",
+      "apartment_price_range": "3900000-11200000",
+      "confidence": "medium",
+      "source_notes": "Land price is an estimated range based on multiple listings. Apartment price per sqft from aggregate data.",
+      "locality": "Ambalamukku"
+    },
+    {
+      "land_price_per_cent_lakhs": 17.0,
+      "apartment_price_per_sqft": 2621.0,
+      "land_price_range": "2.5-4.0",
+      "apartment_price_range": "7625000-15900000",
+      "confidence": "medium",
+      "source_notes": "Land price is from 'Plots for Sale' mentioning 17 lakh per cent. Apartment price is averaged from 2650, 2250, 2963. Apartment range from Artech Flora.",
+      "locality": "Poojapura"
+    },
+    {
+      "land_price_per_cent_lakhs": 10.0,
+      "apartment_price_per_sqft": 8720.0,
+      "land_price_range": "0.95-300",
+      "apartment_price_range": "2600000-10000000",
+      "confidence": "medium",
+      "source_notes": "Land price is estimated from 10 lakhs/cent. Apartment price is from 8.72K per sqft. Large variation in reported land prices.",
+      "locality": "Kovalam"
+    },
+    {
+      "land_price_per_cent_lakhs": 1.25,
+      "apartment_price_per_sqft": 4482,
+      "land_price_range": "30-260",
+      "apartment_price_range": "6500000-23000000",
+      "confidence": "medium",
+      "source_notes": "Based on multiple search results for Varkala and Trivandrum in 2024-2025. Land prices are per sq ft and per cent. Apartment prices are per sq ft and total price.",
+      "locality": "Varkala"
+    }
+  ]
+}
