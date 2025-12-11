@@ -48,13 +48,13 @@ async function renderMethodologyView() {
                 <!-- Scoring Categories -->
                 <section class="methodology-section">
                     <h2>⚖️ Scoring Categories</h2>
-                    <p>The overall score (0-10) is a weighted average of 5 categories:</p>
+                    <p>The overall score (0-10) is a weighted average of 6 categories:</p>
                     
                     <div class="categories-breakdown">
                         <div class="category-row">
                             <div class="category-icon">🚗</div>
                             <div class="category-details">
-                                <h3>Accessibility <span class="weight-badge">25%</span></h3>
+                                <h3>Accessibility <span class="weight-badge">20%</span></h3>
                                 <p>Travel times to Technopark, City Centre, Secretariat, Airport, KSRTC Stand</p>
                                 <code>Score = 10 - (travel_time / 6)</code>
                             </div>
@@ -90,9 +90,18 @@ async function renderMethodologyView() {
                         <div class="category-row">
                             <div class="category-icon">💼</div>
                             <div class="category-details">
-                                <h3>Economy <span class="weight-badge">20%</span></h3>
+                                <h3>Economy <span class="weight-badge">15%</span></h3>
                                 <p>Job proximity (weighted travel to employment hubs), commercial activity, developer presence</p>
                                 <code>Score = (jobs × 0.5) + (commercial × 0.3) + (developer × 0.2)</code>
+                            </div>
+                        </div>
+
+                        <div class="category-row">
+                            <div class="category-icon">👑</div>
+                            <div class="category-details">
+                                <h3>Prestige <span class="weight-badge">10%</span></h3>
+                                <p>Real estate market value (Land Price per cent + Apartment Price per sqft)</p>
+                                <code>Score = Percentile(Land Price) + Percentile(Apartment Price)</code>
                             </div>
                         </div>
                     </div>
@@ -106,7 +115,6 @@ async function renderMethodologyView() {
                         <li><strong>Road Quality</strong> - OpenStreetMap data too sparse in India</li>
                         <li><strong>Women's Safety</strong> - No public survey or crime data available</li>
                         <li><strong>Water/Electricity Supply</strong> - No public utility data APIs</li>
-                        <li><strong>Prestige/Brand Value</strong> - Inherently subjective</li>
                         <li><strong>Cleanliness</strong> - Would require subjective assessment</li>
                     </ul>
                 </section>
@@ -117,8 +125,8 @@ async function renderMethodologyView() {
                     <p>All data collection scripts and formulas are open source:</p>
                     <ul>
                         <li><code>collect_objective_data.py</code> - Fetches raw data from APIs</li>
-                        <li><code>objective_scoring_engine.py</code> - Calculates scores with explicit formulas</li>
-                        <li><code>objective_rankings.json</code> - Full breakdown for every locality</li>
+                        <li><code>generate_clean_rankings.py</code> - Calculates scores with explicit formulas</li>
+                        <li><code>clean_rankings.json</code> - Full breakdown for every locality</li>
                     </ul>
                     
                     <div class="cta-buttons">
