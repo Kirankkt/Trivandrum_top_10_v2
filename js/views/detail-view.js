@@ -102,26 +102,50 @@ async function renderDetailView(localityName) {
                     </div>
                     
                     <div class="metric-card">
-                        <h3>🏘️ Quality of Life</h3>
-                        <div class="score-display">${val(locality.qol_score, 1)}/10</div>
+                        <h3>🚌 Accessibility</h3>
+                        <div class="score-display">${val(locality.accessibility, 1)}/10</div>
                         <div class="score-bar-large">
-                            <div class="score-fill qol" style="width: ${(locality.qol_score / 10) * 100}%"></div>
+                            <div class="score-fill accessibility" style="width: ${(locality.accessibility / 10) * 100}%"></div>
                         </div>
                     </div>
                     
                     <div class="metric-card">
-                        <h3>💰 Economic Value</h3>
-                        <div class="score-display">${val(locality.economic_score, 1)}/10</div>
+                        <h3>🏢 Amenities</h3>
+                        <div class="score-display">${val(locality.amenities, 1)}/10</div>
                         <div class="score-bar-large">
-                            <div class="score-fill economic" style="width: ${(locality.economic_score / 10) * 100}%"></div>
+                            <div class="score-fill amenities" style="width: ${(locality.amenities / 10) * 100}%"></div>
                         </div>
                     </div>
-                    
+
                     <div class="metric-card">
-                        <h3>🌱 Environment & Charm</h3>
-                        <div class="score-display">${val(locality.sustainability_score, 1)}/10</div>
+                        <h3>🛡️ Safety</h3>
+                        <div class="score-display">${val(locality.safety, 1)}/10</div>
                         <div class="score-bar-large">
-                            <div class="score-fill sustainability" style="width: ${(locality.sustainability_score / 10) * 100}%"></div>
+                            <div class="score-fill safety" style="width: ${(locality.safety / 10) * 100}%"></div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>🌳 Environment</h3>
+                        <div class="score-display">${val(locality.environment, 1)}/10</div>
+                        <div class="score-bar-large">
+                            <div class="score-fill environment" style="width: ${(locality.environment / 10) * 100}%"></div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>💼 Economy</h3>
+                        <div class="score-display">${val(locality.economy, 1)}/10</div>
+                        <div class="score-bar-large">
+                            <div class="score-fill economy" style="width: ${(locality.economy / 10) * 100}%"></div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>👑 Prestige</h3>
+                        <div class="score-display">${val(locality.prestige, 1)}/10</div>
+                        <div class="score-bar-large">
+                            <div class="score-fill prestige" style="width: ${(locality.prestige / 10) * 100}%"></div>
                         </div>
                     </div>
                     
@@ -137,7 +161,6 @@ async function renderDetailView(localityName) {
                                 <div class="price-value">₹${val(locality.apartment_price_per_sqft || locality.apartment_price)}/sqft</div>
                             </div>
                         </div>
-                        ${locality.confidence ? `<div class="confidence-badge">Confidence: ${locality.confidence}</div>` : ''}
                     </div>
                     
                     <div class="metric-card">
@@ -153,8 +176,18 @@ async function renderDetailView(localityName) {
                 
                 <!-- Right column: All 41 metrics -->
                 <div class="detail-metrics">
-                    <h3>📋 All Metrics (41 total)</h3>
+                    <h3>📋 Detailed Metrics</h3>
                     
+                    <div class="metrics-section">
+                        <h4>🚌 Accessibility (Travel Times)</h4>
+                        <div class="metric-list">
+                            <div class="metric-item"><span>City Centre:</span> <strong>${val(locality.city_centre_time)} min</strong></div>
+                            <div class="metric-item"><span>Technopark:</span> <strong>${val(locality.technopark_time)} min</strong></div>
+                            <div class="metric-item"><span>Airport:</span> <strong>${val(locality.airport_time)} min</strong></div>
+                            <div class="metric-item"><span>Medical College:</span> <strong>${val(locality.medical_college_time)} min</strong></div>
+                        </div>
+                    </div>
+
                     <div class="metrics-section">
                         <h4>🏢 Amenities (Counts)</h4>
                         <div class="metric-list">
@@ -165,79 +198,31 @@ async function renderDetailView(localityName) {
                             <div class="metric-item"><span>Supermarkets:</span> <strong>${formatCount(locality.supermarkets_count)}</strong></div>
                             <div class="metric-item"><span>Gyms:</span> <strong>${formatCount(locality.gyms_count)}</strong></div>
                             <div class="metric-item"><span>Parks:</span> <strong>${formatCount(locality.parks_count)}</strong></div>
-                            <div class="metric-item"><span>Pharmacies:</span> <strong>${formatCount(locality.pharmacies_count)}</strong></div>
+                        </div>
+                    </div>
+                    
+                    <div class="metrics-section">
+                        <h4>🛡️ Safety</h4>
+                        <div class="metric-list">
                             <div class="metric-item"><span>Police Stations:</span> <strong>${formatCount(locality.police_stations_count)}</strong></div>
                             <div class="metric-item"><span>Fire Stations:</span> <strong>${formatCount(locality.fire_stations_count)}</strong></div>
                         </div>
                     </div>
-                    
-                    <div class="metrics-section">
-                        <h4>🚌 Accessibility (AI Scores 1-5)</h4>
-                        <div class="metric-list">
-                            <div class="metric-item"><span>Public Transport:</span> <strong>${val(locality.public_transport)}</strong></div>
-                            <div class="metric-item"><span>Road Quality:</span> <strong>${val(locality.road_quality)}</strong></div>
-                            <div class="metric-item"><span>Proximity to Junctions:</span> <strong>${val(locality.proximity_junctions)}</strong></div>
-                        </div>
-                    </div>
-                    
-                    <div class="metrics-section">
-                        <h4>🛡️ Safety & Security</h4>
-                        <div class="metric-list">
-                            <div class="metric-item"><span>Overall Safety:</span> <strong>${val(locality.safety_score)}</strong></div>
-                            <div class="metric-item"><span>Street Lighting:</span> <strong>${val(locality.street_lighting)}</strong></div>
-                            <div class="metric-item"><span>Women's Safety:</span> <strong>${val(locality.women_safety)}</strong></div>
-                        </div>
-                    </div>
-                    
-                    <div class="metrics-section">
-                        <h4>🏥 Healthcare & Education</h4>
-                        <div class="metric-list">
-                            <div class="metric-item"><span>Healthcare Quality:</span> <strong>${val(locality.healthcare_quality)}</strong></div>
-                            <div class="metric-item"><span>School Reputation:</span> <strong>${val(locality.school_reputation)}</strong></div>
-                        </div>
-                    </div>
-                    
-                    <div class="metrics-section">
-                        <h4>🚰 Utilities & Services</h4>
-                        <div class="metric-list">
-                            <div class="metric-item"><span>Water Supply:</span> <strong>${val(locality.water_supply)}</strong></div>
-                            <div class="metric-item"><span>Waste Collection:</span> <strong>${val(locality.waste_collection)}</strong></div>
-                            <div class="metric-item"><span>Drainage:</span> <strong>${val(locality.drainage)}</strong></div>
-                            <div class="metric-item"><span>Cleanliness:</span> <strong>${val(locality.cleanliness)}</strong></div>
-                        </div>
-                    </div>
-                    
+
                     <div class="metrics-section">
                         <h4>🌳 Environment</h4>
                         <div class="metric-list">
-                            <div class="metric-item"><span>Air Quality:</span> <strong>${val(locality.air_quality)}</strong></div>
-                            <div class="metric-item"><span>Noise Level:</span> <strong>${val(locality.noise_level)}</strong></div>
-                            <div class="metric-item"><span>Flooding Risk:</span> <strong>${val(locality.flooding_risk)}</strong></div>
-                            <div class="metric-item"><span>Green Cover:</span> <strong>${val(locality.green_cover)}</strong></div>
+                            <div class="metric-item"><span>Air Quality (PM2.5):</span> <strong>${val(locality.air_quality, 0) === 'N/A' ? 'Good' : val(locality.air_quality, 0)}</strong></div>
+                            <div class="metric-item"><span>Noise Level:</span> <strong>${val(locality.noise_score, 1)}/10</strong></div>
+                            <div class="metric-item"><span>Flood Safety:</span> <strong>${val(locality.flood_safety_score, 1)}/10</strong></div>
+                            <div class="metric-item"><span>Elevation:</span> <strong>${val(locality.elevation)}m</strong></div>
                         </div>
                     </div>
                     
                     <div class="metrics-section">
-                        <h4>🏛️ Urban Character</h4>
+                        <h4>💼 Economy</h4>
                         <div class="metric-list">
-                            <div class="metric-item"><span>Prestige:</span> <strong>${val(locality.prestige)}</strong></div>
-                            <div class="metric-item"><span>Infrastructure Feel:</span> <strong>${val(locality.infrastructure_feel)}</strong></div>
-                        </div>
-                    </div>
-                    
-                    <div class="metrics-section">
-                        <h4>💼 Economic Activity</h4>
-                        <div class="metric-list">
-                            <div class="metric-item"><span>Commercial Vibrancy:</span> <strong>${val(locality.commercial_activity)}</strong></div>
-                            <div class="metric-item"><span>Job Proximity:</span> <strong>${val(locality.job_proximity)}</strong></div>
-                        </div>
-                    </div>
-                    
-                    <div class="metrics-section">
-                        <h4>🚀 Future Potential</h4>
-                        <div class="metric-list">
-                            <div class="metric-item"><span>Smart City Projects:</span> <strong>${val(locality.smart_city_projects)}</strong></div>
-                            <div class="metric-item"><span>Developer Activity:</span> <strong>${val(locality.developer_activity)}</strong></div>
+                            <div class="metric-item"><span>Job Proximity Score:</span> <strong>${val(locality.job_proximity_score, 1)}/10</strong></div>
                         </div>
                     </div>
                     
