@@ -1,17 +1,18 @@
 // Data Manager - Load objective rankings and locality data
 async function loadRankings() {
     try {
-        // Load new objective rankings (100% API-sourced data)
-        const response = await fetch('data/objective_rankings.json');
+        // Load clean objective rankings (100% API-sourced data + price-based prestige)
+        const response = await fetch('data/clean_rankings.json');
         const data = await response.json();
 
         // Transform to expected format for backwards compatibility
         return {
             methodology: data.methodology,
             category_weights: data.category_weights,
-            all_rankings: data.rankings,
-            top_10: data.rankings.slice(0, 10),
-            rankings: data.rankings
+            data_sources: data.data_sources,
+            all_rankings: data.all_rankings,
+            top_10: data.top_10,
+            rankings: data.all_rankings
         };
     } catch (error) {
         console.error('Error loading rankings:', error);
@@ -41,24 +42,25 @@ async function loadLocalitiesData() {
 }
 
 // Get custom weights from localStorage or use defaults
-// NEW: 5-category system (Accessibility, Amenities, Safety, Environment, Economy)
+// NEW: 6-category system (Accessibility, Amenities, Safety, Environment, Economy, Prestige)
 function getWeights() {
     const saved = localStorage.getItem('customWeights');
     if (saved) {
         const parsed = JSON.parse(saved);
-        // Check if it's new format
-        if (parsed.accessibility !== undefined) {
+        // Check if it's new 6-category format
+        if (parsed.prestige !== undefined) {
             return parsed;
         }
     }
 
-    // Default weights (match objective_scoring_engine.py)
+    // Default weights (match generate_clean_rankings.py)
     return {
-        accessibility: 0.25,
+        accessibility: 0.20,
         amenities: 0.25,
         safety: 0.15,
         environment: 0.15,
-        economy: 0.20
+        economy: 0.15,
+        prestige: 0.10
     };
 }
 
@@ -71,11 +73,12 @@ function saveWeights(weights) {
 function resetWeights() {
     localStorage.removeItem('customWeights');
     return {
-        accessibility: 0.25,
+        accessibility: 0.20,
         amenities: 0.25,
         safety: 0.15,
         environment: 0.15,
-        economy: 0.20
+        economy: 0.15,
+        prestige: 0.10
     };
 }
 
@@ -85,13 +88,14 @@ function recalculateRankings(localities, weights) {
     const recalculated = localities.map(loc => {
         const breakdown = loc.breakdown || {};
 
-        // Calculate new overall score with custom weights
+        // Calculate new overall score with custom weights (6 categories)
         const newOverallScore =
             (breakdown.accessibility || 0) * weights.accessibility +
             (breakdown.amenities || 0) * weights.amenities +
             (breakdown.safety || 0) * weights.safety +
             (breakdown.environment || 0) * weights.environment +
-            (breakdown.economy || 0) * weights.economy;
+            (breakdown.economy || 0) * weights.economy +
+            (breakdown.prestige || 0) * weights.prestige;
 
         return {
             ...loc,
@@ -130,11 +134,16 @@ const CATEGORY_INFO = {
     environment: {
         name: 'Environment',
         icon: '🌳',
-        description: 'Parks, green cover, noise level, flood safety'
+        description: 'Parks, noise level, flood safety'
     },
     economy: {
         name: 'Economy',
         icon: '💼',
-        description: 'Job proximity, commercial activity, development'
+        description: 'Job proximity, commercial activity'
+    },
+    prestige: {
+        name: 'Prestige',
+        icon: '👑',
+        description: 'Land price percentile (higher price = higher prestige)'
     }
 };

@@ -1,13 +1,13 @@
 // Customize View - 5-Category Objective System
 async function renderCustomizeView() {
-  const app = document.getElementById('app');
-  const weights = getWeights();
-  const rankingsData = await loadRankings();
+    const app = document.getElementById('app');
+    const weights = getWeights();
+    const rankingsData = await loadRankings();
 
-  let html = `
+    let html = `
         <div class="customize-header">
             <h2>⚖️ Customize Your Rankings</h2>
-            <p class="subtitle">Adjust the 5 objective categories to match your priorities</p>
+            <p class="subtitle">Adjust the 6 objective categories to match your priorities</p>
         </div>
         
         <div class="customization-container">
@@ -76,6 +76,19 @@ async function renderCustomizeView() {
                         Job proximity, commercial activity, developer presence
                     </p>
                 </div>
+
+                <div class="weight-slider-group">
+                    <div class="slider-header">
+                        <span class="slider-icon">👑</span>
+                        <span class="slider-title">Prestige</span>
+                        <span class="slider-value" id="prestige-value">${Math.round(weights.prestige * 100)}%</span>
+                    </div>
+                    <input type="range" id="prestige-slider" class="weight-slider" 
+                           min="0" max="100" value="${weights.prestige * 100}" step="5">
+                    <p class="slider-description">
+                        Land price percentile (higher price = higher prestige)
+                    </p>
+                </div>
                 
                 <div class="total-weight">
                     <strong>Total:</strong> <span id="total-weight">100%</span>
@@ -118,128 +131,135 @@ async function renderCustomizeView() {
         </div>
     `;
 
-  app.innerHTML = html;
+    app.innerHTML = html;
 
-  // Initialize sliders
-  const accessibilitySlider = document.getElementById('accessibility-slider');
-  const amenitiesSlider = document.getElementById('amenities-slider');
-  const safetySlider = document.getElementById('safety-slider');
-  const environmentSlider = document.getElementById('environment-slider');
-  const economySlider = document.getElementById('economy-slider');
-  const applyBtn = document.getElementById('apply-btn');
-  const resetBtn = document.getElementById('reset-btn');
+    // Initialize sliders
+    const accessibilitySlider = document.getElementById('accessibility-slider');
+    const amenitiesSlider = document.getElementById('amenities-slider');
+    const safetySlider = document.getElementById('safety-slider');
+    const environmentSlider = document.getElementById('environment-slider');
+    const economySlider = document.getElementById('economy-slider');
+    const prestigeSlider = document.getElementById('prestige-slider');
+    const applyBtn = document.getElementById('apply-btn');
+    const resetBtn = document.getElementById('reset-btn');
 
-  // Update preview function
-  function updatePreview() {
-    const accessibility = parseInt(accessibilitySlider.value) / 100;
-    const amenities = parseInt(amenitiesSlider.value) / 100;
-    const safety = parseInt(safetySlider.value) / 100;
-    const environment = parseInt(environmentSlider.value) / 100;
-    const economy = parseInt(economySlider.value) / 100;
+    // Update preview function
+    function updatePreview() {
+        const accessibility = parseInt(accessibilitySlider.value) / 100;
+        const amenities = parseInt(amenitiesSlider.value) / 100;
+        const safety = parseInt(safetySlider.value) / 100;
+        const environment = parseInt(environmentSlider.value) / 100;
+        const economy = parseInt(economySlider.value) / 100;
+        const prestige = parseInt(prestigeSlider.value) / 100;
 
-    // Update display values
-    document.getElementById('accessibility-value').textContent = `${Math.round(accessibility * 100)}%`;
-    document.getElementById('amenities-value').textContent = `${Math.round(amenities * 100)}%`;
-    document.getElementById('safety-value').textContent = `${Math.round(safety * 100)}%`;
-    document.getElementById('environment-value').textContent = `${Math.round(environment * 100)}%`;
-    document.getElementById('economy-value').textContent = `${Math.round(economy * 100)}%`;
+        // Update display values
+        document.getElementById('accessibility-value').textContent = `${Math.round(accessibility * 100)}%`;
+        document.getElementById('amenities-value').textContent = `${Math.round(amenities * 100)}%`;
+        document.getElementById('safety-value').textContent = `${Math.round(safety * 100)}%`;
+        document.getElementById('environment-value').textContent = `${Math.round(environment * 100)}%`;
+        document.getElementById('economy-value').textContent = `${Math.round(economy * 100)}%`;
+        document.getElementById('prestige-value').textContent = `${Math.round(prestige * 100)}%`;
 
-    // Check total
-    const total = Math.round((accessibility + amenities + safety + environment + economy) * 100);
-    document.getElementById('total-weight').textContent = `${total}%`;
+        // Check total
+        const total = Math.round((accessibility + amenities + safety + environment + economy + prestige) * 100);
+        document.getElementById('total-weight').textContent = `${total}%`;
 
-    const warning = document.getElementById('weight-warning');
-    if (total !== 100) {
-      warning.style.display = 'inline';
-      applyBtn.disabled = true;
-    } else {
-      warning.style.display = 'none';
-      applyBtn.disabled = false;
+        const warning = document.getElementById('weight-warning');
+        if (total !== 100) {
+            warning.style.display = 'inline';
+            applyBtn.disabled = true;
+        } else {
+            warning.style.display = 'none';
+            applyBtn.disabled = false;
+        }
+
+        // Update preview rankings
+        if (total === 100) {
+            const customWeights = { accessibility, amenities, safety, environment, economy, prestige };
+            const recalculated = recalculateRankings(rankingsData.all_rankings, customWeights);
+            updatePreviewRankings(recalculated.slice(0, 5));
+        }
     }
 
-    // Update preview rankings
-    if (total === 100) {
-      const customWeights = { accessibility, amenities, safety, environment, economy };
-      const recalculated = recalculateRankings(rankingsData.all_rankings, customWeights);
-      updatePreviewRankings(recalculated.slice(0, 5));
-    }
-  }
+    function updatePreviewRankings(top5) {
+        const preview = document.getElementById('preview-rankings');
+        let html = '';
 
-  function updatePreviewRankings(top5) {
-    const preview = document.getElementById('preview-rankings');
-    let html = '';
-
-    top5.forEach((loc, i) => {
-      html += `
+        top5.forEach((loc, i) => {
+            html += `
                 <div class="preview-item">
                     <span class="preview-rank">#${i + 1}</span>
                     <span class="preview-name">${loc.name}</span>
                     <span class="preview-score">${loc.overall_score.toFixed(2)}</span>
                 </div>
             `;
+        });
+
+        preview.innerHTML = html;
+    }
+
+    // Event listeners
+    accessibilitySlider.addEventListener('input', updatePreview);
+    amenitiesSlider.addEventListener('input', updatePreview);
+    safetySlider.addEventListener('input', updatePreview);
+    environmentSlider.addEventListener('input', updatePreview);
+    economySlider.addEventListener('input', updatePreview);
+    prestigeSlider.addEventListener('input', updatePreview);
+
+    resetBtn.addEventListener('click', () => {
+        const defaults = resetWeights();
+        accessibilitySlider.value = defaults.accessibility * 100;
+        amenitiesSlider.value = defaults.amenities * 100;
+        safetySlider.value = defaults.safety * 100;
+        environmentSlider.value = defaults.environment * 100;
+        economySlider.value = defaults.economy * 100;
+        prestigeSlider.value = defaults.prestige * 100;
+        updatePreview();
     });
 
-    preview.innerHTML = html;
-  }
+    applyBtn.addEventListener('click', () => {
+        const newWeights = {
+            accessibility: parseInt(accessibilitySlider.value) / 100,
+            amenities: parseInt(amenitiesSlider.value) / 100,
+            safety: parseInt(safetySlider.value) / 100,
+            environment: parseInt(environmentSlider.value) / 100,
+            economy: parseInt(economySlider.value) / 100,
+            prestige: parseInt(prestigeSlider.value) / 100
+        };
+        saveWeights(newWeights);
+        window.location.hash = '/';
+        // Scroll to localities section after page fully renders
+        setTimeout(() => {
+            const localitiesSection = document.getElementById('localities-section');
+            if (localitiesSection) {
+                localitiesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 500);
+    });
 
-  // Event listeners
-  accessibilitySlider.addEventListener('input', updatePreview);
-  amenitiesSlider.addEventListener('input', updatePreview);
-  safetySlider.addEventListener('input', updatePreview);
-  environmentSlider.addEventListener('input', updatePreview);
-  economySlider.addEventListener('input', updatePreview);
+    // Preset buttons
+    document.querySelectorAll('.preset-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const preset = btn.dataset.preset;
+            const presets = {
+                balanced: { accessibility: 20, amenities: 20, safety: 15, environment: 15, economy: 15, prestige: 15 },
+                families: { accessibility: 20, amenities: 30, safety: 20, environment: 15, economy: 10, prestige: 5 },
+                professionals: { accessibility: 25, amenities: 20, safety: 10, environment: 10, economy: 25, prestige: 10 },
+                retirees: { accessibility: 15, amenities: 30, safety: 20, environment: 25, economy: 5, prestige: 5 },
+                environment: { accessibility: 10, amenities: 15, safety: 15, environment: 40, economy: 10, prestige: 10 }
+            };
 
-  resetBtn.addEventListener('click', () => {
-    const defaults = resetWeights();
-    accessibilitySlider.value = defaults.accessibility * 100;
-    amenitiesSlider.value = defaults.amenities * 100;
-    safetySlider.value = defaults.safety * 100;
-    environmentSlider.value = defaults.environment * 100;
-    economySlider.value = defaults.economy * 100;
+            const values = presets[preset];
+            accessibilitySlider.value = values.accessibility;
+            amenitiesSlider.value = values.amenities;
+            safetySlider.value = values.safety;
+            environmentSlider.value = values.environment;
+            economySlider.value = values.economy;
+            prestigeSlider.value = values.prestige;
+            updatePreview();
+        });
+    });
+
+    // Initial preview
     updatePreview();
-  });
-
-  applyBtn.addEventListener('click', () => {
-    const newWeights = {
-      accessibility: parseInt(accessibilitySlider.value) / 100,
-      amenities: parseInt(amenitiesSlider.value) / 100,
-      safety: parseInt(safetySlider.value) / 100,
-      environment: parseInt(environmentSlider.value) / 100,
-      economy: parseInt(economySlider.value) / 100
-    };
-    saveWeights(newWeights);
-    window.location.hash = '/';
-    // Scroll to localities section after page fully renders
-    setTimeout(() => {
-      const localitiesSection = document.getElementById('localities-section');
-      if (localitiesSection) {
-        localitiesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 500);
-  });
-
-  // Preset buttons
-  document.querySelectorAll('.preset-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const preset = btn.dataset.preset;
-      const presets = {
-        balanced: { accessibility: 25, amenities: 25, safety: 15, environment: 15, economy: 20 },
-        families: { accessibility: 20, amenities: 30, safety: 20, environment: 15, economy: 15 },
-        professionals: { accessibility: 30, amenities: 20, safety: 10, environment: 10, economy: 30 },
-        retirees: { accessibility: 15, amenities: 30, safety: 20, environment: 25, economy: 10 },
-        environment: { accessibility: 10, amenities: 20, safety: 15, environment: 40, economy: 15 }
-      };
-
-      const values = presets[preset];
-      accessibilitySlider.value = values.accessibility;
-      amenitiesSlider.value = values.amenities;
-      safetySlider.value = values.safety;
-      environmentSlider.value = values.environment;
-      economySlider.value = values.economy;
-      updatePreview();
-    });
-  });
-
-  // Initial preview
-  updatePreview();
 }
