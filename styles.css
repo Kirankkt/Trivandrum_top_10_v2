@@ -995,6 +995,37 @@ main {
   background: var(--color-charm);
 }
 
+/* New 6-category system colors */
+.score-fill.accessibility {
+  background: #3b82f6;
+  /* Blue - travel/mobility */
+}
+
+.score-fill.amenities {
+  background: #8b5cf6;
+  /* Purple - services */
+}
+
+.score-fill.safety {
+  background: #06b6d4;
+  /* Cyan - protection */
+}
+
+.score-fill.environment {
+  background: #22c55e;
+  /* Green - nature */
+}
+
+.score-fill.economy {
+  background: #f59e0b;
+  /* Amber - business */
+}
+
+.score-fill.prestige {
+  background: #ec4899;
+  /* Pink - luxury */
+}
+
 .score-value {
   font-size: 0.8125rem;
   font-weight: 600;
