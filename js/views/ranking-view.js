@@ -35,13 +35,16 @@ async function renderRankingView() {
     return localityImages[name] || localityImages['default'];
   }
 
-  // Experience categories
+  // Experience categories with associated localities
   const categories = [
-    { name: 'IT Professional', icon: '💻', localities: ['Sreekaryam', 'Kazhakuttom', 'Technopark'], image: 'images/tech.png' },
+    { name: 'IT Professional', icon: '💻', localities: ['Kazhakuttom', 'Sreekaryam', 'Ulloor'], image: 'images/tech.png' },
     { name: 'Beach Life', icon: '🏖️', localities: ['Kovalam', 'Varkala'], image: 'images/beach.png' },
-    { name: 'Heritage & Culture', icon: '🏛️', localities: ['Kowdiar', 'Statue', 'Medical College'], image: 'images/palace.png' },
-    { name: 'Family Living', icon: '👨‍👩‍👧', localities: ['Sasthamangalam', 'Pattom', 'Vellayambalam'], image: 'images/skyline.png' }
+    { name: 'Heritage & Culture', icon: '🏛️', localities: ['Kowdiar', 'Statue', 'Vellayambalam', 'Pattom'], image: 'images/palace.png' },
+    { name: 'Family Living', icon: '👨‍👩‍👧', localities: ['Sasthamangalam', 'Pattom', 'Vellayambalam', 'Peroorkada', 'Kuravankonam'], image: 'images/skyline.png' }
   ];
+
+  // Store categories globally for filter access
+  window.lifestyleCategories = categories;
 
   let html = `
     <!-- Hero Section -->
@@ -98,6 +101,10 @@ async function renderRankingView() {
             <button class="btn-reset" id="reset-weights-btn">Reset to Defaults</button>
           </div>
         ` : ''}
+        <div id="category-filter-banner" class="category-filter-banner hidden">
+          <span id="filter-label"></span>
+          <button class="btn-reset" id="clear-filter-btn">✕ Clear Filter</button>
+        </div>
       </div>
       
       <div class="localities-grid">
@@ -205,14 +212,70 @@ async function renderRankingView() {
     });
   });
 
-  // Category card clicks
+  // Category card clicks - filter localities
   document.querySelectorAll('.category-card').forEach(card => {
     card.addEventListener('click', () => {
-      const category = card.dataset.category;
-      // TODO: Filter localities by category
+      const categoryName = card.dataset.category;
+      const category = window.lifestyleCategories.find(c => c.name === categoryName);
+
+      if (!category) return;
+
+      // Show filter banner
+      const filterBanner = document.getElementById('category-filter-banner');
+      const filterLabel = document.getElementById('filter-label');
+      if (filterBanner && filterLabel) {
+        filterLabel.textContent = `Showing: ${category.icon} ${category.name} localities`;
+        filterBanner.classList.remove('hidden');
+      }
+
+      // Filter locality cards
+      const allCards = document.querySelectorAll('.locality-card-new');
+      allCards.forEach(locCard => {
+        const localityName = locCard.dataset.locality;
+        if (category.localities.includes(localityName)) {
+          locCard.style.display = '';
+        } else {
+          locCard.style.display = 'none';
+        }
+      });
+
+      // Also filter "more localities" section if visible
+      const moreCards = document.querySelectorAll('#more-localities .locality-card-new');
+      moreCards.forEach(locCard => {
+        const localityName = locCard.dataset.locality;
+        if (category.localities.includes(localityName)) {
+          locCard.style.display = '';
+        } else {
+          locCard.style.display = 'none';
+        }
+      });
+
+      // Highlight active category
+      document.querySelectorAll('.category-card').forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+
+      // Scroll to localities section
       document.getElementById('localities-section').scrollIntoView({ behavior: 'smooth' });
     });
   });
+
+  // Clear filter button
+  const clearFilterBtn = document.getElementById('clear-filter-btn');
+  if (clearFilterBtn) {
+    clearFilterBtn.addEventListener('click', () => {
+      // Show all localities
+      document.querySelectorAll('.locality-card-new').forEach(card => {
+        card.style.display = '';
+      });
+
+      // Hide filter banner
+      const filterBanner = document.getElementById('category-filter-banner');
+      if (filterBanner) filterBanner.classList.add('hidden');
+
+      // Remove active state from categories
+      document.querySelectorAll('.category-card').forEach(c => c.classList.remove('active'));
+    });
+  }
 
   // Show more/less buttons
   const showMoreBtn = document.getElementById('show-more-btn');

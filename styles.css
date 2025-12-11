@@ -2264,6 +2264,61 @@ footer .small {
   letter-spacing: 1px;
 }
 
+/* Active category state */
+.category-card.active {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.category-card.active::after {
+  content: '✓';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--color-primary);
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Category filter banner */
+.category-filter-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #00c57a 100%);
+  color: white;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.category-filter-banner.hidden {
+  display: none;
+}
+
+.category-filter-banner .btn-reset {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.category-filter-banner .btn-reset:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
 /* Localities Section */
 .localities-section {
   padding: 4rem 2rem;
