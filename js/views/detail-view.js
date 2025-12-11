@@ -39,8 +39,10 @@ async function renderDetailView(localityName) {
         // We merge them for easier access
         const locality = {
             ...rankedLocality.data,
+            ...rankedLocality.breakdown,
             ...rankedLocality,
-            data: undefined
+            data: undefined,
+            breakdown: undefined
         };
 
         console.log('[Debug] Locality Merged:', locality);
@@ -191,21 +193,22 @@ async function renderDetailView(localityName) {
                     <div class="metrics-section">
                         <h4>🏢 Amenities (Counts)</h4>
                         <div class="metric-list">
-                            <div class="metric-item"><span>Schools:</span> <strong>${formatCount(locality.schools_count)}</strong></div>
-                            <div class="metric-item"><span>Hospitals:</span> <strong>${formatCount(locality.hospitals_count)}</strong></div>
-                            <div class="metric-item"><span>Restaurants:</span> <strong>${formatCount(locality.restaurants_count)}</strong></div>
-                            <div class="metric-item"><span>Cafes:</span> <strong>${formatCount(locality.cafes_count)}</strong></div>
-                            <div class="metric-item"><span>Supermarkets:</span> <strong>${formatCount(locality.supermarkets_count)}</strong></div>
-                            <div class="metric-item"><span>Gyms:</span> <strong>${formatCount(locality.gyms_count)}</strong></div>
-                            <div class="metric-item"><span>Parks:</span> <strong>${formatCount(locality.parks_count)}</strong></div>
+                            <div class="metric-item"><span>Schools:</span> <strong>${formatCount(locality.school_count)}</strong></div>
+                            <div class="metric-item"><span>Hospitals:</span> <strong>${formatCount(locality.hospital_count)}</strong></div>
+                            <div class="metric-item"><span>Restaurants:</span> <strong>${formatCount(locality.restaurant_count)}</strong></div>
+                            <div class="metric-item"><span>Cafes:</span> <strong>${formatCount(locality.cafe_count)}</strong></div>
+                            <div class="metric-item"><span>Supermarkets:</span> <strong>${formatCount(locality.supermarket_count)}</strong></div>
+                            <div class="metric-item"><span>Gyms:</span> <strong>${formatCount(locality.gym_count)}</strong></div>
+                            <div class="metric-item"><span>Parks:</span> <strong>${formatCount(locality.park_count)}</strong></div>
+                            <div class="metric-item"><span>Pharmacies:</span> <strong>${formatCount(locality.pharmacy_count)}</strong></div>
                         </div>
                     </div>
                     
                     <div class="metrics-section">
                         <h4>🛡️ Safety</h4>
                         <div class="metric-list">
-                            <div class="metric-item"><span>Police Stations:</span> <strong>${formatCount(locality.police_stations_count)}</strong></div>
-                            <div class="metric-item"><span>Fire Stations:</span> <strong>${formatCount(locality.fire_stations_count)}</strong></div>
+                            <div class="metric-item"><span>Police Stations:</span> <strong>${formatCount(locality.police_count)}</strong></div>
+                            <div class="metric-item"><span>Fire Stations:</span> <strong>${formatCount(locality.fire_station_count)}</strong></div>
                         </div>
                     </div>
 
