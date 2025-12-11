@@ -59,7 +59,7 @@ async function renderRankingView() {
               <span class="stat-label">Localities</span>
             </div>
             <div class="hero-stat">
-              <span class="stat-number">5</span>
+              <span class="stat-number">6</span>
               <span class="stat-label">Categories</span>
             </div>
             <div class="hero-stat">
