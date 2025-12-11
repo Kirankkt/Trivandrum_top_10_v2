@@ -218,7 +218,6 @@ async function renderDetailView(localityName) {
                             <div class="metric-item"><span>Air Quality (PM2.5):</span> <strong>${val(locality.air_quality, 0) === 'N/A' ? 'Good' : val(locality.air_quality, 0)}</strong></div>
                             <div class="metric-item"><span>Noise Level:</span> <strong>${val(locality.noise_score, 1)}/10</strong></div>
                             <div class="metric-item"><span>Flood Safety:</span> <strong>${val(locality.flood_safety_score, 1)}/10</strong></div>
-                            <div class="metric-item"><span>Elevation:</span> <strong>${val(locality.elevation)}m</strong></div>
                         </div>
                     </div>
                     
