@@ -259,6 +259,8 @@ def main():
                 "bus_station_count": loc.get("bus_station_count"),
                 "noise_score": loc.get("noise_score"),
                 "flood_safety_score": loc.get("flood_safety_score"),
+                "elevation_meters": loc.get("elevation_meters"),
+                "job_proximity_score": loc.get("job_proximity_score"),
             }
         })
     
