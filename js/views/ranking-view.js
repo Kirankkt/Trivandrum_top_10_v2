@@ -124,8 +124,8 @@ async function renderRankingView() {
             <span class="score-label">/ 10</span>
           </div>
           <div class="locality-meta-new">
-            <span>🏠 ₹${locality.land_price || 'N/A'}L/cent</span>
-            <span>🚗 ${locality.data?.technopark_time || 'N/A'} min</span>
+            <span>🏠 ₹${locality.land_price || locality.data?.land_price_per_cent_lakhs || 'N/A'}L/cent</span>
+            <span>🏢 ₹${locality.apartment_price || locality.data?.apartment_price_per_sqft || 'N/A'}/sqft</span>
           </div>
         </div>
       </div>
@@ -165,8 +165,8 @@ async function renderRankingView() {
             <span class="score-label">/ 10</span>
           </div>
           <div class="locality-meta-new">
-            <span>🏠 ₹${locality.land_price || 'N/A'}L/cent</span>
-            <span>🚗 ${locality.data?.technopark_time || 'N/A'} min</span>
+            <span>🏠 ₹${locality.land_price || locality.data?.land_price_per_cent_lakhs || 'N/A'}L/cent</span>
+            <span>🏢 ₹${locality.apartment_price || locality.data?.apartment_price_per_sqft || 'N/A'}/sqft</span>
           </div>
         </div>
       </div>
