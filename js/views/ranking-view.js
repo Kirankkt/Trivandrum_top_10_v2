@@ -37,7 +37,7 @@ async function renderRankingView() {
 
   // Experience categories with associated localities
   const categories = [
-    { name: 'IT Professional', icon: '💻', localities: ['Kazhakuttom', 'Sreekaryam', 'Ulloor'], image: 'images/tech.png' },
+    { name: 'IT Professional', icon: '💻', localities: ['Kazhakuttom', 'Sreekaryam'], image: 'images/tech.png' },
     { name: 'Beach Life', icon: '🏖️', localities: ['Kovalam', 'Varkala'], image: 'images/beach.png' },
     { name: 'Heritage & Culture', icon: '🏛️', localities: ['Kowdiar', 'Statue', 'Vellayambalam', 'Pattom'], image: 'images/palace.png' },
     { name: 'Family Living', icon: '👨‍👩‍👧', localities: ['Sasthamangalam', 'Pattom', 'Vellayambalam', 'Peroorkada', 'Kuravankonam'], image: 'images/skyline.png' }
@@ -228,20 +228,24 @@ async function renderRankingView() {
         filterBanner.classList.remove('hidden');
       }
 
-      // Filter locality cards
+      // First, expand the 'more localities' section so all cards are accessible
+      const moreLocalities = document.getElementById('more-localities');
+      const showMoreBtnParent = document.getElementById('show-more-btn')?.parentElement;
+      const showLessContainer = document.getElementById('show-less-container');
+
+      if (moreLocalities) {
+        moreLocalities.classList.remove('hidden');
+      }
+      if (showMoreBtnParent) {
+        showMoreBtnParent.classList.add('hidden');
+      }
+      if (showLessContainer) {
+        showLessContainer.classList.add('hidden'); // Hide 'show less' during filter
+      }
+
+      // Filter ALL locality cards (both top 10 and more)
       const allCards = document.querySelectorAll('.locality-card-new');
       allCards.forEach(locCard => {
-        const localityName = locCard.dataset.locality;
-        if (category.localities.includes(localityName)) {
-          locCard.style.display = '';
-        } else {
-          locCard.style.display = 'none';
-        }
-      });
-
-      // Also filter "more localities" section if visible
-      const moreCards = document.querySelectorAll('#more-localities .locality-card-new');
-      moreCards.forEach(locCard => {
         const localityName = locCard.dataset.locality;
         if (category.localities.includes(localityName)) {
           locCard.style.display = '';
@@ -274,6 +278,15 @@ async function renderRankingView() {
 
       // Remove active state from categories
       document.querySelectorAll('.category-card').forEach(c => c.classList.remove('active'));
+
+      // Restore show more/less to default state (hide more localities, show "View All" button)
+      const moreLocalities = document.getElementById('more-localities');
+      const showMoreBtnParent = document.getElementById('show-more-btn')?.parentElement;
+      const showLessContainer = document.getElementById('show-less-container');
+
+      if (moreLocalities) moreLocalities.classList.add('hidden');
+      if (showMoreBtnParent) showMoreBtnParent.classList.remove('hidden');
+      if (showLessContainer) showLessContainer.classList.add('hidden');
     });
   }
 
