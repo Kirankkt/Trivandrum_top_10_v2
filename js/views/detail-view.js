@@ -191,24 +191,24 @@ async function renderDetailView(localityName) {
                     </div>
 
                     <div class="metrics-section">
-                        <h4>🏢 Amenities (Counts)</h4>
+                        <h4>🏢 Amenities</h4>
                         <div class="metric-list">
-                            <div class="metric-item"><span>Schools:</span> <strong>${formatCount(locality.school_count)}</strong></div>
-                            <div class="metric-item"><span>Hospitals:</span> <strong>${formatCount(locality.hospital_count)}</strong></div>
-                            <div class="metric-item"><span>Restaurants:</span> <strong>${formatCount(locality.restaurant_count)}</strong></div>
-                            <div class="metric-item"><span>Cafes:</span> <strong>${formatCount(locality.cafe_count)}</strong></div>
-                            <div class="metric-item"><span>Supermarkets:</span> <strong>${formatCount(locality.supermarket_count)}</strong></div>
-                            <div class="metric-item"><span>Gyms:</span> <strong>${formatCount(locality.gym_count)}</strong></div>
-                            <div class="metric-item"><span>Parks:</span> <strong>${formatCount(locality.park_count)}</strong></div>
-                            <div class="metric-item"><span>Pharmacies:</span> <strong>${formatCount(locality.pharmacy_count)}</strong></div>
+                            <div class="metric-item"><span>Schools <small>(within 3km)</small>:</span> <strong>${formatCount(locality.school_count)}</strong></div>
+                            <div class="metric-item"><span>Hospitals <small>(within 3km)</small>:</span> <strong>${formatCount(locality.hospital_count)}</strong></div>
+                            <div class="metric-item"><span>Restaurants <small>(within 2km)</small>:</span> <strong>${formatCount(locality.restaurant_count)}</strong></div>
+                            <div class="metric-item"><span>Cafes <small>(within 2km)</small>:</span> <strong>${formatCount(locality.cafe_count)}</strong></div>
+                            <div class="metric-item"><span>Supermarkets <small>(within 2km)</small>:</span> <strong>${formatCount(locality.supermarket_count)}</strong></div>
+                            <div class="metric-item"><span>Gyms <small>(within 2km)</small>:</span> <strong>${formatCount(locality.gym_count)}</strong></div>
+                            <div class="metric-item"><span>Parks <small>(within 2km)</small>:</span> <strong>${formatCount(locality.park_count)}</strong></div>
+                            <div class="metric-item"><span>Pharmacies <small>(within 2km)</small>:</span> <strong>${formatCount(locality.pharmacy_count)}</strong></div>
                         </div>
                     </div>
                     
                     <div class="metrics-section">
                         <h4>🛡️ Safety</h4>
                         <div class="metric-list">
-                            <div class="metric-item"><span>Police Stations:</span> <strong>${formatCount(locality.police_count)}</strong></div>
-                            <div class="metric-item"><span>Fire Stations:</span> <strong>${formatCount(locality.fire_station_count)}</strong></div>
+                            <div class="metric-item"><span>Police Stations <small>(within 5km)</small>:</span> <strong>${formatCount(locality.police_count)}</strong></div>
+                            <div class="metric-item"><span>Fire Stations <small>(within 5km)</small>:</span> <strong>${formatCount(locality.fire_station_count)}</strong></div>
                         </div>
                     </div>
 
