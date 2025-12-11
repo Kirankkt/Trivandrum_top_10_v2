@@ -13,7 +13,12 @@ async function renderRankingView() {
   const trendingLocalities = window.getTrendingLocalities ? await window.getTrendingLocalities(3) : [];
 
   const weights = getWeights();
-  const isCustom = weights.qol !== 0.55 || weights.economic !== 0.20 || weights.sustainability !== 0.25;
+  // Check if weights differ from 6-category defaults
+  const defaultWeights = {
+    accessibility: 0.20, amenities: 0.25, safety: 0.15,
+    environment: 0.15, economy: 0.15, prestige: 0.10
+  };
+  const isCustom = localStorage.getItem('customWeights') !== null;
 
   // Recalculate with custom weights if needed
   const localities = isCustom ?
