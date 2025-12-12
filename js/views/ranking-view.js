@@ -84,10 +84,6 @@ async function renderRankingView() {
               <span class="stat-number">6</span>
               <span class="stat-label">Categories</span>
             </div>
-            <div class="hero-stat">
-              <span class="stat-number">100%</span>
-              <span class="stat-label">Objective Data</span>
-            </div>
           </div>
         <button class="hero-cta" id="explore-btn">Explore Localities</button>
       </div>
