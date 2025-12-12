@@ -20,11 +20,12 @@ async function renderDiningCustomizeView(type) {
             returnUrl: '#/restaurants',
             color: '#ff6b6b',
             presets: {
-                balanced: { sentiment: 17, popularity: 17, rating: 17, value: 17, convenience: 16, vibe: 16 },
-                foodies: { sentiment: 25, popularity: 10, rating: 20, value: 10, convenience: 10, vibe: 25 },
-                budget: { sentiment: 10, popularity: 20, rating: 15, value: 35, convenience: 15, vibe: 5 },
+                // Default: Rating & Sentiment matter most for restaurants
+                balanced: { sentiment: 20, popularity: 15, rating: 25, value: 15, convenience: 10, vibe: 15 },
+                foodies: { sentiment: 25, popularity: 10, rating: 25, value: 5, convenience: 5, vibe: 30 },
+                budget: { sentiment: 10, popularity: 15, rating: 15, value: 40, convenience: 15, vibe: 5 },
                 trendy: { sentiment: 15, popularity: 25, rating: 15, value: 10, convenience: 10, vibe: 25 },
-                family: { sentiment: 20, popularity: 15, rating: 25, value: 20, convenience: 15, vibe: 5 }
+                family: { sentiment: 15, popularity: 20, rating: 25, value: 20, convenience: 15, vibe: 5 }
             }
         },
         cafes: {
@@ -41,11 +42,12 @@ async function renderDiningCustomizeView(type) {
             returnUrl: '#/cafes',
             color: '#4ecdc4',
             presets: {
-                balanced: { sentiment: 17, popularity: 17, rating: 17, value: 17, convenience: 16, workspace: 16 },
-                remote_work: { sentiment: 10, popularity: 10, rating: 15, value: 15, convenience: 20, workspace: 30 },
-                budget: { sentiment: 10, popularity: 20, rating: 15, value: 35, convenience: 15, workspace: 5 },
-                social: { sentiment: 25, popularity: 25, rating: 15, value: 10, convenience: 15, workspace: 10 },
-                quality: { sentiment: 25, popularity: 10, rating: 30, value: 15, convenience: 10, workspace: 10 }
+                // Default: Work-friendliness is a key cafe differentiator
+                balanced: { sentiment: 15, popularity: 15, rating: 20, value: 20, convenience: 10, workspace: 20 },
+                remote_work: { sentiment: 10, popularity: 5, rating: 15, value: 15, convenience: 15, workspace: 40 },
+                budget: { sentiment: 10, popularity: 15, rating: 15, value: 40, convenience: 15, workspace: 5 },
+                social: { sentiment: 25, popularity: 25, rating: 15, value: 15, convenience: 15, workspace: 5 },
+                quality: { sentiment: 25, popularity: 10, rating: 35, value: 15, convenience: 10, workspace: 5 }
             }
         },
         hotels: {
@@ -62,10 +64,11 @@ async function renderDiningCustomizeView(type) {
             returnUrl: '#/hotels',
             color: '#ffd93d',
             presets: {
-                balanced: { sentiment: 17, popularity: 17, rating: 17, value: 17, location: 16, luxury: 16 },
-                budget: { sentiment: 10, popularity: 20, rating: 15, value: 40, location: 10, luxury: 5 },
-                luxury: { sentiment: 15, popularity: 10, rating: 20, value: 5, location: 15, luxury: 35 },
-                tourist: { sentiment: 15, popularity: 15, rating: 20, value: 15, location: 30, luxury: 5 },
+                // Default: Location is critical for hotels
+                balanced: { sentiment: 15, popularity: 10, rating: 20, value: 20, location: 25, luxury: 10 },
+                budget: { sentiment: 10, popularity: 15, rating: 15, value: 45, location: 10, luxury: 5 },
+                luxury: { sentiment: 15, popularity: 5, rating: 20, value: 5, location: 15, luxury: 40 },
+                tourist: { sentiment: 10, popularity: 10, rating: 15, value: 15, location: 40, luxury: 10 },
                 business: { sentiment: 15, popularity: 10, rating: 25, value: 20, location: 20, luxury: 10 }
             }
         }
