@@ -217,7 +217,10 @@ async function renderRankingView() {
     });
   });
 
-  // Category card clicks - filter localities
+  // Category card clicks - MULTI-SELECT filter localities
+  // Track active filters
+  window.activeFilters = window.activeFilters || new Set();
+
   document.querySelectorAll('.category-card').forEach(card => {
     card.addEventListener('click', () => {
       const categoryName = card.dataset.category;
@@ -225,43 +228,60 @@ async function renderRankingView() {
 
       if (!category) return;
 
-      // Show filter banner
+      // Toggle this category in active filters
+      if (window.activeFilters.has(categoryName)) {
+        window.activeFilters.delete(categoryName);
+        card.classList.remove('active');
+      } else {
+        window.activeFilters.add(categoryName);
+        card.classList.add('active');
+      }
+
+      // Update filter banner
       const filterBanner = document.getElementById('category-filter-banner');
       const filterLabel = document.getElementById('filter-label');
+
+      if (window.activeFilters.size === 0) {
+        // No filters active - hide banner and show all
+        if (filterBanner) filterBanner.classList.add('hidden');
+        document.querySelectorAll('.locality-card-new').forEach(c => c.style.display = '');
+
+        // Restore default view
+        const moreLocalities = document.getElementById('more-localities');
+        const showMoreBtnParent = document.getElementById('show-more-btn')?.parentElement;
+        if (moreLocalities) moreLocalities.classList.add('hidden');
+        if (showMoreBtnParent) showMoreBtnParent.classList.remove('hidden');
+        return;
+      }
+
+      // Build combined list of localities from all active filters
+      const activeCategories = window.lifestyleCategories.filter(c => window.activeFilters.has(c.name));
+      const allMatchingLocalities = new Set();
+      activeCategories.forEach(cat => {
+        cat.localities.forEach(loc => allMatchingLocalities.add(loc));
+      });
+
+      // Update banner with active filter names
+      const filterNames = activeCategories.map(c => `${c.icon} ${c.name}`).join(' + ');
       if (filterBanner && filterLabel) {
-        filterLabel.textContent = `Showing: ${category.icon} ${category.name} localities`;
+        filterLabel.textContent = `Showing: ${filterNames}`;
         filterBanner.classList.remove('hidden');
       }
 
-      // First, expand the 'more localities' section so all cards are accessible
+      // Expand 'more localities' section
       const moreLocalities = document.getElementById('more-localities');
       const showMoreBtnParent = document.getElementById('show-more-btn')?.parentElement;
       const showLessContainer = document.getElementById('show-less-container');
 
-      if (moreLocalities) {
-        moreLocalities.classList.remove('hidden');
-      }
-      if (showMoreBtnParent) {
-        showMoreBtnParent.classList.add('hidden');
-      }
-      if (showLessContainer) {
-        showLessContainer.classList.add('hidden'); // Hide 'show less' during filter
-      }
+      if (moreLocalities) moreLocalities.classList.remove('hidden');
+      if (showMoreBtnParent) showMoreBtnParent.classList.add('hidden');
+      if (showLessContainer) showLessContainer.classList.add('hidden');
 
-      // Filter ALL locality cards (both top 10 and more)
-      const allCards = document.querySelectorAll('.locality-card-new');
-      allCards.forEach(locCard => {
+      // Filter locality cards - show if in ANY active filter
+      document.querySelectorAll('.locality-card-new').forEach(locCard => {
         const localityName = locCard.dataset.locality;
-        if (category.localities.includes(localityName)) {
-          locCard.style.display = '';
-        } else {
-          locCard.style.display = 'none';
-        }
+        locCard.style.display = allMatchingLocalities.has(localityName) ? '' : 'none';
       });
-
-      // Highlight active category
-      document.querySelectorAll('.category-card').forEach(c => c.classList.remove('active'));
-      card.classList.add('active');
 
       // Scroll to localities section
       document.getElementById('localities-section').scrollIntoView({ behavior: 'smooth' });
@@ -272,6 +292,9 @@ async function renderRankingView() {
   const clearFilterBtn = document.getElementById('clear-filter-btn');
   if (clearFilterBtn) {
     clearFilterBtn.addEventListener('click', () => {
+      // Clear active filters tracking
+      window.activeFilters = new Set();
+
       // Show all localities
       document.querySelectorAll('.locality-card-new').forEach(card => {
         card.style.display = '';
