@@ -59,7 +59,7 @@ async function renderHomeView() {
           </div>
         </a>
         <a href="#/restaurants" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHpIMyNk6iG3MGJHTt_nMCAkJSL7z_2Uln1O1gWk0w6StkDpTQDNxXDKwhTlOngwoQD-4Ftl1J2an1KUZyYbq_f28YudZFjGG_a8gATTXyZphN5bY1skYKHI_sX1hwkZcEweEy_J3_UFMPqLT8trQWc0Xc7wKos6R7QLd6x0Xp-0V2q2OVjX4WnMp7KJEsIGVYJ5M5I-vz9cPVnB6Q5Q4O1BkImBd0r_9epYWezAToLc41AJCwdcJ5gHf2r-2qbWSWc23rzaCnq0Xkt7DrGJIOPVD2333xGvTuZcq9PlnBbg3w&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I')"></div>
+          <div class="explore-card-bg" style="background-image: url('images/categories/restaurant_card.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <h3>Restaurants</h3>
@@ -75,7 +75,7 @@ async function renderHomeView() {
           </div>
         </a>
         <a href="#/hotels" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/localities/locality_kovalam_1765515630432.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('images/categories/hotel_card.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <h3>Hotels</h3>
@@ -83,19 +83,11 @@ async function renderHomeView() {
           </div>
         </a>
         <a href="#/experiences" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/localities/locality_varkala_1765515646696.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('images/categories/experiences_card.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <h3>Experiences</h3>
             <p>Things to do</p>
-          </div>
-        </a>
-        <a href="#/map" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/localities/locality_kazhakuttom_1765515586696.png')"></div>
-          <div class="explore-card-overlay"></div>
-          <div class="explore-card-content">
-            <h3>Map</h3>
-            <p>Explore visually</p>
           </div>
         </a>
       </div>
