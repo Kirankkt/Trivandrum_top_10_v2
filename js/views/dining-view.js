@@ -34,10 +34,61 @@ async function renderDiningView(type) {
     try {
         const response = await fetch(config.filename);
         if (!response.ok) throw new Error("Data not found");
-        const data = await response.json();
+        let data = await response.json();
+
+        // Check for custom weights and apply them
+        const storageKey = `${type}Weights`;
+        const savedWeights = JSON.parse(localStorage.getItem(storageKey));
+        const isCustomized = savedWeights !== null;
+
+        // Define metric configurations for each type
+        const metricConfigs = {
+            restaurants: ['sentiment', 'popularity', 'rating', 'value', 'convenience', 'vibe'],
+            cafes: ['sentiment', 'popularity', 'rating', 'value', 'convenience', 'workspace'],
+            hotels: ['sentiment', 'popularity', 'rating', 'value', 'location', 'luxury']
+        };
+
+        // Apply custom weights if present
+        if (isCustomized) {
+            data = data.map(item => {
+                const metrics = item.metrics || {};
+                let customScore = 0;
+                const totalWeight = Object.values(savedWeights).reduce((a, b) => a + b, 0) || 100;
+
+                // Map metric IDs to actual data
+                const metricMapping = {
+                    sentiment: metrics.sentiment || 50,
+                    popularity: Math.min((item.reviews || 0) / 100, 100),
+                    rating: (item.rating || 4) * 20,
+                    value: (5 - (item.price_level || 2)) * 25,
+                    convenience: metrics.convenience || 50,
+                    vibe: (item.vibes?.length || 0) * 20,
+                    workspace: (item.vibes?.includes('Work Friendly') ? 80 : 30),
+                    location: metrics.convenience || 50,
+                    luxury: (item.price_level || 2) * 25
+                };
+
+                metricConfigs[type].forEach(metricId => {
+                    const weight = (savedWeights[metricId] || 0) / totalWeight;
+                    customScore += (metricMapping[metricId] || 50) * weight;
+                });
+
+                return { ...item, score: customScore };
+            }).sort((a, b) => b.score - a.score);
+        }
+
         const allSpots = data.slice(0, 20);
         const top10 = allSpots.slice(0, 10);
         const remaining = allSpots.slice(10, 20);
+
+        // Customized ranking banner
+        const customizedBanner = isCustomized ? `
+            <div class="customized-banner">
+                <span class="customized-icon">⚖️</span>
+                <span class="customized-text">Showing customized rankings based on your preferences</span>
+                <button class="btn-restore-default" id="restore-default-btn">Restore Default</button>
+            </div>
+        ` : '';
 
         let html = `
             <div class="dining-hero" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('${top10[0].image}') center/cover fixed;">
@@ -53,9 +104,10 @@ async function renderDiningView(type) {
             </div>
 
             <div class="dining-container" id="dining-section">
+                ${customizedBanner}
                 <div class="section-header">
                     <h2 class="section-title">Top 10 ${type.charAt(0).toUpperCase() + type.slice(1)}</h2>
-                    <p class="section-subtitle">Ranked by Foodie Score (Sentiment, Popularity, Value & Vibe)</p>
+                    <p class="section-subtitle">${isCustomized ? 'Ranked by your custom weights' : 'Ranked by Foodie Score (Sentiment, Popularity, Value & Vibe)'}</p>
                 </div>
                 
                 <main class="dining-grid">
@@ -103,6 +155,16 @@ async function renderDiningView(type) {
                 showMoreContainer.style.display = 'flex';
                 showLessContainer.style.display = 'none';
                 document.getElementById('dining-section').scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+
+        // Restore default button
+        const restoreBtn = document.getElementById('restore-default-btn');
+        if (restoreBtn) {
+            restoreBtn.addEventListener('click', () => {
+                localStorage.removeItem(storageKey);
+                // Reload the page to show default rankings
+                renderDiningView(type);
             });
         }
 
