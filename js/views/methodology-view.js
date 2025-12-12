@@ -343,12 +343,11 @@ async function renderMethodologyView() {
                 <!-- Common Footer -->
                 <section class="methodology-section methodology-footer">
                     <h2>Full Transparency</h2>
-                    <p>All data collection scripts and formulas are open source. You can customize the weights 
-                    for any category to match your personal priorities.</p>
+                    <p>All data collection scripts and formulas are open source. Customize weights 
+                    from each category's dedicated page to match your personal priorities.</p>
                     
                     <div class="cta-buttons">
                         <a href="#/" class="btn-primary">← Back to Home</a>
-                        <a href="#/customize" class="btn-secondary">Customize Locality Weights</a>
                     </div>
                 </section>
             </div>

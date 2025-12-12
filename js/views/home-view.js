@@ -101,31 +101,6 @@ async function renderHomeView() {
       </div>
     </section>
 
-    <!-- Featured Localities -->
-    <section class="featured-section">
-      <div class="featured-header">
-        <h2 class="section-title">Top Neighborhoods</h2>
-        <a href="#/localities" class="see-all">View All →</a>
-      </div>
-      <div class="featured-grid">
-        ${topLocalities.map((loc, i) => `
-          <div class="featured-card" onclick="window.location.hash='#/locality/${encodeURIComponent(loc.name)}'">
-            <div class="featured-image">
-              <img src="${getLocalityImage(loc.name)}" alt="${loc.name}" />
-              <div class="featured-rank">#${i + 1}</div>
-            </div>
-            <div class="featured-info">
-              <h3>${loc.name}</h3>
-              <div class="featured-score">${loc.overall_score?.toFixed(1) || 'N/A'}/10</div>
-              <div class="featured-meta">
-                <span>🏠 ₹${loc.land_price || 'N/A'}L/cent</span>
-              </div>
-            </div>
-          </div>
-        `).join('')}
-      </div>
-    </section>
-
     <!-- About Section -->
     <section class="about-section">
       <div class="about-content">
