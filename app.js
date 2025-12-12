@@ -41,9 +41,8 @@ function route() {
     } else if (hash === '/experiences') {
         app.innerHTML = `
           <div class="coming-soon">
-            <h1>🎭 Experiences</h1>
+            <h1>Experiences</h1>
             <p>Top experiences in Trivandrum coming soon!</p>
-            <a href="#/" class="btn-primary">← Back to Localities</a>
           </div>`;
     } else if (hash.startsWith('/discover/')) {
         const localityName = decodeURIComponent(hash.replace('/discover/', ''));

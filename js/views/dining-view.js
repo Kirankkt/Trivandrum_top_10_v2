@@ -91,15 +91,10 @@ async function renderDiningView(type) {
         ` : '';
 
         let html = `
-            <div class="dining-hero" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('${top10[0].image}') center/cover fixed;">
+            <div class="dining-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('${top10[0].image}') center/cover fixed;">
                 <div class="hero-content">
-                    <h1 style="color: white; text-shadow: 2px 2px 8px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8);">${config.title}</h1>
-                    <p class="hero-subtitle" style="color: rgba(255,255,255,0.95); text-shadow: 1px 1px 4px rgba(0,0,0,0.9);">${config.subtitle}</p>
-                    <div class="hero-stats">
-                        <div class="stat"><span class="stat-value">20</span><span class="stat-label">Spots</span></div>
-                        <div class="stat"><span class="stat-value">6</span><span class="stat-label">Metrics</span></div>
-                        <div class="stat"><span class="stat-value">5</span><span class="stat-label">Vibe Tags</span></div>
-                    </div>
+                    <h1 style="color: white; text-shadow: 2px 2px 8px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8); font-size: 3.5rem;">${config.title}</h1>
+                    <p class="hero-subtitle" style="color: rgba(255,255,255,0.9); text-shadow: 1px 1px 4px rgba(0,0,0,0.9); font-size: 1.25rem; margin-top: 0.5rem;">${config.subtitle}</p>
                 </div>
             </div>
 
@@ -107,7 +102,6 @@ async function renderDiningView(type) {
                 ${customizedBanner}
                 <div class="section-header">
                     <h2 class="section-title">Top 10 ${type.charAt(0).toUpperCase() + type.slice(1)}</h2>
-                    <p class="section-subtitle">${isCustomized ? 'Ranked by your custom weights' : 'Ranked by Foodie Score (Sentiment, Popularity, Value & Vibe)'}</p>
                 </div>
                 
                 <main class="dining-grid">
