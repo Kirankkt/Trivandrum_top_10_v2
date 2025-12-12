@@ -57,25 +57,22 @@ async function renderHomeView() {
           <div class="explore-card-bg" style="background-image: url('images/localities/locality_kowdiar_1765515570335.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
-            <span class="explore-icon">🏘️</span>
             <h3>Localities</h3>
             <p>Find your perfect neighborhood</p>
           </div>
         </a>
         <a href="#/restaurants" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/localities/locality_pattom_1765515551840.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHpIMyNk6iG3MGJHTt_nMCAkJSL7z_2Uln1O1gWk0w6StkDpTQDNxXDKwhTlOngwoQD-4Ftl1J2an1KUZyYbq_f28YudZFjGG_a8gATTXyZphN5bY1skYKHI_sX1hwkZcEweEy_J3_UFMPqLT8trQWc0Xc7wKos6R7QLd6x0Xp-0V2q2OVjX4WnMp7KJEsIGVYJ5M5I-vz9cPVnB6Q5Q4O1BkImBd0r_9epYWezAToLc41AJCwdcJ5gHf2r-2qbWSWc23rzaCnq0Xkt7DrGJIOPVD2333xGvTuZcq9PlnBbg3w&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
-            <span class="explore-icon">🍛</span>
             <h3>Restaurants</h3>
             <p>Best dining experiences</p>
           </div>
         </a>
         <a href="#/cafes" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/localities/locality_vellayambalam_1765515853090.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHppzWCQbZcQ1TN6p6T5HiDnZp7BBd1ZBK82eRSCMGUH5l-AJheR04UgXHIiOzPhHpesMtAFt2bIiYDMxuc99iMYghAnjFEoBd5PyHX6JZ8fGyEts17uI2XN9SQSotdyfF34cFefN25csXUkOLXKtE1zLJJtnbIjwWt-765426bG13JFIejN5oCmDYn2yC_jn2PasRG0iwpDZEEi5gXbdafbEwTjAO8SetoQLX2_Y6NkKVtp8ho-WmS2CoUuMymf1vH7PoZKFeLg8BPScubUn8LkyWjfHXmAIgggsOLXdGqDnw&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
-            <span class="explore-icon">☕</span>
             <h3>Cafes</h3>
             <p>Coffee, tea & hangouts</p>
           </div>
@@ -84,7 +81,6 @@ async function renderHomeView() {
           <div class="explore-card-bg" style="background-image: url('images/localities/locality_kovalam_1765515630432.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
-            <span class="explore-icon">🏨</span>
             <h3>Hotels</h3>
             <p>Where to stay</p>
           </div>
@@ -93,7 +89,6 @@ async function renderHomeView() {
           <div class="explore-card-bg" style="background-image: url('images/localities/locality_varkala_1765515646696.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
-            <span class="explore-icon">🎭</span>
             <h3>Experiences</h3>
             <p>Things to do</p>
           </div>
@@ -102,7 +97,6 @@ async function renderHomeView() {
           <div class="explore-card-bg" style="background-image: url('images/localities/locality_kazhakuttom_1765515586696.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
-            <span class="explore-icon">🗺️</span>
             <h3>Map</h3>
             <p>Explore visually</p>
           </div>
