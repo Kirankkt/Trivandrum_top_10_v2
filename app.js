@@ -12,8 +12,17 @@ function route() {
         console.log('[Debug] Routing to Localities');
         renderRankingView();
     } else if (hash === '/customize') {
-        console.log('[Debug] Routing to Customize');
+        console.log('[Debug] Routing to Customize Localities');
         renderCustomizeView();
+    } else if (hash === '/customize/restaurants') {
+        console.log('[Debug] Routing to Customize Restaurants');
+        renderDiningCustomizeView('restaurants');
+    } else if (hash === '/customize/cafes') {
+        console.log('[Debug] Routing to Customize Cafes');
+        renderDiningCustomizeView('cafes');
+    } else if (hash === '/customize/hotels') {
+        console.log('[Debug] Routing to Customize Hotels');
+        renderDiningCustomizeView('hotels');
     } else if (hash === '/methodology') {
         console.log('[Debug] Routing to Methodology');
         renderMethodologyView();
@@ -69,6 +78,22 @@ function route() {
             link.classList.add('active');
         }
     });
+
+    // Update Customize button based on current page
+    const customizeBtn = document.querySelector('.btn-plan');
+    if (customizeBtn) {
+        if (hash === '/restaurants') {
+            customizeBtn.href = '#/customize/restaurants';
+        } else if (hash === '/cafes') {
+            customizeBtn.href = '#/customize/cafes';
+        } else if (hash === '/hotels') {
+            customizeBtn.href = '#/customize/hotels';
+        } else if (hash === '/localities' || hash === '/' || hash === '') {
+            customizeBtn.href = '#/customize';
+        } else {
+            customizeBtn.href = '#/customize';
+        }
+    }
 }
 
 // Set up routing

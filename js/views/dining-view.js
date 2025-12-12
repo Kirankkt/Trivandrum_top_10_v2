@@ -40,10 +40,10 @@ async function renderDiningView(type) {
         const remaining = allSpots.slice(10, 20);
 
         let html = `
-            <div class="dining-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('${top10[0].image}') center/cover fixed;">
+            <div class="dining-hero" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('${top10[0].image}') center/cover fixed;">
                 <div class="hero-content">
-                    <h1>${config.icon} ${config.title}</h1>
-                    <p class="hero-subtitle">${config.subtitle}</p>
+                    <h1 style="color: white; text-shadow: 2px 2px 8px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8);">${config.title}</h1>
+                    <p class="hero-subtitle" style="color: rgba(255,255,255,0.95); text-shadow: 1px 1px 4px rgba(0,0,0,0.9);">${config.subtitle}</p>
                     <div class="hero-stats">
                         <div class="stat"><span class="stat-value">20</span><span class="stat-label">Spots</span></div>
                         <div class="stat"><span class="stat-value">6</span><span class="stat-label">Metrics</span></div>
