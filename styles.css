@@ -4333,3 +4333,45 @@ footer .small {
     font-size: 0.9rem;
   }
 }
+
+/* ==================== INLINE CUSTOMIZE BUTTON ==================== */
+
+.section-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-customize-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #059669 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.btn-customize-inline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.4);
+}
+
+@media (max-width: 600px) {
+  .section-header-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-customize-inline {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -108,7 +108,10 @@ async function renderRankingView() {
     <!-- Localities Grid Section -->
     <section class="localities-section" id="localities-section">
       <div class="section-header">
-        <h2 class="section-title">Top Localities</h2>
+        <div class="section-header-top">
+          <h2 class="section-title">Top Localities</h2>
+          <a href="#/customize" class="btn-customize-inline">✨ Customize Rankings</a>
+        </div>
         <p class="section-subtitle">Ranked by Accessibility, Amenities, Safety, Environment & Economy</p>
         ${isCustom ? `
           <div class="custom-weights-banner">
