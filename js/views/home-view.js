@@ -34,15 +34,12 @@ async function renderHomeView() {
         
         <div class="purpose-cards">
           <a href="#/localities" class="purpose-card">
-            <span class="purpose-icon">🏠</span>
             <span class="purpose-text">Looking to Relocate?</span>
           </a>
           <a href="#/restaurants" class="purpose-card">
-            <span class="purpose-icon">🍽️</span>
             <span class="purpose-text">Hungry?</span>
           </a>
           <a href="#/experiences" class="purpose-card">
-            <span class="purpose-icon">🎯</span>
             <span class="purpose-text">Exploring the City?</span>
           </a>
         </div>
