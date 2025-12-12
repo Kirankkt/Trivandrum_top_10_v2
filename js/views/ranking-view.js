@@ -25,14 +25,28 @@ async function renderRankingView() {
     recalculateRankings(rankingsData.all_rankings, weights) :
     rankingsData.all_rankings;
 
-  // Locality image mapping
+  // Locality image mapping - AI-generated contextual images
   const localityImages = {
-    'Sreekaryam': 'images/localities/locality_sreekaryam_1765123690965.png',
-    'Kovalam': 'images/localities/locality_kovalam_1765123711609.png',
-    'Kowdiar': 'images/localities/locality_kowdiar_1765123730297.png',
-    'Pattom': 'images/localities/locality_pattom_1765123772540.png',
-    'Varkala': 'images/localities/locality_varkala_1765123795478.png',
-    'Kazhakuttom': 'images/localities/locality_technopark_1765123812360.png',
+    'Statue': 'images/localities/locality_statue_1765515536425.png',
+    'Pattom': 'images/localities/locality_pattom_1765515551840.png',
+    'Kowdiar': 'images/localities/locality_kowdiar_1765515570335.png',
+    'Enchakkal': 'images/localities/locality_enchakkal_1765515725097.png',
+    'Jagathy': 'images/localities/locality_jagathy_1765515744821.png',
+    'Ambalamukku': 'images/localities/locality_ambalamukku_1765515767794.png',
+    'Vazhuthacaud': 'images/localities/locality_vazhuthacaud_1765515786029.png',
+    'PMG': 'images/localities/locality_pmg_1765515821035.png',
+    'Kesavadasapuram': 'images/localities/locality_kesavadasapuram_1765515836771.png',
+    'Sasthamangalam': 'images/localities/locality_sasthamangalam_1765515686073.png',
+    'Vellayambalam': 'images/localities/locality_vellayambalam_1765515853090.png',
+    'Peroorkada': 'images/localities/locality_peroorkada_1765515869711.png',
+    'Kuravankonam': 'images/localities/locality_kuravankonam_1765515904397.png',
+    'Ulloor': 'images/localities/locality_ulloor_1765515923944.png',
+    'Medical College': 'images/localities/locality_medical_college_1765515945391.png',
+    'Thampanoor': 'images/localities/locality_thampanoor_1765515963546.png',
+    'Sreekaryam': 'images/localities/locality_sreekaryam_1765515666747.png',
+    'Kovalam': 'images/localities/locality_kovalam_1765515630432.png',
+    'Varkala': 'images/localities/locality_varkala_1765515646696.png',
+    'Kazhakuttom': 'images/localities/locality_kazhakuttom_1765515586696.png',
     'default': 'images/skyline.png'
   };
 
