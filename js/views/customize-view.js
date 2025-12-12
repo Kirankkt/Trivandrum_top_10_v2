@@ -133,24 +133,63 @@ async function renderCustomizeView() {
 
     app.innerHTML = html;
 
-    // Initialize sliders
-    const accessibilitySlider = document.getElementById('accessibility-slider');
-    const amenitiesSlider = document.getElementById('amenities-slider');
-    const safetySlider = document.getElementById('safety-slider');
-    const environmentSlider = document.getElementById('environment-slider');
-    const economySlider = document.getElementById('economy-slider');
-    const prestigeSlider = document.getElementById('prestige-slider');
+    // Initialize sliders - using object for easier management
+    const sliders = {
+        accessibility: document.getElementById('accessibility-slider'),
+        amenities: document.getElementById('amenities-slider'),
+        safety: document.getElementById('safety-slider'),
+        environment: document.getElementById('environment-slider'),
+        economy: document.getElementById('economy-slider'),
+        prestige: document.getElementById('prestige-slider')
+    };
+    const sliderIds = Object.keys(sliders);
     const applyBtn = document.getElementById('apply-btn');
     const resetBtn = document.getElementById('reset-btn');
 
+    // Auto-adjust weights - when one slider changes, others adjust proportionally to keep total at 100%
+    function autoAdjustWeights(changedId, newValue) {
+        const otherIds = sliderIds.filter(id => id !== changedId);
+        const currentTotal = otherIds.reduce((sum, id) => sum + parseInt(sliders[id].value), 0);
+        const remaining = 100 - newValue;
+
+        if (currentTotal === 0) {
+            // If all others are 0, distribute equally
+            const each = Math.floor(remaining / otherIds.length);
+            let leftover = remaining - (each * otherIds.length);
+            otherIds.forEach((id, i) => {
+                sliders[id].value = each + (i < leftover ? 1 : 0);
+            });
+        } else {
+            // Proportionally adjust others
+            otherIds.forEach(id => {
+                const currentVal = parseInt(sliders[id].value);
+                const proportion = currentVal / currentTotal;
+                sliders[id].value = Math.round(remaining * proportion);
+            });
+
+            // Fix rounding errors
+            const actualTotal = sliderIds.reduce((sum, id) => sum + parseInt(sliders[id].value), 0);
+            if (actualTotal !== 100) {
+                const diff = 100 - actualTotal;
+                for (const id of otherIds) {
+                    const val = parseInt(sliders[id].value);
+                    if (val + diff >= 0 && val + diff <= 100) {
+                        sliders[id].value = val + diff;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
     // Update preview function
     function updatePreview() {
-        const accessibility = parseInt(accessibilitySlider.value) / 100;
-        const amenities = parseInt(amenitiesSlider.value) / 100;
-        const safety = parseInt(safetySlider.value) / 100;
-        const environment = parseInt(environmentSlider.value) / 100;
-        const economy = parseInt(economySlider.value) / 100;
-        const prestige = parseInt(prestigeSlider.value) / 100;
+        const accessibility = parseInt(sliders.accessibility.value) / 100;
+        const amenities = parseInt(sliders.amenities.value) / 100;
+        const safety = parseInt(sliders.safety.value) / 100;
+        const environment = parseInt(sliders.environment.value) / 100;
+        const economy = parseInt(sliders.economy.value) / 100;
+        const prestige = parseInt(sliders.prestige.value) / 100;
 
         // Update display values
         document.getElementById('accessibility-value').textContent = `${Math.round(accessibility * 100)}%`;
@@ -198,36 +237,37 @@ async function renderCustomizeView() {
         preview.innerHTML = html;
     }
 
-    // Event listeners
-    accessibilitySlider.addEventListener('input', updatePreview);
-    amenitiesSlider.addEventListener('input', updatePreview);
-    safetySlider.addEventListener('input', updatePreview);
-    environmentSlider.addEventListener('input', updatePreview);
-    economySlider.addEventListener('input', updatePreview);
-    prestigeSlider.addEventListener('input', updatePreview);
+    // Event listeners with auto-adjust
+    sliderIds.forEach(id => {
+        sliders[id].addEventListener('input', (e) => {
+            const newValue = parseInt(e.target.value);
+            autoAdjustWeights(id, newValue);
+            updatePreview();
+        });
+    });
 
     resetBtn.addEventListener('click', () => {
         const defaults = resetWeights();
-        accessibilitySlider.value = defaults.accessibility * 100;
-        amenitiesSlider.value = defaults.amenities * 100;
-        safetySlider.value = defaults.safety * 100;
-        environmentSlider.value = defaults.environment * 100;
-        economySlider.value = defaults.economy * 100;
-        prestigeSlider.value = defaults.prestige * 100;
+        sliders.accessibility.value = defaults.accessibility * 100;
+        sliders.amenities.value = defaults.amenities * 100;
+        sliders.safety.value = defaults.safety * 100;
+        sliders.environment.value = defaults.environment * 100;
+        sliders.economy.value = defaults.economy * 100;
+        sliders.prestige.value = defaults.prestige * 100;
         updatePreview();
     });
 
     applyBtn.addEventListener('click', () => {
         const newWeights = {
-            accessibility: parseInt(accessibilitySlider.value) / 100,
-            amenities: parseInt(amenitiesSlider.value) / 100,
-            safety: parseInt(safetySlider.value) / 100,
-            environment: parseInt(environmentSlider.value) / 100,
-            economy: parseInt(economySlider.value) / 100,
-            prestige: parseInt(prestigeSlider.value) / 100
+            accessibility: parseInt(sliders.accessibility.value) / 100,
+            amenities: parseInt(sliders.amenities.value) / 100,
+            safety: parseInt(sliders.safety.value) / 100,
+            environment: parseInt(sliders.environment.value) / 100,
+            economy: parseInt(sliders.economy.value) / 100,
+            prestige: parseInt(sliders.prestige.value) / 100
         };
         saveWeights(newWeights);
-        window.location.hash = '/';
+        window.location.hash = '/localities';
         // Scroll to localities section after page fully renders
         setTimeout(() => {
             const localitiesSection = document.getElementById('localities-section');
@@ -250,12 +290,12 @@ async function renderCustomizeView() {
             };
 
             const values = presets[preset];
-            accessibilitySlider.value = values.accessibility;
-            amenitiesSlider.value = values.amenities;
-            safetySlider.value = values.safety;
-            environmentSlider.value = values.environment;
-            economySlider.value = values.economy;
-            prestigeSlider.value = values.prestige;
+            sliders.accessibility.value = values.accessibility;
+            sliders.amenities.value = values.amenities;
+            sliders.safety.value = values.safety;
+            sliders.environment.value = values.environment;
+            sliders.economy.value = values.economy;
+            sliders.prestige.value = values.prestige;
             updatePreview();
         });
     });
