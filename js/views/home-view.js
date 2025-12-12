@@ -1,27 +1,27 @@
 // Home View - Landing page for Trivandrum Top 10 App
 
 async function renderHomeView() {
-    const app = document.getElementById('app');
+  const app = document.getElementById('app');
 
-    // Load data for featured items
-    const rankingsData = await loadRankings();
-    const topLocalities = rankingsData?.all_rankings?.slice(0, 3) || [];
+  // Load data for featured items
+  const rankingsData = await loadRankings();
+  const topLocalities = rankingsData?.all_rankings?.slice(0, 3) || [];
 
-    // Locality image mapping (same as ranking-view)
-    const localityImages = {
-        'Statue': 'images/localities/locality_statue_1765515536425.png',
-        'Pattom': 'images/localities/locality_pattom_1765515551840.png',
-        'Kowdiar': 'images/localities/locality_kowdiar_1765515570335.png',
-        'Enchakkal': 'images/localities/locality_enchakkal_1765515725097.png',
-        'Jagathy': 'images/localities/locality_jagathy_1765515744821.png',
-        'default': 'images/skyline.png'
-    };
+  // Locality image mapping (same as ranking-view)
+  const localityImages = {
+    'Statue': 'images/localities/locality_statue_1765515536425.png',
+    'Pattom': 'images/localities/locality_pattom_1765515551840.png',
+    'Kowdiar': 'images/localities/locality_kowdiar_1765515570335.png',
+    'Enchakkal': 'images/localities/locality_enchakkal_1765515725097.png',
+    'Jagathy': 'images/localities/locality_jagathy_1765515744821.png',
+    'default': 'images/skyline.png'
+  };
 
-    function getLocalityImage(name) {
-        return localityImages[name] || localityImages['default'];
-    }
+  function getLocalityImage(name) {
+    return localityImages[name] || localityImages['default'];
+  }
 
-    const html = `
+  const html = `
     <!-- Hero Section -->
     <section class="home-hero">
       <div class="home-hero-image">
@@ -63,7 +63,7 @@ async function renderHomeView() {
           </div>
         </a>
         <a href="#/restaurants" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/dining.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('images/localities/locality_pattom_1765515551840.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-icon">🍛</span>
@@ -72,7 +72,7 @@ async function renderHomeView() {
           </div>
         </a>
         <a href="#/cafes" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/cafe.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('images/localities/locality_vellayambalam_1765515853090.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-icon">☕</span>
@@ -81,7 +81,7 @@ async function renderHomeView() {
           </div>
         </a>
         <a href="#/hotels" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/hotel.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('images/localities/locality_kovalam_1765515630432.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-icon">🏨</span>
@@ -90,7 +90,7 @@ async function renderHomeView() {
           </div>
         </a>
         <a href="#/experiences" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/beach.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('images/localities/locality_varkala_1765515646696.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-icon">🎭</span>
@@ -99,7 +99,7 @@ async function renderHomeView() {
           </div>
         </a>
         <a href="#/map" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/map.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('images/localities/locality_kazhakuttom_1765515586696.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-icon">🗺️</span>
@@ -159,5 +159,5 @@ async function renderHomeView() {
     </section>
   `;
 
-    app.innerHTML = html;
+  app.innerHTML = html;
 }
