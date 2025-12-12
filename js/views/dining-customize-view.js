@@ -88,10 +88,18 @@ async function renderDiningCustomizeView(type) {
         console.error('Error loading dining data:', e);
     }
 
-    // Get saved weights or defaults
+    // Get saved weights or use balanced preset as default (which sums to exactly 100%)
     const storageKey = `${type}Weights`;
-    const savedWeights = JSON.parse(localStorage.getItem(storageKey)) || {};
-    const defaultWeight = Math.round(100 / config.metrics.length);
+    const savedWeights = JSON.parse(localStorage.getItem(storageKey));
+    const balancedPreset = config.presets.balanced;
+
+    // Use saved weights if they exist and sum to 100, otherwise use balanced preset
+    const getDefaultWeight = (metricId) => {
+        if (savedWeights) {
+            return savedWeights[metricId] || balancedPreset[metricId] || 17;
+        }
+        return balancedPreset[metricId] || 17;
+    };
 
     // Build HTML
     const html = `
@@ -107,10 +115,10 @@ async function renderDiningCustomizeView(type) {
                         <div class="slider-header">
                             <span class="slider-icon">${metric.icon}</span>
                             <span class="slider-title">${metric.name}</span>
-                            <span class="slider-value" id="${metric.id}-value">${savedWeights[metric.id] || defaultWeight}%</span>
+                            <span class="slider-value" id="${metric.id}-value">${getDefaultWeight(metric.id)}%</span>
                         </div>
                         <input type="range" id="${metric.id}-slider" class="weight-slider dining-weight-slider" 
-                               min="0" max="100" value="${savedWeights[metric.id] || defaultWeight}" step="5"
+                               min="0" max="100" value="${getDefaultWeight(metric.id)}" step="1"
                                data-metric="${metric.id}">
                         <p class="slider-description">${metric.description}</p>
                     </div>
@@ -294,17 +302,12 @@ async function renderDiningCustomizeView(type) {
         });
     });
 
-    // Reset button
+    // Reset button - use balanced preset values (which sum to exactly 100%)
     resetBtn.addEventListener('click', () => {
         localStorage.removeItem(storageKey);
         config.metrics.forEach(m => {
-            sliders[m.id].value = defaultWeight;
+            sliders[m.id].value = balancedPreset[m.id] || 17;
         });
-        // Fix to exactly 100%
-        const remainder = 100 - (defaultWeight * config.metrics.length);
-        if (remainder !== 0) {
-            sliders[config.metrics[0].id].value = defaultWeight + remainder;
-        }
         updatePreview();
     });
 
