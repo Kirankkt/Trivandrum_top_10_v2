@@ -6,7 +6,10 @@ function route() {
 
     // Handle different routes
     if (hash === '/' || hash === '') {
-        console.log('[Debug] Routing to Rankings');
+        console.log('[Debug] Routing to Home');
+        renderHomeView();
+    } else if (hash === '/localities') {
+        console.log('[Debug] Routing to Localities');
         renderRankingView();
     } else if (hash === '/customize') {
         console.log('[Debug] Routing to Customize');

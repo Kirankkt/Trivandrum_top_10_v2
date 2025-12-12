@@ -3825,3 +3825,361 @@ footer .small {
   padding: 2px 6px;
   border-radius: 4px;
 }
+
+/* ==================== HOME PAGE STYLES ==================== */
+
+/* Home Hero */
+.home-hero {
+  position: relative;
+  height: 80vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home-hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.home-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.home-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  max-width: 900px;
+}
+
+.home-hero-title {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.home-hero-title .highlight {
+  color: var(--color-primary-light);
+}
+
+.home-hero-tagline {
+  font-size: 1.4rem;
+  opacity: 0.95;
+  margin-bottom: 2.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Purpose Cards */
+.purpose-cards {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.purpose-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-lg);
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.purpose-card:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-4px);
+}
+
+.purpose-icon {
+  font-size: 2rem;
+}
+
+.purpose-text {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Explore Section */
+.explore-section {
+  padding: 4rem 2rem;
+  background: var(--color-bg);
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.explore-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 200px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.explore-card:hover {
+  transform: scale(1.02);
+}
+
+.explore-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.explore-card:hover .explore-card-bg {
+  transform: scale(1.1);
+}
+
+.explore-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.explore-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  color: white;
+}
+
+.explore-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.explore-card-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.explore-card-content p {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+/* Featured Section */
+.featured-section {
+  padding: 4rem 2rem;
+  background: var(--color-bg-secondary);
+}
+
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.see-all {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.see-all:hover {
+  text-decoration: underline;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.featured-image {
+  position: relative;
+  height: 180px;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-rank {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--color-primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.featured-info {
+  padding: 1.25rem;
+}
+
+.featured-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.featured-score {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.featured-meta {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* About Section */
+.about-section {
+  padding: 4rem 2rem;
+  background: var(--color-bg-dark);
+  color: white;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.about-features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+}
+
+.btn-learn-more {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-learn-more:hover {
+  background: white;
+  color: var(--color-bg-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .home-hero-tagline {
+    font-size: 1.1rem;
+  }
+
+  .purpose-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-features {
+    flex-direction: column;
+    align-items: center;
+  }
+}
