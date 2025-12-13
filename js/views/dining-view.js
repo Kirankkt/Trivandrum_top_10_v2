@@ -101,10 +101,7 @@ async function renderDiningView(type) {
             <div class="dining-container" id="dining-section">
                 ${customizedBanner}
                 <div class="section-header">
-                    <div class="section-header-top">
-                        <h2 class="section-title">Top 10 ${type.charAt(0).toUpperCase() + type.slice(1)}</h2>
-                        <a href="#/customize/${type}" class="btn-customize-inline">✨ Customize Rankings</a>
-                    </div>
+                    <a href="#/customize/${type}" class="btn-customize-inline">✨ Customize Rankings</a>
                 </div>
                 
                 <main class="dining-grid">
