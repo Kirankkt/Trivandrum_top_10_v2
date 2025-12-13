@@ -81,13 +81,10 @@ async function renderDiningView(type) {
         const top10 = allSpots.slice(0, 10);
         const remaining = allSpots.slice(10, 20);
 
-        // Customized ranking banner
-        const customizedBanner = isCustomized ? `
-            <div class="customized-banner">
-                <span class="customized-icon">⚖️</span>
-                <span class="customized-text">Showing customized rankings based on your preferences</span>
-                <button class="btn-restore-default" id="restore-default-btn">Restore Default</button>
-            </div>
+        // Customized ranking indicator (inline, subtle)
+        const customizedIndicator = isCustomized ? `
+            <span class="customized-indicator">⚖️ Custom weights active</span>
+            <button class="btn-restore-small" id="restore-default-btn">Reset</button>
         ` : '';
 
         let html = `
@@ -99,9 +96,11 @@ async function renderDiningView(type) {
             </div>
 
             <div class="dining-container" id="dining-section">
-                ${customizedBanner}
                 <div class="section-header">
-                    <a href="#/customize/${type}" class="btn-customize-inline">✨ Customize Rankings</a>
+                    <div class="section-header-actions">
+                        ${customizedIndicator}
+                        <a href="#/customize/${type}" class="btn-customize-inline">✨ Customize</a>
+                    </div>
                 </div>
                 
                 <main class="dining-grid">
