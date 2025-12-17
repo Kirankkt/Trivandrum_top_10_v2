@@ -1,6 +1,8 @@
 // Simple Router
 function route() {
-    const hash = window.location.hash.slice(1) || '/';
+    // Decode the hash to handle URL-encoded characters (e.g., %2F for /)
+    const rawHash = window.location.hash.slice(1) || '/';
+    const hash = decodeURIComponent(rawHash);
     console.log('[Debug] Route called. Hash:', hash);
     const app = document.getElementById('app');
 
