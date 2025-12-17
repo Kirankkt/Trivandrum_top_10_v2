@@ -1,0 +1,322 @@
+{
+  "Statue": {
+    "restaurant_count": 5,
+    "cafe_count": 0,
+    "hotel_count": 6,
+    "total_dining_count": 11,
+    "dining_scene_score": 5.4,
+    "top_restaurant": {
+      "name": "Salkkaram Idavazhi",
+      "score": 74.8,
+      "rating": 4.7,
+      "reviews": 2820
+    },
+    "top_cafe": null,
+    "top_hotel": {
+      "name": "Vivanta Thiruvananthapuram",
+      "score": 66.2,
+      "rating": 4.4,
+      "reviews": 1771
+    }
+  },
+  "Pattom": {
+    "restaurant_count": 1,
+    "cafe_count": 7,
+    "hotel_count": 0,
+    "total_dining_count": 8,
+    "dining_scene_score": 4.6,
+    "top_restaurant": {
+      "name": "Café Mojo",
+      "score": 61.6,
+      "rating": 4.1,
+      "reviews": 2988
+    },
+    "top_cafe": {
+      "name": "Kadalas Cafe",
+      "score": 79.5,
+      "rating": 4.7,
+      "reviews": 1364
+    },
+    "top_hotel": null
+  },
+  "Kowdiar": {
+    "restaurant_count": 2,
+    "cafe_count": 3,
+    "hotel_count": 0,
+    "total_dining_count": 5,
+    "dining_scene_score": 5.3,
+    "top_restaurant": {
+      "name": "Supreme Upper Crust",
+      "score": 67.0,
+      "rating": 4.3,
+      "reviews": 3478
+    },
+    "top_cafe": {
+      "name": "Frost & Toast",
+      "score": 75.1,
+      "rating": 4.7,
+      "reviews": 649
+    },
+    "top_hotel": null
+  },
+  "Enchakkal": {
+    "restaurant_count": 3,
+    "cafe_count": 0,
+    "hotel_count": 4,
+    "total_dining_count": 7,
+    "dining_scene_score": 3.9,
+    "top_restaurant": {
+      "name": "Cafe Jade - All Day Dining (24X7)",
+      "score": 77.1,
+      "rating": 4.6,
+      "reviews": 2618
+    },
+    "top_cafe": null,
+    "top_hotel": {
+      "name": "Hycinth Hotels",
+      "score": 72.1,
+      "rating": 4.6,
+      "reviews": 16660
+    }
+  },
+  "Jagathy": {
+    "restaurant_count": 0,
+    "cafe_count": 0,
+    "hotel_count": 0,
+    "total_dining_count": 0,
+    "dining_scene_score": 0,
+    "top_restaurant": null,
+    "top_cafe": null,
+    "top_hotel": null
+  },
+  "Ambalamukku": {
+    "restaurant_count": 1,
+    "cafe_count": 1,
+    "hotel_count": 0,
+    "total_dining_count": 2,
+    "dining_scene_score": 4.4,
+    "top_restaurant": {
+      "name": "The Yellow Chilli",
+      "score": 71.7,
+      "rating": 4.4,
+      "reviews": 2136
+    },
+    "top_cafe": {
+      "name": "La Forno Cafe",
+      "score": 70.1,
+      "rating": 4.4,
+      "reviews": 948
+    },
+    "top_hotel": null
+  },
+  "Vazhuthacaud": {
+    "restaurant_count": 1,
+    "cafe_count": 1,
+    "hotel_count": 0,
+    "total_dining_count": 2,
+    "dining_scene_score": 4.6,
+    "top_restaurant": {
+      "name": "Lantern Grove Restaurant",
+      "score": 70.6,
+      "rating": 4.4,
+      "reviews": 2044
+    },
+    "top_cafe": {
+      "name": "Cafe Sarwaa",
+      "score": 78.8,
+      "rating": 4.7,
+      "reviews": 4845
+    },
+    "top_hotel": null
+  },
+  "PMG": {
+    "restaurant_count": 0,
+    "cafe_count": 0,
+    "hotel_count": 1,
+    "total_dining_count": 1,
+    "dining_scene_score": 0.2,
+    "top_restaurant": null,
+    "top_cafe": null,
+    "top_hotel": {
+      "name": "KTDC MASCOT HOTEL",
+      "score": 59.1,
+      "rating": 4.2,
+      "reviews": 5530
+    }
+  },
+  "Kesavadasapuram": {
+    "restaurant_count": 2,
+    "cafe_count": 0,
+    "hotel_count": 0,
+    "total_dining_count": 2,
+    "dining_scene_score": 2.8,
+    "top_restaurant": {
+      "name": "Nadan Restaurant",
+      "score": 80.5,
+      "rating": 4.8,
+      "reviews": 1445
+    },
+    "top_cafe": null,
+    "top_hotel": null
+  },
+  "Sasthamangalam": {
+    "restaurant_count": 1,
+    "cafe_count": 2,
+    "hotel_count": 0,
+    "total_dining_count": 3,
+    "dining_scene_score": 4.7,
+    "top_restaurant": {
+      "name": "Longtime",
+      "score": 67.0,
+      "rating": 4.3,
+      "reviews": 2170
+    },
+    "top_cafe": {
+      "name": "Ma Cafe Vellayambalam",
+      "score": 69.8,
+      "rating": 4.5,
+      "reviews": 683
+    },
+    "top_hotel": null
+  },
+  "Kuravankonam": {
+    "restaurant_count": 0,
+    "cafe_count": 0,
+    "hotel_count": 0,
+    "total_dining_count": 0,
+    "dining_scene_score": 0,
+    "top_restaurant": null,
+    "top_cafe": null,
+    "top_hotel": null
+  },
+  "Ulloor": {
+    "restaurant_count": 1,
+    "cafe_count": 0,
+    "hotel_count": 2,
+    "total_dining_count": 3,
+    "dining_scene_score": 2.8,
+    "top_restaurant": {
+      "name": "Flame'N'Go",
+      "score": 86.3,
+      "rating": 4.9,
+      "reviews": 2026
+    },
+    "top_cafe": null,
+    "top_hotel": {
+      "name": "O by Tamara Trivandrum",
+      "score": 69.3,
+      "rating": 4.5,
+      "reviews": 5378
+    }
+  },
+  "Vellayambalam": {
+    "restaurant_count": 0,
+    "cafe_count": 0,
+    "hotel_count": 0,
+    "total_dining_count": 0,
+    "dining_scene_score": 0,
+    "top_restaurant": null,
+    "top_cafe": null,
+    "top_hotel": null
+  },
+  "Medical College": {
+    "restaurant_count": 1,
+    "cafe_count": 1,
+    "hotel_count": 0,
+    "total_dining_count": 2,
+    "dining_scene_score": 4.6,
+    "top_restaurant": {
+      "name": "Kappithan Restaurant",
+      "score": 73.6,
+      "rating": 4.6,
+      "reviews": 1744
+    },
+    "top_cafe": {
+      "name": "Savour Street Cafe",
+      "score": 66.6,
+      "rating": 4.4,
+      "reviews": 592
+    },
+    "top_hotel": null
+  },
+  "Poojapura": {
+    "restaurant_count": 0,
+    "cafe_count": 0,
+    "hotel_count": 0,
+    "total_dining_count": 0,
+    "dining_scene_score": 0,
+    "top_restaurant": null,
+    "top_cafe": null,
+    "top_hotel": null
+  },
+  "Kazhakuttom": {
+    "restaurant_count": 1,
+    "cafe_count": 2,
+    "hotel_count": 0,
+    "total_dining_count": 3,
+    "dining_scene_score": 4.3,
+    "top_restaurant": {
+      "name": "Zam Zam Restaurant",
+      "score": 64.4,
+      "rating": 4.1,
+      "reviews": 10437
+    },
+    "top_cafe": {
+      "name": "Turf Cafe",
+      "score": 67.0,
+      "rating": 4.3,
+      "reviews": 2652
+    },
+    "top_hotel": null
+  },
+  "Peroorkada": {
+    "restaurant_count": 0,
+    "cafe_count": 0,
+    "hotel_count": 0,
+    "total_dining_count": 0,
+    "dining_scene_score": 0,
+    "top_restaurant": null,
+    "top_cafe": null,
+    "top_hotel": null
+  },
+  "Sreekaryam": {
+    "restaurant_count": 0,
+    "cafe_count": 0,
+    "hotel_count": 0,
+    "total_dining_count": 0,
+    "dining_scene_score": 0,
+    "top_restaurant": null,
+    "top_cafe": null,
+    "top_hotel": null
+  },
+  "Kovalam": {
+    "restaurant_count": 1,
+    "cafe_count": 0,
+    "hotel_count": 7,
+    "total_dining_count": 8,
+    "dining_scene_score": 2.9,
+    "top_restaurant": {
+      "name": "Taste of Kerala",
+      "score": 61.7,
+      "rating": 4,
+      "reviews": 3044
+    },
+    "top_cafe": null,
+    "top_hotel": {
+      "name": "Taj Green Cove Resort & Spa, Kovalam",
+      "score": 72.1,
+      "rating": 4.6,
+      "reviews": 3601
+    }
+  },
+  "Varkala": {
+    "restaurant_count": 0,
+    "cafe_count": 0,
+    "hotel_count": 0,
+    "total_dining_count": 0,
+    "dining_scene_score": 0,
+    "top_restaurant": null,
+    "top_cafe": null,
+    "top_hotel": null
+  }
+}

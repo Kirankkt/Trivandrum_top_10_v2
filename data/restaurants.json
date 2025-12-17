@@ -21,7 +21,8 @@
       "sentiment": 32.7,
       "popularity": 2026,
       "convenience": 10
-    }
+    },
+    "locality": "Ulloor"
   },
   {
     "id": "ChIJw53uI-25BTsRb51bTZnB3IQ",
@@ -45,7 +46,8 @@
       "sentiment": 30.3,
       "popularity": 1445,
       "convenience": 8
-    }
+    },
+    "locality": "Kesavadasapuram"
   },
   {
     "id": "ChIJ7UB_kq-7BTsRgD8-oW6durU",
@@ -68,7 +70,8 @@
       "sentiment": 25.7,
       "popularity": 2618,
       "convenience": 10
-    }
+    },
+    "locality": "Enchakkal"
   },
   {
     "id": "ChIJS5rwBD27BTsRVi7uy9vtKe0",
@@ -91,7 +94,8 @@
       "sentiment": 28.0,
       "popularity": 2820,
       "convenience": 4
-    }
+    },
+    "locality": "Statue"
   },
   {
     "id": "ChIJy1zNcgC7BTsRV0QSwmrqQtE",
@@ -115,7 +119,8 @@
       "sentiment": 23.3,
       "popularity": 1341,
       "convenience": 10
-    }
+    },
+    "locality": "Enchakkal"
   },
   {
     "id": "ChIJ-xZeJCm7BTsR2cpdqbTdhCM",
@@ -139,7 +144,8 @@
       "sentiment": 25.7,
       "popularity": 1744,
       "convenience": 6
-    }
+    },
+    "locality": "Medical College"
   },
   {
     "id": "ChIJL2mD7XW7BTsR1hJP__FqJPQ",
@@ -163,54 +169,8 @@
       "sentiment": 23.3,
       "popularity": 7799,
       "convenience": 10
-    }
-  },
-  {
-    "id": "ChIJR-rx9Aa_BTsR02HP96sAYnw",
-    "name": "Thanjavur Kitchen",
-    "score": 73.3,
-    "rating": 4.5,
-    "reviews": 2923,
-    "price_level": 2,
-    "address": "Technovalley, Kulathoor, Thiruvananthapuram, Kerala 695583, India",
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHokl2AdTZ0LwtOhmXcf5c5vDrGs3M0A7WEA9bd1yCUEzuAIJ5uV2YA_MZ01sXwj-5_6iJzx-me6yxiz2qg7WjjseGFd0g6dI5aA34VP1i5mCnc91y5t5GCi6y3UEb6uDqbmTg7SfnwZOe00b61y_tDoNx0wgRN47WAIA1xPvhetC-3og9wJJpft5t_YmmqpbZOdD2TjBnR2lxsS13m28MI4AIJS6Lf5aSxrpNC8Z0cmQvmo4DcHBVPn2Bs4MckTpvqE5Noo_xsb1zD8oY5Wis_yA7LOjSPljb0maBNenQmCQA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
-    "category": "restaurants",
-    "vibes": [
-      "Family",
-      "Authentic"
-    ],
-    "website": "https://instagram.com/thanjavurkitchen",
-    "phone": "099959 96682",
-    "map_url": null,
-    "metrics": {
-      "sentiment": 23.3,
-      "popularity": 2923,
-      "convenience": 8
-    }
-  },
-  {
-    "id": "ChIJpS6Xiqy_BTsRwIik-5vAdzU",
-    "name": "BLND Restobar",
-    "score": 72.4,
-    "rating": 4.5,
-    "reviews": 2082,
-    "price_level": 3,
-    "address": "SFS Cyber Palms Rd, near Nexa Motors, Karimanal, Kochuveli, Thiruvananthapuram, Kerala 695583, India",
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHo2oZq4sH4oWw51gVBVVVp5uwyYf7vZ9Q8dpEL0HLp662W3MfVdael5QsJ9-7QcTL9lXT6NIfbQ8qOxbdbo4gY63sxPepnAuq9t_BpfHu-pJGoCSsLuRv6zaF6ciQtZeEYKhjNSTC_yzLMjQKFUWNlpxiFF4zKoZ1hXn6XLzaePx50GPM1L63YIUdiuhEjW1FQpmoGl4ryX-OlwVzrPprSXduCYIjndJuT-2ZEW_rMTKuJ4fUEmJ88S9hCwDYtAtg2rP8yDL7_IZsJyLLET40K6Fu8DeYuOtQBW_4_OrHg8Zs3XuyfWxHeD2GxkUZkxQ7S67sDqwYytJxkapF67LtmEY9FauJOtJGsztcMzIkjZajqx42Ig5UwQQdGvARkQEK9np-SNiDRZQ-TJntFJsnQhhqXPpKT0LKhFU_0ea6IQ8GfX&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
-    "category": "restaurants",
-    "vibes": [
-      "Work Friendly",
-      "Family",
-      "Trendy"
-    ],
-    "website": "https://sfshomebridge.in/pyramid/restobar",
-    "phone": "096330 53222",
-    "map_url": null,
-    "metrics": {
-      "sentiment": 23.3,
-      "popularity": 2082,
-      "convenience": 8
-    }
+    },
+    "locality": "Statue"
   },
   {
     "id": "ChIJgVBn5q-7BTsR2TRz50WI2Gc",
@@ -235,31 +195,8 @@
       "sentiment": 21.0,
       "popularity": 1594,
       "convenience": 10
-    }
-  },
-  {
-    "id": "ChIJEYvwzNe7BTsRHGirI5Gjc6g",
-    "name": "Huddles Cafe",
-    "score": 71.7,
-    "rating": 4.4,
-    "reviews": 2683,
-    "price_level": 3,
-    "address": "TC25, First floor, Capitol building, 2850/3-4, Nalanda Ln, Nanthancodu, Thiruvananthapuram, Kerala 695003, India",
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHppzWCQbZcQ1TN6p6T5HiDnZp7BBd1ZBK82eRSCMGUH5l-AJheR04UgXHIiOzPhHpesMtAFt2bIiYDMxuc99iMYghAnjFEoBd5PyHX6JZ8fGyEts17uI2XN9SQSotdyfF34cFefN25csXUkOLXKtE1zLJJtnbIjwWt-765426bG13JFIejN5oCmDYn2yC_jn2PasRG0iwpDZEEi5gXbdafbEwTjAO8SetoQLX2_Y6NkKVtp8ho-WmS2CoUuMymf1vH7PoZKFeLg8BPScubUn8LkyWjfHXmAIgggsOLXdGqDnw&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
-    "category": "restaurants",
-    "vibes": [
-      "Romantic",
-      "Family",
-      "Trendy"
-    ],
-    "website": "https://huddlescafe.com/",
-    "phone": "081291 21007",
-    "map_url": null,
-    "metrics": {
-      "sentiment": 21.0,
-      "popularity": 2683,
-      "convenience": 10
-    }
+    },
+    "locality": "Statue"
   },
   {
     "id": "ChIJv_b786-7BTsRsNFkQc8BuBo",
@@ -281,7 +218,8 @@
       "sentiment": 21.0,
       "popularity": 2136,
       "convenience": 10
-    }
+    },
+    "locality": "Ambalamukku"
   },
   {
     "id": "ChIJ5fArC5m7BTsRH81SfcFyNL8",
@@ -306,7 +244,8 @@
       "sentiment": 21.0,
       "popularity": 2044,
       "convenience": 8
-    }
+    },
+    "locality": "Vazhuthacaud"
   },
   {
     "id": "ChIJJ3ihytm7BTsR3oJaX65B--g",
@@ -330,7 +269,8 @@
       "sentiment": 18.7,
       "popularity": 3478,
       "convenience": 8
-    }
+    },
+    "locality": "Kowdiar"
   },
   {
     "id": "ChIJj2PWi9i7BTsRjZvdcHUcyFE",
@@ -352,7 +292,8 @@
       "sentiment": 18.7,
       "popularity": 2170,
       "convenience": 8
-    }
+    },
+    "locality": "Sasthamangalam"
   },
   {
     "id": "ChIJofE3hri7BTsRAIPxl2Wb8kU",
@@ -376,7 +317,8 @@
       "sentiment": 14.0,
       "popularity": 31077,
       "convenience": 10
-    }
+    },
+    "locality": "Statue"
   },
   {
     "id": "ChIJ_7zPKsy_BTsRTSAC6hXw574",
@@ -398,7 +340,8 @@
       "sentiment": 14.0,
       "popularity": 10437,
       "convenience": 10
-    }
+    },
+    "locality": "Kazhakuttom"
   },
   {
     "id": "ChIJYXR1S1m5BTsR8EpNyZe6-vg",
@@ -423,7 +366,8 @@
       "sentiment": 16.3,
       "popularity": 16222,
       "convenience": 8
-    }
+    },
+    "locality": "Kesavadasapuram"
   },
   {
     "id": "ChIJA22n7tGlBTsRvSOhG7bYAH0",
@@ -447,32 +391,8 @@
       "sentiment": 11.7,
       "popularity": 3044,
       "convenience": 10
-    }
-  },
-  {
-    "id": "ChIJV1Lgd-K_BTsRYfUrJrp4zUY",
-    "name": "Terrace By Makkawao",
-    "score": 61.6,
-    "rating": 4.1,
-    "reviews": 6606,
-    "price_level": 3,
-    "address": "7th Floor, Asiatic Business Center, Attinkuzhy Rd, near Toyota Showroom, Kazhakkoottam, Thiruvananthapuram, Kerala 695583, India",
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqVwrAkkb-GgpQvTug-wPEftWQnd1vSOXPoebGe_e0k00p3alGNoTsXPi-Dj13g5mnGJtQQ9HrYHDQo2EPvoS8YwCBqECtYi6sfjvY_YIEw4vYcJ_xvafx4Eb7scrSGGwzI20EmjEz7zVwdbT7ZcFqbMQYVHzDZQ-fzZWS4AIf-vbLbEj_jCWTDpCjIxH5qcIl-rKlL0YWLNFiuVZl_ymGBHr0oZOlXzclTm6Drd6CqafeJc_zrSeYDxFowcLT2EwxVCwB_HSAgN8SbPDRaOEpiySp9xG_wEdzSyQq4c9UTEuWQ69HpnzGgcVh-oikvEMpsK_0KtJSUmhhKF9F2ImL1ydIekDM_WSRAh2-W-b4MjibTPCCp-QnvTacn7hVvIDXQuc6p38GBtyCRZ8aeshBlrzuFk5PhRzlvjE6WL8YdN7tL&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
-    "category": "restaurants",
-    "vibes": [
-      "Romantic",
-      "Family",
-      "Trendy",
-      "Authentic"
-    ],
-    "website": "https://m.facebook.com/terracemakkawao/",
-    "phone": "075590 06605",
-    "map_url": null,
-    "metrics": {
-      "sentiment": 14.0,
-      "popularity": 6606,
-      "convenience": 8
-    }
+    },
+    "locality": "Kovalam"
   },
   {
     "id": "ChIJWTuAHGO7BTsR1RGZvDn1q5E",
@@ -496,7 +416,8 @@
       "sentiment": 14.0,
       "popularity": 4268,
       "convenience": 8
-    }
+    },
+    "locality": "Kowdiar"
   },
   {
     "id": "ChIJO7J8jte7BTsRMTYgCWwiul0",
@@ -521,7 +442,8 @@
       "sentiment": 14.0,
       "popularity": 2988,
       "convenience": 8
-    }
+    },
+    "locality": "Pattom"
   },
   {
     "id": "ChIJ09tElOS7BTsRyC5Ae_rPOj0",
@@ -545,7 +467,8 @@
       "sentiment": 11.7,
       "popularity": 17612,
       "convenience": 8
-    }
+    },
+    "locality": "Statue"
   },
   {
     "id": "ChIJZ13V1aW7BTsRHr1XJDaJkTI",
@@ -568,7 +491,108 @@
       "sentiment": 11.7,
       "popularity": 13845,
       "convenience": 8
-    }
+    },
+    "locality": "Enchakkal"
+  },
+  {
+    "id": "ChIJR-rx9Aa_BTsR02HP96sAYnw",
+    "name": "Thanjavur Kitchen",
+    "score": 73.3,
+    "rating": 4.5,
+    "reviews": 2923,
+    "price_level": 2,
+    "address": "Technovalley, Kulathoor, Thiruvananthapuram, Kerala 695583, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHokl2AdTZ0LwtOhmXcf5c5vDrGs3M0A7WEA9bd1yCUEzuAIJ5uV2YA_MZ01sXwj-5_6iJzx-me6yxiz2qg7WjjseGFd0g6dI5aA34VP1i5mCnc91y5t5GCi6y3UEb6uDqbmTg7SfnwZOe00b61y_tDoNx0wgRN47WAIA1xPvhetC-3og9wJJpft5t_YmmqpbZOdD2TjBnR2lxsS13m28MI4AIJS6Lf5aSxrpNC8Z0cmQvmo4DcHBVPn2Bs4MckTpvqE5Noo_xsb1zD8oY5Wis_yA7LOjSPljb0maBNenQmCQA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Family",
+      "Authentic"
+    ],
+    "website": "https://instagram.com/thanjavurkitchen",
+    "phone": "099959 96682",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 23.3,
+      "popularity": 2923,
+      "convenience": 8
+    },
+    "locality": null
+  },
+  {
+    "id": "ChIJpS6Xiqy_BTsRwIik-5vAdzU",
+    "name": "BLND Restobar",
+    "score": 72.4,
+    "rating": 4.5,
+    "reviews": 2082,
+    "price_level": 3,
+    "address": "SFS Cyber Palms Rd, near Nexa Motors, Karimanal, Kochuveli, Thiruvananthapuram, Kerala 695583, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHo2oZq4sH4oWw51gVBVVVp5uwyYf7vZ9Q8dpEL0HLp662W3MfVdael5QsJ9-7QcTL9lXT6NIfbQ8qOxbdbo4gY63sxPepnAuq9t_BpfHu-pJGoCSsLuRv6zaF6ciQtZeEYKhjNSTC_yzLMjQKFUWNlpxiFF4zKoZ1hXn6XLzaePx50GPM1L63YIUdiuhEjW1FQpmoGl4ryX-OlwVzrPprSXduCYIjndJuT-2ZEW_rMTKuJ4fUEmJ88S9hCwDYtAtg2rP8yDL7_IZsJyLLET40K6Fu8DeYuOtQBW_4_OrHg8Zs3XuyfWxHeD2GxkUZkxQ7S67sDqwYytJxkapF67LtmEY9FauJOtJGsztcMzIkjZajqx42Ig5UwQQdGvARkQEK9np-SNiDRZQ-TJntFJsnQhhqXPpKT0LKhFU_0ea6IQ8GfX&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Work Friendly",
+      "Family",
+      "Trendy"
+    ],
+    "website": "https://sfshomebridge.in/pyramid/restobar",
+    "phone": "096330 53222",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 23.3,
+      "popularity": 2082,
+      "convenience": 8
+    },
+    "locality": null
+  },
+  {
+    "id": "ChIJEYvwzNe7BTsRHGirI5Gjc6g",
+    "name": "Huddles Cafe",
+    "score": 71.7,
+    "rating": 4.4,
+    "reviews": 2683,
+    "price_level": 3,
+    "address": "TC25, First floor, Capitol building, 2850/3-4, Nalanda Ln, Nanthancodu, Thiruvananthapuram, Kerala 695003, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHppzWCQbZcQ1TN6p6T5HiDnZp7BBd1ZBK82eRSCMGUH5l-AJheR04UgXHIiOzPhHpesMtAFt2bIiYDMxuc99iMYghAnjFEoBd5PyHX6JZ8fGyEts17uI2XN9SQSotdyfF34cFefN25csXUkOLXKtE1zLJJtnbIjwWt-765426bG13JFIejN5oCmDYn2yC_jn2PasRG0iwpDZEEi5gXbdafbEwTjAO8SetoQLX2_Y6NkKVtp8ho-WmS2CoUuMymf1vH7PoZKFeLg8BPScubUn8LkyWjfHXmAIgggsOLXdGqDnw&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Romantic",
+      "Family",
+      "Trendy"
+    ],
+    "website": "https://huddlescafe.com/",
+    "phone": "081291 21007",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 21.0,
+      "popularity": 2683,
+      "convenience": 10
+    },
+    "locality": null
+  },
+  {
+    "id": "ChIJV1Lgd-K_BTsRYfUrJrp4zUY",
+    "name": "Terrace By Makkawao",
+    "score": 61.6,
+    "rating": 4.1,
+    "reviews": 6606,
+    "price_level": 3,
+    "address": "7th Floor, Asiatic Business Center, Attinkuzhy Rd, near Toyota Showroom, Kazhakkoottam, Thiruvananthapuram, Kerala 695583, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqVwrAkkb-GgpQvTug-wPEftWQnd1vSOXPoebGe_e0k00p3alGNoTsXPi-Dj13g5mnGJtQQ9HrYHDQo2EPvoS8YwCBqECtYi6sfjvY_YIEw4vYcJ_xvafx4Eb7scrSGGwzI20EmjEz7zVwdbT7ZcFqbMQYVHzDZQ-fzZWS4AIf-vbLbEj_jCWTDpCjIxH5qcIl-rKlL0YWLNFiuVZl_ymGBHr0oZOlXzclTm6Drd6CqafeJc_zrSeYDxFowcLT2EwxVCwB_HSAgN8SbPDRaOEpiySp9xG_wEdzSyQq4c9UTEuWQ69HpnzGgcVh-oikvEMpsK_0KtJSUmhhKF9F2ImL1ydIekDM_WSRAh2-W-b4MjibTPCCp-QnvTacn7hVvIDXQuc6p38GBtyCRZ8aeshBlrzuFk5PhRzlvjE6WL8YdN7tL&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "restaurants",
+    "vibes": [
+      "Romantic",
+      "Family",
+      "Trendy",
+      "Authentic"
+    ],
+    "website": "https://m.facebook.com/terracemakkawao/",
+    "phone": "075590 06605",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 14.0,
+      "popularity": 6606,
+      "convenience": 8
+    },
+    "locality": null
   },
   {
     "id": "ChIJ8_mGuJi7BTsRK02DFinBd3Y",
@@ -592,6 +616,7 @@
       "sentiment": 14.0,
       "popularity": 2212,
       "convenience": 4
-    }
+    },
+    "locality": null
   }
 ]
