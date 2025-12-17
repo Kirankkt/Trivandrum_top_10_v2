@@ -77,9 +77,9 @@ async function renderDiningView(type) {
             }).sort((a, b) => b.score - a.score);
         }
 
-        const allSpots = data.slice(0, 20);
+        const allSpots = data;  // Show all items (no longer limited to 20)
         const top10 = allSpots.slice(0, 10);
-        const remaining = allSpots.slice(10, 20);
+        const remaining = allSpots.slice(10);  // Show all remaining items after top 10
 
         // Customized ranking indicator (inline, subtle)
         const customizedIndicator = isCustomized ? `
@@ -109,7 +109,7 @@ async function renderDiningView(type) {
                 
                 ${remaining.length > 0 ? `
                     <div class="show-more-container">
-                        <button class="btn-show-more" id="show-more-btn">Show More (11-20) ↓</button>
+                        <button class="btn-show-more" id="show-more-btn">Show More (11-${allSpots.length}) ↓</button>
                     </div>
                     
                     <div class="dining-grid hidden-spots" id="hidden-spots" style="display: none;">
