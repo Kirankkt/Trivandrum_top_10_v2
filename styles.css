@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Trivandrum Top 10 - TripAdvisor-Inspired Design System
  * Clean, classic, professional interface
  */
@@ -1546,7 +1546,7 @@ main {
 }
 
 .sub-category li::before {
-  content: '→';
+  content: 'â†’';
   position: absolute;
   left: 0;
   color: var(--color-primary);
@@ -2271,7 +2271,7 @@ footer .small {
 }
 
 .category-card.active::after {
-  content: '✓';
+  content: 'âœ“';
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -5835,4 +5835,23 @@ footer .small {
   .nearby-grid {
     grid-template-columns: 1fr;
   }
+/* Interactive Map Tooltips */
+.interactive-tooltip {
+    pointer-events: auto !important;
+    cursor: default;
+    padding: 0 !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+    background: white !important;
+    overflow: hidden !important;
+}
+
+.interactive-tooltip::before {
+    display: none !important;
+}
+
+.interactive-tooltip button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
 }

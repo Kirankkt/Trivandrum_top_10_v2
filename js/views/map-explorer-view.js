@@ -319,17 +319,25 @@ async function addCategoryToMap(category) {
                 entityId: entityId // Store ID for precise matching
             });
 
-            // Different popup for localities vs other entities
-            if (category === 'localities') {
-                marker.bindPopup(createLocalityPopup(entity), { maxWidth: 280 });
-            } else {
-                marker.bindPopup(createEntityPopup(entity, category), { maxWidth: 250 });
-            }
+            // Setup content for hover and click
+            const content = category === 'localities' ? createLocalityPopup(entity) : createEntityPopup(entity, category);
+
+            // Use Interactive Tooltips for hover (more robust than popups)
+            marker.bindTooltip(content, {
+                permanent: false,
+                direction: 'top',
+                className: 'interactive-tooltip',
+                interactive: true,
+                offset: [0, -10],
+                opacity: 1.0
+            });
+
+            // Keep the popup as a fallback for click
+            marker.bindPopup(content, { maxWidth: 280 });
 
             // Hover effects
             marker.on('mouseover', function () {
                 this.setIcon(createMarkerIcon(category, 'large'));
-                this.openPopup(); // Open popup immediately on hover
             });
             marker.on('mouseout', function () {
                 this.setIcon(createMarkerIcon(category));
