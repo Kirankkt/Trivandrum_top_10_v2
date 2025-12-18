@@ -321,54 +321,26 @@ async function addCategoryToMap(category) {
             // Setup content for hover and click
             const content = category === 'localities' ? createLocalityPopup(entity) : createEntityPopup(entity, category);
 
-            // Use popup for both hover and click - more reliable for interactive content
-            marker.bindPopup(content, {
-                maxWidth: 280,
-                className: 'interactive-popup',
-                closeButton: true,
-                autoClose: false,  // Don't auto-close when another popup opens
-                closeOnClick: false // Don't close when clicking map
+            // Use Standard Interactive Tooltips for hover
+            // Now that clustering is disabled, this will work perfectly for all markers
+            marker.bindTooltip(content, {
+                permanent: false,     // Only show on hover
+                direction: 'top',     // Appear above marker
+                className: 'interactive-tooltip',
+                interactive: true,    // Allow clicking buttons inside
+                offset: [0, -10],
+                opacity: 1.0
             });
 
-            // Track hover state to prevent premature closing
-            let isHoveringMarker = false;
-            let isHoveringPopup = false;
-            let closeTimeout;
+            // Fallback: Click also opens the content as a popup
+            marker.bindPopup(content, { maxWidth: 280 });
 
-            const tryClosePopup = () => {
-                clearTimeout(closeTimeout);
-                closeTimeout = setTimeout(() => {
-                    if (!isHoveringMarker && !isHoveringPopup) {
-                        marker.closePopup();
-                    }
-                }, 200);
-            };
-
-            // Open popup on hover for quick preview
+            // Visual feedback on hover
             marker.on('mouseover', function () {
-                isHoveringMarker = true;
-                clearTimeout(closeTimeout);
-                this.openPopup();
+                this.setIcon(createMarkerIcon(category, 'large'));
             });
-
             marker.on('mouseout', function () {
-                isHoveringMarker = false;
-                tryClosePopup();
-            });
-
-            // Add event listeners to popup when it opens
-            marker.on('popupopen', function (e) {
-                const popupEl = e.popup._container;
-                if (popupEl) {
-                    popupEl.addEventListener('mouseenter', () => {
-                        isHoveringPopup = true;
-                        clearTimeout(closeTimeout);
-                    });
-                    popupEl.addEventListener('mouseleave', () => {
-                        isHoveringPopup = false;
-                        tryClosePopup();
-                    });
-                }
+                this.setIcon(createMarkerIcon(category));
             });
 
             markers.push(marker);
