@@ -1,187 +1,272 @@
-// Enhanced Map Explorer - City-wide map with all entity categories
-// Allows category toggling, shows spatial clustering, links to detail views
+// Enhanced Map Explorer - Locality-centric city map
+// Shows localities with nearby facilities, proper navigation to detail pages
 
 /**
- * Category configurations for map markers
+ * Category configurations - distinct colors, no similar shades
  */
 const MAP_CATEGORIES = {
     localities: {
         label: 'Localities',
         icon: '🏘️',
-        color: '#00aa6c',
-        dataFile: null, // Loaded via loadRankings()
+        color: '#2563eb', // Blue - distinct from others
+        dataFile: null,
         detailRoute: '/locality/'
     },
     restaurants: {
         label: 'Restaurants',
         icon: '🍽️',
-        color: '#ff6b6b',
+        color: '#dc2626', // Red
         dataFile: 'data/restaurants.json',
         detailRoute: '/entity/restaurants/'
     },
     cafes: {
         label: 'Cafes',
         icon: '☕',
-        color: '#4ecdc4',
+        color: '#7c3aed', // Purple
         dataFile: 'data/cafes.json',
         detailRoute: '/entity/cafes/'
     },
     hotels: {
         label: 'Hotels',
         icon: '🏨',
-        color: '#ffd93d',
+        color: '#ea580c', // Orange
         dataFile: 'data/hotels.json',
         detailRoute: '/entity/hotels/'
     },
     malls: {
         label: 'Malls',
         icon: '🏬',
-        color: '#8b5cf6',
+        color: '#0891b2', // Cyan
         dataFile: 'data/malls.json',
         detailRoute: '/entity/malls/'
     },
     museums: {
         label: 'Museums',
         icon: '🏛️',
-        color: '#0ea5e9',
+        color: '#4f46e5', // Indigo
         dataFile: 'data/museums.json',
         detailRoute: '/entity/museums/'
     },
     religious_sites: {
         label: 'Religious Sites',
         icon: '🛕',
-        color: '#ef4444',
+        color: '#be185d', // Pink
         dataFile: 'data/religious_sites.json',
         detailRoute: '/entity/religious_sites/'
     },
     healthcare: {
         label: 'Healthcare',
         icon: '🏥',
-        color: '#10b981',
+        color: '#059669', // Emerald (distinct green)
         dataFile: 'data/healthcare.json',
         detailRoute: '/entity/healthcare/'
     },
     education: {
         label: 'Education',
         icon: '🎓',
-        color: '#6366f1',
+        color: '#ca8a04', // Yellow/Gold
         dataFile: 'data/education.json',
         detailRoute: '/entity/education/'
     },
     banking: {
         label: 'Banking',
         icon: '🏦',
-        color: '#14b8a6',
+        color: '#64748b', // Slate gray
         dataFile: 'data/banking.json',
         detailRoute: '/entity/banking/'
     }
 };
 
-// Global state for map
+// Global state
 let mapInstance = null;
 let categoryLayers = {};
 let activeCategories = new Set(['localities']);
-let clusteringEnabled = true; // Enable spatial clustering by default
+let allEntityData = {}; // Cache for entity data
+let localityFacilities = {}; // Facilities near each locality
 
 /**
- * Create marker icon for category
+ * Calculate distance between two coordinates (km)
  */
-function createCategoryMarker(category, rank = null, highlighted = false) {
-    const config = MAP_CATEGORIES[category];
-    const size = highlighted ? 44 : (rank && rank <= 10 ? 32 : 28);
-    const fontSize = highlighted ? '20px' : (rank && rank <= 10 ? '14px' : '12px');
+function haversineDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371;
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+              Math.sin(dLon/2) * Math.sin(dLon/2);
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
 
-    let content = config.icon;
-    if (rank && category === 'localities') {
-        content = `#${rank}`;
-    }
+/**
+ * Create marker icon - clean, no rankings
+ */
+function createMarkerIcon(category, size = 'normal') {
+    const config = MAP_CATEGORIES[category];
+    const dimensions = size === 'large' ? 40 : size === 'small' ? 24 : 32;
+    const fontSize = size === 'large' ? '18px' : size === 'small' ? '12px' : '15px';
 
     return L.divIcon({
         className: `map-marker-${category}`,
         html: `<div style="
             background: ${config.color};
             color: white;
-            width: ${size}px;
-            height: ${size}px;
+            width: ${dimensions}px;
+            height: ${dimensions}px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: ${fontSize};
-            font-weight: ${rank ? 'bold' : 'normal'};
-            border: ${highlighted ? '4px' : '2px'} solid white;
-            box-shadow: ${highlighted ? '0 4px 16px rgba(0,0,0,0.4)' : '0 2px 6px rgba(0,0,0,0.3)'};
+            border: 2px solid white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
             cursor: pointer;
             transition: transform 0.2s;
-        ">${content}</div>`,
-        iconSize: [size, size],
-        iconAnchor: [size/2, size/2]
+        ">${config.icon}</div>`,
+        iconSize: [dimensions, dimensions],
+        iconAnchor: [dimensions/2, dimensions/2]
     });
 }
 
 /**
- * Create popup content for entity
+ * Navigate to entity detail page
  */
-function createPopupContent(entity, category, rank = null) {
+function navigateToEntity(category, entityId) {
+    if (category === 'localities') {
+        window.location.hash = `/locality/${encodeURIComponent(entityId)}`;
+    } else {
+        window.location.hash = `/entity/${category}/${encodeURIComponent(entityId)}`;
+    }
+}
+
+/**
+ * Create popup with clickable link
+ */
+function createEntityPopup(entity, category, rank = null) {
     const config = MAP_CATEGORIES[category];
-    const rankText = rank ? `<span style="color: ${config.color}; font-weight: bold;">Rank #${rank}</span>` : '';
 
-    const detailUrl = category === 'localities'
-        ? `#/locality/${encodeURIComponent(entity.name)}`
-        : `#/entity/${category}/${entity.id}`;
-
-    let scoreDisplay = '';
-    if (entity.overall_score) {
-        scoreDisplay = `<div style="font-size: 20px; color: ${config.color}; font-weight: bold;">${entity.overall_score.toFixed(1)}/10</div>`;
-    } else if (entity.score) {
-        scoreDisplay = `<div style="font-size: 18px; color: ${config.color}; font-weight: bold;">Score: ${entity.score}</div>`;
-    }
-
-    let ratingDisplay = '';
+    let ratingHtml = '';
     if (entity.rating) {
-        ratingDisplay = `<div style="font-size: 14px; margin: 4px 0;">${entity.rating.toFixed(1)} ⭐ (${entity.reviews?.toLocaleString() || 0} reviews)</div>`;
+        ratingHtml = `<div style="font-size: 13px; margin: 4px 0;">${entity.rating.toFixed(1)} ⭐ ${entity.reviews ? `(${entity.reviews.toLocaleString()})` : ''}</div>`;
     }
+
+    let scoreHtml = '';
+    if (entity.overall_score) {
+        scoreHtml = `<div style="font-size: 16px; color: ${config.color}; font-weight: bold;">${entity.overall_score.toFixed(1)}/10</div>`;
+    } else if (entity.score) {
+        scoreHtml = `<div style="font-size: 14px; color: ${config.color}; font-weight: bold;">Score: ${entity.score}</div>`;
+    }
+
+    const entityId = category === 'localities' ? entity.name : entity.id;
 
     return `
         <div style="text-align: center; min-width: 180px; padding: 8px;">
             <div style="font-size: 24px; margin-bottom: 4px;">${config.icon}</div>
-            <strong style="font-size: 15px; display: block; margin-bottom: 4px;">${entity.name}</strong>
-            ${rankText}
-            ${scoreDisplay}
-            ${ratingDisplay}
-            ${entity.locality ? `<div style="font-size: 12px; color: #666; margin: 4px 0;">📍 ${entity.locality}</div>` : ''}
-            <a href="${detailUrl}"
-               style="display: inline-block; margin-top: 8px; padding: 6px 12px; background: ${config.color}; color: white; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 500;">
+            <strong style="font-size: 14px; display: block; margin-bottom: 4px;">${entity.name}</strong>
+            ${scoreHtml}
+            ${ratingHtml}
+            ${entity.locality && category !== 'localities' ? `<div style="font-size: 12px; color: #666;">📍 ${entity.locality}</div>` : ''}
+            <button onclick="navigateToEntity('${category}', '${entityId.replace(/'/g, "\\'")}')"
+                style="display: inline-block; margin-top: 8px; padding: 8px 16px; background: ${config.color}; color: white; border: none; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer;">
                 View Details →
-            </a>
+            </button>
         </div>
     `;
 }
 
 /**
- * Load entities for a category
+ * Create locality popup showing nearby facilities
  */
-async function loadCategoryData(category) {
-    const config = MAP_CATEGORIES[category];
+function createLocalityPopup(locality) {
+    const facilities = localityFacilities[locality.name] || {};
+    const config = MAP_CATEGORIES.localities;
 
-    if (category === 'localities') {
-        const rankingsData = await loadRankings();
-        return rankingsData?.all_rankings || [];
-    }
+    // Build facility summary
+    let facilitiesHtml = '<div style="display: flex; flex-wrap: wrap; gap: 4px; margin: 8px 0; justify-content: center;">';
+    const categoryOrder = ['restaurants', 'cafes', 'hotels', 'healthcare', 'education', 'malls', 'museums', 'religious_sites', 'banking'];
 
-    try {
-        const response = await fetch(config.dataFile);
-        if (response.ok) {
-            return await response.json();
+    for (const cat of categoryOrder) {
+        const count = facilities[cat]?.length || 0;
+        if (count > 0) {
+            const catConfig = MAP_CATEGORIES[cat];
+            facilitiesHtml += `<span style="background: ${catConfig.color}; color: white; padding: 2px 6px; border-radius: 10px; font-size: 11px;" title="${count} ${catConfig.label}">${catConfig.icon} ${count}</span>`;
         }
-    } catch (e) {
-        console.warn(`Failed to load ${category}:`, e);
     }
-    return [];
+    facilitiesHtml += '</div>';
+
+    return `
+        <div style="text-align: center; min-width: 200px; padding: 8px;">
+            <div style="font-size: 24px; margin-bottom: 4px;">🏘️</div>
+            <strong style="font-size: 15px; display: block; margin-bottom: 4px;">${locality.name}</strong>
+            ${locality.overall_score ? `<div style="font-size: 18px; color: ${config.color}; font-weight: bold;">${locality.overall_score.toFixed(1)}/10</div>` : ''}
+            <div style="font-size: 12px; color: #666; margin: 4px 0;">Nearby Facilities:</div>
+            ${facilitiesHtml}
+            <button onclick="navigateToEntity('localities', '${locality.name.replace(/'/g, "\\'")}')"
+                style="display: inline-block; margin-top: 8px; padding: 8px 16px; background: ${config.color}; color: white; border: none; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer;">
+                Explore Locality →
+            </button>
+        </div>
+    `;
 }
 
 /**
- * Add markers for a category to the map
+ * Load all entity data and compute locality facilities
+ */
+async function loadAllData() {
+    // Load localities first
+    const rankingsData = await loadRankings();
+    allEntityData.localities = rankingsData?.all_rankings || [];
+
+    // Load all other categories
+    for (const [category, config] of Object.entries(MAP_CATEGORIES)) {
+        if (category === 'localities' || !config.dataFile) continue;
+
+        try {
+            const response = await fetch(config.dataFile);
+            if (response.ok) {
+                allEntityData[category] = await response.json();
+            }
+        } catch (e) {
+            console.warn(`Failed to load ${category}:`, e);
+            allEntityData[category] = [];
+        }
+    }
+
+    // Compute facilities near each locality
+    computeLocalityFacilities();
+}
+
+/**
+ * Compute what facilities are near each locality (within 3km)
+ */
+function computeLocalityFacilities() {
+    localityFacilities = {};
+
+    for (const locality of allEntityData.localities || []) {
+        const lat = locality.latitude || locality.data?.latitude;
+        const lng = locality.longitude || locality.data?.longitude;
+        if (!lat || !lng) continue;
+
+        localityFacilities[locality.name] = {};
+
+        for (const [category, entities] of Object.entries(allEntityData)) {
+            if (category === 'localities') continue;
+
+            const nearby = (entities || []).filter(entity => {
+                const eLat = entity.location?.lat;
+                const eLng = entity.location?.lng;
+                if (!eLat || !eLng) return false;
+                return haversineDistance(lat, lng, eLat, eLng) <= 3;
+            });
+
+            if (nearby.length > 0) {
+                localityFacilities[locality.name][category] = nearby;
+            }
+        }
+    }
+}
+
+/**
+ * Add category markers to map
  */
 async function addCategoryToMap(category) {
     if (categoryLayers[category]) {
@@ -189,11 +274,11 @@ async function addCategoryToMap(category) {
         return;
     }
 
-    const data = await loadCategoryData(category);
+    const data = allEntityData[category] || [];
     const markers = [];
     const config = MAP_CATEGORIES[category];
 
-    data.forEach((entity, index) => {
+    data.forEach((entity) => {
         let lat, lng;
 
         if (category === 'localities') {
@@ -205,60 +290,60 @@ async function addCategoryToMap(category) {
         }
 
         if (lat && lng) {
-            const rank = index + 1;
             const marker = L.marker([lat, lng], {
-                icon: createCategoryMarker(category, category === 'localities' ? rank : null)
+                icon: createMarkerIcon(category)
             });
 
-            marker.bindPopup(createPopupContent(entity, category, rank));
+            // Different popup for localities vs other entities
+            if (category === 'localities') {
+                marker.bindPopup(createLocalityPopup(entity), { maxWidth: 280 });
+            } else {
+                marker.bindPopup(createEntityPopup(entity, category), { maxWidth: 250 });
+            }
 
-            // Hover effect
+            // Hover effects
             marker.on('mouseover', function() {
-                this.setIcon(createCategoryMarker(category, category === 'localities' ? rank : null, true));
+                this.setIcon(createMarkerIcon(category, 'large'));
             });
             marker.on('mouseout', function() {
-                this.setIcon(createCategoryMarker(category, category === 'localities' ? rank : null, false));
+                this.setIcon(createMarkerIcon(category));
             });
 
             markers.push(marker);
         }
     });
 
-    // Use MarkerClusterGroup for spatial clustering (except localities which show rankings)
-    if (clusteringEnabled && category !== 'localities' && typeof L.markerClusterGroup === 'function') {
-        const clusterGroup = L.markerClusterGroup({
-            maxClusterRadius: 50,
+    // Use clustering for categories with many items (except localities)
+    if (category !== 'localities' && markers.length > 15 && typeof L.markerClusterGroup === 'function') {
+        const cluster = L.markerClusterGroup({
+            maxClusterRadius: 40,
             spiderfyOnMaxZoom: true,
-            showCoverageOnHover: true,
+            showCoverageOnHover: false,
             zoomToBoundsOnClick: true,
             iconCreateFunction: function(cluster) {
                 const count = cluster.getChildCount();
-                let size = 'small';
-                if (count > 10) size = 'medium';
-                if (count > 25) size = 'large';
-
                 return L.divIcon({
                     html: `<div style="
                         background: ${config.color};
                         color: white;
-                        width: ${size === 'large' ? '48px' : size === 'medium' ? '40px' : '32px'};
-                        height: ${size === 'large' ? '48px' : size === 'medium' ? '40px' : '32px'};
+                        width: 36px;
+                        height: 36px;
                         border-radius: 50%;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         font-weight: bold;
-                        font-size: ${size === 'large' ? '16px' : size === 'medium' ? '14px' : '12px'};
-                        border: 3px solid white;
-                        box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+                        font-size: 13px;
+                        border: 2px solid white;
+                        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
                     ">${count}</div>`,
-                    className: `marker-cluster marker-cluster-${category}`,
-                    iconSize: L.point(size === 'large' ? 48 : size === 'medium' ? 40 : 32, size === 'large' ? 48 : size === 'medium' ? 40 : 32)
+                    className: 'marker-cluster',
+                    iconSize: [36, 36]
                 });
             }
         });
-        markers.forEach(m => clusterGroup.addLayer(m));
-        categoryLayers[category] = clusterGroup;
+        markers.forEach(m => cluster.addLayer(m));
+        categoryLayers[category] = cluster;
     } else {
         categoryLayers[category] = L.layerGroup(markers);
     }
@@ -267,7 +352,7 @@ async function addCategoryToMap(category) {
 }
 
 /**
- * Remove category markers from map
+ * Remove category from map
  */
 function removeCategoryFromMap(category) {
     if (categoryLayers[category]) {
@@ -276,7 +361,7 @@ function removeCategoryFromMap(category) {
 }
 
 /**
- * Toggle category visibility
+ * Toggle category
  */
 async function toggleCategory(category, enabled) {
     if (enabled) {
@@ -286,124 +371,101 @@ async function toggleCategory(category, enabled) {
         activeCategories.delete(category);
         removeCategoryFromMap(category);
     }
-    updateCategoryButtonStates();
+    updateUI();
 }
 
 /**
- * Update button active states
+ * Update UI elements
  */
-function updateCategoryButtonStates() {
+function updateUI() {
+    // Update toggle buttons
     document.querySelectorAll('.map-category-toggle').forEach(btn => {
-        const category = btn.dataset.category;
-        if (activeCategories.has(category)) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
+        const cat = btn.dataset.category;
+        btn.classList.toggle('active', activeCategories.has(cat));
     });
 
     // Update counter
     const counter = document.getElementById('active-layers-count');
-    if (counter) {
-        counter.textContent = activeCategories.size;
+    if (counter) counter.textContent = activeCategories.size;
+
+    // Update legend
+    const legendItems = document.getElementById('legend-items');
+    if (legendItems) {
+        let html = '';
+        for (const cat of activeCategories) {
+            const config = MAP_CATEGORIES[cat];
+            html += `
+                <div class="legend-item">
+                    <span class="legend-marker" style="background: ${config.color}">${config.icon}</span>
+                    <span class="legend-label">${config.label}</span>
+                </div>
+            `;
+        }
+        legendItems.innerHTML = html || '<div class="legend-empty">No layers active</div>';
     }
 }
 
 /**
- * Get category stats for legend
+ * Get mapped counts for each category
  */
-async function getCategoryStats() {
-    const stats = {};
-
-    for (const [category, config] of Object.entries(MAP_CATEGORIES)) {
-        const data = await loadCategoryData(category);
-        const withLocation = data.filter(e => {
-            if (category === 'localities') {
-                return e.latitude || e.data?.latitude;
-            }
-            return e.location;
-        });
-        stats[category] = {
-            total: data.length,
-            mapped: withLocation.length,
-            label: config.label,
-            icon: config.icon,
-            color: config.color
-        };
+function getCategoryCounts() {
+    const counts = {};
+    for (const [category, data] of Object.entries(allEntityData)) {
+        if (category === 'localities') {
+            counts[category] = (data || []).filter(e => e.latitude || e.data?.latitude).length;
+        } else {
+            counts[category] = (data || []).filter(e => e.location?.lat).length;
+        }
     }
-
-    return stats;
+    return counts;
 }
 
 /**
- * Render enhanced map explorer
+ * Render the map explorer
  */
 async function renderMapExplorerView() {
     const app = document.getElementById('app');
 
-    // Parse URL params for highlighting
-    const urlParams = new URLSearchParams(window.location.hash.split('?')[1] || '');
-    const highlightId = urlParams.get('highlight');
-    const highlightCategory = urlParams.get('category');
+    app.innerHTML = '<div class="loading">Loading map data...</div>';
+
+    // Load all data first
+    await loadAllData();
+    const counts = getCategoryCounts();
 
     app.innerHTML = `
         <div class="map-explorer-page">
-            <!-- Map Controls Sidebar -->
             <div class="map-controls-sidebar">
                 <div class="map-controls-header">
                     <h2>🗺️ City Explorer</h2>
-                    <p class="map-controls-subtitle">Toggle categories to explore Trivandrum</p>
+                    <p class="map-controls-subtitle">Discover what's in each locality</p>
                 </div>
 
                 <div class="map-category-toggles">
                     <div class="category-section">
-                        <h4>Places to Live</h4>
+                        <h4>Localities</h4>
                         <button class="map-category-toggle active" data-category="localities" style="--toggle-color: ${MAP_CATEGORIES.localities.color}">
                             <span class="toggle-icon">${MAP_CATEGORIES.localities.icon}</span>
                             <span class="toggle-label">Localities</span>
-                            <span class="toggle-count" id="count-localities">-</span>
+                            <span class="toggle-count">${counts.localities || 0}</span>
                         </button>
                     </div>
 
                     <div class="category-section">
-                        <h4>Eat & Stay</h4>
+                        <h4>Dining & Stay</h4>
                         <button class="map-category-toggle" data-category="restaurants" style="--toggle-color: ${MAP_CATEGORIES.restaurants.color}">
                             <span class="toggle-icon">${MAP_CATEGORIES.restaurants.icon}</span>
                             <span class="toggle-label">Restaurants</span>
-                            <span class="toggle-count" id="count-restaurants">-</span>
+                            <span class="toggle-count">${counts.restaurants || 0}</span>
                         </button>
                         <button class="map-category-toggle" data-category="cafes" style="--toggle-color: ${MAP_CATEGORIES.cafes.color}">
                             <span class="toggle-icon">${MAP_CATEGORIES.cafes.icon}</span>
                             <span class="toggle-label">Cafes</span>
-                            <span class="toggle-count" id="count-cafes">-</span>
+                            <span class="toggle-count">${counts.cafes || 0}</span>
                         </button>
                         <button class="map-category-toggle" data-category="hotels" style="--toggle-color: ${MAP_CATEGORIES.hotels.color}">
                             <span class="toggle-icon">${MAP_CATEGORIES.hotels.icon}</span>
                             <span class="toggle-label">Hotels</span>
-                            <span class="toggle-count" id="count-hotels">-</span>
-                        </button>
-                    </div>
-
-                    <div class="category-section">
-                        <h4>Shop</h4>
-                        <button class="map-category-toggle" data-category="malls" style="--toggle-color: ${MAP_CATEGORIES.malls.color}">
-                            <span class="toggle-icon">${MAP_CATEGORIES.malls.icon}</span>
-                            <span class="toggle-label">Malls</span>
-                            <span class="toggle-count" id="count-malls">-</span>
-                        </button>
-                    </div>
-
-                    <div class="category-section">
-                        <h4>Culture</h4>
-                        <button class="map-category-toggle" data-category="museums" style="--toggle-color: ${MAP_CATEGORIES.museums.color}">
-                            <span class="toggle-icon">${MAP_CATEGORIES.museums.icon}</span>
-                            <span class="toggle-label">Museums</span>
-                            <span class="toggle-count" id="count-museums">-</span>
-                        </button>
-                        <button class="map-category-toggle" data-category="religious_sites" style="--toggle-color: ${MAP_CATEGORIES.religious_sites.color}">
-                            <span class="toggle-icon">${MAP_CATEGORIES.religious_sites.icon}</span>
-                            <span class="toggle-label">Religious Sites</span>
-                            <span class="toggle-count" id="count-religious_sites">-</span>
+                            <span class="toggle-count">${counts.hotels || 0}</span>
                         </button>
                     </div>
 
@@ -412,17 +474,36 @@ async function renderMapExplorerView() {
                         <button class="map-category-toggle" data-category="healthcare" style="--toggle-color: ${MAP_CATEGORIES.healthcare.color}">
                             <span class="toggle-icon">${MAP_CATEGORIES.healthcare.icon}</span>
                             <span class="toggle-label">Healthcare</span>
-                            <span class="toggle-count" id="count-healthcare">-</span>
+                            <span class="toggle-count">${counts.healthcare || 0}</span>
                         </button>
                         <button class="map-category-toggle" data-category="education" style="--toggle-color: ${MAP_CATEGORIES.education.color}">
                             <span class="toggle-icon">${MAP_CATEGORIES.education.icon}</span>
                             <span class="toggle-label">Education</span>
-                            <span class="toggle-count" id="count-education">-</span>
+                            <span class="toggle-count">${counts.education || 0}</span>
                         </button>
                         <button class="map-category-toggle" data-category="banking" style="--toggle-color: ${MAP_CATEGORIES.banking.color}">
                             <span class="toggle-icon">${MAP_CATEGORIES.banking.icon}</span>
                             <span class="toggle-label">Banking</span>
-                            <span class="toggle-count" id="count-banking">-</span>
+                            <span class="toggle-count">${counts.banking || 0}</span>
+                        </button>
+                    </div>
+
+                    <div class="category-section">
+                        <h4>Shopping & Culture</h4>
+                        <button class="map-category-toggle" data-category="malls" style="--toggle-color: ${MAP_CATEGORIES.malls.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.malls.icon}</span>
+                            <span class="toggle-label">Malls</span>
+                            <span class="toggle-count">${counts.malls || 0}</span>
+                        </button>
+                        <button class="map-category-toggle" data-category="museums" style="--toggle-color: ${MAP_CATEGORIES.museums.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.museums.icon}</span>
+                            <span class="toggle-label">Museums</span>
+                            <span class="toggle-count">${counts.museums || 0}</span>
+                        </button>
+                        <button class="map-category-toggle" data-category="religious_sites" style="--toggle-color: ${MAP_CATEGORIES.religious_sites.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.religious_sites.icon}</span>
+                            <span class="toggle-label">Religious Sites</span>
+                            <span class="toggle-count">${counts.religious_sites || 0}</span>
                         </button>
                     </div>
                 </div>
@@ -436,11 +517,8 @@ async function renderMapExplorerView() {
                 </div>
             </div>
 
-            <!-- Map Container -->
             <div class="map-main-container">
                 <div id="explorer-map"></div>
-
-                <!-- Map Legend -->
                 <div class="map-legend" id="map-legend">
                     <h4>Legend</h4>
                     <div class="legend-items" id="legend-items"></div>
@@ -449,7 +527,7 @@ async function renderMapExplorerView() {
         </div>
     `;
 
-    // Initialize Leaflet map
+    // Initialize map
     mapInstance = L.map('explorer-map').setView([8.5241, 76.9366], 12);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -461,98 +539,65 @@ async function renderMapExplorerView() {
     categoryLayers = {};
     activeCategories = new Set(['localities']);
 
-    // Load initial category (localities)
+    // Load localities
     await addCategoryToMap('localities');
+    updateUI();
 
-    // Load category stats and update counts
-    const stats = await getCategoryStats();
-    for (const [category, stat] of Object.entries(stats)) {
-        const countEl = document.getElementById(`count-${category}`);
-        if (countEl) {
-            countEl.textContent = stat.mapped;
-        }
-    }
-
-    // Update legend
-    updateLegend();
-
-    // Attach toggle handlers
-    document.querySelectorAll('.map-category-toggle').forEach(btn => {
-        btn.addEventListener('click', async () => {
-            const category = btn.dataset.category;
-            const isActive = activeCategories.has(category);
-            await toggleCategory(category, !isActive);
-            updateLegend();
-        });
-    });
-
-    // Show all button
-    document.getElementById('show-all-btn').addEventListener('click', async () => {
-        for (const category of Object.keys(MAP_CATEGORIES)) {
-            if (!activeCategories.has(category)) {
-                await toggleCategory(category, true);
-            }
-        }
-        updateLegend();
-    });
-
-    // Clear all button
-    document.getElementById('clear-btn').addEventListener('click', () => {
-        for (const category of [...activeCategories]) {
-            toggleCategory(category, false);
-        }
-        updateLegend();
-    });
-
-    // Highlight specific entity if provided in URL
-    if (highlightId && highlightCategory) {
-        await toggleCategory(highlightCategory, true);
-        // Find and highlight the marker
-        setTimeout(() => {
-            const layer = categoryLayers[highlightCategory];
-            if (layer) {
-                layer.eachLayer(marker => {
-                    const popup = marker.getPopup();
-                    if (popup && popup.getContent().includes(highlightId)) {
-                        mapInstance.setView(marker.getLatLng(), 15);
-                        marker.openPopup();
-                    }
-                });
-            }
-        }, 500);
-    }
-
-    // Fit bounds to localities
+    // Fit to localities bounds
     if (categoryLayers.localities) {
         const bounds = categoryLayers.localities.getBounds();
         if (bounds.isValid()) {
             mapInstance.fitBounds(bounds.pad(0.1));
         }
     }
-}
 
-/**
- * Update the map legend based on active categories
- */
-function updateLegend() {
-    const legendItems = document.getElementById('legend-items');
-    if (!legendItems) return;
+    // Event handlers
+    document.querySelectorAll('.map-category-toggle').forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const category = btn.dataset.category;
+            await toggleCategory(category, !activeCategories.has(category));
+        });
+    });
 
-    let html = '';
-    for (const category of activeCategories) {
-        const config = MAP_CATEGORIES[category];
-        html += `
-            <div class="legend-item">
-                <span class="legend-marker" style="background: ${config.color}">${config.icon}</span>
-                <span class="legend-label">${config.label}</span>
-            </div>
-        `;
+    document.getElementById('show-all-btn').addEventListener('click', async () => {
+        for (const category of Object.keys(MAP_CATEGORIES)) {
+            if (!activeCategories.has(category)) {
+                await toggleCategory(category, true);
+            }
+        }
+    });
+
+    document.getElementById('clear-btn').addEventListener('click', () => {
+        for (const category of [...activeCategories]) {
+            toggleCategory(category, false);
+        }
+    });
+
+    // Handle URL params for highlighting
+    const urlParams = new URLSearchParams(window.location.hash.split('?')[1] || '');
+    const highlightId = urlParams.get('highlight');
+    const highlightCategory = urlParams.get('category');
+
+    if (highlightId && highlightCategory) {
+        await toggleCategory(highlightCategory, true);
+        setTimeout(() => {
+            const layer = categoryLayers[highlightCategory];
+            if (layer) {
+                layer.eachLayer(marker => {
+                    if (marker.getPopup) {
+                        const popup = marker.getPopup();
+                        if (popup && popup.getContent().includes(highlightId)) {
+                            mapInstance.setView(marker.getLatLng(), 15);
+                            marker.openPopup();
+                        }
+                    }
+                });
+            }
+        }, 300);
     }
-
-    legendItems.innerHTML = html || '<div class="legend-empty">No layers active</div>';
 }
 
-// Override the old renderMapView with the new explorer
+// Alias for router
 function renderMapView() {
     renderMapExplorerView();
 }

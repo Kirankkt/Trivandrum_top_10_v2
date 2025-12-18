@@ -9,7 +9,7 @@ const ENTITY_CATEGORIES = {
     restaurants: {
         title: 'Restaurant',
         icon: '🍽️',
-        color: '#ff6b6b',
+        color: '#dc2626', // Red
         dataFile: 'data/restaurants.json',
         metrics: [
             { key: 'rating', label: 'Rating', format: 'rating' },
@@ -21,7 +21,7 @@ const ENTITY_CATEGORIES = {
     cafes: {
         title: 'Cafe',
         icon: '☕',
-        color: '#4ecdc4',
+        color: '#7c3aed', // Purple
         dataFile: 'data/cafes.json',
         metrics: [
             { key: 'rating', label: 'Rating', format: 'rating' },
@@ -33,7 +33,7 @@ const ENTITY_CATEGORIES = {
     hotels: {
         title: 'Hotel',
         icon: '🏨',
-        color: '#ffd93d',
+        color: '#ea580c', // Orange
         dataFile: 'data/hotels.json',
         metrics: [
             { key: 'rating', label: 'Rating', format: 'rating' },
@@ -45,7 +45,7 @@ const ENTITY_CATEGORIES = {
     malls: {
         title: 'Mall',
         icon: '🏬',
-        color: '#8b5cf6',
+        color: '#0891b2', // Cyan
         dataFile: 'data/malls.json',
         metrics: [
             { key: 'rating', label: 'Rating', format: 'rating' },
@@ -56,7 +56,7 @@ const ENTITY_CATEGORIES = {
     boutiques: {
         title: 'Boutique',
         icon: '👗',
-        color: '#ec4899',
+        color: '#ec4899', // Pink
         dataFile: 'data/boutiques.json',
         metrics: [
             { key: 'rating', label: 'Rating', format: 'rating' },
@@ -67,7 +67,7 @@ const ENTITY_CATEGORIES = {
     specialty_shops: {
         title: 'Specialty Shop',
         icon: '🛍️',
-        color: '#f59e0b',
+        color: '#f59e0b', // Amber
         dataFile: 'data/specialty_shops.json',
         metrics: [
             { key: 'rating', label: 'Rating', format: 'rating' },
@@ -78,7 +78,7 @@ const ENTITY_CATEGORIES = {
     museums: {
         title: 'Museum',
         icon: '🏛️',
-        color: '#0ea5e9',
+        color: '#4f46e5', // Indigo
         dataFile: 'data/museums.json',
         metrics: [
             { key: 'rating', label: 'Rating', format: 'rating' },
@@ -89,7 +89,7 @@ const ENTITY_CATEGORIES = {
     religious_sites: {
         title: 'Religious Site',
         icon: '🛕',
-        color: '#ef4444',
+        color: '#be185d', // Pink/Magenta
         dataFile: 'data/religious_sites.json',
         metrics: [
             { key: 'rating', label: 'Rating', format: 'rating' },
@@ -100,7 +100,7 @@ const ENTITY_CATEGORIES = {
     healthcare: {
         title: 'Healthcare',
         icon: '🏥',
-        color: '#10b981',
+        color: '#059669', // Emerald green
         dataFile: 'data/healthcare.json',
         metrics: [
             { key: 'rating', label: 'Rating', format: 'rating' },
@@ -111,7 +111,7 @@ const ENTITY_CATEGORIES = {
     education: {
         title: 'Education',
         icon: '🎓',
-        color: '#6366f1',
+        color: '#ca8a04', // Yellow/Gold
         dataFile: 'data/education.json',
         metrics: [
             { key: 'rating', label: 'Rating', format: 'rating' },
@@ -122,7 +122,7 @@ const ENTITY_CATEGORIES = {
     banking: {
         title: 'Bank',
         icon: '🏦',
-        color: '#14b8a6',
+        color: '#64748b', // Slate gray
         dataFile: 'data/banking.json',
         metrics: [
             { key: 'rating', label: 'Rating', format: 'rating' },

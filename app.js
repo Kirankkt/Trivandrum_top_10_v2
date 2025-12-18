@@ -28,7 +28,7 @@ function route() {
     } else if (hash === '/methodology') {
         console.log('[Debug] Routing to Methodology');
         renderMethodologyView();
-    } else if (hash === '/map') {
+    } else if (hash === '/map' || hash.startsWith('/map?')) {
         console.log('[Debug] Routing to Map');
         renderMapView();
     } else if (hash === '/restaurants') {
