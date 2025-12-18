@@ -122,8 +122,8 @@ function createMarkerIcon(category, size = 'normal') {
     const fontSize = size === 'large' ? '18px' : size === 'small' ? '12px' : '15px';
 
     return L.divIcon({
-        className: `map-marker-${category}`,
-        html: `<div style="
+        className: `map-marker-${category} map-marker-hoverable`,
+        html: `<div class="marker-inner" style="
             background: ${config.color};
             color: white;
             width: ${dimensions}px;
@@ -136,7 +136,6 @@ function createMarkerIcon(category, size = 'normal') {
             border: 2px solid white;
             box-shadow: 0 2px 8px rgba(0,0,0,0.3);
             cursor: pointer;
-            transition: transform 0.2s;
         ">${config.icon}</div>`,
         iconSize: [dimensions, dimensions],
         iconAnchor: [dimensions / 2, dimensions / 2]
@@ -322,25 +321,54 @@ async function addCategoryToMap(category) {
             // Setup content for hover and click
             const content = category === 'localities' ? createLocalityPopup(entity) : createEntityPopup(entity, category);
 
-            // Use Interactive Tooltips for hover (more robust than popups)
-            marker.bindTooltip(content, {
-                permanent: false,
-                direction: 'top',
-                className: 'interactive-tooltip',
-                interactive: true,
-                offset: [0, -10],
-                opacity: 1.0
+            // Use popup for both hover and click - more reliable for interactive content
+            marker.bindPopup(content, {
+                maxWidth: 280,
+                className: 'interactive-popup',
+                closeButton: true,
+                autoClose: false,  // Don't auto-close when another popup opens
+                closeOnClick: false // Don't close when clicking map
             });
 
-            // Keep the popup as a fallback for click
-            marker.bindPopup(content, { maxWidth: 280 });
+            // Track hover state to prevent premature closing
+            let isHoveringMarker = false;
+            let isHoveringPopup = false;
+            let closeTimeout;
 
-            // Hover effects
-            marker.on('mouseover', function () {
-                this.setIcon(createMarkerIcon(category, 'large'));
+            const tryClosePopup = () => {
+                clearTimeout(closeTimeout);
+                closeTimeout = setTimeout(() => {
+                    if (!isHoveringMarker && !isHoveringPopup) {
+                        marker.closePopup();
+                    }
+                }, 200);
+            };
+
+            // Open popup on hover for quick preview
+            marker.on('mouseover', function() {
+                isHoveringMarker = true;
+                clearTimeout(closeTimeout);
+                this.openPopup();
             });
-            marker.on('mouseout', function () {
-                this.setIcon(createMarkerIcon(category));
+
+            marker.on('mouseout', function() {
+                isHoveringMarker = false;
+                tryClosePopup();
+            });
+
+            // Add event listeners to popup when it opens
+            marker.on('popupopen', function(e) {
+                const popupEl = e.popup._container;
+                if (popupEl) {
+                    popupEl.addEventListener('mouseenter', () => {
+                        isHoveringPopup = true;
+                        clearTimeout(closeTimeout);
+                    });
+                    popupEl.addEventListener('mouseleave', () => {
+                        isHoveringPopup = false;
+                        tryClosePopup();
+                    });
+                }
             });
 
             markers.push(marker);

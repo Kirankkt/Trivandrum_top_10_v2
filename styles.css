@@ -5855,3 +5855,44 @@ footer .small {
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
 }
+
+/* Map Marker Hover Effects - CSS-based to avoid breaking tooltips */
+.map-marker-hoverable .marker-inner {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.map-marker-hoverable:hover .marker-inner {
+    transform: scale(1.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Ensure Leaflet tooltip stays visible during interaction */
+.leaflet-tooltip.interactive-tooltip {
+    pointer-events: auto !important;
+    z-index: 1000 !important;
+}
+
+/* Interactive Popup Styles */
+.interactive-popup .leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 0;
+}
+
+.interactive-popup .leaflet-popup-content {
+    margin: 0;
+    min-width: 200px;
+}
+
+.interactive-popup .leaflet-popup-tip {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Keep popup pointer events enabled for interaction */
+.leaflet-popup {
+    pointer-events: auto !important;
+}
+
+.leaflet-popup-content-wrapper {
+    pointer-events: auto !important;
+}
