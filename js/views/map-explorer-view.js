@@ -329,6 +329,7 @@ async function addCategoryToMap(category) {
             // Hover effects
             marker.on('mouseover', function () {
                 this.setIcon(createMarkerIcon(category, 'large'));
+                this.openPopup(); // Open popup immediately on hover
             });
             marker.on('mouseout', function () {
                 this.setIcon(createMarkerIcon(category));
