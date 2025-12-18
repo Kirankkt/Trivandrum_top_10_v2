@@ -4864,15 +4864,17 @@ footer .small {
   padding: 0.5rem 0.75rem;
   background: transparent;
   border: none;
-  color: var(--color-text, #1a1a1a);
-  font-size: 0.95rem;
+  color: white;
+  font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: color 0.2s, opacity 0.2s;
+  opacity: 0.85;
 }
 
 .nav-group-trigger:hover {
-  color: var(--color-primary, #00aa6c);
+  color: white;
+  opacity: 1;
 }
 
 .nav-group-icon {
