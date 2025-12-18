@@ -97,6 +97,7 @@ let categoryLayers = {};
 let activeCategories = new Set(['localities']);
 let allEntityData = {}; // Cache for entity data
 let localityFacilities = {}; // Facilities near each locality
+let globalMarkers = {}; // NEW: ID -> Marker mapping for all categories
 let isDataLoading = false;
 
 /**
@@ -174,14 +175,14 @@ function createEntityPopup(entity, category, rank = null) {
     const entityId = category === 'localities' ? entity.name : entity.id;
 
     return `
-        <div style="text-align: center; min-width: 180px; padding: 8px;">
-            <div style="font-size: 24px; margin-bottom: 4px;">${config.icon}</div>
-            <strong style="font-size: 14px; display: block; margin-bottom: 4px;">${entity.name}</strong>
+        <div style="text-align: center; min-width: 180px; padding: 12px 8px;">
+            <div style="font-size: 24px; margin-bottom: 8px;">${config.icon}</div>
+            <strong style="font-size: 15px; display: block; margin-bottom: 4px; color: #1e293b;">${entity.name}</strong>
             ${scoreHtml}
             ${ratingHtml}
-            ${entity.locality && category !== 'localities' ? `<div style="font-size: 12px; color: #666;">📍 ${entity.locality}</div>` : ''}
+            ${entity.locality && category !== 'localities' ? `<div style="font-size: 12px; color: #64748b; margin-bottom: 8px;">📍 ${entity.locality}</div>` : ''}
             <button onclick="navigateToEntity('${category}', '${entityId.replace(/'/g, "\\'")}')"
-                style="display: inline-block; margin-top: 8px; padding: 8px 16px; background: ${config.color}; color: white; border: none; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer;">
+                style="display: block; width: 100%; margin-top: 12px; padding: 10px 16px; background: ${config.color}; color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: transform 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                 View Details →
             </button>
         </div>
@@ -211,12 +212,12 @@ function createLocalityPopup(locality) {
     return `
         <div style="text-align: center; min-width: 200px; padding: 8px;">
             <div style="font-size: 24px; margin-bottom: 4px;">🏘️</div>
-            <strong style="font-size: 15px; display: block; margin-bottom: 4px;">${locality.name}</strong>
-            ${locality.overall_score ? `<div style="font-size: 18px; color: ${config.color}; font-weight: bold;">${locality.overall_score.toFixed(1)}/10</div>` : ''}
-            <div style="font-size: 12px; color: #666; margin: 4px 0;">Nearby Facilities:</div>
+            <strong style="font-size: 16px; display: block; margin-bottom: 6px; color: #1e293b;">${locality.name}</strong>
+            ${locality.overall_score ? `<div style="font-size: 18px; color: ${config.color}; font-weight: bold; margin-bottom: 4px;">${locality.overall_score.toFixed(1)}/10</div>` : ''}
+            <div style="font-size: 12px; color: #64748b; margin: 6px 0;">Nearby Facilities:</div>
             ${facilitiesHtml}
             <button onclick="navigateToEntity('localities', '${locality.name.replace(/'/g, "\\'")}')"
-                style="display: inline-block; margin-top: 8px; padding: 8px 16px; background: ${config.color}; color: white; border: none; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer;">
+                style="display: block; width: 100%; margin-top: 12px; padding: 10px 16px; background: ${config.color}; color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: transform 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                 Explore Locality →
             </button>
         </div>
@@ -230,6 +231,7 @@ async function loadAllData() {
     if (Object.keys(allEntityData).length > 1 && !isDataLoading) return; // Already loaded
 
     isDataLoading = true;
+    globalMarkers = {}; // Clear global markers on reload
     console.log('[Debug] Loading all map data...');
 
     // Load localities first
@@ -372,6 +374,13 @@ async function addCategoryToMap(category) {
     }
 
     mapInstance.addLayer(categoryLayers[category]);
+
+    // Populate global markers for instant access
+    markers.forEach(m => {
+        if (m.options.entityId) {
+            globalMarkers[m.options.entityId] = m;
+        }
+    });
 }
 
 /**
@@ -631,42 +640,45 @@ async function renderMapExplorerView() {
         if (highlightId && highlightCategory) {
             console.log('[Debug] Highlighting entity:', highlightCategory, highlightId);
 
-            // Ensure category is loaded (if not already handled in initial set)
+            // Ensure category is loaded
             if (!activeCategories.has(highlightCategory)) {
                 await toggleCategory(highlightCategory, true);
             }
 
-            // Wait a bit for the layer and markers to be fully ready
+            // Wait specifically for rendering to settle
             setTimeout(() => {
                 const layerGroup = categoryLayers[highlightCategory];
-                if (!layerGroup) return;
+                const targetMarker = globalMarkers[highlightId];
 
-                let targetMarker = null;
+                if (targetMarker && layerGroup) {
+                    console.log('[Debug] Target marker found in cache:', highlightId);
 
-                // Find marker using precise entityId
-                if (layerGroup.eachLayer) {
-                    layerGroup.eachLayer(marker => {
-                        if (marker.options.entityId === highlightId) {
-                            targetMarker = marker;
-                        }
-                    });
-                }
+                    // 1. Zoom and frame the layer
+                    if (layerGroup.getBounds && layerGroup.getBounds().isValid()) {
+                        mapInstance.fitBounds(layerGroup.getBounds().pad(0.1));
+                    }
 
-                if (targetMarker) {
-                    console.log('[Debug] Target marker found:', highlightId);
-                    // If it's in a cluster, we need to show it first
+                    // 2. Reveal and open popup
                     if (layerGroup.zoomToShowLayer) {
                         layerGroup.zoomToShowLayer(targetMarker, () => {
                             targetMarker.openPopup();
                         });
                     } else {
                         mapInstance.setView(targetMarker.getLatLng(), 15);
-                        targetMarker.openPopup();
+                        setTimeout(() => targetMarker.openPopup(), 100);
                     }
                 } else {
-                    console.warn('[Debug] Target marker NOT found:', highlightId);
+                    console.warn('[Debug] Target marker NOT found in cache:', highlightId);
+                    // Fallback to text search if cache failed for some reason
+                    if (layerGroup && layerGroup.eachLayer) {
+                        layerGroup.eachLayer(marker => {
+                            if (marker.options.entityId === highlightId) {
+                                marker.openPopup();
+                            }
+                        });
+                    }
                 }
-            }, 500);
+            }, 1000); // Increased timeout for stability
         }
     } catch (error) {
         console.error('Error rendering map explorer:', error);
