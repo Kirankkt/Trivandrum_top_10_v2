@@ -366,7 +366,7 @@ async function addCategoryToMap(category) {
         markers.forEach(m => cluster.addLayer(m));
         categoryLayers[category] = cluster;
     } else {
-        categoryLayers[category] = L.layerGroup(markers);
+        categoryLayers[category] = L.featureGroup(markers);
     }
 
     mapInstance.addLayer(categoryLayers[category]);
@@ -582,7 +582,7 @@ async function renderMapExplorerView() {
         updateUI();
 
         // Fit to localities bounds
-        if (categoryLayers.localities) {
+        if (categoryLayers.localities && typeof categoryLayers.localities.getBounds === 'function') {
             const bounds = categoryLayers.localities.getBounds();
             if (bounds.isValid()) {
                 mapInstance.fitBounds(bounds.pad(0.1));
