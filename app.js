@@ -73,6 +73,15 @@ function route() {
     } else if (hash === '/services') {
         console.log('[Debug] Routing to Services');
         renderServicesView();
+    } else if (hash === '/healthcare') {
+        console.log('[Debug] Routing to Healthcare');
+        renderHealthcareView();
+    } else if (hash === '/education') {
+        console.log('[Debug] Routing to Education');
+        renderEducationView();
+    } else if (hash === '/banking') {
+        console.log('[Debug] Routing to Banking');
+        renderBankingView();
     } else if (hash.startsWith('/discover/')) {
         const localityName = decodeURIComponent(hash.replace('/discover/', ''));
         console.log('[Debug] Routing to Discover View for:', localityName);

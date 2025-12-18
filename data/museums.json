@@ -1,0 +1,745 @@
+[
+  {
+    "id": "ChIJxyerXQq7BTsRbv0xO8pnuUM",
+    "name": "Maharaja Swathi Thirunal Palace (Kuthira Malika)",
+    "score": 84,
+    "rating": 4.5,
+    "reviews": 1193,
+    "price_level": null,
+    "address": "FWJW+X6F, Fort, East Fort, Pazhavangadi, Thiruvananthapuram, Kerala 695023, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqVVBZuujGeuNXQxQiZnh_T3k0PJbIb4hM4K57iQ_VTW5JOuICz6K788D2QfufkdDMH3BZF7IYTbKn6AYDnYLWzMUpUqRyxxwDBgsp46zv-qBTxG_bNoAxWrYSdy3eH3ftfvrxUPxDyzMolm-6PW_NUujBBv2utI0qXAhytSliZSAH3JoVu6u6hmg4HC7l_ursfFG4TKXXIohTEfvNTMnt2dJJwAmOE6ls2Sl5Xui7csK5GuXELqebODn9ee_ZbwWwzZFh_-vH9sMisUIV5XcVPH2GUnxL8fackybBPQK-TCb7I2V5qT2JcDiluqGwyHYIvnZP3_zj5tVouuacWg3hg_pEMYOpMIr3KuHMPbpoQOO8-braUulnpyU3VaNuh0Mw5oVzORPyfaqt-BFUK2OWezJhzaumvFpCWFil27sjdpQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art",
+      "Cultural"
+    ],
+    "website": null,
+    "phone": "1800 425 4747",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJxyerXQq7BTsRbv0xO8pnuUM",
+    "metrics": {
+      "sentiment": 98,
+      "popularity": 1193,
+      "convenience": 5
+    },
+    "locality": "East Fort",
+    "types": [
+      "tourist_attraction",
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.4824374,
+      "lng": 76.9455446
+    }
+  },
+  {
+    "id": "ChIJxXkI0ci7BTsRtzMvTTTCgvA",
+    "name": "Napier Museum",
+    "score": 82.7,
+    "rating": 4.4,
+    "reviews": 22608,
+    "price_level": null,
+    "address": "LMS Vellayambalam Rd, near Museum Junction, Kanaka Nagar, Nanthancodu, Thiruvananthapuram, Kerala 695033, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHpSvFoOK8302CyzYBWOYjYoQdyLPYBxV3DqD5F1cvnzr-oQUHzKLpGJUdDC7rmZ9o8d0H9XdpdjqpQzsvng5PHypY5wpZQjrIGbqZrmA2-yTiHmnJBRbT2HqRRHa7feYV1ZmKvWZ28lDzPSPHi-_ASPgD5c4w5T7bzb7gKtQ6goZ0zKoCn6pxjYEAQSRc0JNrJ4uoj2qI3vSiFZzQgLk2TT8tdffmv1a8GJIgGdDLEQEFiQgimvnFdv_zi4h7yhSgCXlqR2FIKm-okjaUwvXhYs4V-AGuQ11ndIcjUcuFLycyrqrjf5i88QVJSHEwmji5lGtBGR-lrzzHd-SJZFBbXh-ANWyk5RLSI8nkkI0PXQrTZhYzYGO8zHR5l3B0RhJCYTA9eC8wuGR_FMJW_c4UAw2gvnT3EDcMRfSWjZvFDU8g&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art",
+      "Science",
+      "Cultural"
+    ],
+    "website": "https://www.napiermuseum.org/",
+    "phone": "090619 16543",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJxXkI0ci7BTsRtzMvTTTCgvA",
+    "metrics": {
+      "sentiment": 95,
+      "popularity": 22608,
+      "convenience": 5
+    },
+    "locality": "Vellayambalam",
+    "types": [
+      "tourist_attraction",
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.5090146,
+      "lng": 76.9551247
+    }
+  },
+  {
+    "id": "ChIJR1bTtem7BTsR5aiwlIXkfeY",
+    "name": "Sunil's Wax Museum Trivandrum",
+    "score": 82.7,
+    "rating": 4.4,
+    "reviews": 3743,
+    "price_level": null,
+    "address": "South Street of Padmanabha Swamy Temple, opposite Priyadarshini Hall, Fort, East Fort, Pazhavangadi, Thiruvananthapuram, Kerala 695023, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqcUMkYneHwYKDeL1tiNu9rQwthIoKGmNvYFDWMF16tsBs7LX9Jf6bZRdLrcO8YMiOlJ4Cb0ioVDSC0VvcW4gwXoCuKN1Ud4IFHF0FmSCq24t4Yi-SCVvEGaKcAWWOOVi2DTKx8PNwKT9CCW8cuozJrtkZHkWbofE_-9jBObO42XAGNYoEeEf2ImnCDBf-iJ9qaQCjoBH6rX4BboPUIkR1NI42lClodCaAaPtuKuxtEION55pBlGw_OVvtaLzVNmWndcxONyeTia2LIDzchuUOr76o5GQvUQlD8kQiPMD_7Ud9vkWEhZuFgzjY4OdnWwZ-qsbPSbavSskO1m-KgEuYoMvygQZy_NT-Bb5fMp7GHEZCqu6uakJTZnlL0hG-0eK7ubY7uWyguj4sRBjRv8ZSWJ-rWm9XLoKV8lzKZkzEgNA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art"
+    ],
+    "website": "http://www.celebritywaxmuseum.com/",
+    "phone": "094473 41974",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJR1bTtem7BTsR5aiwlIXkfeY",
+    "metrics": {
+      "sentiment": 95,
+      "popularity": 3743,
+      "convenience": 5
+    },
+    "locality": "East Fort",
+    "types": [
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.4806553,
+      "lng": 76.9450292
+    }
+  },
+  {
+    "id": "ChIJJxvemKa7BTsRnwdAcDXWFfI",
+    "name": "Puthen Maliga Palace Museum",
+    "score": 81.6,
+    "rating": 4.6,
+    "reviews": 827,
+    "price_level": null,
+    "address": "Near, Padmanabhaswamy Temple Road East Fort, Pazhavangadi Fort Palace Complex, Fort, East Fort, Pazhavangadi, Thiruvananthapuram, Kerala 695023, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHoxpxwyavv7mdUjRvZ4OyE15_w_tttvdSyhyjjvJXhMdKE2HIujzkmXaI4iAM8zqMlh9XusVB_a-v6kr0Yu5Ut78-4UCDfSk1uUlFShTKdU2n5ZDByWn-8W9ys7kbRYQbXEmTrIsIMJox1CnuYObEGqrCCRcYLvzY_RTzv8f6H1fdYX5pw89ZFYfpms8I8nufRDcBSSQNSFC8NvDSG2b3dsh-TDfOMZJG4zXI9dS4Y7RFOqFknEjR2gnlpwMrcHBttCq3vm9fFfFgrvjV3oddQef77iPn6nsv5WSHilwlS-fyq_XabuYbiNnvC_JTx2bPNrT4FBmK5QFTwSs8XkoNOB09T-GicoGkxAzN_lsixILogVWh_D8M_dqfxDeBK9-s8pYeQKlm1AFMLjgAqbdxX2T-rYDJw4vH_g_BCEJitIQAK1&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art"
+    ],
+    "website": "http://www.kuthiramaliga.in/",
+    "phone": "0471 247 3952",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJJxvemKa7BTsRnwdAcDXWFfI",
+    "metrics": {
+      "sentiment": 100,
+      "popularity": 827,
+      "convenience": 5
+    },
+    "locality": "East Fort",
+    "types": [
+      "museum",
+      "tourist_attraction",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.4825856,
+      "lng": 76.94549529999999
+    }
+  },
+  {
+    "id": "ChIJpaKI8MO7BTsRSSwpdXl5jRM",
+    "name": "KSST Museum & Priyadarsini Planetarium",
+    "score": 80.2,
+    "rating": 4.2,
+    "reviews": 5579,
+    "price_level": null,
+    "address": "Priyadarshini Planetarium Road, Junction, Near, PMG, Thiruvananthapuram, Kerala 695033, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqjf0YVYCNUW5J8d8CPRWFKInpDANwOCyaTRO6FRCBKSrs8CKBT9BX7AP-qaVg3irSzRnsW3xhrWs3ybP8xQnyRk7r7v2WG3TvPpohpdzxSy81FjoG_y-bY0mmQX_63H6UPptoTVBV3oGT-k8t8npnCUru-Tl8rmfie_PIj43A8jgToelUPdUPnU23f9_e7p6wpVtGnDRxKVRwcqthZ7MeKqWXxK8kN8-H9AxSZe7NQBy5SkznNEAOqrH0ka4rmOLJK3liSKDNBKOptFLSINemsp-bHwKOmAU3vYf2nQWsiLiVzV_FX5si5a-gc3myMaVWPjmZsm2YWwK5mH7DoNQdILcPaZV57D4K0GQxyuPH5GLnCyeyTExWcWHZA6GA2bviVmKO_KtKCuKMPBrzAzZt9W5fC6S8w2VoQR54jeRU&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Science"
+    ],
+    "website": "http://www.kstmuseum.com/",
+    "phone": "0471 230 6024",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJpaKI8MO7BTsRSSwpdXl5jRM",
+    "metrics": {
+      "sentiment": 90,
+      "popularity": 5579,
+      "convenience": 5
+    },
+    "locality": "PMG",
+    "types": [
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.510031999999999,
+      "lng": 76.946499
+    }
+  },
+  {
+    "id": "ChIJdUBEBLUNCDsRLyCLnh9T94w",
+    "name": "Kerala Museum",
+    "score": 80.2,
+    "rating": 4.2,
+    "reviews": 1590,
+    "price_level": null,
+    "address": "Metro Pillar 349, Metro Stop, Salem Highway, near Pathadippalam, Koonamthai, Edappally, Kochi, Ernakulam, Kerala 682024, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHoOHRRswA1yNqYmv38Ta3CwgP-xPXuTtg4JZOmprVy3cXH7saj8Z4QC3hHBEnHglPBecy7tzZ_XEupck5zkNYNymYrx-kR57tHTeFugCepweOfiYywSjAnjqd4ZtEdqm3gYWEIF8drPJMJuuswl2QqyE0E_fkTDMcT8V1n1gV8TayMwNfF2lDxWw_fG76VwLer4XR8dcur8yNnXkULIToE6VNAb_nqjaIkEXUDRKMHq9PiNYBcKmMqoSWn2U4hbZqrC6hFVbB2HaM8VLBPgs6NaUk79Sanh_ryg_fucTHKA10lL0mG3gDiSywm-rUx01_AsSf3-b1UuvsQWLb_dM-fFTK9GOfGldSIZ996grmX1kYcLFaoO3ixUR-VsMjcClbp3eIYMErmkA5Z7g4wT1IyUjP5RtnnOkGMP-kROfP28ViJJ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art",
+      "Cultural"
+    ],
+    "website": "http://www.keralamuseum.org/",
+    "phone": "081290 51881",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJdUBEBLUNCDsRLyCLnh9T94w",
+    "metrics": {
+      "sentiment": 90,
+      "popularity": 1590,
+      "convenience": 5
+    },
+    "locality": "Trivandrum",
+    "types": [
+      "tourist_attraction",
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 10.0379375,
+      "lng": 76.3149375
+    }
+  },
+  {
+    "id": "ChIJDf0bm2O-BTsRwUV5se5cEk8",
+    "name": "Space Museum",
+    "score": 78.4,
+    "rating": 4.5,
+    "reviews": 720,
+    "price_level": null,
+    "address": "Canal Gate, Station Kadavu Rd, Thumba, Thiruvananthapuram, Kerala 695022, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHrOavojV5Ljx9HDDk1Uf9hzRuvOlGGF53B9HY0CLKUIOOAenGfBk3fCQ14SlSHDWWhQQfc7_PP-6nSINQcOLzFFhNCjmGscWZjWZbPEt8dUa3wlkvMDOJXZnKOFZjkpdVw0VoDt_Ud2nEUz-1IZ0ozkVOnXfq5WPPG3YNMpt53LR-3yRXGR_Aw9vb6FNmfUlzzRNMr5JRa2s9i08avOjNcHak20tmmlciIlqnzR_0eNUV7Cy95EqBCSJGWyzzqKYQumHwWuhJg3ylC-S-KGeEaGROukponXfGmQZfuN-p8_0NnllNu9mCREyY8tXO8eaqr_CRtI6lm8-wfsK_xixr8jMYVlF47jTgiUOAsedR_Xju3E8HQuQubw2Yz7h8Jk_tYgaHFrh5E-sN-KwveJiCYcA0jvz7PR4ijdbSmYM8MRXQ1m4I20yrIIMshTQHpi&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art"
+    ],
+    "website": "https://spacemuseum.vssc.gov.in/",
+    "phone": "0471 256 2275",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJDf0bm2O-BTsRwUV5se5cEk8",
+    "metrics": {
+      "sentiment": 98,
+      "popularity": 720,
+      "convenience": 5
+    },
+    "locality": "Trivandrum",
+    "types": [
+      "tourist_attraction",
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.5368047,
+      "lng": 76.8672921
+    }
+  },
+  {
+    "id": "ChIJIZ1xKsm7BTsRXRSL46W4fIk",
+    "name": "Museum Radio Mandapam",
+    "score": 77.7,
+    "rating": 4.5,
+    "reviews": 684,
+    "price_level": null,
+    "address": "GX54+Q77, Napier Museum Rd, Kanaka Nagar, Palayam, Thiruvananthapuram, Kerala 695033, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHpFn5RlWNg_bifw_TFsp24zeeFSk2a1wbJZ3EuZ68QkFcbozi2Y_yvgBAs5PlUWT1KlhXhc40eL9_OvLnrH_Erbj4cv4xV_arjwx42TM_nziGdacijJZIvt_flkCND3E-elkLEQWo71kqu6s-VUBrRFcaqLsWsaq7uTkgk4u0Og7ZkSlBeSO7DLy7jtYg8Ut0jW9yb569suZSsv_zeXN59wNu2uVEW55IoH9vOMhoNNo9JM_OaqoaW78zMthlsHfpOF_jS0kxgCBs5SJiQXfIrQ2ceoslcQ0I2FqijVKMjmW1Bmm63XUh5wuyMAnV6xUlS1tj8-7KidYOaGsn0PzcxdYr2cniIjo499WnMHCCq6RF2xg9Wb3c0nJkz5r70pLm5ky8S7XZNIVyGLE3oHGDtzOO9-SW0kPuKWuvMe0ttWjg&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Art"
+    ],
+    "website": "http://www.museumandzoo.kerala.gov.in/",
+    "phone": "0471 231 6275",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJIZ1xKsm7BTsRXRSL46W4fIk",
+    "metrics": {
+      "sentiment": 98,
+      "popularity": 684,
+      "convenience": 5
+    },
+    "locality": "Palayam",
+    "types": [
+      "museum",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.5094035,
+      "lng": 76.9556739
+    }
+  },
+  {
+    "id": "ChIJJ3Vslsi7BTsRfgqB8g0KBZw",
+    "name": "Keralam - Museum of History and Heritage",
+    "score": 74.7,
+    "rating": 4.4,
+    "reviews": 602,
+    "price_level": null,
+    "address": "Corporation Office Tourism Directorate Compound, LMS Vellayambalam Rd, near Thiruvananthapuram, University of Kerala Senate House Campus, Palayam, Thiruvananthapuram, Kerala 695033, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHppiqkarow8fUR9w_hVwRGZXv78E3LvxGrvtu3vg5TvR5EnaM76Dc1J8pRgbX2M-8BaeqvTm5hl3l2OcsP5ufd9P_4ogtxj7u_f9xCwKX_pomT_ovCUHE3yijjv4eHI52nuc5haDIeESfXbgmZeG_ywGo0kuB-p9sukE-9-9X0k85tYUdXhTLsx3R-gy3_CmuppCDzxkG-MZV0TlC-LtH3a2n6ka5WmM050vYKD1XW75dWr1ali_G33nG_zRtVUDLbkshtOd_uPiUaH9FD83L397P2_Ta2si2nsBWN4bCFT8kKphQZXtBUKikXECi4y4e3ZwUf-4UD42z6u4r2laHO0zfN2FEtYGLJpjpfS8OjguMKyIt9TGvMnM4CNB4PPWvXfiNurRcDkvVSBuzfT88WlK21LM8jLknpbu-XEFHwJCJM4o_nLAaArd-cl7g&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art",
+      "Cultural"
+    ],
+    "website": "http://www.museumkeralam.org/",
+    "phone": "0471 232 0231",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJJ3Vslsi7BTsRfgqB8g0KBZw",
+    "metrics": {
+      "sentiment": 95,
+      "popularity": 602,
+      "convenience": 5
+    },
+    "locality": "Vellayambalam",
+    "types": [
+      "tourist_attraction",
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.508386699999999,
+      "lng": 76.953588
+    }
+  },
+  {
+    "id": "ChIJfRglBD26BTsR-qFbpmFkXd8",
+    "name": "Natural History Museum",
+    "score": 74.4,
+    "rating": 4.4,
+    "reviews": 586,
+    "price_level": null,
+    "address": "GX64+3J4, Maruthankuzhy-PTP Rd, Kanaka Nagar, Nanthancodu, Thiruvananthapuram, Kerala 695033, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHr4rjn0IOVm5CULU145h7AoUxt6at7DJQFJAdfcU5tPpHGtEc1G71ypMSCpzFZat-Ic27xUD4uY_NjfH3ksQHqk4pa4x7w78s5lhuoPFYKG5Jle22cAH0GV2qfUSrcdmo_Xy0KptiyedLBj6zFtT2S5c6YTmV6W3Bg4CIR3YYI9LC7O2dMMMsBbYlV4SKTpyw_bJoxF0MDt6amRXr4cD0dalGC1MWbXrKCx7j3JEFD6C4IKiSDX_iN3AnQ5s8j6pPN_AZ_ETgNZw5-S0H-pHzVed148wZ8qlo9Qx1GjFzkFhVUNSBA8NXl1jaw1L0AJzExzQj5wvi9_N8IEfBU1qgdOq9hVjHKcNwGFbyTKtPd8TxV9CeQP0300_RsuOs0wJinVzRINMjnsVapLb3FSirbHrJv4Hix6glDN0Oq3UvoXTw&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art",
+      "Science",
+      "Cultural"
+    ],
+    "website": null,
+    "phone": "0471 231 6275",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJfRglBD26BTsR-qFbpmFkXd8",
+    "metrics": {
+      "sentiment": 95,
+      "popularity": 586,
+      "convenience": 5
+    },
+    "locality": "Trivandrum",
+    "types": [
+      "tourist_attraction",
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.5101257,
+      "lng": 76.9565765
+    }
+  },
+  {
+    "id": "ChIJn9woXo67BTsRgWzC7-VfZMM",
+    "name": "Adeodatus Memorial Carmelite Museum",
+    "score": 67.6,
+    "rating": 5,
+    "reviews": 6,
+    "price_level": null,
+    "address": "Cotton Hill, Vazhuthacaud, Thiruvananthapuram, Kerala 695014, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHpKpNroxJccjw1AWSpgORUy_fkVC0bDLaaqRTRNyOy_P_BEvD41B44EB3KI5gY6F92gJP6VCcJQAWFXyCBH8t-X0KJD02hbGxvRM5lTX_SpPY42oSBkUIwufGqkJDv-3u5PPyUU1kMt4AmaySGRxZPaPenvA8C1DnLelWMQ3GtlpeO0jAfyEB54TGeloAOQvNMm4GQBntLCTcqzVeERJYgLJ1GMvYCgGSuQ4uVZG7TExRrv0rEdRXK4R-x2k5NoswxeYEtxNnt6B-nyotU56gwZi_5vZw1fBUU3vXpehik1Gw&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art"
+    ],
+    "website": null,
+    "phone": "091888 52891",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJn9woXo67BTsRgWzC7-VfZMM",
+    "metrics": {
+      "sentiment": 100,
+      "popularity": 6,
+      "convenience": 5
+    },
+    "locality": "Vazhuthacaud",
+    "types": [
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.5010199,
+      "lng": 76.9629676
+    }
+  },
+  {
+    "id": "ChIJp7lRblfDBTsR_mG3K7ZHoe8",
+    "name": "Kilimanoor Palace",
+    "score": 67.3,
+    "rating": 4.2,
+    "reviews": 382,
+    "price_level": null,
+    "address": "QV78+47J, Kilimanoor, Kerala 695601, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHoQbBurGpu-cVrTt9_v1keyJXPR17jJWrRu8qyhk96UYXXhgt-HnCpOS-Twj8ODf-7aWavaphm0N37ET9u700mbYHcUmCWfevKcaBe9jDb2Y1YCzvqP4Vro18skB_SAo59zIq_w2dSO67pxa-MeAXzfbFDLBdleB_cewqt5eUUCQhL9xEk7naUqTmnsplUldsnU3zDHA-bBut6CpOek2oMWVROynk0nS61IghGnBn-7cpLA0vyApKZa5gBUz99CyoiiJuYbL8y6eeRxljcQNue1a40-OlhYuSYm2bQ94YEbFDFrEgIoAb3NPF8-4T4pI96pe9iR82hw_qRZp6kQZqa8yGe5NsSlv0be_LYRcQmZzUmmN6cjtBaVSy_VMXk0dxnh7Ula_ErvgK0t4k--Mfy_hQk-brwYcSKRkv5ZZ1dhb5dtHKjQAEQMuOGHPQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art",
+      "Cultural"
+    ],
+    "website": null,
+    "phone": "1800 425 4747",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJp7lRblfDBTsR_mG3K7ZHoe8",
+    "metrics": {
+      "sentiment": 88,
+      "popularity": 382,
+      "convenience": 5
+    },
+    "locality": "Trivandrum",
+    "types": [
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.7628314,
+      "lng": 76.86575409999999
+    }
+  },
+  {
+    "id": "ChIJ91nt2J27BTsRcYxYdU69ISs",
+    "name": "Varaha Temple Thiruvananthapuram",
+    "score": 66.2,
+    "rating": 4.8,
+    "reviews": 44,
+    "price_level": null,
+    "address": "FWGR+XW9, Sreevaraham, Muttathara, Thiruvananthapuram, Kerala 695009, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHooGWd0nAb7VRS-5rdsWIKYTNdR0pa8Q247Pvl0HfRwp1MiaHMHVVGriHzJS9X3y-zZILa7rR82pX_XadrKV6gTj4Ub3gN1FUFDjBh0LndZaswW6VINkkC9RV7msVQdth9muWLTpWZZKBlyxH6DPsXyyHab_jpFMCqM7KWy8jZtj0tkSquVp4Y99sIZBtNt2XG6vYMxch1ChJnsRSi2vGc3R5TgU5B8VTT3HxyMkhVjjcTf_4BJODkNB9d21fHWyBNRA3zXAuri38FYvFtBANRwgGix_dp5rlHQEEbEYcbqDVB4I7dlL-oYH0NN_lvRGSQcR2SeSEZTSLoihqXWclr0Fc2U4rAVk6ZtCsLEWygcMIIIoDJkLGQFKXZg4EwkrgJiQa4XtzqDQGGl9CQnM8daIG6be1C00vu-BbDrMOntZTxB&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [],
+    "website": null,
+    "phone": null,
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJ91nt2J27BTsRcYxYdU69ISs",
+    "metrics": {
+      "sentiment": 96,
+      "popularity": 44,
+      "convenience": 5
+    },
+    "locality": "Trivandrum",
+    "types": [
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.4774051,
+      "lng": 76.9423691
+    }
+  },
+  {
+    "id": "ChIJywi_Zku9BTsRLqIU0bVFgqI",
+    "name": "Indian Airforce Helicopter Z3045",
+    "score": 66,
+    "rating": 4.8,
+    "reviews": 37,
+    "price_level": null,
+    "address": "Palayam Airport Rd, Shangumukham, Vallakkadavu, Thiruvananthapuram, Kerala 695007, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHppg3aGICt_LKCfU4o23Yt-_SpjRBXyoe1Me6rIWIU2SjQ4oABZpawqdn7yjJ8PX7oC_Xr6N2e33cUlzxztXJjFJAYtVomi6OGgZIs4CBAasaUzpOQSdoWIURO56_CPpww0dJD8rm1x5ZLDETOu0QtasSZ5UHVriqpWQEv1Tx6JhJecLh8KU1ummjypDJ4Snwx0wAOdoAF8ik5_g-Ay_-w8SOSzTxnySbRh4qomL-CayW9QovyrYgwS32wT3E3NQMAYNssljKoQEpm1bt266gO2oiKtn3uRD1iG0fPnO_Nm-j87M7PyVJZQKIo2N4azCOvUPvkmoog7Gv7K0V1Fv4WKQ7AXMwOcb5PvVwmkYXyZe9Nkm-mbPaYh-cZDH9HolNguLZMkECfPneaoUXOExKcYjzNWaofrNNZC5Tpgv9ovOXg&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Art"
+    ],
+    "website": null,
+    "phone": null,
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJywi_Zku9BTsRLqIU0bVFgqI",
+    "metrics": {
+      "sentiment": 96,
+      "popularity": 37,
+      "convenience": 5
+    },
+    "locality": "Palayam",
+    "types": [
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.4799211,
+      "lng": 76.91248929999999
+    }
+  },
+  {
+    "id": "ChIJd4lKrYm7BTsRsfQpAeUFUqU",
+    "name": "Palm-Leaf Manuscripts Museum",
+    "score": 65.9,
+    "rating": 4.7,
+    "reviews": 86,
+    "price_level": null,
+    "address": "FWPR+G44, Thakaraparambu Rd, Prasanthi Nagar, Pazhavangadi, Thiruvananthapuram, Kerala 695008, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHou8AgySpYyNYhbmuhlL-AyG_M9HBQY6npL20MS0RCa_qffs2YwoCmwZlXvsJqRkjXwkok-qQV6wDsO94zYjBDIutSrp9DXcScTaoDNIMtbEkiRi5QKrEUaOJn4Yqe82c6lJnb_gNMn2u3WWcNcI1gVbpZRPCO_U-sbh8BoTJeIxxTwyysLpXolmbIml9aRS3qrveNpqczzH1JLmQdbXD0l9zsc1s6LzIk6eZBy_HfpCKynJQHlRC_wZNkGVaoikAy_PNIbIbjqDuYgBLNmyQeCoN3ccEnV25J3hZHDdn0_bacT2jT3DTmbZKYvEwcZlC4A2Iqp1LJdHGtEEFxI6Dpm7ToHUp5tAPFjxUIGIOFqy9HiJG07OFqAehtMrdTube3y_GQ7a4Qb06KvOs27-jVc9iYxnroNHV8pAjt89ML9GtKX052l_lMP4mClyczY&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art",
+      "Cultural"
+    ],
+    "website": null,
+    "phone": null,
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJd4lKrYm7BTsRsfQpAeUFUqU",
+    "metrics": {
+      "sentiment": 94,
+      "popularity": 86,
+      "convenience": 5
+    },
+    "locality": "Trivandrum",
+    "types": [
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.4861594,
+      "lng": 76.9403548
+    }
+  },
+  {
+    "id": "ChIJlxkUd527BTsRqQ8kbRmOVk8",
+    "name": "Bio Diversity Museum",
+    "score": 63.8,
+    "rating": 4.2,
+    "reviews": 241,
+    "price_level": null,
+    "address": "FWHH+CXC, Eanchakkal Roundabout, Vallakkadavu, Thiruvananthapuram, Kerala 695008, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqlkK-IsOTOfQhXUqtAUymU611CaA3bl2qdZ_xau2kUEJSB7YmrhuWSiEBToNHd-ZCDLAV51Z5Itn0mQyvSPlir59Z2bKOB96MEwTvmUA04aX9E40dz2Dvf_V8WN6u5Qbrp8E4IuqVB_JNpZ1wPqUDnjIJJ05EccFueEh8DQQGXtkLZU4IxAPH5Kobr80opYuw4HgSe8RAIYvSe5WVIUwR-aJvZuEQnEPg57RrMFbWcd4GJZ2QMP4BqVWeysR9u1jGsMEdZVZi7TuPyVMWxKsFUOS99N0vWwl_04OLCrJjN1MzvHjKpPQnTNQG-Byab1yL5003keTmi3eL_HtnX8XNRsA_QSj9izv1OqcPhHx8EGZha3MQULZeDRRdElaoAVaj5lLp8eR4FGEC87EiszPtb5YF1XW7DgLY9pemF_IpN5Q&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [],
+    "website": null,
+    "phone": "0471 272 4740",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJlxkUd527BTsRqQ8kbRmOVk8",
+    "metrics": {
+      "sentiment": 85,
+      "popularity": 241,
+      "convenience": 5
+    },
+    "locality": "Trivandrum",
+    "types": [
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.4785603,
+      "lng": 76.92988749999999
+    }
+  },
+  {
+    "id": "ChIJJ6XiLMG7BTsRNLn9DXy6Ctw",
+    "name": "Legislature Museum",
+    "score": 63.6,
+    "rating": 4.4,
+    "reviews": 137,
+    "price_level": null,
+    "address": "Palayam PMG Road, GW4W+VRJ, Kerala Niyamasabha Campus, University of Kerala Senate House Campus, Palayam, Thiruvananthapuram, Kerala 695033, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqoznWFpGYpR6iu6GLCwKVyx2fkIrps8hQzAChTjmuosyNSOgimlUD7PltlBXa0ZxMtwuLUosDzBnlTg5hjHItbi4L6o_ITaapvozbPzZHE9YmMqgs-o7Wjs5JDkvy6klSt6Rns_XxGGsfodJCpzPYY8nFIIfxkn_RjOwPkYtiVSmw1dBDns6wUtTqfOFcUNBLpHCujV5vz0jRjvaQradwXEP2rM2llwWRxwLqZqwx77lDnVkKwLt5r1C16dYLGphRfZcOS65sj4_ZTL7AJImGL2K-Q0pYUaYZTt1gNCZ5mqROCJk4EXZTWzFsfphkv7xtx4kd-4i6SCqjzhzJA32jEWNJwXClPH1j6B56-QD6C_PmrX1R0N1EC2OntO1UxT82aPB6-QKUMX_WWVHqyNAKLZ9RKN2GUtQZ4bs-JTFNAIQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art"
+    ],
+    "website": "https://www.keralatourism.org/destination/kerala-legislature-complex/231",
+    "phone": "0471 251 2524",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJJ6XiLMG7BTsRNLn9DXy6Ctw",
+    "metrics": {
+      "sentiment": 88,
+      "popularity": 137,
+      "convenience": 5
+    },
+    "locality": "PMG",
+    "types": [
+      "museum",
+      "tourist_attraction",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.5072025,
+      "lng": 76.9470017
+    }
+  },
+  {
+    "id": "ChIJjYiWkiKsBTsRudz1iXeC_S8",
+    "name": "Charithra Malika History Museum",
+    "score": 63,
+    "rating": 4.3,
+    "reviews": 158,
+    "price_level": null,
+    "address": "94J6+QQ6, Milk Society Rd, Chenkal, Vattavila, Kerala 695122, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqsTB7eO87hf8T71sSCFe3du3zRhWV01E-FlWDFkfy4dWgxhArY_HRZ005CchZPt0jhQHPbU3G4Gm935iQDDFktpkpiZCVxsDC6Ku-PIVllrihGaXuRrYKZbmoKEbNOzFG_Rtt5mUlV0TxwwiIUR9C26YABdKbCwTuKfKjwRkumrx6gorFl2mWHs9wdkIPZ3MGKfbsHbCkKCMGptEJQcbVkoE06huFmCCvk8s9aG26p8Nz8JyJQxSE_r3UovNTZSbdF9f-a1Abedk8qWHIbm54HI8RXTuDqC0tupHcJ_v7O-u-Ji7Kc6HnPR5heroL0zXF2zW-IoMDIaKjS17GM9OyBzKJ8o0GW5r80zmHtZcUlGLpdmcaRQIlIb5rBzFYoxAOBsiUL44MYxqWbwvky30NbweZ4LEoybNy-gSJQ_kh7oE2XDdarJnt-Athkh3Gr&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art",
+      "Science",
+      "Cultural"
+    ],
+    "website": null,
+    "phone": "094959 39797",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJjYiWkiKsBTsRudz1iXeC_S8",
+    "metrics": {
+      "sentiment": 86,
+      "popularity": 158,
+      "convenience": 5
+    },
+    "locality": "Trivandrum",
+    "types": [
+      "museum",
+      "tourist_attraction",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.3819911,
+      "lng": 77.11182
+    }
+  },
+  {
+    "id": "ChIJGR6_Owq7BTsRiON_ZCIkzyM",
+    "name": "H.H Uthradam Thirunal Marthanda Varma Chithralayam",
+    "score": 62.4,
+    "rating": 4.4,
+    "reviews": 85,
+    "price_level": null,
+    "address": "TC 37/946, S Street Rd, Fort, East Fort, Pazhavangadi, Thiruvananthapuram, Kerala 695023, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqxd3ujKIfTUo7f7n7LXWMEUfBqIntDt3_FyMWjk40Il9isLXfKC8gp182BCUD8x5zBwuVMiuV0Qp5aUFRRJAGtGTBeYO5cJAc58CJZbR7OvAcbKpg2MEVbmOIZqW_mm5GrXyPXPNimcfevtVt_Bt8kiSYKse1oaqiDg6Ah-EODr39Nuv5f52NNezq3gnA-gqgBJO0pwjH9kBoi0iScMkMX1fBQPGluwwFOkMVW7BKTYe0LaB0xkted7MquSLI_LugWxTOeJC9PaCMEebwWuD_6AuSb73M-IespR2BdT19sP9GsO2zSKzPG1xEIuJHCu8ptRVTMLpvYh57tWkIY0vjRQjKhRP_D9v8S77J3lEX-uAjT76LNhGr5eP7Qf4X_k-kZ_FkPN5lGxW6OhQlHmc_orwrEAykiuJPKF-gFaypcFsAC&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art",
+      "Cultural"
+    ],
+    "website": null,
+    "phone": null,
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJGR6_Owq7BTsRiON_ZCIkzyM",
+    "metrics": {
+      "sentiment": 87,
+      "popularity": 85,
+      "convenience": 5
+    },
+    "locality": "East Fort",
+    "types": [
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.481132200000001,
+      "lng": 76.9456616
+    }
+  },
+  {
+    "id": "ChIJT4LdaQq7BTsRk1TRXOxn7B4",
+    "name": "Sri Swathi Thirunal Museum",
+    "score": 62.4,
+    "rating": 4.5,
+    "reviews": 46,
+    "price_level": null,
+    "address": "FWJW+C3R, Fort, East Fort, Pazhavangadi, Thiruvananthapuram, Kerala 695023, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHrr5iuBuGI8hGLH768iOmd8_sVUKwkC8PRYeEIRT0RpxxlEPwFYy8HumdAWYRVB77TDcLmFcgIguA0orNkZa2K53Fwl7gkhz7EoorPaLFwHeYGLB2aDsC_bBxbiNEj3Hmyh9mnn9AL4xsWE0M3BeWbSRDjGLsaGDkjYUCgx0NfxSLLsBcmLS-NUT_YCXLQB5yjx5Jk33IFsi2i7S_SwlN6L2DfQ4ywNAIRR0Jkwh27CfRhprR_gPv9WYiTTKWU2cL4Za22NHJ-nJhL4S0tef6k61riu5oH-l9cYABfdYCxNH-Po8yUNBYp-oXGwkx6PGJlfq9F6h9tACGey7kzRT_5eNxTEmNDNTmPjcQMNe5O2l682oNsXwo3ltDdeSmw6tey-inkHyd2zC2Pq3BsNeU29fWky4OZ5-lpE9LksPL_ZrA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art",
+      "Cultural"
+    ],
+    "website": null,
+    "phone": "1800 425 4747",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJT4LdaQq7BTsRk1TRXOxn7B4",
+    "metrics": {
+      "sentiment": 88,
+      "popularity": 46,
+      "convenience": 5
+    },
+    "locality": "East Fort",
+    "types": [
+      "museum",
+      "tourist_attraction",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.481115299999999,
+      "lng": 76.94512950000001
+    }
+  },
+  {
+    "id": "ChIJy_Q0eqC7BTsRvUDBNr3kSmY",
+    "name": "Puthen Malika Palace Museum",
+    "score": 61.6,
+    "rating": 4.4,
+    "reviews": 61,
+    "price_level": null,
+    "address": "Fort, East Fort, Pazhavangadi, Thiruvananthapuram, Kerala 695023, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHo85Eh-0NEhoKt1KJY4N07vFmmb_INy8nxSW7i6jJ0HWgBNwmJUC9Izt7D9FA1PnApXtKT4_HfMjEfUoTZLpWbwVYhl8mQGyByfrgeJWh_WsVhjKL9HZpkU70dA9oAl1qYb5_GOQiRQrO3kGraunm1e5Iowll6sviebbvxbbqko9bhgirWx2kMgFoc8mAVVRIa-aBcNpYzWT3KLa-3lG13OHmrO7fySdNQzgj3byiMCXIGK9tcmpfBeM4Yp4twXsvrNh1BOo7dQMHLn_cpqWAsL14xBt6OI0ucnq1U9iwMUIMksprNmnxtGVN-3LbSGWeXCAtsm5k047v9_nvW9iiA5q_7QdsIAarO8MWch-0kHMilHtrsXdmtUzAdO1iF6E0oN0jOnH20JTQ_UpfQbLuf_Uw-n7nlh7LP0u4z0oMg7AsDyYfJXqaL_F_nL87n5&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art",
+      "Cultural"
+    ],
+    "website": null,
+    "phone": "1800 425 4747",
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJy_Q0eqC7BTsRvUDBNr3kSmY",
+    "metrics": {
+      "sentiment": 86,
+      "popularity": 61,
+      "convenience": 5
+    },
+    "locality": "East Fort",
+    "types": [
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.4818689,
+      "lng": 76.94531909999999
+    }
+  },
+  {
+    "id": "ChIJ-Wt4Jzi9BTsRH6tkspeAGC0",
+    "name": "Shanghumugham Art Museum",
+    "score": 59.6,
+    "rating": 4.3,
+    "reviews": 29,
+    "price_level": null,
+    "address": "695007, Palayam Airport Rd, Near Kerala Women Development Corporation, Vallakkadavu, Thiruvananthapuram, Kerala 695008, India",
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHodvOktNcTqDQkB4Q54FXgynKN6ug0PHXqJ7yNpbFlGD8PMCu5OGZc0LJkdgOwJX1l1uQc7R2gUfpKIq1UjsLx7pUXhDkaoKxQUklFVcBBSqpuDzZjVvgXVLxdPnJGJHaKz_H6KTz4waKZ7ML0Q9gRFLiqA4agxWyJHCBoBxxPRP1Mdy4HANuogM89PNGsQDa4RoZs56KeZfX-53xfNmWUQmlfUdGPDfNjwkeSOERAjsZqT1OV5YGyTzDp4KxfEPVK1GCq-kISOd0CHM5PS7IWmqB7XoWbwer9UjA3mncpAiiwhMQTBMGKPrgKE1p-yfydOi_w4ppsa7xix-0h7da9p7hkVvlvxJE9MpOjrv4ZIISWkY6D90TwIMBKzRXfjGPC0FScHG9ebXPWn7e54J8TQEyaVP0PtzUh-EEIQzCoOggtO&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "category": "museums",
+    "vibes": [
+      "Historical",
+      "Art",
+      "Cultural"
+    ],
+    "website": null,
+    "phone": null,
+    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJ-Wt4Jzi9BTsRH6tkspeAGC0",
+    "metrics": {
+      "sentiment": 83,
+      "popularity": 29,
+      "convenience": 5
+    },
+    "locality": "Palayam",
+    "types": [
+      "museum",
+      "point_of_interest",
+      "establishment"
+    ],
+    "location": {
+      "lat": 8.4786282,
+      "lng": 76.9128343
+    }
+  }
+]

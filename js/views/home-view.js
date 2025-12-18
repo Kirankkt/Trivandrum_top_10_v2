@@ -99,37 +99,37 @@ async function renderHomeView() {
         </a>
       </div>
 
-      <!-- Coming Soon Categories -->
-      <h3 class="explore-subsection-title">Coming Soon</h3>
+      <!-- More Categories -->
+      <h3 class="explore-subsection-title">More to Explore</h3>
       <div class="explore-grid explore-grid-secondary">
-        <a href="#/malls" class="explore-card explore-card-soon">
+        <a href="#/malls" class="explore-card">
           <div class="explore-card-bg" style="background-image: url('images/skyline.png')"></div>
-          <div class="explore-card-overlay explore-card-overlay-soon"></div>
-          <span class="explore-card-badge">Coming Soon</span>
+          <div class="explore-card-overlay"></div>
+          <span class="explore-card-badge explore-card-badge-new">New</span>
           <div class="explore-card-content">
             <span class="explore-card-label">Shop</span>
             <h3>Shopping</h3>
             <p>Malls, boutiques & specialty shops</p>
           </div>
         </a>
-        <a href="#/museums" class="explore-card explore-card-soon">
+        <a href="#/museums" class="explore-card">
           <div class="explore-card-bg" style="background-image: url('images/skyline.png')"></div>
-          <div class="explore-card-overlay explore-card-overlay-soon"></div>
-          <span class="explore-card-badge">Coming Soon</span>
+          <div class="explore-card-overlay"></div>
+          <span class="explore-card-badge explore-card-badge-new">New</span>
           <div class="explore-card-content">
             <span class="explore-card-label">Culture</span>
             <h3>Culture</h3>
             <p>Museums & religious sites</p>
           </div>
         </a>
-        <a href="#/services" class="explore-card explore-card-soon">
+        <a href="#/healthcare" class="explore-card">
           <div class="explore-card-bg" style="background-image: url('images/skyline.png')"></div>
-          <div class="explore-card-overlay explore-card-overlay-soon"></div>
-          <span class="explore-card-badge">Coming Soon</span>
+          <div class="explore-card-overlay"></div>
+          <span class="explore-card-badge explore-card-badge-new">New</span>
           <div class="explore-card-content">
             <span class="explore-card-label">Services</span>
-            <h3>Services</h3>
-            <p>Essential services & gaps</p>
+            <h3>Healthcare</h3>
+            <p>Hospitals & medical centers</p>
           </div>
         </a>
       </div>

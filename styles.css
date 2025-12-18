@@ -5016,6 +5016,12 @@ footer .small {
   z-index: 3;
 }
 
+/* New Badge Styling */
+.explore-card-badge-new {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+}
+
 /* Coming Soon Card Styling */
 .explore-card-soon {
   opacity: 0.85;
@@ -5061,5 +5067,83 @@ footer .small {
   .explore-subsection-title {
     font-size: 1.1rem;
     margin: 2rem 0 0.75rem;
+  }
+}
+
+/* ========================================
+   SERVICES GRID & CATEGORY CARDS
+   ======================================== */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.service-category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.service-category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  border-color: var(--color-primary, #00aa6c);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.service-category-card h3 {
+  font-family: var(--font-serif, 'Playfair Display', serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text, #1a1a1a);
+  margin: 0 0 0.5rem;
+}
+
+.service-category-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Card locality styling */
+.card-locality {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0.25rem 0 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .service-category-card {
+    padding: 1.5rem;
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+  }
+
+  .service-category-card h3 {
+    font-size: 1.25rem;
   }
 }
