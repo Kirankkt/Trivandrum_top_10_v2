@@ -335,13 +335,6 @@ async function addCategoryToMap(category) {
             // Fallback: Click also opens the content as a popup
             marker.bindPopup(content, { maxWidth: 280 });
 
-            // Visual feedback on hover
-            marker.on('mouseover', function () {
-                this.setIcon(createMarkerIcon(category, 'large'));
-            });
-            marker.on('mouseout', function () {
-                this.setIcon(createMarkerIcon(category));
-            });
 
             markers.push(marker);
         }
