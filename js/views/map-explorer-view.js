@@ -74,6 +74,20 @@ const MAP_CATEGORIES = {
         color: '#64748b', // Slate gray
         dataFile: 'data/banking.json',
         detailRoute: '/entity/banking/'
+    },
+    specialty_shops: {
+        label: 'Specialty Shop',
+        icon: '🛍️',
+        color: '#f59e0b', // Amber
+        dataFile: 'data/specialty_shops.json',
+        detailRoute: '/entity/specialty_shops/'
+    },
+    boutiques: {
+        label: 'Boutique',
+        icon: '👗',
+        color: '#ec4899', // Pink
+        dataFile: 'data/boutiques.json',
+        detailRoute: '/entity/boutiques/'
     }
 };
 
@@ -435,11 +449,12 @@ async function renderMapExplorerView() {
 
     app.innerHTML = '<div class="loading">Loading map data...</div>';
 
-    // Load all data first
-    await loadAllData();
-    const counts = getCategoryCounts();
+    try {
+        // Load all data first
+        await loadAllData();
+        const counts = getCategoryCounts();
 
-    app.innerHTML = `
+        app.innerHTML = `
         <div class="map-explorer-page">
             <div class="map-controls-sidebar">
                 <div class="map-controls-header">
@@ -502,6 +517,11 @@ async function renderMapExplorerView() {
                             <span class="toggle-label">Malls</span>
                             <span class="toggle-count">${counts.malls || 0}</span>
                         </button>
+                        <button class="map-category-toggle" data-category="boutiques" style="--toggle-color: ${MAP_CATEGORIES.boutiques.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.boutiques.icon}</span>
+                            <span class="toggle-label">Boutiques</span>
+                            <span class="toggle-count">${counts.boutiques || 0}</span>
+                        </button>
                         <button class="map-category-toggle" data-category="specialty_shops" style="--toggle-color: ${MAP_CATEGORIES.specialty_shops.color}">
                             <span class="toggle-icon">${MAP_CATEGORIES.specialty_shops.icon}</span>
                             <span class="toggle-label">Specialty</span>
@@ -539,96 +559,106 @@ async function renderMapExplorerView() {
         </div>
     `;
 
-    // Proper cleanup of previous map instance
-    if (mapInstance) {
-        mapInstance.remove();
-        mapInstance = null;
-    }
-
-    // Reset state
-    categoryLayers = {};
-    activeCategories = new Set(['localities']);
-
-    // Initialize map
-    mapInstance = L.map('explorer-map').setView([8.5241, 76.9366], 12);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors',
-        maxZoom: 18
-    }).addTo(mapInstance);
-
-    // Load localities
-    await addCategoryToMap('localities');
-    updateUI();
-
-    // Fit to localities bounds
-    if (categoryLayers.localities) {
-        const bounds = categoryLayers.localities.getBounds();
-        if (bounds.isValid()) {
-            mapInstance.fitBounds(bounds.pad(0.1));
+        // Proper cleanup of previous map instance
+        if (mapInstance) {
+            mapInstance.remove();
+            mapInstance = null;
         }
-    }
 
-    // Event handlers
-    document.querySelectorAll('.map-category-toggle').forEach(btn => {
-        btn.addEventListener('click', async () => {
-            const category = btn.dataset.category;
-            await toggleCategory(category, !activeCategories.has(category));
+        // Reset state
+        categoryLayers = {};
+        activeCategories = new Set(['localities']);
+
+        // Initialize map
+        mapInstance = L.map('explorer-map').setView([8.5241, 76.9366], 12);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+            maxZoom: 18
+        }).addTo(mapInstance);
+
+        // Load localities
+        await addCategoryToMap('localities');
+        updateUI();
+
+        // Fit to localities bounds
+        if (categoryLayers.localities) {
+            const bounds = categoryLayers.localities.getBounds();
+            if (bounds.isValid()) {
+                mapInstance.fitBounds(bounds.pad(0.1));
+            }
+        }
+
+        // Event handlers
+        document.querySelectorAll('.map-category-toggle').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const category = btn.dataset.category;
+                await toggleCategory(category, !activeCategories.has(category));
+            });
         });
-    });
 
-    document.getElementById('show-all-btn').addEventListener('click', async () => {
-        for (const category of Object.keys(MAP_CATEGORIES)) {
-            if (!activeCategories.has(category)) {
-                await toggleCategory(category, true);
-            }
-        }
-    });
-
-    document.getElementById('clear-btn').addEventListener('click', () => {
-        for (const category of [...activeCategories]) {
-            toggleCategory(category, false);
-        }
-    });
-
-    // Handle URL params for highlighting
-    const urlParams = new URLSearchParams(window.location.hash.split('?')[1] || '');
-    const highlightId = urlParams.get('highlight');
-    const highlightCategory = urlParams.get('category');
-
-    if (highlightId && highlightCategory) {
-        console.log('[Debug] Highlighting entity:', highlightCategory, highlightId);
-        await toggleCategory(highlightCategory, true);
-
-        // Wait a bit for the layer and markers to be ready
-        setTimeout(() => {
-            const layerGroup = categoryLayers[highlightCategory];
-            if (!layerGroup) return;
-
-            let targetMarker = null;
-
-            // Find marker (account for layer group vs cluster group)
-            if (layerGroup.eachLayer) {
-                layerGroup.eachLayer(marker => {
-                    const content = marker.getPopup()?.getContent();
-                    if (content && content.includes(highlightId)) {
-                        targetMarker = marker;
-                    }
-                });
-            }
-
-            if (targetMarker) {
-                // If it's in a cluster, we need to show it first
-                if (layerGroup.zoomToShowLayer) {
-                    layerGroup.zoomToShowLayer(targetMarker, () => {
-                        targetMarker.openPopup();
-                    });
-                } else {
-                    mapInstance.setView(targetMarker.getLatLng(), 15);
-                    targetMarker.openPopup();
+        document.getElementById('show-all-btn').addEventListener('click', async () => {
+            for (const category of Object.keys(MAP_CATEGORIES)) {
+                if (!activeCategories.has(category)) {
+                    await toggleCategory(category, true);
                 }
             }
-        }, 500);
+        });
+
+        document.getElementById('clear-btn').addEventListener('click', () => {
+            for (const category of [...activeCategories]) {
+                toggleCategory(category, false);
+            }
+        });
+
+        // Handle URL params for highlighting
+        const urlParams = new URLSearchParams(window.location.hash.split('?')[1] || '');
+        const highlightId = urlParams.get('highlight');
+        const highlightCategory = urlParams.get('category');
+
+        if (highlightId && highlightCategory) {
+            console.log('[Debug] Highlighting entity:', highlightCategory, highlightId);
+            await toggleCategory(highlightCategory, true);
+
+            // Wait a bit for the layer and markers to be ready
+            setTimeout(() => {
+                const layerGroup = categoryLayers[highlightCategory];
+                if (!layerGroup) return;
+
+                let targetMarker = null;
+
+                // Find marker (account for layer group vs cluster group)
+                if (layerGroup.eachLayer) {
+                    layerGroup.eachLayer(marker => {
+                        const content = marker.getPopup()?.getContent();
+                        if (content && content.includes(highlightId)) {
+                            targetMarker = marker;
+                        }
+                    });
+                }
+
+                if (targetMarker) {
+                    // If it's in a cluster, we need to show it first
+                    if (layerGroup.zoomToShowLayer) {
+                        layerGroup.zoomToShowLayer(targetMarker, () => {
+                            targetMarker.openPopup();
+                        });
+                    } else {
+                        mapInstance.setView(targetMarker.getLatLng(), 15);
+                        targetMarker.openPopup();
+                    }
+                }
+            }, 500);
+        }
+    } catch (error) {
+        console.error('Error rendering map explorer:', error);
+        app.innerHTML = `
+        <div class="error-container" style="text-align: center; padding: 3rem;">
+            <h2>🗺️ Map failed to load</h2>
+            <p>${error.message}</p>
+            <button onclick="location.reload()" class="btn-primary" style="margin-top: 1rem; padding: 0.5rem 1.5rem; border-radius: 8px;">Try Again</button>
+        </div>
+    `;
     }
 }
 
