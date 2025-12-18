@@ -311,8 +311,10 @@ async function addCategoryToMap(category) {
         }
 
         if (lat && lng) {
+            const entityId = category === 'localities' ? entity.name : entity.id;
             const marker = L.marker([lat, lng], {
-                icon: createMarkerIcon(category)
+                icon: createMarkerIcon(category),
+                entityId: entityId // Store ID for precise matching
             });
 
             // Different popup for localities vs other entities
@@ -565,9 +567,21 @@ async function renderMapExplorerView() {
             mapInstance = null;
         }
 
-        // Reset state
+        // Initial layout
         categoryLayers = {};
-        activeCategories = new Set(['localities']);
+
+        // Handle URL params for highlighting early to set initial state
+        const urlParams = new URLSearchParams(window.location.hash.split('?')[1] || '');
+        const highlightId = urlParams.get('highlight');
+        const highlightCategory = urlParams.get('category');
+
+        if (highlightId && highlightCategory && highlightCategory !== 'localities') {
+            // Focus ONLY on the highlighted category
+            activeCategories = new Set([highlightCategory]);
+            console.log(`[Debug] Focus highlight: ${highlightCategory}`);
+        } else {
+            activeCategories = new Set(['localities']);
+        }
 
         // Initialize map
         mapInstance = L.map('explorer-map').setView([8.5241, 76.9366], 12);
@@ -577,8 +591,10 @@ async function renderMapExplorerView() {
             maxZoom: 18
         }).addTo(mapInstance);
 
-        // Load localities
-        await addCategoryToMap('localities');
+        // Load active categories
+        for (const cat of activeCategories) {
+            await addCategoryToMap(cat);
+        }
         updateUI();
 
         // Fit to localities bounds
@@ -611,33 +627,33 @@ async function renderMapExplorerView() {
             }
         });
 
-        // Handle URL params for highlighting
-        const urlParams = new URLSearchParams(window.location.hash.split('?')[1] || '');
-        const highlightId = urlParams.get('highlight');
-        const highlightCategory = urlParams.get('category');
-
+        // Perform highlighting if parameters exist
         if (highlightId && highlightCategory) {
             console.log('[Debug] Highlighting entity:', highlightCategory, highlightId);
-            await toggleCategory(highlightCategory, true);
 
-            // Wait a bit for the layer and markers to be ready
+            // Ensure category is loaded (if not already handled in initial set)
+            if (!activeCategories.has(highlightCategory)) {
+                await toggleCategory(highlightCategory, true);
+            }
+
+            // Wait a bit for the layer and markers to be fully ready
             setTimeout(() => {
                 const layerGroup = categoryLayers[highlightCategory];
                 if (!layerGroup) return;
 
                 let targetMarker = null;
 
-                // Find marker (account for layer group vs cluster group)
+                // Find marker using precise entityId
                 if (layerGroup.eachLayer) {
                     layerGroup.eachLayer(marker => {
-                        const content = marker.getPopup()?.getContent();
-                        if (content && content.includes(highlightId)) {
+                        if (marker.options.entityId === highlightId) {
                             targetMarker = marker;
                         }
                     });
                 }
 
                 if (targetMarker) {
+                    console.log('[Debug] Target marker found:', highlightId);
                     // If it's in a cluster, we need to show it first
                     if (layerGroup.zoomToShowLayer) {
                         layerGroup.zoomToShowLayer(targetMarker, () => {
@@ -647,6 +663,8 @@ async function renderMapExplorerView() {
                         mapInstance.setView(targetMarker.getLatLng(), 15);
                         targetMarker.openPopup();
                     }
+                } else {
+                    console.warn('[Debug] Target marker NOT found:', highlightId);
                 }
             }, 500);
         }
