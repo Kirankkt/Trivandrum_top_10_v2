@@ -46,11 +46,65 @@
 
             <nav class="main-nav">
                 <a href="#/" class="nav-link active">Home</a>
-                <a href="#/localities" class="nav-link">Localities</a>
-                <a href="#/restaurants" class="nav-link">Restaurants</a>
-                <a href="#/hotels" class="nav-link">Hotels</a>
-                <a href="#/cafes" class="nav-link">Cafes</a>
-                <a href="#/experiences" class="nav-link">Experiences</a>
+                <div class="nav-group">
+                    <button class="nav-group-trigger">
+                        <span>Live</span>
+                        <span class="nav-group-arrow">▼</span>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="#/localities" class="nav-dropdown-item">Localities</a>
+                    </div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-group-trigger">
+                        <span>Eat</span>
+                        <span class="nav-group-arrow">▼</span>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="#/restaurants" class="nav-dropdown-item">Restaurants</a>
+                        <a href="#/cafes" class="nav-dropdown-item">Cafes</a>
+                    </div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-group-trigger">
+                        <span>Stay</span>
+                        <span class="nav-group-arrow">▼</span>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="#/hotels" class="nav-dropdown-item">Hotels</a>
+                    </div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-group-trigger">
+                        <span>Shop</span>
+                        <span class="nav-group-arrow">▼</span>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="#/malls" class="nav-dropdown-item">Malls <span class="nav-item-badge">Soon</span></a>
+                        <a href="#/boutiques" class="nav-dropdown-item">Boutiques <span class="nav-item-badge">Soon</span></a>
+                        <a href="#/specialty-shops" class="nav-dropdown-item">Specialty Shops <span class="nav-item-badge">Soon</span></a>
+                    </div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-group-trigger">
+                        <span>Culture</span>
+                        <span class="nav-group-arrow">▼</span>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="#/museums" class="nav-dropdown-item">Museums <span class="nav-item-badge">Soon</span></a>
+                        <a href="#/religious-sites" class="nav-dropdown-item">Religious Sites <span class="nav-item-badge">Soon</span></a>
+                    </div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-group-trigger">
+                        <span>Services</span>
+                        <span class="nav-group-arrow">▼</span>
+                    </button>
+                    <div class="nav-dropdown">
+                        <a href="#/services" class="nav-dropdown-item">Services & Gaps <span class="nav-item-badge">Soon</span></a>
+                    </div>
+                </div>
+                <a href="#/map" class="nav-link">Map</a>
             </nav>
         </div>
     </header>
@@ -80,6 +134,7 @@
     <!-- JavaScript -->
     <script src="js/supabase-client.js"></script>
     <script src="js/utils/data-manager.js"></script>
+    <script src="js/components/shared-components.js"></script>
     <script src="js/search.js"></script>
     <script src="js/views/ranking-view.js"></script>
     <script src="js/views/customize-view.js"></script>
@@ -90,6 +145,7 @@
     <script src="js/views/dining-customize-view.js"></script>
     <script src="js/views/discover-view.js"></script>
     <script src="js/views/home-view.js"></script>
+    <script src="js/views/category-stub-views.js"></script>
     <script src="app.js"></script>
 </body>
 

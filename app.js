@@ -46,6 +46,33 @@ function route() {
             <h1>Experiences</h1>
             <p>Top experiences in Trivandrum coming soon!</p>
           </div>`;
+    // Shop category routes
+    } else if (hash === '/malls') {
+        console.log('[Debug] Routing to Malls');
+        renderMallsView();
+    } else if (hash === '/boutiques') {
+        console.log('[Debug] Routing to Boutiques');
+        renderBoutiquesView();
+    } else if (hash === '/specialty-shops') {
+        console.log('[Debug] Routing to Specialty Shops');
+        renderSpecialtyShopsView();
+    } else if (hash === '/shop') {
+        console.log('[Debug] Routing to Shop Category');
+        renderShopCategoryView();
+    // Culture category routes
+    } else if (hash === '/museums') {
+        console.log('[Debug] Routing to Museums');
+        renderMuseumsView();
+    } else if (hash === '/religious-sites') {
+        console.log('[Debug] Routing to Religious Sites');
+        renderReligiousSitesView();
+    } else if (hash === '/culture') {
+        console.log('[Debug] Routing to Culture Category');
+        renderCultureCategoryView();
+    // Services category routes
+    } else if (hash === '/services') {
+        console.log('[Debug] Routing to Services');
+        renderServicesView();
     } else if (hash.startsWith('/discover/')) {
         const localityName = decodeURIComponent(hash.replace('/discover/', ''));
         console.log('[Debug] Routing to Discover View for:', localityName);

@@ -49,11 +49,14 @@ async function renderHomeView() {
     <!-- Explore Section -->
     <section class="explore-section">
       <h2 class="section-title">Explore by Category</h2>
+
+      <!-- Primary Categories -->
       <div class="explore-grid">
         <a href="#/localities" class="explore-card">
           <div class="explore-card-bg" style="background-image: url('images/localities/locality_kowdiar_1765515570335.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
+            <span class="explore-card-label">Live</span>
             <h3>Localities</h3>
             <p>Find your perfect neighborhood</p>
           </div>
@@ -62,14 +65,16 @@ async function renderHomeView() {
           <div class="explore-card-bg" style="background-image: url('images/categories/restaurant_card.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
+            <span class="explore-card-label">Eat</span>
             <h3>Restaurants</h3>
             <p>Best dining experiences</p>
           </div>
         </a>
         <a href="#/cafes" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHppzWCQbZcQ1TN6p6T5HiDnZp7BBd1ZBK82eRSCMGUH5l-AJheR04UgXHIiOzPhHpesMtAFt2bIiYDMxuc99iMYghAnjFEoBd5PyHX6JZ8fGyEts17uI2XN9SQSotdyfF34cFefN25csXUkOLXKtE1zLJJtnbIjwWt-765426bG13JFIejN5oCmDYn2yC_jn2PasRG0iwpDZEEi5gXbdafbEwTjAO8SetoQLX2_Y6NkKVtp8ho-WmS2CoUuMymf1vH7PoZKFeLg8BPScubUn8LkyWjfHXmAIgggsOLXdGqDnw&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I')"></div>
+          <div class="explore-card-bg" style="background-image: url('images/categories/cafe_card.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
+            <span class="explore-card-label">Eat</span>
             <h3>Cafes</h3>
             <p>Coffee, tea & hangouts</p>
           </div>
@@ -78,16 +83,53 @@ async function renderHomeView() {
           <div class="explore-card-bg" style="background-image: url('images/categories/hotel_card.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
+            <span class="explore-card-label">Stay</span>
             <h3>Hotels</h3>
             <p>Where to stay</p>
           </div>
         </a>
-        <a href="#/experiences" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/categories/experiences_card.png')"></div>
+        <a href="#/map" class="explore-card">
+          <div class="explore-card-bg" style="background-image: url('images/categories/map_card.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
-            <h3>Experiences</h3>
-            <p>Things to do</p>
+            <span class="explore-card-label">Explore</span>
+            <h3>Map</h3>
+            <p>Interactive city explorer</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Coming Soon Categories -->
+      <h3 class="explore-subsection-title">Coming Soon</h3>
+      <div class="explore-grid explore-grid-secondary">
+        <a href="#/malls" class="explore-card explore-card-soon">
+          <div class="explore-card-bg" style="background-image: url('images/skyline.png')"></div>
+          <div class="explore-card-overlay explore-card-overlay-soon"></div>
+          <span class="explore-card-badge">Coming Soon</span>
+          <div class="explore-card-content">
+            <span class="explore-card-label">Shop</span>
+            <h3>Shopping</h3>
+            <p>Malls, boutiques & specialty shops</p>
+          </div>
+        </a>
+        <a href="#/museums" class="explore-card explore-card-soon">
+          <div class="explore-card-bg" style="background-image: url('images/skyline.png')"></div>
+          <div class="explore-card-overlay explore-card-overlay-soon"></div>
+          <span class="explore-card-badge">Coming Soon</span>
+          <div class="explore-card-content">
+            <span class="explore-card-label">Culture</span>
+            <h3>Culture</h3>
+            <p>Museums & religious sites</p>
+          </div>
+        </a>
+        <a href="#/services" class="explore-card explore-card-soon">
+          <div class="explore-card-bg" style="background-image: url('images/skyline.png')"></div>
+          <div class="explore-card-overlay explore-card-overlay-soon"></div>
+          <span class="explore-card-badge">Coming Soon</span>
+          <div class="explore-card-content">
+            <span class="explore-card-label">Services</span>
+            <h3>Services</h3>
+            <p>Essential services & gaps</p>
           </div>
         </a>
       </div>
