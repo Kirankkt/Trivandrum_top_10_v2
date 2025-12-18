@@ -237,6 +237,13 @@ async function renderDetailView(localityName) {
                 </div>
             </div>
             
+            <!-- View on Explorer Map -->
+            <div class="entity-map-cta">
+                <a href="#/map?highlight=${encodeURIComponent(locality.name)}&category=localities" class="map-explorer-link">
+                    🗺️ View on City Map Explorer
+                </a>
+            </div>
+
             <!-- Premium Spots Section - Will be populated dynamically -->
             <div id="premium-spots-container"></div>
         `;

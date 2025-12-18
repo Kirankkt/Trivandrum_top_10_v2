@@ -83,6 +83,7 @@ let categoryLayers = {};
 let activeCategories = new Set(['localities']);
 let allEntityData = {}; // Cache for entity data
 let localityFacilities = {}; // Facilities near each locality
+let isDataLoading = false;
 
 /**
  * Calculate distance between two coordinates (km)
@@ -91,10 +92,10 @@ function haversineDistance(lat1, lon1, lat2, lon2) {
     const R = 6371;
     const dLat = (lat2 - lat1) * Math.PI / 180;
     const dLon = (lon2 - lon1) * Math.PI / 180;
-    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-              Math.sin(dLon/2) * Math.sin(dLon/2);
-    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
 /**
@@ -123,7 +124,7 @@ function createMarkerIcon(category, size = 'normal') {
             transition: transform 0.2s;
         ">${config.icon}</div>`,
         iconSize: [dimensions, dimensions],
-        iconAnchor: [dimensions/2, dimensions/2]
+        iconAnchor: [dimensions / 2, dimensions / 2]
     });
 }
 
@@ -212,27 +213,33 @@ function createLocalityPopup(locality) {
  * Load all entity data and compute locality facilities
  */
 async function loadAllData() {
+    if (Object.keys(allEntityData).length > 1 && !isDataLoading) return; // Already loaded
+
+    isDataLoading = true;
+    console.log('[Debug] Loading all map data...');
+
     // Load localities first
     const rankingsData = await loadRankings();
     allEntityData.localities = rankingsData?.all_rankings || [];
 
-    // Load all other categories
-    for (const [category, config] of Object.entries(MAP_CATEGORIES)) {
-        if (category === 'localities' || !config.dataFile) continue;
-
-        try {
-            const response = await fetch(config.dataFile);
-            if (response.ok) {
-                allEntityData[category] = await response.json();
+    // Load all other categories in parallel for speed
+    const loadPromises = Object.entries(MAP_CATEGORIES)
+        .filter(([cat, config]) => cat !== 'localities' && config.dataFile)
+        .map(async ([category, config]) => {
+            try {
+                const response = await fetch(config.dataFile);
+                if (response.ok) {
+                    allEntityData[category] = await response.json();
+                }
+            } catch (e) {
+                console.warn(`Failed to load ${category}:`, e);
+                allEntityData[category] = [];
             }
-        } catch (e) {
-            console.warn(`Failed to load ${category}:`, e);
-            allEntityData[category] = [];
-        }
-    }
+        });
 
-    // Compute facilities near each locality
+    await Promise.all(loadPromises);
     computeLocalityFacilities();
+    isDataLoading = false;
 }
 
 /**
@@ -302,10 +309,10 @@ async function addCategoryToMap(category) {
             }
 
             // Hover effects
-            marker.on('mouseover', function() {
+            marker.on('mouseover', function () {
                 this.setIcon(createMarkerIcon(category, 'large'));
             });
-            marker.on('mouseout', function() {
+            marker.on('mouseout', function () {
                 this.setIcon(createMarkerIcon(category));
             });
 
@@ -320,7 +327,7 @@ async function addCategoryToMap(category) {
             spiderfyOnMaxZoom: true,
             showCoverageOnHover: false,
             zoomToBoundsOnClick: true,
-            iconCreateFunction: function(cluster) {
+            iconCreateFunction: function (cluster) {
                 const count = cluster.getChildCount();
                 return L.divIcon({
                     html: `<div style="
@@ -495,6 +502,11 @@ async function renderMapExplorerView() {
                             <span class="toggle-label">Malls</span>
                             <span class="toggle-count">${counts.malls || 0}</span>
                         </button>
+                        <button class="map-category-toggle" data-category="specialty_shops" style="--toggle-color: ${MAP_CATEGORIES.specialty_shops.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.specialty_shops.icon}</span>
+                            <span class="toggle-label">Specialty</span>
+                            <span class="toggle-count">${counts.specialty_shops || 0}</span>
+                        </button>
                         <button class="map-category-toggle" data-category="museums" style="--toggle-color: ${MAP_CATEGORIES.museums.color}">
                             <span class="toggle-icon">${MAP_CATEGORIES.museums.icon}</span>
                             <span class="toggle-label">Museums</span>
@@ -527,6 +539,16 @@ async function renderMapExplorerView() {
         </div>
     `;
 
+    // Proper cleanup of previous map instance
+    if (mapInstance) {
+        mapInstance.remove();
+        mapInstance = null;
+    }
+
+    // Reset state
+    categoryLayers = {};
+    activeCategories = new Set(['localities']);
+
     // Initialize map
     mapInstance = L.map('explorer-map').setView([8.5241, 76.9366], 12);
 
@@ -534,10 +556,6 @@ async function renderMapExplorerView() {
         attribution: '© OpenStreetMap contributors',
         maxZoom: 18
     }).addTo(mapInstance);
-
-    // Reset state
-    categoryLayers = {};
-    activeCategories = new Set(['localities']);
 
     // Load localities
     await addCategoryToMap('localities');
@@ -579,21 +597,38 @@ async function renderMapExplorerView() {
     const highlightCategory = urlParams.get('category');
 
     if (highlightId && highlightCategory) {
+        console.log('[Debug] Highlighting entity:', highlightCategory, highlightId);
         await toggleCategory(highlightCategory, true);
+
+        // Wait a bit for the layer and markers to be ready
         setTimeout(() => {
-            const layer = categoryLayers[highlightCategory];
-            if (layer) {
-                layer.eachLayer(marker => {
-                    if (marker.getPopup) {
-                        const popup = marker.getPopup();
-                        if (popup && popup.getContent().includes(highlightId)) {
-                            mapInstance.setView(marker.getLatLng(), 15);
-                            marker.openPopup();
-                        }
+            const layerGroup = categoryLayers[highlightCategory];
+            if (!layerGroup) return;
+
+            let targetMarker = null;
+
+            // Find marker (account for layer group vs cluster group)
+            if (layerGroup.eachLayer) {
+                layerGroup.eachLayer(marker => {
+                    const content = marker.getPopup()?.getContent();
+                    if (content && content.includes(highlightId)) {
+                        targetMarker = marker;
                     }
                 });
             }
-        }, 300);
+
+            if (targetMarker) {
+                // If it's in a cluster, we need to show it first
+                if (layerGroup.zoomToShowLayer) {
+                    layerGroup.zoomToShowLayer(targetMarker, () => {
+                        targetMarker.openPopup();
+                    });
+                } else {
+                    mapInstance.setView(targetMarker.getLatLng(), 15);
+                    targetMarker.openPopup();
+                }
+            }
+        }, 500);
     }
 }
 

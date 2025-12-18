@@ -71,7 +71,7 @@ async function renderHomeView() {
           </div>
         </a>
         <a href="#/cafes" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/categories/cafe_card.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('images/localities/locality_pattom_1765515551840.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-card-label">Eat</span>
@@ -80,7 +80,7 @@ async function renderHomeView() {
           </div>
         </a>
         <a href="#/hotels" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/categories/hotel_card.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('images/localities/locality_kowdiar_1765515570335.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-card-label">Stay</span>
@@ -89,7 +89,7 @@ async function renderHomeView() {
           </div>
         </a>
         <a href="#/map" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/categories/map_card.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('images/tech.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-card-label">Explore</span>
