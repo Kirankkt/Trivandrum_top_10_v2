@@ -104,7 +104,7 @@ async function renderDiningView(type) {
                 </div>
                 
                 <main class="dining-grid">
-                    ${top10.map((place, index) => createDiningCard(place, index + 1, config)).join('')}
+                    ${top10.map((place, index) => createDiningCard(place, index + 1, config, type)).join('')}
                 </main>
                 
                 ${remaining.length > 0 ? `
@@ -113,7 +113,7 @@ async function renderDiningView(type) {
                     </div>
                     
                     <div class="dining-grid hidden-spots" id="hidden-spots" style="display: none;">
-                        ${remaining.map((place, index) => createDiningCard(place, index + 11, config)).join('')}
+                        ${remaining.map((place, index) => createDiningCard(place, index + 11, config, type)).join('')}
                     </div>
                     
                     <div class="show-less-container" id="show-less-container" style="display: none;">
@@ -167,7 +167,7 @@ async function renderDiningView(type) {
     }
 }
 
-function createDiningCard(place, rank, config) {
+function createDiningCard(place, rank, config, type) {
     const stars = '⭐'.repeat(Math.round(place.rating));
     const price = '$'.repeat(place.price_level || 2);
 
@@ -179,38 +179,45 @@ function createDiningCard(place, rank, config) {
     // Featured badge for top 3
     const featuredBadge = rank <= 3 ? `<span class="featured-badge">${rank === 1 ? '🏆 Top Pick' : rank === 2 ? '🥈 Runner Up' : '🥉 Notable'}</span>` : '';
 
+    // Detail page link
+    const detailUrl = `#/entity/${type}/${encodeURIComponent(place.id)}`;
+
     return `
-        <div class="dining-card ${rank <= 3 ? 'featured' : ''}">
-            <div class="card-rank">#${rank}</div>
-            ${featuredBadge}
-            <div class="card-image-container">
-                <img src="${place.image}" alt="${place.name}" class="card-image" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250?text=No+Image'">
-                <div class="card-overlay">
-                    <span class="card-price">${price}</span>
-                </div>
-            </div>
-            
-            <div class="card-content">
-                <div class="card-header">
-                    <h3 class="card-title">${place.name}</h3>
-                    <div class="card-rating">
-                        <span class="rating-val">${place.rating}</span>
-                        <span class="rating-stars">${stars}</span>
-                        <span class="review-count">(${place.reviews.toLocaleString()} reviews)</span>
+        <a href="${detailUrl}" class="dining-card-link">
+            <div class="dining-card ${rank <= 3 ? 'featured' : ''}">
+                <div class="card-rank">#${rank}</div>
+                ${featuredBadge}
+                <div class="card-image-container">
+                    <img src="${place.image}" alt="${place.name}" class="card-image" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250?text=No+Image'">
+                    <div class="card-overlay">
+                        <span class="card-price">${price}</span>
                     </div>
                 </div>
 
-                <div class="vibe-tags">
-                    ${vibeBadges}
-                </div>
-
-                <div class="card-footer">
-                    <div class="score-pill" style="border-color: ${config.badgeColor}; color: ${config.badgeColor}">
-                         Score: ${place.score}/100
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">${place.name}</h3>
+                        <div class="card-rating">
+                            <span class="rating-val">${place.rating}</span>
+                            <span class="rating-stars">${stars}</span>
+                            <span class="review-count">(${place.reviews.toLocaleString()} reviews)</span>
+                        </div>
                     </div>
-                    <a href="https://www.google.com/maps/place/?q=place_id:${place.id}" target="_blank" class="btn-map">View Map ↗</a>
+
+                    ${place.locality ? `<p class="card-locality">📍 ${place.locality}</p>` : ''}
+
+                    <div class="vibe-tags">
+                        ${vibeBadges}
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="score-pill" style="border-color: ${config.badgeColor}; color: ${config.badgeColor}">
+                             Score: ${place.score}/100
+                        </div>
+                        <span class="btn-details">View Details →</span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
     `;
 }

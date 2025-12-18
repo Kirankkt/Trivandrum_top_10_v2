@@ -61,7 +61,7 @@ async function renderCategoryView(type, config) {
                 </div>
 
                 <main class="dining-grid">
-                    ${top10.map((item, index) => createCategoryItemCard(item, index + 1, config)).join('')}
+                    ${top10.map((item, index) => createCategoryItemCard(item, index + 1, config, type)).join('')}
                 </main>
 
                 ${remaining.length > 0 ? `
@@ -70,7 +70,7 @@ async function renderCategoryView(type, config) {
                     </div>
 
                     <div class="dining-grid hidden-spots" id="hidden-spots" style="display: none;">
-                        ${remaining.map((item, index) => createCategoryItemCard(item, index + 11, config)).join('')}
+                        ${remaining.map((item, index) => createCategoryItemCard(item, index + 11, config, type)).join('')}
                     </div>
 
                     <div class="show-less-container" id="show-less-container" style="display: none;">
@@ -133,7 +133,7 @@ function setupShowMoreLess() {
 /**
  * Generic card creator for category items
  */
-function createCategoryItemCard(item, rank, config) {
+function createCategoryItemCard(item, rank, config, type) {
     const rating = item.rating ? item.rating.toFixed(1) : 'N/A';
     const stars = item.rating ? '⭐'.repeat(Math.round(item.rating)) : '';
     const reviews = item.reviews ? item.reviews.toLocaleString() : '0';
@@ -149,41 +149,47 @@ function createCategoryItemCard(item, rank, config) {
     // Category-specific styling
     const accentColor = config.badgeColor || '#00aa6c';
 
+    // Detail page link - use underscore format for route matching
+    const routeType = type.replace(/-/g, '_');
+    const detailUrl = `#/entity/${routeType}/${encodeURIComponent(item.id)}`;
+
     return `
-        <div class="dining-card ${rank <= 3 ? 'featured' : ''}">
-            <div class="card-rank" style="background: ${accentColor}">#${rank}</div>
-            ${featuredBadge}
-            <div class="card-image-container">
-                <img src="${item.image || 'images/skyline.png'}" alt="${item.name}" class="card-image" loading="lazy" onerror="this.src='images/skyline.png'">
-                <div class="card-overlay">
-                    ${item.price_level ? `<span class="card-price">${'$'.repeat(item.price_level)}</span>` : ''}
-                </div>
-            </div>
-
-            <div class="card-content">
-                <div class="card-header">
-                    <h3 class="card-title">${item.name}</h3>
-                    <div class="card-rating">
-                        <span class="rating-val">${rating}</span>
-                        <span class="rating-stars">${stars}</span>
-                        <span class="review-count">(${reviews} reviews)</span>
+        <a href="${detailUrl}" class="dining-card-link">
+            <div class="dining-card ${rank <= 3 ? 'featured' : ''}">
+                <div class="card-rank" style="background: ${accentColor}">#${rank}</div>
+                ${featuredBadge}
+                <div class="card-image-container">
+                    <img src="${item.image || 'images/skyline.png'}" alt="${item.name}" class="card-image" loading="lazy" onerror="this.src='images/skyline.png'">
+                    <div class="card-overlay">
+                        ${item.price_level ? `<span class="card-price">${'$'.repeat(item.price_level)}</span>` : ''}
                     </div>
                 </div>
 
-                ${item.locality ? `<p class="card-locality">📍 ${item.locality}</p>` : ''}
-
-                <div class="vibe-tags">
-                    ${vibeBadges}
-                </div>
-
-                <div class="card-footer">
-                    <div class="score-pill" style="border-color: ${accentColor}; color: ${accentColor}">
-                         Score: ${item.score}/100
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">${item.name}</h3>
+                        <div class="card-rating">
+                            <span class="rating-val">${rating}</span>
+                            <span class="rating-stars">${stars}</span>
+                            <span class="review-count">(${reviews} reviews)</span>
+                        </div>
                     </div>
-                    <a href="${item.map_url || `https://www.google.com/maps/place/?q=place_id:${item.id}`}" target="_blank" class="btn-map">View Map ↗</a>
+
+                    ${item.locality ? `<p class="card-locality">📍 ${item.locality}</p>` : ''}
+
+                    <div class="vibe-tags">
+                        ${vibeBadges}
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="score-pill" style="border-color: ${accentColor}; color: ${accentColor}">
+                             Score: ${item.score}/100
+                        </div>
+                        <span class="btn-details">View Details →</span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
     `;
 }
 

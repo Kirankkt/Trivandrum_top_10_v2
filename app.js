@@ -101,6 +101,51 @@ function route() {
             console.error('[Debug] renderDetailView is NOT a function!');
             app.innerHTML = '<div class="error">System Error: renderDetailView missing. Refresh page.</div>';
         }
+    // Entity detail routes (generic pattern: /entity/{category}/{id})
+    } else if (hash.startsWith('/entity/')) {
+        const parts = hash.replace('/entity/', '').split('/');
+        const category = parts[0];
+        const entityId = parts.slice(1).join('/'); // Handle IDs with slashes
+        console.log('[Debug] Routing to Entity Detail:', category, entityId);
+
+        // Route to appropriate detail view
+        switch(category) {
+            case 'restaurants':
+                renderRestaurantDetail(entityId);
+                break;
+            case 'cafes':
+                renderCafeDetail(entityId);
+                break;
+            case 'hotels':
+                renderHotelDetail(entityId);
+                break;
+            case 'malls':
+                renderMallDetail(entityId);
+                break;
+            case 'boutiques':
+                renderBoutiqueDetail(entityId);
+                break;
+            case 'specialty_shops':
+                renderSpecialtyShopDetail(entityId);
+                break;
+            case 'museums':
+                renderMuseumDetail(entityId);
+                break;
+            case 'religious_sites':
+                renderReligiousSiteDetail(entityId);
+                break;
+            case 'healthcare':
+                renderHealthcareDetail(entityId);
+                break;
+            case 'education':
+                renderEducationDetail(entityId);
+                break;
+            case 'banking':
+                renderBankingDetail(entityId);
+                break;
+            default:
+                app.innerHTML = '<div class="error">Unknown category</div>';
+        }
     } else {
         // 404
         console.log('[Debug] 404 Not Found');
