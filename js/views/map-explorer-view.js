@@ -81,6 +81,7 @@ const MAP_CATEGORIES = {
 let mapInstance = null;
 let categoryLayers = {};
 let activeCategories = new Set(['localities']);
+let clusteringEnabled = true; // Enable spatial clustering by default
 
 /**
  * Create marker icon for category
@@ -190,6 +191,7 @@ async function addCategoryToMap(category) {
 
     const data = await loadCategoryData(category);
     const markers = [];
+    const config = MAP_CATEGORIES[category];
 
     data.forEach((entity, index) => {
         let lat, lng;
@@ -222,7 +224,45 @@ async function addCategoryToMap(category) {
         }
     });
 
-    categoryLayers[category] = L.layerGroup(markers);
+    // Use MarkerClusterGroup for spatial clustering (except localities which show rankings)
+    if (clusteringEnabled && category !== 'localities' && typeof L.markerClusterGroup === 'function') {
+        const clusterGroup = L.markerClusterGroup({
+            maxClusterRadius: 50,
+            spiderfyOnMaxZoom: true,
+            showCoverageOnHover: true,
+            zoomToBoundsOnClick: true,
+            iconCreateFunction: function(cluster) {
+                const count = cluster.getChildCount();
+                let size = 'small';
+                if (count > 10) size = 'medium';
+                if (count > 25) size = 'large';
+
+                return L.divIcon({
+                    html: `<div style="
+                        background: ${config.color};
+                        color: white;
+                        width: ${size === 'large' ? '48px' : size === 'medium' ? '40px' : '32px'};
+                        height: ${size === 'large' ? '48px' : size === 'medium' ? '40px' : '32px'};
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: bold;
+                        font-size: ${size === 'large' ? '16px' : size === 'medium' ? '14px' : '12px'};
+                        border: 3px solid white;
+                        box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+                    ">${count}</div>`,
+                    className: `marker-cluster marker-cluster-${category}`,
+                    iconSize: L.point(size === 'large' ? 48 : size === 'medium' ? 40 : 32, size === 'large' ? 48 : size === 'medium' ? 40 : 32)
+                });
+            }
+        });
+        markers.forEach(m => clusterGroup.addLayer(m));
+        categoryLayers[category] = clusterGroup;
+    } else {
+        categoryLayers[category] = L.layerGroup(markers);
+    }
+
     mapInstance.addLayer(categoryLayers[category]);
 }
 

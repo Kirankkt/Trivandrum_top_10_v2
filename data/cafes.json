@@ -18,11 +18,15 @@
     "phone": "079948 55502",
     "map_url": null,
     "metrics": {
-      "sentiment": 28.0,
+      "sentiment": 28,
       "popularity": 1364,
       "convenience": 10
     },
-    "locality": "Pattom"
+    "locality": "Pattom",
+    "location": {
+      "lat": 8.5213285,
+      "lng": 76.9486878
+    }
   },
   {
     "id": "ChIJlZElW8-7BTsREcllH6Vl5ks",
@@ -43,11 +47,15 @@
     "phone": "095622 90006",
     "map_url": null,
     "metrics": {
-      "sentiment": 28.0,
+      "sentiment": 28,
       "popularity": 4845,
       "convenience": 8
     },
-    "locality": "Vazhuthacaud"
+    "locality": "Vazhuthacaud",
+    "location": {
+      "lat": 8.497952600000001,
+      "lng": 76.9604572
+    }
   },
   {
     "id": "ChIJDQLIMJu7BTsR9UVXo4xvsfg",
@@ -66,11 +74,15 @@
     "phone": "080752 02208",
     "map_url": null,
     "metrics": {
-      "sentiment": 28.0,
+      "sentiment": 28,
       "popularity": 649,
       "convenience": 8
     },
-    "locality": "Kowdiar"
+    "locality": "Kowdiar",
+    "location": {
+      "lat": 8.5196848,
+      "lng": 76.95468240000001
+    }
   },
   {
     "id": "ChIJq6qqanq5BTsRj7x7phWVYdk",
@@ -91,11 +103,15 @@
     "phone": "070123 12262",
     "map_url": null,
     "metrics": {
-      "sentiment": 21.0,
+      "sentiment": 21,
       "popularity": 948,
       "convenience": 10
     },
-    "locality": "Ambalamukku"
+    "locality": "Ambalamukku",
+    "location": {
+      "lat": 8.5317369,
+      "lng": 76.9588125
+    }
   },
   {
     "id": "ChIJz_j_H7e7BTsR6oQE2eR-mY8",
@@ -120,7 +136,11 @@
       "popularity": 683,
       "convenience": 8
     },
-    "locality": "Sasthamangalam"
+    "locality": "Sasthamangalam",
+    "location": {
+      "lat": 8.511773400000001,
+      "lng": 76.96635979999999
+    }
   },
   {
     "id": "ChIJB3tgqrq7BTsRBo2j5GepZ5E",
@@ -141,16 +161,20 @@
     "phone": "073562 75996",
     "map_url": null,
     "metrics": {
-      "sentiment": 21.0,
+      "sentiment": 21,
       "popularity": 977,
       "convenience": 8
     },
-    "locality": "Pattom"
+    "locality": "Pattom",
+    "location": {
+      "lat": 8.5181407,
+      "lng": 76.9415306
+    }
   },
   {
     "id": "ChIJDVgfd_S-BTsRDrX9PGGPDgA",
     "name": "Turf Cafe",
-    "score": 67.0,
+    "score": 67,
     "rating": 4.3,
     "reviews": 2652,
     "price_level": 3,
@@ -170,7 +194,11 @@
       "popularity": 2652,
       "convenience": 8
     },
-    "locality": "Kazhakuttom"
+    "locality": "Kazhakuttom",
+    "location": {
+      "lat": 8.548083,
+      "lng": 76.8773598
+    }
   },
   {
     "id": "ChIJxTuHqoa7BTsRnRGPaBnMeZI",
@@ -192,16 +220,20 @@
     "phone": "077360 38082",
     "map_url": null,
     "metrics": {
-      "sentiment": 21.0,
+      "sentiment": 21,
       "popularity": 592,
       "convenience": 8
     },
-    "locality": "Medical College"
+    "locality": "Medical College",
+    "location": {
+      "lat": 8.5153609,
+      "lng": 76.9274502
+    }
   },
   {
     "id": "ChIJKWO_npe7BTsRmY5Y0fywTuk",
     "name": "Pandhal Coffee & Brews",
-    "score": 66.0,
+    "score": 66,
     "rating": 4.5,
     "reviews": 395,
     "price_level": 2,
@@ -221,7 +253,11 @@
       "popularity": 395,
       "convenience": 6
     },
-    "locality": "Kowdiar"
+    "locality": "Kowdiar",
+    "location": {
+      "lat": 8.516813299999999,
+      "lng": 76.9583232
+    }
   },
   {
     "id": "ChIJPROsmAS7BTsRe5QY7UCdiyU",
@@ -243,11 +279,15 @@
     "phone": "087146 42900",
     "map_url": null,
     "metrics": {
-      "sentiment": 21.0,
+      "sentiment": 21,
       "popularity": 760,
       "convenience": 8
     },
-    "locality": "Kowdiar"
+    "locality": "Kowdiar",
+    "location": {
+      "lat": 8.5231929,
+      "lng": 76.9501258
+    }
   },
   {
     "id": "ChIJ_____9i7BTsRYOcrYQMAjrQ",
@@ -272,7 +312,11 @@
       "popularity": 4085,
       "convenience": 8
     },
-    "locality": "Pattom"
+    "locality": "Pattom",
+    "location": {
+      "lat": 8.522522,
+      "lng": 76.95068479999999
+    }
   },
   {
     "id": "ChIJMY_i6DO7BTsRJMsPtFtTmZk",
@@ -291,11 +335,15 @@
     "phone": "088916 44991",
     "map_url": null,
     "metrics": {
-      "sentiment": 21.0,
+      "sentiment": 21,
       "popularity": 612,
       "convenience": 6
     },
-    "locality": "Pattom"
+    "locality": "Pattom",
+    "location": {
+      "lat": 8.5231357,
+      "lng": 76.95244249999999
+    }
   },
   {
     "id": "ChIJkbuTrF-5BTsRZdwMvgujjlM",
@@ -321,7 +369,11 @@
       "popularity": 1921,
       "convenience": 8
     },
-    "locality": "Pattom"
+    "locality": "Pattom",
+    "location": {
+      "lat": 8.5275839,
+      "lng": 76.9388957
+    }
   },
   {
     "id": "ChIJjWoJlOS7BTsRBcc8z7TfVko",
@@ -345,7 +397,11 @@
       "popularity": 368,
       "convenience": 8
     },
-    "locality": "Sasthamangalam"
+    "locality": "Sasthamangalam",
+    "location": {
+      "lat": 8.5117052,
+      "lng": 76.9636968
+    }
   },
   {
     "id": "ChIJO7J8jte7BTsRMTYgCWwiul0",
@@ -367,11 +423,15 @@
     "phone": "0471 243 0437",
     "map_url": null,
     "metrics": {
-      "sentiment": 14.0,
+      "sentiment": 14,
       "popularity": 2988,
       "convenience": 8
     },
-    "locality": "Pattom"
+    "locality": "Pattom",
+    "location": {
+      "lat": 8.5239846,
+      "lng": 76.953334
+    }
   },
   {
     "id": "ChIJXbO_9F67BTsRwwZpy-dEhDg",
@@ -396,7 +456,11 @@
       "popularity": 477,
       "convenience": 8
     },
-    "locality": "Pattom"
+    "locality": "Pattom",
+    "location": {
+      "lat": 8.5231329,
+      "lng": 76.95250999999999
+    }
   },
   {
     "id": "ChIJF9XLMwC_BTsR9r3C_uG0PRo",
@@ -421,7 +485,11 @@
       "popularity": 864,
       "convenience": 8
     },
-    "locality": "Kazhakuttom"
+    "locality": "Kazhakuttom",
+    "location": {
+      "lat": 8.564705,
+      "lng": 76.8803964
+    }
   },
   {
     "id": "ChIJZ2qttYq7BTsR7GAsBcrrtAg",
@@ -441,11 +509,15 @@
     "phone": "096452 63333",
     "map_url": null,
     "metrics": {
-      "sentiment": 28.0,
+      "sentiment": 28,
       "popularity": 3631,
       "convenience": 6
     },
-    "locality": null
+    "locality": null,
+    "location": {
+      "lat": 8.502780099999999,
+      "lng": 76.919406
+    }
   },
   {
     "id": "ChIJMR0IAI-_BTsRKjxYAK2W2Uw",
@@ -472,7 +544,11 @@
       "popularity": 1049,
       "convenience": 10
     },
-    "locality": null
+    "locality": null,
+    "location": {
+      "lat": 8.561867000000001,
+      "lng": 76.8441983
+    }
   },
   {
     "id": "ChIJEYvwzNe7BTsRHGirI5Gjc6g",
@@ -493,11 +569,15 @@
     "phone": "081291 21007",
     "map_url": null,
     "metrics": {
-      "sentiment": 21.0,
+      "sentiment": 21,
       "popularity": 2683,
       "convenience": 10
     },
-    "locality": null
+    "locality": null,
+    "location": {
+      "lat": 8.51374,
+      "lng": 76.9525439
+    }
   },
   {
     "id": "ChIJEx_ylHW_BTsR22LYfSd9Gxc",
@@ -524,7 +604,11 @@
       "popularity": 335,
       "convenience": 4
     },
-    "locality": null
+    "locality": null,
+    "location": {
+      "lat": 8.5645211,
+      "lng": 76.87368579999999
+    }
   },
   {
     "id": "ChIJrbbNZH6_BTsR31E5Xoxk3OQ",
@@ -551,7 +635,11 @@
       "popularity": 1281,
       "convenience": 6
     },
-    "locality": null
+    "locality": null,
+    "location": {
+      "lat": 8.5609901,
+      "lng": 76.845108
+    }
   },
   {
     "id": "ChIJ71yyqBa9BTsR3ZYbQaAAo28",
@@ -570,11 +658,15 @@
     "phone": "075940 49110",
     "map_url": null,
     "metrics": {
-      "sentiment": 21.0,
+      "sentiment": 21,
       "popularity": 173,
       "convenience": 4
     },
-    "locality": null
+    "locality": null,
+    "location": {
+      "lat": 8.515416799999999,
+      "lng": 76.8976172
+    }
   },
   {
     "id": "ChIJhyQZGVu_BTsRQK5kDEq4IVs",
@@ -595,11 +687,15 @@
     "phone": "090374 52873",
     "map_url": null,
     "metrics": {
-      "sentiment": 14.0,
+      "sentiment": 14,
       "popularity": 921,
       "convenience": 6
     },
-    "locality": null
+    "locality": null,
+    "location": {
+      "lat": 8.5598459,
+      "lng": 76.8745254
+    }
   },
   {
     "id": "ChIJXytV0ZS7BTsR-JQvv73eZ_4",
@@ -618,10 +714,14 @@
     "phone": "080890 05330",
     "map_url": null,
     "metrics": {
-      "sentiment": 14.0,
+      "sentiment": 14,
       "popularity": 1154,
       "convenience": 4
     },
-    "locality": null
+    "locality": null,
+    "location": {
+      "lat": 8.494671,
+      "lng": 76.940407
+    }
   }
 ]

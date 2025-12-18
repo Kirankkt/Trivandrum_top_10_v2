@@ -21,7 +21,11 @@
       "popularity": 16660,
       "convenience": 4
     },
-    "locality": "Enchakkal"
+    "locality": "Enchakkal",
+    "location": {
+      "lat": 8.4919648,
+      "lng": 76.95355280000001
+    }
   },
   {
     "id": "ChIJFYjFxQWlBTsRQJAiGdinmxE",
@@ -47,7 +51,11 @@
       "popularity": 3601,
       "convenience": 4
     },
-    "locality": "Kovalam"
+    "locality": "Kovalam",
+    "location": {
+      "lat": 8.4037805,
+      "lng": 76.9740851
+    }
   },
   {
     "id": "ChIJt_IAEbulBTsR1S7_90ceP5Q",
@@ -72,7 +80,11 @@
       "popularity": 12194,
       "convenience": 2
     },
-    "locality": "Kovalam"
+    "locality": "Kovalam",
+    "location": {
+      "lat": 8.3933995,
+      "lng": 76.9719476
+    }
   },
   {
     "id": "ChIJ3aIFmeq9BTsRb821r6M3_gM",
@@ -98,7 +110,11 @@
       "popularity": 5378,
       "convenience": 4
     },
-    "locality": "Ulloor"
+    "locality": "Ulloor",
+    "location": {
+      "lat": 8.5128139,
+      "lng": 76.9015952
+    }
   },
   {
     "id": "ChIJ45D40KW7BTsRtP_CnoND3Pc",
@@ -119,11 +135,15 @@
     "phone": "0471 666 5333",
     "map_url": null,
     "metrics": {
-      "sentiment": 21.0,
+      "sentiment": 21,
       "popularity": 8425,
       "convenience": 4
     },
-    "locality": "Enchakkal"
+    "locality": "Enchakkal",
+    "location": {
+      "lat": 8.4888903,
+      "lng": 76.9510104
+    }
   },
   {
     "id": "ChIJwficCMi7BTsRDOgrfN8DgOs",
@@ -142,11 +162,15 @@
     "phone": "0471 402 2100",
     "map_url": null,
     "metrics": {
-      "sentiment": 21.0,
+      "sentiment": 21,
       "popularity": 1771,
       "convenience": 4
     },
-    "locality": "Statue"
+    "locality": "Statue",
+    "location": {
+      "lat": 8.504686699999999,
+      "lng": 76.95293319999999
+    }
   },
   {
     "id": "ChIJdRy1grm7BTsRsSA7NDgD6ec",
@@ -166,11 +190,15 @@
     "phone": "0471 660 0000",
     "map_url": null,
     "metrics": {
-      "sentiment": 21.0,
+      "sentiment": 21,
       "popularity": 5888,
       "convenience": 2
     },
-    "locality": "Statue"
+    "locality": "Statue",
+    "location": {
+      "lat": 8.4997099,
+      "lng": 76.9502977
+    }
   },
   {
     "id": "ChIJ38GoeK-lBTsRFvOwhqovUGM",
@@ -196,7 +224,11 @@
       "popularity": 3763,
       "convenience": 4
     },
-    "locality": "Kovalam"
+    "locality": "Kovalam",
+    "location": {
+      "lat": 8.3903379,
+      "lng": 76.9763897
+    }
   },
   {
     "id": "ChIJVVVVRSalBTsRsFh7YDngHdM",
@@ -215,11 +247,15 @@
     "phone": "099465 44000",
     "map_url": null,
     "metrics": {
-      "sentiment": 21.0,
+      "sentiment": 21,
       "popularity": 1542,
       "convenience": 0
     },
-    "locality": "Kovalam"
+    "locality": "Kovalam",
+    "location": {
+      "lat": 8.425697,
+      "lng": 76.9594706
+    }
   },
   {
     "id": "ChIJ9XigwLq7BTsR8DaDQXVDxhs",
@@ -245,7 +281,11 @@
       "popularity": 5970,
       "convenience": 4
     },
-    "locality": "Statue"
+    "locality": "Statue",
+    "location": {
+      "lat": 8.4952204,
+      "lng": 76.9500953
+    }
   },
   {
     "id": "ChIJ8S4RB7m7BTsRT-ZmZnN7wI0",
@@ -268,12 +308,16 @@
       "popularity": 5664,
       "convenience": 4
     },
-    "locality": "Statue"
+    "locality": "Statue",
+    "location": {
+      "lat": 8.501036899999999,
+      "lng": 76.94964999999999
+    }
   },
   {
     "id": "ChIJD1EY13-_BTsRPA4jRnwugSg",
     "name": "Avoki Hotels and Resorts",
-    "score": 60.0,
+    "score": 60,
     "rating": 4.2,
     "reviews": 1422,
     "price_level": 2,
@@ -292,7 +336,11 @@
       "popularity": 1422,
       "convenience": 4
     },
-    "locality": "Ulloor"
+    "locality": "Ulloor",
+    "location": {
+      "lat": 8.582748,
+      "lng": 76.880016
+    }
   },
   {
     "id": "ChIJqRqLRZG7BTsRYIHFD3k6Ewg",
@@ -316,7 +364,11 @@
       "popularity": 1384,
       "convenience": 4
     },
-    "locality": "Statue"
+    "locality": "Statue",
+    "location": {
+      "lat": 8.4974407,
+      "lng": 76.9358697
+    }
   },
   {
     "id": "ChIJRRcR1sW7BTsRmNKmMlX2BrM",
@@ -341,7 +393,11 @@
       "popularity": 5530,
       "convenience": 2
     },
-    "locality": "PMG"
+    "locality": "PMG",
+    "location": {
+      "lat": 8.5091777,
+      "lng": 76.9498653
+    }
   },
   {
     "id": "ChIJ74CTcq-7BTsRiE4STDddvro",
@@ -360,11 +416,15 @@
     "phone": "082811 82811",
     "map_url": null,
     "metrics": {
-      "sentiment": 14.0,
+      "sentiment": 14,
       "popularity": 3043,
       "convenience": 4
     },
-    "locality": "Enchakkal"
+    "locality": "Enchakkal",
+    "location": {
+      "lat": 8.4902397,
+      "lng": 76.95397799999999
+    }
   },
   {
     "id": "ChIJYeOR-KS7BTsRNO49IhqKVqU",
@@ -384,11 +444,15 @@
     "phone": "094460 07271",
     "map_url": null,
     "metrics": {
-      "sentiment": 14.0,
+      "sentiment": 14,
       "popularity": 3300,
       "convenience": 2
     },
-    "locality": "Enchakkal"
+    "locality": "Enchakkal",
+    "location": {
+      "lat": 8.4908606,
+      "lng": 76.9492796
+    }
   },
   {
     "id": "ChIJDZ4N6gelBTsRgFWPKYU2rjw",
@@ -408,11 +472,15 @@
     "phone": null,
     "map_url": null,
     "metrics": {
-      "sentiment": 14.0,
+      "sentiment": 14,
       "popularity": 2415,
       "convenience": 0
     },
-    "locality": "Kovalam"
+    "locality": "Kovalam",
+    "location": {
+      "lat": 8.3984003,
+      "lng": 76.9748343
+    }
   },
   {
     "id": "ChIJq6pairulBTsRGvx79ZxkdA0",
@@ -437,7 +505,11 @@
       "popularity": 4920,
       "convenience": 4
     },
-    "locality": "Kovalam"
+    "locality": "Kovalam",
+    "location": {
+      "lat": 8.3839253,
+      "lng": 76.9818233
+    }
   },
   {
     "id": "ChIJj5x7qbq7BTsRbSG1dFdxFB8",
@@ -460,7 +532,11 @@
       "popularity": 3449,
       "convenience": 4
     },
-    "locality": "Statue"
+    "locality": "Statue",
+    "location": {
+      "lat": 8.494669,
+      "lng": 76.9522288
+    }
   },
   {
     "id": "ChIJtTlOyrqlBTsRKd60XzPZE5U",
@@ -486,7 +562,11 @@
       "popularity": 2711,
       "convenience": 0
     },
-    "locality": "Kovalam"
+    "locality": "Kovalam",
+    "location": {
+      "lat": 8.3867194,
+      "lng": 76.97732119999999
+    }
   },
   {
     "id": "ChIJByCQrkQSpjsRV6u1HDVXotk",
@@ -507,16 +587,20 @@
     "phone": "090721 52415",
     "map_url": null,
     "metrics": {
-      "sentiment": 28.0,
+      "sentiment": 28,
       "popularity": 2520,
       "convenience": 2
     },
-    "locality": null
+    "locality": null,
+    "location": {
+      "lat": 11.5245235,
+      "lng": 76.1457611
+    }
   },
   {
     "id": "ChIJE81OA_mlBTsRlEFOSe7fCss",
     "name": "Niraamaya Retreats Surya Samudra Kovalam",
-    "score": 69.0,
+    "score": 69,
     "rating": 4.5,
     "reviews": 1809,
     "price_level": 2,
@@ -537,7 +621,11 @@
       "popularity": 1809,
       "convenience": 4
     },
-    "locality": null
+    "locality": null,
+    "location": {
+      "lat": 8.3631722,
+      "lng": 77.0079653
+    }
   },
   {
     "id": "ChIJ9aVTRTClBTsRamf8KYOgRUs",
@@ -559,11 +647,15 @@
     "phone": "0471 248 3111",
     "map_url": null,
     "metrics": {
-      "sentiment": 21.0,
+      "sentiment": 21,
       "popularity": 10197,
       "convenience": 4
     },
-    "locality": null
+    "locality": null,
+    "location": {
+      "lat": 8.402354599999999,
+      "lng": 76.9731958
+    }
   },
   {
     "id": "ChIJg-yPMHy8BTsRQMiNz0ebWwY",
@@ -586,11 +678,15 @@
     "phone": "085905 04355",
     "map_url": null,
     "metrics": {
-      "sentiment": 21.0,
+      "sentiment": 21,
       "popularity": 5719,
       "convenience": 4
     },
-    "locality": null
+    "locality": null,
+    "location": {
+      "lat": 8.4836186,
+      "lng": 76.911295
+    }
   },
   {
     "id": "ChIJ18A3jmFSBDsRfY7SJQmysWU",
@@ -613,10 +709,14 @@
     "phone": "093634 96964",
     "map_url": null,
     "metrics": {
-      "sentiment": 21.0,
+      "sentiment": 21,
       "popularity": 3639,
       "convenience": 4
     },
-    "locality": null
+    "locality": null,
+    "location": {
+      "lat": 8.4323228,
+      "lng": 77.2430079
+    }
   }
 ]
