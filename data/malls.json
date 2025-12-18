@@ -9,239 +9,14 @@
     "address": "Lulu International Shopping Mall Pvt. Ltd TC 91/270, Akkulam Bridge, Anayara Post, Thiruvananthapuram, Kerala 695029, India",
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqGBGkRApQ7ZAv6bclIdzYgUWhDjIKsoQrZMKOtYo12mdV62x01e_9CpB9ElyEXBnbcHrMnBdjKRyiwKZKqSGHFrucQ-81kQqU7iLQfSxpv2h8hTcnpR2Tm1_KNKWV7fwJMPUQKB4ZPiS1hrQV5IF3R0daIPL68AtrFyOsS3qkzMLY4EaKiKW211oLWFht9uGGjFaFlx9ZjeruRAuenapSHQpIlkZgFFG6eXH3qg6tSqC44RohCtw_VDcVvbRX5qcJbOYeK0W-AMPWtNE8DM0RLRWv076ALjnE0ehZ4y1o6JA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
     "category": "malls",
-    "vibes": [
-      "Family Friendly",
-      "Premium",
-      "Entertainment"
-    ],
+    "vibes": ["Family Friendly", "Premium", "Entertainment"],
     "website": "https://thiruvananthapuram.lulumall.in/",
     "phone": "0471 277 7777",
     "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJ4bWIJn69BTsREC7_rLhFvBQ",
-    "metrics": {
-      "sentiment": 100,
-      "popularity": 42539,
-      "convenience": 5
-    },
+    "metrics": {"sentiment": 100, "popularity": 42539, "convenience": 5},
     "locality": "Akkulam",
-    "types": [
-      "shopping_mall",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.515362099999999,
-      "lng": 76.8976919
-    }
-  },
-  {
-    "id": "ChIJNWr5Dby9BTsRCA0rtygmmPU",
-    "name": "Lulu Mall Thiruvanathapuram Food Court",
-    "score": 92.6,
-    "rating": 4.6,
-    "reviews": 7475,
-    "price_level": null,
-    "address": "91/270, Akkulam Bridge, Anayara Post, Thiruvananthapuram, Kerala 695029, India",
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHrcWLKxlOmawsvi_ol7Hh9qJnxhVZNzuuSY2ZRttpye69jYuhC0HQziy4HaVi_fGuqHoeYD-K-s0IyqSN_VPmBrC9EmNsxX8rl0cUvgvavCj099JSxHe7GATdcpOegljmMHvpIZHW-crjU0TKea5TfEQmjYFA-88LFBfxeRwIRbPgrRwPEGGgkngU9S2SNMev4YUV_fzClDC7fY-73XMkThNYjCSV5quJ68Tb6BP8bjBys-3_FxE3P18Jb_PeNq1r_owKuy12mRcckEy6ipBmWPYx0doU_4bo1Q4Z3TlnF5ABoSHLDP2qoUQy0wdJuabJxJ__s0aFkA1KJFl7khvnGECqEjMDR7T1p3URgvR36stTXt52DO_hUeYx2_9IYqauiX11bWpBzGTE7TgZCatTecZ8FK7zgxfpiqgZM-Rj9uww&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
-    "category": "malls",
-    "vibes": [
-      "Family Friendly",
-      "Premium",
-      "Entertainment"
-    ],
-    "website": "https://www.thiruvananthapuram.lulumall.in/shop-2/food-court/",
-    "phone": null,
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJNWr5Dby9BTsRCA0rtygmmPU",
-    "metrics": {
-      "sentiment": 100,
-      "popularity": 7475,
-      "convenience": 5
-    },
-    "locality": "Akkulam",
-    "types": [
-      "food",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5153873,
-      "lng": 76.8971783
-    }
-  },
-  {
-    "id": "ChIJv4PRvq8NCDsRfqMTuhbzUVk",
-    "name": "LuLu International Shopping Mall",
-    "score": 92.6,
-    "rating": 4.6,
-    "reviews": 196024,
-    "price_level": null,
-    "address": "34/1000, Old NH 47, Edappally Junction, Nethaji Nagar, Edappally, Kochi, Kerala 682024, India",
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHrtn1ppAfJYui5XhDA9IkXDOZbroX0MFF2vns5pVbUBim8cAmHPsSQXfuiLlp2v-cn6NErxtN06dnKpr1Hfx0UQyNHfm9ThFsZTFXI4ZLNMxL1_wv_GaO7ZyurBxWJc7aPz0a3Njg_23ysn1gb_-Hqo3fjx1nhBoLsa126qm-Bc79t95-JlB7dHyl6vufuhLn7LWIx-jOB18rcHlTRnbA58kru1VnL_NGlFGbGeDmMBoIL6LOjb3TUfyJ563EtBjTORtCnxyh7UXlqw-iNbKzPgZmXQv5gcgLjV7dga2D9xbyUk20vE8oe95gyd1y5XZN0nCkGPwHNOQsXfZsFOP7oqYpODW7WWcQ13Yd4rzHFFkjwYeZ2B158VmglWVw2pWb9PH1_EeCVoH0Dzs1spZ9JCZF4BQDpC4vluAR7vKFRYgQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
-    "category": "malls",
-    "vibes": [
-      "Family Friendly",
-      "Premium",
-      "Budget Friendly",
-      "Entertainment"
-    ],
-    "website": "https://www.kochi.lulumall.in/",
-    "phone": "0484 272 7776",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJv4PRvq8NCDsRfqMTuhbzUVk",
-    "metrics": {
-      "sentiment": 100,
-      "popularity": 196024,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "shopping_mall",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 10.0271556,
-      "lng": 76.3082302
-    }
-  },
-  {
-    "id": "ChIJZ4Utd4S7BTsRc4aNxQmhnJw",
-    "name": "Playaza",
-    "score": 92.6,
-    "rating": 4.6,
-    "reviews": 1926,
-    "price_level": null,
-    "address": "Second Floor, Mall of Travancore, Eanchakkal, Thiruvananthapuram, Kerala 695024, India",
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHq4llee6MWkF_lHcoa0z5p6aYMc7ZJ8JvFT7bev1C40IfgNDtLrBet8cbkZbVwJ0xuLZ3aGByiOdGQXTF-PE4lnfadOohQcL-EBtquNr5PJ-GT3vzug79AzaFNwLCX6CRKkhao6ortzdCvdCCBuqsqmT50mEWRde8WESElkn0UDCGqiNVvvVqzBO4vPlgXyk0Ey3rtvhd5eo56tthwAxHndsJbXLGxTIm8Ou22R1zf2TlEHoYdvQOiAdInzPdPt7r4NaRTxUvwT6CqhTtnvLOdLv_1KBzyGnLb5i7QlgJTlk7EAj2qJhhdaiYUGZGKhSV5B1fTc-x_vKHl7MnxOhcAXvbq2N-03o92-cIblLM-ctKgbGcFbCbnSRlTXIUYzxdbcOGbWV9NzjKJo71FcILsD9Jm1ZcCN7MZ90MWHVrn-_i2W&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
-    "category": "malls",
-    "vibes": [
-      "Family Friendly",
-      "Premium",
-      "Entertainment"
-    ],
-    "website": "https://playaza.com/",
-    "phone": "095626 78678",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJZ4Utd4S7BTsRc4aNxQmhnJw",
-    "metrics": {
-      "sentiment": 100,
-      "popularity": 1926,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "amusement_park",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.4869563,
-      "lng": 76.9254794
-    }
-  },
-  {
-    "id": "ChIJQy2QdBO9BTsRG2044mizUHQ",
-    "name": "LuLu Hypermarket Thiruvananthapuram",
-    "score": 91.5,
-    "rating": 4.5,
-    "reviews": 25067,
-    "price_level": null,
-    "address": "Unit No. l 02, LuLu Mall, Anayara, Thiruvananthapuram, Kerala 695029, India",
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHrftRLsD75VmVRz-vO9wYR3NEbQRg7ZR03LNrY5qg8YUwls2RyR7yDLZl2HnUN_iG2AkhTpBJwUqO67NftK2nDdIx3cqK8GDmPyLRPG2YoutmFzmRxTm_oos4keHht4SdrrarVaQTWtEfvzar1hEeKiARI85es6IWC3-FEzRa4oRDtCdYuyXMDimBi0ZrVhl_3L_YJpucc4R_fS25_c1j9V36KOT516BpMbzF5N-g1ZvKTQHWudg8ap2hKLxKWmlaUN0uk_wXP5_qONph7zDpL6l2F-WldgLwUqXUgzAcIIyQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
-    "category": "malls",
-    "vibes": [
-      "Family Friendly",
-      "Premium",
-      "Entertainment"
-    ],
-    "website": "https://thiruvananthapuram.lulumall.in/shop/lulu-hypermarket/",
-    "phone": "0471 277 7777",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJQy2QdBO9BTsRG2044mizUHQ",
-    "metrics": {
-      "sentiment": 98,
-      "popularity": 25067,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "supermarket",
-      "grocery_or_supermarket",
-      "food",
-      "store",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5163406,
-      "lng": 76.8973977
-    }
-  },
-  {
-    "id": "ChIJWaMadbu7BTsRGWBR-z0k3WY",
-    "name": "Zudio - M.G Road, Thiruvananthapuram",
-    "score": 91.5,
-    "rating": 4.5,
-    "reviews": 4477,
-    "price_level": null,
-    "address": "Sree Ram Building, Mahatma Gandhi Rd, near Federal Bank Statue, Statue, Palayam, Thiruvananthapuram, Kerala 695001, India",
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHojUwr-famH8UT1jg-yNA_tpN2fv_dMEYphiuhA7Ak9fO77tTrpRgDTQH7BqZys7xxiD4mrJ215EIK5jkfVqN1vLr_CdWB5BTEup5bjHgmnX_iUMW67O2jvCOFSGNO-lc6a-zhTzAcUWjZNTahIGDZ5zWxAk-_JzS2_dzJxmQoCtgj1-5J8WjrhIcasPb5NbXZZRmCYfusHqti7r0BoWx_A1dGfBXe6ewfQNDbzsPIiTaP_9XW2ozWD1ebojCf7zw2ym_SoB0uGWJNf_fgucXcQeJ5tyncJmMtCHcgF_8JKow&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
-    "category": "malls",
-    "vibes": [
-      "Budget Friendly"
-    ],
-    "website": "https://www.zudio.com/",
-    "phone": "086559 12089",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJWaMadbu7BTsRGWBR-z0k3WY",
-    "metrics": {
-      "sentiment": 98,
-      "popularity": 4477,
-      "convenience": 5
-    },
-    "locality": "Statue",
-    "types": [
-      "clothing_store",
-      "shopping_mall",
-      "store",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.495829300000002,
-      "lng": 76.9483654
-    }
-  },
-  {
-    "id": "ChIJu46xh6O7BTsRsblXmFimkr0",
-    "name": "Pothys Textiles",
-    "score": 90.2,
-    "rating": 4.4,
-    "reviews": 50988,
-    "price_level": null,
-    "address": "No. 28/2477/3, Nikunjam City Square, Mahatma Gandhi Rd, near Ayurveda College West Lane, Vanchiyoor, Thiruvananthapuram, Kerala 695001, India",
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHpHT1ZG6BMI5654WWv8KX2SLogKPiymZ8b5EVYCaEyPUkJZ9ccgySaWPxQGYjQuC9FzP1GvCdItuAmNeneg1ztmS-o8Pi8GAzhQmGn2sGw4Jb4YPqWgYbf5se-8hd7qCzkMqNCYZPdzqJAV2A8nkeSNiJxXGAz7uWLZFXsMUwVlMAh23Is5IXg-KPyhQyDJC9VOVNS7tzBjg2ZnVicBib3hYUZiwgByQtVCXbKWWaqLwFYXYAXA-is8WpBLZPxuTYElM3hrLQ6fJbPj-LI-uFlXYGM-FZ1KLzKDtI_f6InkJvyWQnr5WIxcqF0zmDoYKFDUmyP4uM8sly3v1GWlO9se217Tjd7fuGHTKQTFD0F5-96K-HDmt11I_oin8SNSGBkCs0yGi6WGID9vTflhq29adhfGAaz3dfexh_UvtMuNln0&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
-    "category": "malls",
-    "vibes": [
-      "Family Friendly"
-    ],
-    "website": "https://www.pothys.com/kerala/",
-    "phone": "080 6968 0290",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJu46xh6O7BTsRsblXmFimkr0",
-    "metrics": {
-      "sentiment": 95,
-      "popularity": 50988,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "clothing_store",
-      "shopping_mall",
-      "grocery_or_supermarket",
-      "food",
-      "store",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.4901102,
-      "lng": 76.9468701
-    }
+    "types": ["shopping_mall", "point_of_interest", "establishment"],
+    "location": {"lat": 8.515362099999999, "lng": 76.8976919}
   },
   {
     "id": "ChIJcyIWywi8BTsRX-asyiWayTk",
@@ -253,61 +28,14 @@
     "address": "Int'l Airport Rd, near Ananthapuri Hospital, Eanchakkal, Thiruvananthapuram, Kerala 695024, India",
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHo3_rIm26WXfH7Ymrl3kTbeLyKsqaQvCycRO5ay224zNPvZBSkg6KI7vDTdtAQj_a2jQAJ1be5kcPiajF3kd-Xy4m6mIrZZrEu85aZvgrIPIcZx-SAFyLqXwKm7nDiLN_73QRPsWVMPgqq-dUWEYNjJSRl-yb3KGR7HLh2lC_-nbW_cdy0NiHcxTA5YXheQBB0pR7TQ7OSb55onoy1-S0IA-e1kFMqw3cHCUKcfeGR_RToWXc1hQ-Nrx9-q3xx9jMgVJO3ljRqrYA5leD7VC0HWur81PizZExH3riwin1d5zg&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
     "category": "malls",
-    "vibes": [
-      "Family Friendly",
-      "Entertainment"
-    ],
+    "vibes": ["Family Friendly", "Entertainment"],
     "website": "https://www.malloftravancore.com/",
     "phone": "0471 424 9916",
     "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJcyIWywi8BTsRX-asyiWayTk",
-    "metrics": {
-      "sentiment": 93,
-      "popularity": 39969,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "shopping_mall",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.487406199999999,
-      "lng": 76.9261921
-    }
-  },
-  {
-    "id": "ChIJ-Y0WjD29BTsRtF06YBn-9sQ",
-    "name": "PVR Superplex LuLu Mall Trivandrum",
-    "score": 87.7,
-    "rating": 4.2,
-    "reviews": 2962,
-    "price_level": null,
-    "address": "2ND FLOOR, LULU INTERNATIONAL SHOPPING MALL, POST, Akkulam Bridge, Anayara, POST, Thiruvananthapuram, Kerala 695029, India",
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHoKBrkyvR3J8B8QipsRq_TYqiAOOItQuASwGgbIijDY1Ctei6mP5E6YsKLUI5Fh_78UAIe7XIjAobYt7xY9vkdrYN2ddcedld9uAeXGrApRwfpDCATQ0WBtEeQFQMRy9i4uzFaXsmufWDtHwX4xzis800i9dCcL0BEvgShzb1mvhUC8D4IsTD8_SpXvjXuswwz4Sz60wUE-bV_Xm91kZXl-Z-gMaz3qDhg_LBFIrHRJYey6soZZzOQYeGhwo-LTXUGXGSwodbR-zvQHDn2GGfNPBsslm3DEmU3uR2B2Ob4Hn4BUedUUovHBee3ycN-YI93uqbJDEUl6m9a_PLkETTV-XBUGsX-QrRm8D8M2mmLhGOExLCXwmPoMvhpuyecPOHwpAC3lTaiKuV54PLHni3jyhbwTEqN1SL34we45nrakjtNm&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
-    "category": "malls",
-    "vibes": [
-      "Premium",
-      "Entertainment"
-    ],
-    "website": "https://www.pvrcinemas.com/cinemas/Trivandrum",
-    "phone": "088009 00009",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJ-Y0WjD29BTsRtF06YBn-9sQ",
-    "metrics": {
-      "sentiment": 90,
-      "popularity": 2962,
-      "convenience": 5
-    },
-    "locality": "Akkulam",
-    "types": [
-      "movie_theater",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.515934399999999,
-      "lng": 76.8970288
-    }
+    "metrics": {"sentiment": 93, "popularity": 39969, "convenience": 5},
+    "locality": "Eanchakkal",
+    "types": ["shopping_mall", "point_of_interest", "establishment"],
+    "location": {"lat": 8.487406199999999, "lng": 76.9261921}
   },
   {
     "id": "ChIJRRgdALy7BTsROOepfY30Uw0",
@@ -319,130 +47,52 @@
     "address": "General Hospital Rd, Palayam, Thiruvananthapuram, Kerala 695001, India",
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHpq8InFnmLNH5wbciOCBMx6tlWulH9yCDsoBhv8C5pP7we25ExvwhjGHZUdx9nu935HG6MB-7Oyiaznx1laXA0zFSRDSILunkUWJ_uDocK15s5Jj5vj3cJbcIbg3cEq63xpzvuuIgqVfX1RVBsbm9lB0gd-TmtLm-RwczFH0JOBirr5ugKpHD6lHZESTTSnuSq0oKkbD6DqlaOUezBsChqdwbSFCRP5EDFpEwoLxB8-BneYmTty7L9JNUsMfyysrvZLBqb7DDJzLJ1hCMmMVqjwovaNo4zRcdnx_8vo3HrqcQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
     "category": "malls",
-    "vibes": [],
+    "vibes": ["Budget Friendly"],
     "website": "http://www.varietymall.in/",
     "phone": "0471 247 6896",
     "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJRRgdALy7BTsROOepfY30Uw0",
-    "metrics": {
-      "sentiment": 87,
-      "popularity": 1801,
-      "convenience": 5
-    },
+    "metrics": {"sentiment": 87, "popularity": 1801, "convenience": 5},
     "locality": "Palayam",
-    "types": [
-      "jewelry_store",
-      "department_store",
-      "shopping_mall",
-      "clothing_store",
-      "store",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.4986372,
-      "lng": 76.94701409999999
-    }
+    "types": ["shopping_mall", "point_of_interest", "establishment"],
+    "location": {"lat": 8.4986372, "lng": 76.94701409999999}
   },
   {
     "id": "ChIJGSYga7i7BTsRhxDU357DBlo",
-    "name": "Connemara Market, Palayam",
+    "name": "Connemara Market",
     "score": 85.3,
-    "rating": 4,
+    "rating": 4.0,
     "reviews": 7197,
     "price_level": null,
-    "address": "Al Ameen Shop, Palayam Market Road, University of Kerala Senate House Campus, Palayam, Thiruvananthapuram, Kerala 695034, India",
+    "address": "Palayam Market Road, University of Kerala Senate House Campus, Palayam, Thiruvananthapuram, Kerala 695034, India",
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHosz5OZbMhkMUQ8DeM0xGUwo4yGp_zKcbfWCHCXz9yBOL08MYOMpj7E1188QEZab74K2koCdZObpepl0kSySrmU__GiZsuS1bBoTJb9EmEmEsPES3Z3Zscx26JvNj5vXbkJ2BAQH5b-o6cXNXsKgjUSvgGAe4Y4tNhBUdpDfZpQFCANSIkSjMBQ-zHyF6Qo8VJ37tu7T_5fyO627-tUsiONRZnftkpMOlxI2V2zQ11FQtBfsYyMha7saNGmVDLHBbES7sntlM2R0ow4jjyuqmSsTdBVjbb8dDef781SDWuOoOQqNQWp0-IISlUnUUibxEMqaCHmqMUu3VTs2AcWw8zr5eIb_xfvs88_yVdQl461TKGg37_Ld4q2_6O8YT1bbPBeTyUx36uTS-gNrHSkauk38glSp6y-DBM4ktB-fDxYfQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
     "category": "malls",
-    "vibes": [
-      "Budget Friendly"
-    ],
+    "vibes": ["Budget Friendly", "Traditional"],
     "website": null,
     "phone": "099954 86825",
     "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJGSYga7i7BTsRhxDU357DBlo",
-    "metrics": {
-      "sentiment": 85,
-      "popularity": 7197,
-      "convenience": 5
-    },
+    "metrics": {"sentiment": 85, "popularity": 7197, "convenience": 5},
     "locality": "Palayam",
-    "types": [
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5030904,
-      "lng": 76.9509492
-    }
+    "types": ["market", "point_of_interest", "establishment"],
+    "location": {"lat": 8.5030904, "lng": 76.9509492}
   },
   {
     "id": "ChIJ-Ww4w5G7BTsRPZVa65UoxQI",
     "name": "Saphalyam Shopping Complex",
     "score": 85.3,
-    "rating": 4,
+    "rating": 4.0,
     "reviews": 1576,
     "price_level": null,
-    "address": "GX32+28V, University of Kerala Senate House Campus, Palayam, Thiruvananthapuram, Kerala 695034, India",
+    "address": "University of Kerala Senate House Campus, Palayam, Thiruvananthapuram, Kerala 695034, India",
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHq6-442ulSozaKe5VzacOZ0flcqw6NbauFwyrcowv-GzkYEiwY7HJ67HIDtuP1IXq08c0I8rA4NniTATRJP3D_mhnB9EDiauQDPd_eUsEl4qSSK9rhcfroyBEwy1YEGTE4fgu6hGgw9PIfgH5tbRdDjwThcbZfVwZ6ze0QbvwQj8ApZLbjflQouGa50SOTsuKE_59Esa1QqgFTlJ-v5lAquJ4A9TzqzijKpZlr3wFNvtaR6nNILc-03bxBIU4VKoSmd_LtAvbNHsJVknWNO4xBenQKFHcCN2Gj_l1yx8Bl7MPuP1AQgiz7YBwnaZpnXIs2nv2pDx6CdfgBNWVSG6TGMsmjdjvddjOpJ_eupAtzsPY6bItQayrecpbtCrgUYm643zpmJf-tyOGxWnyjU1bxJGsWVSN_JdKdlkzm5aLknc3MG&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
     "category": "malls",
-    "vibes": [
-      "Budget Friendly"
-    ],
+    "vibes": ["Budget Friendly"],
     "website": null,
     "phone": null,
     "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJ-Ww4w5G7BTsRPZVa65UoxQI",
-    "metrics": {
-      "sentiment": 85,
-      "popularity": 1576,
-      "convenience": 5
-    },
+    "metrics": {"sentiment": 85, "popularity": 1576, "convenience": 5},
     "locality": "Palayam",
-    "types": [
-      "shopping_mall",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.502322099999999,
-      "lng": 76.95047749999999
-    }
-  },
-  {
-    "id": "ChIJI8o_Cgm7BTsRjsZRUDmMX2A",
-    "name": "Ramachandran (Attakulangara)",
-    "score": 85.3,
-    "rating": 4,
-    "reviews": 17973,
-    "price_level": null,
-    "address": "Bypass Road, Attakulangara - Enchakkal Rd, opp. Juma Masjid, Killipalam, Chalai, Thiruvananthapuram, Kerala 695023, India",
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHoBxtOoEeZildQTi7LdzrOxpb4fF_Kx7B9YWNGsP7OTtPcqibAOs4w7c8ndpeO9kSsYDw_yaKeOhK4IfvY_t2PO9Tb3xKq_mZyaNYdnlqcWQjYk0VWICU2Y7ZEMYshfIP3kmqvtZFDmaQEUbvPI0yg0z86qqXrC5lDGJaU50tOytFhwMTASz25qNpZyZAMf1prCNFl-Ow3hTgFxhrJ22nB4qSTHZXCvAcj5m8Y-yLPlLMj8sB0NKuLME62ShHSMSmx4dW6CTd2pPfwkoLxXoO8u--p4NjsbvQphkmQkvuPS8Q&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
-    "category": "malls",
-    "vibes": [
-      "Family Friendly",
-      "Budget Friendly",
-      "Entertainment"
-    ],
-    "website": "https://ramachandrantextiles.com/attakulangara/",
-    "phone": "088930 99999",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJI8o_Cgm7BTsRjsZRUDmMX2A",
-    "metrics": {
-      "sentiment": 85,
-      "popularity": 17973,
-      "convenience": 5
-    },
-    "locality": "Enchakkal",
-    "types": [
-      "shopping_mall",
-      "supermarket",
-      "grocery_or_supermarket",
-      "food",
-      "store",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.4797013,
-      "lng": 76.94876049999999
-    }
+    "types": ["shopping_mall", "point_of_interest", "establishment"],
+    "location": {"lat": 8.502322099999999, "lng": 76.95047749999999}
   },
   {
     "id": "ChIJpSdIkZa7BTsRvvmx6X_Q1YA",
@@ -451,32 +101,17 @@
     "rating": 3.9,
     "reviews": 6247,
     "price_level": null,
-    "address": "Palayam - Airv mmport Road, Pattoor - Vanchiyoor Rd, Vanchiyoor, Thiruvananthapuram, Kerala 695035, India",
+    "address": "Palayam - Airport Road, Pattoor - Vanchiyoor Rd, Vanchiyoor, Thiruvananthapuram, Kerala 695035, India",
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHoVrlCgs5Ba3L7eNnLJ4eeyBddXDKCMQDxoBSd3jr_G3BN3kywJ9uIA2qh2Nr2Oog5QEGAxRVZAlw97PdNlOI2TiaSmjXSJqG0VD-oyGU33PGUqU1S9Lg9s-A3FYnspVs7d7JxNUZaYpiotME6Ndv96XRvS2GU2QhkV_ODku6SjjVe1aN1FZYVYr5YwvMFfu4D_wqxJFThczYtq6FuDFRLvL89TthFBkgTGnXN3znGXmewDoxIrXwJlAc1tVMNGjdpkXgfGaWjK8mpkz08tJUH6PUXvA3hQtmboi5amNn8I1BwP-cWlAdy7CmNbmTvyA-XVnvSW9WZ-ADkDkjn7NHvBbtJCcarQ2rTXtfl3BUfPxN1GVfx5_JixB3m5uN73D_ZDHH8_cfyOLx2D1wUbZhKTTRf1udOULjYqPh9tqXQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
     "category": "malls",
-    "vibes": [
-      "Family Friendly",
-      "Premium",
-      "Entertainment"
-    ],
+    "vibes": ["Family Friendly", "Premium", "Entertainment"],
     "website": null,
     "phone": null,
     "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJpSdIkZa7BTsRvvmx6X_Q1YA",
-    "metrics": {
-      "sentiment": 83,
-      "popularity": 6247,
-      "convenience": 5
-    },
-    "locality": "Palayam",
-    "types": [
-      "shopping_mall",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.4972756,
-      "lng": 76.9372726
-    }
+    "metrics": {"sentiment": 83, "popularity": 6247, "convenience": 5},
+    "locality": "Vanchiyoor",
+    "types": ["shopping_mall", "point_of_interest", "establishment"],
+    "location": {"lat": 8.4972756, "lng": 76.9372726}
   },
   {
     "id": "ChIJbw1J_p25BTsRuqOD5GQUo08",
@@ -485,30 +120,17 @@
     "rating": 3.9,
     "reviews": 2259,
     "price_level": null,
-    "address": "GWHQ+P75, Vivekananda Nagar, Kesavadasapuram, Thiruvananthapuram, Kerala 695004, India",
+    "address": "Vivekananda Nagar, Kesavadasapuram, Thiruvananthapuram, Kerala 695004, India",
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHrGLaPT40-uGHn6qkRWdLvm5yYkoR4Vmuj0_y4kxduW9aIiS1QHnEKTob37EjHg5SK66kHNlBA1wGxMlNNTAKCxQdw6Vvl7wWY0oo_EvEg3ishAcVvK24z2yt8pi0volpFu7qVENR4d8rIAhVlSUlsT4AUTonK02LNSj0Hm562tUNkB3gOH_XhjXvE16Pfu6hwcJYV4aQDW_LCHjiMZnapsHfMMKg5K8wuJDNNOw36XN2Cwhx3DjrYPiFnAh7tV8hxeIoCTGt4r3wnExM8DYf0dIBpt6J56MsRBT5rqWSgf_NPSKi9CRrBWKz9-TTIHaw0Ztazawi9-w8dg0ugiwhbczPDDrufdVZcTIvSvZ0mMifavqiAea6-3tWeLlXjf0PvMOhpYnVNbL4fvXekNoSzwr4a0H0Q2jy2QuUcNqvE&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
     "category": "malls",
-    "vibes": [
-      "Family Friendly"
-    ],
+    "vibes": ["Family Friendly"],
     "website": null,
     "phone": "098470 51000",
     "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJbw1J_p25BTsRuqOD5GQUo08",
-    "metrics": {
-      "sentiment": 83,
-      "popularity": 2259,
-      "convenience": 5
-    },
+    "metrics": {"sentiment": 83, "popularity": 2259, "convenience": 5},
     "locality": "Kesavadasapuram",
-    "types": [
-      "shopping_mall",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5292669,
-      "lng": 76.9382442
-    }
+    "types": ["shopping_mall", "point_of_interest", "establishment"],
+    "location": {"lat": 8.5292669, "lng": 76.9382442}
   },
   {
     "id": "ChIJeQirFrm7BTsR5Mnx3wSkwbU",
@@ -520,66 +142,39 @@
     "address": "Mahatma Gandhi Rd, Spencer Junction, Palayam, Thiruvananthapuram, Kerala 695001, India",
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHpAzjrKRTeHKVuDHK7qv3Pk9j58qa4rHEe9ja4AyN4xgAjTlC_reefuux4RpVUY8gaSp30km7K5kc_JeajHwQCzTUoXflKJD04DvevB_DQ7dS6RzUxMfirFSSBRpG0T0dLrCJUVHJA9MK_Z30fX2SLt19HcPlZ8jzxjjRLRzb5dFYGPBhLZVPERA05k50SKJmrZCcxYH0vr6ny6luCIHtzDxOVy5IIx7P2jrf-IdIhQhB1SPD9i4gjK9E1AnWxqKiW_wcfY62dN6p3aIDvvJJ9q_CmXkmxLUrKbSoTp0V-2cG6coBuftABrqcAJVNEkCp2cm15rLpeBcCcDsQ-MSWVxrcw1ZC1qjYCuIhgFVmAJ1H08YADS_PcrXTChj_vP8gYMseVLTU7q-mttDDHLFseurETCMp6VIUxzQYWk02-u2A&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
     "category": "malls",
-    "vibes": [
-      "Family Friendly",
-      "Entertainment"
-    ],
+    "vibes": ["Family Friendly", "Entertainment"],
     "website": null,
     "phone": "099611 11667",
     "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJeQirFrm7BTsR5Mnx3wSkwbU",
-    "metrics": {
-      "sentiment": 80,
-      "popularity": 1018,
-      "convenience": 5
-    },
+    "metrics": {"sentiment": 80, "popularity": 1018, "convenience": 5},
     "locality": "Palayam",
-    "types": [
-      "shopping_mall",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5003468,
-      "lng": 76.9488118
-    }
+    "types": ["shopping_mall", "point_of_interest", "establishment"],
+    "location": {"lat": 8.5003468, "lng": 76.9488118}
   },
   {
     "id": "ChIJKR9KhqO7BTsR-QS2DI0U1Y0",
     "name": "Nikunjam City Square Mall",
     "score": 80.4,
-    "rating": 4,
+    "rating": 4.0,
     "reviews": 861,
     "price_level": null,
-    "address": "FWQW+XPV, Mahatma Gandhi Rd, Vanchiyoor, Thiruvananthapuram, Kerala 695001, India",
+    "address": "Mahatma Gandhi Rd, Vanchiyoor, Thiruvananthapuram, Kerala 695001, India",
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHph0HrsH2DQ7Z-Mm3qHkDUhyE7KhZxNssE1wHiDFrlYEEckXnzHFuQ5PtJNkuomVANPU7U69SjwTIjvdJC3YPL3gTtqGI76l-E1efIfwdgORkTUf_KhJl6uuikqAUVci0I_SUkaprmeOWpo_Ase5K2fRj7uiZFGwM0n5iAbIHKREj01eC63lNZjVBPRlx6hSM1H5u7HICeAu7-rbDZB2v-MwbFUnh1j7OOxBzr0kVbvfAkDsywRg-qjznXJtBqpMGK3zxoIR31c1biJnqC9SxRefeJRNe2jT0075NmrYDD_xm0w6amDDTgfQP7zozaWdR_xZc2na6P_3JfCLc94-kXOebl89p55eoPIV3ngEez0zMOTtO8q9dRyo2kmn8ooJuGyO-v9TrXKpt2lQkgT6lK0nzA0WoFPIqyofAvir8KLEsjapFFdZFsbvHnEQdrp&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
     "category": "malls",
-    "vibes": [
-      "Entertainment"
-    ],
+    "vibes": ["Entertainment"],
     "website": "https://www.pothys.com/",
     "phone": null,
     "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJKR9KhqO7BTsR-QS2DI0U1Y0",
-    "metrics": {
-      "sentiment": 85,
-      "popularity": 861,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "shopping_mall",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.489989399999999,
-      "lng": 76.9467969
-    }
+    "metrics": {"sentiment": 85, "popularity": 861, "convenience": 5},
+    "locality": "Vanchiyoor",
+    "types": ["shopping_mall", "point_of_interest", "establishment"],
+    "location": {"lat": 8.489989399999999, "lng": 76.9467969}
   },
   {
     "id": "ChIJJTFJjuu5BTsRI_3nX8XwjdI",
     "name": "Narmada Shopping Complex",
     "score": 67.9,
-    "rating": 4,
+    "rating": 4.0,
     "reviews": 504,
     "price_level": null,
     "address": "Pipeline Rd, Ambalamukku, Thiruvananthapuram, Kerala 695003, India",
@@ -589,153 +184,10 @@
     "website": null,
     "phone": "0471 243 3547",
     "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJJTFJjuu5BTsRI_3nX8XwjdI",
-    "metrics": {
-      "sentiment": 85,
-      "popularity": 504,
-      "convenience": 5
-    },
+    "metrics": {"sentiment": 85, "popularity": 504, "convenience": 5},
     "locality": "Ambalamukku",
-    "types": [
-      "shopping_mall",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.526928,
-      "lng": 76.96070540000001
-    }
-  },
-  {
-    "id": "ChIJrx9Aa6u9BTsRS_4pLyQUB1Q",
-    "name": "SNITCH - Lulu Mall, Trivandrum",
-    "score": 63.8,
-    "rating": 4.6,
-    "reviews": 220,
-    "price_level": null,
-    "address": "Ground Floor, A-22 & 23, Akkulam Bridge, Anayara, Post, Thiruvananthapuram, Kerala 695029, India",
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqTmVkaZxck8skmdiTV8R-mJwLjlDSM1XqJ8A0hMmb-Qw0Ek7xeOddN1IwZkekCi_C_g1B2sRyTJ1e6sV6TrjJcjwxiDJvWNJVKDvJnKmjX-jLx39mkyCw_zzduCdHf7v-zAXQSnhuDqJ-JvGApAO_5zus4BePk2foO8P9gxoelt1AnyChnT3eDtSiRB4rQFMJbF2eRYXt2K_wO5Mxs252DbQz5B7t91PxUirG9RU4C2OWCPDJS_h18N_8qTac5903lDFlvZtSlTFyRpri_bPLXH6-oi4_MarP-58Z0wiWGFQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
-    "category": "malls",
-    "vibes": [
-      "Family Friendly"
-    ],
-    "website": "http://www.snitch.com/",
-    "phone": "063662 34138",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJrx9Aa6u9BTsRS_4pLyQUB1Q",
-    "metrics": {
-      "sentiment": 94,
-      "popularity": 220,
-      "convenience": 5
-    },
-    "locality": "Akkulam",
-    "types": [
-      "shopping_mall",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5154043,
-      "lng": 76.8976811
-    }
-  },
-  {
-    "id": "ChIJM5dTLB-5BTsRJOVaRufwFDU",
-    "name": "Avenue Centre Shoppe Multi Branded Shopping Complex",
-    "score": 63.5,
-    "rating": 4,
-    "reviews": 394,
-    "price_level": null,
-    "address": "SH 1, Mannanthala Junction, Near, Mannanthala, Thiruvananthapuram, Kerala 695015, India",
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHrAb9ybe-B_g7NM1jF-PMV_HOdRHm13Pt7vqngw1HL7wMaq40WkT4yRO_Uqbo4o3M7Peo0xHka3TXj4VYpetGpLu2vu8sMIewx7D_7gbtqnaFGJpHEZqfKfAABqUVd2nyCTsFFjLwlel7-Q8g9rsC1vyoZIa4PFNL_VracdMXAK-ic5ivgWksWUMN62rBauwAwhDeYpKnuHyitAuSMzjUgQQZkYaB3yIScbZ4Dbp344l0Ar1eQAhPuX9Ui3m5MT4m5Dr4OuXYRaL_GbUxMmReNMuLxyIDOIyOrcEy_r8BNWdg&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
-    "category": "malls",
-    "vibes": [
-      "Family Friendly",
-      "Premium",
-      "Budget Friendly"
-    ],
-    "website": "http://www.facebook.com/avenuecentreshoppe",
-    "phone": "094470 55396",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJM5dTLB-5BTsRJOVaRufwFDU",
-    "metrics": {
-      "sentiment": 83,
-      "popularity": 394,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "shopping_mall",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5631483,
-      "lng": 76.9436569
-    }
-  },
-  {
-    "id": "ChIJj-6hA6i9BTsRM9oVD5r3jYQ",
-    "name": "Funtura Family Entertainment Centre",
-    "score": 62.6,
-    "rating": 4.2,
-    "reviews": 310,
-    "price_level": null,
-    "address": "Unit No GF/A/09A, TC 91/270, Anayara, Thiruvananthapuram, Kerala 695029, India",
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqsK5bXX2brfidqZLDv4wduAcCFrqXpGZRlfWxEWMBhHKn2YtZvgMJTHchABd526L8pltibbbcKEZNLZeG2o03NxdtmG9SDsMqvXgXobjeeFipMAnGymeBRGnv8B8jx8sMwpDJ304NyiCW23YrqrcbPhxqb1oBNLruY9C8wzEbJ6S_AYcioCD7iMUzgGgNNRE_U2J6632_RbZ9mtBCWggCACrZ1tzXEMdz6um7gHFZO1FMzjGMMex747Nq64dpPMVO_AcJ_aEt3h34XHGOAtehR0AwL7LeijchoXbKLazmJWg&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
-    "category": "malls",
-    "vibes": [
-      "Family Friendly",
-      "Budget Friendly",
-      "Entertainment"
-    ],
-    "website": "http://funtura.in/",
-    "phone": "0471 277 7766",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJj-6hA6i9BTsRM9oVD5r3jYQ",
-    "metrics": {
-      "sentiment": 86,
-      "popularity": 310,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "amusement_park",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5154702,
-      "lng": 76.8976507
-    }
-  },
-  {
-    "id": "ChIJ3xkcFAC_BTsRNNDmjJWtyvw",
-    "name": "Taurus Zentrum Mall",
-    "score": 60,
-    "rating": 5,
-    "reviews": 1,
-    "price_level": null,
-    "address": "3479, Kallingal Rd, near Toyota showroom, Technopark Campus, Kulathoor, Kazhakkoottam, Thiruvananthapuram, Kerala 695583, India",
-    "image": null,
-    "category": "malls",
-    "vibes": [
-      "Premium"
-    ],
-    "website": null,
-    "phone": null,
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJ3xkcFAC_BTsRNNDmjJWtyvw",
-    "metrics": {
-      "sentiment": 100,
-      "popularity": 1,
-      "convenience": 5
-    },
-    "locality": "Technopark",
-    "types": [
-      "shopping_mall",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5500127,
-      "lng": 76.8784628
-    }
+    "types": ["shopping_mall", "point_of_interest", "establishment"],
+    "location": {"lat": 8.526928, "lng": 76.96070540000001}
   },
   {
     "id": "ChIJn_GtGKelBTsRsp7KOSEmJ_s",
@@ -744,29 +196,16 @@
     "rating": 4.5,
     "reviews": 14,
     "price_level": null,
-    "address": "9XWJ+536, Kovalam, Thiruvananthapuram, Kerala 695527, India",
+    "address": "Kovalam, Thiruvananthapuram, Kerala 695527, India",
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=AZLasHqBFnm4iW56PGL9esW0G8oZhQfXOIAcgHWYsc-DpyYjbm4w8UQ5YBZh_nXaTumE5vju77Cjy8L0cqymJJowI5OqY5abWunTpDziMxWF7YA1rzFlEpkZDBel8_vaKLFBphZTR35v5ggqVPL3f0mZths_eer024HDTExSadwNZQe1weRo89XaWT8dhjUMAEyXFGOvFpCi0Dcsl_9jsftJy8NErVQsZOYFg7Hw-V4DNZclWMq2OKEfeEg00a6PSGgEKa3k3UOtav4yEY7oMp_FsbIrNn9L40l-Oqt515Y7Me5x27A2hd3qq05UGYFecIqR2mW7ujyGeSB_UZBABZ4HmiboRiihct8EphBhi7Y13JrmTPrAJ3yqTcE-erTPrFl4_lCOR_-bqlJtjGuv6ec-4Gck1tid-kVeiwvmNNWQ0KuEp7w&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
     "category": "malls",
-    "vibes": [
-      "Budget Friendly"
-    ],
+    "vibes": ["Budget Friendly"],
     "website": null,
     "phone": null,
     "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJn_GtGKelBTsRsp7KOSEmJ_s",
-    "metrics": {
-      "sentiment": 88,
-      "popularity": 14,
-      "convenience": 5
-    },
+    "metrics": {"sentiment": 88, "popularity": 14, "convenience": 5},
     "locality": "Kovalam",
-    "types": [
-      "shopping_mall",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.395417799999999,
-      "lng": 76.980127
-    }
+    "types": ["shopping_mall", "point_of_interest", "establishment"],
+    "location": {"lat": 8.395417799999999, "lng": 76.980127}
   }
 ]
