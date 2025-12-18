@@ -345,19 +345,19 @@ async function addCategoryToMap(category) {
             };
 
             // Open popup on hover for quick preview
-            marker.on('mouseover', function() {
+            marker.on('mouseover', function () {
                 isHoveringMarker = true;
                 clearTimeout(closeTimeout);
                 this.openPopup();
             });
 
-            marker.on('mouseout', function() {
+            marker.on('mouseout', function () {
                 isHoveringMarker = false;
                 tryClosePopup();
             });
 
             // Add event listeners to popup when it opens
-            marker.on('popupopen', function(e) {
+            marker.on('popupopen', function (e) {
                 const popupEl = e.popup._container;
                 if (popupEl) {
                     popupEl.addEventListener('mouseenter', () => {
@@ -375,40 +375,8 @@ async function addCategoryToMap(category) {
         }
     });
 
-    // Use clustering for categories with many items (except localities)
-    if (category !== 'localities' && markers.length > 15 && typeof L.markerClusterGroup === 'function') {
-        const cluster = L.markerClusterGroup({
-            maxClusterRadius: 40,
-            spiderfyOnMaxZoom: true,
-            showCoverageOnHover: false,
-            zoomToBoundsOnClick: true,
-            iconCreateFunction: function (cluster) {
-                const count = cluster.getChildCount();
-                return L.divIcon({
-                    html: `<div style="
-                        background: ${config.color};
-                        color: white;
-                        width: 36px;
-                        height: 36px;
-                        border-radius: 50%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-weight: bold;
-                        font-size: 13px;
-                        border: 2px solid white;
-                        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-                    ">${count}</div>`,
-                    className: 'marker-cluster',
-                    iconSize: [36, 36]
-                });
-            }
-        });
-        markers.forEach(m => cluster.addLayer(m));
-        categoryLayers[category] = cluster;
-    } else {
-        categoryLayers[category] = L.featureGroup(markers);
-    }
+    // No clustering - all markers are individually accessible for hover
+    categoryLayers[category] = L.featureGroup(markers);
 
     mapInstance.addLayer(categoryLayers[category]);
 
