@@ -327,41 +327,44 @@ async function addCategoryToMap(category) {
                 direction: 'top',
                 className: 'interactive-tooltip',
                 interactive: true,
-                offset: [0, 2], // Remove the gap
+                offset: [0, -2],
                 opacity: 1.0
             });
 
-            // Improved interaction: Prevent tooltip from closing too fast
-            // This allows the user to move their mouse from the marker to the tooltip content
-            let tooltipTimeout;
+            // Manual management of tooltip lifecycle - prevents flickering
+            let closeTimer = null;
+            const markerRef = marker;
+
             marker.on('mouseover', function () {
-                clearTimeout(tooltipTimeout);
+                clearTimeout(closeTimer);
+                if (!this.isTooltipOpen()) this.openTooltip();
             });
 
             marker.on('mouseout', function () {
-                // Keep tooltip open for 300ms to allow moving into it
-                tooltipTimeout = setTimeout(() => {
+                closeTimer = setTimeout(() => {
                     this.closeTooltip();
-                }, 300);
+                }, 500); // 500ms grace period to reach the tooltip
             });
 
-            // If mouse enters the tooltip itself, cancel the closing
+            // When tooltip opens, attach listeners to its container to keep it open
             marker.on('tooltipopen', function (e) {
                 const tooltipEl = e.tooltip._container;
                 if (tooltipEl) {
-                    tooltipEl.addEventListener('mouseenter', () => {
-                        clearTimeout(tooltipTimeout);
-                    });
-                    tooltipEl.addEventListener('mouseleave', () => {
-                        tooltipTimeout = setTimeout(() => {
-                            marker.closeTooltip();
-                        }, 300);
-                    });
+                    // Entering the tooltip cancels the closing timer
+                    tooltipEl.onmouseenter = () => {
+                        clearTimeout(closeTimer);
+                    };
+                    // Leaving the tooltip starts it again
+                    tooltipEl.onmouseleave = () => {
+                        closeTimer = setTimeout(() => {
+                            markerRef.closeTooltip();
+                        }, 500);
+                    };
                 }
             });
 
             // Fallback: Click also opens the content as a popup
-            marker.bindPopup(content, { maxWidth: 280 });
+            marker.bindPopup(content, { maxWidth: 280, className: 'interactive-popup' });
 
 
             markers.push(marker);
