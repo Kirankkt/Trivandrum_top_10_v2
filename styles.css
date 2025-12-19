@@ -5860,12 +5860,15 @@ footer .small {
 .interactive-tooltip::after {
   content: '';
   position: absolute;
-  bottom: -12px;
-  left: -20%;
-  right: -20%;
-  height: 12px;
+  bottom: -25px;
+  /* Oversized bridge to overlap marker completely */
+  left: -40px;
+  right: -40px;
+  height: 40px;
+  /* Taller bridge */
   background: transparent;
   pointer-events: auto;
+  z-index: -1;
 }
 
 .interactive-tooltip button:hover {
