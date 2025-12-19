@@ -5835,64 +5835,63 @@ footer .small {
   .nearby-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==================== Map Interaction Styles (Global) ==================== */
+
 /* Interactive Map Tooltips */
 .interactive-tooltip {
-    pointer-events: auto !important;
-    cursor: default;
-    padding: 0 !important;
-    border-radius: 12px !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
-    background: white !important;
-    overflow: hidden !important;
+  pointer-events: auto !important;
+  cursor: default;
+  padding: 0 !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+  background: white !important;
+  overflow: hidden !important;
+  z-index: 1000 !important;
 }
 
 .interactive-tooltip::before {
-    display: none !important;
+  display: none !important;
 }
 
 .interactive-tooltip button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
 }
 
-/* Map Marker Hover Effects - CSS-based to avoid breaking tooltips */
+/* Map Marker Hover Effects - CSS-based for best performance */
 .map-marker-hoverable .marker-inner {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
 }
 
 .map-marker-hoverable:hover .marker-inner {
-    transform: scale(1.25);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+  transform: scale(1.3) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4) !important;
+  z-index: 1000 !important;
 }
 
 /* Ensure Leaflet tooltip stays visible during interaction */
 .leaflet-tooltip.interactive-tooltip {
-    pointer-events: auto !important;
-    z-index: 1000 !important;
+  pointer-events: auto !important;
+  z-index: 1001 !important;
+  visibility: visible !important;
 }
 
-/* Interactive Popup Styles */
+/* Interactive Popup Styles (Fallback/Click) */
 .interactive-popup .leaflet-popup-content-wrapper {
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 0;
 }
 
 .interactive-popup .leaflet-popup-content {
-    margin: 0;
-    min-width: 200px;
+  margin: 0;
+  min-width: 200px;
 }
 
-.interactive-popup .leaflet-popup-tip {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Keep popup pointer events enabled for interaction */
+/* Ensure nothing blocks clicks on popups */
 .leaflet-popup {
-    pointer-events: auto !important;
-}
-
-.leaflet-popup-content-wrapper {
-    pointer-events: auto !important;
+  pointer-events: auto !important;
 }
