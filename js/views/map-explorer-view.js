@@ -322,14 +322,42 @@ async function addCategoryToMap(category) {
             const content = category === 'localities' ? createLocalityPopup(entity) : createEntityPopup(entity, category);
 
             // Use Standard Interactive Tooltips for hover
-            // Now that clustering is disabled, this will work perfectly for all markers
             marker.bindTooltip(content, {
-                permanent: false,     // Only show on hover
-                direction: 'top',     // Appear above marker
+                permanent: false,
+                direction: 'top',
                 className: 'interactive-tooltip',
-                interactive: true,    // Allow clicking buttons inside
-                offset: [0, -10],
+                interactive: true,
+                offset: [0, 2], // Remove the gap
                 opacity: 1.0
+            });
+
+            // Improved interaction: Prevent tooltip from closing too fast
+            // This allows the user to move their mouse from the marker to the tooltip content
+            let tooltipTimeout;
+            marker.on('mouseover', function () {
+                clearTimeout(tooltipTimeout);
+            });
+
+            marker.on('mouseout', function () {
+                // Keep tooltip open for 300ms to allow moving into it
+                tooltipTimeout = setTimeout(() => {
+                    this.closeTooltip();
+                }, 300);
+            });
+
+            // If mouse enters the tooltip itself, cancel the closing
+            marker.on('tooltipopen', function (e) {
+                const tooltipEl = e.tooltip._container;
+                if (tooltipEl) {
+                    tooltipEl.addEventListener('mouseenter', () => {
+                        clearTimeout(tooltipTimeout);
+                    });
+                    tooltipEl.addEventListener('mouseleave', () => {
+                        tooltipTimeout = setTimeout(() => {
+                            marker.closeTooltip();
+                        }, 300);
+                    });
+                }
             });
 
             // Fallback: Click also opens the content as a popup

@@ -5856,6 +5856,18 @@ footer .small {
   display: none !important;
 }
 
+/* Clear bridge to prevent closing when mouse moves from marker to tooltip */
+.interactive-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: -20%;
+  right: -20%;
+  height: 12px;
+  background: transparent;
+  pointer-events: auto;
+}
+
 .interactive-tooltip button:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
