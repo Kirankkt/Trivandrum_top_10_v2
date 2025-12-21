@@ -321,57 +321,57 @@ async function addCategoryToMap(category) {
             // Setup content for hover and click
             const content = category === 'localities' ? createLocalityPopup(entity) : createEntityPopup(entity, category);
 
-            // Use Popups instead of Tooltips for hover - natively more robust for interaction
-            marker.bindPopup(content, {
-                maxWidth: 280,
-                className: 'interactive-popup',
-                closeButton: false,
-                autoClose: false,
-                closeOnClick: false,
-                offset: [0, -5]
+            // Use Tooltips for hover label (Clean Revert with Fixes)
+            marker.bindTooltip(content, {
+                permanent: false,
+                direction: 'top',
+                className: 'interactive-tooltip',
+                interactive: true,
+                offset: [0, -2],
+                opacity: 1.0,
+                sticky: false
             });
 
-            // Manual management of hover logic using Popups
+            // Fallback: Click also opens the content as a stable popup
+            marker.bindPopup(content, { maxWidth: 280, className: 'interactive-popup' });
+
+            // Robust persistence logic
             let closeTimer = null;
-            const markerRef = marker;
+            const mRef = marker;
 
             marker.on('mouseover', function () {
                 clearTimeout(closeTimer);
-                if (!this.isPopupOpen()) {
-                    this.openPopup();
+                if (!this.isTooltipOpen()) {
+                    this.openTooltip();
                 }
             });
 
             marker.on('mouseout', function () {
                 closeTimer = setTimeout(() => {
-                    this.closePopup();
-                }, 1000); // 1.0s grace period to reach the popup
+                    this.closeTooltip();
+                }, 1000); // 1.0s grace period
             });
 
-            // When tooltip opens, attach robust listeners to its container
+            // When tooltip opens, attach listeners to ITSELF to keep it open
             marker.on('tooltipopen', function (e) {
                 const tooltipEl = e.tooltip._container;
                 if (tooltipEl) {
-                    // Modern Event Listeners for better reliability
-                    tooltipEl.addEventListener('mouseenter', () => {
+                    tooltipEl.onmouseenter = () => {
                         clearTimeout(closeTimer);
-                    });
+                    };
 
-                    tooltipEl.addEventListener('mouseleave', () => {
+                    tooltipEl.onmouseleave = () => {
                         closeTimer = setTimeout(() => {
-                            markerRef.closePopup();
+                            mRef.closeTooltip();
                         }, 1000);
-                    });
+                    };
 
-                    // Ensure clicks within the popup don't cause issues
-                    popupEl.addEventListener('click', (ev) => {
+                    // Stability: prevent the tooltip from closing if user clicks inside
+                    tooltipEl.onclick = (ev) => {
                         ev.stopPropagation();
-                    });
+                    };
                 }
             });
-
-            // Fallback: Click also opens the content as a popup
-            marker.bindPopup(content, { maxWidth: 280, className: 'interactive-popup' });
 
 
             markers.push(marker);
