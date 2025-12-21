@@ -328,7 +328,8 @@ async function addCategoryToMap(category) {
                 className: 'interactive-tooltip',
                 interactive: true,
                 offset: [0, -2],
-                opacity: 1.0
+                opacity: 1.0,
+                sticky: false
             });
 
             // Manual management of tooltip lifecycle - prevents flickering
@@ -343,23 +344,23 @@ async function addCategoryToMap(category) {
             marker.on('mouseout', function () {
                 closeTimer = setTimeout(() => {
                     this.closeTooltip();
-                }, 500); // 500ms grace period to reach the tooltip
+                }, 800); // 800ms grace period to reach the tooltip
             });
 
-            // When tooltip opens, attach listeners to its container to keep it open
+            // When tooltip opens, attach robust listeners to its container
             marker.on('tooltipopen', function (e) {
                 const tooltipEl = e.tooltip._container;
                 if (tooltipEl) {
-                    // Entering the tooltip cancels the closing timer
-                    tooltipEl.onmouseenter = () => {
+                    // Modern Event Listeners for better reliability
+                    tooltipEl.addEventListener('mouseenter', () => {
                         clearTimeout(closeTimer);
-                    };
-                    // Leaving the tooltip starts it again
-                    tooltipEl.onmouseleave = () => {
+                    });
+
+                    tooltipEl.addEventListener('mouseleave', () => {
                         closeTimer = setTimeout(() => {
                             markerRef.closeTooltip();
-                        }, 500);
-                    };
+                        }, 800);
+                    });
                 }
             });
 
