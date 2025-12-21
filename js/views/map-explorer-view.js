@@ -321,30 +321,31 @@ async function addCategoryToMap(category) {
             // Setup content for hover and click
             const content = category === 'localities' ? createLocalityPopup(entity) : createEntityPopup(entity, category);
 
-            // Use Standard Interactive Tooltips for hover
-            marker.bindTooltip(content, {
-                permanent: false,
-                direction: 'top',
-                className: 'interactive-tooltip',
-                interactive: true,
-                offset: [0, -2],
-                opacity: 1.0,
-                sticky: false
+            // Use Popups instead of Tooltips for hover - natively more robust for interaction
+            marker.bindPopup(content, {
+                maxWidth: 280,
+                className: 'interactive-popup',
+                closeButton: false,
+                autoClose: false,
+                closeOnClick: false,
+                offset: [0, -5]
             });
 
-            // Manual management of tooltip lifecycle - prevents flickering
+            // Manual management of hover logic using Popups
             let closeTimer = null;
             const markerRef = marker;
 
             marker.on('mouseover', function () {
                 clearTimeout(closeTimer);
-                if (!this.isTooltipOpen()) this.openTooltip();
+                if (!this.isPopupOpen()) {
+                    this.openPopup();
+                }
             });
 
             marker.on('mouseout', function () {
                 closeTimer = setTimeout(() => {
-                    this.closeTooltip();
-                }, 800); // 800ms grace period to reach the tooltip
+                    this.closePopup();
+                }, 1000); // 1.0s grace period to reach the popup
             });
 
             // When tooltip opens, attach robust listeners to its container
@@ -358,8 +359,13 @@ async function addCategoryToMap(category) {
 
                     tooltipEl.addEventListener('mouseleave', () => {
                         closeTimer = setTimeout(() => {
-                            markerRef.closeTooltip();
-                        }, 800);
+                            markerRef.closePopup();
+                        }, 1000);
+                    });
+
+                    // Ensure clicks within the popup don't cause issues
+                    popupEl.addEventListener('click', (ev) => {
+                        ev.stopPropagation();
                     });
                 }
             });

@@ -5856,22 +5856,23 @@ footer .small {
   display: none !important;
 }
 
-/* Clear bridge to prevent closing when mouse moves from marker to tooltip */
-.interactive-tooltip::after {
+/* Clear bridge to prevent closing when mouse moves from marker to tooltip/popup */
+.interactive-tooltip::after,
+.interactive-popup .leaflet-popup-content-wrapper::after {
   content: '';
   position: absolute;
-  bottom: -30px;
-  /* Even larger reach */
-  left: -60px;
-  /* Much wider bridge to handle diagonal movement */
-  right: -60px;
-  height: 50px;
+  bottom: -40px;
+  /* Oversized reach */
+  left: -80px;
+  /* Extra wide for fast movement */
+  right: -80px;
+  height: 60px;
   /* Taller bridge */
   background: rgba(255, 255, 255, 0.01);
-  /* Minimal visibility to ensure browser hit detection */
+  /* Hit target for modern browsers */
   pointer-events: auto;
-  z-index: 1000;
-  /* Ensure it stays on top of map panes */
+  z-index: 1200;
+  /* Priority on top of marker */
 }
 
 .interactive-tooltip button:hover {
