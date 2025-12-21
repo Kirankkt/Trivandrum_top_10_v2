@@ -179,11 +179,7 @@ function createEntityPopup(entity, category, rank = null) {
             <strong style="font-size: 15px; display: block; margin-bottom: 4px; color: #1e293b;">${entity.name}</strong>
             ${scoreHtml}
             ${ratingHtml}
-            ${entity.locality && category !== 'localities' ? `<div style="font-size: 12px; color: #64748b; margin-bottom: 8px;">📍 ${entity.locality}</div>` : ''}
-            <button onclick="navigateToEntity('${category}', '${entityId.replace(/'/g, "\\'")}')"
-                style="display: block; width: 100%; margin-top: 12px; padding: 10px 16px; background: ${config.color}; color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: transform 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                View Details →
-            </button>
+            ${entity.locality && category !== 'localities' ? `<div style="font-size: 12px; color: #64748b;">📍 ${entity.locality}</div>` : ''}
         </div>
     `;
 }
@@ -213,12 +209,8 @@ function createLocalityPopup(locality) {
             <div style="font-size: 24px; margin-bottom: 4px;">🏘️</div>
             <strong style="font-size: 16px; display: block; margin-bottom: 6px; color: #1e293b;">${locality.name}</strong>
             ${locality.overall_score ? `<div style="font-size: 18px; color: ${config.color}; font-weight: bold; margin-bottom: 4px;">${locality.overall_score.toFixed(1)}/10</div>` : ''}
-            <div style="font-size: 12px; color: #64748b; margin: 6px 0;">Nearby Facilities:</div>
+            <div style="font-size: 11px; color: #64748b; margin: 4px 0;">Nearby Facilities:</div>
             ${facilitiesHtml}
-            <button onclick="navigateToEntity('localities', '${locality.name.replace(/'/g, "\\'")}')"
-                style="display: block; width: 100%; margin-top: 12px; padding: 10px 16px; background: ${config.color}; color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: transform 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                Explore Locality →
-            </button>
         </div>
     `;
 }
@@ -332,8 +324,10 @@ async function addCategoryToMap(category) {
                 sticky: false
             });
 
-            // Fallback: Click also opens the content as a stable popup
-            marker.bindPopup(content, { maxWidth: 280, className: 'interactive-popup' });
+            // NEW: Direct navigation on click
+            marker.on('click', function () {
+                navigateToEntity(category, entityId);
+            });
 
             // Robust persistence logic
             let closeTimer = null;
