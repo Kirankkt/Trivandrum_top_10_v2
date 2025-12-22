@@ -326,6 +326,14 @@ async function addCategoryToMap(category) {
 
             // NEW: Direct navigation on click
             marker.on('click', function () {
+                // Tracking marker interaction
+                if (window.analytics) {
+                    window.analytics.trackEvent('marker_clicked', {
+                        entity_id: entityId,
+                        category: category,
+                        name: entity.name
+                    });
+                }
                 navigateToEntity(category, entityId);
             });
 

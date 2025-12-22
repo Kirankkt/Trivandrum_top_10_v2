@@ -266,6 +266,14 @@ async function renderCustomizeView() {
             economy: parseInt(sliders.economy.value) / 100,
             prestige: parseInt(sliders.prestige.value) / 100
         };
+
+        // Tracking Analytics
+        if (window.analytics) {
+            window.analytics.trackEvent('weights_updated', {
+                weights: newWeights
+            });
+        }
+
         saveWeights(newWeights);
         window.location.hash = '/localities';
         // Scroll to localities section after page fully renders
@@ -281,6 +289,14 @@ async function renderCustomizeView() {
     document.querySelectorAll('.preset-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const preset = btn.dataset.preset;
+
+            // Tracking Analytics
+            if (window.analytics) {
+                window.analytics.trackEvent('preset_clicked', {
+                    preset_name: preset
+                });
+            }
+
             const presets = {
                 balanced: { accessibility: 20, amenities: 20, safety: 15, environment: 15, economy: 15, prestige: 15 },
                 families: { accessibility: 20, amenities: 30, safety: 20, environment: 15, economy: 10, prestige: 5 },

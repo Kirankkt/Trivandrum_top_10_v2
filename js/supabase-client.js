@@ -3,12 +3,20 @@
 const SUPABASE_URL = 'https://jhygaazqujzufiklqaah.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpoeWdhYXpxdWp6dWZpa2xxYWFoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUwMzEyMTksImV4cCI6MjA4MDYwNzIxOX0.rR_FePTK4iHQyjVSVokPX6LsKpZY-mFI0KEkfdX1Jno';
 
-let supabase = null;
+let sbClient = null;
 
 try {
     if (window.supabase) {
-        supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        sbClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
         console.log('✅ [Supabase] Connected to project:', SUPABASE_URL);
+
+        // Initialize Analytics
+        if (window.analytics) {
+            window.analytics.init(sbClient);
+        }
+
+        // Make it globally available under a unique name
+        window.sbClient = sbClient;
     } else {
         console.error('[Supabase] Library not found. Check script tag in index.html');
     }
@@ -18,7 +26,7 @@ try {
 
 // Helper function to track locality views
 async function trackLocalityView(localityName) {
-    if (!supabase) return;
+    if (!sbClient) return;
 
     // Get or Create a simple persistent session ID for this browser
     let sessionId = localStorage.getItem('unique_session_id');
@@ -28,7 +36,7 @@ async function trackLocalityView(localityName) {
     }
 
     try {
-        const { error } = await supabase
+        const { error } = await sbClient
             .from('locality_views')
             .insert({
                 locality_name: localityName,
@@ -48,13 +56,13 @@ window.trackLocalityView = trackLocalityView;
 
 // Get trending localities (most viewed in last 7 days)
 async function getTrendingLocalities(limit = 3) {
-    if (!supabase) return [];
+    if (!sbClient) return [];
 
     try {
         const oneWeekAgo = new Date();
         oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
 
-        const { data, error } = await supabase
+        const { data, error } = await sbClient
             .from('locality_views')
             .select('locality_name')
             .gte('viewed_at', oneWeekAgo.toISOString());

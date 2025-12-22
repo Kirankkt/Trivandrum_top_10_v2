@@ -1,0 +1,111 @@
+{
+  "model_stats": {
+    "r2": 0.2549225347716023,
+    "mae": 6.8743086428281925,
+    "samples": 14
+  },
+  "feature_importance": [
+    {
+      "Pillar": "Pillar_Connectivity",
+      "Weight": 2.7547426799547026
+    },
+    {
+      "Pillar": "Pillar_Infrastructure",
+      "Weight": 1.8581434589571657
+    },
+    {
+      "Pillar": "Pillar_Lifestyle",
+      "Weight": 1.581145841597569
+    },
+    {
+      "Pillar": "Pillar_Utility",
+      "Weight": 0.0
+    }
+  ],
+  "localities": [
+    {
+      "name": "Statue",
+      "Actual": 28.0,
+      "Predicted_Price": 22.478161518738375,
+      "Price_Diff": 5.521838481261625
+    },
+    {
+      "name": "Kazhakuttom",
+      "Actual": 14.25,
+      "Predicted_Price": 15.779740747210537,
+      "Price_Diff": -1.5297407472105373
+    },
+    {
+      "name": "Pattom",
+      "Actual": 30.0,
+      "Predicted_Price": 21.54836139145949,
+      "Price_Diff": 8.45163860854051
+    },
+    {
+      "name": "Kesavadasapuram",
+      "Actual": 12.5,
+      "Predicted_Price": 22.12072597501759,
+      "Price_Diff": -9.620725975017589
+    },
+    {
+      "name": "PMG",
+      "Actual": 16.0,
+      "Predicted_Price": 21.81643804925008,
+      "Price_Diff": -5.816438049250081
+    },
+    {
+      "name": "Sasthamangalam",
+      "Actual": 16.0,
+      "Predicted_Price": 21.22071214304877,
+      "Price_Diff": -5.220712143048772
+    },
+    {
+      "name": "Jagathy",
+      "Actual": 20.0,
+      "Predicted_Price": 21.66750657269975,
+      "Price_Diff": -1.6675065726997502
+    },
+    {
+      "name": "Kowdiar",
+      "Actual": 16.0,
+      "Predicted_Price": 21.45900250552929,
+      "Price_Diff": -5.459002505529291
+    },
+    {
+      "name": "Peroorkada",
+      "Actual": 12.0,
+      "Predicted_Price": 17.5815052477443,
+      "Price_Diff": -5.5815052477443
+    },
+    {
+      "name": "Vazhuthacaud",
+      "Actual": 15.0,
+      "Predicted_Price": 22.18029856563772,
+      "Price_Diff": -7.18029856563772
+    },
+    {
+      "name": "Kuravankonam",
+      "Actual": 55.0,
+      "Predicted_Price": 21.250498438358836,
+      "Price_Diff": 33.74950156164117
+    },
+    {
+      "name": "Poojapura",
+      "Actual": 17.0,
+      "Predicted_Price": 20.595199941537395,
+      "Price_Diff": -3.5951999415373947
+    },
+    {
+      "name": "Kovalam",
+      "Actual": 10.0,
+      "Predicted_Price": 9.602818151645945,
+      "Price_Diff": 0.39718184835405523
+    },
+    {
+      "name": "Varkala",
+      "Actual": 1.25,
+      "Predicted_Price": 3.6990307521218924,
+      "Price_Diff": -2.4490307521218924
+    }
+  ]
+}

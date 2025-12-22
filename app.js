@@ -46,7 +46,7 @@ function route() {
             <h1>Experiences</h1>
             <p>Top experiences in Trivandrum coming soon!</p>
           </div>`;
-    // Shop category routes
+        // Shop category routes
     } else if (hash === '/malls') {
         console.log('[Debug] Routing to Malls');
         renderMallsView();
@@ -59,7 +59,7 @@ function route() {
     } else if (hash === '/shop') {
         console.log('[Debug] Routing to Shop Category');
         renderShopCategoryView();
-    // Culture category routes
+        // Culture category routes
     } else if (hash === '/museums') {
         console.log('[Debug] Routing to Museums');
         renderMuseumsView();
@@ -69,7 +69,7 @@ function route() {
     } else if (hash === '/culture') {
         console.log('[Debug] Routing to Culture Category');
         renderCultureCategoryView();
-    // Services category routes
+        // Services category routes
     } else if (hash === '/services') {
         console.log('[Debug] Routing to Services');
         renderServicesView();
@@ -101,7 +101,7 @@ function route() {
             console.error('[Debug] renderDetailView is NOT a function!');
             app.innerHTML = '<div class="error">System Error: renderDetailView missing. Refresh page.</div>';
         }
-    // Entity detail routes (generic pattern: /entity/{category}/{id})
+        // Entity detail routes (generic pattern: /entity/{category}/{id})
     } else if (hash.startsWith('/entity/')) {
         const parts = hash.replace('/entity/', '').split('/');
         const category = parts[0];
@@ -109,7 +109,7 @@ function route() {
         console.log('[Debug] Routing to Entity Detail:', category, entityId);
 
         // Route to appropriate detail view
-        switch(category) {
+        switch (category) {
             case 'restaurants':
                 renderRestaurantDetail(entityId);
                 break;
@@ -146,6 +146,9 @@ function route() {
             default:
                 app.innerHTML = '<div class="error">Unknown category</div>';
         }
+    } else if (hash === '/admin') {
+        console.log('[Debug] Routing to Admin Dashboard');
+        renderAdminView();
     } else {
         // 404
         console.log('[Debug] 404 Not Found');
