@@ -193,13 +193,21 @@ async function renderAdminView() {
             `;
         }).join('');
 
-        // --- 4. VISUAL HEATMAPS (Progress Bar Style) ---
+        // --- 4. VISUAL HEATMAPS (Progress Bar Style with Heat Colors) ---
         const renderBarChart = (counts, containerId, limit = 5) => {
             const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, limit);
             const max = Math.max(...Object.values(counts), 1);
 
             document.getElementById(containerId).innerHTML = sorted.map(([name, count]) => {
                 const pct = (count / max) * 100;
+
+                // Heat color scale (Blue -> Green -> Yellow -> Orange -> Red)
+                let heatColor = '#3b82f6';
+                if (pct > 80) heatColor = '#ef4444';
+                else if (pct > 60) heatColor = '#f59e0b';
+                else if (pct > 40) heatColor = '#eab308';
+                else if (pct > 20) heatColor = '#10b981';
+
                 return `
                     <div class="chart-row">
                         <div class="chart-label">
@@ -207,7 +215,7 @@ async function renderAdminView() {
                             <strong>${count}</strong>
                         </div>
                         <div class="chart-bar-bg">
-                            <div class="chart-bar-fill" style="width: ${pct}%"></div>
+                            <div class="chart-bar-fill" style="width: ${pct}%; background: ${heatColor};"></div>
                         </div>
                     </div>
                 `;
