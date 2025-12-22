@@ -245,9 +245,9 @@ async function renderAdminView() {
             </div>
         `;
 
-        // Landing Pages
+        // Landing Pages (Exclude Admin from stats)
         const pageCounts = {};
-        allEvents.filter(e => e.event_type === 'page_view')
+        allEvents.filter(e => e.event_type === 'page_view' && e.page_path !== '#/admin')
             .forEach(e => pageCounts[e.page_path] = (pageCounts[e.page_path] || 0) + 1);
         renderBarChart(pageCounts, 'landing-chart');
 
