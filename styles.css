@@ -2876,11 +2876,51 @@ footer .small {
   margin-bottom: 1rem;
 }
 
-.stats-row {
+.premium-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+/* Home Page Category Link Pills */
+.explore-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  z-index: 20;
+}
+
+.explore-pill-link {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.explore-pill-link:hover {
+  background: white;
+  color: var(--color-bg-dark, #0f172a);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.explore-card:not(a) {
+  cursor: default;
+}
+
+.explore-card-desc {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 8px;
 }
 
 .stat-box {
@@ -3549,6 +3589,8 @@ footer .small {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
+  /* Fix for truncated review counts */
 }
 
 .rating-val {
