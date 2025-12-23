@@ -39,87 +39,83 @@ async function renderHomeView() {
       <!-- Premium Grid Layout -->
       <div class="explore-grid premium-grid">
         
-        <!-- Localities Card -->
-        <a href="#/localities" class="explore-card large-card">
-        <!-- Main Hero Category: Stay & Dine -->
+        <!-- Stay & Dine (Grouped Hospitality) -->
         <div class="explore-card hero-card">
-            <div class="explore-card-image">
-                <img src="images/categories/stay_dine_hero.png" alt="Stay & Dine in Trivandrum">
+          <div class="explore-card-bg" style="background-image: url('images/categories/stay_dine_premium.png')"></div>
+          <div class="explore-card-overlay"></div>
+          <div class="explore-card-content">
+            <span class="explore-card-label">Hospitality</span>
+            <h3>Stay & Dine</h3>
+            <p>Experience the best hotels, cozy cafes, and world-class restaurants.</p>
+            <div class="explore-card-links">
+              <a href="#/restaurants" class="explore-pill-link">Restaurants</a>
+              <a href="#/cafes" class="explore-pill-link">Cafes</a>
+              <a href="#/hotels" class="explore-pill-link">Hotels</a>
             </div>
-            <div class="explore-card-content">
-                <div class="explore-card-badge">Hospitality</div>
-                <h3 class="explore-card-title">Stay & Dine</h3>
-                <p class="explore-card-desc">Experience the best hotels, cozy cafes, and world-class restaurants in the city.</p>
-                <div class="explore-card-links">
-                    <a href="#/restaurants" class="explore-pill-link">Restaurants</a>
-                    <a href="#/cafes" class="explore-pill-link">Cafes</a>
-                    <a href="#/hotels" class="explore-pill-link">Hotels</a>
-                </div>
-            </div>
+          </div>
         </div>
 
-        <!-- Secondary Row: Promoting Shopping, Culture, Healthcare -->
+        <!-- Shopping -->
         <div class="explore-card">
-            <div class="explore-card-image">
-                <img src="images/categories/shopping_hero.png" alt="Shopping in Trivandrum">
+          <div class="explore-card-bg" style="background-image: url('images/categories/shopping_hero.png')"></div>
+          <div class="explore-card-overlay"></div>
+          <div class="explore-card-content">
+            <span class="explore-card-label">Retail</span>
+            <h3>Shopping</h3>
+            <p>Modern malls or traditional boutiques?</p>
+            <div class="explore-card-links">
+              <a href="#/malls" class="explore-pill-link">Malls</a>
+              <a href="#/boutiques" class="explore-pill-link">Boutiques</a>
             </div>
-            <div class="explore-card-content">
-                <div class="explore-card-badge">Retail</div>
-                <h3 class="explore-card-title">Shopping</h3>
-                <p class="explore-card-desc">Modern malls or local boutiques?</p>
-                <div class="explore-card-links">
-                    <a href="#/malls" class="explore-pill-link">Malls</a>
-                    <a href="#/boutiques" class="explore-pill-link">Boutiques</a>
-                </div>
-            </div>
+          </div>
         </div>
 
+        <!-- Culture -->
         <div class="explore-card">
-            <div class="explore-card-image">
-                <img src="images/categories/culture_hero.png" alt="Culture in Trivandrum">
+          <div class="explore-card-bg" style="background-image: url('images/categories/culture_premium.png')"></div>
+          <div class="explore-card-overlay"></div>
+          <div class="explore-card-content">
+            <span class="explore-card-label">Heritage</span>
+            <h3>Culture</h3>
+            <p>Explore museums and spiritual landmarks.</p>
+            <div class="explore-card-links">
+              <a href="#/museums" class="explore-pill-link">Museums</a>
+              <a href="#/religious-sites" class="explore-pill-link">Religious Sites</a>
             </div>
-            <div class="explore-card-content">
-                <div class="explore-card-badge">Heritage</div>
-                <h3 class="explore-card-title">Culture</h3>
-                <p class="explore-card-desc">Museums and spiritual landmarks.</p>
-                <div class="explore-card-links">
-                    <a href="#/museums" class="explore-pill-link">Museums</a>
-                    <a href="#/religious-sites" class="explore-pill-link">Religious Sites</a>
-                </div>
-            </div>
+          </div>
         </div>
 
+        <!-- Healthcare -->
         <a href="#/healthcare" class="explore-card">
-            <div class="explore-card-image">
-                <img src="images/skyline.png" alt="Healthcare in Trivandrum">
-            </div>
-            <div class="explore-card-content">
-                <div class="explore-card-badge">Wellness</div>
-                <h3 class="explore-card-title">Healthcare</h3>
-                <p class="explore-card-desc">Top-tier medical centers and clinics.</p>
-            </div>
+          <div class="explore-card-bg" style="background-image: url('images/categories/healthcare_premium.png')"></div>
+          <div class="explore-card-overlay"></div>
+          <div class="explore-card-content">
+            <span class="explore-card-label">Wellness</span>
+            <h3>Healthcare</h3>
+            <p>Top-tier medical centers and specialized clinics.</p>
+          </div>
         </a>
 
+        <!-- Education & More -->
         <a href="#/services" class="explore-card">
-            <div class="explore-card-image">
-                <img src="images/skyline.png" alt="Services in Trivandrum">
-            </div>
-            <div class="explore-card-content">
-                <div class="explore-card-badge">Services</div>
-                <h3 class="explore-card-title">Education & More</h3>
-                <p class="explore-card-desc">Schools, banking, and essential city services.</p>
-            </div>
+          <div class="explore-card-bg" style="background-image: url('images/categories/education_premium.png')"></div>
+          <div class="explore-card-overlay"></div>
+          <div class="explore-card-content">
+            <span class="explore-card-label">Services</span>
+            <h3>Education & More</h3>
+            <p>Schools, banking, and essential city services.</p>
+          </div>
         </a>
 
+        <!-- Localities -->
         <a href="#/localities" class="explore-card">
-            <div class="explore-card-image">
-                <img src="images/hero.png" alt="Neighborhoods in Trivandrum">
-            </div>
-            <div class="explore-card-content">
-                <div class="explore-card-badge">Neighborhoods</div>
-                <h3 class="explore-card-title">Localities</h3>
-                <p class="explore-card-desc">Browse all 20 ranked residential areas.</p>
-            </div>
+          <div class="explore-card-bg" style="background-image: url('images/categories/localities_premium.png')"></div>
+          <div class="explore-card-overlay"></div>
+          <div class="explore-card-content">
+            <span class="explore-card-label">Neighborhoods</span>
+            <h3>Localities</h3>
+            <p>Browse all 20 ranked residential areas.</p>
+          </div>
         </a>
       </div>
     </section>
