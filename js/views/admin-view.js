@@ -1,48 +1,23 @@
 /**
  * Admin View - Website Analytics Dashboard
  * Visualizes the data collected by AnalyticsManager with premium styling
+ * Uses Supabase Auth for secure authentication
  */
 async function renderAdminView() {
     const app = document.getElementById('app');
 
-    // --- 0. AUTH CHECK (Simple Team Gatekeeper) ---
-    const AUTH_KEY = 'tvm_admin_authenticated';
-    if (!sessionStorage.getItem(AUTH_KEY)) {
-        app.innerHTML = `
-            <div class="admin-container" style="display:flex; justify-content:center; align-items:center; min-height:80vh;">
-                <div class="admin-card" style="max-width:400px; width:100%; text-align:center; padding: 40px;">
-                    <div style="font-size: 48px; margin-bottom: 20px;">🛡️</div>
-                    <h2 style="margin-bottom: 10px; color: #0f172a;">Admin Access</h2>
-                    <p style="color: #64748b; margin-bottom: 24px; font-size: 14px;">This dashboard is for internal team metrics only. Please enter your password.</p>
-                    <input type="password" id="admin-password" placeholder="Management Password" 
-                           style="width:100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; outline: none; font-size: 16px; transition: border-color 0.2s;">
-                    <button id="admin-login-btn" 
-                            style="width:100%; padding: 14px; background: #2563eb; color: white; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; transition: background 0.2s;">
-                        Enter Dashboard
-                    </button>
-                    <div id="login-error" style="color: #ef4444; margin-top: 16px; font-size: 13px; display: none; font-weight: 600;">⚠️ Access Denied: Incorrect Password</div>
-                </div>
-            </div>
-        `;
+    // --- 0. AUTH CHECK (Supabase Auth) ---
+    if (!window.sbClient) {
+        app.innerHTML = '<div class="error-panel"><h2>Authentication service not available</h2><p>Check your Supabase configuration.</p></div>';
+        return;
+    }
 
-        // Handle login
-        const handleLogin = () => {
-            const pwd = document.getElementById('admin-password').value;
-            // Default password is 'tvm2024' - User should change this later
-            if (pwd === 'tvm2024') {
-                sessionStorage.setItem(AUTH_KEY, 'true');
-                renderAdminView();
-            } else {
-                const err = document.getElementById('login-error');
-                err.style.display = 'block';
-                document.getElementById('admin-password').style.borderColor = '#ef4444';
-            }
-        };
+    // Check if user is authenticated
+    const { data: { user }, error: authError } = await window.sbClient.auth.getUser();
 
-        document.getElementById('admin-login-btn').addEventListener('click', handleLogin);
-        document.getElementById('admin-password').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') handleLogin();
-        });
+    if (!user) {
+        // Show login form
+        renderAdminLogin(app);
         return;
     }
 
@@ -50,8 +25,12 @@ async function renderAdminView() {
     app.innerHTML = `
         <div class="admin-container">
             <header class="admin-header">
-                <div class="header-main">
+                <div class="header-main" style="display: flex; justify-content: space-between; align-items: center;">
                     <h1>📊 Project Analytics Dashboard</h1>
+                    <div class="admin-user-info">
+                        <span class="admin-email">${user.email}</span>
+                        <button id="admin-logout-btn" class="admin-logout-btn">Logout</button>
+                    </div>
                 </div>
                 <p>Tracking website use, effectiveness, and user behavior metrics.</p>
             </header>
@@ -251,6 +230,12 @@ async function renderAdminView() {
             .forEach(e => pageCounts[e.page_path] = (pageCounts[e.page_path] || 0) + 1);
         renderBarChart(pageCounts, 'landing-chart');
 
+        // Add logout handler
+        document.getElementById('admin-logout-btn')?.addEventListener('click', async () => {
+            await window.sbClient.auth.signOut();
+            renderAdminView(); // Re-render to show login
+        });
+
     } catch (err) {
         console.error('Admin Fetch Error:', err);
         const indicators = document.querySelectorAll('.big-number');
@@ -264,6 +249,87 @@ async function renderAdminView() {
     }
 }
 
+/**
+ * Render Admin Login Form
+ * Uses Supabase Auth for email/password authentication
+ */
+function renderAdminLogin(app) {
+    app.innerHTML = `
+        <div class="admin-container" style="display:flex; justify-content:center; align-items:center; min-height:80vh;">
+            <div class="admin-card admin-login-card">
+                <div style="font-size: 48px; margin-bottom: 20px;">🔐</div>
+                <h2 style="margin-bottom: 10px; color: #0f172a;">Admin Login</h2>
+                <p style="color: #64748b; margin-bottom: 24px; font-size: 14px;">Sign in with your authorized email to access the analytics dashboard.</p>
+
+                <form id="admin-login-form">
+                    <input type="email" id="admin-email" placeholder="Email address" required
+                           class="admin-input">
+                    <input type="password" id="admin-password" placeholder="Password" required
+                           class="admin-input">
+                    <button type="submit" id="admin-login-btn" class="admin-submit-btn">
+                        <span id="login-btn-text">Sign In</span>
+                        <span id="login-spinner" class="spinner" style="display: none;"></span>
+                    </button>
+                </form>
+
+                <div id="login-error" class="login-error" style="display: none;"></div>
+
+                <div class="login-footer">
+                    <a href="#/" class="back-link">← Back to Home</a>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Handle login form submission
+    document.getElementById('admin-login-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const email = document.getElementById('admin-email').value.trim();
+        const password = document.getElementById('admin-password').value;
+        const errorDiv = document.getElementById('login-error');
+        const submitBtn = document.getElementById('admin-login-btn');
+        const btnText = document.getElementById('login-btn-text');
+        const spinner = document.getElementById('login-spinner');
+
+        // Reset error state
+        errorDiv.style.display = 'none';
+        document.getElementById('admin-email').classList.remove('input-error');
+        document.getElementById('admin-password').classList.remove('input-error');
+
+        // Show loading state
+        submitBtn.disabled = true;
+        btnText.textContent = 'Signing in...';
+        spinner.style.display = 'inline-block';
+
+        try {
+            const { data, error } = await window.sbClient.auth.signInWithPassword({
+                email: email,
+                password: password
+            });
+
+            if (error) {
+                throw error;
+            }
+
+            // Success - re-render admin view (will now show dashboard)
+            renderAdminView();
+
+        } catch (err) {
+            // Show error
+            errorDiv.textContent = err.message || 'Invalid email or password';
+            errorDiv.style.display = 'block';
+            document.getElementById('admin-email').classList.add('input-error');
+            document.getElementById('admin-password').classList.add('input-error');
+
+            // Reset button
+            submitBtn.disabled = false;
+            btnText.textContent = 'Sign In';
+            spinner.style.display = 'none';
+        }
+    });
+}
+
 // PREMIUM DASHBOARD STYLES
 const adminStyles = `
 <style>
@@ -271,6 +337,27 @@ const adminStyles = `
     .admin-header { margin-bottom: 32px; border-bottom: 2px solid #f1f5f9; padding-bottom: 24px; }
     .admin-header h1 { font-size: 32px; font-weight: 800; color: #0f172a; margin: 0; letter-spacing: -0.02em; }
     .admin-header p { color: #64748b; margin-top: 4px; font-size: 16px; }
+
+    /* Admin User Info & Logout */
+    .admin-user-info { display: flex; align-items: center; gap: 16px; }
+    .admin-email { font-size: 14px; color: #64748b; font-weight: 500; }
+    .admin-logout-btn { padding: 10px 20px; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s; }
+    .admin-logout-btn:hover { background: #fee2e2; color: #dc2626; border-color: #fecaca; }
+
+    /* Login Form Styles */
+    .admin-login-card { max-width: 400px; width: 100%; text-align: center; padding: 40px; }
+    .admin-input { width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; outline: none; font-size: 16px; transition: border-color 0.2s, box-shadow 0.2s; box-sizing: border-box; }
+    .admin-input:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+    .admin-input.input-error { border-color: #ef4444; }
+    .admin-submit-btn { width: 100%; padding: 14px; background: #2563eb; color: white; border: none; border-radius: 12px; font-weight: 700; font-size: 16px; cursor: pointer; transition: background 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .admin-submit-btn:hover:not(:disabled) { background: #1d4ed8; }
+    .admin-submit-btn:disabled { background: #93c5fd; cursor: not-allowed; }
+    .login-error { color: #ef4444; margin-top: 16px; font-size: 13px; font-weight: 600; padding: 12px; background: #fef2f2; border-radius: 8px; }
+    .login-footer { margin-top: 24px; padding-top: 24px; border-top: 1px solid #f1f5f9; }
+    .back-link { color: #64748b; text-decoration: none; font-size: 14px; font-weight: 500; }
+    .back-link:hover { color: #2563eb; }
+    .spinner { width: 16px; height: 16px; border: 2px solid #ffffff40; border-top-color: #fff; border-radius: 50%; animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
     
     .admin-stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 32px; }
     .admin-card { background: white; padding: 24px; border-radius: 20px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.04); border: 1px solid #f1f5f9; position: relative; }
