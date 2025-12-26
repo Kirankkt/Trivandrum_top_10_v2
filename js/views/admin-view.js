@@ -81,6 +81,29 @@ async function renderAdminView() {
                 </div>
             </div>
 
+            <!-- Traffic Sources Section -->
+            <div class="admin-detail-grid" style="margin-bottom: 24px;">
+                <div class="admin-card">
+                    <div class="card-header">
+                        <h3>Traffic Sources</h3>
+                        <span class="badge">Acquisition</span>
+                    </div>
+                    <div class="traffic-sources-chart-container">
+                        <canvas id="traffic-sources-chart"></canvas>
+                    </div>
+                    <div class="traffic-sources-legend" id="traffic-sources-legend"></div>
+                </div>
+                <div class="admin-card">
+                    <div class="card-header">
+                        <h3>Top Referring Domains</h3>
+                        <span class="badge">External Traffic</span>
+                    </div>
+                    <div id="referring-domains-table" class="referring-domains">
+                        <div class="empty-state">Loading referrer data...</div>
+                    </div>
+                </div>
+            </div>
+
             <div class="admin-detail-grid">
                 <div class="admin-card bar-chart-card">
                     <div class="card-header">
@@ -326,6 +349,131 @@ async function renderAdminView() {
                 renderTrafficChart(days);
             });
         });
+
+        // --- 2.6 TRAFFIC SOURCES CHART ---
+        function renderTrafficSourcesChart() {
+            // Count traffic sources
+            const sourceCounts = { direct: 0, referral: 0, social: 0, search: 0 };
+            const domainCounts = {};
+
+            allEvents.forEach(e => {
+                // Only count page views for traffic sources
+                if (e.event_type === 'page_view') {
+                    const refType = e.referrer_type || 'direct';
+                    if (sourceCounts.hasOwnProperty(refType)) {
+                        sourceCounts[refType]++;
+                    } else {
+                        sourceCounts.direct++;
+                    }
+
+                    // Count referring domains
+                    if (e.referrer_domain && refType !== 'direct') {
+                        domainCounts[e.referrer_domain] = (domainCounts[e.referrer_domain] || 0) + 1;
+                    }
+                }
+            });
+
+            const total = Object.values(sourceCounts).reduce((a, b) => a + b, 0);
+
+            // Pie chart colors
+            const sourceColors = {
+                direct: '#3b82f6',    // Blue
+                search: '#10b981',    // Green
+                social: '#f59e0b',    // Amber
+                referral: '#8b5cf6'   // Purple
+            };
+
+            const sourceLabels = {
+                direct: 'Direct',
+                search: 'Search',
+                social: 'Social',
+                referral: 'Referral'
+            };
+
+            // Render pie chart
+            const ctx = document.getElementById('traffic-sources-chart');
+            if (ctx && typeof Chart !== 'undefined') {
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: Object.keys(sourceCounts).map(k => sourceLabels[k]),
+                        datasets: [{
+                            data: Object.values(sourceCounts),
+                            backgroundColor: Object.keys(sourceCounts).map(k => sourceColors[k]),
+                            borderWidth: 0,
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '65%',
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                backgroundColor: '#1e293b',
+                                titleColor: '#f8fafc',
+                                bodyColor: '#f8fafc',
+                                padding: 12,
+                                cornerRadius: 8,
+                                callbacks: {
+                                    label: function(context) {
+                                        const value = context.raw;
+                                        const pct = total > 0 ? ((value / total) * 100).toFixed(1) : 0;
+                                        return `${context.label}: ${value} (${pct}%)`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Render legend
+            const legendHtml = Object.entries(sourceCounts).map(([key, count]) => {
+                const pct = total > 0 ? ((count / total) * 100).toFixed(1) : 0;
+                return `
+                    <div class="source-legend-item">
+                        <span class="source-dot" style="background: ${sourceColors[key]};"></span>
+                        <span class="source-label">${sourceLabels[key]}</span>
+                        <span class="source-value">${count} (${pct}%)</span>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('traffic-sources-legend').innerHTML = legendHtml;
+
+            // Render top referring domains table
+            const sortedDomains = Object.entries(domainCounts)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 5);
+
+            if (sortedDomains.length > 0) {
+                const domainsHtml = sortedDomains.map(([domain, count], index) => `
+                    <div class="domain-row">
+                        <div class="domain-rank">${index + 1}</div>
+                        <div class="domain-info">
+                            <span class="domain-name">${domain}</span>
+                            <span class="domain-count">${count} visits</span>
+                        </div>
+                    </div>
+                `).join('');
+
+                document.getElementById('referring-domains-table').innerHTML = domainsHtml;
+            } else {
+                document.getElementById('referring-domains-table').innerHTML = `
+                    <div class="empty-state">
+                        <div style="font-size: 24px; margin-bottom: 8px;">🔗</div>
+                        <div>No referral traffic recorded yet</div>
+                        <small style="color: #94a3b8;">Referrer data will appear as visitors arrive from external sites</small>
+                    </div>
+                `;
+            }
+        }
+
+        renderTrafficSourcesChart();
 
         // --- 3. RECENT ACTIVITY TABLE ---
         const tableBody = document.querySelector('#recent-events-table tbody');
@@ -591,6 +739,24 @@ const adminStyles = `
     .chart-legend { display: flex; justify-content: center; gap: 24px; padding-top: 8px; border-top: 1px solid #f1f5f9; }
     .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #64748b; }
     .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+
+    /* Traffic Sources Chart */
+    .traffic-sources-chart-container { height: 200px; position: relative; margin-bottom: 16px; }
+    .traffic-sources-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 16px; border-top: 1px solid #f1f5f9; }
+    .source-legend-item { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: #f8fafc; border-radius: 8px; }
+    .source-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .source-label { font-size: 13px; font-weight: 600; color: #475569; flex-grow: 1; }
+    .source-value { font-size: 12px; color: #94a3b8; font-weight: 500; }
+
+    /* Referring Domains Table */
+    .referring-domains { padding: 8px 0; }
+    .domain-row { display: flex; align-items: center; gap: 16px; padding: 14px 16px; border-bottom: 1px solid #f1f5f9; transition: background 0.2s; }
+    .domain-row:last-child { border-bottom: none; }
+    .domain-row:hover { background: #f8fafc; }
+    .domain-rank { width: 28px; height: 28px; background: #f1f5f9; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; color: #64748b; }
+    .domain-info { flex-grow: 1; }
+    .domain-name { display: block; font-size: 14px; font-weight: 600; color: #334155; margin-bottom: 2px; }
+    .domain-count { font-size: 12px; color: #94a3b8; }
 
     /* Responsive adjustments */
     @media (max-width: 768px) {

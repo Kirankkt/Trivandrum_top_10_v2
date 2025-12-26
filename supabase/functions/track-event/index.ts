@@ -21,6 +21,9 @@ const VALID_EVENT_NAMES = [
   'weight_adjusted', 'category_selected', 'map_interaction'
 ]
 
+// Valid referrer types
+const VALID_REFERRER_TYPES = ['direct', 'referral', 'social', 'search']
+
 // Valid localities (prevent arbitrary data injection)
 const VALID_LOCALITIES = [
   'Sreekaryam', 'Statue', 'Kazhakuttom', 'Enchakkal', 'Pattom',
@@ -147,6 +150,11 @@ serve(async (req) => {
         sanitizedMetadata = data.metadata
       }
 
+      // Validate referrer_type if provided
+      const referrerType = data.referrer_type && VALID_REFERRER_TYPES.includes(data.referrer_type)
+        ? data.referrer_type
+        : null
+
       // Insert into site_events
       const { error } = await supabase
         .from('site_events')
@@ -156,7 +164,10 @@ serve(async (req) => {
           page_path: data.page_path?.substring(0, 200) || null,
           session_id: data.session_id,
           metadata: sanitizedMetadata,
-          user_agent: data.user_agent?.substring(0, 500) || null
+          user_agent: data.user_agent?.substring(0, 500) || null,
+          referrer_type: referrerType,
+          referrer_source: data.referrer_source?.substring(0, 100) || null,
+          referrer_domain: data.referrer_domain?.substring(0, 200) || null
         })
 
       if (error) throw error

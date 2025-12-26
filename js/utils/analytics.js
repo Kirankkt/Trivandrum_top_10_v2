@@ -8,10 +8,75 @@ class AnalyticsManager {
         this.initialized = false;
         this.edgeFunctionUrl = null;
 
+        // Capture referrer on first load (before any navigation)
+        this.initialReferrer = this._captureReferrer();
+
         // Auto-track page views on hash change
         window.addEventListener('hashchange', () => {
             this.trackPageView(window.location.hash);
         });
+    }
+
+    /**
+     * Capture and categorize referrer information
+     */
+    _captureReferrer() {
+        const referrer = document.referrer || '';
+
+        // If no referrer or same origin, it's direct traffic
+        if (!referrer) {
+            return { type: 'direct', source: null, domain: null };
+        }
+
+        try {
+            const refUrl = new URL(referrer);
+            const currentHost = window.location.hostname;
+
+            // If referrer is from same site, treat as direct
+            if (refUrl.hostname === currentHost) {
+                return { type: 'direct', source: null, domain: null };
+            }
+
+            const domain = refUrl.hostname.replace('www.', '');
+
+            // Social media domains
+            const socialDomains = {
+                'facebook.com': 'Facebook',
+                'fb.com': 'Facebook',
+                'twitter.com': 'Twitter',
+                'x.com': 'Twitter',
+                't.co': 'Twitter',
+                'instagram.com': 'Instagram',
+                'linkedin.com': 'LinkedIn',
+                'youtube.com': 'YouTube',
+                'reddit.com': 'Reddit',
+                'pinterest.com': 'Pinterest',
+                'tiktok.com': 'TikTok',
+                'whatsapp.com': 'WhatsApp',
+                'telegram.org': 'Telegram'
+            };
+
+            // Check if it's a social media referrer
+            for (const [socialDomain, socialName] of Object.entries(socialDomains)) {
+                if (domain.includes(socialDomain)) {
+                    return { type: 'social', source: socialName, domain: domain };
+                }
+            }
+
+            // Search engines
+            const searchDomains = ['google.', 'bing.', 'yahoo.', 'duckduckgo.', 'baidu.'];
+            for (const searchDomain of searchDomains) {
+                if (domain.includes(searchDomain)) {
+                    return { type: 'search', source: domain.split('.')[0], domain: domain };
+                }
+            }
+
+            // Otherwise it's referral traffic
+            return { type: 'referral', source: domain, domain: domain };
+
+        } catch (e) {
+            return { type: 'direct', source: null, domain: null };
+        }
     }
 
     /**
@@ -99,9 +164,13 @@ class AnalyticsManager {
                 event_type: 'page_view',
                 event_name: 'view_page',
                 page_path: path,
-                session_id: this.sessionId
+                session_id: this.sessionId,
+                user_agent: navigator.userAgent,
+                referrer_type: this.initialReferrer.type,
+                referrer_source: this.initialReferrer.source,
+                referrer_domain: this.initialReferrer.domain
             });
-            console.log(`📊 [Analytics] Page View: ${path}`);
+            console.log(`📊 [Analytics] Page View: ${path} (${this.initialReferrer.type})`);
         } catch (err) {
             console.debug('📊 [Analytics] Page track failed:', err.message);
         }
