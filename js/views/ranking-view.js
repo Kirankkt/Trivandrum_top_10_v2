@@ -25,28 +25,38 @@ async function renderRankingView() {
     recalculateRankings(rankingsData.all_rankings, weights) :
     rankingsData.all_rankings;
 
-  // Locality image mapping - AI-generated contextual images
+  // Locality image mapping - Lifestyle-based placeholders for the grid view
+  // Each locality is mapped to one of the 4 lifestyle archetypes
   const localityImages = {
-    'Statue': 'images/localities/locality_statue_1765515536425.png',
-    'Pattom': 'images/localities/locality_pattom_1765515551840.png',
-    'Kowdiar': 'images/localities/locality_kowdiar_1765515570335.png',
-    'Enchakkal': 'images/localities/locality_enchakkal_1765515725097.png',
-    'Jagathy': 'images/localities/locality_jagathy_1765515744821.png',
-    'Ambalamukku': 'images/localities/locality_ambalamukku_1765515767794.png',
-    'Vazhuthacaud': 'images/localities/locality_vazhuthacaud_1765515786029.png',
-    'PMG': 'images/localities/locality_pmg_1765515821035.png',
-    'Kesavadasapuram': 'images/localities/locality_kesavadasapuram_1765515836771.png',
-    'Sasthamangalam': 'images/localities/locality_sasthamangalam_1765515686073.png',
-    'Vellayambalam': 'images/localities/locality_vellayambalam_1765515853090.png',
-    'Peroorkada': 'images/localities/locality_peroorkada_1765515869711.png',
-    'Kuravankonam': 'images/localities/locality_kuravankonam_1765515904397.png',
-    'Ulloor': 'images/localities/locality_ulloor_1765515923944.png',
-    'Medical College': 'images/localities/locality_medical_college_1765515945391.png',
-    'Thampanoor': 'images/localities/locality_thampanoor_1765515963546.png',
-    'Sreekaryam': 'images/localities/locality_sreekaryam_1765515666747.png',
-    'Kovalam': 'images/localities/locality_kovalam_1765515630432.png',
-    'Varkala': 'images/localities/locality_varkala_1765515646696.png',
-    'Kazhakuttom': 'images/localities/locality_kazhakuttom_1765515586696.png',
+    // IT Professional (tech.png)
+    'Kazhakuttom': 'images/tech.png',
+    'Sreekaryam': 'images/tech.png',
+    'Ulloor': 'images/tech.png',
+
+    // Beach Life (beach.png)
+    'Kovalam': 'images/beach.png',
+    'Varkala': 'images/beach.png',
+
+    // Heritage & Culture (palace.png)
+    'Statue': 'images/palace.png',
+    'Kowdiar': 'images/palace.png',
+    'Vellayambalam': 'images/palace.png',
+    'PMG': 'images/palace.png',
+    'Vazhuthacaud': 'images/palace.png',
+    'Jagathy': 'images/palace.png',
+    'Kuravankonam': 'images/palace.png',
+
+    // Family Living (skyline.png)
+    'Pattom': 'images/skyline.png',
+    'Enchakkal': 'images/skyline.png',
+    'Ambalamukku': 'images/skyline.png',
+    'Kesavadasapuram': 'images/skyline.png',
+    'Sasthamangalam': 'images/skyline.png',
+    'Peroorkada': 'images/skyline.png',
+    'Medical College': 'images/skyline.png',
+    'Poojapura': 'images/skyline.png',
+    'Thampanoor': 'images/skyline.png',
+
     'default': 'images/skyline.png'
   };
 
@@ -54,12 +64,12 @@ async function renderRankingView() {
     return localityImages[name] || localityImages['default'];
   }
 
-  // Experience categories with associated localities
+  // Experience categories with associated localities (Icons removed for professional feel)
   const categories = [
-    { name: 'IT Professional', icon: '💻', localities: ['Kazhakuttom', 'Sreekaryam'], image: 'images/tech.png' },
-    { name: 'Beach Life', icon: '🏖️', localities: ['Kovalam', 'Varkala'], image: 'images/beach.png' },
-    { name: 'Heritage & Culture', icon: '🏛️', localities: ['Kowdiar', 'Statue', 'Vellayambalam', 'Pattom'], image: 'images/palace.png' },
-    { name: 'Family Living', icon: '👨‍👩‍👧', localities: ['Sasthamangalam', 'Pattom', 'Vellayambalam', 'Peroorkada', 'Kuravankonam'], image: 'images/skyline.png' }
+    { name: 'IT Professional', localities: ['Kazhakuttom', 'Sreekaryam', 'Ulloor'], image: 'images/tech.png' },
+    { name: 'Beach Life', localities: ['Kovalam', 'Varkala'], image: 'images/beach.png' },
+    { name: 'Heritage & Culture', localities: ['Kowdiar', 'Statue', 'Vellayambalam', 'PMG', 'Vazhuthacaud', 'Jagathy', 'Kuravankonam'], image: 'images/palace.png' },
+    { name: 'Family Living', localities: ['Sasthamangalam', 'Pattom', 'Ambalamukku', 'Kesavadasapuram', 'Enchakkal', 'Medical College', 'Peroorkada', 'Poojapura'], image: 'images/skyline.png' }
   ];
 
   // Store categories globally for filter access
@@ -99,7 +109,7 @@ async function renderRankingView() {
               <img src="${cat.image}" alt="${cat.name}" />
               <div class="category-overlay"></div>
             </div>
-            <h3 class="category-name">${cat.icon} ${cat.name}</h3>
+            <h3 class="category-name">${cat.name}</h3>
           </div>
         `).join('')}
       </div>
@@ -275,7 +285,7 @@ async function renderRankingView() {
       });
 
       // Update banner with active filter names
-      const filterNames = activeCategories.map(c => `${c.icon} ${c.name}`).join(' + ');
+      const filterNames = activeCategories.map(c => c.name).join(' + ');
       if (filterBanner && filterLabel) {
         filterLabel.textContent = `Showing: ${filterNames}`;
         filterBanner.classList.remove('hidden');
