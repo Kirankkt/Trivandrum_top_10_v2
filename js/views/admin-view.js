@@ -104,6 +104,28 @@ async function renderAdminView() {
                 </div>
             </div>
 
+            <!-- User Journey & Conversions Section -->
+            <div class="admin-detail-grid" style="margin-bottom: 24px;">
+                <div class="admin-card">
+                    <div class="card-header">
+                        <h3>Conversion Funnel</h3>
+                        <span class="badge">User Journey</span>
+                    </div>
+                    <div id="conversion-funnel" class="funnel-container">
+                        <div class="empty-state">Loading funnel data...</div>
+                    </div>
+                </div>
+                <div class="admin-card">
+                    <div class="card-header">
+                        <h3>Popular User Paths</h3>
+                        <span class="badge">Navigation Flow</span>
+                    </div>
+                    <div id="user-paths" class="user-paths-container">
+                        <div class="empty-state">Analyzing user journeys...</div>
+                    </div>
+                </div>
+            </div>
+
             <div class="admin-detail-grid">
                 <div class="admin-card bar-chart-card">
                     <div class="card-header">
@@ -475,6 +497,189 @@ async function renderAdminView() {
 
         renderTrafficSourcesChart();
 
+        // --- 2.7 CONVERSION FUNNEL & USER PATHS ---
+        function renderConversionFunnel() {
+            // Define funnel stages based on page paths
+            const funnelStages = [
+                { name: 'Homepage', path: '#/', icon: '🏠' },
+                { name: 'Localities List', path: '#/localities', icon: '📍' },
+                { name: 'Locality Detail', pathPattern: /^#\/locality\/|^#\/discover\//, icon: '🏘️' },
+                { name: 'Map Interaction', path: '#/map', icon: '🗺️' }
+            ];
+
+            // Group events by session
+            const sessionEvents = {};
+            allEvents.forEach(e => {
+                if (e.event_type === 'page_view' && e.session_id) {
+                    if (!sessionEvents[e.session_id]) {
+                        sessionEvents[e.session_id] = [];
+                    }
+                    sessionEvents[e.session_id].push(e.page_path);
+                }
+            });
+
+            // Count unique sessions reaching each stage
+            const stageCounts = funnelStages.map(stage => {
+                let count = 0;
+                Object.values(sessionEvents).forEach(paths => {
+                    const reached = paths.some(p => {
+                        if (stage.pathPattern) {
+                            return stage.pathPattern.test(p);
+                        }
+                        return p === stage.path;
+                    });
+                    if (reached) count++;
+                });
+                return count;
+            });
+
+            const totalSessions = Object.keys(sessionEvents).length;
+            const maxCount = Math.max(...stageCounts, 1);
+
+            // Calculate overall conversion rate (homepage to map)
+            const overallConversion = totalSessions > 0
+                ? ((stageCounts[3] / stageCounts[0]) * 100).toFixed(1)
+                : 0;
+
+            // Render funnel
+            let funnelHtml = `
+                <div class="funnel-overall">
+                    <div class="funnel-overall-label">Overall Conversion</div>
+                    <div class="funnel-overall-value">${overallConversion}%</div>
+                    <div class="funnel-overall-desc">Homepage → Map</div>
+                </div>
+                <div class="funnel-stages">
+            `;
+
+            funnelStages.forEach((stage, index) => {
+                const count = stageCounts[index];
+                const pct = maxCount > 0 ? (count / maxCount) * 100 : 0;
+                const conversionFromPrev = index > 0 && stageCounts[index - 1] > 0
+                    ? ((count / stageCounts[index - 1]) * 100).toFixed(0)
+                    : 100;
+                const dropOff = index > 0 ? (100 - parseFloat(conversionFromPrev)).toFixed(0) : 0;
+
+                funnelHtml += `
+                    <div class="funnel-stage">
+                        <div class="funnel-stage-header">
+                            <span class="funnel-icon">${stage.icon}</span>
+                            <span class="funnel-name">${stage.name}</span>
+                            <span class="funnel-count">${count}</span>
+                        </div>
+                        <div class="funnel-bar-container">
+                            <div class="funnel-bar" style="width: ${pct}%;"></div>
+                        </div>
+                        ${index > 0 ? `
+                            <div class="funnel-dropoff">
+                                <span class="dropoff-arrow">↓</span>
+                                <span class="dropoff-rate ${parseFloat(dropOff) > 50 ? 'high-dropoff' : ''}">${dropOff}% drop-off</span>
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            });
+
+            funnelHtml += '</div>';
+            document.getElementById('conversion-funnel').innerHTML = funnelHtml;
+        }
+
+        function renderUserPaths() {
+            // Build 3-page sequences from sessions
+            const pathSequences = {};
+
+            // Group events by session and sort by time
+            const sessionEvents = {};
+            allEvents.forEach(e => {
+                if (e.event_type === 'page_view' && e.session_id && e.page_path) {
+                    if (!sessionEvents[e.session_id]) {
+                        sessionEvents[e.session_id] = [];
+                    }
+                    sessionEvents[e.session_id].push({
+                        path: e.page_path,
+                        time: new Date(e.created_at)
+                    });
+                }
+            });
+
+            // Sort each session's events by time and extract 3-page sequences
+            Object.values(sessionEvents).forEach(events => {
+                events.sort((a, b) => a.time - b.time);
+                const paths = events.map(e => e.path);
+
+                // Get unique consecutive paths (remove duplicates)
+                const uniquePaths = [];
+                paths.forEach(p => {
+                    if (uniquePaths.length === 0 || uniquePaths[uniquePaths.length - 1] !== p) {
+                        uniquePaths.push(p);
+                    }
+                });
+
+                // Extract all 3-page sequences
+                for (let i = 0; i <= uniquePaths.length - 3; i++) {
+                    const sequence = uniquePaths.slice(i, i + 3).join(' → ');
+                    pathSequences[sequence] = (pathSequences[sequence] || 0) + 1;
+                }
+            });
+
+            // Sort and get top 5 sequences
+            const topSequences = Object.entries(pathSequences)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 5);
+
+            // Helper to format path names
+            function formatPath(path) {
+                const pathNames = {
+                    '#/': 'Home',
+                    '#/localities': 'Localities',
+                    '#/map': 'Map',
+                    '#/restaurants': 'Restaurants',
+                    '#/cafes': 'Cafes',
+                    '#/hotels': 'Hotels',
+                    '#/malls': 'Malls',
+                    '#/museums': 'Museums',
+                    '#/healthcare': 'Healthcare',
+                    '#/methodology': 'Methodology'
+                };
+
+                if (pathNames[path]) return pathNames[path];
+                if (path.startsWith('#/locality/')) return 'Locality: ' + path.replace('#/locality/', '').substring(0, 12);
+                if (path.startsWith('#/discover/')) return 'Discover: ' + path.replace('#/discover/', '').substring(0, 12);
+                if (path.startsWith('#/entity/')) return 'Detail Page';
+                return path.replace('#/', '').substring(0, 15) || 'Home';
+            }
+
+            if (topSequences.length > 0) {
+                const pathsHtml = topSequences.map(([sequence, count], index) => {
+                    const steps = sequence.split(' → ').map(formatPath);
+                    return `
+                        <div class="path-row">
+                            <div class="path-rank">${index + 1}</div>
+                            <div class="path-flow">
+                                ${steps.map((step, i) => `
+                                    <span class="path-step">${step}</span>
+                                    ${i < steps.length - 1 ? '<span class="path-arrow">→</span>' : ''}
+                                `).join('')}
+                            </div>
+                            <div class="path-count">${count} users</div>
+                        </div>
+                    `;
+                }).join('');
+
+                document.getElementById('user-paths').innerHTML = pathsHtml;
+            } else {
+                document.getElementById('user-paths').innerHTML = `
+                    <div class="empty-state">
+                        <div style="font-size: 24px; margin-bottom: 8px;">🛤️</div>
+                        <div>Not enough navigation data yet</div>
+                        <small style="color: #94a3b8;">User paths will appear as visitors browse multiple pages</small>
+                    </div>
+                `;
+            }
+        }
+
+        renderConversionFunnel();
+        renderUserPaths();
+
         // --- 3. RECENT ACTIVITY TABLE ---
         const tableBody = document.querySelector('#recent-events-table tbody');
         tableBody.innerHTML = allEvents.slice(0, 15).map(e => {
@@ -757,6 +962,36 @@ const adminStyles = `
     .domain-info { flex-grow: 1; }
     .domain-name { display: block; font-size: 14px; font-weight: 600; color: #334155; margin-bottom: 2px; }
     .domain-count { font-size: 12px; color: #94a3b8; }
+
+    /* Conversion Funnel */
+    .funnel-container { padding: 8px 0; }
+    .funnel-overall { text-align: center; padding: 20px; background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%); border-radius: 12px; margin-bottom: 20px; }
+    .funnel-overall-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; font-weight: 700; }
+    .funnel-overall-value { font-size: 42px; font-weight: 900; color: #2563eb; line-height: 1.1; margin: 4px 0; }
+    .funnel-overall-desc { font-size: 12px; color: #94a3b8; }
+    .funnel-stages { display: flex; flex-direction: column; gap: 4px; }
+    .funnel-stage { padding: 12px 0; }
+    .funnel-stage-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .funnel-icon { font-size: 18px; }
+    .funnel-name { font-size: 13px; font-weight: 600; color: #475569; flex-grow: 1; }
+    .funnel-count { font-size: 14px; font-weight: 800; color: #1e293b; }
+    .funnel-bar-container { height: 8px; background: #f1f5f9; border-radius: 4px; overflow: hidden; }
+    .funnel-bar { height: 100%; background: linear-gradient(90deg, #3b82f6, #2563eb); border-radius: 4px; transition: width 0.8s ease-out; }
+    .funnel-dropoff { display: flex; align-items: center; gap: 6px; margin-top: 6px; padding-left: 28px; }
+    .dropoff-arrow { color: #94a3b8; font-size: 12px; }
+    .dropoff-rate { font-size: 11px; color: #64748b; font-weight: 600; }
+    .dropoff-rate.high-dropoff { color: #ef4444; }
+
+    /* User Paths */
+    .user-paths-container { padding: 8px 0; }
+    .path-row { display: flex; align-items: center; gap: 14px; padding: 14px 12px; border-bottom: 1px solid #f1f5f9; transition: background 0.2s; }
+    .path-row:last-child { border-bottom: none; }
+    .path-row:hover { background: #f8fafc; }
+    .path-rank { width: 24px; height: 24px; background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; flex-shrink: 0; }
+    .path-flow { flex-grow: 1; display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+    .path-step { font-size: 12px; font-weight: 600; color: #334155; background: #f1f5f9; padding: 4px 10px; border-radius: 6px; white-space: nowrap; }
+    .path-arrow { color: #94a3b8; font-size: 11px; }
+    .path-count { font-size: 12px; color: #64748b; font-weight: 600; white-space: nowrap; }
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
