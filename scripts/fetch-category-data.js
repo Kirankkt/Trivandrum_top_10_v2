@@ -13,7 +13,8 @@
  * - Convenience from locality mapping
  */
 
-const GOOGLE_MAPS_API_KEY = 'AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I';
+require('dotenv').config();
+const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY;
 
 // Trivandrum center coordinates
 const TRIVANDRUM_LAT = 8.5241;

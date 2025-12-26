@@ -1,141 +1,160 @@
 {
   "Sreekaryam": {
     "photo_reference": "AZLasHoscXh18N9d7a6ftJu57ztnnJITsE8k7ZO1iBjk4s9KvVJ4TuEF1G9ZsXJSZzSIZ7JcgZf54wD1Be06BYDf27KyDhtZ9hNptEwdYEkkgy1qnvtSPHTpOJGQ3M5k4biZLGxiNXMgLfANj-6dvgrXFBNORixbyRVvlD6vzg93UnCWddUjNFii_lZEWBwUzzvdk3c8LPGgEcOJN6TdGlDoagCkFgCPixkGbyl77mFBn1VdYoEV02rOIGzG8iPA9ytSNjMRW7Izw0IG-fmhxQDUU0rp8jJuU0gmK9_0Ynp8T6_RuEz3g1jXgHnNyzuKP57Rt7z571algew2GtVHBmL4gy52JuFp_Y7RAsWY67QL0jdlL4ytMYDarZvgLFxboks4S_16eIBYtGvke_rk7em1fS3pmxvYYuLCBF_fOZTdzW7czMDKuv2lTuqX3SrHE1CohVw6BxYczbdWKoQKxmw5b_a6RFs-yVzRFHv3Xbm-GfOHjaQwUyjg8s-s4SGIaWrtuqPlssbTFiWRzyB5W43OxXbLnYwXHL36Ut6NDgfF2jUe-0O_od87Mtxvn01UAUjuFR54cKmz",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHoscXh18N9d7a6ftJu57ztnnJITsE8k7ZO1iBjk4s9KvVJ4TuEF1G9ZsXJSZzSIZ7JcgZf54wD1Be06BYDf27KyDhtZ9hNptEwdYEkkgy1qnvtSPHTpOJGQ3M5k4biZLGxiNXMgLfANj-6dvgrXFBNORixbyRVvlD6vzg93UnCWddUjNFii_lZEWBwUzzvdk3c8LPGgEcOJN6TdGlDoagCkFgCPixkGbyl77mFBn1VdYoEV02rOIGzG8iPA9ytSNjMRW7Izw0IG-fmhxQDUU0rp8jJuU0gmK9_0Ynp8T6_RuEz3g1jXgHnNyzuKP57Rt7z571algew2GtVHBmL4gy52JuFp_Y7RAsWY67QL0jdlL4ytMYDarZvgLFxboks4S_16eIBYtGvke_rk7em1fS3pmxvYYuLCBF_fOZTdzW7czMDKuv2lTuqX3SrHE1CohVw6BxYczbdWKoQKxmw5b_a6RFs-yVzRFHv3Xbm-GfOHjaQwUyjg8s-s4SGIaWrtuqPlssbTFiWRzyB5W43OxXbLnYwXHL36Ut6NDgfF2jUe-0O_od87Mtxvn01UAUjuFR54cKmz&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_sreekaryam.jpg",
     "place_id": "ChIJGcVBlce-BTsReDf7qrVOMpg",
     "place_name": "College of Engineering Trivandrum (CET)",
-    "search_query": "College of Engineering Trivandrum CET"
+    "search_query": "College of Engineering Trivandrum CET",
+    "is_local": true
   },
   "Statue": {
     "photo_reference": "AZLasHrMhtLjcnM8Y4NtNQoDIM-vBZTV_Z2hDzr1ArgQ5M0FMQ1Rl68cJCKKWedxFfU0kvmVqfcwkHKxyd5e1sPEKza7msMl4idWKHHntatQ4grQMZibYA0-6INbkjMQa14lr1N-rnyaNRGUwfDbhwi2HLIlbWcmyv67Wt4wUGBJipa0G-UD23giFwhmKgi3iywTF2-UQruXWoB33NVT3PS-HmegznAWme4SRZpjGguRvd9NMrvtb-jsb3TU3NjEsIgIfgdcwRR1Q4kaRRxDCu2j0VmEaH9SE7gEZL5nLWCTzMKc3upMTrghHfL9D_DYWB-1M9bfNUrFJGDc556vuZ1CKoGP_to91VeWqRtbg9fbeUt3OUuZmi_ZX3hj-JUR9Dlp5k53zh1EWXHeFEqZW7_sZw6sWV9qQQD2DdBLpTMgdwC2vrQUae2wbSgmswqGxghJhyfPkWC-pzjchsOrj4bTpPT9WHo2NwTpGFye6oNdk_TlMAfSVhwCuonu6XoU7hOmf5AaAnSbPw914rgUmVyXpIi4tIA8Wsso2zJ6tgBt-TltKxJHRdFoFtDDXS7FXs7hACUNWAfI",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHrMhtLjcnM8Y4NtNQoDIM-vBZTV_Z2hDzr1ArgQ5M0FMQ1Rl68cJCKKWedxFfU0kvmVqfcwkHKxyd5e1sPEKza7msMl4idWKHHntatQ4grQMZibYA0-6INbkjMQa14lr1N-rnyaNRGUwfDbhwi2HLIlbWcmyv67Wt4wUGBJipa0G-UD23giFwhmKgi3iywTF2-UQruXWoB33NVT3PS-HmegznAWme4SRZpjGguRvd9NMrvtb-jsb3TU3NjEsIgIfgdcwRR1Q4kaRRxDCu2j0VmEaH9SE7gEZL5nLWCTzMKc3upMTrghHfL9D_DYWB-1M9bfNUrFJGDc556vuZ1CKoGP_to91VeWqRtbg9fbeUt3OUuZmi_ZX3hj-JUR9Dlp5k53zh1EWXHeFEqZW7_sZw6sWV9qQQD2DdBLpTMgdwC2vrQUae2wbSgmswqGxghJhyfPkWC-pzjchsOrj4bTpPT9WHo2NwTpGFye6oNdk_TlMAfSVhwCuonu6XoU7hOmf5AaAnSbPw914rgUmVyXpIi4tIA8Wsso2zJ6tgBt-TltKxJHRdFoFtDDXS7FXs7hACUNWAfI&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_statue.jpg",
     "place_id": "ChIJ3_Z7tru7BTsRmRjAWCInyP0",
     "place_name": "Kerala Government Secretariat",
-    "search_query": "Kerala Secretariat Trivandrum"
+    "search_query": "Kerala Secretariat Trivandrum",
+    "is_local": true
   },
   "Kazhakuttom": {
     "photo_reference": "AZLasHrgXzePEfQMNzTB2xMF2jDKf3I7sAnYVWuiuNM0k_Y8N188Ite3G3xOGuRtMvIeoEatZt3zDAcP5_CtZn0xqtPWDern2GW8sDSbG0YVVaqFcCeWg1uBUsMmTfAWC8-MAxBkoz2su7eooLGdv-t7GQsShg6-lT03FVdHOD2gLaLpunHmkRbbiHaM5v1x-14Hv5H4GtGAMxZelILIK-6GRrm3H3sHxhPUl6rkwk4BTJLO08q2zFDu0dgNDp0ZiGPFHXtW1ExS6AYOB2Fv7D3Bz6xHnBNdvxUxMWTmXfocPa4vK1ScOSrgf5iFUB7cQ0ot6fE4T4y7d5xP2l08sN15asTAGYvsokY-XDU1-uYyR_pU3tDUrtemkWUJCsk2o79pRpOutXWcpV9gxe4m-5ozwc8L1PQ9gFUH4uqieLTBgm3vl696ioCYjr4qFQMRdxZs3epy6MxJwzB3H4Tn8lKuy4eLv1yRsKbwSSP1ejEwrcj28-qQaFRivVeVYBNI-CDvxUF83tLfxZl6P7nVnRfUvjSl-WIIPschpQOO0U0UwAi01tNqO_1zoK5jb6Z_R4egmnvVDDmxEOg9DA",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHrgXzePEfQMNzTB2xMF2jDKf3I7sAnYVWuiuNM0k_Y8N188Ite3G3xOGuRtMvIeoEatZt3zDAcP5_CtZn0xqtPWDern2GW8sDSbG0YVVaqFcCeWg1uBUsMmTfAWC8-MAxBkoz2su7eooLGdv-t7GQsShg6-lT03FVdHOD2gLaLpunHmkRbbiHaM5v1x-14Hv5H4GtGAMxZelILIK-6GRrm3H3sHxhPUl6rkwk4BTJLO08q2zFDu0dgNDp0ZiGPFHXtW1ExS6AYOB2Fv7D3Bz6xHnBNdvxUxMWTmXfocPa4vK1ScOSrgf5iFUB7cQ0ot6fE4T4y7d5xP2l08sN15asTAGYvsokY-XDU1-uYyR_pU3tDUrtemkWUJCsk2o79pRpOutXWcpV9gxe4m-5ozwc8L1PQ9gFUH4uqieLTBgm3vl696ioCYjr4qFQMRdxZs3epy6MxJwzB3H4Tn8lKuy4eLv1yRsKbwSSP1ejEwrcj28-qQaFRivVeVYBNI-CDvxUF83tLfxZl6P7nVnRfUvjSl-WIIPschpQOO0U0UwAi01tNqO_1zoK5jb6Z_R4egmnvVDDmxEOg9DA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_kazhakuttom.jpg",
     "place_id": "ChIJTaJdcvS-BTsRq8WoLOvEpbM",
     "place_name": "Technopark Phase III Main Rd",
-    "search_query": "Technopark Phase 3 Trivandrum"
+    "search_query": "Technopark Phase 3 Trivandrum",
+    "is_local": true
   },
   "Enchakkal": {
     "photo_reference": "AZLasHp6lmgqMdSmLpyt3x5UdAs0BEQAvSC-Pe90qz1GIC2aV8RgFJi5oaHM7EfbNrn3sxU2oKru9RcsqHCA-LfV_N_v_fGXwoYpDiuVB9iCq4y2PQ9oAFqrMyX6OD_dlwxFkVh_L6xuMsz6GZKqGaG0VfRybbZwdvini-9CqCvG9X_uZ51EEBFaogB7GRLSv9rqPDlO_UbLiFMF2wuN11p_-rrZxeOuPTXJXv8YXtR3WloCSLbgbbInfPAvTgNyH_6zxU2xSEuJPDnqpdnC5aLKYZ51eNMzgc8afR9s_2Tffc68fD3jMOqOqnTE1wxDbgG44lC3HVe17BucUxs5J4xPmqi3uSs3vElpcM1Grz_vTd-OtVauVRA5J45rmLqbxc96NVnqpxSN28wOWaisJmUFghFnMhE2ereGARKwP3fPnNW_w-ak7cKgsuzk_fTRYNU54L6KCOgy811CIVJxIhWFbPFb6ZOhguDT0FDfq73FrmAfwMWMyuohIhaoLaJNUbrxjUrcYS8NjIIVC9w2xt9WwJ5u90S21fyO3heGEaIQveDFiwh_yIENLA9Fe_5h8n2_wkx_cgqgjFmV5g",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHp6lmgqMdSmLpyt3x5UdAs0BEQAvSC-Pe90qz1GIC2aV8RgFJi5oaHM7EfbNrn3sxU2oKru9RcsqHCA-LfV_N_v_fGXwoYpDiuVB9iCq4y2PQ9oAFqrMyX6OD_dlwxFkVh_L6xuMsz6GZKqGaG0VfRybbZwdvini-9CqCvG9X_uZ51EEBFaogB7GRLSv9rqPDlO_UbLiFMF2wuN11p_-rrZxeOuPTXJXv8YXtR3WloCSLbgbbInfPAvTgNyH_6zxU2xSEuJPDnqpdnC5aLKYZ51eNMzgc8afR9s_2Tffc68fD3jMOqOqnTE1wxDbgG44lC3HVe17BucUxs5J4xPmqi3uSs3vElpcM1Grz_vTd-OtVauVRA5J45rmLqbxc96NVnqpxSN28wOWaisJmUFghFnMhE2ereGARKwP3fPnNW_w-ak7cKgsuzk_fTRYNU54L6KCOgy811CIVJxIhWFbPFb6ZOhguDT0FDfq73FrmAfwMWMyuohIhaoLaJNUbrxjUrcYS8NjIIVC9w2xt9WwJ5u90S21fyO3heGEaIQveDFiwh_yIENLA9Fe_5h8n2_wkx_cgqgjFmV5g&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_enchakkal.jpg",
     "place_id": "ChIJn4_XljO7BTsR7DJoaH-MZZY",
     "place_name": "Trivandrum Central Railway Station",
-    "search_query": "Trivandrum Central Railway Station"
+    "search_query": "Trivandrum Central Railway Station",
+    "is_local": true
   },
   "Pattom": {
     "photo_reference": "AZLasHok2sC76kvclMHBL2o9w63aSPxqXWfCGblUOJkW1XN2e4mq_xibbtgG33ANOl9O-XPIPtJGIT_674TO_X8VACAS9pVUHDvuE_p_HGeCG3WJ7CeJpgzxSR-zcXzYOvshjbeB2AUYNe7B6Rm3_IUmf_c5NF87aSlXuFCJ3N3b-eeW7qu5gT_xFKRlody653MY3pD5B4sqlZxmW8v03O-69hF6NIqRCZIgRrV42uheWIRfeX_rpjMPMGQ0rh1hteXcyJ0yWPiewQTjPdeXqfTVsRpY05rC-pNICSRvE9XWs5rx_7wgTIj0eD09k4pqQLEGEJ2Kx6nflZ0LCF_d3IOJnEqcLgXORaRCkFZ9M-4G-H4LzP8BLKk4gVtX31a-wfHZV8mEGYv-zLUoWM5Get8RwfqaLaUHnFFUKzlB-xhRqrHQmQzKWqvEJciLwIky3NA2IKJWO8nPFPSrTsRhDvO3GLvcjixXbD96Sl6k_Qx0sR8ola6dlVxOEQp1Ndnxo2NVSZFaTenADa8SsgNzw70pnpItS7zpduRvIZLDLucuI_Xfi5x89YrVob0MjpdKVsvof6ML73EjSF5dng",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHok2sC76kvclMHBL2o9w63aSPxqXWfCGblUOJkW1XN2e4mq_xibbtgG33ANOl9O-XPIPtJGIT_674TO_X8VACAS9pVUHDvuE_p_HGeCG3WJ7CeJpgzxSR-zcXzYOvshjbeB2AUYNe7B6Rm3_IUmf_c5NF87aSlXuFCJ3N3b-eeW7qu5gT_xFKRlody653MY3pD5B4sqlZxmW8v03O-69hF6NIqRCZIgRrV42uheWIRfeX_rpjMPMGQ0rh1hteXcyJ0yWPiewQTjPdeXqfTVsRpY05rC-pNICSRvE9XWs5rx_7wgTIj0eD09k4pqQLEGEJ2Kx6nflZ0LCF_d3IOJnEqcLgXORaRCkFZ9M-4G-H4LzP8BLKk4gVtX31a-wfHZV8mEGYv-zLUoWM5Get8RwfqaLaUHnFFUKzlB-xhRqrHQmQzKWqvEJciLwIky3NA2IKJWO8nPFPSrTsRhDvO3GLvcjixXbD96Sl6k_Qx0sR8ola6dlVxOEQp1Ndnxo2NVSZFaTenADa8SsgNzw70pnpItS7zpduRvIZLDLucuI_Xfi5x89YrVob0MjpdKVsvof6ML73EjSF5dng&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_pattom.jpg",
     "place_id": "ChIJwS7I28e7BTsRLhLKgyiBPYs",
     "place_name": "State Central Library",
-    "search_query": "Kerala State Library Trivandrum"
+    "search_query": "Kerala State Library Trivandrum",
+    "is_local": true
   },
   "Kesavadasapuram": {
     "photo_reference": "AZLasHrZsAAUFwpjJGiXloHPUe0yN8rZU0UnY1LOEVf2tGYC5rCC_pVPDwhWzczSX85Nh0BkNIHCsrwFVPsxqa1UbaeTSKEQpp9l2-WXME8CbnL0If8m1g78BpeKghx0HpbELjbgXil4WjwPp9uDMDkOJgBGQgjH3w684cE3sbeH0ir_eXWe4ZK0XFJZtno0odvUU21EYXyE-haby-4JBDD_BwkGqJQcMtDcI7WltNJMX1MxQCZ5UDhhYNhC7UpDCQSIOGn1K853lDKZheaoVuA2Acc2ObAPDyy45Ilb1J396_Ft1kA6L9pIZPz9Y5LcxsY_RTCHe8AhNWXMcWI41Hw18R57kQXiIvS7wUwYLyvh1kRGeovCKr96A5_Dneav1OMTOWWDx-yB1MsBo0LsMEy7G3WZ_VNhUmsfsWmpjx2lmC2GwNuk1tQmRn4ZRw5M-2HsQ9PEjofUHKO85jN50Sm0PDVU9YpFBBt3cC9Oge65YFlo6qtbjXs7FTtPjBwlB0ignkw-UueJKhgOV-PBvAAaesny0StJ_srKb2QUuNcQSMfpISQdRixFKaKcp-3FB21Oz9b_pX-X",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHrZsAAUFwpjJGiXloHPUe0yN8rZU0UnY1LOEVf2tGYC5rCC_pVPDwhWzczSX85Nh0BkNIHCsrwFVPsxqa1UbaeTSKEQpp9l2-WXME8CbnL0If8m1g78BpeKghx0HpbELjbgXil4WjwPp9uDMDkOJgBGQgjH3w684cE3sbeH0ir_eXWe4ZK0XFJZtno0odvUU21EYXyE-haby-4JBDD_BwkGqJQcMtDcI7WltNJMX1MxQCZ5UDhhYNhC7UpDCQSIOGn1K853lDKZheaoVuA2Acc2ObAPDyy45Ilb1J396_Ft1kA6L9pIZPz9Y5LcxsY_RTCHe8AhNWXMcWI41Hw18R57kQXiIvS7wUwYLyvh1kRGeovCKr96A5_Dneav1OMTOWWDx-yB1MsBo0LsMEy7G3WZ_VNhUmsfsWmpjx2lmC2GwNuk1tQmRn4ZRw5M-2HsQ9PEjofUHKO85jN50Sm0PDVU9YpFBBt3cC9Oge65YFlo6qtbjXs7FTtPjBwlB0ignkw-UueJKhgOV-PBvAAaesny0StJ_srKb2QUuNcQSMfpISQdRixFKaKcp-3FB21Oz9b_pX-X&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_kesavadasapuram.jpg",
     "place_id": "ChIJq8oy_Bq7BTsRB61mYSJhcNM",
     "place_name": "Attukal Bhagavathy Temple",
-    "search_query": "Attukal Bhagavathy Temple Trivandrum"
+    "search_query": "Attukal Bhagavathy Temple Trivandrum",
+    "is_local": true
   },
   "PMG": {
     "photo_reference": "AZLasHrCRU_t0X4a3M89BRopcNLenS4eTsy76QZx1BKqhwf_78bYa5fpBYU2rEERlbWIrNb_zMru2m1-2369K9BHj_pOLgROPD6vnAiULPhjIfxTbRlC5o9tfIS27GLudg-T2YgQg1cI9rKvebKBckC7kqHrC2UqRfe_jZkGj-vYfAdwQTVuzTAIkaoDUa87RmrNF7uDwd3qYT_Ch-81XCxs8M61UasJEsBhUdpEOn6w5CRPb2d2f4Fu-kXW1QxB8Pd7iPc59eQ8MD0q6_jyWXldz1hVDKi4eWWObl4uCeqq86Ki2769DrY",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHrCRU_t0X4a3M89BRopcNLenS4eTsy76QZx1BKqhwf_78bYa5fpBYU2rEERlbWIrNb_zMru2m1-2369K9BHj_pOLgROPD6vnAiULPhjIfxTbRlC5o9tfIS27GLudg-T2YgQg1cI9rKvebKBckC7kqHrC2UqRfe_jZkGj-vYfAdwQTVuzTAIkaoDUa87RmrNF7uDwd3qYT_Ch-81XCxs8M61UasJEsBhUdpEOn6w5CRPb2d2f4Fu-kXW1QxB8Pd7iPc59eQ8MD0q6_jyWXldz1hVDKi4eWWObl4uCeqq86Ki2769DrY&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_pmg.jpg",
     "place_id": "ChIJ2RremKa7BTsRdz4FnZFJhZk",
     "place_name": "Press Club",
-    "search_query": "Kerala Press Club Trivandrum"
+    "search_query": "Kerala Press Club Trivandrum",
+    "is_local": true
   },
   "Sasthamangalam": {
     "photo_reference": "AZLasHrr8_FUri5phhVXkSvU6AwYq8HYYqGC9_H3P2hTynUBq_FqHD01qpjIRsReljdEbXQRWuSzbtzXynKnJL-LQWczTzw6FFZt01N-dl4oFXHd0o2BBsFv8iFqBT45nU-uNfOqYCf_hBzQws6wkQeePYu4B39p7wQD11xUUXSXEkbgInj_TJ6h2aucluSCSh3Lytef9tL3kHACsw0lTn5QHehQ9AACEjZgONITDLJkuwEEmzyx8tKx8nZBEtTzFuF3Jz6ERwBUoI2rVXRIVe9yneSXnQe3OvSyUkX4Pd52uMmQ2cc-3P2uHYWZRavhrXBQ_DTrGQ2sABV9CTulT7VKzUmSL0ToOqzbWRweDYOrKn9yLE3r5FI8MMqay1Ti2F15sO9BaGeR_DfWWOi3USe1ta-uuqoxv__rsYS_k7iFSUxRf8MVtnzInknsfLuazNuGKRTCwlQe-_qyRYZaKYY9M8rNSVfkWgnd_F0j2GKH3z02LMeOI3Er8vFlTVZWXKKH1DAuNjqVGGFhHZl1AwP4avNBVTkNHTtjLZ6W5fDB-NE-3kNXQA-Z4Nf_N03l2BIhxCmW6A",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHrr8_FUri5phhVXkSvU6AwYq8HYYqGC9_H3P2hTynUBq_FqHD01qpjIRsReljdEbXQRWuSzbtzXynKnJL-LQWczTzw6FFZt01N-dl4oFXHd0o2BBsFv8iFqBT45nU-uNfOqYCf_hBzQws6wkQeePYu4B39p7wQD11xUUXSXEkbgInj_TJ6h2aucluSCSh3Lytef9tL3kHACsw0lTn5QHehQ9AACEjZgONITDLJkuwEEmzyx8tKx8nZBEtTzFuF3Jz6ERwBUoI2rVXRIVe9yneSXnQe3OvSyUkX4Pd52uMmQ2cc-3P2uHYWZRavhrXBQ_DTrGQ2sABV9CTulT7VKzUmSL0ToOqzbWRweDYOrKn9yLE3r5FI8MMqay1Ti2F15sO9BaGeR_DfWWOi3USe1ta-uuqoxv__rsYS_k7iFSUxRf8MVtnzInknsfLuazNuGKRTCwlQe-_qyRYZaKYY9M8rNSVfkWgnd_F0j2GKH3z02LMeOI3Er8vFlTVZWXKKH1DAuNjqVGGFhHZl1AwP4avNBVTkNHTtjLZ6W5fDB-NE-3kNXQA-Z4Nf_N03l2BIhxCmW6A&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_sasthamangalam.jpg",
     "place_id": "ChIJJYI7Bi-6BTsRc2nG9USdwMA",
     "place_name": "Sasthamangalam Sree Mahadevar Temple",
-    "search_query": "Sasthamangalam Sree Mahadevar Temple"
+    "search_query": "Sasthamangalam Sree Mahadevar Temple",
+    "is_local": true
   },
   "Jagathy": {
     "photo_reference": "AZLasHoFWLMtyMda1xy5ZoS0qZW6Qgu0wtnWZbf4dvNrKLze9zaMKmMGVbMgnvq5YPQPFnnZRlrlUdL150aK29lFVq7ALj-Bz6Xj1LYr00PT4dlmsUTbMxebwt8u4DJYQjXC5EV8sErBj0Hp_2W7MsGcFADnKM_VtnGVYce6QuBL2NQtVHQOazTbjEQK4GQToa-Yo_ffscmOZiBJguJKMrgr6jwGOLqGCgChTOvKSzDWpIE_pJXEf8fO9SWm7Ny7qag9RFQvkprYYF1ElEfzdnkeOlVLrzzXow5eTJ7CZW6tcc1K82Rg3j_8P2KgAMsRbU4qwPeU87kPncsAn4b7nwTFwPEh0aEnZXzAqoyhHWtYigwRoiRMlZ5_ifzxZvy9c1mgQTLBO30avsVWRlOWE_m2uE32B0qhfsQv5NE4sHNpSgZhqasUpElcOY82mJe4qW4bK5qDdRDO4UJDHOv3lHtBqYogP2mJC2QhE1q-3I1y22F3cjJf7sCk08Mx9jT6_Sec5kcj4K_k5KctMp0cjHAWpHtz2vrssqsr_lpBZE3n00IVw9z0Pa1zVdv6Mbbes-bgfDDFmA",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHoFWLMtyMda1xy5ZoS0qZW6Qgu0wtnWZbf4dvNrKLze9zaMKmMGVbMgnvq5YPQPFnnZRlrlUdL150aK29lFVq7ALj-Bz6Xj1LYr00PT4dlmsUTbMxebwt8u4DJYQjXC5EV8sErBj0Hp_2W7MsGcFADnKM_VtnGVYce6QuBL2NQtVHQOazTbjEQK4GQToa-Yo_ffscmOZiBJguJKMrgr6jwGOLqGCgChTOvKSzDWpIE_pJXEf8fO9SWm7Ny7qag9RFQvkprYYF1ElEfzdnkeOlVLrzzXow5eTJ7CZW6tcc1K82Rg3j_8P2KgAMsRbU4qwPeU87kPncsAn4b7nwTFwPEh0aEnZXzAqoyhHWtYigwRoiRMlZ5_ifzxZvy9c1mgQTLBO30avsVWRlOWE_m2uE32B0qhfsQv5NE4sHNpSgZhqasUpElcOY82mJe4qW4bK5qDdRDO4UJDHOv3lHtBqYogP2mJC2QhE1q-3I1y22F3cjJf7sCk08Mx9jT6_Sec5kcj4K_k5KctMp0cjHAWpHtz2vrssqsr_lpBZE3n00IVw9z0Pa1zVdv6Mbbes-bgfDDFmA&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_jagathy.jpg",
     "place_id": "ChIJmfv3j0y6BTsRRQy2V94AWTQ",
     "place_name": "Jagathy Sree Krishna Swami Temple",
-    "search_query": "Jagathy Sree Krishna Temple Trivandrum"
+    "search_query": "Jagathy Sree Krishna Temple Trivandrum",
+    "is_local": true
   },
   "Vellayambalam": {
     "photo_reference": "AZLasHo2eN5V3WBjGB6zGR_f1itaC9YTdthrvno6rnDy812whl8i0lSY1HGN7xuOXRxSU1zErNML471yCC31J0bRYBCnA-wwDrZI6FdOIXXHAqFnvxvzylfHJCECPFWey4nF17rvJxFN6E3fwqMKpfyDhvUW4R1kMDqfv9wx2ym8BCdx3hLlbQLIxL6vteLdtmaVDIQWAsanL5glPdglospOxI4-wX0g1ZsBlwcYE8mBpoS0kDUfnvMVDEgoAYq4QARZfi4b_4Idpbi-gN8185cGiL4IU0Dbe6NSlv62ntSk_BtJrLX2k2e3e1jDN6smTq3FJLzcBjffmnmJtQJjG4mnHT7FyqRUkVXR8VmpEa_YCMkzeUJKSxAZj72gIg-0VuI8CYC48tjEU75s846dhNkxOEsIAc7-8GU86vfEDxANjbMMvR-0h03AzJP9cIhSTL2RGeA0re5-AVu9mLHf_rpBRK2leB5D4RlMynXWeXHmdlHWqd1bwH8L5RnJmtH2AUSs1sagvPZo5YEC4cYWSWqiq8R2zKMTRdaiK22w3tNWbHd9Ld1d36ii9EnG4gPfnc3BbnqTXW9J",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHo2eN5V3WBjGB6zGR_f1itaC9YTdthrvno6rnDy812whl8i0lSY1HGN7xuOXRxSU1zErNML471yCC31J0bRYBCnA-wwDrZI6FdOIXXHAqFnvxvzylfHJCECPFWey4nF17rvJxFN6E3fwqMKpfyDhvUW4R1kMDqfv9wx2ym8BCdx3hLlbQLIxL6vteLdtmaVDIQWAsanL5glPdglospOxI4-wX0g1ZsBlwcYE8mBpoS0kDUfnvMVDEgoAYq4QARZfi4b_4Idpbi-gN8185cGiL4IU0Dbe6NSlv62ntSk_BtJrLX2k2e3e1jDN6smTq3FJLzcBjffmnmJtQJjG4mnHT7FyqRUkVXR8VmpEa_YCMkzeUJKSxAZj72gIg-0VuI8CYC48tjEU75s846dhNkxOEsIAc7-8GU86vfEDxANjbMMvR-0h03AzJP9cIhSTL2RGeA0re5-AVu9mLHf_rpBRK2leB5D4RlMynXWeXHmdlHWqd1bwH8L5RnJmtH2AUSs1sagvPZo5YEC4cYWSWqiq8R2zKMTRdaiK22w3tNWbHd9Ld1d36ii9EnG4gPfnc3BbnqTXW9J&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_vellayambalam.jpg",
     "place_id": "ChIJxXkI0ci7BTsRtzMvTTTCgvA",
     "place_name": "Napier Museum",
-    "search_query": "Napier Museum Trivandrum"
+    "search_query": "Napier Museum Trivandrum",
+    "is_local": true
   },
   "Kowdiar": {
     "photo_reference": "AZLasHqwDX1YdEdsgnOAmWFR-XAYxYCz8IIUvtGARhtG2d0RsJjxU_4q3ilklaUHMH9WZO2LcB2DE2NxC9oLbme-3DB7nj5hcGDHy91S4sR0SkJbwgyBA5trvuWsEExOf_lKUMPjLdOCtENVGfH2_BcAZ21ZW77JQ_hLL6cYnuZH6V_YJN8Jg2XTSBAvsx2_KsGGZmHmXB1KitBCE3PLM0eMZgu7sdsczliOAv_tGH4Q7wpkVaBjnfiMVKGJWmqiiKpa1qL41MMwLz-EbbWzBCqzM-VDuigsGWHaYSacmX1lztZEt7a2mPI8BE4dW83rRapawMx2XPtdQqauOVx675L1PRcBWy5WSjMjYIEOQervZgcpzacRZCu8WUpreVdQ9fJRdp2wXYtLnivttSwORVIig4jeVZV4bf7WaPXOdCofSi_r1VMsFQR90yglairOHlSyFZLQnWbxWloi76zH2VEt8C31M4OCIGKQhmEF1OISrP9mykC4k-5aMR0KUGQlhDjijSsA-vslAnzR1TEjZjWcuvGb9I_aYdHxKaQ6p74E2OUNkpKoPr6Wu74vFxEeo8dS_IH7cOJ1xP7H8Jq6vLp4oD2gFIY",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHqwDX1YdEdsgnOAmWFR-XAYxYCz8IIUvtGARhtG2d0RsJjxU_4q3ilklaUHMH9WZO2LcB2DE2NxC9oLbme-3DB7nj5hcGDHy91S4sR0SkJbwgyBA5trvuWsEExOf_lKUMPjLdOCtENVGfH2_BcAZ21ZW77JQ_hLL6cYnuZH6V_YJN8Jg2XTSBAvsx2_KsGGZmHmXB1KitBCE3PLM0eMZgu7sdsczliOAv_tGH4Q7wpkVaBjnfiMVKGJWmqiiKpa1qL41MMwLz-EbbWzBCqzM-VDuigsGWHaYSacmX1lztZEt7a2mPI8BE4dW83rRapawMx2XPtdQqauOVx675L1PRcBWy5WSjMjYIEOQervZgcpzacRZCu8WUpreVdQ9fJRdp2wXYtLnivttSwORVIig4jeVZV4bf7WaPXOdCofSi_r1VMsFQR90yglairOHlSyFZLQnWbxWloi76zH2VEt8C31M4OCIGKQhmEF1OISrP9mykC4k-5aMR0KUGQlhDjijSsA-vslAnzR1TEjZjWcuvGb9I_aYdHxKaQ6p74E2OUNkpKoPr6Wu74vFxEeo8dS_IH7cOJ1xP7H8Jq6vLp4oD2gFIY&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_kowdiar.jpg",
     "place_id": "ChIJp1QvHQC7BTsReLPW7UMHVRA",
     "place_name": "Kowdiar Palace",
-    "search_query": "Kowdiar Palace gate Trivandrum"
+    "search_query": "Kowdiar Palace gate Trivandrum",
+    "is_local": true
   },
   "Peroorkada": {
     "photo_reference": "AZLasHrqbMoeA5CH31cYaau8jhNvmviBUM2czuwF3ri8L6IP9sdKGei8PZV77R3gLGSlwqy0-nw4UzuEKxvO5sxuNmg7g_VyqeJsw4-Db2JrRBthHtXD58LB4UuH0M68d95gAnJd-KeEeGskz5IejDa6RN19vmEnii47Rl_0MyvAMnHLWbNAKipcn2blTpjk_TnVnGflEQ9MZL6_czuF8s2T8V8g1dhGQQ5zgx6xo92z7xaarFJKmWGD_pg-r95sLFJZ2d9rgG2pAPEzTEwNIexN92wz_3sSu-1GQ0Z4OE3gdrJ0GMr110KehbYboD5SyaCw5ebE5bcGdqxYoelAoS2rnHGHSpniivsD6upUOhrOsw4yv9sHOyLoXHTpC05-KpcxPScKK50o1oaPWl_ibGzTC6SAWt-SvEZ45qUGY-1dlvvUp6YHIQJO4kCZnbBRpS25tvjeq2PeXeRCPOXLRrQd81bHPerIySB56D0YKcgJ-exAopvKyaV6hLdSH09PqOrhN-skOkBiVqADfMvIb9LWzDvFzv0jO_RIXqm8DreQc0-zfTOuEaYoHYjoweDDjMvtUZHkkQ",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHrqbMoeA5CH31cYaau8jhNvmviBUM2czuwF3ri8L6IP9sdKGei8PZV77R3gLGSlwqy0-nw4UzuEKxvO5sxuNmg7g_VyqeJsw4-Db2JrRBthHtXD58LB4UuH0M68d95gAnJd-KeEeGskz5IejDa6RN19vmEnii47Rl_0MyvAMnHLWbNAKipcn2blTpjk_TnVnGflEQ9MZL6_czuF8s2T8V8g1dhGQQ5zgx6xo92z7xaarFJKmWGD_pg-r95sLFJZ2d9rgG2pAPEzTEwNIexN92wz_3sSu-1GQ0Z4OE3gdrJ0GMr110KehbYboD5SyaCw5ebE5bcGdqxYoelAoS2rnHGHSpniivsD6upUOhrOsw4yv9sHOyLoXHTpC05-KpcxPScKK50o1oaPWl_ibGzTC6SAWt-SvEZ45qUGY-1dlvvUp6YHIQJO4kCZnbBRpS25tvjeq2PeXeRCPOXLRrQd81bHPerIySB56D0YKcgJ-exAopvKyaV6hLdSH09PqOrhN-skOkBiVqADfMvIb9LWzDvFzv0jO_RIXqm8DreQc0-zfTOuEaYoHYjoweDDjMvtUZHkkQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_peroorkada.jpg",
     "place_id": "ChIJ5R1B44K5BTsR9RGL1xO0zP0",
     "place_name": "District Model Hospital",
-    "search_query": "Peroorkada Government Hospital"
+    "search_query": "Peroorkada Government Hospital",
+    "is_local": true
   },
   "Ulloor": {
     "photo_reference": "AZLasHra-g5X3S2Q6Vqb_TbyVK-kjQbkTrmTlre_XP7g0zj1hHsuiKEbCaaHM69mplknf12kUCXdJhhEYBc3J6TRIb-M6SdJW3ma2O91cw5UnXWVifD-cBSOMWV_eVJnLguULHHWxUz0Ey_T4jWVpEleyF6TW9H6TXjuRu0PiPHS-b7enEGWa8gYgQxQKhbgice7KdyEmesia43JQ1JcCYb1tR5ZUZcIkmAF6gEqMwjJpcX1on21HhymBEUQPzTxkL6k7uDsn954uBbg96d5NULujxf4RuujPJb2OPj341ZXYaBFxG6rajjipLfcU0cGOTXecIerCmH_64hXAvnMKWT-txF76BWSzmnftAV_TVo-h1fAS3LzfMxRqdhtQLyf3xLUhQEzcoL7_UE78bwcJKyD6q6QX9Scx9a6Itx_pGxkDXjnDd_6Y2g9lFwP8FXL8NzkQsK62xCt61aiUVOXEWelZBF-FxCYqxEdj9EqlaObU7fgztMVs3veR0yCtBvR0ovXhqcLVz_iUM_kYb8kVelOY-u7HiZHXrpaq3V9o0g699TOWFv27PEy13tBTg7-bmMNPrJGsQ",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHra-g5X3S2Q6Vqb_TbyVK-kjQbkTrmTlre_XP7g0zj1hHsuiKEbCaaHM69mplknf12kUCXdJhhEYBc3J6TRIb-M6SdJW3ma2O91cw5UnXWVifD-cBSOMWV_eVJnLguULHHWxUz0Ey_T4jWVpEleyF6TW9H6TXjuRu0PiPHS-b7enEGWa8gYgQxQKhbgice7KdyEmesia43JQ1JcCYb1tR5ZUZcIkmAF6gEqMwjJpcX1on21HhymBEUQPzTxkL6k7uDsn954uBbg96d5NULujxf4RuujPJb2OPj341ZXYaBFxG6rajjipLfcU0cGOTXecIerCmH_64hXAvnMKWT-txF76BWSzmnftAV_TVo-h1fAS3LzfMxRqdhtQLyf3xLUhQEzcoL7_UE78bwcJKyD6q6QX9Scx9a6Itx_pGxkDXjnDd_6Y2g9lFwP8FXL8NzkQsK62xCt61aiUVOXEWelZBF-FxCYqxEdj9EqlaObU7fgztMVs3veR0yCtBvR0ovXhqcLVz_iUM_kYb8kVelOY-u7HiZHXrpaq3V9o0g699TOWFv27PEy13tBTg7-bmMNPrJGsQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_ulloor.jpg",
     "place_id": "ChIJLT7SvaC-BTsRjf3JIc76OMQ",
     "place_name": "Aakulam lake",
-    "search_query": "Akkulam Lake Trivandrum"
+    "search_query": "Akkulam Lake Trivandrum",
+    "is_local": true
   },
   "Vazhuthacaud": {
     "photo_reference": "AZLasHpHSho2Y_H4A0l3vNcN6HWYgHeZLLVZ6cLN54uqlp1epRcg1lT_tkUbtiQ3xNnbjKV6zqgnAFXDFHmq2Zr2GESS2fe7yixZQlqtAa5WZD598440crooFnPRPIWhqCACV4oQe9ls5YJ7XaWvCYChe1A2cNWnoEtn5rvdwj5PanCCwM0Wqc7QMw-8TYbeNflIXJvZ-IYTKLP4mYQEULLzQAEC2m7KIVccwGEMCzACBuHdHup_6hVR8lzzppAWQysD2EirlDV1KBWlsEC-0TKgdM1j_slhYNV5QkQdou9xS_X_fN8w5bef4fi0nVD4w5797_gptInmrnH3UB_UudrIvNQsmMC5izDXZJHABym67h6OcjsCSnuOckWcsaR7tXZXROwIG0c8A6U01xGA4uN_ffz681JohPyMgGHrR4ZCPAWLKvQ_KtwdV2VqJchD7naRYobbs6Oca1jEMLQ8lJCyAjlUQ1Be90_Mvvww3JJuw9czDvB1Ug6EyxyIZygYQ9A9TwTKY_Xng3UU0A2id1HblrKeWgbiqIrQBdk8cYH1RdH1GHzdTkkDfbW868lbfw17qgxD2oZ6",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHpHSho2Y_H4A0l3vNcN6HWYgHeZLLVZ6cLN54uqlp1epRcg1lT_tkUbtiQ3xNnbjKV6zqgnAFXDFHmq2Zr2GESS2fe7yixZQlqtAa5WZD598440crooFnPRPIWhqCACV4oQe9ls5YJ7XaWvCYChe1A2cNWnoEtn5rvdwj5PanCCwM0Wqc7QMw-8TYbeNflIXJvZ-IYTKLP4mYQEULLzQAEC2m7KIVccwGEMCzACBuHdHup_6hVR8lzzppAWQysD2EirlDV1KBWlsEC-0TKgdM1j_slhYNV5QkQdou9xS_X_fN8w5bef4fi0nVD4w5797_gptInmrnH3UB_UudrIvNQsmMC5izDXZJHABym67h6OcjsCSnuOckWcsaR7tXZXROwIG0c8A6U01xGA4uN_ffz681JohPyMgGHrR4ZCPAWLKvQ_KtwdV2VqJchD7naRYobbs6Oca1jEMLQ8lJCyAjlUQ1Be90_Mvvww3JJuw9czDvB1Ug6EyxyIZygYQ9A9TwTKY_Xng3UU0A2id1HblrKeWgbiqIrQBdk8cYH1RdH1GHzdTkkDfbW868lbfw17qgxD2oZ6&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_vazhuthacaud.jpg",
     "place_id": "ChIJO69Uare7BTsREBwwbZ9ZQKE",
     "place_name": "Ganapathy Temple Rd",
-    "search_query": "Vazhuthacaud Ganapathy Temple Trivandrum"
+    "search_query": "Vazhuthacaud Ganapathy Temple Trivandrum",
+    "is_local": true
   },
   "Medical College": {
     "photo_reference": "AZLasHrKKtwov4kSU_Hy0pxa6Wmg1FJKge7FSSmz4DBxYJ2eol7HESq5ENBnhDdNiWXlMrqcqbFVw-Tg87IF9op9C6huCDEA4p0X-hiQCTDZL_e-t2Htni9M4-p1ROkudL9FNvqf277I-8XPWhygRzAZdpts8Z3bNwoDXTII30AoESRvOJW-4qjc1setyiqxaNCX9t_XA42za-V0vxofRB0uNg7-MpwCpChRoXXAZSw27ZO2s6Zt0fKyEtTLX2CDsiwARU71s-BpZ25SG0IjDLC1Yw4BuxB0lg_oPm87TzF7_EzzcFB39Ms",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHrKKtwov4kSU_Hy0pxa6Wmg1FJKge7FSSmz4DBxYJ2eol7HESq5ENBnhDdNiWXlMrqcqbFVw-Tg87IF9op9C6huCDEA4p0X-hiQCTDZL_e-t2Htni9M4-p1ROkudL9FNvqf277I-8XPWhygRzAZdpts8Z3bNwoDXTII30AoESRvOJW-4qjc1setyiqxaNCX9t_XA42za-V0vxofRB0uNg7-MpwCpChRoXXAZSw27ZO2s6Zt0fKyEtTLX2CDsiwARU71s-BpZ25SG0IjDLC1Yw4BuxB0lg_oPm87TzF7_EzzcFB39Ms&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_medical_college.jpg",
     "place_id": "ChIJzQxTZf27BTsRkC6fGoWrzqA",
     "place_name": "Government Medical College, Thiruvananthapuram",
-    "search_query": "Government Medical College Hospital Trivandrum"
+    "search_query": "Government Medical College Hospital Trivandrum",
+    "is_local": true
   },
   "Kuravankonam": {
     "photo_reference": "AZLasHrxjGoCC58SHeiF7syf5PH9HI3-iaBdmPxWNrsFp08NuRgE5zyK1mVcCG7yn_nlrczN53tZdvm6AcULZjGljfzl8hcl_F4AoGTkTcqr182cpaZdeUtdK4dipk3Zzq99PU8o_w99LD-icdWEkoMDQpXfQ7enO1lwA2_BAttB418G5vQn9KIik1Pm-57jS5T6itA3-Pmshp7j4CDQ_YF6NqRkY5HeU3Wb5X7w60N46559X2zFHrp5TofGfjEm6CGIDXtkkSokuHkMvyW45hkZxh8mQ5hsXnZ2CBn7EsdyDjxlG7wpNa0SxlCOfMzD5nkj2_gCpWu1Y03gMPvrG8JldhvnhGe7cGlj4jKyNoA1lukZr-xqKgq7_RMRWZkVqe5LutxcQs0Olaa8iFAVApkEIWVXbzLoCMLuKjFMMiPywVeEkKZjW9mdGLtY_SxO8Qnjfw8t71x0j97NltAEsRqIkCwYu71xi3otfobNBsfWmIQHB1jiFOJceqeEi35g_5OLIeTjc9UArLWJO4FzogoOYJ5G_CZuD-blOfUc1qiLtiGVoE5j8ut-n7OrVRc47CE6hjDMXQ",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHrxjGoCC58SHeiF7syf5PH9HI3-iaBdmPxWNrsFp08NuRgE5zyK1mVcCG7yn_nlrczN53tZdvm6AcULZjGljfzl8hcl_F4AoGTkTcqr182cpaZdeUtdK4dipk3Zzq99PU8o_w99LD-icdWEkoMDQpXfQ7enO1lwA2_BAttB418G5vQn9KIik1Pm-57jS5T6itA3-Pmshp7j4CDQ_YF6NqRkY5HeU3Wb5X7w60N46559X2zFHrp5TofGfjEm6CGIDXtkkSokuHkMvyW45hkZxh8mQ5hsXnZ2CBn7EsdyDjxlG7wpNa0SxlCOfMzD5nkj2_gCpWu1Y03gMPvrG8JldhvnhGe7cGlj4jKyNoA1lukZr-xqKgq7_RMRWZkVqe5LutxcQs0Olaa8iFAVApkEIWVXbzLoCMLuKjFMMiPywVeEkKZjW9mdGLtY_SxO8Qnjfw8t71x0j97NltAEsRqIkCwYu71xi3otfobNBsfWmIQHB1jiFOJceqeEi35g_5OLIeTjc9UArLWJO4FzogoOYJ5G_CZuD-blOfUc1qiLtiGVoE5j8ut-n7OrVRc47CE6hjDMXQ&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_kuravankonam.jpg",
     "place_id": "ChIJiVkm_li5BTsRJYf5XR1_y0c",
     "place_name": "Sree Kunnuvila Bhagavathi Temple",
-    "search_query": "Kuravankonam Temple Trivandrum"
+    "search_query": "Kuravankonam Temple Trivandrum",
+    "is_local": true
   },
   "Ambalamukku": {
     "photo_reference": "AZLasHq8OSSvC_p2PQD5VltkERGoX1g2zRME0ABH71tcmuyPdon5X7ZyOaw_zoIQXferPldXW4519JX8AtsF_Pv34sR5IvA2jOWwZKNzmu7D1FY3q2CzMj5StbIsXn5UxT8fCB4CJPil2ZJ78ERmtzhzwaot9qSHUSLiBvF0mEF1UwN61GTQn88R5qAZGX3tiNOSLrwBL3F-yAizG7krkRDZJ26rUUw_G_8-nqduEDD3y0ZM1D80QaWS3F-TzTXWfxibOl5J1ASi5-E9M1Arc-NX761IDp-d6B_r1uARagO-yJiooUMyp40ynBREbxZp3-bGTobpyA04McFCaqr1wY3uo-DIP8cgylu9aKr6nOi5KQ0cwYSiNoYOEBRjBh4znRRGlBEYkw43pWy955lz5JhQRkFty1AVkOwdjZqzN-LJ38yMsguL9mU7g5uTgGRq5ObdM5WkiegMTNSE88lY6kAuhwP97ds4CQSzkJM4jXkovv5Vw43GFOHUqsrybx42y4KaW4PN4FBTkAliQ3HarkoWPuz1Z2HeTaBzKHbkECtVnfuX4u8Q_YtKEk1Byva8tBq4Ojebp6ZguiaAVg",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHq8OSSvC_p2PQD5VltkERGoX1g2zRME0ABH71tcmuyPdon5X7ZyOaw_zoIQXferPldXW4519JX8AtsF_Pv34sR5IvA2jOWwZKNzmu7D1FY3q2CzMj5StbIsXn5UxT8fCB4CJPil2ZJ78ERmtzhzwaot9qSHUSLiBvF0mEF1UwN61GTQn88R5qAZGX3tiNOSLrwBL3F-yAizG7krkRDZJ26rUUw_G_8-nqduEDD3y0ZM1D80QaWS3F-TzTXWfxibOl5J1ASi5-E9M1Arc-NX761IDp-d6B_r1uARagO-yJiooUMyp40ynBREbxZp3-bGTobpyA04McFCaqr1wY3uo-DIP8cgylu9aKr6nOi5KQ0cwYSiNoYOEBRjBh4znRRGlBEYkw43pWy955lz5JhQRkFty1AVkOwdjZqzN-LJ38yMsguL9mU7g5uTgGRq5ObdM5WkiegMTNSE88lY6kAuhwP97ds4CQSzkJM4jXkovv5Vw43GFOHUqsrybx42y4KaW4PN4FBTkAliQ3HarkoWPuz1Z2HeTaBzKHbkECtVnfuX4u8Q_YtKEk1Byva8tBq4Ojebp6ZguiaAVg&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_ambalamukku.jpg",
     "place_id": "ChIJMyDGy7q7BTsR-Xxu8aza77Q",
     "place_name": "Sree Bala Subramanya Swamy Temple",
-    "search_query": "Ambalamukku Subramanya Temple Trivandrum"
+    "search_query": "Ambalamukku Subramanya Temple Trivandrum",
+    "is_local": true
   },
   "Poojapura": {
     "photo_reference": "AZLasHqChcmMnhELDYSStvAQmjny9T6alY7sB7rXADJjltxU0KiTrjuDdJkYx4QrF84RGrv-V-PxI82yo1VRwBVORwlWITOsN8ro2BIE6S_nUDJN5II8W3WeMgEOC_14dAwb-yBEUBeuKxiQZ035djC9b_BEf6bM9S7ZkGvKtD6K2iKBaBmfbsKyCKR1Y_XpnHtdzyYBYglGwpyAXDDcSDgR2ctd5Zmeb0bfA8RiZCy-hpqTM0GjN7iYSpHUGtkLf7oWkI3v54ApBhG8CJDBtUgdIXFeRpf9uSuM_qlhFTIFBb9_R-ZtAiQdKXXCUYfrC2ZgJ4dS0Dy66kibxFScLtIkl6REtklmxlmlc_RbfbU-ZWCLyOy1IIYbjd9WWmwHRfNh1UgIsVAXt9U7lzR8-i6q-FBPCxP9vTRbXBwlJF-f-ksvDERCTWMkqfQB74C1InitJCsXdoBedOCWxQaEDAdcO9cav24BKi7el_6GgAvjhdpVOOigS94YsOasDHZEBknsixeVes65oqqX98SKIAm06O58lsUhgClmSg4tq81Wa-EjXKY9RRblOShc91t5POd61lH1z8nZDPuJ9g",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHqChcmMnhELDYSStvAQmjny9T6alY7sB7rXADJjltxU0KiTrjuDdJkYx4QrF84RGrv-V-PxI82yo1VRwBVORwlWITOsN8ro2BIE6S_nUDJN5II8W3WeMgEOC_14dAwb-yBEUBeuKxiQZ035djC9b_BEf6bM9S7ZkGvKtD6K2iKBaBmfbsKyCKR1Y_XpnHtdzyYBYglGwpyAXDDcSDgR2ctd5Zmeb0bfA8RiZCy-hpqTM0GjN7iYSpHUGtkLf7oWkI3v54ApBhG8CJDBtUgdIXFeRpf9uSuM_qlhFTIFBb9_R-ZtAiQdKXXCUYfrC2ZgJ4dS0Dy66kibxFScLtIkl6REtklmxlmlc_RbfbU-ZWCLyOy1IIYbjd9WWmwHRfNh1UgIsVAXt9U7lzR8-i6q-FBPCxP9vTRbXBwlJF-f-ksvDERCTWMkqfQB74C1InitJCsXdoBedOCWxQaEDAdcO9cav24BKi7el_6GgAvjhdpVOOigS94YsOasDHZEBknsixeVes65oqqX98SKIAm06O58lsUhgClmSg4tq81Wa-EjXKY9RRblOShc91t5POd61lH1z8nZDPuJ9g&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_poojapura.jpg",
     "place_id": "ChIJU3Q2q1G6BTsRTfCLLJr0c0E",
     "place_name": "Sri Chithira Thirunal Ground",
-    "search_query": "Poojappura Stadium Trivandrum"
+    "search_query": "Poojappura Stadium Trivandrum",
+    "is_local": true
   },
   "Kovalam": {
     "photo_url": "images/localities/kovalam.png",
     "place_name": "Kovalam Lighthouse Beach",
     "search_query": "User Provided Image",
-    "is_local": true
+    "is_local": false
   },
   "Varkala": {
     "photo_reference": "AZLasHqWv0Nsp_s2ZUoU8sb5IN-m3dTxMDIHyDkfc3KtGjE7HyGve9uuxQkgE34bPHlVofVG0uMgS4urUPOZcsyaztFrYHxwqemi3VexK9AMjV9GQnyadNabqQO4U_iS88CmBAgITxjezV6p79JDYeTpv8Tc7knPhl4AUx1SazWwBFja_HNVe1hlR_MIZ-ZvwvxOrxx1BgesrPMCx7yiSpiItld8WwcA0ZhT2vE4x_5enpRFBfI8Prg0SD9Nk6g1t_JaCH-T3sssme3hYSpb6oS4Nops-R9bj5FWivQ3BWeHFYFJ9Wwj7t6DHpMaXN3Es8Vkpe0gBGeGd0Ac-x-UBYT3ly7vJeND6iH-CO5RFdL9VJWG040y7Vu4-cZrZ5uySVoG3GzEht3UE352d04QyiJv_VuaXZ-JeyY5JaAm-tS5r3EKbwLnPhOFTPzz8gDEnew7kpPLXSFXM9I6OPA0dxHUOLsW1elJqGH4Pv63gA8NzJ8Mn0sYuSmkWRo1McpNovf8HcDG1uAnjaj8H5RELjPT2O77DmDyD3RrUcYLJ0azbVe3F_R2L6dYP_dkqOcLqkfpgdH3MS0Q",
-    "photo_url": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=AZLasHqWv0Nsp_s2ZUoU8sb5IN-m3dTxMDIHyDkfc3KtGjE7HyGve9uuxQkgE34bPHlVofVG0uMgS4urUPOZcsyaztFrYHxwqemi3VexK9AMjV9GQnyadNabqQO4U_iS88CmBAgITxjezV6p79JDYeTpv8Tc7knPhl4AUx1SazWwBFja_HNVe1hlR_MIZ-ZvwvxOrxx1BgesrPMCx7yiSpiItld8WwcA0ZhT2vE4x_5enpRFBfI8Prg0SD9Nk6g1t_JaCH-T3sssme3hYSpb6oS4Nops-R9bj5FWivQ3BWeHFYFJ9Wwj7t6DHpMaXN3Es8Vkpe0gBGeGd0Ac-x-UBYT3ly7vJeND6iH-CO5RFdL9VJWG040y7Vu4-cZrZ5uySVoG3GzEht3UE352d04QyiJv_VuaXZ-JeyY5JaAm-tS5r3EKbwLnPhOFTPzz8gDEnew7kpPLXSFXM9I6OPA0dxHUOLsW1elJqGH4Pv63gA8NzJ8Mn0sYuSmkWRo1McpNovf8HcDG1uAnjaj8H5RELjPT2O77DmDyD3RrUcYLJ0azbVe3F_R2L6dYP_dkqOcLqkfpgdH3MS0Q&key=AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I",
+    "photo_url": "images/localities/locality_varkala.jpg",
     "place_id": "ChIJaeKHQsTvBTsRBiGeYJDDUEw",
     "place_name": "Varkala Cliff Sea View Point",
-    "search_query": "Varkala Cliff sunset Kerala"
+    "search_query": "Varkala Cliff sunset Kerala",
+    "is_local": true
   }
 }

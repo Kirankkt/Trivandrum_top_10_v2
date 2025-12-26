@@ -5,8 +5,9 @@
 
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config();
 
-const GOOGLE_API_KEY = 'AIzaSyCoD9cHQYn_EdCJOqNedXQjXQYlYtrVz3I';
+const GOOGLE_API_KEY = process.env.GOOGLE_MAPS_API_KEY;
 
 const DATA_DIR = path.join(__dirname, '..', 'data');
 
