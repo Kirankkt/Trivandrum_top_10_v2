@@ -1,4 +1,133 @@
 /**
+ * Generate CSV Report with all analytics data
+ * @param {Array} allEvents - All site events
+ * @param {number} totalEvents - Total event count
+ * @param {number} uniqueSessions - Unique session count
+ * @param {string} density - Engagement density
+ * @param {Object} deviceCounts - Device breakdown
+ * @param {Object} pageCounts - Page visit counts
+ */
+function generateCSVReport(allEvents, totalEvents, uniqueSessions, density, deviceCounts, pageCounts) {
+    const rows = [];
+    const today = new Date().toISOString().split('T')[0];
+
+    // Find date range from events
+    let minDate = new Date();
+    let maxDate = new Date(0);
+    allEvents.forEach(e => {
+        const d = new Date(e.created_at);
+        if (d < minDate) minDate = d;
+        if (d > maxDate) maxDate = d;
+    });
+
+    // Header
+    rows.push(['Trivandrum Top 10 - Analytics Report']);
+    rows.push(['Generated', today]);
+    rows.push(['Date Range', `${minDate.toISOString().split('T')[0]} to ${maxDate.toISOString().split('T')[0]}`]);
+    rows.push([]);
+
+    // Summary Metrics
+    rows.push(['=== SUMMARY METRICS ===']);
+    rows.push(['Metric', 'Value']);
+    rows.push(['Total Events', totalEvents]);
+    rows.push(['Unique Visitors', uniqueSessions]);
+    rows.push(['Engagement (Events/Session)', density]);
+    rows.push([]);
+
+    // Top Pages
+    rows.push(['=== TOP PAGES ===']);
+    rows.push(['Page', 'Views']);
+    const sortedPages = Object.entries(pageCounts)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10);
+    sortedPages.forEach(([page, count]) => {
+        rows.push([page, count]);
+    });
+    rows.push([]);
+
+    // Top Localities
+    rows.push(['=== TOP LOCALITIES ===']);
+    rows.push(['Locality', 'Engagements']);
+    const localityCounts = {};
+    allEvents.filter(e => e.event_name === 'marker_clicked' && e.metadata?.category === 'localities')
+        .forEach(e => localityCounts[e.metadata.name] = (localityCounts[e.metadata.name] || 0) + 1);
+    const sortedLocalities = Object.entries(localityCounts)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10);
+    sortedLocalities.forEach(([locality, count]) => {
+        rows.push([locality, count]);
+    });
+    rows.push([]);
+
+    // Device Breakdown
+    rows.push(['=== DEVICE BREAKDOWN ===']);
+    rows.push(['Device', 'Count', 'Percentage']);
+    const totalDevices = Object.values(deviceCounts).reduce((a, b) => a + b, 0);
+    Object.entries(deviceCounts).forEach(([device, count]) => {
+        const pct = totalDevices > 0 ? ((count / totalDevices) * 100).toFixed(1) : 0;
+        rows.push([device, count, `${pct}%`]);
+    });
+    rows.push([]);
+
+    // Traffic Sources
+    rows.push(['=== TRAFFIC SOURCES ===']);
+    rows.push(['Source Type', 'Count', 'Percentage']);
+    const sourceCounts = { direct: 0, referral: 0, social: 0, search: 0 };
+    allEvents.filter(e => e.event_type === 'page_view').forEach(e => {
+        const refType = e.referrer_type || 'direct';
+        if (sourceCounts.hasOwnProperty(refType)) {
+            sourceCounts[refType]++;
+        } else {
+            sourceCounts.direct++;
+        }
+    });
+    const totalSources = Object.values(sourceCounts).reduce((a, b) => a + b, 0);
+    Object.entries(sourceCounts).forEach(([source, count]) => {
+        const pct = totalSources > 0 ? ((count / totalSources) * 100).toFixed(1) : 0;
+        rows.push([source.charAt(0).toUpperCase() + source.slice(1), count, `${pct}%`]);
+    });
+    rows.push([]);
+
+    // Top Referring Domains
+    rows.push(['=== TOP REFERRING DOMAINS ===']);
+    rows.push(['Domain', 'Visits']);
+    const domainCounts = {};
+    allEvents.filter(e => e.event_type === 'page_view' && e.referrer_domain && e.referrer_type !== 'direct')
+        .forEach(e => domainCounts[e.referrer_domain] = (domainCounts[e.referrer_domain] || 0) + 1);
+    const sortedDomains = Object.entries(domainCounts)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10);
+    sortedDomains.forEach(([domain, count]) => {
+        rows.push([domain, count]);
+    });
+
+    // Convert to CSV
+    const csvContent = rows.map(row =>
+        row.map(cell => {
+            // Escape quotes and wrap in quotes if contains comma
+            const str = String(cell);
+            if (str.includes(',') || str.includes('"') || str.includes('\n')) {
+                return `"${str.replace(/"/g, '""')}"`;
+            }
+            return str;
+        }).join(',')
+    ).join('\n');
+
+    // Download file
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `trivandrum-top10-analytics-${today}.csv`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+
+    console.log('📊 [Admin] Report exported successfully');
+}
+
+/**
  * Admin View - Website Analytics Dashboard
  * Visualizes the data collected by AnalyticsManager with premium styling
  * Uses Supabase Auth for secure authentication
@@ -29,6 +158,7 @@ async function renderAdminView() {
                     <h1>Project Analytics Dashboard</h1>
                     <div class="admin-user-info">
                         <span class="admin-email">${user.email}</span>
+                        <button id="admin-export-btn" class="admin-export-btn">📊 Export Report</button>
                         <button id="admin-logout-btn" class="admin-logout-btn">Logout</button>
                     </div>
                 </div>
@@ -760,6 +890,11 @@ async function renderAdminView() {
             renderAdminView(); // Re-render to show login
         });
 
+        // Add export report handler
+        document.getElementById('admin-export-btn')?.addEventListener('click', () => {
+            generateCSVReport(allEvents, totalEvents, uniqueSessions, density, deviceCounts, pageCounts);
+        });
+
     } catch (err) {
         console.error('Admin Fetch Error:', err);
         const indicators = document.querySelectorAll('.big-number');
@@ -867,6 +1002,8 @@ const adminStyles = `
     .admin-email { font-size: 14px; color: #64748b; font-weight: 500; }
     .admin-logout-btn { padding: 10px 20px; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; border-radius: 10px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s; }
     .admin-logout-btn:hover { background: #fee2e2; color: #dc2626; border-color: #fecaca; }
+    .admin-export-btn { padding: 10px 20px; background: #2563eb; color: white; border: 1px solid #2563eb; border-radius: 10px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s; }
+    .admin-export-btn:hover { background: #1d4ed8; border-color: #1d4ed8; }
 
     /* Login Form Styles */
     .admin-login-card { max-width: 400px; width: 100%; text-align: center; padding: 40px; }
