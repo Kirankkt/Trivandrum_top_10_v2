@@ -5,6 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivandrum Top 10 - Best Localities Ranked</title>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WKSPYBGCN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5WKSPYBGCN');
+
+        // Track SPA page views on hash change
+        window.addEventListener('hashchange', function() {
+            gtag('event', 'page_view', {
+                page_path: window.location.hash || '#/',
+                page_title: document.title
+            });
+        });
+    </script>
     <meta name="description"
         content="Data-driven ranking of Trivandrum's best localities based on quality of life, economic factors, and sustainability.">
     <link rel="icon" type="image/png" href="favicon.png">

@@ -311,6 +311,11 @@ async function renderAdminView() {
                     </table>
                 </div>
             </div>
+
+            <div class="admin-ga4-note">
+                <span class="ga4-icon">📈</span>
+                Additional web analytics available in <a href="https://analytics.google.com" target="_blank" rel="noopener noreferrer">Google Analytics 4</a>
+            </div>
         </div>
     `;
 
@@ -1129,6 +1134,12 @@ const adminStyles = `
     .path-step { font-size: 12px; font-weight: 600; color: #334155; background: #f1f5f9; padding: 4px 10px; border-radius: 6px; white-space: nowrap; }
     .path-arrow { color: #94a3b8; font-size: 11px; }
     .path-count { font-size: 12px; color: #64748b; font-weight: 600; white-space: nowrap; }
+
+    /* GA4 Note */
+    .admin-ga4-note { margin-top: 32px; padding: 16px 24px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-align: center; color: #64748b; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .admin-ga4-note a { color: #2563eb; font-weight: 600; text-decoration: none; }
+    .admin-ga4-note a:hover { text-decoration: underline; }
+    .ga4-icon { font-size: 18px; }
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
