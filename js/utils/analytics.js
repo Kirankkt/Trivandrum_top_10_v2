@@ -20,9 +20,9 @@ class AnalyticsManager {
     init(supabaseClient) {
         this.supabase = supabaseClient;
         // Edge Function URL is based on the Supabase project URL
-        // Format: https://<project-ref>.supabase.co/functions/v1/track-event
         const supabaseUrl = 'https://jhygaazqujzufiklqaah.supabase.co';
         this.edgeFunctionUrl = `${supabaseUrl}/functions/v1/track-event`;
+        this.anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpoeWdhYXpxdWp6dWZpa2xxYWFoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUwMzEyMTksImV4cCI6MjA4MDYwNzIxOX0.rR_FePTK4iHQyjVSVokPX6LsKpZY-mFI0KEkfdX1Jno';
         this.initialized = true;
 
         // Track the initial page load
@@ -41,6 +41,7 @@ class AnalyticsManager {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${this.anonKey}`
                 },
                 body: JSON.stringify({ type, data })
             });

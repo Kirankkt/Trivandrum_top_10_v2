@@ -41,6 +41,7 @@ async function trackLocalityView(localityName) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
             },
             body: JSON.stringify({
                 type: 'locality_view',
