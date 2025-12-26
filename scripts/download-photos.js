@@ -27,22 +27,67 @@ const JSON_FILES = [
     'premium_spots.json', 'locality_photos.json'
 ];
 
-// Download a single image
-function downloadImage(url, filepath) {
+// Download a single image (with redirect support)
+function downloadImage(url, filepath, redirectCount = 0) {
     return new Promise((resolve, reject) => {
-        // Add API key to URL
-        const urlWithKey = `${url}&key=${GOOGLE_MAPS_API_KEY}`;
+        // Prevent infinite redirect loops
+        if (redirectCount > 5) {
+            reject(new Error('Too many redirects'));
+            return;
+        }
 
-        const file = fs.createWriteStream(filepath);
-        https.get(urlWithKey, (response) => {
+        // Remove any existing API key and add the new one
+        let finalUrl = url;
+        if (url.includes('googleapis.com')) {
+            // Strip old API key if present
+            finalUrl = url.replace(/&key=[^&]+/, '');
+            // Add new API key
+            finalUrl = `${finalUrl}&key=${GOOGLE_MAPS_API_KEY}`;
+        }
+
+        // Parse the URL to handle both http and https
+        const urlObj = new URL(finalUrl);
+        const protocol = urlObj.protocol === 'https:' ? https : require('http');
+
+        protocol.get(finalUrl, (response) => {
+            // Handle redirects (301, 302, 307, 308)
+            if ([301, 302, 307, 308].includes(response.statusCode)) {
+                const redirectUrl = response.headers.location;
+                if (!redirectUrl) {
+                    reject(new Error('Redirect without location header'));
+                    return;
+                }
+                // Follow redirect
+                downloadImage(redirectUrl, filepath, redirectCount + 1)
+                    .then(resolve)
+                    .catch(reject);
+                return;
+            }
+
             if (response.statusCode !== 200) {
                 reject(new Error(`Failed to download: ${response.statusCode}`));
                 return;
             }
+
+            const file = fs.createWriteStream(filepath);
             response.pipe(file);
+
             file.on('finish', () => {
-                file.close();
-                resolve();
+                file.close(() => {
+                    // Verify file has content
+                    const stats = fs.statSync(filepath);
+                    if (stats.size === 0) {
+                        fs.unlinkSync(filepath);
+                        reject(new Error('Downloaded file is empty'));
+                        return;
+                    }
+                    resolve();
+                });
+            });
+
+            file.on('error', (err) => {
+                fs.unlink(filepath, () => {}); // Delete partial file
+                reject(err);
             });
         }).on('error', (err) => {
             fs.unlink(filepath, () => {}); // Delete partial file
