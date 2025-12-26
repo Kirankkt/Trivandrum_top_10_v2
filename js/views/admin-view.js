@@ -62,6 +62,25 @@ async function renderAdminView() {
                 </div>
             </div>
 
+            <!-- Traffic Trends Section -->
+            <div class="admin-card trends-card" style="margin-bottom: 24px;">
+                <div class="card-header">
+                    <h3>Traffic Trends</h3>
+                    <div class="date-range-selector">
+                        <button class="range-btn" data-days="7">7 Days</button>
+                        <button class="range-btn active" data-days="30">30 Days</button>
+                        <button class="range-btn" data-days="90">90 Days</button>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="traffic-trends-chart"></canvas>
+                </div>
+                <div class="chart-legend">
+                    <div class="legend-item"><span class="legend-dot" style="background: #2563eb;"></span> Total Events</div>
+                    <div class="legend-item"><span class="legend-dot" style="background: #10b981;"></span> Unique Visitors</div>
+                </div>
+            </div>
+
             <div class="admin-detail-grid">
                 <div class="admin-card bar-chart-card">
                     <div class="card-header">
@@ -155,6 +174,158 @@ async function renderAdminView() {
         document.querySelector('#total-traffic-card .big-number').textContent = totalEvents.toLocaleString();
         document.querySelector('#unique-sessions-card .big-number').textContent = uniqueSessions.toLocaleString();
         document.querySelector('#intensity-card .big-number').textContent = density;
+
+        // --- 2.5 TRAFFIC TRENDS CHART ---
+        let trafficChart = null;
+
+        function aggregateByDay(events, days) {
+            const now = new Date();
+            const startDate = new Date(now);
+            startDate.setDate(startDate.getDate() - days);
+            startDate.setHours(0, 0, 0, 0);
+
+            // Create date buckets for the range
+            const dailyData = {};
+            for (let i = 0; i <= days; i++) {
+                const date = new Date(startDate);
+                date.setDate(date.getDate() + i);
+                const key = date.toISOString().split('T')[0];
+                dailyData[key] = { events: 0, sessions: new Set() };
+            }
+
+            // Fill with event data
+            events.forEach(e => {
+                const eventDate = new Date(e.created_at);
+                if (eventDate >= startDate) {
+                    const key = eventDate.toISOString().split('T')[0];
+                    if (dailyData[key]) {
+                        dailyData[key].events++;
+                        if (e.session_id) {
+                            dailyData[key].sessions.add(e.session_id);
+                        }
+                    }
+                }
+            });
+
+            // Convert to arrays for Chart.js
+            const labels = Object.keys(dailyData).sort();
+            const eventsData = labels.map(d => dailyData[d].events);
+            const visitorsData = labels.map(d => dailyData[d].sessions.size);
+
+            return { labels, eventsData, visitorsData };
+        }
+
+        function renderTrafficChart(days) {
+            const { labels, eventsData, visitorsData } = aggregateByDay(allEvents, days);
+
+            const ctx = document.getElementById('traffic-trends-chart');
+            if (!ctx) return;
+
+            // Destroy existing chart if it exists
+            if (trafficChart) {
+                trafficChart.destroy();
+            }
+
+            trafficChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Total Events',
+                            data: eventsData,
+                            borderColor: '#2563eb',
+                            backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                            fill: true,
+                            tension: 0.4,
+                            pointRadius: 3,
+                            pointHoverRadius: 6,
+                            pointBackgroundColor: '#2563eb',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Unique Visitors',
+                            data: visitorsData,
+                            borderColor: '#10b981',
+                            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                            fill: true,
+                            tension: 0.4,
+                            pointRadius: 3,
+                            pointHoverRadius: 6,
+                            pointBackgroundColor: '#10b981',
+                            borderWidth: 2
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: {
+                        intersect: false,
+                        mode: 'index'
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: '#1e293b',
+                            titleColor: '#f8fafc',
+                            bodyColor: '#f8fafc',
+                            padding: 12,
+                            cornerRadius: 8,
+                            displayColors: true,
+                            callbacks: {
+                                title: function(context) {
+                                    const date = new Date(context[0].label);
+                                    return date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#94a3b8',
+                                font: { size: 11 },
+                                maxTicksLimit: days <= 7 ? 7 : (days <= 30 ? 10 : 12),
+                                callback: function(value, index) {
+                                    const date = new Date(this.getLabelForValue(value));
+                                    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                                }
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#f1f5f9'
+                            },
+                            ticks: {
+                                color: '#94a3b8',
+                                font: { size: 11 },
+                                precision: 0
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initial render with 30 days
+        renderTrafficChart(30);
+
+        // Date range selector
+        document.querySelectorAll('.range-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.range-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const days = parseInt(btn.dataset.days);
+                renderTrafficChart(days);
+            });
+        });
 
         // --- 3. RECENT ACTIVITY TABLE ---
         const tableBody = document.querySelector('#recent-events-table tbody');
@@ -404,6 +575,31 @@ const adminStyles = `
         100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
     }
     .empty-state { padding: 40px; text-align: center; color: #94a3b8; font-style: italic; }
+
+    /* Traffic Trends Chart */
+    .trends-card { padding: 24px; }
+    .trends-card .card-header { margin-bottom: 16px; }
+    .chart-container { height: 300px; position: relative; margin-bottom: 16px; }
+
+    /* Date Range Selector */
+    .date-range-selector { display: flex; gap: 8px; }
+    .range-btn { padding: 8px 16px; background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 13px; font-weight: 600; color: #64748b; cursor: pointer; transition: all 0.2s; }
+    .range-btn:hover { background: #e2e8f0; color: #475569; }
+    .range-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
+
+    /* Chart Legend */
+    .chart-legend { display: flex; justify-content: center; gap: 24px; padding-top: 8px; border-top: 1px solid #f1f5f9; }
+    .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #64748b; }
+    .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .admin-stats-grid { grid-template-columns: 1fr; }
+        .admin-detail-grid { grid-template-columns: 1fr; }
+        .date-range-selector { flex-wrap: wrap; }
+        .chart-container { height: 250px; }
+        .admin-user-info { flex-direction: column; align-items: flex-end; gap: 8px; }
+    }
 </style>
 `;
 document.head.insertAdjacentHTML('beforeend', adminStyles);
