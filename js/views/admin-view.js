@@ -26,7 +26,7 @@ async function renderAdminView() {
         <div class="admin-container">
             <header class="admin-header">
                 <div class="header-main" style="display: flex; justify-content: space-between; align-items: center;">
-                    <h1>📊 Project Analytics Dashboard</h1>
+                    <h1>Project Analytics Dashboard</h1>
                     <div class="admin-user-info">
                         <span class="admin-email">${user.email}</span>
                         <button id="admin-logout-btn" class="admin-logout-btn">Logout</button>
@@ -37,7 +37,7 @@ async function renderAdminView() {
             
             <div class="admin-stats-grid">
                 <div class="admin-card stats-card" id="total-traffic-card">
-                    <div class="card-icon">📈</div>
+                    <div class="card-icon"></div>
                     <div>
                         <h3>Total Events</h3>
                         <div class="big-number">Loading...</div>
@@ -45,7 +45,7 @@ async function renderAdminView() {
                     </div>
                 </div>
                 <div class="admin-card stats-card" id="unique-sessions-card">
-                    <div class="card-icon">👥</div>
+                    <div class="card-icon"></div>
                     <div>
                         <h3>Unique Visitors</h3>
                         <div class="big-number">Loading...</div>
@@ -53,7 +53,7 @@ async function renderAdminView() {
                     </div>
                 </div>
                 <div class="admin-card stats-card" id="intensity-card">
-                    <div class="card-icon">⚡</div>
+                    <div class="card-icon"></div>
                     <div>
                         <h3>Engagement Density</h3>
                         <div class="big-number">Loading...</div>
@@ -321,7 +321,7 @@ async function renderAdminView() {
                             cornerRadius: 8,
                             displayColors: true,
                             callbacks: {
-                                title: function(context) {
+                                title: function (context) {
                                     const date = new Date(context[0].label);
                                     return date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
                                 }
@@ -337,7 +337,7 @@ async function renderAdminView() {
                                 color: '#94a3b8',
                                 font: { size: 11 },
                                 maxTicksLimit: days <= 7 ? 7 : (days <= 30 ? 10 : 12),
-                                callback: function(value, index) {
+                                callback: function (value, index) {
                                     const date = new Date(this.getLabelForValue(value));
                                     return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
                                 }
@@ -441,7 +441,7 @@ async function renderAdminView() {
                                 padding: 12,
                                 cornerRadius: 8,
                                 callbacks: {
-                                    label: function(context) {
+                                    label: function (context) {
                                         const value = context.raw;
                                         const pct = total > 0 ? ((value / total) * 100).toFixed(1) : 0;
                                         return `${context.label}: ${value} (${pct}%)`;

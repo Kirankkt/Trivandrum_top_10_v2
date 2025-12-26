@@ -10,12 +10,12 @@ async function renderDiningCustomizeView(type) {
             title: "Customize Restaurant Rankings",
             description: "Adjust the 6 metrics to match your dining priorities",
             metrics: [
-                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Positive review sentiment' },
-                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
-                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
-                { id: 'value', name: 'Value', icon: '💰', description: 'Price vs quality' },
-                { id: 'convenience', name: 'Location', icon: '📍', description: 'Central accessibility' },
-                { id: 'vibe', name: 'Vibe', icon: '✨', description: 'Ambiance & atmosphere' }
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Positive review sentiment' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'value', name: 'Value', icon: '', description: 'Price vs quality' },
+                { id: 'convenience', name: 'Location', icon: '', description: 'Central accessibility' },
+                { id: 'vibe', name: 'Vibe', icon: '', description: 'Ambiance & atmosphere' }
             ],
             returnUrl: '#/restaurants',
             color: '#ff6b6b',
@@ -37,7 +37,7 @@ async function renderDiningCustomizeView(type) {
                 { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
                 { id: 'value', name: 'Value', icon: '💰', description: 'Price vs quality' },
                 { id: 'convenience', name: 'Location', icon: '📍', description: 'Central accessibility' },
-                { id: 'workspace', name: 'Work Friendly', icon: '💻', description: 'Good for working' }
+                { id: 'workspace', name: 'Work Friendly', icon: '', description: 'Good for working' }
             ],
             returnUrl: '#/cafes',
             color: '#4ecdc4',
@@ -59,7 +59,7 @@ async function renderDiningCustomizeView(type) {
                 { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
                 { id: 'value', name: 'Value', icon: '💰', description: 'Price vs amenities' },
                 { id: 'location', name: 'Location', icon: '📍', description: 'Proximity to attractions' },
-                { id: 'luxury', name: 'Luxury', icon: '🏆', description: 'Premium amenities' }
+                { id: 'luxury', name: 'Luxury', icon: '', description: 'Premium amenities' }
             ],
             returnUrl: '#/hotels',
             color: '#ffd93d',
@@ -130,7 +130,7 @@ async function renderDiningCustomizeView(type) {
                 <div class="total-weight">
                     <strong>Total:</strong> <span id="total-weight">100%</span>
                     <span id="weight-warning" class="weight-warning" style="display: none;">
-                        ⚠️ Total must equal 100%
+                        Total must equal 100%
                     </span>
                 </div>
                 
@@ -150,17 +150,17 @@ async function renderDiningCustomizeView(type) {
                     <h4>Quick Presets</h4>
                     ${Object.entries(config.presets).map(([key, values]) => {
         const labels = {
-            balanced: '🎯 Balanced',
-            foodies: '🍴 Foodies',
-            budget: '💵 Budget Friendly',
-            trendy: '✨ Trendy Spots',
-            family: '👨‍👩‍👧 Family Friendly',
-            remote_work: '💻 Remote Work',
-            social: '🎉 Social Hangout',
-            quality: '⭐ Quality First',
-            luxury: '👑 Luxury Stay',
-            tourist: '🗺️ Tourist Friendly',
-            business: '💼 Business Travel'
+            balanced: 'Balanced',
+            foodies: 'Foodies',
+            budget: 'Budget Friendly',
+            trendy: 'Trendy Spots',
+            family: 'Family Friendly',
+            remote_work: 'Remote Work',
+            social: 'Social Hangout',
+            quality: 'Quality First',
+            luxury: 'Luxury Stay',
+            tourist: 'Tourist Friendly',
+            business: 'Business Travel'
         };
         return `<button class="preset-btn" data-preset="${key}">${labels[key] || key}</button>`;
     }).join('')}

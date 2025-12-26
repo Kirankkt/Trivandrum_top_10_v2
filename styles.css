@@ -6206,3 +6206,102 @@ footer .small {
     font-size: 1.5rem;
   }
 }
+
+/* ==================== Professional UI Badges & Icons ==================== */
+
+/* Rank Badges */
+.badge-rank-1,
+.badge-rank-2,
+.badge-rank-3 {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  margin-bottom: var(--space-2);
+}
+
+.badge-rank-1 {
+  background: #fff4e5;
+  color: #b45309;
+  border: 1px solid #fcd34d;
+}
+
+.badge-rank-2 {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.badge-rank-3 {
+  background: #fffafa;
+  color: #7f1d1d;
+  border: 1px solid #fecaca;
+}
+
+/* Trending Badge */
+.badge-trending {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fee2e2;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* UI Icons & Symbols */
+.ui-chevron-down::after {
+  content: '\25BE';
+  /* Small downward triangle */
+  margin-left: 0.4rem;
+  font-size: 0.8rem;
+  vertical-align: middle;
+}
+
+.ui-arrow-right::after {
+  content: '\2192';
+  /* Standard right arrow */
+  margin-left: 0.4rem;
+}
+
+.ui-arrow-left::before {
+  content: '\2190';
+  /* Standard left arrow */
+  margin-right: 0.4rem;
+}
+
+/* Star Rating Refresh */
+.star-rating-prof {
+  color: var(--color-gold);
+  letter-spacing: 1px;
+}
+
+.star-rating-prof::before {
+  content: '\2605\2605\2605\2605\2605';
+  /* 5 Unicode stars */
+  display: inline-block;
+}
+
+.star-rating-prof-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--color-gold);
+}
+
+/* Score Pills Revision */
+.score-pill {
+  background: #f8fafc;
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}

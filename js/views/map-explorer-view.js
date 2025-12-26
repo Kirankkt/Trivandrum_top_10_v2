@@ -7,84 +7,84 @@
 const MAP_CATEGORIES = {
     localities: {
         label: 'Localities',
-        icon: '🏘️',
+        icon: '',
         color: '#2563eb', // Blue - distinct from others
         dataFile: null,
         detailRoute: '/locality/'
     },
     restaurants: {
         label: 'Restaurants',
-        icon: '🍽️',
+        icon: '',
         color: '#dc2626', // Red
         dataFile: 'data/restaurants.json',
         detailRoute: '/entity/restaurants/'
     },
     cafes: {
         label: 'Cafes',
-        icon: '☕',
+        icon: '',
         color: '#7c3aed', // Purple
         dataFile: 'data/cafes.json',
         detailRoute: '/entity/cafes/'
     },
     hotels: {
         label: 'Hotels',
-        icon: '🏨',
+        icon: '',
         color: '#ea580c', // Orange
         dataFile: 'data/hotels.json',
         detailRoute: '/entity/hotels/'
     },
     malls: {
         label: 'Malls',
-        icon: '🏬',
+        icon: '',
         color: '#0891b2', // Cyan
         dataFile: 'data/malls.json',
         detailRoute: '/entity/malls/'
     },
     museums: {
         label: 'Museums',
-        icon: '🏛️',
+        icon: '',
         color: '#4f46e5', // Indigo
         dataFile: 'data/museums.json',
         detailRoute: '/entity/museums/'
     },
     religious_sites: {
         label: 'Religious Sites',
-        icon: '🛕',
+        icon: '',
         color: '#be185d', // Pink
         dataFile: 'data/religious_sites.json',
         detailRoute: '/entity/religious_sites/'
     },
     healthcare: {
         label: 'Healthcare',
-        icon: '🏥',
+        icon: '',
         color: '#059669', // Emerald (distinct green)
         dataFile: 'data/healthcare.json',
         detailRoute: '/entity/healthcare/'
     },
     education: {
         label: 'Education',
-        icon: '🎓',
+        icon: '',
         color: '#ca8a04', // Yellow/Gold
         dataFile: 'data/education.json',
         detailRoute: '/entity/education/'
     },
     banking: {
         label: 'Banking',
-        icon: '🏦',
+        icon: '',
         color: '#64748b', // Slate gray
         dataFile: 'data/banking.json',
         detailRoute: '/entity/banking/'
     },
     specialty_shops: {
         label: 'Specialty Shop',
-        icon: '🛍️',
+        icon: '',
         color: '#f59e0b', // Amber
         dataFile: 'data/specialty_shops.json',
         detailRoute: '/entity/specialty_shops/'
     },
     boutiques: {
         label: 'Boutique',
-        icon: '👗',
+        icon: '',
         color: '#ec4899', // Pink
         dataFile: 'data/boutiques.json',
         detailRoute: '/entity/boutiques/'
@@ -161,7 +161,7 @@ function createEntityPopup(entity, category, rank = null) {
 
     let ratingHtml = '';
     if (entity.rating) {
-        ratingHtml = `<div style="font-size: 13px; margin: 4px 0;">${entity.rating.toFixed(1)} ⭐ ${entity.reviews ? `(${entity.reviews.toLocaleString()})` : ''}</div>`;
+        ratingHtml = `<div style="font-size: 13px; margin: 4px 0;">${entity.rating.toFixed(1)} &#9733; ${entity.reviews ? `(${entity.reviews.toLocaleString()})` : ''}</div>`;
     }
 
     let scoreHtml = '';
@@ -179,7 +179,7 @@ function createEntityPopup(entity, category, rank = null) {
             <strong style="font-size: 15px; display: block; margin-bottom: 4px; color: #1e293b;">${entity.name}</strong>
             ${scoreHtml}
             ${ratingHtml}
-            ${entity.locality && category !== 'localities' ? `<div style="font-size: 12px; color: #64748b;">📍 ${entity.locality}</div>` : ''}
+            ${entity.locality && category !== 'localities' ? `<div style="font-size: 12px; color: #64748b;">${entity.locality}</div>` : ''}
         </div>
     `;
 }
@@ -206,7 +206,7 @@ function createLocalityPopup(locality) {
 
     return `
         <div style="text-align: center; min-width: 200px; padding: 8px;">
-            <div style="font-size: 24px; margin-bottom: 4px;">🏘️</div>
+            <div style="font-size: 24px; margin-bottom: 4px;"></div>
             <strong style="font-size: 16px; display: block; margin-bottom: 6px; color: #1e293b;">${locality.name}</strong>
             ${locality.overall_score ? `<div style="font-size: 18px; color: ${config.color}; font-weight: bold; margin-bottom: 4px;">${locality.overall_score.toFixed(1)}/10</div>` : ''}
             <div style="font-size: 11px; color: #64748b; margin: 4px 0;">Nearby Facilities:</div>
@@ -479,7 +479,7 @@ async function renderMapExplorerView() {
         <div class="map-explorer-page">
             <div class="map-controls-sidebar">
                 <div class="map-controls-header">
-                    <h2>🗺️ City Explorer</h2>
+                    <h2>City Explorer</h2>
                     <p class="map-controls-subtitle">Discover what's in each locality</p>
                 </div>
 

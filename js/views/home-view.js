@@ -127,15 +127,12 @@ async function renderHomeView() {
         <p>Objective insights powered by Google Maps API, travel metrics, and real pricing data — zero bias, zero sponsored content.</p>
         <div class="about-features">
           <div class="about-feature">
-            <span class="feature-icon">📊</span>
             <span>Data-Driven</span>
           </div>
           <div class="about-feature">
-            <span class="feature-icon">⚖️</span>
             <span>Objective Weights</span>
           </div>
           <div class="about-feature">
-            <span class="feature-icon">🔍</span>
             <span>Real Local Research</span>
           </div>
         </div>

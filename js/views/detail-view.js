@@ -50,7 +50,7 @@ async function renderDetailView(localityName) {
         console.log('[Debug] Data Source:', rankedLocality.data ? 'Has Data Object' : 'No Data Object');
 
 
-        const categoryIcon = locality.category_icon || '🏘️';
+        const categoryIcon = ''; // Removed emoji
         const primaryCategory = locality.primary_category || 'Residential';
         const tags = locality.tags || [];
 
@@ -71,11 +71,11 @@ async function renderDetailView(localityName) {
         let html = `
 
         <div class="detail-header">
-                <a href="#/" class="back-button">← Back to Rankings</a>
+                <a href="#/" class="back-button"><span class="ui-arrow-left"></span> Back to Rankings</a>
                 <div class="detail-hero-photo" id="detail-hero-image" style="width: 100%; height: 400px; border-radius: 12px; margin-top: 1rem; margin-bottom: 1rem; background-size: cover; background-position: center; background-color: var(--color-bg-tertiary); position: relative;">
                     <div class="hero-photo-overlay"></div>
                     <div class="hero-photo-content">
-                        <span class="category-icon-large">${categoryIcon}</span>
+                        <span class="category-icon-large"></span>
                         <div>
                             <h1>${locality.name}</h1>
                             <p class="category-label-large">${primaryCategory}</p>
@@ -84,8 +84,8 @@ async function renderDetailView(localityName) {
                     <!-- Floating Discover Button -->
                     <div id="discover-floating-btn" class="discover-floating-btn" style="display: none;">
                         <a href="#/discover/${encodeURIComponent(locality.name)}" class="discover-float-link">
-                            ✨ Discover ${locality.name}
-                            <span class="discover-float-arrow">→</span>
+                            Discover ${locality.name}
+                            <span class="discover-float-arrow ui-arrow-right"></span>
                         </a>
                     </div>
                 </div>
@@ -99,12 +99,12 @@ async function renderDetailView(localityName) {
                 <div class="detail-main">
                     <!-- ... existing content ... -->
                     <div class="metric-card">
-                        <h3>📊 Overall Score</h3>
+                        <h3>Overall Score</h3>
                         <div class="score-display">${val(locality.overall_score, 2)}</div>
                     </div>
                     
                     <div class="metric-card">
-                        <h3>🚌 Accessibility</h3>
+                        <h3>Accessibility</h3>
                         <div class="score-display">${val(locality.accessibility, 1)}/10</div>
                         <div class="score-bar-large">
                             <div class="score-fill accessibility" style="width: ${(locality.accessibility / 10) * 100}%"></div>
@@ -112,7 +112,7 @@ async function renderDetailView(localityName) {
                     </div>
                     
                     <div class="metric-card">
-                        <h3>🏢 Amenities</h3>
+                        <h3>Amenities</h3>
                         <div class="score-display">${val(locality.amenities, 1)}/10</div>
                         <div class="score-bar-large">
                             <div class="score-fill amenities" style="width: ${(locality.amenities / 10) * 100}%"></div>
@@ -120,7 +120,7 @@ async function renderDetailView(localityName) {
                     </div>
 
                     <div class="metric-card">
-                        <h3>🛡️ Safety</h3>
+                        <h3>Safety</h3>
                         <div class="score-display">${val(locality.safety, 1)}/10</div>
                         <div class="score-bar-large">
                             <div class="score-fill safety" style="width: ${(locality.safety / 10) * 100}%"></div>
@@ -128,7 +128,7 @@ async function renderDetailView(localityName) {
                     </div>
 
                     <div class="metric-card">
-                        <h3>🌳 Environment</h3>
+                        <h3>Environment</h3>
                         <div class="score-display">${val(locality.environment, 1)}/10</div>
                         <div class="score-bar-large">
                             <div class="score-fill environment" style="width: ${(locality.environment / 10) * 100}%"></div>
@@ -136,7 +136,7 @@ async function renderDetailView(localityName) {
                     </div>
 
                     <div class="metric-card">
-                        <h3>💼 Economy</h3>
+                        <h3>Economy</h3>
                         <div class="score-display">${val(locality.economy, 1)}/10</div>
                         <div class="score-bar-large">
                             <div class="score-fill economy" style="width: ${(locality.economy / 10) * 100}%"></div>
@@ -144,7 +144,7 @@ async function renderDetailView(localityName) {
                     </div>
 
                     <div class="metric-card">
-                        <h3>👑 Prestige</h3>
+                        <h3>Prestige</h3>
                         <div class="score-display">${val(locality.prestige, 1)}/10</div>
                         <div class="score-bar-large">
                             <div class="score-fill prestige" style="width: ${(locality.prestige / 10) * 100}%"></div>
@@ -152,7 +152,7 @@ async function renderDetailView(localityName) {
                     </div>
                     
                     <div class="metric-card">
-                        <h3>💵 Real Estate Prices</h3>
+                        <h3>Real Estate Prices</h3>
                         <div class="price-grid">
                             <div>
                                 <div class="price-label">Land</div>
@@ -166,7 +166,7 @@ async function renderDetailView(localityName) {
                     </div>
                     
                     <div class="metric-card">
-                        <h3>🚗 Travel Times</h3>
+                        <h3>Travel Times</h3>
                         <div class="travel-grid">
                             <div><span>City Centre:</span> <strong>${val(locality.city_centre_time)} min</strong></div>
                             <div><span>Technopark:</span> <strong>${val(locality.technopark_time)} min</strong></div>
@@ -178,10 +178,10 @@ async function renderDetailView(localityName) {
                 
                 <!-- Right column: All 41 metrics -->
                 <div class="detail-metrics">
-                    <h3>📋 Detailed Metrics</h3>
+                    <h3>Detailed Metrics</h3>
                     
                     <div class="metrics-section">
-                        <h4>🚌 Accessibility (Travel Times)</h4>
+                        <h4>Accessibility</h4>
                         <div class="metric-list">
                             <div class="metric-item"><span>City Centre:</span> <strong>${val(locality.city_centre_time)} min</strong></div>
                             <div class="metric-item"><span>Technopark:</span> <strong>${val(locality.technopark_time)} min</strong></div>
@@ -191,7 +191,7 @@ async function renderDetailView(localityName) {
                     </div>
 
                     <div class="metrics-section">
-                        <h4>🏢 Amenities</h4>
+                        <h4>Amenities</h4>
                         <div class="metric-list">
                             <div class="metric-item"><span>Schools <small>(within 3km)</small>:</span> <strong>${formatCount(locality.school_count)}</strong></div>
                             <div class="metric-item"><span>Hospitals <small>(within 3km)</small>:</span> <strong>${formatCount(locality.hospital_count)}</strong></div>
@@ -205,7 +205,7 @@ async function renderDetailView(localityName) {
                     </div>
                     
                     <div class="metrics-section">
-                        <h4>🛡️ Safety</h4>
+                        <h4>Safety</h4>
                         <div class="metric-list">
                             <div class="metric-item"><span>Police Stations <small>(within 5km)</small>:</span> <strong>${formatCount(locality.police_count)}</strong></div>
                             <div class="metric-item"><span>Fire Stations <small>(within 5km)</small>:</span> <strong>${formatCount(locality.fire_station_count)}</strong></div>
@@ -213,7 +213,7 @@ async function renderDetailView(localityName) {
                     </div>
 
                     <div class="metrics-section">
-                        <h4>🌳 Environment</h4>
+                        <h4>Environment</h4>
                         <div class="metric-list">
                             <div class="metric-item"><span>Air Quality (PM2.5):</span> <strong>${val(locality.air_quality, 0) === 'N/A' ? 'Good' : val(locality.air_quality, 0)}</strong></div>
                             <div class="metric-item"><span>Noise Level:</span> <strong>${val(locality.noise_score, 1)}/10</strong></div>
@@ -222,7 +222,7 @@ async function renderDetailView(localityName) {
                     </div>
                     
                     <div class="metrics-section">
-                        <h4>💼 Economy</h4>
+                        <h4>Economy</h4>
                         <div class="metric-list">
                             <div class="metric-item"><span>Job Proximity Score:</span> <strong>${val(locality.job_proximity_score, 1)}/10</strong></div>
                         </div>
@@ -230,7 +230,7 @@ async function renderDetailView(localityName) {
                     
                     ${locality.evidence ? `
                     <div class="metrics-section">
-                        <h4>📝 AI Analysis Evidence</h4>
+                        <h4>Evidence Analysis</h4>
                         <p class="evidence-text">${locality.evidence}</p>
                     </div>
                     ` : ''}
@@ -240,7 +240,7 @@ async function renderDetailView(localityName) {
             <!-- View on Explorer Map -->
             <div class="entity-map-cta">
                 <a href="#/map?highlight=${encodeURIComponent(locality.name)}&category=localities" class="map-explorer-link">
-                    🗺️ View on City Map Explorer
+                    <span class="ui-arrow-right"></span> View on City Map Explorer
                 </a>
             </div>
 

@@ -150,7 +150,7 @@ async function renderRankingView() {
           <img src="${image}" alt="${locality.name}" onerror="this.src='images/skyline.png'" />
           <div class="locality-overlay"></div>
           <div class="locality-rank">#${rank}</div>
-          ${isTrending ? '<div class="trending-badge-new">🔥 Trending</div>' : ''}
+          ${isTrending ? '<div class="badge-trending">Trending</div>' : ''}
         </div>
         <div class="locality-info-new">
           <h3 class="locality-name-new">${locality.name}</h3>
@@ -159,8 +159,8 @@ async function renderRankingView() {
             <span class="score-label">/ 10</span>
           </div>
           <div class="locality-meta-new">
-            <span>🏠 ₹${locality.land_price || locality.data?.land_price_per_cent_lakhs || 'N/A'}L/cent</span>
-            <span>🏢 ₹${locality.apartment_price || locality.data?.apartment_price_per_sqft || 'N/A'}/sqft</span>
+            <span>Land: ₹${locality.land_price || locality.data?.land_price_per_cent_lakhs || 'N/A'}L/cent</span>
+            <span>Apartment: ₹${locality.apartment_price || locality.data?.apartment_price_per_sqft || 'N/A'}/sqft</span>
           </div>
         </div>
       </div>
@@ -191,7 +191,7 @@ async function renderRankingView() {
           <img src="${image}" alt="${locality.name}" onerror="this.src='images/skyline.png'" />
           <div class="locality-overlay"></div>
           <div class="locality-rank">#${rank}</div>
-          ${isTrending ? '<div class="trending-badge-new">🔥 Trending</div>' : ''}
+          ${isTrending ? '<div class="badge-trending">Trending</div>' : ''}
         </div>
         <div class="locality-info-new">
           <h3 class="locality-name-new">${locality.name}</h3>
@@ -200,8 +200,8 @@ async function renderRankingView() {
             <span class="score-label">/ 10</span>
           </div>
           <div class="locality-meta-new">
-            <span>🏠 ₹${locality.land_price || locality.data?.land_price_per_cent_lakhs || 'N/A'}L/cent</span>
-            <span>🏢 ₹${locality.apartment_price || locality.data?.apartment_price_per_sqft || 'N/A'}/sqft</span>
+            <span>Land: ₹${locality.land_price || locality.data?.land_price_per_cent_lakhs || 'N/A'}L/cent</span>
+            <span>Apartment: ₹${locality.apartment_price || locality.data?.apartment_price_per_sqft || 'N/A'}/sqft</span>
           </div>
         </div>
       </div>

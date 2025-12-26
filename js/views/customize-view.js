@@ -6,7 +6,7 @@ async function renderCustomizeView() {
 
     let html = `
         <div class="customize-header">
-            <h2>⚖️ Customize Your Rankings</h2>
+            <h2>Customize Your Rankings</h2>
             <p class="subtitle">Adjust the 6 objective categories to match your priorities</p>
         </div>
         
@@ -14,7 +14,7 @@ async function renderCustomizeView() {
             <div class="sliders-section">
                 <div class="weight-slider-group">
                     <div class="slider-header">
-                        <span class="slider-icon">🚗</span>
+                        <span class="slider-icon"></span>
                         <span class="slider-title">Accessibility</span>
                         <span class="slider-value" id="accessibility-value">${Math.round(weights.accessibility * 100)}%</span>
                     </div>
@@ -27,7 +27,7 @@ async function renderCustomizeView() {
                 
                 <div class="weight-slider-group">
                     <div class="slider-header">
-                        <span class="slider-icon">🏫</span>
+                        <span class="slider-icon"></span>
                         <span class="slider-title">Amenities</span>
                         <span class="slider-value" id="amenities-value">${Math.round(weights.amenities * 100)}%</span>
                     </div>
@@ -40,7 +40,7 @@ async function renderCustomizeView() {
                 
                 <div class="weight-slider-group">
                     <div class="slider-header">
-                        <span class="slider-icon">🛡️</span>
+                        <span class="slider-icon"></span>
                         <span class="slider-title">Safety</span>
                         <span class="slider-value" id="safety-value">${Math.round(weights.safety * 100)}%</span>
                     </div>
@@ -53,7 +53,7 @@ async function renderCustomizeView() {
                 
                 <div class="weight-slider-group">
                     <div class="slider-header">
-                        <span class="slider-icon">🌳</span>
+                        <span class="slider-icon"></span>
                         <span class="slider-title">Environment</span>
                         <span class="slider-value" id="environment-value">${Math.round(weights.environment * 100)}%</span>
                     </div>
@@ -66,7 +66,7 @@ async function renderCustomizeView() {
                 
                 <div class="weight-slider-group">
                     <div class="slider-header">
-                        <span class="slider-icon">💼</span>
+                        <span class="slider-icon"></span>
                         <span class="slider-title">Economy</span>
                         <span class="slider-value" id="economy-value">${Math.round(weights.economy * 100)}%</span>
                     </div>
@@ -79,7 +79,7 @@ async function renderCustomizeView() {
 
                 <div class="weight-slider-group">
                     <div class="slider-header">
-                        <span class="slider-icon">👑</span>
+                        <span class="slider-icon"></span>
                         <span class="slider-title">Prestige</span>
                         <span class="slider-value" id="prestige-value">${Math.round(weights.prestige * 100)}%</span>
                     </div>
@@ -93,7 +93,7 @@ async function renderCustomizeView() {
                 <div class="total-weight">
                     <strong>Total:</strong> <span id="total-weight">100%</span>
                     <span id="weight-warning" class="weight-warning" style="display: none;">
-                        ⚠️ Total must equal 100%
+                        Total must equal 100%
                     </span>
                 </div>
                 
@@ -112,19 +112,19 @@ async function renderCustomizeView() {
                 <div class="profile-presets">
                     <h4>Quick Presets</h4>
                     <button class="preset-btn" data-preset="balanced">
-                        🎯 Balanced (25-25-15-15-20)
+                        Balanced (25-25-15-15-20)
                     </button>
                     <button class="preset-btn" data-preset="families">
-                        👨‍👩‍👧 Families (20-30-20-15-15)
+                        Families (20-30-20-15-15)
                     </button>
                     <button class="preset-btn" data-preset="professionals">
-                        💼 IT Professionals (30-20-10-10-30)
+                        IT Professionals (30-20-10-10-30)
                     </button>
                     <button class="preset-btn" data-preset="retirees">
-                        🏖️ Retirees (15-30-20-25-10)
+                        Retirees (15-30-20-25-10)
                     </button>
                     <button class="preset-btn" data-preset="environment">
-                        🌳 Nature Lovers (10-20-15-40-15)
+                        Nature Lovers (10-20-15-40-15)
                     </button>
                 </div>
             </div>

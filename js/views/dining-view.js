@@ -7,21 +7,21 @@ async function renderDiningView(type) {
         restaurants: {
             title: "Top Restaurants",
             subtitle: "Curated by Taste, Vibe & Authentic Reviews",
-            icon: "🍽️",
+            icon: "",
             filename: "data/restaurants.json",
             badgeColor: "#ff6b6b"
         },
         cafes: {
             title: "Top Cafes",
             subtitle: "Best Spots for Coffee, Work & Conversation",
-            icon: "☕",
+            icon: "",
             filename: "data/cafes.json",
             badgeColor: "#4ecdc4"
         },
         hotels: {
             title: "Top Hotels",
             subtitle: "Luxury Stays & Premium Comfort",
-            icon: "🏨",
+            icon: "",
             filename: "data/hotels.json",
             badgeColor: "#ffd93d"
         }
@@ -83,7 +83,7 @@ async function renderDiningView(type) {
 
         // Customized ranking indicator (inline, subtle)
         const customizedIndicator = isCustomized ? `
-            <span class="customized-indicator">⚖️ Custom weights active</span>
+            <span class="customized-indicator">Custom weights active</span>
             <button class="btn-restore-small" id="restore-default-btn">Reset</button>
         ` : '';
 
@@ -99,7 +99,7 @@ async function renderDiningView(type) {
                 <div class="section-header">
                     <div class="section-header-actions">
                         ${customizedIndicator}
-                        <a href="#/customize/${type}" class="btn-customize-inline">✨ Customize</a>
+                        <a href="#/customize/${type}" class="btn-customize-inline">Customize</a>
                     </div>
                 </div>
                 
@@ -168,7 +168,7 @@ async function renderDiningView(type) {
 }
 
 function createDiningCard(place, rank, config, type) {
-    const stars = '⭐'.repeat(Math.round(place.rating));
+    const stars = '&#9733;'.repeat(Math.round(place.rating));
     const price = '$'.repeat(place.price_level || 2);
 
     // Vibe Badges (limit to 3)
@@ -177,7 +177,7 @@ function createDiningCard(place, rank, config, type) {
     ).join('');
 
     // Featured badge for top 3
-    const featuredBadge = rank <= 3 ? `<span class="featured-badge">${rank === 1 ? '🏆 Top Pick' : rank === 2 ? '🥈 Runner Up' : '🥉 Notable'}</span>` : '';
+    const featuredBadge = rank <= 3 ? `<span class="badge-rank-${rank}">${rank === 1 ? 'Top Pick' : rank === 2 ? 'Runner Up' : 'Notable'}</span>` : '';
 
     // Detail page link
     const detailUrl = `#/entity/${type}/${encodeURIComponent(place.id)}`;
@@ -204,7 +204,7 @@ function createDiningCard(place, rank, config, type) {
                         </div>
                     </div>
 
-                    ${place.locality ? `<p class="card-locality">📍 ${place.locality}</p>` : ''}
+                    ${place.locality ? `<p class="card-locality">${place.locality}</p>` : ''}
 
                     <div class="vibe-tags">
                         ${vibeBadges}

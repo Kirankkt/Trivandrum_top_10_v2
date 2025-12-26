@@ -59,7 +59,7 @@ async function renderMethodologyView() {
                         
                         <div class="categories-breakdown">
                             <div class="category-row">
-                                <div class="category-icon">🚗</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Accessibility <span class="weight-badge">20%</span></h3>
                                     <p>Travel times to Technopark, City Centre, Secretariat, Airport, KSRTC Stand</p>
@@ -68,7 +68,7 @@ async function renderMethodologyView() {
                             </div>
                             
                             <div class="category-row">
-                                <div class="category-icon">🏫</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Amenities <span class="weight-badge">25%</span></h3>
                                     <p>Schools, hospitals, supermarkets, pharmacies, restaurants, gyms</p>
@@ -77,7 +77,7 @@ async function renderMethodologyView() {
                             </div>
                             
                             <div class="category-row">
-                                <div class="category-icon">🛡️</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Safety <span class="weight-badge">15%</span></h3>
                                     <p>Police stations and fire stations within 5km radius</p>
@@ -86,7 +86,7 @@ async function renderMethodologyView() {
                             </div>
                             
                             <div class="category-row">
-                                <div class="category-icon">🌳</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Environment <span class="weight-badge">15%</span></h3>
                                     <p>Parks, noise level (distance from major roads), flood safety (elevation)</p>
@@ -95,7 +95,7 @@ async function renderMethodologyView() {
                             </div>
                             
                             <div class="category-row">
-                                <div class="category-icon">💼</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Economy <span class="weight-badge">15%</span></h3>
                                     <p>Job proximity (weighted travel to employment hubs), commercial activity</p>
@@ -104,7 +104,7 @@ async function renderMethodologyView() {
                             </div>
 
                             <div class="category-row">
-                                <div class="category-icon">👑</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Prestige <span class="weight-badge">10%</span></h3>
                                     <p>Real estate market value (Land Price per cent + Apartment Price per sqft)</p>
@@ -133,7 +133,7 @@ async function renderMethodologyView() {
                         
                         <div class="categories-breakdown">
                             <div class="category-row">
-                                <div class="category-icon">💬</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Sentiment Score <span class="weight-badge">~17%</span></h3>
                                     <p>Analysis of review text for positive dining experiences</p>
@@ -142,7 +142,7 @@ async function renderMethodologyView() {
                             </div>
                             
                             <div class="category-row">
-                                <div class="category-icon">👥</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Popularity <span class="weight-badge">~17%</span></h3>
                                     <p>Number of reviews and visits indicating popularity</p>
@@ -151,7 +151,7 @@ async function renderMethodologyView() {
                             </div>
                             
                             <div class="category-row">
-                                <div class="category-icon">⭐</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Rating <span class="weight-badge">~17%</span></h3>
                                     <p>Google Maps rating (1-5 stars)</p>
@@ -160,7 +160,7 @@ async function renderMethodologyView() {
                             </div>
                             
                             <div class="category-row">
-                                <div class="category-icon">💰</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Value <span class="weight-badge">~17%</span></h3>
                                     <p>Price relative to quality (inverse of price level)</p>
@@ -169,7 +169,7 @@ async function renderMethodologyView() {
                             </div>
                             
                             <div class="category-row">
-                                <div class="category-icon">📍</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Convenience <span class="weight-badge">~16%</span></h3>
                                     <p>Central location accessibility</p>
@@ -178,7 +178,7 @@ async function renderMethodologyView() {
                             </div>
 
                             <div class="category-row">
-                                <div class="category-icon">✨</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Vibe <span class="weight-badge">~16%</span></h3>
                                     <p>Ambiance and atmosphere extracted from reviews</p>
@@ -219,7 +219,7 @@ async function renderMethodologyView() {
                         
                         <div class="categories-breakdown">
                             <div class="category-row">
-                                <div class="category-icon">💬</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Sentiment Score <span class="weight-badge">~17%</span></h3>
                                     <p>Positive review sentiment for cafe experience</p>
@@ -227,7 +227,7 @@ async function renderMethodologyView() {
                             </div>
                             
                             <div class="category-row">
-                                <div class="category-icon">👥</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Popularity <span class="weight-badge">~17%</span></h3>
                                     <p>Review count and visit frequency</p>
@@ -235,7 +235,7 @@ async function renderMethodologyView() {
                             </div>
                             
                             <div class="category-row">
-                                <div class="category-icon">⭐</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Rating <span class="weight-badge">~17%</span></h3>
                                     <p>Google Maps rating (1-5 stars)</p>
@@ -243,7 +243,7 @@ async function renderMethodologyView() {
                             </div>
                             
                             <div class="category-row">
-                                <div class="category-icon">💰</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Value <span class="weight-badge">~17%</span></h3>
                                     <p>Coffee and snack prices relative to quality</p>
@@ -251,7 +251,7 @@ async function renderMethodologyView() {
                             </div>
                             
                             <div class="category-row">
-                                <div class="category-icon">📍</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Convenience <span class="weight-badge">~16%</span></h3>
                                     <p>Location accessibility and parking</p>
@@ -259,7 +259,7 @@ async function renderMethodologyView() {
                             </div>
 
                             <div class="category-row highlight-row">
-                                <div class="category-icon">💻</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Work Friendly <span class="weight-badge">~16%</span></h3>
                                     <p>WiFi availability, power outlets, quiet environment for work</p>
@@ -288,7 +288,7 @@ async function renderMethodologyView() {
                         
                         <div class="categories-breakdown">
                             <div class="category-row">
-                                <div class="category-icon">💬</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Sentiment Score <span class="weight-badge">~17%</span></h3>
                                     <p>Guest satisfaction from review analysis</p>
@@ -296,7 +296,7 @@ async function renderMethodologyView() {
                             </div>
                             
                             <div class="category-row">
-                                <div class="category-icon">👥</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Popularity <span class="weight-badge">~17%</span></h3>
                                     <p>Number of reviews and bookings</p>
@@ -304,7 +304,7 @@ async function renderMethodologyView() {
                             </div>
                             
                             <div class="category-row">
-                                <div class="category-icon">⭐</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Rating <span class="weight-badge">~17%</span></h3>
                                     <p>Google Maps rating (1-5 stars)</p>
@@ -312,7 +312,7 @@ async function renderMethodologyView() {
                             </div>
                             
                             <div class="category-row">
-                                <div class="category-icon">💰</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Value <span class="weight-badge">~17%</span></h3>
                                     <p>Price relative to amenities and service</p>
@@ -320,7 +320,7 @@ async function renderMethodologyView() {
                             </div>
                             
                             <div class="category-row highlight-row">
-                                <div class="category-icon">📍</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Location <span class="weight-badge">~16%</span></h3>
                                     <p>Proximity to tourist attractions, beaches, city center</p>
@@ -329,7 +329,7 @@ async function renderMethodologyView() {
                             </div>
 
                             <div class="category-row highlight-row">
-                                <div class="category-icon">🏆</div>
+                                <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Luxury <span class="weight-badge">~16%</span></h3>
                                     <p>Premium amenities: pool, spa, restaurant, room service</p>
@@ -347,7 +347,7 @@ async function renderMethodologyView() {
                     from each category's dedicated page to match your personal priorities.</p>
                     
                     <div class="cta-buttons">
-                        <a href="#/" class="btn-primary">← Back to Home</a>
+                        <a href="#/" class="btn-primary"><span class="ui-arrow-left"></span> Back to Home</a>
                     </div>
                 </section>
             </div>

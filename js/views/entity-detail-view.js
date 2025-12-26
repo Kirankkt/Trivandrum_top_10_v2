@@ -8,7 +8,7 @@
 const ENTITY_CATEGORIES = {
     restaurants: {
         title: 'Restaurant',
-        icon: '🍽️',
+        icon: '',
         color: '#dc2626', // Red
         dataFile: 'data/restaurants.json',
         metrics: [
@@ -20,7 +20,7 @@ const ENTITY_CATEGORIES = {
     },
     cafes: {
         title: 'Cafe',
-        icon: '☕',
+        icon: '',
         color: '#7c3aed', // Purple
         dataFile: 'data/cafes.json',
         metrics: [
@@ -32,7 +32,7 @@ const ENTITY_CATEGORIES = {
     },
     hotels: {
         title: 'Hotel',
-        icon: '🏨',
+        icon: '',
         color: '#ea580c', // Orange
         dataFile: 'data/hotels.json',
         metrics: [
@@ -44,7 +44,7 @@ const ENTITY_CATEGORIES = {
     },
     malls: {
         title: 'Mall',
-        icon: '🏬',
+        icon: '',
         color: '#0891b2', // Cyan
         dataFile: 'data/malls.json',
         metrics: [
@@ -55,7 +55,7 @@ const ENTITY_CATEGORIES = {
     },
     boutiques: {
         title: 'Boutique',
-        icon: '👗',
+        icon: '',
         color: '#ec4899', // Pink
         dataFile: 'data/boutiques.json',
         metrics: [
@@ -66,7 +66,7 @@ const ENTITY_CATEGORIES = {
     },
     specialty_shops: {
         title: 'Specialty Shop',
-        icon: '🛍️',
+        icon: '',
         color: '#f59e0b', // Amber
         dataFile: 'data/specialty_shops.json',
         metrics: [
@@ -77,7 +77,7 @@ const ENTITY_CATEGORIES = {
     },
     museums: {
         title: 'Museum',
-        icon: '🏛️',
+        icon: '',
         color: '#4f46e5', // Indigo
         dataFile: 'data/museums.json',
         metrics: [
@@ -88,7 +88,7 @@ const ENTITY_CATEGORIES = {
     },
     religious_sites: {
         title: 'Religious Site',
-        icon: '🛕',
+        icon: '',
         color: '#be185d', // Pink/Magenta
         dataFile: 'data/religious_sites.json',
         metrics: [
@@ -99,7 +99,7 @@ const ENTITY_CATEGORIES = {
     },
     healthcare: {
         title: 'Healthcare',
-        icon: '🏥',
+        icon: '',
         color: '#059669', // Emerald green
         dataFile: 'data/healthcare.json',
         metrics: [
@@ -110,7 +110,7 @@ const ENTITY_CATEGORIES = {
     },
     education: {
         title: 'Education',
-        icon: '🎓',
+        icon: '',
         color: '#ca8a04', // Yellow/Gold
         dataFile: 'data/education.json',
         metrics: [
@@ -121,7 +121,7 @@ const ENTITY_CATEGORIES = {
     },
     banking: {
         title: 'Bank',
-        icon: '🏦',
+        icon: '',
         color: '#64748b', // Slate gray
         dataFile: 'data/banking.json',
         metrics: [
@@ -140,7 +140,7 @@ function formatMetricValue(value, format) {
 
     switch (format) {
         case 'rating':
-            return `${value.toFixed(1)} ⭐`;
+            return `${value.toFixed(1)} &#9733;`;
         case 'number':
             return value.toLocaleString();
         case 'price':
@@ -157,10 +157,10 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
     const R = 6371; // Earth's radius in km
     const dLat = (lat2 - lat1) * Math.PI / 180;
     const dLon = (lon2 - lon1) * Math.PI / 180;
-    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-              Math.sin(dLon/2) * Math.sin(dLon/2);
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     return R * c;
 }
 
@@ -241,14 +241,14 @@ async function renderEntityDetailView(category, entityId) {
             if (nearby.length > 0) {
                 nearbyHtml = `
                     <div class="entity-nearby-section">
-                        <h3>📍 Nearby Places</h3>
+                        <h3>Location & Surroundings</h3>
                         <div class="nearby-grid">
                             ${nearby.map(item => `
                                 <a href="#/entity/${item.category}/${item.id}" class="nearby-card">
                                     <span class="nearby-icon">${item.categoryConfig.icon}</span>
                                     <div class="nearby-info">
                                         <span class="nearby-name">${item.name}</span>
-                                        <span class="nearby-meta">${item.distance.toFixed(1)}km away • ${item.rating ? item.rating.toFixed(1) + '⭐' : ''}</span>
+                                        <span class="nearby-meta">${item.distance.toFixed(1)}km away • ${item.rating ? item.rating.toFixed(1) + ' &#9733;' : ''}</span>
                                     </div>
                                 </a>
                             `).join('')}
@@ -273,9 +273,9 @@ async function renderEntityDetailView(category, entityId) {
 
         // Rank context message
         const rankContext = rank <= 3
-            ? `🏆 Top ${rank} ${config.rankContext} in Trivandrum!`
+            ? `Top ${rank} ${config.rankContext} in Trivandrum!`
             : rank <= 10
-                ? `⭐ Top 10 ${config.rankContext} in Trivandrum`
+                ? `Top 10 ${config.rankContext} in Trivandrum`
                 : `Ranked #${rank} of ${totalInCategory} ${config.rankContext}s`;
 
         const html = `
@@ -283,7 +283,7 @@ async function renderEntityDetailView(category, entityId) {
                 <!-- Back Navigation -->
                 <div class="entity-back-nav">
                     <a href="#/${category === 'specialty_shops' ? 'specialty-shops' : category}" class="back-link">
-                        ← Back to ${config.title}s
+                        <span class="ui-arrow-left"></span> Back to ${config.title}s
                     </a>
                 </div>
 
@@ -322,7 +322,7 @@ async function renderEntityDetailView(category, entityId) {
 
                     <!-- Location Card -->
                     <div class="entity-location-card">
-                        <h3>📍 Location</h3>
+                        <h3>Location</h3>
                         <p class="entity-address">${entity.address}</p>
                         ${entity.locality ? `<p class="entity-locality">Area: <strong>${entity.locality}</strong></p>` : ''}
 
@@ -334,16 +334,16 @@ async function renderEntityDetailView(category, entityId) {
                         <div class="entity-actions">
                             <a href="${entity.map_url || `https://www.google.com/maps/place/?q=place_id:${entity.id}`}"
                                target="_blank" class="entity-action-btn">
-                                🗺️ Open in Google Maps
+                                Open in Google Maps <span class="ui-arrow-right"></span>
                             </a>
                             ${entity.website ? `
                                 <a href="${entity.website}" target="_blank" class="entity-action-btn secondary">
-                                    🌐 Visit Website
+                                    Visit Website <span class="ui-arrow-right"></span>
                                 </a>
                             ` : ''}
                             ${entity.phone ? `
                                 <a href="tel:${entity.phone}" class="entity-action-btn secondary">
-                                    📞 ${entity.phone}
+                                    Phone: ${entity.phone}
                                 </a>
                             ` : ''}
                         </div>
@@ -355,7 +355,7 @@ async function renderEntityDetailView(category, entityId) {
                     <!-- View on Explorer Map -->
                     <div class="entity-map-cta">
                         <a href="#/map?highlight=${entity.id}&category=${category}" class="map-explorer-link">
-                            🗺️ View on City Map Explorer
+                            <span class="ui-arrow-right"></span> View on City Map Explorer
                         </a>
                     </div>
                 </div>

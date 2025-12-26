@@ -41,7 +41,7 @@ async function renderCategoryView(type, config) {
 
         // Customized ranking indicator
         const customizedIndicator = isCustomized ? `
-            <span class="customized-indicator">⚖️ Custom weights active</span>
+            <span class="customized-indicator">Custom weights active</span>
             <button class="btn-restore-small" id="restore-default-btn">Reset</button>
         ` : '';
 
@@ -135,7 +135,7 @@ function setupShowMoreLess() {
  */
 function createCategoryItemCard(item, rank, config, type) {
     const rating = item.rating ? item.rating.toFixed(1) : 'N/A';
-    const stars = item.rating ? '⭐'.repeat(Math.round(item.rating)) : '';
+    const stars = item.rating ? '&#9733;'.repeat(Math.round(item.rating)) : '';
     const reviews = item.reviews ? item.reviews.toLocaleString() : '0';
 
     // Vibe Badges (limit to 3)
@@ -144,7 +144,7 @@ function createCategoryItemCard(item, rank, config, type) {
     ).join('');
 
     // Featured badge for top 3
-    const featuredBadge = rank <= 3 ? `<span class="featured-badge">${rank === 1 ? '🏆 Top Pick' : rank === 2 ? '🥈 Runner Up' : '🥉 Notable'}</span>` : '';
+    const featuredBadge = rank <= 3 ? `<span class="badge-rank-${rank}">${rank === 1 ? 'Top Pick' : rank === 2 ? 'Runner Up' : 'Notable'}</span>` : '';
 
     // Category-specific styling
     const accentColor = config.badgeColor || '#00aa6c';
@@ -175,7 +175,7 @@ function createCategoryItemCard(item, rank, config, type) {
                         </div>
                     </div>
 
-                    ${item.locality ? `<p class="card-locality">📍 ${item.locality}</p>` : ''}
+                    ${item.locality ? `<p class="card-locality">${item.locality}</p>` : ''}
 
                     <div class="vibe-tags">
                         ${vibeBadges}
@@ -185,7 +185,7 @@ function createCategoryItemCard(item, rank, config, type) {
                         <div class="score-pill" style="border-color: ${accentColor}; color: ${accentColor}">
                              Score: ${item.score}/100
                         </div>
-                        <span class="btn-details">View Details →</span>
+                        <span class="btn-details">View Details <span class="ui-arrow-right"></span></span>
                     </div>
                 </div>
             </div>
@@ -201,7 +201,7 @@ function renderMallsView() {
     renderCategoryView('malls', {
         title: "Top Malls",
         subtitle: "Best Shopping Destinations in Trivandrum",
-        icon: "🏬",
+        icon: "",
         filename: "data/malls.json",
         badgeColor: "#8b5cf6",
         metrics: ['rating', 'popularity', 'sentiment', 'variety']
@@ -212,7 +212,7 @@ function renderBoutiquesView() {
     renderCategoryView('boutiques', {
         title: "Top Boutiques",
         subtitle: "Fashion Boutiques & Designer Stores",
-        icon: "👗",
+        icon: "",
         filename: "data/boutiques.json",
         badgeColor: "#ec4899",
         metrics: ['rating', 'popularity', 'sentiment', 'exclusivity']
@@ -223,7 +223,7 @@ function renderSpecialtyShopsView() {
     renderCategoryView('specialty_shops', {
         title: "Specialty Shops",
         subtitle: "Books, Electronics, Ayurveda & More",
-        icon: "🛍️",
+        icon: "",
         filename: "data/specialty_shops.json",
         badgeColor: "#f59e0b",
         metrics: ['rating', 'popularity', 'sentiment', 'specialty']
@@ -238,7 +238,7 @@ function renderMuseumsView() {
     renderCategoryView('museums', {
         title: "Museums & Galleries",
         subtitle: "Explore Trivandrum's Rich Heritage",
-        icon: "🏛️",
+        icon: "",
         filename: "data/museums.json",
         badgeColor: "#0ea5e9",
         metrics: ['rating', 'popularity', 'sentiment', 'educational_value']
@@ -249,7 +249,7 @@ function renderReligiousSitesView() {
     renderCategoryView('religious_sites', {
         title: "Religious Sites",
         subtitle: "Temples, Churches & Mosques",
-        icon: "🛕",
+        icon: "",
         filename: "data/religious_sites.json",
         badgeColor: "#ef4444",
         metrics: ['rating', 'popularity', 'sentiment', 'significance']
@@ -264,7 +264,7 @@ function renderHealthcareView() {
     renderCategoryView('healthcare', {
         title: "Healthcare",
         subtitle: "Hospitals, Clinics & Medical Centers",
-        icon: "🏥",
+        icon: "",
         filename: "data/healthcare.json",
         badgeColor: "#10b981",
         metrics: ['rating', 'popularity', 'sentiment', 'accessibility']
@@ -275,7 +275,7 @@ function renderEducationView() {
     renderCategoryView('education', {
         title: "Education",
         subtitle: "Schools, Colleges & Universities",
-        icon: "🎓",
+        icon: "",
         filename: "data/education.json",
         badgeColor: "#6366f1",
         metrics: ['rating', 'popularity', 'sentiment', 'reputation']
@@ -286,7 +286,7 @@ function renderBankingView() {
     renderCategoryView('banking', {
         title: "Banking",
         subtitle: "Banks & Financial Services",
-        icon: "🏦",
+        icon: "",
         filename: "data/banking.json",
         badgeColor: "#14b8a6",
         metrics: ['rating', 'popularity', 'sentiment', 'accessibility']
@@ -308,17 +308,17 @@ function renderServicesView() {
         <div class="dining-container">
             <div class="services-grid">
                 <a href="#/healthcare" class="service-category-card">
-                    <span class="service-icon">🏥</span>
+                    <span class="service-icon"></span>
                     <h3>Healthcare</h3>
                     <p>Hospitals, Clinics & Medical Centers</p>
                 </a>
                 <a href="#/education" class="service-category-card">
-                    <span class="service-icon">🎓</span>
+                    <span class="service-icon"></span>
                     <h3>Education</h3>
                     <p>Schools, Colleges & Universities</p>
                 </a>
                 <a href="#/banking" class="service-category-card">
-                    <span class="service-icon">🏦</span>
+                    <span class="service-icon"></span>
                     <h3>Banking</h3>
                     <p>Banks & Financial Services</p>
                 </a>
@@ -348,17 +348,17 @@ function renderShopCategoryView() {
         <div class="dining-container">
             <div class="services-grid">
                 <a href="#/malls" class="service-category-card">
-                    <span class="service-icon">🏬</span>
+                    <span class="service-icon"></span>
                     <h3>Malls</h3>
                     <p>Shopping Centers & Mega Malls</p>
                 </a>
                 <a href="#/boutiques" class="service-category-card">
-                    <span class="service-icon">👗</span>
+                    <span class="service-icon"></span>
                     <h3>Boutiques</h3>
                     <p>Fashion & Designer Stores</p>
                 </a>
                 <a href="#/specialty-shops" class="service-category-card">
-                    <span class="service-icon">🛍️</span>
+                    <span class="service-icon"></span>
                     <h3>Specialty Shops</h3>
                     <p>Books, Electronics, Ayurveda</p>
                 </a>
@@ -388,12 +388,12 @@ function renderCultureCategoryView() {
         <div class="dining-container">
             <div class="services-grid">
                 <a href="#/museums" class="service-category-card">
-                    <span class="service-icon">🏛️</span>
+                    <span class="service-icon"></span>
                     <h3>Museums</h3>
                     <p>Art Galleries & Historical Museums</p>
                 </a>
                 <a href="#/religious-sites" class="service-category-card">
-                    <span class="service-icon">🛕</span>
+                    <span class="service-icon"></span>
                     <h3>Religious Sites</h3>
                     <p>Temples, Churches & Mosques</p>
                 </a>

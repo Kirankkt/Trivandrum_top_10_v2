@@ -2,14 +2,7 @@
 
 // Helper function to get category icon
 function getCategoryIcon(category) {
-    const icons = {
-        'heritage': '🏛️',
-        'dining': '🍽️',
-        'shopping': '🛍️',
-        'recreation': '🌳',
-        'essential': '🏥'
-    };
-    return icons[category] || '📍';
+    return ''; // Icons removed for professional look
 }
 
 // Helper function to get category color
@@ -42,7 +35,7 @@ async function renderDiscoverView(localityName) {
         if (!localityData || !localityData.spots || localityData.spots.length === 0) {
             app.innerHTML = `
                 <div class="discover-page">
-                    <a href="#/locality/${encodeURIComponent(localityName)}" class="back-button">← Back to ${localityName}</a>
+                    <a href="#/locality/${encodeURIComponent(localityName)}" class="back-button"><span class="ui-arrow-left"></span> Back to ${localityName}</a>
                     <div class="discover-empty">
                         <h2>No places found for ${localityName}</h2>
                         <p>We haven't collected place data for this locality yet.</p>
@@ -84,7 +77,7 @@ async function renderDiscoverView(localityName) {
                 <div class="discover-hero" style="${heroStyle}">
                     <div class="discover-hero-overlay"></div>
                     <div class="discover-hero-content">
-                        <a href="#/locality/${encodeURIComponent(localityName)}" class="back-button-light">← Back to ${localityName}</a>
+                        <a href="#/locality/${encodeURIComponent(localityName)}" class="back-button-light"><span class="ui-arrow-left"></span> Back to ${localityName}</a>
                         <h1>Discover ${localityName}</h1>
                         <p>${localityData.spots.length} places across ${Object.keys(categories).length} categories</p>
                     </div>
@@ -92,6 +85,7 @@ async function renderDiscoverView(localityName) {
                 
                 <div class="discover-content">
                     <!-- Category Filter Tabs -->
+                    <div class="card-icon"></div>
                     <div class="discover-tabs">
                         <button class="discover-tab active" data-category="all">All (${localityData.spots.length})</button>
                         ${Object.entries(categories).map(([cat, spots]) =>
@@ -112,14 +106,14 @@ async function renderDiscoverView(localityName) {
                 <a href="${spot.google_maps_url}" target="_blank" class="discover-spot-card" data-category="${spot.category}" rel="noopener noreferrer">
                     <div class="discover-spot-image" style="${hasPhoto ? `background-image: url('${spot.photo_url}')` : `background: ${placeholderColor}`}">
                         ${!hasPhoto ? `<span class="discover-spot-icon">${spot.icon}</span>` : ''}
-                        <span class="discover-spot-badge">${spot.icon} ${spot.category}</span>
+                        <span class="discover-spot-badge">${spot.category}</span>
                     </div>
                     <div class="discover-spot-info">
                         <h3 class="discover-spot-name">${spot.name}</h3>
                         ${spot.address ? `<p class="discover-spot-address">${spot.address}</p>` : ''}
                         <div class="discover-spot-meta">
-                            ${spot.rating ? `<span class="discover-spot-rating">⭐ ${spot.rating}</span>` : ''}
-                            <span class="discover-spot-link">Open in Maps →</span>
+                            ${spot.rating ? `<span class="discover-spot-rating">&#9733; ${spot.rating}</span>` : ''}
+                            <span class="discover-spot-link">Open in Maps <span class="ui-arrow-right"></span></span>
                         </div>
                     </div>
                 </a>
