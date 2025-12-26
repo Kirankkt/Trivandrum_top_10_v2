@@ -24,10 +24,11 @@ try {
     console.error('[Supabase] Initialization failed:', error);
 }
 
-// Helper function to track locality views
-async function trackLocalityView(localityName) {
-    if (!sbClient) return;
+// Edge Function URL for secure analytics
+const EDGE_FUNCTION_URL = `${SUPABASE_URL}/functions/v1/track-event`;
 
+// Helper function to track locality views (via Edge Function)
+async function trackLocalityView(localityName) {
     // Get or Create a simple persistent session ID for this browser
     let sessionId = localStorage.getItem('unique_session_id');
     if (!sessionId) {
@@ -36,14 +37,25 @@ async function trackLocalityView(localityName) {
     }
 
     try {
-        const { error } = await sbClient
-            .from('locality_views')
-            .insert({
-                locality_name: localityName,
-                session_id: sessionId
-            });
+        const response = await fetch(EDGE_FUNCTION_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                type: 'locality_view',
+                data: {
+                    locality_name: localityName,
+                    session_id: sessionId
+                }
+            })
+        });
 
-        if (error) throw error;
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.error || 'Edge Function error');
+        }
+
         console.log(`[Supabase] Tracked view for: ${localityName}`);
     } catch (err) {
         // Fail silently so user experience isn't affected
