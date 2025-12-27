@@ -4401,6 +4401,24 @@ footer .small {
   margin-bottom: 1.5rem;
 }
 
+.why-icon-box {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #00d68f 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.why-icon-text {
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.5px;
+}
+
 .why-card h3 {
   font-size: 1.25rem;
   color: white;

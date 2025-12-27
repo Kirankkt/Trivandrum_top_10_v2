@@ -198,19 +198,25 @@ async function renderHomeView() {
 
         <div class="why-grid">
           <div class="why-card">
-            <div class="why-icon">&#128202;</div>
+            <div class="why-icon-box">
+              <span class="why-icon-text">API</span>
+            </div>
             <h3>API-Sourced</h3>
             <p>All data comes directly from Google Maps APIs with explicit formulas.</p>
           </div>
 
           <div class="why-card">
-            <div class="why-icon">&#9878;</div>
+            <div class="why-icon-box">
+              <span class="why-icon-text">100%</span>
+            </div>
             <h3>Fully Transparent</h3>
             <p>Every weight and calculation is documented in our methodology.</p>
           </div>
 
           <div class="why-card">
-            <div class="why-icon">&#128736;</div>
+            <div class="why-icon-box">
+              <span class="why-icon-text">YOU</span>
+            </div>
             <h3>Customizable</h3>
             <p>Adjust weights to match your priorities and see rankings update live.</p>
           </div>
