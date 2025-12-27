@@ -124,19 +124,46 @@ async function renderHomeView() {
     <section class="about-section">
       <div class="about-content">
         <h2>Why trust our rankings?</h2>
-        <p>Objective insights powered by Google Maps API, travel metrics, and real pricing data — zero bias, zero sponsored content.</p>
+        <p class="about-lead">Our objective scoring system removes human bias and marketing noise to give you the truth about Thiruvananthapuram's neighborhoods and lifestyle.</p>
+        
         <div class="about-features">
-          <div class="about-feature">
-            <span>Data-Driven</span>
+          <div class="about-feature-card">
+            <div class="about-feature-icon">
+              <span class="icon-chart"></span>
+            </div>
+            <div class="about-feature-text">
+              <h3>Data-Driven</h3>
+              <p>Scores are calculated using live data from Google Maps, travel metrics, and verified property benchmarks.</p>
+            </div>
           </div>
-          <div class="about-feature">
-            <span>Objective Weights</span>
+          
+          <div class="about-feature-card">
+            <div class="about-feature-icon">
+              <span class="icon-scale"></span>
+            </div>
+            <div class="about-feature-text">
+              <h3>Objective Weights</h3>
+              <p>Our algorithms use standardized weighting for safety, schools, and transit to ensure fair comparisons.</p>
+            </div>
           </div>
-          <div class="about-feature">
-            <span>Real Local Research</span>
+          
+          <div class="about-feature-card">
+            <div class="about-feature-icon">
+              <span class="icon-search"></span>
+            </div>
+            <div class="about-feature-text">
+              <h3>Real Research</h3>
+              <p>Ground-level insights and community trends are analyzed to ensure our digital rankings match reality.</p>
+            </div>
           </div>
         </div>
-        <a href="#/methodology" class="btn-learn-more">Our Methodology</a>
+        
+        <div class="about-cta">
+          <a href="#/methodology" class="btn-learn-more">
+            <span>Explore Methodology</span>
+            <span class="ui-arrow-right"></span>
+          </a>
+        </div>
       </div>
     </section>
   `;

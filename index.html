@@ -10,12 +10,12 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WKSPYBGCN"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-5WKSPYBGCN');
 
         // Track SPA page views on hash change
-        window.addEventListener('hashchange', function() {
+        window.addEventListener('hashchange', function () {
             gtag('event', 'page_view', {
                 page_path: window.location.hash || '#/',
                 page_title: document.title
@@ -155,10 +155,10 @@
     <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-section footer-brand">
-                <span class="footer-logo">TRIVANDRUM TOP 10</span>
-                <p class="footer-tagline">100% objective, data-driven rankings for Thiruvananthapuram</p>
-                <p class="footer-description">Powered by Google Maps API, real estate data, and transparent algorithmic
-                    scoring</p>
+                <a href="#/" class="footer-logo">TRIVANDRUM TOP 10</a>
+                <p class="footer-tagline">The city's most trusted, data-driven rankings.</p>
+                <p class="footer-description">We use real-time Google API data and local market benchmarks to provide
+                    100% objective insights across 20+ neighborhoods.</p>
             </div>
 
             <div class="footer-section">
@@ -173,29 +173,30 @@
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-heading">Resources</h4>
+                <h4 class="footer-heading">Company</h4>
                 <div class="footer-links">
                     <a href="#/methodology">Methodology</a>
-                    <a href="#/customize">Customize Rankings</a>
-                    <a href="#/about">About Us</a>
+                    <a href="#/customize">Custom Ranking Engine</a>
+                    <a href="#/about">About the Project</a>
+                    <a href="#/contact">Contact Us</a>
                 </div>
             </div>
 
             <div class="footer-section">
-                <h4 class="footer-heading">Data Sources</h4>
+                <h4 class="footer-heading">Data Engine</h4>
                 <div class="footer-links">
-                    <span class="footer-text">Google Maps API</span>
-                    <span class="footer-text">Google Places API</span>
-                    <span class="footer-text">Real Estate Pricing</span>
-                    <span class="footer-text">Elevation Data</span>
+                    <span class="footer-text">Google Maps Platform</span>
+                    <span class="footer-text">Local Real Estate APIs</span>
+                    <span class="footer-text">Transit & Mobility Data</span>
+                    <span class="footer-text">Topographic Information</span>
                 </div>
             </div>
         </div>
 
         <div class="footer-bottom">
             <div class="footer-bottom-content">
-                <p class="footer-copyright">© 2025 Trivandrum Top 10. All rankings are algorithmic and unbiased.</p>
-                <p class="footer-disclaimer">No sponsored content • Zero human bias • 100% API-sourced metrics</p>
+                <p class="footer-copyright">&copy; 2025 Trivandrum Top 10. All rights reserved.</p>
+                <p class="footer-disclaimer">Zero human bias • No sponsored placements • API-verified metrics</p>
             </div>
         </div>
     </footer>
@@ -222,13 +223,13 @@
 
     <!-- Mobile Menu Script -->
     <script>
-        (function() {
+        (function () {
             const toggle = document.querySelector('.mobile-menu-toggle');
             const nav = document.querySelector('.main-nav');
             const header = document.querySelector('.main-header');
 
             if (toggle && nav) {
-                toggle.addEventListener('click', function() {
+                toggle.addEventListener('click', function () {
                     const isOpen = nav.classList.toggle('nav-open');
                     toggle.classList.toggle('active');
                     toggle.setAttribute('aria-expanded', isOpen);
@@ -247,7 +248,7 @@
 
                 // Handle dropdown toggles on mobile (tap to open)
                 document.querySelectorAll('.nav-group-trigger').forEach(trigger => {
-                    trigger.addEventListener('click', function(e) {
+                    trigger.addEventListener('click', function (e) {
                         if (window.innerWidth <= 900) {
                             e.preventDefault();
                             const parent = this.closest('.nav-group');
