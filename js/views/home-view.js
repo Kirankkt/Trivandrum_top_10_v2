@@ -98,7 +98,7 @@ async function renderHomeView() {
 
         <!-- Education & More -->
         <a href="#/services" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/categories/education_premium.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('images/categories/education_modern.png')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-card-label">Services</span>
