@@ -45,6 +45,9 @@ async function renderCategoryView(type, config) {
             <button class="btn-restore-small" id="restore-default-btn">Reset</button>
         ` : '';
 
+        // Map type to customize route (handle underscores to hyphens)
+        const customizeRoute = type.replace(/_/g, '-');
+
         let html = `
             <div class="dining-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('${config.heroImage || top10[0]?.image || "images/skyline.png"}') center/cover fixed;">
                 <div class="hero-content">
@@ -57,6 +60,7 @@ async function renderCategoryView(type, config) {
                 <div class="section-header">
                     <div class="section-header-actions">
                         ${customizedIndicator}
+                        <a href="#/customize/${customizeRoute}" class="btn-customize-inline">Customize</a>
                     </div>
                 </div>
 
