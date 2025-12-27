@@ -1,5 +1,5 @@
 // Dining & Stay View - Handles Restaurants, Cafes, and Hotels
-async function renderDiningView(type) {
+async function renderDiningView(type, filters = {}) {
     const app = document.getElementById('app');
 
     // Config based on type
@@ -35,6 +35,15 @@ async function renderDiningView(type) {
         const response = await fetch(config.filename);
         if (!response.ok) throw new Error("Data not found");
         let data = await response.json();
+
+        // Store original data for filtering
+        const originalData = [...data];
+
+        // Get unique localities for filter dropdown
+        const localities = [...new Set(data.map(item => item.locality).filter(Boolean))].sort();
+
+        // Get unique vibes for filter
+        const allVibes = [...new Set(data.flatMap(item => item.vibes || []))].sort();
 
         // Check for custom weights and apply them
         const storageKey = `${type}Weights`;
@@ -102,8 +111,42 @@ async function renderDiningView(type) {
                         <a href="#/customize/${type}" class="btn-customize-inline">Customize</a>
                     </div>
                 </div>
-                
-                <main class="dining-grid">
+
+                <!-- Filter & Sort Bar -->
+                <div class="filter-sort-bar">
+                    <div class="filter-group">
+                        <label>Sort by:</label>
+                        <select id="sort-select" class="filter-select">
+                            <option value="score">Score (High to Low)</option>
+                            <option value="rating">Rating (High to Low)</option>
+                            <option value="reviews">Most Reviews</option>
+                            <option value="price-low">Price (Low to High)</option>
+                            <option value="price-high">Price (High to Low)</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Area:</label>
+                        <select id="locality-filter" class="filter-select">
+                            <option value="">All Areas</option>
+                            ${localities.map(loc => `<option value="${loc}">${loc}</option>`).join('')}
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Price:</label>
+                        <div class="price-filters">
+                            <button class="price-filter-btn active" data-price="all">All</button>
+                            <button class="price-filter-btn" data-price="1">$</button>
+                            <button class="price-filter-btn" data-price="2">$$</button>
+                            <button class="price-filter-btn" data-price="3">$$$</button>
+                            <button class="price-filter-btn" data-price="4">$$$$</button>
+                        </div>
+                    </div>
+                    <button id="clear-filters-btn" class="btn-clear-filters" style="display: none;">Clear Filters</button>
+                </div>
+
+                <div id="results-count" class="results-count">Showing ${allSpots.length} results</div>
+
+                <main class="dining-grid" id="main-grid">
                     ${top10.map((place, index) => createDiningCard(place, index + 1, config, type)).join('')}
                 </main>
                 
@@ -158,6 +201,149 @@ async function renderDiningView(type) {
                 localStorage.removeItem(storageKey);
                 // Reload the page to show default rankings
                 renderDiningView(type);
+            });
+        }
+
+        // ===== FILTER & SORT FUNCTIONALITY =====
+        let currentSort = 'score';
+        let currentLocality = '';
+        let currentPrice = 'all';
+
+        function applyFiltersAndSort() {
+            let filtered = [...originalData];
+
+            // Apply locality filter
+            if (currentLocality) {
+                filtered = filtered.filter(item => item.locality === currentLocality);
+            }
+
+            // Apply price filter
+            if (currentPrice !== 'all') {
+                const priceLevel = parseInt(currentPrice);
+                filtered = filtered.filter(item => (item.price_level || 2) === priceLevel);
+            }
+
+            // Apply sorting
+            switch (currentSort) {
+                case 'score':
+                    filtered.sort((a, b) => b.score - a.score);
+                    break;
+                case 'rating':
+                    filtered.sort((a, b) => b.rating - a.rating);
+                    break;
+                case 'reviews':
+                    filtered.sort((a, b) => b.reviews - a.reviews);
+                    break;
+                case 'price-low':
+                    filtered.sort((a, b) => (a.price_level || 2) - (b.price_level || 2));
+                    break;
+                case 'price-high':
+                    filtered.sort((a, b) => (b.price_level || 2) - (a.price_level || 2));
+                    break;
+            }
+
+            // Update the grid
+            const mainGrid = document.getElementById('main-grid');
+            const hiddenSpots = document.getElementById('hidden-spots');
+            const showMoreContainer = document.getElementById('show-more-btn')?.parentElement;
+            const showLessContainer = document.getElementById('show-less-container');
+            const resultsCount = document.getElementById('results-count');
+            const clearFiltersBtn = document.getElementById('clear-filters-btn');
+
+            // Show/hide clear filters button
+            if (currentLocality || currentPrice !== 'all' || currentSort !== 'score') {
+                clearFiltersBtn.style.display = 'block';
+            } else {
+                clearFiltersBtn.style.display = 'none';
+            }
+
+            // Update results count
+            resultsCount.textContent = `Showing ${filtered.length} result${filtered.length !== 1 ? 's' : ''}`;
+
+            if (filtered.length === 0) {
+                mainGrid.innerHTML = '<div class="no-results">No results match your filters. Try adjusting your criteria.</div>';
+                if (hiddenSpots) hiddenSpots.style.display = 'none';
+                if (showMoreContainer) showMoreContainer.style.display = 'none';
+                if (showLessContainer) showLessContainer.style.display = 'none';
+                return;
+            }
+
+            // Split into top 10 and remaining
+            const top10Filtered = filtered.slice(0, 10);
+            const remainingFiltered = filtered.slice(10);
+
+            // Update main grid
+            mainGrid.innerHTML = top10Filtered.map((place, index) =>
+                createDiningCard(place, index + 1, config, type)
+            ).join('');
+
+            // Update hidden spots
+            if (hiddenSpots) {
+                if (remainingFiltered.length > 0) {
+                    hiddenSpots.innerHTML = remainingFiltered.map((place, index) =>
+                        createDiningCard(place, index + 11, config, type)
+                    ).join('');
+                    hiddenSpots.style.display = 'none';
+                    if (showMoreContainer) {
+                        showMoreContainer.style.display = 'flex';
+                        const showMoreBtn = document.getElementById('show-more-btn');
+                        if (showMoreBtn) {
+                            showMoreBtn.textContent = `Show More (11-${filtered.length}) ↓`;
+                        }
+                    }
+                    if (showLessContainer) showLessContainer.style.display = 'none';
+                } else {
+                    hiddenSpots.innerHTML = '';
+                    hiddenSpots.style.display = 'none';
+                    if (showMoreContainer) showMoreContainer.style.display = 'none';
+                    if (showLessContainer) showLessContainer.style.display = 'none';
+                }
+            }
+        }
+
+        // Sort select
+        const sortSelect = document.getElementById('sort-select');
+        if (sortSelect) {
+            sortSelect.addEventListener('change', (e) => {
+                currentSort = e.target.value;
+                applyFiltersAndSort();
+            });
+        }
+
+        // Locality filter
+        const localityFilter = document.getElementById('locality-filter');
+        if (localityFilter) {
+            localityFilter.addEventListener('change', (e) => {
+                currentLocality = e.target.value;
+                applyFiltersAndSort();
+            });
+        }
+
+        // Price filter buttons
+        document.querySelectorAll('.price-filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.price-filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentPrice = btn.dataset.price;
+                applyFiltersAndSort();
+            });
+        });
+
+        // Clear filters button
+        const clearFiltersBtn = document.getElementById('clear-filters-btn');
+        if (clearFiltersBtn) {
+            clearFiltersBtn.addEventListener('click', () => {
+                currentSort = 'score';
+                currentLocality = '';
+                currentPrice = 'all';
+
+                // Reset UI
+                sortSelect.value = 'score';
+                localityFilter.value = '';
+                document.querySelectorAll('.price-filter-btn').forEach(b => b.classList.remove('active'));
+                document.querySelector('.price-filter-btn[data-price="all"]').classList.add('active');
+
+                applyFiltersAndSort();
             });
         }
 

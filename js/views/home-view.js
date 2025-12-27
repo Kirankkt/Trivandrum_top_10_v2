@@ -77,7 +77,7 @@ async function renderHomeView() {
 
         <!-- Stay & Dine (Grouped Hospitality) -->
         <div class="explore-card hero-card">
-          <div class="explore-card-bg" style="background-image: url('images/categories/stay_dine_premium.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('${window.ImageOptimizer?.getOptimizedUrl('images/categories/stay_dine_premium.png') || 'images/categories/stay_dine_premium.png'}')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-card-label">Hospitality</span>
@@ -93,7 +93,7 @@ async function renderHomeView() {
 
         <!-- Shopping -->
         <div class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/categories/shopping_hero.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('${window.ImageOptimizer?.getOptimizedUrl('images/categories/shopping_hero.png') || 'images/categories/shopping_hero.png'}')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-card-label">Retail</span>
@@ -108,7 +108,7 @@ async function renderHomeView() {
 
         <!-- Culture -->
         <div class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/categories/culture_premium.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('${window.ImageOptimizer?.getOptimizedUrl('images/categories/culture_premium.png') || 'images/categories/culture_premium.png'}')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-card-label">Heritage</span>
@@ -123,7 +123,7 @@ async function renderHomeView() {
 
         <!-- Healthcare -->
         <a href="#/healthcare" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/categories/healthcare_premium.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('${window.ImageOptimizer?.getOptimizedUrl('images/categories/healthcare_premium.png') || 'images/categories/healthcare_premium.png'}')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-card-label">Wellness</span>
@@ -134,7 +134,7 @@ async function renderHomeView() {
 
         <!-- Education & More -->
         <a href="#/services" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/categories/education_brick.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('${window.ImageOptimizer?.getOptimizedUrl('images/categories/education_brick.png') || 'images/categories/education_brick.png'}')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-card-label">Services</span>
@@ -145,7 +145,7 @@ async function renderHomeView() {
 
         <!-- Localities -->
         <a href="#/localities" class="explore-card">
-          <div class="explore-card-bg" style="background-image: url('images/categories/localities_premium.png')"></div>
+          <div class="explore-card-bg" style="background-image: url('${window.ImageOptimizer?.getOptimizedUrl('images/categories/localities_premium.png') || 'images/categories/localities_premium.png'}')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
             <span class="explore-card-label">Neighborhoods</span>

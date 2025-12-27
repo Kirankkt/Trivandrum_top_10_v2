@@ -1,5 +1,14 @@
 {
+  "name": "trivandrum-top-10",
+  "version": "1.0.0",
+  "description": "The city's definitive rankings",
+  "scripts": {
+    "optimize-images": "node scripts/optimize-images.js"
+  },
   "dependencies": {
     "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.2"
   }
 }

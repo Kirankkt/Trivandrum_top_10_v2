@@ -61,15 +61,19 @@ async function renderRankingView() {
   };
 
   function getLocalityImage(name) {
-    return localityImages[name] || localityImages['default'];
+    const basePath = localityImages[name] || localityImages['default'];
+    // Use ImageOptimizer if available for WebP support
+    return window.ImageOptimizer?.getOptimizedUrl(basePath) || basePath;
   }
 
   // Experience categories with associated localities (Icons removed for professional feel)
+  // Use ImageOptimizer for WebP support
+  const getOptImg = (path) => window.ImageOptimizer?.getOptimizedUrl(path) || path;
   const categories = [
-    { name: 'IT Professional', localities: ['Kazhakuttom', 'Sreekaryam', 'Ulloor'], image: 'images/tech.png' },
-    { name: 'Beach Life', localities: ['Kovalam', 'Varkala'], image: 'images/beach.png' },
-    { name: 'Heritage & Culture', localities: ['Kowdiar', 'Statue', 'Vellayambalam', 'PMG', 'Vazhuthacaud', 'Jagathy', 'Kuravankonam'], image: 'images/palace.png' },
-    { name: 'Family Living', localities: ['Sasthamangalam', 'Pattom', 'Ambalamukku', 'Kesavadasapuram', 'Enchakkal', 'Medical College', 'Peroorkada', 'Poojapura'], image: 'images/skyline.png' }
+    { name: 'IT Professional', localities: ['Kazhakuttom', 'Sreekaryam', 'Ulloor'], image: getOptImg('images/tech.png') },
+    { name: 'Beach Life', localities: ['Kovalam', 'Varkala'], image: getOptImg('images/beach.png') },
+    { name: 'Heritage & Culture', localities: ['Kowdiar', 'Statue', 'Vellayambalam', 'PMG', 'Vazhuthacaud', 'Jagathy', 'Kuravankonam'], image: getOptImg('images/palace.png') },
+    { name: 'Family Living', localities: ['Sasthamangalam', 'Pattom', 'Ambalamukku', 'Kesavadasapuram', 'Enchakkal', 'Medical College', 'Peroorkada', 'Poojapura'], image: getOptImg('images/skyline.png') }
   ];
 
   // Store categories globally for filter access
