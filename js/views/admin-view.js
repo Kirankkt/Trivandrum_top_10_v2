@@ -314,7 +314,7 @@ async function renderAdminView() {
 
             <div class="admin-ga4-note">
                 <span class="ga4-icon">📈</span>
-                Additional web analytics available in <a href="https://analytics.google.com" target="_blank" rel="noopener noreferrer">Google Analytics 4</a>
+                Additional web analytics available in <a href="https://analytics.google.com/analytics/web/#/p517631435/reports/" target="_blank" rel="noopener noreferrer">Google Analytics 4</a>
             </div>
         </div>
     `;
