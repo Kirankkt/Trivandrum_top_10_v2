@@ -225,6 +225,9 @@ async function renderEntityDetailView(category, entityId) {
             return;
         }
 
+        // Update metadata for this specific entity
+        updateMetadata(`${entity.name} (${config.title})`, `Detailed ranking, location, and info for ${entity.name}, one of the top ${category} in Thiruvananthapuram.`);
+
         // Find rank
         const rank = data.findIndex(item => item.id === entityId) + 1;
         const totalInCategory = data.length;

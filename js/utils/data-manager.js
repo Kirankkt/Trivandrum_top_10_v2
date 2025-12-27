@@ -1,3 +1,23 @@
+// Helper to update page metadata
+function updateMetadata(title, description = "") {
+    const baseTitle = "Trivandrum Top 10";
+    const fullTitle = title ? `${title} | ${baseTitle}` : baseTitle;
+    document.title = fullTitle;
+
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription && description) {
+        metaDescription.setAttribute('content', description);
+    }
+
+    // Update OG tags (for client-side context)
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', fullTitle);
+
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription && description) ogDescription.setAttribute('content', description);
+}
+
 // Data Manager - Load objective rankings and locality data
 async function loadRankings() {
     try {
