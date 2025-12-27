@@ -247,15 +247,7 @@ a:hover {
   text-decoration: none;
 }
 
-.nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: -0.5rem;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--color-primary);
-}
+/* Removed green underline from active nav - was too distracting */
 
 .btn-plan {
   display: flex;
@@ -462,42 +454,50 @@ a:hover {
   text-decoration: none;
 }
 
-/* Search Bar */
+/* Search Bar - Header */
 .search-bar {
-  flex: 1;
-  max-width: 500px;
   position: relative;
+  flex-shrink: 0;
+  margin-left: 1rem;
 }
 
 .search-bar input,
 .search-input,
 #search-input {
-  width: 100%;
-  padding: var(--space-3) var(--space-4);
-  padding-left: var(--space-10);
-  border: 1px solid var(--color-border);
+  width: 180px;
+  padding: 0.5rem 0.75rem;
+  padding-left: 2.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-full);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-family: var(--font-sans);
-  background: var(--color-bg-secondary);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
   transition: all 0.2s;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .search-bar input:focus,
 .search-input:focus,
 #search-input:focus {
   outline: none;
+  width: 240px;
   border-color: var(--color-primary);
-  background: var(--color-bg);
-  box-shadow: 0 0 0 3px rgba(0, 170, 108, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 2px rgba(0, 170, 108, 0.2);
 }
 
 .search-icon {
   position: absolute;
-  left: var(--space-4);
+  left: 0.75rem;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  pointer-events: none;
 }
 
 /* Search Dropdown */
@@ -2010,10 +2010,7 @@ footer .small {
   }
 
   .search-bar {
-    order: 3;
-    flex: 1 1 100%;
-    max-width: none;
-    margin-top: var(--space-3);
+    display: none;
   }
 
   .category-tabs {
