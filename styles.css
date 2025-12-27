@@ -5059,18 +5059,56 @@ footer .small {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: #fef3c7;
-  color: #92400e;
+  background: rgba(0, 170, 108, 0.15);
+  color: var(--color-primary);
+  border: 1px solid rgba(0, 170, 108, 0.3);
   border-radius: var(--radius-full);
   font-size: 0.85rem;
   font-weight: 500;
 }
 
+.btn-reset-inline {
+  padding: 0.4rem 0.75rem;
+  background: transparent;
+  color: #f87171;
+  border: 1px solid #f87171;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-reset-inline:hover {
+  background: #f87171;
+  color: white;
+}
+
+.btn-customize-green {
+  padding: 0.5rem 1.25rem;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 170, 108, 0.3);
+}
+
+.btn-customize-green:hover {
+  background: #00c878;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 170, 108, 0.4);
+}
+
 .btn-restore-small {
   padding: 0.4rem 0.75rem;
   background: transparent;
-  color: #dc2626;
-  border: 1px solid #dc2626;
+  color: #f87171;
+  border: 1px solid #f87171;
   border-radius: var(--radius-full);
   font-size: 0.8rem;
   font-weight: 500;
@@ -5079,7 +5117,7 @@ footer .small {
 }
 
 .btn-restore-small:hover {
-  background: #dc2626;
+  background: #f87171;
   color: white;
 }
 

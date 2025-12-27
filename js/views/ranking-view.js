@@ -120,14 +120,13 @@ async function renderRankingView() {
       <div class="section-header">
         <div class="section-header-top">
           <h2 class="section-title">Top Localities</h2>
+          <div class="section-header-actions">
+            ${isCustom ? `<span class="customized-indicator">Custom weights active</span>
+            <button class="btn-reset-inline" id="reset-weights-btn">Reset</button>` : ''}
+            <a href="#/customize" class="btn-customize-green">Customize</a>
+          </div>
         </div>
         <p class="section-subtitle">Ranked by Accessibility, Amenities, Safety, Environment & Economy</p>
-        ${isCustom ? `
-          <div class="custom-weights-banner">
-            <span>✨ Custom weights applied</span>
-            <button class="btn-reset" id="reset-weights-btn">Reset to Defaults</button>
-          </div>
-        ` : ''}
         <div id="category-filter-banner" class="category-filter-banner hidden">
           <span id="filter-label"></span>
           <button class="btn-reset" id="clear-filter-btn">✕ Clear Filter</button>
