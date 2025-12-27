@@ -67,6 +67,10 @@ function route() {
         console.log('[Debug] Routing to Methodology');
         updateMetadata("Our Methodology", "How we calculate our rankings using data-driven metrics and objective algorithms.");
         renderMethodologyView();
+    } else if (hash === '/about') {
+        console.log('[Debug] Routing to About');
+        updateMetadata("About Trivandrum Top 10", "Learn about our mission to provide objective, data-driven rankings for Kerala's capital city.");
+        renderAboutView();
     } else if (hash === '/map' || hash.startsWith('/map?')) {
         console.log('[Debug] Routing to Map');
         updateMetadata("Interactive Map", "Explore Thiruvananthapuram's top localities and attractions on our interactive map.");
