@@ -31,6 +31,38 @@ function route() {
         console.log('[Debug] Routing to Customize Hotels');
         updateMetadata("Customize Hotel Weights");
         renderDiningCustomizeView('hotels');
+    } else if (hash === '/customize/malls') {
+        console.log('[Debug] Routing to Customize Malls');
+        updateMetadata("Customize Mall Weights");
+        renderDiningCustomizeView('malls');
+    } else if (hash === '/customize/boutiques') {
+        console.log('[Debug] Routing to Customize Boutiques');
+        updateMetadata("Customize Boutique Weights");
+        renderDiningCustomizeView('boutiques');
+    } else if (hash === '/customize/specialty-shops') {
+        console.log('[Debug] Routing to Customize Specialty Shops');
+        updateMetadata("Customize Specialty Shop Weights");
+        renderDiningCustomizeView('specialty-shops');
+    } else if (hash === '/customize/museums') {
+        console.log('[Debug] Routing to Customize Museums');
+        updateMetadata("Customize Museum Weights");
+        renderDiningCustomizeView('museums');
+    } else if (hash === '/customize/religious-sites') {
+        console.log('[Debug] Routing to Customize Religious Sites');
+        updateMetadata("Customize Religious Site Weights");
+        renderDiningCustomizeView('religious-sites');
+    } else if (hash === '/customize/healthcare') {
+        console.log('[Debug] Routing to Customize Healthcare');
+        updateMetadata("Customize Healthcare Weights");
+        renderDiningCustomizeView('healthcare');
+    } else if (hash === '/customize/education') {
+        console.log('[Debug] Routing to Customize Education');
+        updateMetadata("Customize Education Weights");
+        renderDiningCustomizeView('education');
+    } else if (hash === '/customize/banking') {
+        console.log('[Debug] Routing to Customize Banking');
+        updateMetadata("Customize Banking Weights");
+        renderDiningCustomizeView('banking');
     } else if (hash === '/methodology') {
         console.log('[Debug] Routing to Methodology');
         updateMetadata("Our Methodology", "How we calculate our rankings using data-driven metrics and objective algorithms.");
@@ -161,15 +193,21 @@ function route() {
     // Update Customize button based on current page
     const customizeBtn = document.querySelector('.btn-plan');
     if (customizeBtn) {
-        if (hash === '/restaurants') {
-            customizeBtn.href = '#/customize/restaurants';
-        } else if (hash === '/cafes') {
-            customizeBtn.href = '#/customize/cafes';
-        } else if (hash === '/hotels') {
-            customizeBtn.href = '#/customize/hotels';
-        } else {
-            customizeBtn.href = '#/customize';
-        }
+        const customizeRoutes = {
+            '/restaurants': '#/customize/restaurants',
+            '/cafes': '#/customize/cafes',
+            '/hotels': '#/customize/hotels',
+            '/malls': '#/customize/malls',
+            '/boutiques': '#/customize/boutiques',
+            '/specialty-shops': '#/customize/specialty-shops',
+            '/museums': '#/customize/museums',
+            '/religious-sites': '#/customize/religious-sites',
+            '/healthcare': '#/customize/healthcare',
+            '/education': '#/customize/education',
+            '/banking': '#/customize/banking',
+            '/localities': '#/customize'
+        };
+        customizeBtn.href = customizeRoutes[hash] || '#/customize';
     }
 }
 

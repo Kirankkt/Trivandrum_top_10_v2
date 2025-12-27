@@ -64,12 +64,155 @@ async function renderDiningCustomizeView(type) {
             returnUrl: '#/hotels',
             color: '#ffd93d',
             presets: {
-                // Default: Location is critical for hotels
                 balanced: { sentiment: 15, popularity: 10, rating: 20, value: 20, location: 25, luxury: 10 },
                 budget: { sentiment: 10, popularity: 15, rating: 15, value: 45, location: 10, luxury: 5 },
                 luxury: { sentiment: 15, popularity: 5, rating: 20, value: 5, location: 15, luxury: 40 },
                 tourist: { sentiment: 10, popularity: 10, rating: 15, value: 15, location: 40, luxury: 10 },
                 business: { sentiment: 15, popularity: 10, rating: 25, value: 20, location: 20, luxury: 10 }
+            }
+        },
+        malls: {
+            title: "Customize Mall Rankings",
+            description: "Adjust the 4 metrics to match your shopping priorities",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Positive review sentiment' },
+                { id: 'variety', name: 'Variety', icon: '🛍️', description: 'Range of stores & brands' }
+            ],
+            returnUrl: '#/malls',
+            color: '#8b5cf6',
+            presets: {
+                balanced: { rating: 25, popularity: 25, sentiment: 25, variety: 25 },
+                popular: { rating: 20, popularity: 40, sentiment: 20, variety: 20 },
+                quality: { rating: 40, popularity: 15, sentiment: 30, variety: 15 },
+                variety: { rating: 20, popularity: 20, sentiment: 20, variety: 40 }
+            }
+        },
+        boutiques: {
+            title: "Customize Boutique Rankings",
+            description: "Adjust the 4 metrics to match your fashion preferences",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Positive review sentiment' },
+                { id: 'exclusivity', name: 'Exclusivity', icon: '✨', description: 'Unique & premium offerings' }
+            ],
+            returnUrl: '#/boutiques',
+            color: '#ec4899',
+            presets: {
+                balanced: { rating: 25, popularity: 25, sentiment: 25, exclusivity: 25 },
+                exclusive: { rating: 20, popularity: 10, sentiment: 25, exclusivity: 45 },
+                popular: { rating: 25, popularity: 40, sentiment: 25, exclusivity: 10 },
+                quality: { rating: 40, popularity: 15, sentiment: 30, exclusivity: 15 }
+            }
+        },
+        'specialty-shops': {
+            title: "Customize Specialty Shop Rankings",
+            description: "Adjust the 4 metrics to find your perfect specialty store",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Positive review sentiment' },
+                { id: 'specialty', name: 'Specialty', icon: '🎯', description: 'Niche expertise & unique products' }
+            ],
+            returnUrl: '#/specialty-shops',
+            color: '#f59e0b',
+            presets: {
+                balanced: { rating: 25, popularity: 25, sentiment: 25, specialty: 25 },
+                expert: { rating: 25, popularity: 10, sentiment: 20, specialty: 45 },
+                popular: { rating: 25, popularity: 40, sentiment: 25, specialty: 10 },
+                trusted: { rating: 35, popularity: 20, sentiment: 35, specialty: 10 }
+            }
+        },
+        museums: {
+            title: "Customize Museum Rankings",
+            description: "Adjust the 4 metrics to match your cultural interests",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Positive review sentiment' },
+                { id: 'educational', name: 'Educational Value', icon: '📚', description: 'Learning experience quality' }
+            ],
+            returnUrl: '#/museums',
+            color: '#6366f1',
+            presets: {
+                balanced: { rating: 25, popularity: 25, sentiment: 25, educational: 25 },
+                educational: { rating: 20, popularity: 15, sentiment: 20, educational: 45 },
+                popular: { rating: 25, popularity: 40, sentiment: 25, educational: 10 },
+                experience: { rating: 30, popularity: 20, sentiment: 35, educational: 15 }
+            }
+        },
+        'religious-sites': {
+            title: "Customize Religious Site Rankings",
+            description: "Adjust the 4 metrics to find meaningful spiritual places",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Positive review sentiment' },
+                { id: 'significance', name: 'Significance', icon: '🙏', description: 'Historical & spiritual importance' }
+            ],
+            returnUrl: '#/religious-sites',
+            color: '#14b8a6',
+            presets: {
+                balanced: { rating: 25, popularity: 25, sentiment: 25, significance: 25 },
+                spiritual: { rating: 20, popularity: 10, sentiment: 25, significance: 45 },
+                popular: { rating: 25, popularity: 40, sentiment: 25, significance: 10 },
+                peaceful: { rating: 30, popularity: 15, sentiment: 40, significance: 15 }
+            }
+        },
+        healthcare: {
+            title: "Customize Healthcare Rankings",
+            description: "Adjust the 4 metrics to find the best healthcare facilities",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Patient satisfaction' },
+                { id: 'accessibility', name: 'Accessibility', icon: '🏥', description: 'Ease of access & availability' }
+            ],
+            returnUrl: '#/healthcare',
+            color: '#ef4444',
+            presets: {
+                balanced: { rating: 25, popularity: 25, sentiment: 25, accessibility: 25 },
+                quality: { rating: 40, popularity: 15, sentiment: 30, accessibility: 15 },
+                accessible: { rating: 20, popularity: 20, sentiment: 20, accessibility: 40 },
+                trusted: { rating: 30, popularity: 30, sentiment: 30, accessibility: 10 }
+            }
+        },
+        education: {
+            title: "Customize Education Rankings",
+            description: "Adjust the 4 metrics to find the best educational institutions",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Student & parent satisfaction' },
+                { id: 'reputation', name: 'Reputation', icon: '🎓', description: 'Academic reputation & prestige' }
+            ],
+            returnUrl: '#/education',
+            color: '#0ea5e9',
+            presets: {
+                balanced: { rating: 25, popularity: 25, sentiment: 25, reputation: 25 },
+                prestigious: { rating: 25, popularity: 15, sentiment: 20, reputation: 40 },
+                popular: { rating: 25, popularity: 40, sentiment: 25, reputation: 10 },
+                satisfaction: { rating: 30, popularity: 15, sentiment: 40, reputation: 15 }
+            }
+        },
+        banking: {
+            title: "Customize Banking Rankings",
+            description: "Adjust the 4 metrics to find the best banking services",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Customer satisfaction' },
+                { id: 'accessibility', name: 'Accessibility', icon: '🏦', description: 'Branch access & service availability' }
+            ],
+            returnUrl: '#/banking',
+            color: '#22c55e',
+            presets: {
+                balanced: { rating: 25, popularity: 25, sentiment: 25, accessibility: 25 },
+                service: { rating: 35, popularity: 15, sentiment: 35, accessibility: 15 },
+                accessible: { rating: 20, popularity: 20, sentiment: 20, accessibility: 40 },
+                trusted: { rating: 30, popularity: 30, sentiment: 30, accessibility: 10 }
             }
         }
     };
@@ -81,9 +224,16 @@ async function renderDiningCustomizeView(type) {
     }
 
     // Load dining data for live preview
+    // Map type to actual file name (handle hyphens vs underscores)
+    const fileNameMap = {
+        'specialty-shops': 'specialty_shops',
+        'religious-sites': 'religious_sites'
+    };
+    const fileName = fileNameMap[type] || type;
+
     let diningData = [];
     try {
-        const response = await fetch(`data/${type}.json`);
+        const response = await fetch(`data/${fileName}.json`);
         if (response.ok) {
             diningData = await response.json();
         }
@@ -160,7 +310,20 @@ async function renderDiningCustomizeView(type) {
             quality: 'Quality First',
             luxury: 'Luxury Stay',
             tourist: 'Tourist Friendly',
-            business: 'Business Travel'
+            business: 'Business Travel',
+            popular: 'Most Popular',
+            variety: 'Best Variety',
+            exclusive: 'Most Exclusive',
+            expert: 'Expert Picks',
+            trusted: 'Most Trusted',
+            educational: 'Most Educational',
+            experience: 'Best Experience',
+            spiritual: 'Most Spiritual',
+            peaceful: 'Most Peaceful',
+            accessible: 'Most Accessible',
+            prestigious: 'Most Prestigious',
+            satisfaction: 'Highest Satisfaction',
+            service: 'Best Service'
         };
         return `<button class="preset-btn" data-preset="${key}">${labels[key] || key}</button>`;
     }).join('')}
@@ -229,7 +392,7 @@ async function renderDiningCustomizeView(type) {
 
             // Map metric IDs to actual data fields
             const metricMapping = {
-                sentiment: metrics.sentiment || 0,
+                sentiment: metrics.sentiment || 50,
                 popularity: Math.min((item.reviews || 0) / 1000, 100),
                 rating: (item.rating || 4) * 20,
                 value: (5 - (item.price_level || 2)) * 25,
@@ -237,7 +400,15 @@ async function renderDiningCustomizeView(type) {
                 vibe: (item.vibes?.length || 0) * 20,
                 workspace: (item.vibes?.includes('Work Friendly') ? 80 : 20),
                 location: metrics.convenience || 50,
-                luxury: (item.price_level || 2) * 25
+                luxury: (item.price_level || 2) * 25,
+                // New category-specific metrics
+                variety: metrics.variety || (item.types?.length || 3) * 15,
+                exclusivity: metrics.exclusivity || 50,
+                specialty: metrics.specialty || 50,
+                educational: metrics.educational_value || metrics.educational || 50,
+                significance: metrics.significance || metrics.historical_significance || 50,
+                accessibility: metrics.accessibility || 50,
+                reputation: metrics.reputation || 50
             };
 
             config.metrics.forEach(m => {
