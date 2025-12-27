@@ -120,7 +120,6 @@ async function renderRankingView() {
       <div class="section-header">
         <div class="section-header-top">
           <h2 class="section-title">Top Localities</h2>
-          <a href="#/customize" class="btn-customize-inline">✨ Customize Rankings</a>
         </div>
         <p class="section-subtitle">Ranked by Accessibility, Amenities, Safety, Environment & Economy</p>
         ${isCustom ? `
@@ -214,16 +213,6 @@ async function renderRankingView() {
       <!-- Show Less Button (appears after expanding) -->
       <div class="show-less-container hidden" id="show-less-container">
         <button class="btn-show-less" id="show-less-btn">Show Less</button>
-      </div>
-    </section>
-
-    <!-- Methodology CTA -->
-    <section class="cta-section">
-      <h2>How We Rank</h2>
-      <p>Our transparent, data-driven methodology uses 100% API-sourced metrics. No AI guessing, no subjective ratings.</p>
-      <div class="cta-buttons">
-        <a href="#/methodology" class="btn-primary">Learn Our Methodology</a>
-        <a href="#/customize" class="btn-secondary">Customize Rankings</a>
       </div>
     </section>
   `;

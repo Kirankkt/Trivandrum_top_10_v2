@@ -67,35 +67,6 @@ async function renderHomeView() {
       </div>
     </section>
 
-    <!-- Data Sources / Trust Section -->
-    <section class="trust-strip">
-      <div class="trust-strip-content">
-        <span class="trust-label">Powered by</span>
-        <div class="trust-logos">
-          <div class="trust-logo">
-            <span class="trust-logo-icon">&#127758;</span>
-            <span>Google Maps API</span>
-          </div>
-          <div class="trust-logo">
-            <span class="trust-logo-icon">&#128205;</span>
-            <span>Google Places</span>
-          </div>
-          <div class="trust-logo">
-            <span class="trust-logo-icon">&#128200;</span>
-            <span>Distance Matrix</span>
-          </div>
-          <div class="trust-logo">
-            <span class="trust-logo-icon">&#9968;</span>
-            <span>Elevation API</span>
-          </div>
-          <div class="trust-logo">
-            <span class="trust-logo-icon">&#127968;</span>
-            <span>Real Estate Data</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Explore Section -->
     <section class="explore-section explore-dark">
       <h2 class="section-title">Explore by Category</h2>

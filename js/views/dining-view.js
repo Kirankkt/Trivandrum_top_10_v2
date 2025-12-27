@@ -23,7 +23,7 @@ async function renderDiningView(type) {
             subtitle: "Luxury Stays & Premium Comfort",
             icon: "",
             filename: "data/hotels.json",
-            badgeColor: "#ffd93d"
+            badgeColor: "#f59e0b"
         }
     }[type];
 
