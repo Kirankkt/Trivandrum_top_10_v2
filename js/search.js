@@ -1,6 +1,22 @@
-// Search Functionality
-let searchData = null;
+// Search Functionality - All Categories
+let allSearchData = [];
 let searchDropdown = null;
+
+// Category configuration for search
+const searchCategories = [
+    { key: 'localities', file: null, label: 'Localities', icon: '🏘️', route: '/locality/' },
+    { key: 'restaurants', file: 'data/restaurants.json', label: 'Restaurants', icon: '🍽️', route: '/entity/restaurants/' },
+    { key: 'cafes', file: 'data/cafes.json', label: 'Cafes', icon: '☕', route: '/entity/cafes/' },
+    { key: 'hotels', file: 'data/hotels.json', label: 'Hotels', icon: '🏨', route: '/entity/hotels/' },
+    { key: 'malls', file: 'data/malls.json', label: 'Malls', icon: '🛒', route: '/entity/malls/' },
+    { key: 'boutiques', file: 'data/boutiques.json', label: 'Boutiques', icon: '👗', route: '/entity/boutiques/' },
+    { key: 'specialty_shops', file: 'data/specialty_shops.json', label: 'Specialty Shops', icon: '🎁', route: '/entity/specialty_shops/' },
+    { key: 'museums', file: 'data/museums.json', label: 'Museums', icon: '🏛️', route: '/entity/museums/' },
+    { key: 'religious_sites', file: 'data/religious_sites.json', label: 'Religious Sites', icon: '🛕', route: '/entity/religious_sites/' },
+    { key: 'healthcare', file: 'data/healthcare.json', label: 'Healthcare', icon: '🏥', route: '/entity/healthcare/' },
+    { key: 'education', file: 'data/education.json', label: 'Education', icon: '🎓', route: '/entity/education/' },
+    { key: 'banking', file: 'data/banking.json', label: 'Banking', icon: '🏦', route: '/entity/banking/' }
+];
 
 // Initialize search on page load
 document.addEventListener('DOMContentLoaded', initSearch);
@@ -9,11 +25,8 @@ async function initSearch() {
     const searchInput = document.getElementById('search-input');
     if (!searchInput) return;
 
-    // Load search data
-    const rankingsData = await loadRankings();
-    if (rankingsData) {
-        searchData = rankingsData.all_rankings || rankingsData.top_10 || [];
-    }
+    // Load all search data
+    await loadAllSearchData();
 
     // Create dropdown container
     createSearchDropdown();
@@ -37,6 +50,59 @@ async function initSearch() {
     searchInput.addEventListener('keydown', handleSearchKeydown);
 }
 
+async function loadAllSearchData() {
+    allSearchData = [];
+
+    // Load localities from rankings
+    try {
+        const rankingsData = await loadRankings();
+        if (rankingsData) {
+            const localities = rankingsData.all_rankings || rankingsData.top_10 || [];
+            localities.forEach(loc => {
+                allSearchData.push({
+                    name: loc.name,
+                    category: 'localities',
+                    categoryLabel: 'Localities',
+                    icon: '🏘️',
+                    route: `/locality/${loc.name}`,
+                    score: loc.overall_score,
+                    id: loc.name
+                });
+            });
+        }
+    } catch (e) {
+        console.warn('Could not load localities for search');
+    }
+
+    // Load all other categories
+    for (const cat of searchCategories) {
+        if (!cat.file) continue; // Skip localities, already loaded
+
+        try {
+            const response = await fetch(cat.file);
+            if (response.ok) {
+                const data = await response.json();
+                data.forEach(item => {
+                    allSearchData.push({
+                        name: item.name,
+                        category: cat.key,
+                        categoryLabel: cat.label,
+                        icon: cat.icon,
+                        route: `${cat.route}${encodeURIComponent(item.id || item.name)}`,
+                        score: item.score || item.rating,
+                        id: item.id || item.name,
+                        locality: item.locality
+                    });
+                });
+            }
+        } catch (e) {
+            console.warn(`Could not load ${cat.key} for search`);
+        }
+    }
+
+    console.log(`Search initialized with ${allSearchData.length} items across all categories`);
+}
+
 function createSearchDropdown() {
     const searchBar = document.querySelector('.search-bar');
     if (!searchBar) return;
@@ -55,21 +121,20 @@ function handleSearchInput(e) {
         return;
     }
 
-    const results = searchLocalities(query);
+    const results = searchAllCategories(query);
     showSearchResults(query, results);
 }
 
-function searchLocalities(query) {
-    if (!searchData) return [];
+function searchAllCategories(query) {
+    if (!allSearchData.length) return [];
 
     // Search by name
-    const matches = searchData.filter(locality => {
-        const name = locality.name.toLowerCase();
-        // Match if query is included anywhere or starts with query
+    const matches = allSearchData.filter(item => {
+        const name = item.name.toLowerCase();
         return name.includes(query) || name.startsWith(query);
     });
 
-    // Sort: exact matches first, then starts with, then contains
+    // Sort: exact matches first, then starts with, then contains, then by score
     matches.sort((a, b) => {
         const aName = a.name.toLowerCase();
         const bName = b.name.toLowerCase();
@@ -84,11 +149,17 @@ function searchLocalities(query) {
         if (aStarts && !bStarts) return -1;
         if (!aStarts && bStarts) return 1;
 
+        // Then by score (higher first)
+        const aScore = a.score || 0;
+        const bScore = b.score || 0;
+        if (aScore !== bScore) return bScore - aScore;
+
         // Then alphabetical
         return aName.localeCompare(bName);
     });
 
-    return matches;
+    // Limit to 15 results max
+    return matches.slice(0, 15);
 }
 
 function showSearchResults(query, results) {
@@ -97,32 +168,41 @@ function showSearchResults(query, results) {
     let html = '';
 
     if (results.length > 0) {
-        // Show matching localities
-        results.forEach((locality, idx) => {
-            const categoryIcon = locality.data?.category_icon || '🏘️';
-            const score = locality.overall_score ? locality.overall_score.toFixed(1) : 'N/A';
-
-            html += `
-                <div class="search-result-item" data-locality="${locality.name}" data-index="${idx}">
-                    <span class="result-icon">${categoryIcon}</span>
-                    <span class="result-name">${highlightMatch(locality.name, query)}</span>
-                    <span class="result-score">${score}</span>
-                </div>
-            `;
+        // Group results by category for better UX
+        const grouped = {};
+        results.forEach(item => {
+            if (!grouped[item.categoryLabel]) {
+                grouped[item.categoryLabel] = [];
+            }
+            grouped[item.categoryLabel].push(item);
         });
+
+        let globalIdx = 0;
+        for (const [category, items] of Object.entries(grouped)) {
+            html += `<div class="search-category-header">${category}</div>`;
+            items.forEach(item => {
+                const scoreDisplay = item.score ? (typeof item.score === 'number' ? item.score.toFixed(1) : item.score) : '';
+                const localityDisplay = item.locality ? `<span class="result-locality">${item.locality}</span>` : '';
+
+                html += `
+                    <div class="search-result-item" data-route="${item.route}" data-index="${globalIdx}">
+                        <span class="result-icon">${item.icon}</span>
+                        <div class="result-info">
+                            <span class="result-name">${highlightMatch(item.name, query)}</span>
+                            ${localityDisplay}
+                        </div>
+                        ${scoreDisplay ? `<span class="result-score">${scoreDisplay}</span>` : ''}
+                    </div>
+                `;
+                globalIdx++;
+            });
+        }
     } else {
-        // No results - Authoritative message
+        // No results
         html = `
             <div class="search-no-results">
-                <p><strong>"${escapeHtml(query)}"</strong> is not in the Top 20.</p>
-                <p class="search-hint">We exclusively track Trivandrum's 20 most premium localities.</p>
-            </div>
-            <div class="search-request">
-                <p>📍 <strong>Explore the list</strong></p>
-                <p class="request-note">See all ranked locations starting from #1.</p>
-                <button class="request-locality-btn btn-secondary" id="view-all-rankings-btn">
-                    View Full Rankings
-                </button>
+                <p>No results for "<strong>${escapeHtml(query)}</strong>"</p>
+                <p class="search-hint">Try searching for localities, restaurants, hotels, or other places.</p>
             </div>
         `;
     }
@@ -133,22 +213,12 @@ function showSearchResults(query, results) {
     // Add click handlers
     searchDropdown.querySelectorAll('.search-result-item').forEach(item => {
         item.addEventListener('click', () => {
-            const name = item.dataset.locality;
-            window.location.hash = `/locality/${name}`;
+            const route = item.dataset.route;
+            window.location.hash = route;
             hideSearchDropdown();
             document.getElementById('search-input').value = '';
         });
     });
-
-    // Add "View All" button handler
-    const viewAllBtn = document.getElementById('view-all-rankings-btn');
-    if (viewAllBtn) {
-        viewAllBtn.addEventListener('click', () => {
-            window.location.hash = '/'; // Go to home/rankings
-            hideSearchDropdown();
-            document.getElementById('search-input').value = '';
-        });
-    }
 }
 
 function highlightMatch(text, query) {
@@ -193,8 +263,8 @@ function handleSearchKeydown(e) {
         updateActiveItem(items, currentIndex);
     } else if (e.key === 'Enter' && currentActive) {
         e.preventDefault();
-        const name = currentActive.dataset.locality;
-        window.location.hash = `/locality/${name}`;
+        const route = currentActive.dataset.route;
+        window.location.hash = route;
         hideSearchDropdown();
         document.getElementById('search-input').value = '';
     } else if (e.key === 'Escape') {
@@ -209,5 +279,3 @@ function updateActiveItem(items, index) {
         items[index].scrollIntoView({ block: 'nearest' });
     }
 }
-
-

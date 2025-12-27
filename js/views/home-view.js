@@ -25,7 +25,7 @@ async function renderHomeView() {
           <a href="#/restaurants" class="purpose-card">
             <span class="purpose-text">Dine Out</span>
           </a>
-          <a href="#/experiences" class="purpose-card">
+          <a href="#/museums" class="purpose-card">
             <span class="purpose-text">Explore Culture</span>
           </a>
         </div>

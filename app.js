@@ -83,13 +83,6 @@ function route() {
         console.log('[Debug] Routing to Cafes');
         updateMetadata("Top Cafes", "Discover the best cafes in Trivandrum for coffee, workspace, and vibes.");
         renderDiningView('cafes');
-    } else if (hash === '/experiences') {
-        updateMetadata("Local Experiences");
-        app.innerHTML = `
-          <div class="coming-soon">
-            <h1>Experiences</h1>
-            <p>Top experiences in Trivandrum coming soon!</p>
-          </div>`;
     } else if (hash === '/malls') {
         console.log('[Debug] Routing to Malls');
         updateMetadata("Best Malls", "Top shopping malls and retail centers in Trivandrum.");

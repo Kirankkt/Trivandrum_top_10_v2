@@ -106,7 +106,7 @@ async function renderRankingView() {
         ${categories.map(cat => `
           <div class="category-card" data-category="${cat.name}">
             <div class="category-image">
-              <img src="${cat.image}" alt="${cat.name}" />
+              <img src="${cat.image}" alt="${cat.name}" loading="lazy" />
               <div class="category-overlay"></div>
             </div>
             <h3 class="category-name">${cat.name}</h3>
@@ -147,7 +147,7 @@ async function renderRankingView() {
     html += `
       <div class="locality-card-new" data-locality="${locality.name}">
         <div class="locality-image">
-          <img src="${image}" alt="${locality.name}" onerror="this.src='images/skyline.png'" />
+          <img src="${image}" alt="${locality.name}" loading="lazy" onerror="this.src='images/skyline.png'" />
           <div class="locality-overlay"></div>
           <div class="locality-rank">#${rank}</div>
           ${isTrending ? '<div class="badge-trending">Trending</div>' : ''}
@@ -188,7 +188,7 @@ async function renderRankingView() {
     html += `
       <div class="locality-card-new" data-locality="${locality.name}">
         <div class="locality-image">
-          <img src="${image}" alt="${locality.name}" onerror="this.src='images/skyline.png'" />
+          <img src="${image}" alt="${locality.name}" loading="lazy" onerror="this.src='images/skyline.png'" />
           <div class="locality-overlay"></div>
           <div class="locality-rank">#${rank}</div>
           ${isTrending ? '<div class="badge-trending">Trending</div>' : ''}
