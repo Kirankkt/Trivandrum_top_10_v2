@@ -1,44 +1,114 @@
-// Home View - Landing page for Trivandrum Top 10 App
+// Home View - Modern dark-themed landing page for Trivandrum Top 10 App
 
 async function renderHomeView() {
   const app = document.getElementById('app');
 
-  // Load data for featured items
+  // Load data for stats
   const rankingsData = await loadRankings();
-  const topLocalities = rankingsData?.all_rankings?.slice(0, 3) || [];
+  const totalLocalities = rankingsData?.all_rankings?.length || 20;
 
   const html = `
-    <!-- Hero Section -->
-    <section class="home-hero">
-      <div class="home-hero-image">
-        <img src="images/hero_main.png" alt="Trivandrum" />
-        <div class="home-hero-overlay"></div>
+    <!-- Hero Section - Dark Theme -->
+    <section class="hero-dark">
+      <div class="hero-dark-bg">
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
       </div>
-      <div class="home-hero-content">
-        <h1 class="home-hero-title">Trivandrum <span class="highlight">Top 10</span></h1>
-        <p class="home-hero-tagline">Data-driven rankings for Kerala's capital city — neighborhoods, dining, & lifestyle</p>
-        
-        <div class="purpose-cards">
-          <a href="#/localities" class="purpose-card">
-            <span class="purpose-text">Find a Home</span>
+
+      <!-- Floating Stats -->
+      <div class="floating-stat stat-1">
+        <span class="stat-dot"></span>
+        <span class="stat-label">Localities</span>
+        <span class="stat-value">${totalLocalities}</span>
+      </div>
+      <div class="floating-stat stat-2">
+        <span class="stat-dot"></span>
+        <span class="stat-label">Categories</span>
+        <span class="stat-value">12</span>
+      </div>
+      <div class="floating-stat stat-3">
+        <span class="stat-dot"></span>
+        <span class="stat-label">Places Ranked</span>
+        <span class="stat-value">200+</span>
+      </div>
+      <div class="floating-stat stat-4">
+        <span class="stat-dot"></span>
+        <span class="stat-label">Bias Score</span>
+        <span class="stat-value">0%</span>
+      </div>
+
+      <!-- Main Content -->
+      <div class="hero-dark-content">
+        <div class="hero-badge">
+          <span class="badge-icon">&#9679;</span>
+          <span>Kerala's First Data-Driven City Guide</span>
+          <span class="badge-arrow">&rarr;</span>
+        </div>
+
+        <h1 class="hero-dark-title">
+          The Definitive Guide to<br>
+          <span class="highlight">Trivandrum</span>
+        </h1>
+
+        <p class="hero-dark-tagline">
+          Objective, API-verified rankings for neighborhoods, dining, hotels, and lifestyle — zero bias, zero sponsored placements.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#/localities" class="cta-primary">
+            <span>Explore Rankings</span>
+            <span class="cta-arrow">&nearr;</span>
           </a>
-          <a href="#/restaurants" class="purpose-card">
-            <span class="purpose-text">Dine Out</span>
+          <a href="#/methodology" class="cta-secondary">
+            View Methodology
           </a>
-          <a href="#/museums" class="purpose-card">
-            <span class="purpose-text">Explore Culture</span>
-          </a>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <span class="scroll-icon">&darr;</span>
+        <span class="scroll-text">Scroll to explore</span>
+      </div>
+    </section>
+
+    <!-- Data Sources / Trust Section -->
+    <section class="trust-strip">
+      <div class="trust-strip-content">
+        <span class="trust-label">Powered by</span>
+        <div class="trust-logos">
+          <div class="trust-logo">
+            <span class="trust-logo-icon">&#127758;</span>
+            <span>Google Maps API</span>
+          </div>
+          <div class="trust-logo">
+            <span class="trust-logo-icon">&#128205;</span>
+            <span>Google Places</span>
+          </div>
+          <div class="trust-logo">
+            <span class="trust-logo-icon">&#128200;</span>
+            <span>Distance Matrix</span>
+          </div>
+          <div class="trust-logo">
+            <span class="trust-logo-icon">&#9968;</span>
+            <span>Elevation API</span>
+          </div>
+          <div class="trust-logo">
+            <span class="trust-logo-icon">&#127968;</span>
+            <span>Real Estate Data</span>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Explore Section -->
-    <section class="explore-section">
+    <section class="explore-section explore-dark">
       <h2 class="section-title">Explore by Category</h2>
+      <p class="section-subtitle">12 categories, hundreds of places, one objective scoring system</p>
 
       <!-- Premium Grid Layout -->
       <div class="explore-grid premium-grid">
-        
+
         <!-- Stay & Dine (Grouped Hospitality) -->
         <div class="explore-card hero-card">
           <div class="explore-card-bg" style="background-image: url('images/categories/stay_dine_premium.png')"></div>
@@ -120,49 +190,34 @@ async function renderHomeView() {
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about-section">
-      <div class="about-content">
-        <h2>Why trust our rankings?</h2>
-        <p class="about-lead">Our objective scoring system removes human bias and marketing noise to give you the truth about Thiruvananthapuram's neighborhoods and lifestyle.</p>
-        
-        <div class="about-features">
-          <div class="about-feature-card">
-            <div class="about-feature-icon">
-              <span class="icon-chart"></span>
-            </div>
-            <div class="about-feature-text">
-              <h3>Data-Driven</h3>
-              <p>Scores are calculated using live data from Google Maps, travel metrics, and verified property benchmarks.</p>
-            </div>
+    <!-- Why Trust Us Section -->
+    <section class="why-section">
+      <div class="why-content">
+        <h2>Why Trust Our Rankings?</h2>
+        <p class="why-lead">Every score is calculated from verifiable API data — no opinions, no paid placements, no editorial bias.</p>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">&#128202;</div>
+            <h3>API-Sourced</h3>
+            <p>All data comes directly from Google Maps APIs with explicit formulas.</p>
           </div>
-          
-          <div class="about-feature-card">
-            <div class="about-feature-icon">
-              <span class="icon-scale"></span>
-            </div>
-            <div class="about-feature-text">
-              <h3>Objective Weights</h3>
-              <p>Our algorithms use standardized weighting for safety, schools, and transit to ensure fair comparisons.</p>
-            </div>
+
+          <div class="why-card">
+            <div class="why-icon">&#9878;</div>
+            <h3>Fully Transparent</h3>
+            <p>Every weight and calculation is documented in our methodology.</p>
           </div>
-          
-          <div class="about-feature-card">
-            <div class="about-feature-icon">
-              <span class="icon-search"></span>
-            </div>
-            <div class="about-feature-text">
-              <h3>Real Research</h3>
-              <p>Ground-level insights and community trends are analyzed to ensure our digital rankings match reality.</p>
-            </div>
+
+          <div class="why-card">
+            <div class="why-icon">&#128736;</div>
+            <h3>Customizable</h3>
+            <p>Adjust weights to match your priorities and see rankings update live.</p>
           </div>
         </div>
-        
-        <div class="about-cta">
-          <a href="#/methodology" class="btn-learn-more">
-            <span>Explore Methodology</span>
-            <span class="ui-arrow-right"></span>
-          </a>
+
+        <div class="why-cta">
+          <a href="#/about" class="cta-secondary">Learn More About Us</a>
         </div>
       </div>
     </section>
