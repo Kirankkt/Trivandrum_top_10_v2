@@ -267,7 +267,7 @@ function renderReligiousSitesView() {
 function renderHealthcareView() {
     renderCategoryView('healthcare', {
         title: "Healthcare",
-        subtitle: "Hospitals, Clinics & Medical Centers",
+        subtitle: "Ranked by patient experience reviews, not clinical outcomes",
         icon: "",
         filename: "data/healthcare.json",
         badgeColor: "#10b981",
@@ -278,7 +278,7 @@ function renderHealthcareView() {
 function renderEducationView() {
     renderCategoryView('education', {
         title: "Education",
-        subtitle: "Schools, Colleges & Universities",
+        subtitle: "Ranked by student reviews, not academic performance",
         icon: "",
         filename: "data/education.json",
         badgeColor: "#6366f1",
