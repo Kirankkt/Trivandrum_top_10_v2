@@ -111,10 +111,6 @@ function route() {
         console.log('[Debug] Routing to Culture Category');
         updateMetadata("Culture & Heritage", "Discover the cultural soul of Thiruvananthapuram.");
         renderCultureCategoryView();
-    } else if (hash === '/services') {
-        console.log('[Debug] Routing to Services');
-        updateMetadata("City Services", "Essential utilities and government services in Trivandrum.");
-        renderServicesView();
     } else if (hash === '/healthcare') {
         console.log('[Debug] Routing to Healthcare');
         updateMetadata("Healthcare Guide", "Top hospitals, clinics, and medical facilities.");

@@ -286,39 +286,6 @@ function renderEducationView() {
     });
 }
 
-
-// Combined Services view
-function renderServicesView() {
-    const app = document.getElementById('app');
-
-    const html = `
-        <div class="dining-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/skyline.png') center/cover fixed;">
-            <div class="hero-content">
-                <h1 style="color: white; text-shadow: 2px 2px 8px rgba(0,0,0,1); font-size: 3.5rem;">Services</h1>
-                <p class="hero-subtitle" style="color: rgba(255,255,255,0.9); text-shadow: 1px 1px 4px rgba(0,0,0,0.9); font-size: 1.25rem; margin-top: 0.5rem;">Essential Services Across Trivandrum</p>
-            </div>
-        </div>
-
-        <div class="dining-container">
-            <div class="services-grid">
-                <a href="#/healthcare" class="service-category-card">
-                    <span class="service-icon"></span>
-                    <h3>Healthcare</h3>
-                    <p>Hospitals, Clinics & Medical Centers</p>
-                </a>
-                <a href="#/education" class="service-category-card">
-                    <span class="service-icon"></span>
-                    <h3>Education</h3>
-                    <p>Schools, Colleges & Universities</p>
-                </a>
-            </div>
-        </div>
-    `;
-
-    app.innerHTML = html;
-    window.scrollTo(0, 0);
-}
-
 // ========================================
 // SHOP CATEGORY LANDING PAGE
 // ========================================
