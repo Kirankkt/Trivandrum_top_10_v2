@@ -14,9 +14,10 @@ async function renderMethodologyView() {
                 <!-- Category Tabs -->
                 <div class="methodology-tabs">
                     <button class="methodology-tab active" data-tab="localities">Localities</button>
-                    <button class="methodology-tab" data-tab="restaurants">Restaurants</button>
-                    <button class="methodology-tab" data-tab="cafes">Cafes</button>
-                    <button class="methodology-tab" data-tab="hotels">Hotels</button>
+                    <button class="methodology-tab" data-tab="restaurants">Dining</button>
+                    <button class="methodology-tab" data-tab="shopping">Shopping</button>
+                    <button class="methodology-tab" data-tab="culture">Culture</button>
+                    <button class="methodology-tab" data-tab="services">Services</button>
                 </div>
 
                 <!-- LOCALITIES TAB -->
@@ -115,125 +116,38 @@ async function renderMethodologyView() {
                     </section>
                 </div>
 
-                <!-- RESTAURANTS TAB -->
+                <!-- DINING TAB (Restaurants, Cafes, Hotels) -->
                 <div class="methodology-tab-content" id="restaurants-tab">
                     <section class="methodology-section">
-                        <h2>Restaurant Rankings Overview</h2>
-                        <p>Our restaurant rankings combine <strong>Google Maps data</strong> with <strong>sentiment analysis</strong> 
-                        to surface the best dining experiences in Trivandrum.</p>
-                        
+                        <h2>Dining & Stay Rankings</h2>
+                        <p>Rankings for <strong>Restaurants, Cafes, and Hotels</strong> use 6 metrics each,
+                        with quality thresholds to ensure reliable data.</p>
+
                         <div class="highlight-box">
-                            <strong>Data Source:</strong> Google Places API for restaurant data, reviews, ratings, and photos.
+                            <strong>Quality Threshold:</strong> Minimum 50 reviews and 3.8 rating required for inclusion.
                         </div>
                     </section>
 
                     <section class="methodology-section">
-                        <h2>Scoring Categories (6 Metrics)</h2>
-                        <p>The Foodie Score (0-100) is calculated from 6 weighted metrics:</p>
-                        
+                        <h2>Scoring (6 Metrics)</h2>
+
                         <div class="categories-breakdown">
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
-                                    <h3>Sentiment Score <span class="weight-badge">~17%</span></h3>
-                                    <p>Analysis of review text for positive dining experiences</p>
-                                    <code>Score = Positive sentiment percentage from review analysis</code>
+                                    <h3>Sentiment <span class="weight-badge">~17%</span></h3>
+                                    <p>Positive review sentiment analysis</p>
                                 </div>
                             </div>
-                            
+
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Popularity <span class="weight-badge">~17%</span></h3>
-                                    <p>Number of reviews and visits indicating popularity</p>
-                                    <code>Score = min(reviews / 100, 100)</code>
-                                </div>
-                            </div>
-                            
-                            <div class="category-row">
-                                <div class="category-icon"></div>
-                                <div class="category-details">
-                                    <h3>Rating <span class="weight-badge">~17%</span></h3>
-                                    <p>Google Maps rating (1-5 stars)</p>
-                                    <code>Score = rating × 20</code>
-                                </div>
-                            </div>
-                            
-                            <div class="category-row">
-                                <div class="category-icon"></div>
-                                <div class="category-details">
-                                    <h3>Value <span class="weight-badge">~17%</span></h3>
-                                    <p>Price relative to quality (inverse of price level)</p>
-                                    <code>Score = (5 - price_level) × 25</code>
-                                </div>
-                            </div>
-                            
-                            <div class="category-row">
-                                <div class="category-icon"></div>
-                                <div class="category-details">
-                                    <h3>Convenience <span class="weight-badge">~16%</span></h3>
-                                    <p>Central location accessibility</p>
-                                    <code>Score = Proximity to city center</code>
+                                    <p>Review count (logarithmic scale)</p>
                                 </div>
                             </div>
 
-                            <div class="category-row">
-                                <div class="category-icon"></div>
-                                <div class="category-details">
-                                    <h3>Vibe <span class="weight-badge">~16%</span></h3>
-                                    <p>Ambiance and atmosphere extracted from reviews</p>
-                                    <code>Score = Number of vibe tags × 20</code>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="methodology-section">
-                        <h2>Vibe Tags</h2>
-                        <p>We extract vibe tags from reviews to help you find the right atmosphere:</p>
-                        <div class="vibe-tags-grid">
-                            <span class="vibe-example">Romantic</span>
-                            <span class="vibe-example">Family Friendly</span>
-                            <span class="vibe-example">Trendy</span>
-                            <span class="vibe-example">Authentic</span>
-                            <span class="vibe-example">Hidden Gem</span>
-                        </div>
-                    </section>
-                </div>
-
-                <!-- CAFES TAB -->
-                <div class="methodology-tab-content" id="cafes-tab">
-                    <section class="methodology-section">
-                        <h2>Cafe Rankings Overview</h2>
-                        <p>Our cafe rankings are optimized for <strong>coffee lovers and remote workers</strong>, 
-                        with special emphasis on work-friendly environments.</p>
-                        
-                        <div class="highlight-box">
-                            <strong>Data Source:</strong> Google Places API for cafe data, plus work-friendly indicators from reviews.
-                        </div>
-                    </section>
-
-                    <section class="methodology-section">
-                        <h2>Scoring Categories (6 Metrics)</h2>
-                        <p>The Cafe Score (0-100) includes a unique "Work Friendly" metric:</p>
-                        
-                        <div class="categories-breakdown">
-                            <div class="category-row">
-                                <div class="category-icon"></div>
-                                <div class="category-details">
-                                    <h3>Sentiment Score <span class="weight-badge">~17%</span></h3>
-                                    <p>Positive review sentiment for cafe experience</p>
-                                </div>
-                            </div>
-                            
-                            <div class="category-row">
-                                <div class="category-icon"></div>
-                                <div class="category-details">
-                                    <h3>Popularity <span class="weight-badge">~17%</span></h3>
-                                    <p>Review count and visit frequency</p>
-                                </div>
-                            </div>
-                            
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
@@ -241,100 +155,173 @@ async function renderMethodologyView() {
                                     <p>Google Maps rating (1-5 stars)</p>
                                 </div>
                             </div>
-                            
+
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Value <span class="weight-badge">~17%</span></h3>
-                                    <p>Coffee and snack prices relative to quality</p>
+                                    <p>Quality relative to price level</p>
                                 </div>
                             </div>
-                            
+
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Convenience <span class="weight-badge">~16%</span></h3>
-                                    <p>Location accessibility and parking</p>
+                                    <p>Location accessibility</p>
                                 </div>
                             </div>
 
-                            <div class="category-row highlight-row">
+                            <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
-                                    <h3>Work Friendly <span class="weight-badge">~16%</span></h3>
-                                    <p>WiFi availability, power outlets, quiet environment for work</p>
-                                    <code>Score = Work-friendly mentions in reviews</code>
+                                    <h3>Vibe/Special <span class="weight-badge">~16%</span></h3>
+                                    <p>Restaurants: Ambiance | Cafes: Work-friendly | Hotels: Luxury</p>
                                 </div>
                             </div>
                         </div>
                     </section>
                 </div>
 
-                <!-- HOTELS TAB -->
-                <div class="methodology-tab-content" id="hotels-tab">
+                <!-- SHOPPING TAB -->
+                <div class="methodology-tab-content" id="shopping-tab">
                     <section class="methodology-section">
-                        <h2>Hotel Rankings Overview</h2>
-                        <p>Our hotel rankings help travelers find the <strong>best stays in Trivandrum</strong>, 
-                        from budget-friendly to luxury options.</p>
-                        
+                        <h2>Shopping Rankings</h2>
+                        <p>Rankings for <strong>Malls, Boutiques, and Specialty Shops</strong> use 3 core metrics.</p>
+
                         <div class="highlight-box">
-                            <strong>Data Source:</strong> Google Places API for hotel data, amenities, and guest reviews.
+                            <strong>Quality Threshold:</strong> Minimum 50 reviews required for inclusion.
                         </div>
                     </section>
 
                     <section class="methodology-section">
-                        <h2>Scoring Categories (6 Metrics)</h2>
-                        <p>The Stay Score (0-100) emphasizes location and luxury:</p>
-                        
+                        <h2>Scoring (3 Metrics)</h2>
+
                         <div class="categories-breakdown">
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
-                                    <h3>Sentiment Score <span class="weight-badge">~17%</span></h3>
-                                    <p>Guest satisfaction from review analysis</p>
-                                </div>
-                            </div>
-                            
-                            <div class="category-row">
-                                <div class="category-icon"></div>
-                                <div class="category-details">
-                                    <h3>Popularity <span class="weight-badge">~17%</span></h3>
-                                    <p>Number of reviews and bookings</p>
-                                </div>
-                            </div>
-                            
-                            <div class="category-row">
-                                <div class="category-icon"></div>
-                                <div class="category-details">
-                                    <h3>Rating <span class="weight-badge">~17%</span></h3>
+                                    <h3>Rating <span class="weight-badge">~34%</span></h3>
                                     <p>Google Maps rating (1-5 stars)</p>
                                 </div>
                             </div>
-                            
+
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
-                                    <h3>Value <span class="weight-badge">~17%</span></h3>
-                                    <p>Price relative to amenities and service</p>
-                                </div>
-                            </div>
-                            
-                            <div class="category-row highlight-row">
-                                <div class="category-icon"></div>
-                                <div class="category-details">
-                                    <h3>Location <span class="weight-badge">~16%</span></h3>
-                                    <p>Proximity to tourist attractions, beaches, city center</p>
-                                    <code>Score = Distance to key attractions</code>
+                                    <h3>Popularity <span class="weight-badge">~33%</span></h3>
+                                    <p>Number of reviews indicating foot traffic</p>
                                 </div>
                             </div>
 
-                            <div class="category-row highlight-row">
+                            <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
-                                    <h3>Luxury <span class="weight-badge">~16%</span></h3>
-                                    <p>Premium amenities: pool, spa, restaurant, room service</p>
-                                    <code>Score = Amenity count + price level indicator</code>
+                                    <h3>Sentiment <span class="weight-badge">~33%</span></h3>
+                                    <p>Positive review sentiment</p>
                                 </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- CULTURE TAB -->
+                <div class="methodology-tab-content" id="culture-tab">
+                    <section class="methodology-section">
+                        <h2>Culture Rankings</h2>
+                        <p>Rankings for <strong>Museums and Religious Sites</strong> use 3 core metrics.</p>
+
+                        <div class="highlight-box">
+                            <strong>Quality Threshold:</strong> Minimum 50 reviews required for inclusion.
+                        </div>
+                    </section>
+
+                    <section class="methodology-section">
+                        <h2>Scoring (3 Metrics)</h2>
+
+                        <div class="categories-breakdown">
+                            <div class="category-row">
+                                <div class="category-icon"></div>
+                                <div class="category-details">
+                                    <h3>Rating <span class="weight-badge">~34%</span></h3>
+                                    <p>Google Maps rating (1-5 stars)</p>
+                                </div>
+                            </div>
+
+                            <div class="category-row">
+                                <div class="category-icon"></div>
+                                <div class="category-details">
+                                    <h3>Popularity <span class="weight-badge">~33%</span></h3>
+                                    <p>Visitor reviews and foot traffic</p>
+                                </div>
+                            </div>
+
+                            <div class="category-row">
+                                <div class="category-icon"></div>
+                                <div class="category-details">
+                                    <h3>Sentiment <span class="weight-badge">~33%</span></h3>
+                                    <p>Positive visitor experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- SERVICES TAB -->
+                <div class="methodology-tab-content" id="services-tab">
+                    <section class="methodology-section">
+                        <h2>Services Rankings</h2>
+                        <p>Rankings for <strong>Healthcare and Education</strong> use 3 core metrics.</p>
+
+                        <div class="highlight-box warning-box">
+                            <strong>Important Disclaimer:</strong> These rankings are based on Google reviews reflecting
+                            <em>patient/student experience</em>, not clinical outcomes or academic performance.
+                            A friendly receptionist can boost a clinic's ranking; board exam results don't affect school rankings.
+                        </div>
+                    </section>
+
+                    <section class="methodology-section">
+                        <h2>Scoring (3 Metrics)</h2>
+
+                        <div class="categories-breakdown">
+                            <div class="category-row">
+                                <div class="category-icon"></div>
+                                <div class="category-details">
+                                    <h3>Rating <span class="weight-badge">~34%</span></h3>
+                                    <p>Google Maps rating (1-5 stars)</p>
+                                </div>
+                            </div>
+
+                            <div class="category-row">
+                                <div class="category-icon"></div>
+                                <div class="category-details">
+                                    <h3>Popularity <span class="weight-badge">~33%</span></h3>
+                                    <p>Number of reviews</p>
+                                </div>
+                            </div>
+
+                            <div class="category-row">
+                                <div class="category-icon"></div>
+                                <div class="category-details">
+                                    <h3>Sentiment <span class="weight-badge">~33%</span></h3>
+                                    <p>Patient/student satisfaction from reviews</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="methodology-section">
+                        <h2>What These Rankings Measure</h2>
+                        <div class="sources-grid">
+                            <div class="source-card">
+                                <h3>Healthcare</h3>
+                                <p><strong>Measures:</strong> Staff friendliness, wait times, facility cleanliness, appointment ease</p>
+                                <p><strong>Does NOT measure:</strong> Medical expertise, treatment success rates, clinical outcomes</p>
+                            </div>
+                            <div class="source-card">
+                                <h3>Education</h3>
+                                <p><strong>Measures:</strong> Campus experience, facilities, student satisfaction</p>
+                                <p><strong>Does NOT measure:</strong> Board exam results, placement rates, academic rigor</p>
                             </div>
                         </div>
                     </section>

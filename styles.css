@@ -4058,6 +4058,11 @@ footer .small {
   color: var(--color-text);
 }
 
+.highlight-box.warning-box {
+  background: rgba(234, 179, 8, 0.15);
+  border-left-color: #eab308;
+}
+
 .sources-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
