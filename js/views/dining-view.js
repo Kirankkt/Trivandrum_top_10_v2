@@ -169,18 +169,7 @@ async function renderDiningView(type, filters = {}) {
         app.innerHTML = html;
         window.scrollTo(0, 0);
 
-        // Compare button clicks
-        document.querySelectorAll('.compare-add-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                CompareManager.add(btn.dataset.category, {
-                    id: btn.dataset.id,
-                    name: btn.dataset.name,
-                    score: parseFloat(btn.dataset.score) || 0
-                });
-            });
-        });
+        // Note: Compare button clicks are handled globally by CompareManager
 
         // Event Listeners for Show More/Less
         const showMoreBtn = document.getElementById('show-more-btn');
@@ -290,18 +279,7 @@ async function renderDiningView(type, filters = {}) {
                 createDiningCard(place, index + 1, config, type)
             ).join('');
 
-            // Re-attach compare button listeners for main grid
-            mainGrid.querySelectorAll('.compare-add-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    CompareManager.add(btn.dataset.category, {
-                        id: btn.dataset.id,
-                        name: btn.dataset.name,
-                        score: parseFloat(btn.dataset.score) || 0
-                    });
-                });
-            });
+            // Note: Compare button clicks are handled globally by CompareManager
 
             // Update hidden spots
             if (hiddenSpots) {
@@ -309,19 +287,6 @@ async function renderDiningView(type, filters = {}) {
                     hiddenSpots.innerHTML = remainingFiltered.map((place, index) =>
                         createDiningCard(place, index + 11, config, type)
                     ).join('');
-
-                    // Re-attach compare button listeners for hidden spots
-                    hiddenSpots.querySelectorAll('.compare-add-btn').forEach(btn => {
-                        btn.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            CompareManager.add(btn.dataset.category, {
-                                id: btn.dataset.id,
-                                name: btn.dataset.name,
-                                score: parseFloat(btn.dataset.score) || 0
-                            });
-                        });
-                    });
 
                     hiddenSpots.style.display = 'none';
                     if (showMoreContainer) {

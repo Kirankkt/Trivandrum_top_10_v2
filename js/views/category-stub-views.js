@@ -87,18 +87,7 @@ async function renderCategoryView(type, config) {
         app.innerHTML = html;
         window.scrollTo(0, 0);
 
-        // Compare button clicks
-        document.querySelectorAll('.compare-add-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                CompareManager.add(btn.dataset.category, {
-                    id: btn.dataset.id,
-                    name: btn.dataset.name,
-                    score: parseFloat(btn.dataset.score) || 0
-                });
-            });
-        });
+        // Note: Compare button clicks are handled globally by CompareManager
 
         // Event Listeners for Show More/Less
         setupShowMoreLess();

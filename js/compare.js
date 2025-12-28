@@ -183,6 +183,30 @@ const CompareManager = {
     // Initialize - call on page load
     init() {
         this.updateUI();
+        this.setupGlobalClickHandler();
+    },
+
+    // Global click handler using event delegation
+    // This ensures compare buttons work even after DOM re-renders
+    setupGlobalClickHandler() {
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest('.compare-add-btn');
+            if (btn) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const category = btn.dataset.category;
+                const id = btn.dataset.id || btn.dataset.name;
+                const name = btn.dataset.name;
+                const score = parseFloat(btn.dataset.score) || 0;
+
+                this.add(category, {
+                    id: id,
+                    name: name,
+                    score: score
+                });
+            }
+        });
     }
 };
 

@@ -225,22 +225,7 @@ async function renderRankingView() {
   app.innerHTML = html;
 
   // Event Listeners
-
-  // Compare button clicks (must be before card clicks to prevent bubbling)
-  document.querySelectorAll('.compare-add-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation(); // Prevent card click
-      const category = btn.dataset.category;
-      const name = btn.dataset.name;
-      const score = parseFloat(btn.dataset.score) || 0;
-
-      CompareManager.add(category, {
-        id: name,
-        name: name,
-        score: score
-      });
-    });
-  });
+  // Note: Compare button clicks are handled globally by CompareManager
 
   // Locality card clicks
   document.querySelectorAll('.locality-card-new').forEach(card => {
