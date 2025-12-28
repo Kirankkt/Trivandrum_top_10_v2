@@ -158,18 +158,6 @@ async function renderHomeView() {
             <p>Browse all 20 ranked residential areas.</p>
           </div>
         </a>
-
-        <!-- Locality Finder Quiz -->
-        <a href="#/locality-finder" class="explore-card explore-card-quiz">
-          <div class="explore-card-bg explore-card-bg-gradient"></div>
-          <div class="explore-card-overlay"></div>
-          <div class="explore-card-content">
-            <span class="explore-card-label">ML-Powered</span>
-            <h3>Find Your Locality</h3>
-            <p>Take a 30-second quiz to discover your ideal neighborhood.</p>
-            <span class="quiz-cta-pill">Start Quiz</span>
-          </div>
-        </a>
       </div>
     </section>
 
