@@ -187,13 +187,13 @@ const CompareManager = {
     },
 
     // Global click handler using event delegation
-    // This ensures compare buttons work even after DOM re-renders
+    // Uses capture phase to intercept clicks before they reach the <a> tag
     setupGlobalClickHandler() {
         document.addEventListener('click', (e) => {
             const btn = e.target.closest('.compare-add-btn');
             if (btn) {
                 e.preventDefault();
-                e.stopPropagation();
+                e.stopImmediatePropagation();
 
                 const category = btn.dataset.category;
                 const id = btn.dataset.id || btn.dataset.name;
@@ -205,8 +205,10 @@ const CompareManager = {
                     name: name,
                     score: score
                 });
+
+                return false;
             }
-        });
+        }, true); // Use capture phase
     }
 };
 
