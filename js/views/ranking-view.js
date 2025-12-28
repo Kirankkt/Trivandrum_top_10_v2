@@ -119,6 +119,17 @@ async function renderRankingView() {
       </div>
     </section>
 
+    <!-- Quiz Banner -->
+    <div class="quiz-banner">
+      <div class="quiz-banner-content">
+        <div class="quiz-banner-text">
+          <span class="quiz-banner-label">Not sure where to start?</span>
+          <span class="quiz-banner-title">Take our 30-second quiz to find your ideal locality</span>
+        </div>
+        <a href="#/locality-finder" class="quiz-banner-btn">Start Quiz</a>
+      </div>
+    </div>
+
     <!-- Localities Grid Section -->
     <section class="localities-section" id="localities-section">
       <div class="section-header">

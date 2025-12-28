@@ -15,6 +15,10 @@ function route() {
         console.log('[Debug] Routing to Localities');
         updateMetadata("Best Localities Ranked", "Explore and compare Thiruvananthapuram's top residential neighborhoods based on quality of life and value.");
         renderRankingView();
+    } else if (hash === '/locality-finder') {
+        console.log('[Debug] Routing to Locality Finder Quiz');
+        updateMetadata("Find Your Ideal Locality", "Take our ML-powered quiz to find the best neighborhood for your lifestyle.");
+        renderLocalityFinderView();
     } else if (hash === '/customize') {
         console.log('[Debug] Routing to Customize Localities');
         updateMetadata("Customize Ranking Weights");
