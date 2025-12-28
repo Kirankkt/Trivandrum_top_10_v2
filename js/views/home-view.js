@@ -50,9 +50,9 @@ async function renderHomeView() {
         </p>
 
         <div class="hero-ctas">
-          <a href="#/localities" class="cta-primary">
+          <a href="#explore-categories" class="cta-primary" id="explore-rankings-btn">
             <span>Explore Rankings</span>
-            <span class="cta-arrow">&nearr;</span>
+            <span class="cta-arrow">&darr;</span>
           </a>
           <a href="#/methodology" class="cta-secondary">
             View Methodology
@@ -68,9 +68,9 @@ async function renderHomeView() {
     </section>
 
     <!-- Explore Section -->
-    <section class="explore-section explore-dark">
+    <section class="explore-section explore-dark" id="explore-categories">
       <h2 class="section-title">Explore by Category</h2>
-      <p class="section-subtitle">12 categories, hundreds of places, one objective scoring system</p>
+      <p class="section-subtitle">11 categories, hundreds of places, one objective scoring system</p>
 
       <!-- Premium Grid Layout -->
       <div class="explore-grid premium-grid">
@@ -196,4 +196,16 @@ async function renderHomeView() {
   `;
 
   app.innerHTML = html;
+
+  // Smooth scroll for Explore Rankings button
+  const exploreBtn = document.getElementById('explore-rankings-btn');
+  if (exploreBtn) {
+    exploreBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.getElementById('explore-categories');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
 }
