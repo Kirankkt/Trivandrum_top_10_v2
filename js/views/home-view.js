@@ -132,14 +132,14 @@ async function renderHomeView() {
           </div>
         </a>
 
-        <!-- Education & More -->
-        <a href="#/services" class="explore-card">
+        <!-- Education -->
+        <a href="#/education" class="explore-card">
           <div class="explore-card-bg" style="background-image: url('${window.ImageOptimizer?.getOptimizedUrl('images/categories/education_brick.png') || 'images/categories/education_brick.png'}')"></div>
           <div class="explore-card-overlay"></div>
           <div class="explore-card-content">
-            <span class="explore-card-label">Services</span>
-            <h3>Education & More</h3>
-            <p>Healthcare, education, and essential city services.</p>
+            <span class="explore-card-label">Education</span>
+            <h3>Education</h3>
+            <p>Schools, colleges, and universities.</p>
           </div>
         </a>
 
