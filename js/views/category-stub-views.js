@@ -87,6 +87,19 @@ async function renderCategoryView(type, config) {
         app.innerHTML = html;
         window.scrollTo(0, 0);
 
+        // Compare button clicks
+        document.querySelectorAll('.compare-add-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                CompareManager.add(btn.dataset.category, {
+                    id: btn.dataset.id,
+                    name: btn.dataset.name,
+                    score: parseFloat(btn.dataset.score) || 0
+                });
+            });
+        });
+
         // Event Listeners for Show More/Less
         setupShowMoreLess();
 
@@ -167,6 +180,7 @@ function createCategoryItemCard(item, rank, config, type) {
                     <div class="card-overlay">
                         ${item.price_level ? `<span class="card-price">${'$'.repeat(item.price_level)}</span>` : ''}
                     </div>
+                    <button class="compare-add-btn" data-category="${type}" data-id="${item.id}" data-name="${item.name}" data-score="${item.score || 0}" title="Add to compare">+</button>
                 </div>
 
                 <div class="card-content">

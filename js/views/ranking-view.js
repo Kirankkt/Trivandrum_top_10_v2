@@ -153,6 +153,7 @@ async function renderRankingView() {
           <div class="locality-overlay"></div>
           <div class="locality-rank">#${rank}</div>
           ${isTrending ? '<div class="badge-trending">Trending</div>' : ''}
+          <button class="compare-add-btn" data-category="localities" data-name="${locality.name}" data-score="${locality.overall_score?.toFixed(1) || 0}" title="Add to compare">+</button>
         </div>
         <div class="locality-info-new">
           <h3 class="locality-name-new">${locality.name}</h3>
@@ -171,7 +172,7 @@ async function renderRankingView() {
 
   html += `
       </div>
-      
+
       <!-- Show More Button -->
       <div class="show-more-container">
         <button class="btn-show-more" id="show-more-btn">View All 20 Localities</button>
@@ -194,6 +195,7 @@ async function renderRankingView() {
           <div class="locality-overlay"></div>
           <div class="locality-rank">#${rank}</div>
           ${isTrending ? '<div class="badge-trending">Trending</div>' : ''}
+          <button class="compare-add-btn" data-category="localities" data-name="${locality.name}" data-score="${locality.overall_score?.toFixed(1) || 0}" title="Add to compare">+</button>
         </div>
         <div class="locality-info-new">
           <h3 class="locality-name-new">${locality.name}</h3>
@@ -223,6 +225,22 @@ async function renderRankingView() {
   app.innerHTML = html;
 
   // Event Listeners
+
+  // Compare button clicks (must be before card clicks to prevent bubbling)
+  document.querySelectorAll('.compare-add-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent card click
+      const category = btn.dataset.category;
+      const name = btn.dataset.name;
+      const score = parseFloat(btn.dataset.score) || 0;
+
+      CompareManager.add(category, {
+        id: name,
+        name: name,
+        score: score
+      });
+    });
+  });
 
   // Locality card clicks
   document.querySelectorAll('.locality-card-new').forEach(card => {

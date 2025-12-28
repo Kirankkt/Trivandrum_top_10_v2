@@ -67,6 +67,18 @@ function route() {
         console.log('[Debug] Routing to About');
         updateMetadata("About Trivandrum Top 10", "Learn about our mission to provide objective, data-driven rankings for Kerala's capital city.");
         renderAboutView();
+    } else if (hash.startsWith('/compare/')) {
+        const category = hash.replace('/compare/', '');
+        console.log('[Debug] Routing to Compare:', category);
+        updateMetadata("Compare " + category.charAt(0).toUpperCase() + category.slice(1), "Side-by-side comparison");
+        renderCompareView(category);
+    } else if (hash === '/compare') {
+        const state = CompareManager.getState();
+        if (state.category) {
+            window.location.hash = '/compare/' + state.category;
+        } else {
+            document.getElementById('app').innerHTML = '<div class="compare-empty"><h2>Nothing to Compare</h2><p>Add items to compare from any category page.</p><a href="#/" class="btn-primary">Browse Categories</a></div>';
+        }
     } else if (hash === '/map' || hash.startsWith('/map?')) {
         console.log('[Debug] Routing to Map');
         updateMetadata("Interactive Map", "Explore Thiruvananthapuram's top localities and attractions on our interactive map.");

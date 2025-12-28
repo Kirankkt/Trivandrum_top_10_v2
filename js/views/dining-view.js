@@ -169,6 +169,19 @@ async function renderDiningView(type, filters = {}) {
         app.innerHTML = html;
         window.scrollTo(0, 0);
 
+        // Compare button clicks
+        document.querySelectorAll('.compare-add-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                CompareManager.add(btn.dataset.category, {
+                    id: btn.dataset.id,
+                    name: btn.dataset.name,
+                    score: parseFloat(btn.dataset.score) || 0
+                });
+            });
+        });
+
         // Event Listeners for Show More/Less
         const showMoreBtn = document.getElementById('show-more-btn');
         const showLessBtn = document.getElementById('show-less-btn');
@@ -277,12 +290,39 @@ async function renderDiningView(type, filters = {}) {
                 createDiningCard(place, index + 1, config, type)
             ).join('');
 
+            // Re-attach compare button listeners for main grid
+            mainGrid.querySelectorAll('.compare-add-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    CompareManager.add(btn.dataset.category, {
+                        id: btn.dataset.id,
+                        name: btn.dataset.name,
+                        score: parseFloat(btn.dataset.score) || 0
+                    });
+                });
+            });
+
             // Update hidden spots
             if (hiddenSpots) {
                 if (remainingFiltered.length > 0) {
                     hiddenSpots.innerHTML = remainingFiltered.map((place, index) =>
                         createDiningCard(place, index + 11, config, type)
                     ).join('');
+
+                    // Re-attach compare button listeners for hidden spots
+                    hiddenSpots.querySelectorAll('.compare-add-btn').forEach(btn => {
+                        btn.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            CompareManager.add(btn.dataset.category, {
+                                id: btn.dataset.id,
+                                name: btn.dataset.name,
+                                score: parseFloat(btn.dataset.score) || 0
+                            });
+                        });
+                    });
+
                     hiddenSpots.style.display = 'none';
                     if (showMoreContainer) {
                         showMoreContainer.style.display = 'flex';
@@ -378,6 +418,7 @@ function createDiningCard(place, rank, config, type) {
                     <div class="card-overlay">
                         <span class="card-price">${price}</span>
                     </div>
+                    <button class="compare-add-btn" data-category="${type}" data-id="${place.id}" data-name="${place.name}" data-score="${place.score || 0}" title="Add to compare">+</button>
                 </div>
 
                 <div class="card-content">
