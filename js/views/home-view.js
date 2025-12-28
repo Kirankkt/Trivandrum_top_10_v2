@@ -18,18 +18,23 @@ async function renderHomeView() {
       <!-- Floating Stats -->
       <div class="floating-stat stat-1">
         <span class="stat-dot"></span>
-        <span class="stat-label">Neighborhoods</span>
-        <span class="stat-value">${totalLocalities}</span>
+        <span class="stat-label">Categories</span>
+        <span class="stat-value">11</span>
       </div>
       <div class="floating-stat stat-2">
         <span class="stat-dot"></span>
-        <span class="stat-label">Categories</span>
-        <span class="stat-value">12</span>
+        <span class="stat-label">Places Ranked</span>
+        <span class="stat-value">200+</span>
       </div>
       <div class="floating-stat stat-3">
         <span class="stat-dot"></span>
-        <span class="stat-label">Ranked Places</span>
-        <span class="stat-value">200+</span>
+        <span class="stat-label">Min Reviews</span>
+        <span class="stat-value">50</span>
+      </div>
+      <div class="floating-stat stat-4">
+        <span class="stat-dot"></span>
+        <span class="stat-label">Localities</span>
+        <span class="stat-value">${totalLocalities}</span>
       </div>
 
       <!-- Main Content -->

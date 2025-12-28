@@ -4353,6 +4353,13 @@ footer .small {
   75% { transform: translate(15px, 5px) rotate(0.5deg); }
 }
 
+@keyframes float-4 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-12px, 8px) rotate(-1deg); }
+  50% { transform: translate(10px, -10px) rotate(1deg); }
+  75% { transform: translate(-5px, 15px) rotate(-0.5deg); }
+}
+
 .stat-1 {
   top: 18%;
   left: 8%;
@@ -4371,6 +4378,13 @@ footer .small {
   left: 10%;
   animation: float-3 9s ease-in-out infinite;
   animation-delay: -4s;
+}
+
+.stat-4 {
+  bottom: 22%;
+  right: 8%;
+  animation: float-4 11s ease-in-out infinite;
+  animation-delay: -6s;
 }
 
 /* Hero Content */
