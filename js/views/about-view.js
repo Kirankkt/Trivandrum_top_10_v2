@@ -50,7 +50,7 @@ function renderAboutView() {
                         </div>
                         <div class="source-card">
                             <h3>Services</h3>
-                            <p>Healthcare, education, and banking institutions ranked by accessibility and quality.</p>
+                            <p>Healthcare and education institutions ranked by accessibility and quality.</p>
                         </div>
                     </div>
                 </section>

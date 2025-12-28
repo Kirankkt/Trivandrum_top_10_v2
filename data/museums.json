@@ -343,39 +343,6 @@
     }
   },
   {
-    "id": "ChIJn9woXo67BTsRgWzC7-VfZMM",
-    "name": "Adeodatus Memorial Carmelite Museum",
-    "score": 67.6,
-    "rating": 5,
-    "reviews": 6,
-    "price_level": null,
-    "address": "Cotton Hill, Vazhuthacaud, Thiruvananthapuram, Kerala 695014, India",
-    "image": "images/places/AZLasHpKpNroxJcc.jpg",
-    "category": "museums",
-    "vibes": [
-      "Historical",
-      "Art"
-    ],
-    "website": null,
-    "phone": "091888 52891",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJn9woXo67BTsRgWzC7-VfZMM",
-    "metrics": {
-      "sentiment": 100,
-      "popularity": 6,
-      "convenience": 5
-    },
-    "locality": "Vazhuthacaud",
-    "types": [
-      "museum",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5010199,
-      "lng": 76.9629676
-    }
-  },
-  {
     "id": "ChIJp7lRblfDBTsR_mG3K7ZHoe8",
     "name": "Kilimanoor Palace",
     "score": 67.3,
@@ -407,68 +374,6 @@
     "location": {
       "lat": 8.7628314,
       "lng": 76.86575409999999
-    }
-  },
-  {
-    "id": "ChIJ91nt2J27BTsRcYxYdU69ISs",
-    "name": "Varaha Temple Thiruvananthapuram",
-    "score": 66.2,
-    "rating": 4.8,
-    "reviews": 44,
-    "price_level": null,
-    "address": "FWGR+XW9, Sreevaraham, Muttathara, Thiruvananthapuram, Kerala 695009, India",
-    "image": "images/places/AZLasHooGWd0nAb7.jpg",
-    "category": "museums",
-    "vibes": [],
-    "website": null,
-    "phone": null,
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJ91nt2J27BTsRcYxYdU69ISs",
-    "metrics": {
-      "sentiment": 96,
-      "popularity": 44,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "museum",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.4774051,
-      "lng": 76.9423691
-    }
-  },
-  {
-    "id": "ChIJywi_Zku9BTsRLqIU0bVFgqI",
-    "name": "Indian Airforce Helicopter Z3045",
-    "score": 66,
-    "rating": 4.8,
-    "reviews": 37,
-    "price_level": null,
-    "address": "Palayam Airport Rd, Shangumukham, Vallakkadavu, Thiruvananthapuram, Kerala 695007, India",
-    "image": "images/places/AZLasHppg3aGICt_.jpg",
-    "category": "museums",
-    "vibes": [
-      "Art"
-    ],
-    "website": null,
-    "phone": null,
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJywi_Zku9BTsRLqIU0bVFgqI",
-    "metrics": {
-      "sentiment": 96,
-      "popularity": 37,
-      "convenience": 5
-    },
-    "locality": "Palayam",
-    "types": [
-      "museum",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.4799211,
-      "lng": 76.91248929999999
     }
   },
   {
@@ -640,41 +545,6 @@
     }
   },
   {
-    "id": "ChIJT4LdaQq7BTsRk1TRXOxn7B4",
-    "name": "Sri Swathi Thirunal Museum",
-    "score": 62.4,
-    "rating": 4.5,
-    "reviews": 46,
-    "price_level": null,
-    "address": "FWJW+C3R, Fort, East Fort, Pazhavangadi, Thiruvananthapuram, Kerala 695023, India",
-    "image": "images/places/AZLasHrr5iuBuGI8.jpg",
-    "category": "museums",
-    "vibes": [
-      "Historical",
-      "Art",
-      "Cultural"
-    ],
-    "website": null,
-    "phone": "1800 425 4747",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJT4LdaQq7BTsRk1TRXOxn7B4",
-    "metrics": {
-      "sentiment": 88,
-      "popularity": 46,
-      "convenience": 5
-    },
-    "locality": "East Fort",
-    "types": [
-      "museum",
-      "tourist_attraction",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.481115299999999,
-      "lng": 76.94512950000001
-    }
-  },
-  {
     "id": "ChIJy_Q0eqC7BTsRvUDBNr3kSmY",
     "name": "Puthen Malika Palace Museum",
     "score": 61.6,
@@ -706,40 +576,6 @@
     "location": {
       "lat": 8.4818689,
       "lng": 76.94531909999999
-    }
-  },
-  {
-    "id": "ChIJ-Wt4Jzi9BTsRH6tkspeAGC0",
-    "name": "Shanghumugham Art Museum",
-    "score": 59.6,
-    "rating": 4.3,
-    "reviews": 29,
-    "price_level": null,
-    "address": "695007, Palayam Airport Rd, Near Kerala Women Development Corporation, Vallakkadavu, Thiruvananthapuram, Kerala 695008, India",
-    "image": "images/places/AZLasHodvOktNcTq.jpg",
-    "category": "museums",
-    "vibes": [
-      "Historical",
-      "Art",
-      "Cultural"
-    ],
-    "website": null,
-    "phone": null,
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJ-Wt4Jzi9BTsRH6tkspeAGC0",
-    "metrics": {
-      "sentiment": 83,
-      "popularity": 29,
-      "convenience": 5
-    },
-    "locality": "Palayam",
-    "types": [
-      "museum",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.4786282,
-      "lng": 76.9128343
     }
   }
 ]

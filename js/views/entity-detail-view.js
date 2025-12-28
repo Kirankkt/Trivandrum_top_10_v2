@@ -118,17 +118,6 @@ const ENTITY_CATEGORIES = {
             { key: 'reviews', label: 'Reviews', format: 'number' }
         ],
         rankContext: 'educational institution'
-    },
-    banking: {
-        title: 'Bank',
-        icon: '',
-        color: '#64748b', // Slate gray
-        dataFile: 'data/banking.json',
-        metrics: [
-            { key: 'rating', label: 'Rating', format: 'rating' },
-            { key: 'reviews', label: 'Reviews', format: 'number' }
-        ],
-        rankContext: 'bank'
     }
 };
 
@@ -414,4 +403,3 @@ function renderMuseumDetail(id) { renderEntityDetailView('museums', id); }
 function renderReligiousSiteDetail(id) { renderEntityDetailView('religious_sites', id); }
 function renderHealthcareDetail(id) { renderEntityDetailView('healthcare', id); }
 function renderEducationDetail(id) { renderEntityDetailView('education', id); }
-function renderBankingDetail(id) { renderEntityDetailView('banking', id); }

@@ -873,39 +873,6 @@
     }
   },
   {
-    "id": "ChIJVyc2F9G7BTsRnrpzVrPBh8Y",
-    "name": "Instyle ladies fashion store",
-    "score": 70.8,
-    "rating": 5,
-    "reviews": 33,
-    "price_level": null,
-    "address": "Instyle ladies fashion store,opp Bharath Bhavan ,thycaud, p.o, Vazhuthacaud, Thiruvananthapuram, Kerala 695014, India",
-    "image": "images/places/AZLasHrXMX3c4k58.jpg",
-    "category": "boutiques",
-    "vibes": [
-      "Bridal"
-    ],
-    "website": null,
-    "phone": "094476 90668",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJVyc2F9G7BTsRnrpzVrPBh8Y",
-    "metrics": {
-      "sentiment": 100,
-      "popularity": 33,
-      "convenience": 5
-    },
-    "locality": "Vazhuthacaud",
-    "types": [
-      "clothing_store",
-      "store",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.4956192,
-      "lng": 76.9583905
-    }
-  },
-  {
     "id": "ChIJp2Yic5K7BTsRpGHc3OWUW1A",
     "name": "MIYA DESIGNS",
     "score": 70.6,
@@ -1034,39 +1001,6 @@
     "location": {
       "lat": 8.4926649,
       "lng": 76.9491451
-    }
-  },
-  {
-    "id": "ChIJjYhC_Lq7BTsRwpZyazLOf-g",
-    "name": "KAIZEN DESIGNER BOUTIQUE",
-    "score": 70.3,
-    "rating": 5,
-    "reviews": 12,
-    "price_level": null,
-    "address": "Upper Meridian Rd, Kuravankonam, Thiruvananthapuram, Kerala 695003, India",
-    "image": "images/places/AZLasHqRQEsaikkA.jpg",
-    "category": "boutiques",
-    "vibes": [
-      "Designer"
-    ],
-    "website": null,
-    "phone": null,
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJjYhC_Lq7BTsRwpZyazLOf-g",
-    "metrics": {
-      "sentiment": 100,
-      "popularity": 12,
-      "convenience": 5
-    },
-    "locality": "Kuravankonam",
-    "types": [
-      "clothing_store",
-      "store",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5251776,
-      "lng": 76.9488211
     }
   },
   {
@@ -1204,39 +1138,6 @@
     }
   },
   {
-    "id": "ChIJMaj3XPO7BTsRD5l1-c2_EFg",
-    "name": "Unique Apparel Designer Boutique",
-    "score": 68.2,
-    "rating": 4.8,
-    "reviews": 31,
-    "price_level": null,
-    "address": "TC No 25, 3302 (2, near RBI Quarters Junction, Nanthancode, Kowdiar, Thiruvananthapuram, Kerala 695003, India",
-    "image": "images/places/AZLasHrUz6j8Vwsc.jpg",
-    "category": "boutiques",
-    "vibes": [
-      "Designer"
-    ],
-    "website": "https://www.instagram.com/uniquee.apparel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-    "phone": "080898 58573",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJMaj3XPO7BTsRD5l1-c2_EFg",
-    "metrics": {
-      "sentiment": 96,
-      "popularity": 31,
-      "convenience": 5
-    },
-    "locality": "Kowdiar",
-    "types": [
-      "clothing_store",
-      "store",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5151795,
-      "lng": 76.95374
-    }
-  },
-  {
     "id": "ChIJ6yH-8c6_BTsRxFD0rbokii8",
     "name": "Asthra Fashion Hub",
     "score": 66.9,
@@ -1369,41 +1270,6 @@
     }
   },
   {
-    "id": "ChIJxw9_Noi7BTsR3X-t3wnuh9E",
-    "name": "Mila Designer Hub",
-    "score": 60.9,
-    "rating": 4.3,
-    "reviews": 34,
-    "price_level": null,
-    "address": "nalumukku, Tc 15/3002, Sahiba Villa, Kannammoola - Nalumukku Rd, Pattoor, Thiruvananthapuram, Kerala 695024, India",
-    "image": "images/places/AZLasHopmE3iqD6Y.jpg",
-    "category": "boutiques",
-    "vibes": [
-      "Designer",
-      "Traditional",
-      "Bridal"
-    ],
-    "website": null,
-    "phone": "096332 56693",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJxw9_Noi7BTsR3X-t3wnuh9E",
-    "metrics": {
-      "sentiment": 83,
-      "popularity": 34,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "clothing_store",
-      "store",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.4996891,
-      "lng": 76.93194489999999
-    }
-  },
-  {
     "id": "ChIJQ3Zc8My7BTsRXVjMIClMsAA",
     "name": "Utsa by Westside - Kuravankonam Thiruvananthapuram",
     "score": 60.9,
@@ -1466,41 +1332,6 @@
     "location": {
       "lat": 8.5642275,
       "lng": 76.8760113
-    }
-  },
-  {
-    "id": "ChIJZ5tZvDi7BTsR6shMUl-UeD0",
-    "name": "Emirah Fashion Store",
-    "score": 58.9,
-    "rating": 4.2,
-    "reviews": 20,
-    "price_level": null,
-    "address": "Emirah Fashion Store, Apartments, opp. Cordial Bharathi, Nanthancodu, Thiruvananthapuram, Kerala 695003, India",
-    "image": "images/places/AZLasHrU9GRb2AdZ.jpg",
-    "category": "boutiques",
-    "vibes": [
-      "Designer",
-      "Traditional",
-      "Contemporary"
-    ],
-    "website": null,
-    "phone": null,
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJZ5tZvDi7BTsR6shMUl-UeD0",
-    "metrics": {
-      "sentiment": 80,
-      "popularity": 20,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "clothing_store",
-      "store",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.515272699999999,
-      "lng": 76.9553495
     }
   },
   {

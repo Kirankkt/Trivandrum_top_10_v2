@@ -14,8 +14,7 @@ const searchCategories = [
     { key: 'museums', file: 'data/museums.json', label: 'Museums', icon: '🏛️', route: '/entity/museums/' },
     { key: 'religious_sites', file: 'data/religious_sites.json', label: 'Religious Sites', icon: '🛕', route: '/entity/religious_sites/' },
     { key: 'healthcare', file: 'data/healthcare.json', label: 'Healthcare', icon: '🏥', route: '/entity/healthcare/' },
-    { key: 'education', file: 'data/education.json', label: 'Education', icon: '🎓', route: '/entity/education/' },
-    { key: 'banking', file: 'data/banking.json', label: 'Banking', icon: '🏦', route: '/entity/banking/' }
+    { key: 'education', file: 'data/education.json', label: 'Education', icon: '🎓', route: '/entity/education/' }
 ];
 
 // Initialize search on page load

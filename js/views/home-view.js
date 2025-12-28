@@ -139,7 +139,7 @@ async function renderHomeView() {
           <div class="explore-card-content">
             <span class="explore-card-label">Services</span>
             <h3>Education & More</h3>
-            <p>Schools, banking, and essential city services.</p>
+            <p>Healthcare, education, and essential city services.</p>
           </div>
         </a>
 

@@ -1219,39 +1219,6 @@
     }
   },
   {
-    "id": "ChIJi0AtaQC7BTsRT9iV0xEwBmI",
-    "name": "Trivandrum City church",
-    "score": 65.2,
-    "rating": 5,
-    "reviews": 7,
-    "price_level": null,
-    "address": "TC 67, 944(1, opp. Milma Dairy, Valiyathottam, Ambalathara, Thiruvananthapuram, Kerala 695026, India",
-    "image": "images/places/AZLasHqSi0fKmXOU.jpg",
-    "category": "religious_sites",
-    "vibes": [
-      "Spiritual"
-    ],
-    "website": null,
-    "phone": null,
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJi0AtaQC7BTsRT9iV0xEwBmI",
-    "metrics": {
-      "sentiment": 100,
-      "popularity": 7,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "church",
-      "place_of_worship",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.4475915,
-      "lng": 76.9504386
-    }
-  },
-  {
     "id": "ChIJQ2Yztse7BTsRwxF0xt-cAKw",
     "name": "CSI Christ Church",
     "score": 64.9,
@@ -1389,37 +1356,6 @@
     "location": {
       "lat": 8.5167752,
       "lng": 76.9386781
-    }
-  },
-  {
-    "id": "ChIJa2eVHFy5BTsRPYvFeiDQaHI",
-    "name": "Church in Trivandrum",
-    "score": 62.8,
-    "rating": 4.8,
-    "reviews": 13,
-    "price_level": null,
-    "address": "House No 39, Mosque Lane, Kesavadasapuram, Thiruvananthapuram, Kerala 695004, India",
-    "image": "images/places/AZLasHrx11htuWY5.jpg",
-    "category": "religious_sites",
-    "vibes": [],
-    "website": "http://www.churchintrivandrum.org/",
-    "phone": "092494 64648",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJa2eVHFy5BTsRPYvFeiDQaHI",
-    "metrics": {
-      "sentiment": 95,
-      "popularity": 13,
-      "convenience": 5
-    },
-    "locality": "Kesavadasapuram",
-    "types": [
-      "church",
-      "place_of_worship",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.530850599999999,
-      "lng": 76.9362392
     }
   },
   {

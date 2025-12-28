@@ -323,37 +323,5 @@
       "lat": 8.526928,
       "lng": 76.96070540000001
     }
-  },
-  {
-    "id": "ChIJn_GtGKelBTsRsp7KOSEmJ_s",
-    "name": "Kovalam Mall",
-    "score": 54.5,
-    "rating": 4.5,
-    "reviews": 14,
-    "price_level": null,
-    "address": "Kovalam, Thiruvananthapuram, Kerala 695527, India",
-    "image": "images/places/AZLasHqBFnm4iW56.jpg",
-    "category": "malls",
-    "vibes": [
-      "Budget Friendly"
-    ],
-    "website": null,
-    "phone": null,
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJn_GtGKelBTsRsp7KOSEmJ_s",
-    "metrics": {
-      "sentiment": 88,
-      "popularity": 14,
-      "convenience": 5
-    },
-    "locality": "Kovalam",
-    "types": [
-      "shopping_mall",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.395417799999999,
-      "lng": 76.980127
-    }
   }
 ]

@@ -59,10 +59,6 @@ function route() {
         console.log('[Debug] Routing to Customize Education');
         updateMetadata("Customize Education Weights");
         renderDiningCustomizeView('education');
-    } else if (hash === '/customize/banking') {
-        console.log('[Debug] Routing to Customize Banking');
-        updateMetadata("Customize Banking Weights");
-        renderDiningCustomizeView('banking');
     } else if (hash === '/methodology') {
         console.log('[Debug] Routing to Methodology');
         updateMetadata("Our Methodology", "How we calculate our rankings using data-driven metrics and objective algorithms.");
@@ -127,10 +123,6 @@ function route() {
         console.log('[Debug] Routing to Education');
         updateMetadata("Education & Schools", "Ranked list of top schools and educational institutions.");
         renderEducationView();
-    } else if (hash === '/banking') {
-        console.log('[Debug] Routing to Banking');
-        updateMetadata("Banking & Finance", "Nearby banks, ATMs, and financial centers.");
-        renderBankingView();
     } else if (hash.startsWith('/discover/')) {
         const localityName = decodeURIComponent(hash.replace('/discover/', ''));
         console.log('[Debug] Routing to Discover View for:', localityName);
@@ -166,7 +158,6 @@ function route() {
             case 'religious_sites': renderReligiousSiteDetail(entityId); break;
             case 'healthcare': renderHealthcareDetail(entityId); break;
             case 'education': renderEducationDetail(entityId); break;
-            case 'banking': renderBankingDetail(entityId); break;
             default: app.innerHTML = '<div class="error">Unknown category</div>';
         }
     } else if (hash === '/admin') {
@@ -201,7 +192,6 @@ function route() {
             '/religious-sites': '#/customize/religious-sites',
             '/healthcare': '#/customize/healthcare',
             '/education': '#/customize/education',
-            '/banking': '#/customize/banking',
             '/localities': '#/customize'
         };
         customizeBtn.href = customizeRoutes[hash] || '#/customize';

@@ -886,67 +886,6 @@
     }
   },
   {
-    "id": "ChIJd72MYqy5BTsRmCmse_9QO7I",
-    "name": "Wellness Clinic",
-    "score": 75.1,
-    "rating": 5,
-    "reviews": 7,
-    "price_level": null,
-    "address": "GWHX+PCV, TKD Rd, Muttada, Thoppil Nagar, Thiruvananthapuram, Kerala 695025, India",
-    "image": "images/places/AZLasHotRYFra7QN.jpg",
-    "category": "healthcare",
-    "vibes": [],
-    "website": null,
-    "phone": null,
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJd72MYqy5BTsRmCmse_9QO7I",
-    "metrics": {
-      "sentiment": 100,
-      "popularity": 7,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "health",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5293722,
-      "lng": 76.94856
-    }
-  },
-  {
-    "id": "ChIJL7OUXoK5BTsR163nK7rL4S0",
-    "name": "Royal Medical Center",
-    "score": 75.1,
-    "rating": 5,
-    "reviews": 4,
-    "price_level": null,
-    "address": "1st floor, al arif plaza, above muthoot fincorp, opposite zudio, Vivekananda Nagar, Kesavadasapuram, Thiruvananthapuram, Kerala 695004, India",
-    "image": "images/places/AZLasHpuUhsW01M-.jpg",
-    "category": "healthcare",
-    "vibes": [],
-    "website": "http://royalmedicalcentres.com/",
-    "phone": null,
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJL7OUXoK5BTsR163nK7rL4S0",
-    "metrics": {
-      "sentiment": 100,
-      "popularity": 4,
-      "convenience": 5
-    },
-    "locality": "Kesavadasapuram",
-    "types": [
-      "hospital",
-      "health",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5287723,
-      "lng": 76.9382207
-    }
-  },
-  {
     "id": "ChIJz2RfdOa7BTsRKl3EoF3akrQ",
     "name": "Cosmopolitan Hospital Pvt.Ltd",
     "score": 74.9,
@@ -1042,67 +981,6 @@
     }
   },
   {
-    "id": "ChIJ3yQvoFS7BTsRTJZ8hHkoQ2k",
-    "name": "Dr Sai Ganesh Medical Centre - Trivandrum",
-    "score": 74.2,
-    "rating": 4.9,
-    "reviews": 30,
-    "price_level": null,
-    "address": "Ground Floor, SP Elysium, Devaswom Board Jct, Jn, Pandits Colony Extension, Kowdiar, Thiruvananthapuram, Kerala 695003, India",
-    "image": "images/places/AZLasHoy_yGIigG6.jpg",
-    "category": "healthcare",
-    "vibes": [],
-    "website": "https://www.saiganeshclinic.com/",
-    "phone": "085908 99989",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJ3yQvoFS7BTsRTJZ8hHkoQ2k",
-    "metrics": {
-      "sentiment": 98,
-      "popularity": 30,
-      "convenience": 5
-    },
-    "locality": "Kowdiar",
-    "types": [
-      "hospital",
-      "health",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5178731,
-      "lng": 76.95675279999999
-    }
-  },
-  {
-    "id": "ChIJbb_bC467BTsRCYUOJ6ZDK_Y",
-    "name": "Vrindavan Clinic",
-    "score": 74,
-    "rating": 4.9,
-    "reviews": 19,
-    "price_level": null,
-    "address": "FWXH+QQH, Bhagat Singh Rd, Velakudi, Thiruvananthapuram, Kerala 695024, India",
-    "image": "images/places/AZLasHrmtYc4_mvK.jpg",
-    "category": "healthcare",
-    "vibes": [],
-    "website": null,
-    "phone": null,
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJbb_bC467BTsRCYUOJ6ZDK_Y",
-    "metrics": {
-      "sentiment": 98,
-      "popularity": 19,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "health",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.4994347,
-      "lng": 76.92948729999999
-    }
-  },
-  {
     "id": "ChIJK30BOKW7BTsRnHWGObTnjGs",
     "name": "India Hospital",
     "score": 73,
@@ -1131,66 +1009,6 @@
     "location": {
       "lat": 8.4928179,
       "lng": 76.9513267
-    }
-  },
-  {
-    "id": "ChIJS5b0tNy7BTsR56YpSE6ZT-4",
-    "name": "Kamala Clinic &Physiotherapy Centre",
-    "score": 72.9,
-    "rating": 4.8,
-    "reviews": 34,
-    "price_level": null,
-    "address": "Ramachandra Towers, C RA A-9, behind Raymond show room, Plammoodu, Thiruvananthapuram, Kerala 695004, India",
-    "image": "images/places/AZLasHpvsMOvpOVR.jpg",
-    "category": "healthcare",
-    "vibes": [],
-    "website": null,
-    "phone": "079070 42942",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJS5b0tNy7BTsR56YpSE6ZT-4",
-    "metrics": {
-      "sentiment": 96,
-      "popularity": 34,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "health",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.514916399999999,
-      "lng": 76.9459205
-    }
-  },
-  {
-    "id": "ChIJ-xrpS127BTsRbALaFdRnydw",
-    "name": "GAMCA TRIVANDRUM",
-    "score": 72.2,
-    "rating": 4.8,
-    "reviews": 16,
-    "price_level": null,
-    "address": "Gangotry Building, below DHL Courier, Althara Nagar, Vellayambalam, Thiruvananthapuram, Kerala 695010, India",
-    "image": "images/places/AZLasHr8ihvO497Y.jpg",
-    "category": "healthcare",
-    "vibes": [],
-    "website": "http://www.gamcatvm.com/",
-    "phone": "081291 78305",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJ-xrpS127BTsRbALaFdRnydw",
-    "metrics": {
-      "sentiment": 95,
-      "popularity": 16,
-      "convenience": 5
-    },
-    "locality": "Vellayambalam",
-    "types": [
-      "health",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5121811,
-      "lng": 76.9630671
     }
   },
   {
@@ -1225,73 +1043,6 @@
     "location": {
       "lat": 8.540036299999999,
       "lng": 76.9693865
-    }
-  },
-  {
-    "id": "ChIJGRs5tku6BTsRlBwsp8kDZg8",
-    "name": "Pain Clinic Trivandrum - Epione Spine and Pain Care Centre",
-    "score": 71.5,
-    "rating": 4.7,
-    "reviews": 49,
-    "price_level": null,
-    "address": "Women's College Ln, Bakery, Vazhuthacaud, Thiruvananthapuram, Kerala 695014, India",
-    "image": "images/places/AZLasHoxtKL92iUB.jpg",
-    "category": "healthcare",
-    "vibes": [
-      "Affordable"
-    ],
-    "website": "https://paincentre.in/",
-    "phone": "085899 89905",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJGRs5tku6BTsRlBwsp8kDZg8",
-    "metrics": {
-      "sentiment": 93,
-      "popularity": 49,
-      "convenience": 5
-    },
-    "locality": "Vazhuthacaud",
-    "types": [
-      "hospital",
-      "doctor",
-      "health",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.500579,
-      "lng": 76.95736629999999
-    }
-  },
-  {
-    "id": "ChIJuXFmSLm7BTsRdXdXa7tTSRA",
-    "name": "Kivi Medical Centre",
-    "score": 71.1,
-    "rating": 4.7,
-    "reviews": 29,
-    "price_level": null,
-    "address": "Kivi towers, Tutors Ln, Statue, Palayam, Thiruvananthapuram, Kerala 695001, India",
-    "image": "images/places/AZLasHoroNpLlKuH.jpg",
-    "category": "healthcare",
-    "vibes": [
-      "Multi-specialty"
-    ],
-    "website": null,
-    "phone": "094969 55551",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJuXFmSLm7BTsRdXdXa7tTSRA",
-    "metrics": {
-      "sentiment": 93,
-      "popularity": 29,
-      "convenience": 5
-    },
-    "locality": "Statue",
-    "types": [
-      "hospital",
-      "health",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.4997781,
-      "lng": 76.94765749999999
     }
   },
   {
@@ -1425,70 +1176,6 @@
     "location": {
       "lat": 8.499646499999999,
       "lng": 76.9429884
-    }
-  },
-  {
-    "id": "ChIJd1BAyDG6BTsRzGnUICy2ljc",
-    "name": "Trivandrum Medical Centre",
-    "score": 65.9,
-    "rating": 4.4,
-    "reviews": 8,
-    "price_level": null,
-    "address": "TC 9/1267, Kalpadrumam, Jawahar Nagar, Sasthamangalam, Thiruvananthapuram, Kerala 695010, India",
-    "image": null,
-    "category": "healthcare",
-    "vibes": [],
-    "website": null,
-    "phone": "098477 00020",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJd1BAyDG6BTsRzGnUICy2ljc",
-    "metrics": {
-      "sentiment": 85,
-      "popularity": 8,
-      "convenience": 5
-    },
-    "locality": "Sasthamangalam",
-    "types": [
-      "hospital",
-      "doctor",
-      "health",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5143195,
-      "lng": 76.9722259
-    }
-  },
-  {
-    "id": "ChIJHdAzb9C7BTsRy-7-xczGmEI",
-    "name": "Famedico- 24x7 Doctor@home | 24 hour Medical care at home in Trivandrum.| Nearest Family Health Medicines Doctors Clinics",
-    "score": 65.2,
-    "rating": 4.3,
-    "reviews": 46,
-    "price_level": null,
-    "address": "Level 1, Mall of Travancore, Chacka, Thiruvananthapuram, Kerala 695024, India",
-    "image": "images/places/AZLasHroRu_K0f0e.jpg",
-    "category": "healthcare",
-    "vibes": [],
-    "website": "https://www.famedico.com/",
-    "phone": "085902 55025",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJHdAzb9C7BTsRy-7-xczGmEI",
-    "metrics": {
-      "sentiment": 83,
-      "popularity": 46,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "hospital",
-      "doctor",
-      "health",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.487397999999999,
-      "lng": 76.92630299999999
     }
   },
   {
@@ -1642,36 +1329,6 @@
     "location": {
       "lat": 8.495346099999999,
       "lng": 76.9321382
-    }
-  },
-  {
-    "id": "ChIJg_Hz7OS7BTsRv5rNKf10Q9U",
-    "name": "Clinic",
-    "score": 59.5,
-    "rating": 4,
-    "reviews": 1,
-    "price_level": null,
-    "address": "GW9J+6MG, Medical College Murinjapalam Rd, Murinjapalam, Thiruvananthapuram, Kerala 695011, India",
-    "image": null,
-    "category": "healthcare",
-    "vibes": [],
-    "website": null,
-    "phone": null,
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJg_Hz7OS7BTsRv5rNKf10Q9U",
-    "metrics": {
-      "sentiment": 75,
-      "popularity": 1,
-      "convenience": 5
-    },
-    "locality": "Medical College",
-    "types": [
-      "health",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5180554,
-      "lng": 76.9317052
     }
   },
   {

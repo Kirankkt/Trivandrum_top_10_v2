@@ -706,35 +706,6 @@
     }
   },
   {
-    "id": "ChIJ1UTtdx-7BTsR3vuhEkakZVo",
-    "name": "Bodhi School",
-    "score": 63.8,
-    "rating": 4.5,
-    "reviews": 15,
-    "price_level": null,
-    "address": "KERA, 208, Karali Rd, near Ananthapuri Hospitals, Eanchakkal, Thiruvananthapuram, Kerala 695024, India",
-    "image": "images/places/AZLasHrVNuM3vuhM.jpg",
-    "category": "education",
-    "vibes": [],
-    "website": "http://www.bodhischool.com/",
-    "phone": "093887 09700",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJ1UTtdx-7BTsR3vuhEkakZVo",
-    "metrics": {
-      "sentiment": 88,
-      "popularity": 15,
-      "convenience": 5
-    },
-    "locality": "Trivandrum",
-    "types": [
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.4860948,
-      "lng": 76.92763889999999
-    }
-  },
-  {
     "id": "ChIJlSgMcsSvBTsR2Hw-34eCB5M",
     "name": "Nazareth Home English Medium School",
     "score": 61.2,

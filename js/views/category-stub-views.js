@@ -208,7 +208,7 @@ function renderMallsView() {
         icon: "",
         filename: "data/malls.json",
         badgeColor: "#8b5cf6",
-        metrics: ['rating', 'popularity', 'sentiment', 'variety']
+        metrics: ['rating', 'popularity', 'sentiment']
     });
 }
 
@@ -219,7 +219,7 @@ function renderBoutiquesView() {
         icon: "",
         filename: "data/boutiques.json",
         badgeColor: "#ec4899",
-        metrics: ['rating', 'popularity', 'sentiment', 'exclusivity']
+        metrics: ['rating', 'popularity', 'sentiment']
     });
 }
 
@@ -230,7 +230,7 @@ function renderSpecialtyShopsView() {
         icon: "",
         filename: "data/specialty_shops.json",
         badgeColor: "#f59e0b",
-        metrics: ['rating', 'popularity', 'sentiment', 'specialty']
+        metrics: ['rating', 'popularity', 'sentiment']
     });
 }
 
@@ -245,7 +245,7 @@ function renderMuseumsView() {
         icon: "",
         filename: "data/museums.json",
         badgeColor: "#0ea5e9",
-        metrics: ['rating', 'popularity', 'sentiment', 'educational_value']
+        metrics: ['rating', 'popularity', 'sentiment']
     });
 }
 
@@ -256,7 +256,7 @@ function renderReligiousSitesView() {
         icon: "",
         filename: "data/religious_sites.json",
         badgeColor: "#ef4444",
-        metrics: ['rating', 'popularity', 'sentiment', 'significance']
+        metrics: ['rating', 'popularity', 'sentiment']
     });
 }
 
@@ -271,7 +271,7 @@ function renderHealthcareView() {
         icon: "",
         filename: "data/healthcare.json",
         badgeColor: "#10b981",
-        metrics: ['rating', 'popularity', 'sentiment', 'accessibility']
+        metrics: ['rating', 'popularity', 'sentiment']
     });
 }
 
@@ -282,20 +282,10 @@ function renderEducationView() {
         icon: "",
         filename: "data/education.json",
         badgeColor: "#6366f1",
-        metrics: ['rating', 'popularity', 'sentiment', 'reputation']
+        metrics: ['rating', 'popularity', 'sentiment']
     });
 }
 
-function renderBankingView() {
-    renderCategoryView('banking', {
-        title: "Banking",
-        subtitle: "Banks & Financial Services",
-        icon: "",
-        filename: "data/banking.json",
-        badgeColor: "#14b8a6",
-        metrics: ['rating', 'popularity', 'sentiment', 'accessibility']
-    });
-}
 
 // Combined Services view
 function renderServicesView() {
@@ -320,11 +310,6 @@ function renderServicesView() {
                     <span class="service-icon"></span>
                     <h3>Education</h3>
                     <p>Schools, Colleges & Universities</p>
-                </a>
-                <a href="#/banking" class="service-category-card">
-                    <span class="service-icon"></span>
-                    <h3>Banking</h3>
-                    <p>Banks & Financial Services</p>
                 </a>
             </div>
         </div>

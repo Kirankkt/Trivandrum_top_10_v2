@@ -68,13 +68,6 @@ const MAP_CATEGORIES = {
         dataFile: 'data/education.json',
         detailRoute: '/entity/education/'
     },
-    banking: {
-        label: 'Banking',
-        icon: '',
-        color: '#64748b', // Slate gray
-        dataFile: 'data/banking.json',
-        detailRoute: '/entity/banking/'
-    },
     specialty_shops: {
         label: 'Specialty Shop',
         icon: '',
@@ -193,7 +186,7 @@ function createLocalityPopup(locality) {
 
     // Build facility summary
     let facilitiesHtml = '<div style="display: flex; flex-wrap: wrap; gap: 4px; margin: 8px 0; justify-content: center;">';
-    const categoryOrder = ['restaurants', 'cafes', 'hotels', 'healthcare', 'education', 'malls', 'museums', 'religious_sites', 'banking'];
+    const categoryOrder = ['restaurants', 'cafes', 'hotels', 'healthcare', 'education', 'malls', 'museums', 'religious_sites'];
 
     for (const cat of categoryOrder) {
         const count = facilities[cat]?.length || 0;
@@ -523,11 +516,6 @@ async function renderMapExplorerView() {
                             <span class="toggle-icon">${MAP_CATEGORIES.education.icon}</span>
                             <span class="toggle-label">Education</span>
                             <span class="toggle-count">${counts.education || 0}</span>
-                        </button>
-                        <button class="map-category-toggle" data-category="banking" style="--toggle-color: ${MAP_CATEGORIES.banking.color}">
-                            <span class="toggle-icon">${MAP_CATEGORIES.banking.icon}</span>
-                            <span class="toggle-label">Banking</span>
-                            <span class="toggle-count">${counts.banking || 0}</span>
                         </button>
                     </div>
 
