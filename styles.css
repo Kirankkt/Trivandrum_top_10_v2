@@ -4316,8 +4316,17 @@ footer .small {
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(0.8); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
 }
 
 .stat-label {
@@ -4333,31 +4342,83 @@ footer .small {
 
 /* Floating Animations - Each stat floats differently */
 @keyframes float-1 {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(15px, -10px) rotate(1deg); }
-  50% { transform: translate(5px, -20px) rotate(-1deg); }
-  75% { transform: translate(-10px, -8px) rotate(0.5deg); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(15px, -10px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(5px, -20px) rotate(-1deg);
+  }
+
+  75% {
+    transform: translate(-10px, -8px) rotate(0.5deg);
+  }
 }
 
 @keyframes float-2 {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(-12px, -15px) rotate(-1deg); }
-  50% { transform: translate(-20px, -5px) rotate(1deg); }
-  75% { transform: translate(-8px, 10px) rotate(-0.5deg); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-12px, -15px) rotate(-1deg);
+  }
+
+  50% {
+    transform: translate(-20px, -5px) rotate(1deg);
+  }
+
+  75% {
+    transform: translate(-8px, 10px) rotate(-0.5deg);
+  }
 }
 
 @keyframes float-3 {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(10px, 12px) rotate(1deg); }
-  50% { transform: translate(-8px, 18px) rotate(-1deg); }
-  75% { transform: translate(15px, 5px) rotate(0.5deg); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(10px, 12px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-8px, 18px) rotate(-1deg);
+  }
+
+  75% {
+    transform: translate(15px, 5px) rotate(0.5deg);
+  }
 }
 
 @keyframes float-4 {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(-12px, 8px) rotate(-1deg); }
-  50% { transform: translate(10px, -10px) rotate(1deg); }
-  75% { transform: translate(-5px, 15px) rotate(-0.5deg); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-12px, 8px) rotate(-1deg);
+  }
+
+  50% {
+    transform: translate(10px, -10px) rotate(1deg);
+  }
+
+  75% {
+    transform: translate(-5px, 15px) rotate(-0.5deg);
+  }
 }
 
 .stat-1 {
@@ -4517,8 +4578,15 @@ footer .small {
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(5px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
 }
 
 /* Trust Strip */
@@ -8607,5 +8675,137 @@ img {
   .quiz-retake-btn,
   .quiz-browse-btn {
     width: 100%;
+  }
+}
+
+/* ========================================
+   NEW SPLASH PAGE STYLES
+   ======================================== */
+
+/* Hero Splash - Shorter, cleaner */
+.hero-splash {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(--color-bg-dark);
+  overflow: hidden;
+}
+
+.hero-splash-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* Brand Lockup */
+.brand-lockup {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.brand-top10 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin: 0;
+  display: block;
+}
+
+.brand-city {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-primary);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.hero-splash-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-tagline {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.cta-explore {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.cta-explore:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 170, 108, 0.3);
+}
+
+/* About Rankings CTA */
+.about-rankings-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+/* Updated Logo Styles */
+.logo-text-new {
+  line-height: 1.1;
+}
+
+.logo-top10 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  color: white;
+  letter-spacing: 0.02em;
+}
+
+.logo-tvm {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.7rem;
+  color: var(--color-primary);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-splash {
+    min-height: 70vh;
+  }
+
+  .brand-top10 {
+    font-size: 3.5rem;
+  }
+
+  .brand-city {
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+    padding: 0 1rem;
   }
 }

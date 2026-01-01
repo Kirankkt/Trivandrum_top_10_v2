@@ -9,20 +9,8 @@ function route() {
     // Handle different routes
     if (hash === '/' || hash === '') {
         console.log('[Debug] Routing to Home');
-        updateMetadata("The City's Definitive Rankings", "Discover the best of Thiruvananthapuram with objective, data-driven rankings for neighborhoods, dining, and more.");
+        updateMetadata("Best Experiences in Kerala's Capital", "Discover the top restaurants, cafes, hotels, and attractions in Thiruvananthapuram.");
         renderHomeView();
-    } else if (hash === '/localities') {
-        console.log('[Debug] Routing to Localities');
-        updateMetadata("Best Localities Ranked", "Explore and compare Thiruvananthapuram's top residential neighborhoods based on quality of life and value.");
-        renderRankingView();
-    } else if (hash === '/locality-finder') {
-        console.log('[Debug] Routing to Locality Finder Quiz');
-        updateMetadata("Find Your Ideal Locality", "Take our ML-powered quiz to find the best neighborhood for your lifestyle.");
-        renderLocalityFinderView();
-    } else if (hash === '/customize') {
-        console.log('[Debug] Routing to Customize Localities');
-        updateMetadata("Customize Ranking Weights");
-        renderCustomizeView();
     } else if (hash === '/customize/restaurants') {
         console.log('[Debug] Routing to Customize Restaurants');
         updateMetadata("Customize Restaurant Weights");
@@ -63,9 +51,9 @@ function route() {
         console.log('[Debug] Routing to Customize Education');
         updateMetadata("Customize Education Weights");
         renderDiningCustomizeView('education');
-    } else if (hash === '/methodology') {
-        console.log('[Debug] Routing to Methodology');
-        updateMetadata("Our Methodology", "How we calculate our rankings using data-driven metrics and objective algorithms.");
+    } else if (hash === '/methodology' || hash === '/about-rankings') {
+        console.log('[Debug] Routing to About Rankings');
+        updateMetadata("About Our Rankings", "How we calculate our rankings using data-driven metrics and objective algorithms.");
         renderMethodologyView();
     } else if (hash === '/about') {
         console.log('[Debug] Routing to About');
@@ -135,24 +123,6 @@ function route() {
         console.log('[Debug] Routing to Education');
         updateMetadata("Education & Schools", "Ranked list of top schools and educational institutions.");
         renderEducationView();
-    } else if (hash.startsWith('/discover/')) {
-        const localityName = decodeURIComponent(hash.replace('/discover/', ''));
-        console.log('[Debug] Routing to Discover View for:', localityName);
-        updateMetadata(`Discover ${localityName}`, `Explore the top spots, amenities, and lifestyle in ${localityName}, Trivandrum.`);
-        if (typeof renderDiscoverView === 'function') {
-            renderDiscoverView(localityName);
-        } else {
-            app.innerHTML = '<div class="error">Discover page not available. Refresh page.</div>';
-        }
-    } else if (hash.startsWith('/locality/')) {
-        const localityName = decodeURIComponent(hash.replace('/locality/', ''));
-        console.log('[Debug] Routing to Detail View for:', localityName);
-        updateMetadata(`${localityName} Analysis`, `Deep dive into the metrics, pricing, and pros/cons of ${localityName}.`);
-        if (typeof renderDetailView === 'function') {
-            renderDetailView(localityName);
-        } else {
-            app.innerHTML = '<div class="error">System Error: renderDetailView missing. Refresh page.</div>';
-        }
     } else if (hash.startsWith('/entity/')) {
         const parts = hash.replace('/entity/', '').split('/');
         const category = parts[0];
@@ -203,10 +173,9 @@ function route() {
             '/museums': '#/customize/museums',
             '/religious-sites': '#/customize/religious-sites',
             '/healthcare': '#/customize/healthcare',
-            '/education': '#/customize/education',
-            '/localities': '#/customize'
+            '/education': '#/customize/education'
         };
-        customizeBtn.href = customizeRoutes[hash] || '#/customize';
+        customizeBtn.href = customizeRoutes[hash] || '#/';
     }
 }
 
