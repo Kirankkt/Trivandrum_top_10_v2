@@ -549,7 +549,8 @@ function getCategoryCounts() {
         if (category === 'localities') {
             counts[category] = (data || []).filter(e => e.latitude || e.data?.latitude).length;
         } else {
-            counts[category] = (data || []).filter(e => e.location?.lat).length;
+            // Support both 'location' and 'coordinates' property names
+            counts[category] = (data || []).filter(e => e.location?.lat || e.coordinates?.lat).length;
         }
     }
     return counts;
