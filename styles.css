@@ -8845,12 +8845,13 @@ img {
   background: linear-gradient(180deg, rgba(10,20,30,0.3) 0%, rgba(10,20,30,0.5) 50%, rgba(10,20,30,0.9) 100%);
 }
 
-/* Animated Particles */
+/* Animated Particles - Hero Only */
 .hero-particles {
   position: absolute;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
+  z-index: 1;
 }
 
 .particle {
@@ -9045,6 +9046,7 @@ img {
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   animation: floatCardIn 0.6s ease-out backwards;
+  background: #1a2a3a;
 }
 
 .floating-card:nth-child(1) { animation-delay: 0.1s; }
@@ -9110,6 +9112,7 @@ img {
   justify-content: flex-end;
   background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.85) 100%);
   color: white;
+  z-index: 2;
 }
 
 .floating-card-icon {
