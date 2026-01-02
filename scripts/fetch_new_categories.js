@@ -5,7 +5,9 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const API_KEY = 'AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0';
+// API Key should be passed as environment variable
+// Run with: API_KEY=your_key node scripts/fetch_new_categories.js
+const API_KEY = process.env.API_KEY || 'YOUR_API_KEY_HERE';
 const BASE_URL = 'https://maps.googleapis.com/maps/api/place';
 const DATA_DIR = path.join(__dirname, '..', 'data');
 
