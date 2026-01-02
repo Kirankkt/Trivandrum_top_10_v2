@@ -9,12 +9,6 @@ async function renderHomeView() {
       <div class="hero-bg-image"></div>
       <div class="hero-gradient-overlay"></div>
 
-      <!-- Animated particles/elements -->
-      <div class="hero-particles">
-        <span class="particle particle-1"></span>
-        <span class="particle particle-2"></span>
-        <span class="particle particle-3"></span>
-      </div>
 
       <!-- Main Content -->
       <div class="hero-vibrant-content">
