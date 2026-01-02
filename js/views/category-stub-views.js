@@ -215,17 +215,6 @@ function renderMallsView() {
     });
 }
 
-function renderBoutiquesView() {
-    renderCategoryView('boutiques', {
-        title: "Top Boutiques",
-        subtitle: "Fashion Boutiques & Designer Stores",
-        icon: "",
-        filename: "data/boutiques.json",
-        badgeColor: "#ec4899",
-        metrics: ['rating', 'popularity', 'sentiment']
-    });
-}
-
 function renderSpecialtyShopsView() {
     renderCategoryView('specialty_shops', {
         title: "Specialty Shops",
@@ -474,10 +463,10 @@ function renderShopCategoryView() {
                     <h3>Malls</h3>
                     <p>Shopping Centers & Mega Malls</p>
                 </a>
-                <a href="#/boutiques" class="service-category-card">
+                <a href="#/clothing-stores" class="service-category-card">
                     <span class="service-icon"></span>
-                    <h3>Boutiques</h3>
-                    <p>Fashion & Designer Stores</p>
+                    <h3>Clothing Stores</h3>
+                    <p>Fashion Boutiques & Apparel</p>
                 </a>
                 <a href="#/specialty-shops" class="service-category-card">
                     <span class="service-icon"></span>

@@ -87,22 +87,6 @@ async function renderDiningCustomizeView(type) {
                 quality: { rating: 45, popularity: 15, sentiment: 40 }
             }
         },
-        boutiques: {
-            title: "Customize Boutique Rankings",
-            description: "Adjust the 3 metrics to match your fashion preferences",
-            metrics: [
-                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
-                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
-                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Positive review sentiment' }
-            ],
-            returnUrl: '#/boutiques',
-            color: '#ec4899',
-            presets: {
-                balanced: { rating: 34, popularity: 33, sentiment: 33 },
-                popular: { rating: 25, popularity: 50, sentiment: 25 },
-                quality: { rating: 45, popularity: 15, sentiment: 40 }
-            }
-        },
         'specialty-shops': {
             title: "Customize Specialty Shop Rankings",
             description: "Adjust the 3 metrics to find your perfect specialty store",

@@ -170,7 +170,6 @@ const CompareManager = {
             cafes: 'Cafes',
             hotels: 'Hotels',
             malls: 'Malls',
-            boutiques: 'Boutiques',
             specialty_shops: 'Specialty Shops',
             museums: 'Museums',
             religious_sites: 'Religious Sites',

@@ -151,7 +151,7 @@ function renderPlacesCompare(app, category, places) {
         cafes: { label: 'Cafes', backUrl: '#/cafes', icon: '☕' },
         hotels: { label: 'Hotels', backUrl: '#/hotels', icon: '🏨' },
         malls: { label: 'Malls', backUrl: '#/malls', icon: '🛒' },
-        boutiques: { label: 'Boutiques', backUrl: '#/boutiques', icon: '👗' },
+        clothing_stores: { label: 'Clothing Stores', backUrl: '#/clothing-stores', icon: '👗' },
         specialty_shops: { label: 'Specialty Shops', backUrl: '#/specialty-shops', icon: '🎁' },
         museums: { label: 'Museums', backUrl: '#/museums', icon: '🏛️' },
         religious_sites: { label: 'Religious Sites', backUrl: '#/religious-sites', icon: '🛕' },

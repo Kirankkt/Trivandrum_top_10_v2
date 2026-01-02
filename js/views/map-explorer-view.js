@@ -75,13 +75,6 @@ const MAP_CATEGORIES = {
         dataFile: 'data/specialty_shops.json',
         detailRoute: '/entity/specialty_shops/'
     },
-    boutiques: {
-        label: 'Boutique',
-        icon: '',
-        color: '#ec4899', // Pink
-        dataFile: 'data/boutiques.json',
-        detailRoute: '/entity/boutiques/'
-    },
     supermarkets: {
         label: 'Supermarkets',
         icon: '',
@@ -612,11 +605,6 @@ async function renderMapExplorerView() {
                             <span class="toggle-icon">${MAP_CATEGORIES.malls.icon}</span>
                             <span class="toggle-label">Malls</span>
                             <span class="toggle-count">${counts.malls || 0}</span>
-                        </button>
-                        <button class="map-category-toggle" data-category="boutiques" style="--toggle-color: ${MAP_CATEGORIES.boutiques.color}">
-                            <span class="toggle-icon">${MAP_CATEGORIES.boutiques.icon}</span>
-                            <span class="toggle-label">Boutiques</span>
-                            <span class="toggle-count">${counts.boutiques || 0}</span>
                         </button>
                         <button class="map-category-toggle" data-category="supermarkets" style="--toggle-color: ${MAP_CATEGORIES.supermarkets.color}">
                             <span class="toggle-icon">${MAP_CATEGORIES.supermarkets.icon}</span>

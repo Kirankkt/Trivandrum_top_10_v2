@@ -10,7 +10,6 @@ const searchCategories = [
     { key: 'hotels', file: 'data/hotels.json', label: 'Hotels', icon: '', route: '/entity/hotels/' },
     // Shopping
     { key: 'malls', file: 'data/malls.json', label: 'Malls', icon: '', route: '/entity/malls/' },
-    { key: 'boutiques', file: 'data/boutiques.json', label: 'Boutiques', icon: '', route: '/entity/boutiques/' },
     { key: 'supermarkets', file: 'data/supermarkets.json', label: 'Supermarkets', icon: '', route: '/entity/supermarkets/' },
     { key: 'clothing_stores', file: 'data/clothing_stores.json', label: 'Clothing Stores', icon: '', route: '/entity/clothing_stores/' },
     // Culture & Heritage

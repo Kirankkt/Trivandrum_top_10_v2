@@ -27,10 +27,6 @@ function route() {
         console.log('[Debug] Routing to Customize Malls');
         updateMetadata("Customize Mall Weights");
         renderDiningCustomizeView('malls');
-    } else if (hash === '/customize/boutiques') {
-        console.log('[Debug] Routing to Customize Boutiques');
-        updateMetadata("Customize Boutique Weights");
-        renderDiningCustomizeView('boutiques');
     } else if (hash === '/customize/specialty-shops') {
         console.log('[Debug] Routing to Customize Specialty Shops');
         updateMetadata("Customize Specialty Shop Weights");
@@ -134,9 +130,9 @@ function route() {
         updateMetadata("Best Malls", "Top shopping malls and retail centers in Trivandrum.");
         renderMallsView();
     } else if (hash === '/boutiques') {
-        console.log('[Debug] Routing to Boutiques');
-        updateMetadata("Top Boutiques", "Discover unique fashion and designer boutiques in the city.");
-        renderBoutiquesView();
+        // Redirect boutiques to clothing-stores
+        window.location.hash = '/clothing-stores';
+        return;
     } else if (hash === '/supermarkets') {
         console.log('[Debug] Routing to Supermarkets');
         updateMetadata("Top Supermarkets", "Best grocery stores and hypermarkets in Trivandrum.");
@@ -224,7 +220,7 @@ function route() {
             case 'cafes': renderCafeDetail(entityId); break;
             case 'hotels': renderHotelDetail(entityId); break;
             case 'malls': renderMallDetail(entityId); break;
-            case 'boutiques': renderBoutiqueDetail(entityId); break;
+            case 'boutiques': renderGenericEntityDetail(entityId, 'clothing_stores', 'data/clothing_stores.json'); break;
             case 'specialty_shops': renderSpecialtyShopDetail(entityId); break;
             case 'museums': renderMuseumDetail(entityId); break;
             case 'religious_sites': renderReligiousSiteDetail(entityId); break;
@@ -271,7 +267,6 @@ function route() {
             '/cafes': '#/customize/cafes',
             '/hotels': '#/customize/hotels',
             '/malls': '#/customize/malls',
-            '/boutiques': '#/customize/boutiques',
             '/specialty-shops': '#/customize/specialty-shops',
             '/museums': '#/customize/museums',
             '/religious-sites': '#/customize/religious-sites',

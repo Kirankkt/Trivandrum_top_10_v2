@@ -71,10 +71,10 @@ async function renderHomeView() {
           <div class="floating-card-content">
             <span class="floating-card-label">Retail</span>
             <h3>Shopping</h3>
-            <p>Malls, boutiques and supermarkets.</p>
+            <p>Malls, clothing stores and supermarkets.</p>
             <div class="floating-card-links">
               <a href="#/malls" class="card-pill">Malls</a>
-              <a href="#/boutiques" class="card-pill">Boutiques</a>
+              <a href="#/clothing-stores" class="card-pill">Clothing</a>
               <a href="#/supermarkets" class="card-pill">Supermarkets</a>
             </div>
           </div>

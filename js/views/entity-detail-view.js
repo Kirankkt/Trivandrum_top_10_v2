@@ -1,6 +1,6 @@
 // Entity Detail View - Unified detail pages for all entity types
-// Handles: restaurants, cafes, hotels, malls, boutiques, specialty_shops,
-// museums, religious_sites, healthcare, education, banking
+// Handles: restaurants, cafes, hotels, malls, specialty_shops,
+// museums, religious_sites, healthcare, education, clothing_stores
 
 /**
  * Category configurations for detail views
@@ -52,17 +52,6 @@ const ENTITY_CATEGORIES = {
             { key: 'reviews', label: 'Reviews', format: 'number' }
         ],
         rankContext: 'mall'
-    },
-    boutiques: {
-        title: 'Boutique',
-        icon: '',
-        color: '#ec4899', // Pink
-        dataFile: 'data/boutiques.json',
-        metrics: [
-            { key: 'rating', label: 'Rating', format: 'rating' },
-            { key: 'reviews', label: 'Reviews', format: 'number' }
-        ],
-        rankContext: 'boutique'
     },
     specialty_shops: {
         title: 'Specialty Shop',
@@ -552,7 +541,6 @@ function renderRestaurantDetail(id) { renderEntityDetailView('restaurants', id);
 function renderCafeDetail(id) { renderEntityDetailView('cafes', id); }
 function renderHotelDetail(id) { renderEntityDetailView('hotels', id); }
 function renderMallDetail(id) { renderEntityDetailView('malls', id); }
-function renderBoutiqueDetail(id) { renderEntityDetailView('boutiques', id); }
 function renderSpecialtyShopDetail(id) { renderEntityDetailView('specialty_shops', id); }
 function renderMuseumDetail(id) { renderEntityDetailView('museums', id); }
 function renderReligiousSiteDetail(id) { renderEntityDetailView('religious_sites', id); }
