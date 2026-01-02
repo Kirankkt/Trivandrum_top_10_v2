@@ -102,28 +102,28 @@ function renderAboutView() {
                     <h2>Why Trust Our Rankings?</h2>
                     <div class="trust-points">
                         <div class="trust-item">
-                            <span class="trust-icon">&#9989;</span>
+                            <span class="trust-icon"></span>
                             <div>
                                 <strong>100% Transparent</strong>
                                 <p>Every formula and data source is documented in our Methodology page.</p>
                             </div>
                         </div>
                         <div class="trust-item">
-                            <span class="trust-icon">&#9989;</span>
+                            <span class="trust-icon"></span>
                             <div>
                                 <strong>Zero Sponsored Content</strong>
                                 <p>No business can pay to improve their ranking or appear higher in results.</p>
                             </div>
                         </div>
                         <div class="trust-item">
-                            <span class="trust-icon">&#9989;</span>
+                            <span class="trust-icon"></span>
                             <div>
                                 <strong>API-Verified Data</strong>
                                 <p>All metrics come from verifiable Google APIs, not user submissions or surveys.</p>
                             </div>
                         </div>
                         <div class="trust-item">
-                            <span class="trust-icon">&#9989;</span>
+                            <span class="trust-icon"></span>
                             <div>
                                 <strong>Local Expertise</strong>
                                 <p>Built by people who know Trivandrum, for people who want to experience it better.</p>

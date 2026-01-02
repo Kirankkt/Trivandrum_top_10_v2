@@ -53,7 +53,6 @@ async function renderHomeView() {
           <div class="floating-card-bg" style="background-image: url('${window.ImageOptimizer?.getOptimizedUrl('images/categories/stay_dine_premium.png') || 'images/categories/stay_dine_premium.png'}')"></div>
           <div class="floating-card-shine"></div>
           <div class="floating-card-content">
-            <span class="floating-card-icon">&#127860;</span>
             <span class="floating-card-label">Hospitality</span>
             <h3>Stay & Dine</h3>
             <p>Experience the best hotels, cozy cafes, and world-class restaurants.</p>
@@ -70,7 +69,6 @@ async function renderHomeView() {
           <div class="floating-card-bg" style="background-image: url('${window.ImageOptimizer?.getOptimizedUrl('images/categories/shopping_hero.png') || 'images/categories/shopping_hero.png'}')"></div>
           <div class="floating-card-shine"></div>
           <div class="floating-card-content">
-            <span class="floating-card-icon">&#128722;</span>
             <span class="floating-card-label">Retail</span>
             <h3>Shopping</h3>
             <p>Malls, boutiques and supermarkets.</p>
@@ -87,7 +85,6 @@ async function renderHomeView() {
           <div class="floating-card-bg" style="background-image: url('${window.ImageOptimizer?.getOptimizedUrl('images/categories/culture_premium.png') || 'images/categories/culture_premium.png'}')"></div>
           <div class="floating-card-shine"></div>
           <div class="floating-card-content">
-            <span class="floating-card-icon">&#127963;</span>
             <span class="floating-card-label">Heritage</span>
             <h3>Culture</h3>
             <p>Museums, galleries and historic landmarks.</p>
@@ -104,7 +101,6 @@ async function renderHomeView() {
           <div class="floating-card-bg" style="background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%)"></div>
           <div class="floating-card-shine"></div>
           <div class="floating-card-content">
-            <span class="floating-card-icon">&#127965;</span>
             <span class="floating-card-label">Outdoors</span>
             <h3>Nature</h3>
             <p>Beaches, sanctuaries and backwaters.</p>
@@ -121,7 +117,6 @@ async function renderHomeView() {
           <div class="floating-card-bg" style="background: linear-gradient(135deg, #ea580c 0%, #f97316 100%)"></div>
           <div class="floating-card-shine"></div>
           <div class="floating-card-content">
-            <span class="floating-card-icon">&#127947;</span>
             <span class="floating-card-label">Active</span>
             <h3>Sports</h3>
             <p>Sports clubs and adventure activities.</p>
@@ -137,7 +132,6 @@ async function renderHomeView() {
           <div class="floating-card-bg" style="background-image: url('${window.ImageOptimizer?.getOptimizedUrl('images/categories/healthcare_premium.png') || 'images/categories/healthcare_premium.png'}')"></div>
           <div class="floating-card-shine"></div>
           <div class="floating-card-content">
-            <span class="floating-card-icon">&#128140;</span>
             <span class="floating-card-label">Wellness</span>
             <h3>Health & Wellness</h3>
             <p>Healthcare, ayurveda and yoga retreats.</p>

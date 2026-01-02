@@ -9115,12 +9115,6 @@ img {
   z-index: 2;
 }
 
-.floating-card-icon {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-}
-
 .floating-card-label {
   font-size: 0.75rem;
   font-weight: 600;
