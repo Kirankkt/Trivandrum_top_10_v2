@@ -3928,6 +3928,16 @@ footer .small {
     padding: 0 1rem;
   }
 
+  .dining-container .section-header {
+    padding-top: 60px;
+    margin-bottom: 1rem;
+  }
+
+  .dining-container .section-header-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
   .dining-grid {
     grid-template-columns: 1fr;
   }
