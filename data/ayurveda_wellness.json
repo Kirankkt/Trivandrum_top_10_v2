@@ -1,39 +1,12 @@
 [
   {
-    "id": "ChIJLY8DsN67BTsRnWIMrhPZqh4",
-    "name": "Vibrance Spa and Ayurvedic Wellness Centre Pattom",
-    "address": "Second floor of, Chitra Multispeciality Dental Centre, Adam's Tower, Pattom - Kowdiar Rd, near Sunny Diamonds, Pattom, Thiruvananthapuram, Kerala 695004, India",
-    "locality": "Thiruvananthapuram",
-    "rating": 5,
-    "reviews": 239,
-    "score": 100,
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHq1cMDDqOj9M3FzN_JnDe-Cisuyo6ugnGE4SlYzwyo_E74iz5z2EFkrqhYwfs94ULkwFdEk51jiU2ZwO0_lNpDj1U4Qjkd-UgGuigrjvko_u-AGb8M8aPF1Kb2YEhXIZNKW03OyXV8gZVm9itPmkzm0QTdiR-bEwRgP7MGv9DnwKqPI3lKz3pEHK3XY3LDG3svSmh3WZTUZnPEHBL1UBtbINcZHlauk39Iua931iedSZ8m4ZxLwqjs9IIDEx9Zo-BSEFHx6b0CFXfb9ZwkT-8BHJfiIfwEDWtrY_SwawFpZnIeZYLPVDGfHfAX9BCJsq5Pu360l5sehtJYHiWSLlq_iBRX0DePk2II_6CmxfEZxUom151_9hTbGwRuPFDiVeuEsXomCa8rdzn5Q6oE8RKGXGY3YFXynyy6ir7bUI662MzYs&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
-    "website": "https://www.spavibrance.com/",
-    "phone": "070128 65262",
-    "types": [
-      "establishment",
-      "health",
-      "point_of_interest",
-      "spa"
-    ],
-    "vibes": [
-      "Established",
-      "Health",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 8.519318799999999,
-      "lng": 76.9428142
-    }
-  },
-  {
     "id": "ChIJn1KlALm7BTsR_S6lWPjWWlg",
     "name": "KAYAKALPA AYURVEDIC PANCHAKARMA CLINIC AND WELLNESS SPA",
     "address": "24, Pallimukku, Pettah, Thiruvananthapuram, Kerala 695024, India",
     "locality": "Thiruvananthapuram",
     "rating": 5,
     "reviews": 741,
-    "score": 100,
+    "score": 90.8,
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqZY-OtSIkyLj88zOp49V7kw3IEKMbB54KjNMXYyXJPdGqBPhSNfDLMYf7rbLOdu8uGofqmiZBhLJRW_CVU4qa1HMa7EQtLQwFmpQ3RkhYREROY1ujuUNkmOGHnQ4uBQYmO_QiFkaYFpNyosR_KebNzxtlfHlBPdHC4CquZKhp31fmcKG7EkWz0w9El5rYFULyDVXaYzngJptoQQkOkX8Kgd6wNkRi-_eXaibJMcPkaLXXO8PSIiIy83VXQhnhByFm8PTg_a-7_2LAhxwv95bO8q371dqyhmVxGEmftC8Evhw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
     "website": "http://www.kayakalpa.co.in/",
     "phone": "080785 08884",
@@ -54,65 +27,13 @@
     }
   },
   {
-    "id": "ChIJf0NlbQO7BTsRmtWuL8JvOkM",
-    "name": "Santhisukham Ayurveda",
-    "address": "UPS School, opposite Chakka, Chacka, Thiruvananthapuram, Kerala 695024, India",
-    "locality": "Thiruvananthapuram",
-    "rating": 5,
-    "reviews": 186,
-    "score": 100,
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpPDQrwV-EeWAcvSS5tAJFfiA8KVAFvhqpKrFP1E00ddcyNzu8HDDPmqT-5Ro4hIOY2ElIQDomNquhErLgH9dwKiMHvfYOSC4rYVaKbS7ofyNj4dhKDPr4iWziM1fmpJlRgQqCWgHgSztcOHeH6nbzLO8vJARZzs-DAm4Sc0EnK-24cBwrIu1JjYZQd2S-GyexoPrrOoVOsWvhjC0r0Bu4mK70_gK0TbsBuxAyv2uDyJFCXTV3Z9GHVL8QXA-GIeoYD-I82iHPHfRx3leQMmHEKkQjnp7FfPj4_uWoiXEOWNw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
-    "website": "https://www.santhisukham.com/",
-    "phone": "081390 06999",
-    "types": [
-      "establishment",
-      "health",
-      "point_of_interest"
-    ],
-    "vibes": [
-      "Established",
-      "Health",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 8.4926732,
-      "lng": 76.92415319999999
-    }
-  },
-  {
-    "id": "ChIJg6jbkAu5BTsRABA3OEjkpwM",
-    "name": "Aranyaveda Wellness",
-    "address": "Pillaveedu Nagar D-22, TC 14, Lakshmi, 4094, Pillaveedu Nagar, Aiswarya Nagar, Kesavadasapuram, Thiruvananthapuram, Kerala 695004, India",
-    "locality": "Thiruvananthapuram",
-    "rating": 5,
-    "reviews": 461,
-    "score": 100,
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrfuA6vJAkpi6OJJLKvwzFBtPa5Jtl40EdhXAR47pFrH3jqXxPwBAfhiyJTCjz54vM1t8G7DFJab6n9Mk3ltlRNzIppepRaokiY55De2oNZ3p27G0Qscuel32ww9_M-wxg27UY808jZudFIL6A0vL5_EKNQAvB24rOs0JnaetwpGgMnsfZt9Xl7cS6l6cWjhUcn7HSMmX5rOlJF2bDhrn0rTs8PRXLqSt2A_7A7yfYxHp4lZ1Ctv3b6TukcNypLFcxlfpj5LI0zGK3aN7rq18r0AiMXrbTHW-xFiOM-u4nK2g&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
-    "website": "https://aranyaveda.in/",
-    "phone": "096337 44462",
-    "types": [
-      "establishment",
-      "health",
-      "point_of_interest"
-    ],
-    "vibes": [
-      "Established",
-      "Health",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 8.5269135,
-      "lng": 76.93282119999999
-    }
-  },
-  {
     "id": "ChIJ0ynGlcq-BTsR5O7x6ULy0jM",
     "name": "Vibrance Spa and Ayurvedic Wellness Centre",
     "address": "1st Floor Chitra Multi Speciality Dental Clinic Aakkulam Road Near Elamkulam Mahadeva Temple, Sreekaryam, Thiruvananthapuram, Kerala 695017, India",
     "locality": "Thiruvananthapuram",
     "rating": 4.9,
     "reviews": 710,
-    "score": 99,
+    "score": 89.6,
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHri9FbFOmPQlKNruQUMPRz_UUGq2meC5pgG7SczehoDqrWsyWG2OP5CM4p2p5nqK-B4I4sev0E12BdhRn_02CDiQq9Ns16x2BHQ74s4PQGtUvUbX7TjvsRY2ncl03AfPcAYHMFcz7KLq4mm6c396hxVrY2NCMcgnKiNFm1tMxaNUeQNu28P7WQBDq11zgZdWZiAizoFQJ8_wz48lp28t-HhiTuRoFHv1-Bitb3B8U_8N_eA6JJ_GZqHhaZgzdlXTLv_RTAMiVH9pQB471QMZ8_BT3NpEoF56Q83GCnVcSKh7g&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
     "website": "http://www.spavibrance.com/",
     "phone": "088930 73461",
@@ -133,56 +54,30 @@
     }
   },
   {
-    "id": "ChIJZ_GxBsi7BTsRzm0_GH3vt5I",
-    "name": "Sahasra Ayurvedic Wellness Centre & Spa",
-    "address": "Nandanam, Elipod Road, near Vettamukku, Vettamukku, PTP Nagar, Thirumala, Thiruvananthapuram, Kerala 695006, India",
+    "id": "ChIJvfAMkaClBTsRfnEbmHZiW9o",
+    "name": "The Grandspa Ayurvedic Wellness Centre",
+    "address": "Kovalam Beach Rd, near Taste Of Kerala Restaurant, Thiruvananthapuram, Kerala 695527, India",
     "locality": "Thiruvananthapuram",
-    "rating": 4.9,
-    "reviews": 124,
-    "score": 99,
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqzEk_B2kVIaEbBMpjmR1RvjaU3IzUL0z9qabnymUEh4rYDj0MGrr60zKfheceyqiR_gZqsdFO2lqqUh8_25AI20YjiH-9rK1WPUQcZGYDKI-O5ZmGtWvZuoBzxCD8unVHynr3WZFK8fbqM4Y3BdsXsQ8-Byzfun57svM_YcqMkG6tvGxyDq9vgH0t1g39_zOC2oA3yU7dH05KM6cH02Enh8Pj8vqEYfrw0OcE-gevvq2HxiJ4Vp_7fD9lV0LcdhcgMq6dlNodSeX2ep0NyA9wYA8tkSF0g75_V73qHn44g2g&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
-    "website": "https://www.sahasraayurveda.com/",
-    "phone": "098951 43505",
-    "types": [
-      "establishment",
-      "point_of_interest",
-      "spa"
-    ],
-    "vibes": [
-      "Established",
-      "Must Visit",
-      "Spa & Wellness"
-    ],
-    "coordinates": {
-      "lat": 8.5092497,
-      "lng": 76.989161
-    }
-  },
-  {
-    "id": "ChIJYwzralC5BTsR-RXmXgdc9aM",
-    "name": "Ayurchakra Ayurveda Wellness Center",
-    "address": "Kesavadasapuram Jct, opp. Chinnus Hotel (Besides Bank of Baroda Building, Kesavadasapuram, Thiruvananthapuram, Kerala 695004, India",
-    "locality": "Thiruvananthapuram",
-    "rating": 4.9,
-    "reviews": 317,
-    "score": 99,
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpAP1pfkP9GjtO24wDze7IVau58yM7woWQ39ejldteSY7HADPEZHKYJ2HX7Dq4bJrpkpAZRwnYILzQtU-Lydxpid2LOn_9oEMEC8ogNnon1dpjMN--pAXgYm_FCn67g_z3-UCYdJtCaFgaJiXGXgtf6sjS5sUloHlowmR0dJe-jkdt8RAuDFiQSt80RH7suLTqZynby4lAxzshLCPg2hlAxuDbkNIULoe-Ji2hBrEzoO56-SC9Z5KJwCXmxwneAJYUZwNo4TD4dnBzBZx0MM7IkxZ2EzqsSab-b1S1cXnIquQ&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
-    "website": "http://www.ayurchakra.co.in/",
-    "phone": "094000 16464",
+    "rating": 4.8,
+    "reviews": 808,
+    "score": 89.2,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHppYGW1wLDzqSKnu4n1BsMGPnWWT7NdSHarpLYPIF9AvfzqX-Rv5Ld8xdBJ0d7cx3WeKtqj6btMbY3i1oG6JBD29nA-CZ38BrCq-LZg2WLlLLd9wqHVDpHr2MVQKvOcuVKl7VOuKnGiQXoTCe0EqVu6Rh12kuxMgMm-25W8OIoZ0XeK-PMxuN43Ufw1BiTH_fR6-0A4gECDjYtugRm58nH1nKMp4ysukme61SJ8ac9X97u682EZ_ZYtNIZsG5o4FtKrToaDS4lYQpsPqklJpxrhAtejjMPPSmnWxAWv1YdViKKzODr6RCOf78_XCpaaDcOcgYjZ6_hx6yzdX0RN_ISb7DFFbKBdwLPoqsjOZX846Stjf_5B4EPHHwwwQky61xSkm3UtD-Ypwy9kYmNyqbBcLY74JxBw0pMf75irgeUpBQ&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://kmaaryavaidyasala.com/",
+    "phone": "093880 07007",
     "types": [
       "establishment",
       "health",
-      "point_of_interest",
-      "spa"
+      "hospital",
+      "point_of_interest"
     ],
     "vibes": [
       "Established",
       "Health",
-      "Must Visit"
+      "Medical"
     ],
     "coordinates": {
-      "lat": 8.5304446,
-      "lng": 76.9386038
+      "lat": 8.3933464,
+      "lng": 76.9777934
     }
   },
   {
@@ -192,7 +87,7 @@
     "locality": "Thiruvananthapuram",
     "rating": 4.9,
     "reviews": 578,
-    "score": 99,
+    "score": 88.6,
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHocP7EH6W7wWGK5FqAFEalNu4gu8HjatKM0ckMz7-9vGGOShttGLTThRhyrBraY_ndJ9sB7dFhmCAnyIEyen3qqQay1REJY0Oe4cLVFEpwY6OTIOs771R6-WlAJSG4rRq4Yo03o5myLQMUhzDnwOiw63N8pmBvEBXeboa6DB3LwnW6dISZw-67-h9LakDh4ov2MdvWFW6_3VnE4_Wi_EGmfmvlPUs2Odh6W2eMQRGKyFc6kZRN5K4dzG55ozdvhx35IRPeCGLeoY-1RcLHOJxur8uC2rgpHC0AiZPhlLT3WlA&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
     "website": "http://www.elixirayurveda.com/",
     "phone": "096333 52760",
@@ -214,16 +109,16 @@
     }
   },
   {
-    "id": "ChIJ8-9z54ulBTsRmZWCfGYlMiA",
-    "name": "Triloka Holistic Wellness",
-    "address": "Beach Rd, Kovalam, Thiruvananthapuram, Kerala 695527, India",
+    "id": "ChIJg6jbkAu5BTsRABA3OEjkpwM",
+    "name": "Aranyaveda Wellness",
+    "address": "Pillaveedu Nagar D-22, TC 14, Lakshmi, 4094, Pillaveedu Nagar, Aiswarya Nagar, Kesavadasapuram, Thiruvananthapuram, Kerala 695004, India",
     "locality": "Thiruvananthapuram",
-    "rating": 4.9,
-    "reviews": 196,
-    "score": 99,
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpQ0GQfegv8lEokOtArWlLeF9IIHv-B9CPNDaqoWtUdSj0_hB7pyLZQ8ZT89WmusOj562QBQ2cjcRE79BnoLQjj1TiEnHymCxNtQa0ss8GBK_ldCu4eX2xBpvj8sawIBdsQXeMNIDY5mrGHuCKPgK2x4BxMjzy1M_3uJp-DE9oujH9sXCuDkEeLlhSdNCMymQGp01a9w6yv2Nu-OiT3Q1hLKqPh10ASSUMwdt8XPMWleQvDeFy-BKnVZ3s7mE__w-d9-s6hJZQJGDn5ZqFvy8bW7VE9-bhltqUML4SuSEUJQg&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
-    "website": "https://trilokaholisticwellness.com/",
-    "phone": "099619 10451",
+    "rating": 5,
+    "reviews": 461,
+    "score": 88.5,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrfuA6vJAkpi6OJJLKvwzFBtPa5Jtl40EdhXAR47pFrH3jqXxPwBAfhiyJTCjz54vM1t8G7DFJab6n9Mk3ltlRNzIppepRaokiY55De2oNZ3p27G0Qscuel32ww9_M-wxg27UY808jZudFIL6A0vL5_EKNQAvB24rOs0JnaetwpGgMnsfZt9Xl7cS6l6cWjhUcn7HSMmX5rOlJF2bDhrn0rTs8PRXLqSt2A_7A7yfYxHp4lZ1Ctv3b6TukcNypLFcxlfpj5LI0zGK3aN7rq18r0AiMXrbTHW-xFiOM-u4nK2g&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://aranyaveda.in/",
+    "phone": "096337 44462",
     "types": [
       "establishment",
       "health",
@@ -235,62 +130,8 @@
       "Must Visit"
     ],
     "coordinates": {
-      "lat": 8.3946877,
-      "lng": 76.97952819999999
-    }
-  },
-  {
-    "id": "ChIJ-6q4z7qlBTsR9R_f1kn7Np8",
-    "name": "Shiva Ayurveda",
-    "address": "AL Pack Bag premium Beach hotel, Light House Rd, Light House Beach, Kovalam, Thiruvananthapuram, Kerala 695521, India",
-    "locality": "Thiruvananthapuram",
-    "rating": 4.9,
-    "reviews": 395,
-    "score": 99,
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqGS8v2jKAQM1ZGwc6q-L9Zr2XXpZkSBPr2bHXSZta0h3y2NsTVU7I_GTSmM-bFLPtqDB2DycDG8_Cxu_JeDM1DAaPtROL_1dSaoyaF62OQytmaO_e6fA51BN0zgny1IBkH2J2-qPcY6vUVUWM2jOeNomCNTbZFB1X93T3RgUScNvYF2u6pWfq2svIitBnMVRGoXdDK8Gq_VWMZdzGFFEGrYUicM8BFWc5MYv_dgqoV08n3QI-wRY2MfNdag0F4h8XtmjT33tVbVBh4VV7-8kwnAJnriItB5FMh3N1Z1zpm-w&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
-    "website": "http://www.kovalamayurveda.com/",
-    "phone": "080862 08672",
-    "types": [
-      "establishment",
-      "health",
-      "point_of_interest",
-      "school",
-      "spa"
-    ],
-    "vibes": [
-      "Established",
-      "Health",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 8.3849716,
-      "lng": 76.9797679
-    }
-  },
-  {
-    "id": "ChIJSYIQ86alBTsRQoyhxMQv-Eo",
-    "name": "Ayur Hermitage Sivadha Ayurvedic Centre",
-    "address": "Beach Rd, Kovalam, Thiruvananthapuram, Kerala 695527, India",
-    "locality": "Thiruvananthapuram",
-    "rating": 4.9,
-    "reviews": 123,
-    "score": 99,
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHp5RjRfUVhprt-LEWfwjbAlwKVjznSrajzqfCtYSbxvDHX90lZF5Cf5_8m807zTmjC5fK_-z0J51AQZE85SNw877lzjIQHwrnataeUXOyiVrrh0b1zrzK9QkbNBcKJ99WfqB4xWhHzS8vhVlTTHlQOK_pNpcRF3bktS2NG2cnsKN_9jwu8Q7EoZS6_qI2bHokh1PO4cHJKGslRUkTR4_g1azhXBjfS16sPpvyMcDYb5j0_8OCcD_HqDw5LLyQVxti91SyPS8Xwce_aBU-eWWgtfkMorhs95R544H8t4aztd7R-U4GRXtsubEsMnRAZwuX_fiKnBFSOpdQY05h0sibfaO4Y66kxrH_OUYTkzh69-Ii0uXTD6SYBPJsB6thBvQik1wPVtvX7XzmXAfuopIYcHG90FJzLayMBr3cIj0ghqxAQ&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
-    "website": "http://www.ayurhermitage.com/",
-    "phone": "094465 64211",
-    "types": [
-      "establishment",
-      "health",
-      "point_of_interest"
-    ],
-    "vibes": [
-      "Established",
-      "Health",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 8.393768200000002,
-      "lng": 76.9792549
+      "lat": 8.5269135,
+      "lng": 76.93282119999999
     }
   },
   {
@@ -300,7 +141,7 @@
     "locality": "Thiruvananthapuram",
     "rating": 4.9,
     "reviews": 417,
-    "score": 99,
+    "score": 87,
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpIaDnwdyqNKGhzTPOQwD8LOAX_6aCXRHsrrSc3zxlpNEIbdZtxoVshzZl4XZKHk1WQKhRjxCSusrs7UT6Now86lobKy8MHOLeDgRYhwDsB1J79QlsblzUqyLIRYMUyIBO7Hv26a_ZluIhztZMG0ZE6CY1zF8P1yumukW2ho_1uCPpZ9s-vgEb4Lhvot7HeiXXkMEFPWnfp_Ypdm025a4LgBw-rXQcronQNQtmuBO9lYyGOGOUg3yoPYNreGfBYltvNhfMkUYKKUFPwQwp9XsC1avIh0OGzkYjsyt_tdhddwA&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
     "website": "http://santhimadomayurveda.com/",
     "phone": "085908 57905",
@@ -324,43 +165,98 @@
     }
   },
   {
-    "id": "ChIJvfAMkaClBTsRfnEbmHZiW9o",
-    "name": "The Grandspa Ayurvedic Wellness Centre",
-    "address": "Kovalam Beach Rd, near Taste Of Kerala Restaurant, Thiruvananthapuram, Kerala 695527, India",
+    "id": "ChIJ-6q4z7qlBTsR9R_f1kn7Np8",
+    "name": "Shiva Ayurveda",
+    "address": "AL Pack Bag premium Beach hotel, Light House Rd, Light House Beach, Kovalam, Thiruvananthapuram, Kerala 695521, India",
     "locality": "Thiruvananthapuram",
-    "rating": 4.8,
-    "reviews": 808,
-    "score": 98,
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHppYGW1wLDzqSKnu4n1BsMGPnWWT7NdSHarpLYPIF9AvfzqX-Rv5Ld8xdBJ0d7cx3WeKtqj6btMbY3i1oG6JBD29nA-CZ38BrCq-LZg2WLlLLd9wqHVDpHr2MVQKvOcuVKl7VOuKnGiQXoTCe0EqVu6Rh12kuxMgMm-25W8OIoZ0XeK-PMxuN43Ufw1BiTH_fR6-0A4gECDjYtugRm58nH1nKMp4ysukme61SJ8ac9X97u682EZ_ZYtNIZsG5o4FtKrToaDS4lYQpsPqklJpxrhAtejjMPPSmnWxAWv1YdViKKzODr6RCOf78_XCpaaDcOcgYjZ6_hx6yzdX0RN_ISb7DFFbKBdwLPoqsjOZX846Stjf_5B4EPHHwwwQky61xSkm3UtD-Ypwy9kYmNyqbBcLY74JxBw0pMf75irgeUpBQ&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
-    "website": "https://kmaaryavaidyasala.com/",
-    "phone": "093880 07007",
+    "rating": 4.9,
+    "reviews": 395,
+    "score": 86.7,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqGS8v2jKAQM1ZGwc6q-L9Zr2XXpZkSBPr2bHXSZta0h3y2NsTVU7I_GTSmM-bFLPtqDB2DycDG8_Cxu_JeDM1DAaPtROL_1dSaoyaF62OQytmaO_e6fA51BN0zgny1IBkH2J2-qPcY6vUVUWM2jOeNomCNTbZFB1X93T3RgUScNvYF2u6pWfq2svIitBnMVRGoXdDK8Gq_VWMZdzGFFEGrYUicM8BFWc5MYv_dgqoV08n3QI-wRY2MfNdag0F4h8XtmjT33tVbVBh4VV7-8kwnAJnriItB5FMh3N1Z1zpm-w&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://www.kovalamayurveda.com/",
+    "phone": "080862 08672",
     "types": [
       "establishment",
       "health",
-      "hospital",
-      "point_of_interest"
+      "point_of_interest",
+      "school",
+      "spa"
     ],
     "vibes": [
       "Established",
       "Health",
-      "Medical"
+      "Must Visit"
     ],
     "coordinates": {
-      "lat": 8.3933464,
-      "lng": 76.9777934
+      "lat": 8.3849716,
+      "lng": 76.9797679
     }
   },
   {
-    "id": "ChIJi-sIWwC7BTsRre63WX6tuSI",
-    "name": "atma wellness clinic trivandrum",
-    "address": "FWPR+XMR, Sreekanteswaram Temple Rd, Nalumukku, Pazhavangadi, Thiruvananthapuram, Kerala 695023, India",
+    "id": "ChIJYwzralC5BTsR-RXmXgdc9aM",
+    "name": "Ayurchakra Ayurveda Wellness Center",
+    "address": "Kesavadasapuram Jct, opp. Chinnus Hotel (Besides Bank of Baroda Building, Kesavadasapuram, Thiruvananthapuram, Kerala 695004, India",
     "locality": "Thiruvananthapuram",
-    "rating": 4.8,
+    "rating": 4.9,
+    "reviews": 317,
+    "score": 85.7,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpAP1pfkP9GjtO24wDze7IVau58yM7woWQ39ejldteSY7HADPEZHKYJ2HX7Dq4bJrpkpAZRwnYILzQtU-Lydxpid2LOn_9oEMEC8ogNnon1dpjMN--pAXgYm_FCn67g_z3-UCYdJtCaFgaJiXGXgtf6sjS5sUloHlowmR0dJe-jkdt8RAuDFiQSt80RH7suLTqZynby4lAxzshLCPg2hlAxuDbkNIULoe-Ji2hBrEzoO56-SC9Z5KJwCXmxwneAJYUZwNo4TD4dnBzBZx0MM7IkxZ2EzqsSab-b1S1cXnIquQ&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://www.ayurchakra.co.in/",
+    "phone": "094000 16464",
+    "types": [
+      "establishment",
+      "health",
+      "point_of_interest",
+      "spa"
+    ],
+    "vibes": [
+      "Established",
+      "Health",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.5304446,
+      "lng": 76.9386038
+    }
+  },
+  {
+    "id": "ChIJLY8DsN67BTsRnWIMrhPZqh4",
+    "name": "Vibrance Spa and Ayurvedic Wellness Centre Pattom",
+    "address": "Second floor of, Chitra Multispeciality Dental Centre, Adam's Tower, Pattom - Kowdiar Rd, near Sunny Diamonds, Pattom, Thiruvananthapuram, Kerala 695004, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 5,
     "reviews": 239,
-    "score": 98,
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqPi03yf2Vk_dnlcnpg-ZnIhmIChIMerE4xzCw_6Z8YHBkyoAzA0r2L8--e-HWuuWSfG0pFtB1ViNQbggCBuV8AuQ5mUqlLpkYAwbPRHbSJFAzDK0law2eUOQSUs1-M8ldJ9YSj-WVDuoFH7L1RXSl9_pSuO6-Sp1JA9Dw3gaghX4znX_ZFO1bTLLeT-oEsJeQYNfuqZi3YiGR8k1knME1zF5fHOC1FtVPbvuyEixCd0RGXwiPZtjr8s2hUkicf1qMf9FReNiIMHzDhapOwUo7xoTvl43IiEUHFeseFRcfHILr7uhKscNWaHqcjVP6ZBKwl8PA68vLORFd8um_PorJe4jOKgFHlgtbQj8uDCRg1ri4pD-xsKuO2xMrdadm2GMrLk9FeIF4ApFisx8i-_oYkDiXHPbEXqIPWxlOzfAHN4xhgw4h9XKtU4kz8FKkz&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
-    "website": "https://www.atmanaturalwellness.com/",
-    "phone": null,
+    "score": 85.3,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHq1cMDDqOj9M3FzN_JnDe-Cisuyo6ugnGE4SlYzwyo_E74iz5z2EFkrqhYwfs94ULkwFdEk51jiU2ZwO0_lNpDj1U4Qjkd-UgGuigrjvko_u-AGb8M8aPF1Kb2YEhXIZNKW03OyXV8gZVm9itPmkzm0QTdiR-bEwRgP7MGv9DnwKqPI3lKz3pEHK3XY3LDG3svSmh3WZTUZnPEHBL1UBtbINcZHlauk39Iua931iedSZ8m4ZxLwqjs9IIDEx9Zo-BSEFHx6b0CFXfb9ZwkT-8BHJfiIfwEDWtrY_SwawFpZnIeZYLPVDGfHfAX9BCJsq5Pu360l5sehtJYHiWSLlq_iBRX0DePk2II_6CmxfEZxUom151_9hTbGwRuPFDiVeuEsXomCa8rdzn5Q6oE8RKGXGY3YFXynyy6ir7bUI662MzYs&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://www.spavibrance.com/",
+    "phone": "070128 65262",
+    "types": [
+      "establishment",
+      "health",
+      "point_of_interest",
+      "spa"
+    ],
+    "vibes": [
+      "Established",
+      "Health",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.519318799999999,
+      "lng": 76.9428142
+    }
+  },
+  {
+    "id": "ChIJf0NlbQO7BTsRmtWuL8JvOkM",
+    "name": "Santhisukham Ayurveda",
+    "address": "UPS School, opposite Chakka, Chacka, Thiruvananthapuram, Kerala 695024, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 5,
+    "reviews": 186,
+    "score": 84.1,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpPDQrwV-EeWAcvSS5tAJFfiA8KVAFvhqpKrFP1E00ddcyNzu8HDDPmqT-5Ro4hIOY2ElIQDomNquhErLgH9dwKiMHvfYOSC4rYVaKbS7ofyNj4dhKDPr4iWziM1fmpJlRgQqCWgHgSztcOHeH6nbzLO8vJARZzs-DAm4Sc0EnK-24cBwrIu1JjYZQd2S-GyexoPrrOoVOsWvhjC0r0Bu4mK70_gK0TbsBuxAyv2uDyJFCXTV3Z9GHVL8QXA-GIeoYD-I82iHPHfRx3leQMmHEKkQjnp7FfPj4_uWoiXEOWNw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://www.santhisukham.com/",
+    "phone": "081390 06999",
     "types": [
       "establishment",
       "health",
@@ -372,8 +268,8 @@
       "Must Visit"
     ],
     "coordinates": {
-      "lat": 8.4874833,
-      "lng": 76.94163069999999
+      "lat": 8.4926732,
+      "lng": 76.92415319999999
     }
   },
   {
@@ -383,7 +279,7 @@
     "locality": "Thiruvananthapuram",
     "rating": 4.8,
     "reviews": 273,
-    "score": 98,
+    "score": 84,
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHo1KvorGtYH5TALs4ZetnmNZQvylEXZ6I8oXr4iUWT72HZN71m6FSKifg8uMrLTiFwVZSgCmizJJELtMwouxdLXZp6X_MBVI9wPliQ2amLSFcaHMbvMpvLarJlqpII9LI8aw5oh8yhXNu-y904k_eqAopY_5e13rDHyFZxKKGsVe3gyBnJZJfUs_bTaKxgOe29hnmVBMOTAov4ZXKzvG_NJ5TEBcckX5TGtSpZUbQ3iostAPc9rQi23yKpMqlA4Io6Qsp9-qCh3mBQDvBTsGc5av_vX8RqHBflYklZeTtLqIwqSWF3jwOXnVf5hg3FLyh3L_Tb_IR2QQ9pH5Fq63xGFPd5dt1vTDxtvaXylSEmaEGiP2h4sxgXSWcPFWDy-TYB6F00chDQDp7SQcggfNQvKwwG0jXbdlBogDaZJiW9r2IZt&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
     "website": "https://www.leelajani.com/",
     "phone": "085476 75555",
@@ -410,7 +306,7 @@
     "locality": "Thiruvananthapuram",
     "rating": 4.8,
     "reviews": 277,
-    "score": 98,
+    "score": 84,
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrPcVQ4cljydfZ_1LmJaUkhN5b4I2LNN099FSsqyhx2TZb8y5sjgXxl3CC14ChAfpsRfKCH2kjsuQ23SVNzqZrTnk6udIu4psSi5KbT_y8zWYMS2DutTItyWqPY_Pfrfw9eLXRI8BhwGOCsRBM84ZNHTu2rVmBPdMl4OTnle7fqPVnAaHrbrDmJ0AWp3pVOyyN9lmyoeuQ1FVnijhTJrA6g69IBytYd-Ldz6tBoXoDP3HHC_rxcGky2N4LJfY7vneX2X2QysBy99rlqjZZNCSEta15kIYmreQc52Q0VTuCZNg&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
     "website": "https://www.saatwika.in/",
     "phone": "098462 22059",
@@ -433,13 +329,143 @@
     }
   },
   {
+    "id": "ChIJ8-9z54ulBTsRmZWCfGYlMiA",
+    "name": "Triloka Holistic Wellness",
+    "address": "Beach Rd, Kovalam, Thiruvananthapuram, Kerala 695527, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.9,
+    "reviews": 196,
+    "score": 83.4,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpQ0GQfegv8lEokOtArWlLeF9IIHv-B9CPNDaqoWtUdSj0_hB7pyLZQ8ZT89WmusOj562QBQ2cjcRE79BnoLQjj1TiEnHymCxNtQa0ss8GBK_ldCu4eX2xBpvj8sawIBdsQXeMNIDY5mrGHuCKPgK2x4BxMjzy1M_3uJp-DE9oujH9sXCuDkEeLlhSdNCMymQGp01a9w6yv2Nu-OiT3Q1hLKqPh10ASSUMwdt8XPMWleQvDeFy-BKnVZ3s7mE__w-d9-s6hJZQJGDn5ZqFvy8bW7VE9-bhltqUML4SuSEUJQg&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://trilokaholisticwellness.com/",
+    "phone": "099619 10451",
+    "types": [
+      "establishment",
+      "health",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Health",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.3946877,
+      "lng": 76.97952819999999
+    }
+  },
+  {
+    "id": "ChIJi-sIWwC7BTsRre63WX6tuSI",
+    "name": "atma wellness clinic trivandrum",
+    "address": "FWPR+XMR, Sreekanteswaram Temple Rd, Nalumukku, Pazhavangadi, Thiruvananthapuram, Kerala 695023, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.8,
+    "reviews": 239,
+    "score": 83.3,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqPi03yf2Vk_dnlcnpg-ZnIhmIChIMerE4xzCw_6Z8YHBkyoAzA0r2L8--e-HWuuWSfG0pFtB1ViNQbggCBuV8AuQ5mUqlLpkYAwbPRHbSJFAzDK0law2eUOQSUs1-M8ldJ9YSj-WVDuoFH7L1RXSl9_pSuO6-Sp1JA9Dw3gaghX4znX_ZFO1bTLLeT-oEsJeQYNfuqZi3YiGR8k1knME1zF5fHOC1FtVPbvuyEixCd0RGXwiPZtjr8s2hUkicf1qMf9FReNiIMHzDhapOwUo7xoTvl43IiEUHFeseFRcfHILr7uhKscNWaHqcjVP6ZBKwl8PA68vLORFd8um_PorJe4jOKgFHlgtbQj8uDCRg1ri4pD-xsKuO2xMrdadm2GMrLk9FeIF4ApFisx8i-_oYkDiXHPbEXqIPWxlOzfAHN4xhgw4h9XKtU4kz8FKkz&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://www.atmanaturalwellness.com/",
+    "phone": null,
+    "types": [
+      "establishment",
+      "health",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Health",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.4874833,
+      "lng": 76.94163069999999
+    }
+  },
+  {
+    "id": "ChIJZ_GxBsi7BTsRzm0_GH3vt5I",
+    "name": "Sahasra Ayurvedic Wellness Centre & Spa",
+    "address": "Nandanam, Elipod Road, near Vettamukku, Vettamukku, PTP Nagar, Thirumala, Thiruvananthapuram, Kerala 695006, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.9,
+    "reviews": 124,
+    "score": 81.1,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqzEk_B2kVIaEbBMpjmR1RvjaU3IzUL0z9qabnymUEh4rYDj0MGrr60zKfheceyqiR_gZqsdFO2lqqUh8_25AI20YjiH-9rK1WPUQcZGYDKI-O5ZmGtWvZuoBzxCD8unVHynr3WZFK8fbqM4Y3BdsXsQ8-Byzfun57svM_YcqMkG6tvGxyDq9vgH0t1g39_zOC2oA3yU7dH05KM6cH02Enh8Pj8vqEYfrw0OcE-gevvq2HxiJ4Vp_7fD9lV0LcdhcgMq6dlNodSeX2ep0NyA9wYA8tkSF0g75_V73qHn44g2g&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://www.sahasraayurveda.com/",
+    "phone": "098951 43505",
+    "types": [
+      "establishment",
+      "point_of_interest",
+      "spa"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Spa & Wellness"
+    ],
+    "coordinates": {
+      "lat": 8.5092497,
+      "lng": 76.989161
+    }
+  },
+  {
+    "id": "ChIJSYIQ86alBTsRQoyhxMQv-Eo",
+    "name": "Ayur Hermitage Sivadha Ayurvedic Centre",
+    "address": "Beach Rd, Kovalam, Thiruvananthapuram, Kerala 695527, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.9,
+    "reviews": 123,
+    "score": 81.1,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHp5RjRfUVhprt-LEWfwjbAlwKVjznSrajzqfCtYSbxvDHX90lZF5Cf5_8m807zTmjC5fK_-z0J51AQZE85SNw877lzjIQHwrnataeUXOyiVrrh0b1zrzK9QkbNBcKJ99WfqB4xWhHzS8vhVlTTHlQOK_pNpcRF3bktS2NG2cnsKN_9jwu8Q7EoZS6_qI2bHokh1PO4cHJKGslRUkTR4_g1azhXBjfS16sPpvyMcDYb5j0_8OCcD_HqDw5LLyQVxti91SyPS8Xwce_aBU-eWWgtfkMorhs95R544H8t4aztd7R-U4GRXtsubEsMnRAZwuX_fiKnBFSOpdQY05h0sibfaO4Y66kxrH_OUYTkzh69-Ii0uXTD6SYBPJsB6thBvQik1wPVtvX7XzmXAfuopIYcHG90FJzLayMBr3cIj0ghqxAQ&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://www.ayurhermitage.com/",
+    "phone": "094465 64211",
+    "types": [
+      "establishment",
+      "health",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Health",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.393768200000002,
+      "lng": 76.9792549
+    }
+  },
+  {
+    "id": "ChIJhbA0klO5BTsRZweCzayoFz8",
+    "name": "AyurRishi Wellness Therapy",
+    "address": "House .Number 12/13, AyurRishi Wellness Center, 6th Stone, near Modern Medical Store, Vazhayila, Karakulam, Thiruvananthapuram, Kerala 695564, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 5,
+    "reviews": 87,
+    "score": 80.4,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqgZrZY2TWFx-JrvsRaCT6PvhIp9lfPvath2Dmh7Nu4T4Kb9Iy_TeZ1tW9ZeS314yI9ILKpLth5L5k1krhBCnlAByX639zXqrq6FPl1jrAM1JxsQj1SEkf-udJ8jf9fgvYVb3Pm5ZmP59Flc5SVlTbMDzOl3JITM9pEayYN2769sqxwCdFntSjzJVOM7hrEXuzE9aHqqftde-eJlC6cCj-i_MlckIx-6ErY5qi_U-60y-Zmo0532ZnfiS2DB2lmr68ywCKiPRikvBDuSF5wPEKUWMi71gqDcTAycE3817LYtQ&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "088911 90422",
+    "types": [
+      "establishment",
+      "health",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Health",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.552163,
+      "lng": 76.9759772
+    }
+  },
+  {
     "id": "ChIJb913gN67BTsR_kMy6rb_310",
     "name": "Season Two Ayurveda",
     "address": "First Floor, Koluthara Towers,Near Marappalam, Pattom, Thiruvananthapuram, Kerala 695004, India",
     "locality": "Thiruvananthapuram",
     "rating": 4.9,
     "reviews": 93,
-    "score": 97,
+    "score": 79.8,
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHoY2McSy8tFWsNRs3_wagDqWZLIV51H_l5kFMVVGWzHcSyCk7GYq_HeXUGJqENJbowNKUPfBAaljG-6G3yjUJ5Swl3b1ZsagOEgoYJ-3cazFsaPiKMXUXhYJInlc2KjZAfa9RUJ6Fd8OFxv-Gt2yoM4_vCfUTkcv6XZ2i-tA5NyObXQ1ETBxCxeCW1iBomxHyubOEHnvQNC-A8UQZazV7_uIOe2zMAW4vafWEEIUNaWerp2YaTQyhf2-6-yoLItMf-Qjs72lGM6du0lRkIFIYtLT5dfdPtT2mDH0tuFRG3mwg&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
     "website": "https://ayurveda.seasontwo.com/",
     "phone": "082811 10357",
@@ -462,66 +488,13 @@
     }
   },
   {
-    "id": "ChIJEzFkIbG7BTsR8pS8TohWbj0",
-    "name": "Dr.SEEMA’S AYURVEDIC WELLNESS CENTER",
-    "address": "Lakshmi Nivas, Kalabhavan Mani Rd, opposite Ajwa Hotel, Panavila, Thycaud, Thiruvananthapuram, Kerala 695014, India",
-    "locality": "Thiruvananthapuram",
-    "rating": 4.6,
-    "reviews": 242,
-    "score": 96,
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqCcns2qlCHQEeEhO42Aw8Li9x7n9pR50kL8jXjixPwq46WEC7iiB96lwAXAv0FWws-CLj2YccbKmj1sqnQnfgKEjICVhlNfQsy5Wj9LQu3owLV8Vr6xJqP-WYzru94VBw4uwvmZ6klcsctDUz66kDaK5qfTFpxvH_RemwjsdbOk47m9fAZPpl7z2h_hAKXkwXo2mIPgqPYnWTQMDBnUMogm19-l9pPhM9Ra4JxkVGTxkIf3wIhf1E5DLk9WM1U5Ckf4QRdjgfZ9NCJyrJCu5xAi_lo4agM01tHDSHWrF-h8QwB8b3Sc4BqdpJxjgXzuvZ091-Yz1rOiuMmlfE0iCT1ry9fNfQMbrwsOH6x4k2ce95n3zzWadwgjq7sjIphrOI9Y_KqwHS6byZyeq79xrQ8ZnXX-7x6Y7Qr4JXnL6ECP5JH&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
-    "website": "http://drseemaranjit.com/",
-    "phone": "0471 409 9920",
-    "types": [
-      "establishment",
-      "health",
-      "point_of_interest",
-      "spa"
-    ],
-    "vibes": [
-      "Established",
-      "Health",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 8.4977532,
-      "lng": 76.95601409999999
-    }
-  },
-  {
-    "id": "ChIJhbA0klO5BTsRZweCzayoFz8",
-    "name": "AyurRishi Wellness Therapy",
-    "address": "House .Number 12/13, AyurRishi Wellness Center, 6th Stone, near Modern Medical Store, Vazhayila, Karakulam, Thiruvananthapuram, Kerala 695564, India",
-    "locality": "Thiruvananthapuram",
-    "rating": 5,
-    "reviews": 87,
-    "score": 96,
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqgZrZY2TWFx-JrvsRaCT6PvhIp9lfPvath2Dmh7Nu4T4Kb9Iy_TeZ1tW9ZeS314yI9ILKpLth5L5k1krhBCnlAByX639zXqrq6FPl1jrAM1JxsQj1SEkf-udJ8jf9fgvYVb3Pm5ZmP59Flc5SVlTbMDzOl3JITM9pEayYN2769sqxwCdFntSjzJVOM7hrEXuzE9aHqqftde-eJlC6cCj-i_MlckIx-6ErY5qi_U-60y-Zmo0532ZnfiS2DB2lmr68ywCKiPRikvBDuSF5wPEKUWMi71gqDcTAycE3817LYtQ&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
-    "website": null,
-    "phone": "088911 90422",
-    "types": [
-      "establishment",
-      "health",
-      "point_of_interest"
-    ],
-    "vibes": [
-      "Established",
-      "Health",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 8.552163,
-      "lng": 76.9759772
-    }
-  },
-  {
     "id": "ChIJ7_QsU9K5BTsROqWrZfN8jog",
     "name": "AyurJyothi Ayurvedic Wellness Centre",
     "address": "Medical College, KRA 10, PO, Kallampally, Thiruvananthapuram, Kerala 695011, India",
     "locality": "Thiruvananthapuram",
     "rating": 5,
     "reviews": 72,
-    "score": 92,
+    "score": 79.5,
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHo89hQQ5l8MazI5mqFXrBisDsT-0hMhUpRsBXD7e37Johv1Fk_fkp87apbj91bu3vkrzwzL02bmxfVjzR9CyZ8bekdpXzlMdV-gJRrf-ISPMAwot986qwFGloF9KDzLku1Ci4q-Ga7tabQEJUtM7VkaEsY9Qqj49sjwG_UaaG1Pw-NyucHUfdc7HgtfFOkUMt5QS5WfvHhl2KmSBLq6wmTxTmwBhhWAm9mZOAWdmtcgh4vQWDx7PhHecxrmMkjTAVPLD8ptc7u85tckfeFVb_SXRYO_5mJn6WJLfLcDi3LNhw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
     "website": null,
     "phone": "070125 35762",
@@ -542,13 +515,40 @@
     }
   },
   {
+    "id": "ChIJEzFkIbG7BTsR8pS8TohWbj0",
+    "name": "Dr.SEEMA’S AYURVEDIC WELLNESS CENTER",
+    "address": "Lakshmi Nivas, Kalabhavan Mani Rd, opposite Ajwa Hotel, Panavila, Thycaud, Thiruvananthapuram, Kerala 695014, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.6,
+    "reviews": 242,
+    "score": 78.4,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqCcns2qlCHQEeEhO42Aw8Li9x7n9pR50kL8jXjixPwq46WEC7iiB96lwAXAv0FWws-CLj2YccbKmj1sqnQnfgKEjICVhlNfQsy5Wj9LQu3owLV8Vr6xJqP-WYzru94VBw4uwvmZ6klcsctDUz66kDaK5qfTFpxvH_RemwjsdbOk47m9fAZPpl7z2h_hAKXkwXo2mIPgqPYnWTQMDBnUMogm19-l9pPhM9Ra4JxkVGTxkIf3wIhf1E5DLk9WM1U5Ckf4QRdjgfZ9NCJyrJCu5xAi_lo4agM01tHDSHWrF-h8QwB8b3Sc4BqdpJxjgXzuvZ091-Yz1rOiuMmlfE0iCT1ry9fNfQMbrwsOH6x4k2ce95n3zzWadwgjq7sjIphrOI9Y_KqwHS6byZyeq79xrQ8ZnXX-7x6Y7Qr4JXnL6ECP5JH&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://drseemaranjit.com/",
+    "phone": "0471 409 9920",
+    "types": [
+      "establishment",
+      "health",
+      "point_of_interest",
+      "spa"
+    ],
+    "vibes": [
+      "Established",
+      "Health",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.4977532,
+      "lng": 76.95601409999999
+    }
+  },
+  {
     "id": "ChIJ107OF5m_BTsR9MHeG6GcVD0",
     "name": "AYUSHI AYURVEDA WELLNESS",
     "address": "Chavadimukku, Amadi Nagar, Sreekaryam, Thiruvananthapuram, Kerala 695017, India",
     "locality": "Thiruvananthapuram",
     "rating": 4.9,
     "reviews": 68,
-    "score": 89,
+    "score": 78.3,
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHq4Mpyp5DnDQ8DJbL_UiJKG-qjMVgyEyA8Us1CHcIVr3ZQlz5ulp3oez7YG_5yQG65vun0icCkOUwH0P-f3a1WoeeVgSCKmysxySqDXxTkRjXt6fFoCucNIbm31R5HqT8RE--CykVFi0qGAYGZbIXuNvgWLQoHntjd943-zR42pXg1DhI_1gh1ReitYU7R4rr8FNq-WbazWju5EH43uP7BVQhxk3REJ5158haL-EC9yiU3PpS8bXtNqgEEr_zkU0DgGGiqXUUjIi7U1nDJy9o29M2htM5gvIs89LTqjYt46CCb-OONpVJfvBGbbpjWgcmQmRo-FLQA6JNTyxfZUIUjS9jx2ASjGuMxBHqmni_YaRD5UomaLyD7T0ArH2kU4JKoVVNHcxNMc4XyYhUWNKAF3ouxhog79K2ZU_jFewh4&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
     "website": null,
     "phone": "096338 72322",
@@ -568,40 +568,13 @@
     }
   },
   {
-    "id": "ChIJITbdxQG7BTsRXlC2BN4LjPU",
-    "name": "Santhisree Ayurveda Panchakarma Centre",
-    "address": "varambassery junction, near law college junction, University of Kerala Senate House Campus, Kunnukuzhy, Thiruvananthapuram, Kerala 695035, India",
-    "locality": "Thiruvananthapuram",
-    "rating": 4.4,
-    "reviews": 150,
-    "score": 89,
-    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpyfG7PC2eUJpp5PWmmwJawBaiBPBxJiCrnfmCDboIyllSsA1BS46E4-OFo7mVxwiZKHbOATiJDt_8DmqQZ6EwUxzpjJ8FiWn4i9iUA3z1pMbqQ-n66i2zlLawbjv98L-k-iV4vqbynezhzqXTkWEMx7gVZgHCb381-KbZOVMEb-CiApDIOG8tBF707D9yfdr51Lys2uWSWvoCHenJpmwIGQxFoNLhBvXKXTXuaOse_Elr5FGcbY3taYdxPBe-GyTCg9Dpj2x1fFdnTDUVTptvcW8AlyOFNe-DQ9abhT-xU0g&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
-    "website": "http://santhisree.com/",
-    "phone": "090747 34627",
-    "types": [
-      "establishment",
-      "health",
-      "point_of_interest",
-      "spa"
-    ],
-    "vibes": [
-      "Established",
-      "Health",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 8.5069104,
-      "lng": 76.94329909999999
-    }
-  },
-  {
     "id": "ChIJ4y9DUc-5BTsRXWvdbERwiVk",
     "name": "Thejaswini Ayurveda Clinic & Panchakarma Center",
     "address": "J-78, Ln A, Pattom P.O, Joythi Nagar, Kesavadasapuram, Thiruvananthapuram, Kerala 695004, India",
     "locality": "Thiruvananthapuram",
     "rating": 4.9,
     "reviews": 62,
-    "score": 88,
+    "score": 77.8,
     "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHphCSCB4ZJnNjq271Im_EQuT2c-j_vu_2cdi5Iyn2KPVk8mO1KDKdLptqYNtDOgOBICQAOj-G0rKMN-QV0oPyDwLkMjRl2wy_mIW07txIe3WTFD8y2BwqvaR_e5ln-WFE6pZPYR8n_R7z829e_j-tbKoqSL0TvQ-uajlgNrZh5r3kmpSBuA8L4WgmldsLfVbBVJauG19JnbHB6ucMERD0gCpA19cSBEjT6MX04CmZdfKg3jv6Evz_FOYuRbzX1recp5ITXasXItr32E-8UlcGh3ByPcABr8-0JA61_aKajJ0A&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
     "website": "https://thejaswiniayurveda.com/",
     "phone": "089214 84842",
@@ -620,6 +593,33 @@
     "coordinates": {
       "lat": 8.527291,
       "lng": 76.9394054
+    }
+  },
+  {
+    "id": "ChIJITbdxQG7BTsRXlC2BN4LjPU",
+    "name": "Santhisree Ayurveda Panchakarma Centre",
+    "address": "varambassery junction, near law college junction, University of Kerala Senate House Campus, Kunnukuzhy, Thiruvananthapuram, Kerala 695035, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.4,
+    "reviews": 150,
+    "score": 71.1,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpyfG7PC2eUJpp5PWmmwJawBaiBPBxJiCrnfmCDboIyllSsA1BS46E4-OFo7mVxwiZKHbOATiJDt_8DmqQZ6EwUxzpjJ8FiWn4i9iUA3z1pMbqQ-n66i2zlLawbjv98L-k-iV4vqbynezhzqXTkWEMx7gVZgHCb381-KbZOVMEb-CiApDIOG8tBF707D9yfdr51Lys2uWSWvoCHenJpmwIGQxFoNLhBvXKXTXuaOse_Elr5FGcbY3taYdxPBe-GyTCg9Dpj2x1fFdnTDUVTptvcW8AlyOFNe-DQ9abhT-xU0g&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://santhisree.com/",
+    "phone": "090747 34627",
+    "types": [
+      "establishment",
+      "health",
+      "point_of_interest",
+      "spa"
+    ],
+    "vibes": [
+      "Established",
+      "Health",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.5069104,
+      "lng": 76.94329909999999
     }
   }
 ]
