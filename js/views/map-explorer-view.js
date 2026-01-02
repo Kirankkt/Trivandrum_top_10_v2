@@ -81,6 +81,104 @@ const MAP_CATEGORIES = {
         color: '#ec4899', // Pink
         dataFile: 'data/boutiques.json',
         detailRoute: '/entity/boutiques/'
+    },
+    supermarkets: {
+        label: 'Supermarkets',
+        icon: '',
+        color: '#16a34a', // Green
+        dataFile: 'data/supermarkets.json',
+        detailRoute: '/entity/supermarkets/'
+    },
+    clothing_stores: {
+        label: 'Clothing',
+        icon: '',
+        color: '#d946ef', // Fuchsia
+        dataFile: 'data/clothing_stores.json',
+        detailRoute: '/entity/clothing_stores/'
+    },
+    art_galleries: {
+        label: 'Art Galleries',
+        icon: '',
+        color: '#8b5cf6', // Violet
+        dataFile: 'data/art_galleries.json',
+        detailRoute: '/entity/art_galleries/'
+    },
+    cultural_centers: {
+        label: 'Cultural Centers',
+        icon: '',
+        color: '#6366f1', // Indigo
+        dataFile: 'data/cultural_centers.json',
+        detailRoute: '/entity/cultural_centers/'
+    },
+    theatres: {
+        label: 'Theatres',
+        icon: '',
+        color: '#ef4444', // Red
+        dataFile: 'data/music_drama_centers.json',
+        detailRoute: '/entity/theatres/'
+    },
+    landmarks: {
+        label: 'Landmarks',
+        icon: '',
+        color: '#f59e0b', // Amber
+        dataFile: 'data/landmarks.json',
+        detailRoute: '/entity/landmarks/'
+    },
+    beaches: {
+        label: 'Beaches',
+        icon: '',
+        color: '#0ea5e9', // Sky blue
+        dataFile: 'data/beaches.json',
+        detailRoute: '/entity/beaches/'
+    },
+    nature_sanctuaries: {
+        label: 'Wildlife',
+        icon: '',
+        color: '#22c55e', // Green
+        dataFile: 'data/nature_sanctuaries.json',
+        detailRoute: '/entity/nature_sanctuaries/'
+    },
+    backwaters: {
+        label: 'Backwaters',
+        icon: '',
+        color: '#14b8a6', // Teal
+        dataFile: 'data/backwaters.json',
+        detailRoute: '/entity/backwaters/'
+    },
+    sports_clubs: {
+        label: 'Sports Clubs',
+        icon: '',
+        color: '#f97316', // Orange
+        dataFile: 'data/sports_clubs.json',
+        detailRoute: '/entity/sports_clubs/'
+    },
+    training_academies: {
+        label: 'Training',
+        icon: '',
+        color: '#eab308', // Yellow
+        dataFile: 'data/training_academies.json',
+        detailRoute: '/entity/training_academies/'
+    },
+    adventure_sports: {
+        label: 'Adventure',
+        icon: '',
+        color: '#ef4444', // Red
+        dataFile: 'data/adventure_sports.json',
+        detailRoute: '/entity/adventure_sports/'
+    },
+    ayurveda: {
+        label: 'Ayurveda',
+        icon: '',
+        color: '#10b981', // Emerald
+        dataFile: 'data/ayurveda_wellness.json',
+        detailRoute: '/entity/ayurveda/'
+    },
+    yoga: {
+        label: 'Yoga',
+        icon: '',
+        color: '#a855f7', // Purple
+        dataFile: 'data/yoga_meditation.json',
+        detailRoute: '/entity/yoga/'
     }
 };
 
@@ -506,21 +604,7 @@ async function renderMapExplorerView() {
                     </div>
 
                     <div class="category-section">
-                        <h4>Services</h4>
-                        <button class="map-category-toggle" data-category="healthcare" style="--toggle-color: ${MAP_CATEGORIES.healthcare.color}">
-                            <span class="toggle-icon">${MAP_CATEGORIES.healthcare.icon}</span>
-                            <span class="toggle-label">Healthcare</span>
-                            <span class="toggle-count">${counts.healthcare || 0}</span>
-                        </button>
-                        <button class="map-category-toggle" data-category="education" style="--toggle-color: ${MAP_CATEGORIES.education.color}">
-                            <span class="toggle-icon">${MAP_CATEGORIES.education.icon}</span>
-                            <span class="toggle-label">Education</span>
-                            <span class="toggle-count">${counts.education || 0}</span>
-                        </button>
-                    </div>
-
-                    <div class="category-section">
-                        <h4>Shopping & Culture</h4>
+                        <h4>Shopping</h4>
                         <button class="map-category-toggle" data-category="malls" style="--toggle-color: ${MAP_CATEGORIES.malls.color}">
                             <span class="toggle-icon">${MAP_CATEGORIES.malls.icon}</span>
                             <span class="toggle-label">Malls</span>
@@ -531,20 +615,106 @@ async function renderMapExplorerView() {
                             <span class="toggle-label">Boutiques</span>
                             <span class="toggle-count">${counts.boutiques || 0}</span>
                         </button>
+                        <button class="map-category-toggle" data-category="supermarkets" style="--toggle-color: ${MAP_CATEGORIES.supermarkets.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.supermarkets.icon}</span>
+                            <span class="toggle-label">Supermarkets</span>
+                            <span class="toggle-count">${counts.supermarkets || 0}</span>
+                        </button>
+                        <button class="map-category-toggle" data-category="clothing_stores" style="--toggle-color: ${MAP_CATEGORIES.clothing_stores.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.clothing_stores.icon}</span>
+                            <span class="toggle-label">Clothing</span>
+                            <span class="toggle-count">${counts.clothing_stores || 0}</span>
+                        </button>
                         <button class="map-category-toggle" data-category="specialty_shops" style="--toggle-color: ${MAP_CATEGORIES.specialty_shops.color}">
                             <span class="toggle-icon">${MAP_CATEGORIES.specialty_shops.icon}</span>
                             <span class="toggle-label">Specialty</span>
                             <span class="toggle-count">${counts.specialty_shops || 0}</span>
+                        </button>
+                    </div>
+
+                    <div class="category-section">
+                        <h4>Culture</h4>
+                        <button class="map-category-toggle" data-category="landmarks" style="--toggle-color: ${MAP_CATEGORIES.landmarks.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.landmarks.icon}</span>
+                            <span class="toggle-label">Landmarks</span>
+                            <span class="toggle-count">${counts.landmarks || 0}</span>
                         </button>
                         <button class="map-category-toggle" data-category="museums" style="--toggle-color: ${MAP_CATEGORIES.museums.color}">
                             <span class="toggle-icon">${MAP_CATEGORIES.museums.icon}</span>
                             <span class="toggle-label">Museums</span>
                             <span class="toggle-count">${counts.museums || 0}</span>
                         </button>
+                        <button class="map-category-toggle" data-category="theatres" style="--toggle-color: ${MAP_CATEGORIES.theatres.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.theatres.icon}</span>
+                            <span class="toggle-label">Theatres</span>
+                            <span class="toggle-count">${counts.theatres || 0}</span>
+                        </button>
+                        <button class="map-category-toggle" data-category="art_galleries" style="--toggle-color: ${MAP_CATEGORIES.art_galleries.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.art_galleries.icon}</span>
+                            <span class="toggle-label">Art Galleries</span>
+                            <span class="toggle-count">${counts.art_galleries || 0}</span>
+                        </button>
                         <button class="map-category-toggle" data-category="religious_sites" style="--toggle-color: ${MAP_CATEGORIES.religious_sites.color}">
                             <span class="toggle-icon">${MAP_CATEGORIES.religious_sites.icon}</span>
                             <span class="toggle-label">Religious Sites</span>
                             <span class="toggle-count">${counts.religious_sites || 0}</span>
+                        </button>
+                    </div>
+
+                    <div class="category-section">
+                        <h4>Nature</h4>
+                        <button class="map-category-toggle" data-category="beaches" style="--toggle-color: ${MAP_CATEGORIES.beaches.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.beaches.icon}</span>
+                            <span class="toggle-label">Beaches</span>
+                            <span class="toggle-count">${counts.beaches || 0}</span>
+                        </button>
+                        <button class="map-category-toggle" data-category="nature_sanctuaries" style="--toggle-color: ${MAP_CATEGORIES.nature_sanctuaries.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.nature_sanctuaries.icon}</span>
+                            <span class="toggle-label">Wildlife</span>
+                            <span class="toggle-count">${counts.nature_sanctuaries || 0}</span>
+                        </button>
+                        <button class="map-category-toggle" data-category="backwaters" style="--toggle-color: ${MAP_CATEGORIES.backwaters.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.backwaters.icon}</span>
+                            <span class="toggle-label">Backwaters</span>
+                            <span class="toggle-count">${counts.backwaters || 0}</span>
+                        </button>
+                    </div>
+
+                    <div class="category-section">
+                        <h4>Sports</h4>
+                        <button class="map-category-toggle" data-category="sports_clubs" style="--toggle-color: ${MAP_CATEGORIES.sports_clubs.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.sports_clubs.icon}</span>
+                            <span class="toggle-label">Sports Clubs</span>
+                            <span class="toggle-count">${counts.sports_clubs || 0}</span>
+                        </button>
+                        <button class="map-category-toggle" data-category="adventure_sports" style="--toggle-color: ${MAP_CATEGORIES.adventure_sports.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.adventure_sports.icon}</span>
+                            <span class="toggle-label">Adventure</span>
+                            <span class="toggle-count">${counts.adventure_sports || 0}</span>
+                        </button>
+                        <button class="map-category-toggle" data-category="training_academies" style="--toggle-color: ${MAP_CATEGORIES.training_academies.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.training_academies.icon}</span>
+                            <span class="toggle-label">Training</span>
+                            <span class="toggle-count">${counts.training_academies || 0}</span>
+                        </button>
+                    </div>
+
+                    <div class="category-section">
+                        <h4>Wellness</h4>
+                        <button class="map-category-toggle" data-category="healthcare" style="--toggle-color: ${MAP_CATEGORIES.healthcare.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.healthcare.icon}</span>
+                            <span class="toggle-label">Healthcare</span>
+                            <span class="toggle-count">${counts.healthcare || 0}</span>
+                        </button>
+                        <button class="map-category-toggle" data-category="ayurveda" style="--toggle-color: ${MAP_CATEGORIES.ayurveda.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.ayurveda.icon}</span>
+                            <span class="toggle-label">Ayurveda</span>
+                            <span class="toggle-count">${counts.ayurveda || 0}</span>
+                        </button>
+                        <button class="map-category-toggle" data-category="yoga" style="--toggle-color: ${MAP_CATEGORIES.yoga.color}">
+                            <span class="toggle-icon">${MAP_CATEGORIES.yoga.icon}</span>
+                            <span class="toggle-label">Yoga</span>
+                            <span class="toggle-count">${counts.yoga || 0}</span>
                         </button>
                     </div>
                 </div>
