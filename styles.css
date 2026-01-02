@@ -9042,15 +9042,27 @@ img {
   overflow: hidden;
   min-height: 320px;
   cursor: pointer;
-  transform: translateY(40px);
-  opacity: 0;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: floatCardIn 0.6s ease-out backwards;
 }
 
-.floating-card.float-in {
-  transform: translateY(0);
-  opacity: 1;
+.floating-card:nth-child(1) { animation-delay: 0.1s; }
+.floating-card:nth-child(2) { animation-delay: 0.2s; }
+.floating-card:nth-child(3) { animation-delay: 0.3s; }
+.floating-card:nth-child(4) { animation-delay: 0.4s; }
+.floating-card:nth-child(5) { animation-delay: 0.5s; }
+.floating-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes floatCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .floating-card:hover {
