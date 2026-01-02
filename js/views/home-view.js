@@ -98,7 +98,7 @@ async function renderHomeView() {
 
         <!-- Nature -->
         <div class="floating-card" data-category="nature">
-          <div class="floating-card-bg" style="background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%)"></div>
+          <div class="floating-card-bg" style="background-image: url('${window.ImageOptimizer?.getOptimizedUrl('images/categories/nature.png') || 'images/categories/nature.png'}')"></div>
           <div class="floating-card-shine"></div>
           <div class="floating-card-content">
             <span class="floating-card-label">Outdoors</span>
@@ -114,7 +114,7 @@ async function renderHomeView() {
 
         <!-- Sports & Adventure -->
         <div class="floating-card" data-category="sports">
-          <div class="floating-card-bg" style="background: linear-gradient(135deg, #ea580c 0%, #f97316 100%)"></div>
+          <div class="floating-card-bg" style="background-image: url('${window.ImageOptimizer?.getOptimizedUrl('images/categories/sports.png') || 'images/categories/sports.png'}')"></div>
           <div class="floating-card-shine"></div>
           <div class="floating-card-content">
             <span class="floating-card-label">Active</span>
