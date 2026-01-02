@@ -51,6 +51,48 @@ function route() {
         console.log('[Debug] Routing to Customize Education');
         updateMetadata("Customize Education Weights");
         renderDiningCustomizeView('education');
+    } else if (hash === '/customize/supermarkets') {
+        updateMetadata("Customize Supermarket Weights");
+        renderDiningCustomizeView('supermarkets');
+    } else if (hash === '/customize/clothing-stores') {
+        updateMetadata("Customize Clothing Store Weights");
+        renderDiningCustomizeView('clothing-stores');
+    } else if (hash === '/customize/art-galleries') {
+        updateMetadata("Customize Art Gallery Weights");
+        renderDiningCustomizeView('art-galleries');
+    } else if (hash === '/customize/cultural-centers') {
+        updateMetadata("Customize Cultural Center Weights");
+        renderDiningCustomizeView('cultural-centers');
+    } else if (hash === '/customize/theatres') {
+        updateMetadata("Customize Theatre Weights");
+        renderDiningCustomizeView('theatres');
+    } else if (hash === '/customize/landmarks') {
+        updateMetadata("Customize Landmark Weights");
+        renderDiningCustomizeView('landmarks');
+    } else if (hash === '/customize/beaches') {
+        updateMetadata("Customize Beach Weights");
+        renderDiningCustomizeView('beaches');
+    } else if (hash === '/customize/nature-sanctuaries') {
+        updateMetadata("Customize Wildlife Weights");
+        renderDiningCustomizeView('nature-sanctuaries');
+    } else if (hash === '/customize/backwaters') {
+        updateMetadata("Customize Backwater Weights");
+        renderDiningCustomizeView('backwaters');
+    } else if (hash === '/customize/sports-clubs') {
+        updateMetadata("Customize Sports Club Weights");
+        renderDiningCustomizeView('sports-clubs');
+    } else if (hash === '/customize/training-academies') {
+        updateMetadata("Customize Training Academy Weights");
+        renderDiningCustomizeView('training-academies');
+    } else if (hash === '/customize/adventure-sports') {
+        updateMetadata("Customize Adventure Sports Weights");
+        renderDiningCustomizeView('adventure-sports');
+    } else if (hash === '/customize/ayurveda') {
+        updateMetadata("Customize Ayurveda Weights");
+        renderDiningCustomizeView('ayurveda');
+    } else if (hash === '/customize/yoga') {
+        updateMetadata("Customize Yoga Weights");
+        renderDiningCustomizeView('yoga');
     } else if (hash === '/methodology' || hash === '/about-rankings') {
         console.log('[Debug] Routing to About Rankings');
         updateMetadata("About Our Rankings", "How we calculate our rankings using data-driven metrics and objective algorithms.");
@@ -234,7 +276,21 @@ function route() {
             '/museums': '#/customize/museums',
             '/religious-sites': '#/customize/religious-sites',
             '/healthcare': '#/customize/healthcare',
-            '/education': '#/customize/education'
+            '/education': '#/customize/education',
+            '/supermarkets': '#/customize/supermarkets',
+            '/clothing-stores': '#/customize/clothing-stores',
+            '/art-galleries': '#/customize/art-galleries',
+            '/cultural-centers': '#/customize/cultural-centers',
+            '/theatres': '#/customize/theatres',
+            '/landmarks': '#/customize/landmarks',
+            '/beaches': '#/customize/beaches',
+            '/nature-sanctuaries': '#/customize/nature-sanctuaries',
+            '/backwaters': '#/customize/backwaters',
+            '/sports-clubs': '#/customize/sports-clubs',
+            '/training-academies': '#/customize/training-academies',
+            '/adventure-sports': '#/customize/adventure-sports',
+            '/ayurveda': '#/customize/ayurveda',
+            '/yoga': '#/customize/yoga'
         };
         customizeBtn.href = customizeRoutes[hash] || '#/';
     }

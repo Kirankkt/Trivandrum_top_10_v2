@@ -32,11 +32,11 @@ async function renderDiningCustomizeView(type) {
             title: "Customize Cafe Rankings",
             description: "Adjust the 6 metrics to match your cafe preferences",
             metrics: [
-                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Positive review sentiment' },
-                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
-                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
-                { id: 'value', name: 'Value', icon: '💰', description: 'Price vs quality' },
-                { id: 'convenience', name: 'Location', icon: '📍', description: 'Central accessibility' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Positive review sentiment' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'value', name: 'Value', icon: '', description: 'Price vs quality' },
+                { id: 'convenience', name: 'Location', icon: '', description: 'Central accessibility' },
                 { id: 'workspace', name: 'Work Friendly', icon: '', description: 'Good for working' }
             ],
             returnUrl: '#/cafes',
@@ -54,11 +54,11 @@ async function renderDiningCustomizeView(type) {
             title: "Customize Hotel Rankings",
             description: "Adjust the 6 metrics to match your stay preferences",
             metrics: [
-                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Positive review sentiment' },
-                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
-                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
-                { id: 'value', name: 'Value', icon: '💰', description: 'Price vs amenities' },
-                { id: 'location', name: 'Location', icon: '📍', description: 'Proximity to attractions' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Positive review sentiment' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'value', name: 'Value', icon: '', description: 'Price vs amenities' },
+                { id: 'location', name: 'Location', icon: '', description: 'Proximity to attractions' },
                 { id: 'luxury', name: 'Luxury', icon: '', description: 'Premium amenities' }
             ],
             returnUrl: '#/hotels',
@@ -75,9 +75,9 @@ async function renderDiningCustomizeView(type) {
             title: "Customize Mall Rankings",
             description: "Adjust the 3 metrics to match your shopping priorities",
             metrics: [
-                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
-                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
-                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Positive review sentiment' }
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Positive review sentiment' }
             ],
             returnUrl: '#/malls',
             color: '#8b5cf6',
@@ -91,9 +91,9 @@ async function renderDiningCustomizeView(type) {
             title: "Customize Boutique Rankings",
             description: "Adjust the 3 metrics to match your fashion preferences",
             metrics: [
-                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
-                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
-                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Positive review sentiment' }
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Positive review sentiment' }
             ],
             returnUrl: '#/boutiques',
             color: '#ec4899',
@@ -107,9 +107,9 @@ async function renderDiningCustomizeView(type) {
             title: "Customize Specialty Shop Rankings",
             description: "Adjust the 3 metrics to find your perfect specialty store",
             metrics: [
-                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
-                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
-                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Positive review sentiment' }
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Positive review sentiment' }
             ],
             returnUrl: '#/specialty-shops',
             color: '#f59e0b',
@@ -123,9 +123,9 @@ async function renderDiningCustomizeView(type) {
             title: "Customize Museum Rankings",
             description: "Adjust the 3 metrics to match your cultural interests",
             metrics: [
-                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
-                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
-                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Positive review sentiment' }
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Positive review sentiment' }
             ],
             returnUrl: '#/museums',
             color: '#6366f1',
@@ -139,9 +139,9 @@ async function renderDiningCustomizeView(type) {
             title: "Customize Religious Site Rankings",
             description: "Adjust the 3 metrics to find meaningful spiritual places",
             metrics: [
-                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
-                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
-                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Positive review sentiment' }
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Positive review sentiment' }
             ],
             returnUrl: '#/religious-sites',
             color: '#14b8a6',
@@ -155,9 +155,9 @@ async function renderDiningCustomizeView(type) {
             title: "Customize Healthcare Rankings",
             description: "Adjust the 3 metrics to find the best healthcare facilities",
             metrics: [
-                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
-                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
-                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Patient satisfaction' }
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Patient satisfaction' }
             ],
             returnUrl: '#/healthcare',
             color: '#ef4444',
@@ -171,9 +171,9 @@ async function renderDiningCustomizeView(type) {
             title: "Customize Education Rankings",
             description: "Adjust the 3 metrics to find the best educational institutions",
             metrics: [
-                { id: 'rating', name: 'Rating', icon: '⭐', description: 'Google Maps rating' },
-                { id: 'popularity', name: 'Popularity', icon: '👥', description: 'Number of reviews' },
-                { id: 'sentiment', name: 'Sentiment', icon: '💬', description: 'Student & parent satisfaction' }
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Student & parent satisfaction' }
             ],
             returnUrl: '#/education',
             color: '#0ea5e9',
@@ -181,6 +181,230 @@ async function renderDiningCustomizeView(type) {
                 balanced: { rating: 34, popularity: 33, sentiment: 33 },
                 popular: { rating: 25, popularity: 50, sentiment: 25 },
                 satisfaction: { rating: 35, popularity: 20, sentiment: 45 }
+            }
+        },
+        supermarkets: {
+            title: "Customize Supermarket Rankings",
+            description: "Adjust the 3 metrics to find the best supermarkets",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Customer satisfaction' }
+            ],
+            returnUrl: '#/supermarkets',
+            color: '#22c55e',
+            presets: {
+                balanced: { rating: 34, popularity: 33, sentiment: 33 },
+                popular: { rating: 25, popularity: 50, sentiment: 25 },
+                quality: { rating: 45, popularity: 15, sentiment: 40 }
+            }
+        },
+        'clothing-stores': {
+            title: "Customize Clothing Store Rankings",
+            description: "Adjust the 3 metrics to find the best clothing stores",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Customer satisfaction' }
+            ],
+            returnUrl: '#/clothing-stores',
+            color: '#ec4899',
+            presets: {
+                balanced: { rating: 34, popularity: 33, sentiment: 33 },
+                popular: { rating: 25, popularity: 50, sentiment: 25 },
+                quality: { rating: 45, popularity: 15, sentiment: 40 }
+            }
+        },
+        'art-galleries': {
+            title: "Customize Art Gallery Rankings",
+            description: "Adjust the 3 metrics to find the best art galleries",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Visitor satisfaction' }
+            ],
+            returnUrl: '#/art-galleries',
+            color: '#a855f7',
+            presets: {
+                balanced: { rating: 34, popularity: 33, sentiment: 33 },
+                popular: { rating: 25, popularity: 50, sentiment: 25 },
+                experience: { rating: 40, popularity: 20, sentiment: 40 }
+            }
+        },
+        'cultural-centers': {
+            title: "Customize Cultural Center Rankings",
+            description: "Adjust the 3 metrics to find the best cultural centers",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Visitor satisfaction' }
+            ],
+            returnUrl: '#/cultural-centers',
+            color: '#6366f1',
+            presets: {
+                balanced: { rating: 34, popularity: 33, sentiment: 33 },
+                popular: { rating: 25, popularity: 50, sentiment: 25 },
+                experience: { rating: 40, popularity: 20, sentiment: 40 }
+            }
+        },
+        theatres: {
+            title: "Customize Theatre Rankings",
+            description: "Adjust the 3 metrics to find the best theatres",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Audience satisfaction' }
+            ],
+            returnUrl: '#/theatres',
+            color: '#ef4444',
+            presets: {
+                balanced: { rating: 34, popularity: 33, sentiment: 33 },
+                popular: { rating: 25, popularity: 50, sentiment: 25 },
+                experience: { rating: 40, popularity: 20, sentiment: 40 }
+            }
+        },
+        landmarks: {
+            title: "Customize Landmark Rankings",
+            description: "Adjust the 3 metrics to find the best landmarks",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Visitor satisfaction' }
+            ],
+            returnUrl: '#/landmarks',
+            color: '#f59e0b',
+            presets: {
+                balanced: { rating: 34, popularity: 33, sentiment: 33 },
+                popular: { rating: 25, popularity: 50, sentiment: 25 },
+                experience: { rating: 40, popularity: 20, sentiment: 40 }
+            }
+        },
+        beaches: {
+            title: "Customize Beach Rankings",
+            description: "Adjust the 3 metrics to find the best beaches",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Visitor satisfaction' }
+            ],
+            returnUrl: '#/beaches',
+            color: '#0ea5e9',
+            presets: {
+                balanced: { rating: 34, popularity: 33, sentiment: 33 },
+                popular: { rating: 25, popularity: 50, sentiment: 25 },
+                experience: { rating: 40, popularity: 20, sentiment: 40 }
+            }
+        },
+        'nature-sanctuaries': {
+            title: "Customize Wildlife Rankings",
+            description: "Adjust the 3 metrics to find the best nature sanctuaries",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Visitor satisfaction' }
+            ],
+            returnUrl: '#/nature-sanctuaries',
+            color: '#22c55e',
+            presets: {
+                balanced: { rating: 34, popularity: 33, sentiment: 33 },
+                popular: { rating: 25, popularity: 50, sentiment: 25 },
+                experience: { rating: 40, popularity: 20, sentiment: 40 }
+            }
+        },
+        backwaters: {
+            title: "Customize Backwater Rankings",
+            description: "Adjust the 3 metrics to find the best backwater experiences",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Visitor satisfaction' }
+            ],
+            returnUrl: '#/backwaters',
+            color: '#14b8a6',
+            presets: {
+                balanced: { rating: 34, popularity: 33, sentiment: 33 },
+                popular: { rating: 25, popularity: 50, sentiment: 25 },
+                experience: { rating: 40, popularity: 20, sentiment: 40 }
+            }
+        },
+        'sports-clubs': {
+            title: "Customize Sports Club Rankings",
+            description: "Adjust the 3 metrics to find the best sports clubs",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Member satisfaction' }
+            ],
+            returnUrl: '#/sports-clubs',
+            color: '#f97316',
+            presets: {
+                balanced: { rating: 34, popularity: 33, sentiment: 33 },
+                popular: { rating: 25, popularity: 50, sentiment: 25 },
+                quality: { rating: 45, popularity: 15, sentiment: 40 }
+            }
+        },
+        'training-academies': {
+            title: "Customize Training Academy Rankings",
+            description: "Adjust the 3 metrics to find the best training academies",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Student satisfaction' }
+            ],
+            returnUrl: '#/training-academies',
+            color: '#eab308',
+            presets: {
+                balanced: { rating: 34, popularity: 33, sentiment: 33 },
+                popular: { rating: 25, popularity: 50, sentiment: 25 },
+                quality: { rating: 45, popularity: 15, sentiment: 40 }
+            }
+        },
+        'adventure-sports': {
+            title: "Customize Adventure Sports Rankings",
+            description: "Adjust the 3 metrics to find the best adventure activities",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Participant satisfaction' }
+            ],
+            returnUrl: '#/adventure-sports',
+            color: '#ef4444',
+            presets: {
+                balanced: { rating: 34, popularity: 33, sentiment: 33 },
+                popular: { rating: 25, popularity: 50, sentiment: 25 },
+                experience: { rating: 40, popularity: 20, sentiment: 40 }
+            }
+        },
+        ayurveda: {
+            title: "Customize Ayurveda Rankings",
+            description: "Adjust the 3 metrics to find the best ayurveda centers",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Client satisfaction' }
+            ],
+            returnUrl: '#/ayurveda',
+            color: '#22c55e',
+            presets: {
+                balanced: { rating: 34, popularity: 33, sentiment: 33 },
+                popular: { rating: 25, popularity: 50, sentiment: 25 },
+                quality: { rating: 45, popularity: 15, sentiment: 40 }
+            }
+        },
+        yoga: {
+            title: "Customize Yoga Rankings",
+            description: "Adjust the 3 metrics to find the best yoga centers",
+            metrics: [
+                { id: 'rating', name: 'Rating', icon: '', description: 'Google Maps rating' },
+                { id: 'popularity', name: 'Popularity', icon: '', description: 'Number of reviews' },
+                { id: 'sentiment', name: 'Sentiment', icon: '', description: 'Practitioner satisfaction' }
+            ],
+            returnUrl: '#/yoga',
+            color: '#a855f7',
+            presets: {
+                balanced: { rating: 34, popularity: 33, sentiment: 33 },
+                popular: { rating: 25, popularity: 50, sentiment: 25 },
+                experience: { rating: 40, popularity: 20, sentiment: 40 }
             }
         },
     };
@@ -195,7 +419,17 @@ async function renderDiningCustomizeView(type) {
     // Map type to actual file name (handle hyphens vs underscores)
     const fileNameMap = {
         'specialty-shops': 'specialty_shops',
-        'religious-sites': 'religious_sites'
+        'religious-sites': 'religious_sites',
+        'clothing-stores': 'clothing_stores',
+        'art-galleries': 'art_galleries',
+        'cultural-centers': 'cultural_centers',
+        'theatres': 'music_drama_centers',
+        'nature-sanctuaries': 'nature_sanctuaries',
+        'sports-clubs': 'sports_clubs',
+        'training-academies': 'training_academies',
+        'adventure-sports': 'adventure_sports',
+        'ayurveda': 'ayurveda_wellness',
+        'yoga': 'yoga_meditation'
     };
     const fileName = fileNameMap[type] || type;
 

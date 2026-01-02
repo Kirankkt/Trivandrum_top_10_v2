@@ -1380,6 +1380,17 @@ main {
   gap: var(--space-3);
 }
 
+.action-buttons .btn-secondary {
+  background: transparent;
+  border: 2px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.action-buttons .btn-secondary:hover {
+  background: var(--color-bg-secondary);
+  border-color: var(--color-text-muted);
+}
+
 .btn {
   padding: var(--space-3) var(--space-6);
   border-radius: var(--radius-full);
