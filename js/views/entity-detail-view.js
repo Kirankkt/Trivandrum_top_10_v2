@@ -118,6 +118,161 @@ const ENTITY_CATEGORIES = {
             { key: 'reviews', label: 'Reviews', format: 'number' }
         ],
         rankContext: 'educational institution'
+    },
+    // New Categories
+    supermarkets: {
+        title: 'Supermarket',
+        icon: '',
+        color: '#22c55e',
+        dataFile: 'data/supermarkets.json',
+        metrics: [
+            { key: 'rating', label: 'Rating', format: 'rating' },
+            { key: 'reviews', label: 'Reviews', format: 'number' }
+        ],
+        rankContext: 'supermarket'
+    },
+    clothing_stores: {
+        title: 'Clothing Store',
+        icon: '',
+        color: '#f472b6',
+        dataFile: 'data/clothing_stores.json',
+        metrics: [
+            { key: 'rating', label: 'Rating', format: 'rating' },
+            { key: 'reviews', label: 'Reviews', format: 'number' }
+        ],
+        rankContext: 'clothing store'
+    },
+    art_galleries: {
+        title: 'Art Gallery',
+        icon: '',
+        color: '#a855f7',
+        dataFile: 'data/art_galleries.json',
+        metrics: [
+            { key: 'rating', label: 'Rating', format: 'rating' },
+            { key: 'reviews', label: 'Reviews', format: 'number' }
+        ],
+        rankContext: 'art gallery'
+    },
+    cultural_centers: {
+        title: 'Cultural Center',
+        icon: '',
+        color: '#f97316',
+        dataFile: 'data/cultural_centers.json',
+        metrics: [
+            { key: 'rating', label: 'Rating', format: 'rating' },
+            { key: 'reviews', label: 'Reviews', format: 'number' }
+        ],
+        rankContext: 'cultural center'
+    },
+    theatres: {
+        title: 'Theatre',
+        icon: '',
+        color: '#dc2626',
+        dataFile: 'data/music_drama_centers.json',
+        metrics: [
+            { key: 'rating', label: 'Rating', format: 'rating' },
+            { key: 'reviews', label: 'Reviews', format: 'number' }
+        ],
+        rankContext: 'theatre'
+    },
+    landmarks: {
+        title: 'Landmark',
+        icon: '',
+        color: '#ca8a04',
+        dataFile: 'data/landmarks.json',
+        metrics: [
+            { key: 'rating', label: 'Rating', format: 'rating' },
+            { key: 'reviews', label: 'Reviews', format: 'number' }
+        ],
+        rankContext: 'landmark'
+    },
+    beaches: {
+        title: 'Beach',
+        icon: '',
+        color: '#0891b2',
+        dataFile: 'data/beaches.json',
+        metrics: [
+            { key: 'rating', label: 'Rating', format: 'rating' },
+            { key: 'reviews', label: 'Reviews', format: 'number' }
+        ],
+        rankContext: 'beach'
+    },
+    nature_sanctuaries: {
+        title: 'Nature Sanctuary',
+        icon: '',
+        color: '#16a34a',
+        dataFile: 'data/nature_sanctuaries.json',
+        metrics: [
+            { key: 'rating', label: 'Rating', format: 'rating' },
+            { key: 'reviews', label: 'Reviews', format: 'number' }
+        ],
+        rankContext: 'nature sanctuary'
+    },
+    backwaters: {
+        title: 'Backwater',
+        icon: '',
+        color: '#0284c7',
+        dataFile: 'data/backwaters.json',
+        metrics: [
+            { key: 'rating', label: 'Rating', format: 'rating' },
+            { key: 'reviews', label: 'Reviews', format: 'number' }
+        ],
+        rankContext: 'backwater destination'
+    },
+    sports_clubs: {
+        title: 'Sports Club',
+        icon: '',
+        color: '#059669',
+        dataFile: 'data/sports_clubs.json',
+        metrics: [
+            { key: 'rating', label: 'Rating', format: 'rating' },
+            { key: 'reviews', label: 'Reviews', format: 'number' }
+        ],
+        rankContext: 'sports club'
+    },
+    training_academies: {
+        title: 'Training Academy',
+        icon: '',
+        color: '#7c3aed',
+        dataFile: 'data/training_academies.json',
+        metrics: [
+            { key: 'rating', label: 'Rating', format: 'rating' },
+            { key: 'reviews', label: 'Reviews', format: 'number' }
+        ],
+        rankContext: 'training academy'
+    },
+    adventure_sports: {
+        title: 'Adventure Sports',
+        icon: '',
+        color: '#ea580c',
+        dataFile: 'data/adventure_sports.json',
+        metrics: [
+            { key: 'rating', label: 'Rating', format: 'rating' },
+            { key: 'reviews', label: 'Reviews', format: 'number' }
+        ],
+        rankContext: 'adventure sports venue'
+    },
+    ayurveda: {
+        title: 'Ayurveda Center',
+        icon: '',
+        color: '#65a30d',
+        dataFile: 'data/ayurveda_wellness.json',
+        metrics: [
+            { key: 'rating', label: 'Rating', format: 'rating' },
+            { key: 'reviews', label: 'Reviews', format: 'number' }
+        ],
+        rankContext: 'ayurveda center'
+    },
+    yoga: {
+        title: 'Yoga Center',
+        icon: '',
+        color: '#8b5cf6',
+        dataFile: 'data/yoga_meditation.json',
+        metrics: [
+            { key: 'rating', label: 'Rating', format: 'rating' },
+            { key: 'reviews', label: 'Reviews', format: 'number' }
+        ],
+        rankContext: 'yoga center'
     }
 };
 
@@ -403,3 +558,18 @@ function renderMuseumDetail(id) { renderEntityDetailView('museums', id); }
 function renderReligiousSiteDetail(id) { renderEntityDetailView('religious_sites', id); }
 function renderHealthcareDetail(id) { renderEntityDetailView('healthcare', id); }
 function renderEducationDetail(id) { renderEntityDetailView('education', id); }
+
+/**
+ * Generic entity detail renderer for new categories
+ * Uses the ENTITY_CATEGORIES config to render detail views
+ */
+function renderGenericEntityDetail(id, category, dataFile) {
+    // If category is in ENTITY_CATEGORIES, use standard renderer
+    if (ENTITY_CATEGORIES[category]) {
+        renderEntityDetailView(category, id);
+    } else {
+        // Fallback for categories not in config
+        console.error('Unknown category:', category);
+        document.getElementById('app').innerHTML = '<div class="error">Category not found</div>';
+    }
+}

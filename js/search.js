@@ -4,17 +4,34 @@ let searchDropdown = null;
 
 // Category configuration for search
 const searchCategories = [
-    { key: 'localities', file: null, label: 'Localities', icon: '🏘️', route: '/locality/' },
-    { key: 'restaurants', file: 'data/restaurants.json', label: 'Restaurants', icon: '🍽️', route: '/entity/restaurants/' },
-    { key: 'cafes', file: 'data/cafes.json', label: 'Cafes', icon: '☕', route: '/entity/cafes/' },
-    { key: 'hotels', file: 'data/hotels.json', label: 'Hotels', icon: '🏨', route: '/entity/hotels/' },
-    { key: 'malls', file: 'data/malls.json', label: 'Malls', icon: '🛒', route: '/entity/malls/' },
-    { key: 'boutiques', file: 'data/boutiques.json', label: 'Boutiques', icon: '👗', route: '/entity/boutiques/' },
-    { key: 'specialty_shops', file: 'data/specialty_shops.json', label: 'Specialty Shops', icon: '🎁', route: '/entity/specialty_shops/' },
-    { key: 'museums', file: 'data/museums.json', label: 'Museums', icon: '🏛️', route: '/entity/museums/' },
-    { key: 'religious_sites', file: 'data/religious_sites.json', label: 'Religious Sites', icon: '🛕', route: '/entity/religious_sites/' },
-    { key: 'healthcare', file: 'data/healthcare.json', label: 'Healthcare', icon: '🏥', route: '/entity/healthcare/' },
-    { key: 'education', file: 'data/education.json', label: 'Education', icon: '🎓', route: '/entity/education/' }
+    // Dining & Stay
+    { key: 'restaurants', file: 'data/restaurants.json', label: 'Restaurants', icon: '', route: '/entity/restaurants/' },
+    { key: 'cafes', file: 'data/cafes.json', label: 'Cafes', icon: '', route: '/entity/cafes/' },
+    { key: 'hotels', file: 'data/hotels.json', label: 'Hotels', icon: '', route: '/entity/hotels/' },
+    // Shopping
+    { key: 'malls', file: 'data/malls.json', label: 'Malls', icon: '', route: '/entity/malls/' },
+    { key: 'boutiques', file: 'data/boutiques.json', label: 'Boutiques', icon: '', route: '/entity/boutiques/' },
+    { key: 'supermarkets', file: 'data/supermarkets.json', label: 'Supermarkets', icon: '', route: '/entity/supermarkets/' },
+    { key: 'clothing_stores', file: 'data/clothing_stores.json', label: 'Clothing Stores', icon: '', route: '/entity/clothing_stores/' },
+    // Culture & Heritage
+    { key: 'museums', file: 'data/museums.json', label: 'Museums', icon: '', route: '/entity/museums/' },
+    { key: 'religious_sites', file: 'data/religious_sites.json', label: 'Religious Sites', icon: '', route: '/entity/religious_sites/' },
+    { key: 'art_galleries', file: 'data/art_galleries.json', label: 'Art Galleries', icon: '', route: '/entity/art_galleries/' },
+    { key: 'cultural_centers', file: 'data/cultural_centers.json', label: 'Cultural Centers', icon: '', route: '/entity/cultural_centers/' },
+    { key: 'theatres', file: 'data/music_drama_centers.json', label: 'Theatres', icon: '', route: '/entity/theatres/' },
+    { key: 'landmarks', file: 'data/landmarks.json', label: 'Landmarks', icon: '', route: '/entity/landmarks/' },
+    // Nature
+    { key: 'beaches', file: 'data/beaches.json', label: 'Beaches', icon: '', route: '/entity/beaches/' },
+    { key: 'nature_sanctuaries', file: 'data/nature_sanctuaries.json', label: 'Wildlife & Nature', icon: '', route: '/entity/nature_sanctuaries/' },
+    { key: 'backwaters', file: 'data/backwaters.json', label: 'Backwaters', icon: '', route: '/entity/backwaters/' },
+    // Sports
+    { key: 'sports_clubs', file: 'data/sports_clubs.json', label: 'Sports Clubs', icon: '', route: '/entity/sports_clubs/' },
+    { key: 'training_academies', file: 'data/training_academies.json', label: 'Training Academies', icon: '', route: '/entity/training_academies/' },
+    { key: 'adventure_sports', file: 'data/adventure_sports.json', label: 'Adventure Sports', icon: '', route: '/entity/adventure_sports/' },
+    // Wellness
+    { key: 'healthcare', file: 'data/healthcare.json', label: 'Healthcare', icon: '', route: '/entity/healthcare/' },
+    { key: 'ayurveda', file: 'data/ayurveda_wellness.json', label: 'Ayurveda & Spa', icon: '', route: '/entity/ayurveda/' },
+    { key: 'yoga', file: 'data/yoga_meditation.json', label: 'Yoga & Meditation', icon: '', route: '/entity/yoga/' }
 ];
 
 // Initialize search on page load
@@ -52,31 +69,8 @@ async function initSearch() {
 async function loadAllSearchData() {
     allSearchData = [];
 
-    // Load localities from rankings
-    try {
-        const rankingsData = await loadRankings();
-        if (rankingsData) {
-            const localities = rankingsData.all_rankings || rankingsData.top_10 || [];
-            localities.forEach(loc => {
-                allSearchData.push({
-                    name: loc.name,
-                    category: 'localities',
-                    categoryLabel: 'Localities',
-                    icon: '🏘️',
-                    route: `/locality/${loc.name}`,
-                    score: loc.overall_score,
-                    id: loc.name
-                });
-            });
-        }
-    } catch (e) {
-        console.warn('Could not load localities for search');
-    }
-
-    // Load all other categories
+    // Load all categories
     for (const cat of searchCategories) {
-        if (!cat.file) continue; // Skip localities, already loaded
-
         try {
             const response = await fetch(cat.file);
             if (response.ok) {

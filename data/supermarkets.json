@@ -1,0 +1,780 @@
+[
+  {
+    "id": "ChIJQy2QdBO9BTsRG2044mizUHQ",
+    "name": "LuLu Hypermarket Thiruvananthapuram",
+    "address": "Unit No. l 02, LuLu Mall, Anayara, Thiruvananthapuram, Kerala 695029, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.5,
+    "reviews": 25112,
+    "score": 95,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHoPsuG-qBSzNMeYxcN8Wd7-dnPSpXiJiikTcQHzbj4vMJ4c3D63v-KFpmPug2X2q3ubxjn_izLJXqrzd790VTFdx_ZjUWEft_3IbXvDWCQSje--YMWuJJKof6mtnecSKMulj-XJFST3RkbFL2Aliyka6jDXr99gwMcPBysCmINrdi5BpGp_ep6w5UouBN0XAOgTuD4g70toK8nk9LgaV8nNGvit7V0UCIFwz_twH0lNCalyJhPzFq0SW5POby8xYj1eDzYImQyOb83wmCnRdgzMvsVgk0PME-Jm0arYKWQqaA&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://thiruvananthapuram.lulumall.in/shop/lulu-hypermarket/",
+    "phone": "0471 277 7777",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store",
+      "supermarket"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5163406,
+      "lng": 76.8973977
+    }
+  },
+  {
+    "id": "ChIJp5rx-O-7BTsRP_IpLyBg5PY",
+    "name": "Maxx Supermarket",
+    "address": "TC 67/1253/1, Paravankunnu, P.O, Kallattumukku, Manacaud, Thiruvananthapuram, Kerala 695009, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.5,
+    "reviews": 241,
+    "score": 95,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHphOYei0-LL9lyQgjp_NV62EwrxLgvGrQOSmtZ92iOb0Y4nY9OqSP9ZYO8RmR6WwTumlI6Krsb-KM1jbCt4OjQUeV4KCHMxdJ1iMOWZ816HwNs2pVWlxFLNA5lvHXdiNfAgAiRcYj2P3J89WR8pK5WC_pxYaHFKDncvgZDDfjusJEjmXn0E96Cagk_2NZ4doHCOXBHEhlMIBOpG4hwOzT7hG9IpQKvwliAA8libB3rma-5pOtMx8_VRN482oql0MPg2WcdW_ecFxOl52D8bzSNZsn0kiSEWAzcckd8iuJTofQ&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "0471 355 5327",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.4564905,
+      "lng": 76.9501885
+    }
+  },
+  {
+    "id": "ChIJK_Gz3UO7BTsR0frfvTOHg2E",
+    "name": "Supreme Gourmet",
+    "address": "Heera Grace, Kowdiar, Thiruvananthapuram, Kerala 695003, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.4,
+    "reviews": 722,
+    "score": 89,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqxwmq5iKfUgAYhId_OX1xw_squJ5htPKDxUfSrbwh7-_emgxIT0jde0aPwdDL1N1GxgUcG1gCuRXdrGnuJ41iqTyrhLeq-ZoMQ1AkW4RJy0SCG31-GZDAKYDHuHePPlGpV9QebZRBOl7wX9nrG_3ITG8jK9icGD1dJY8o6EQomEIrYTGFqGtIYfhZ1XjSr0bpm1On4qt3hBGab0rnRDiAa_DxeN5gNTH77djiVBJj-BXTonY3Ha0rfIKKiA5MQ9g6OXhLWPgI_T9bAtf5prfyejSo9DI6s26WpKLF5efJX1bxzcEPNbhvU1T3RjEtSqq_ZtlEikWpvlsHU97BcomTgRPcknt4MaWDKQDcarbhk4oP8uUCbQotpmgwF3P8XoRxTri58T1O05GVCFzMnBqcWMtB20mhPDxoRYW8IofIrV53W&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://supremefoodco.com/",
+    "phone": null,
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5226349,
+      "lng": 76.9592677
+    }
+  },
+  {
+    "id": "ChIJ19mw3d6_BTsRFWgcsTi-6-s",
+    "name": "Ayaans Mart Supermarket",
+    "address": "A S Plaza, Opp. Kinfra Park, Sainik School.P.O, Chandavila, Thiruvananthapuram, Chanthavila, Kerala 695585, India",
+    "locality": "Chanthavila",
+    "rating": 4.3,
+    "reviews": 172,
+    "score": 88,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpq2gf1uKrVdXb0ax1M4CvsSW36QztMyJocuFWDqa8vmUczQPUI6qjo6m9HMl3gGhgs-OAL73EM4MI8htkel3ZZOYY58ZK_LnqAF3G6nWcstXBsj8MPGK4-HVM2srmcCrW1j6bDc8C-3I6rdWjVhlsFudrFxzmXLRtHnreV7nif36AwDtEzriq5_LdFWjuquHsVw294i-bIGXAS5DSjybv8nUkLLu-ySismNPHtxoz0gvc9BXuzN2twF6IGDWa1lpYl4GpB2OwzvQ6wXnQHfTfbXpo8HH9hAGwKCfYluDB2BA&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://www.ayaansmart.in/",
+    "phone": "096330 00143",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5874857,
+      "lng": 76.8768965
+    }
+  },
+  {
+    "id": "ChIJueH5RBq_BTsRDuo1KT6Hzvk",
+    "name": "Kunnil Hypermarket Kaniyapuram, Trivandrum",
+    "address": "HVQ5+F73, near KSRTC BUS DEPOT, Kaniyapuram, Kerala 695301, India",
+    "locality": "Kaniyapuram",
+    "rating": 4.3,
+    "reviews": 3000,
+    "score": 88,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHocZSQCZq3Xdl6vTUcogNTwkPjP--8t9C_DvVJiLsCY0L2sOsFVIoyndjcFHK8P9PgtuZRHrR-gSnqXA6lofHOI0h5WUGCYt1a8i9t_DtUrRe7CN6HV87k2DbD3uUlxp0__QcemcoT3Kziobg_Q5X21M1k-ZSu76exBYFQv9DEJmoeCkf4CypaRjyF4iZ91J9CHDcad4-9a0TIjIwlcS5ZNLTzeZMeXr861xVOtegtI33TqtofyLyc7NNNTIqzg5uBK2PUDkDtOSgUYnhyc0Y4ahYpR52GHEcTAIdX4N951qRsJCPhvqrHOo677IldXbIK1f_wCFWwAAY1wrje8oQRbtHIz4LJUG6VBfnpp7LZOeRzlH7am3TtsQUrpDT6v9qWfqWh6i6Fzk84GoKFP-3PPLrfdexwMbsQ5J3DY4fCtHPFv&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://www.kunnilhypermarket.com/",
+    "phone": "075111 45452",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store",
+      "supermarket"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.588631399999999,
+      "lng": 76.8581901
+    }
+  },
+  {
+    "id": "ChIJ8bd3Xx6_BTsRfTX73lQyumI",
+    "name": "The Haven Supermarket & Apartments",
+    "address": "TC 97, 1356-4, Aakkulam, Thiruvananthapuram, Kerala 695017, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.3,
+    "reviews": 253,
+    "score": 88,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHov05L9-ZBfcJfcLlH4ETncacdl6HDR2ZOXHVQHIR5smlV5YkfpvcDURr7zw0yvNltI59WLvz-eR4cVMctsklqTBvzrUp1QQ3CXSBr6Fs3f2-9pZa-kUj7O3EGU25lWxTTQHnZLsNr2Un7ZLu6xTMY0vFMwTH6qY3dDSyng65EftG79s8Ns99_ocNMratDlAmzdqv7gebslp--EMMyxVRnyH0gYHOSszqtA6wPxwNu4PXsWIwICstC0j6qUwTx33vd3HnqZe38JGgTJxxuDJ-wtr7Hq6poC8WLIMTm8d24kAw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://www.facebook.com/profile.php?id=100086715366311",
+    "phone": "088485 27796",
+    "types": [
+      "department_store",
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store",
+      "supermarket"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.525616399999999,
+      "lng": 76.8980289
+    }
+  },
+  {
+    "id": "ChIJjYXatBK_BTsRsUVLO2IqPZw",
+    "name": "LOYALCITY Supermarket",
+    "address": "Thundathil, Kariyavattom - Chenkottukonam Rd, Karyavattom, Thiruvananthapuram, Kerala 695581, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.2,
+    "reviews": 602,
+    "score": 87,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpt9e8FjAS66VryCSvvGVHxwD970I9_MpXdkG08nnjp_XoeFksd6IdCe5tbR9_yikVlAqagHlXbT9ItivBJGtLf5JsGRFstOmTZ8wCr2pQ8qq9dUKrAMs29060SorIC4D-xvHG3Uy2xS3Q_cTsLO2RR4ODC-M8_Fl-TbhRs8zVDB9qGWawKv-aB8GoZh2WZg1rfQR5UkQJxMdrHLZF9yU1Xqmxe34ABBhkdTAAq7ORzZEI70sQFZQ_V_fdr-8LTk5EifXTZxsmw_pzjchXWQJTxhV2wQ2EWA-Nw9HhhOvo5cg&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://loyalcitytvm.com/index.html",
+    "phone": "073065 06916",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.572953499999999,
+      "lng": 76.8903467
+    }
+  },
+  {
+    "id": "ChIJw9DZH0S7BTsR_ACwTgO1Izw",
+    "name": "Pothys Hypermarket",
+    "address": "2 floor Devadeyam , near ayurveda college Trivandrum 695001, No. 28/2477/3, Nikunjam City Square, Mahatma Gandhi Rd, near Ayurveda College West Lane, Vanchiyoor, Thiruvananthapuram, Kerala 695001, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.2,
+    "reviews": 1706,
+    "score": 87,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHoicBKiaPWG1mr0qUZJsOdwChwwu3ryfUKJd1j8JdUYyDsSG2V7FozwC3j8oA65mDnjWqQOQDGv7_zJ_TbCHch5jEh0ZAWlRNfgPIStS9PRylwS07Lc1-ZvO8txVy7wWzQStzOpdZd2PJTQZ6ESDeh3N2p5imPwOQNRtd-VGOL-1kpeOu_8zOb3rsMcIA_lrxaTJdqltdiHHk12ya1SJzSIEKTsM9jxu4Hh3akH-mpK6i84Vc6HPr4K5JE-8kElqphXhOHfsv5SorGXB013i93g_7q9_BJn1cDYBVEQdx-2qPQm8hZksQT_Q2CbaTSz8ab_1vCbKjPJfY52tXIcncVTC1_R5cgGG62Tc6sRgfwZIY9V_uo_oWqGfo194cC6hxRF9wfJtrCtw2I_2DxRj0SEC-zf36ZdVF_ofzJXQyb192W4&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": null,
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store",
+      "supermarket"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.4901836,
+      "lng": 76.9466874
+    }
+  },
+  {
+    "id": "ChIJ5XiQ9j6_BTsRIlBwuvUIyc4",
+    "name": "Buy 'N' Save margin free Bazaar, trivandrum",
+    "address": "Kazhakuttam Menamkulam Rd, Thiruvananthapuram, Kerala 695582, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.2,
+    "reviews": 436,
+    "score": 87,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHq7BCsNeBa95cbdpGDkHhhQSx8QZz1ZfFvxX_jzn7_NvUZMM2C66RYIQQvniTWKInZSPLgrofXdAig_drt83z5K8C9CO5zhV6uSzxQUb5ZjYTcU03u9w9SEYrUZYXYLumggiB_E48JU9S60a85dErRaiK9W2MG0uaYjAPC57g-frlFr_1DqLo_n_8TSFuc8XkQ_ZvsXKE3gXWuLbxpWKJcpCDeY9nrImwBMZlFlEhDEoI5o59q7yZbiyBZB0XlUp4KiX8IjwVWcQpAXXXcm4zBFm9cjLzyo7k9nd2q9wZdCfQ&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "075939 31456",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5629326,
+      "lng": 76.8592267
+    }
+  },
+  {
+    "id": "ChIJkWwVU_e5BTsRUpPik-H-X64",
+    "name": "Kunnil Hypermarket Kudappanakunnu",
+    "address": "Peroorkada Rd, Kudappanakunnu, Harvipuram Colony, Peroorkada, Thiruvananthapuram, Kerala 695005, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.2,
+    "reviews": 450,
+    "score": 87,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHr0LK0qaPWLDOsDG-G_7YMUkAD_-BQSQcK86fVwPOUTDiOHpqra-EhW9GB0ARrdvwCWqfiBFDmo8kXUY9phzqLlvAuG9GLu8Hbg8d5x2JkGh0UdQVS96O_CapxtYfO24zQli6wwdyuFOH1ock3hBldFanWbeE9tsRc-I8UFOUlbCMVQ6gJzlRWYoxVTb9RpqRG7n3a6qjXsUQznvrkvDF9VfV99yu1OUNgLjdp5L9bLcUuoFqDWrB3L-6eV6ndSLYZQ97ZE00QQS4JePv7XJMDLeI0NuCr08zOBYUT6WUYSdFV6iulGznfa-3ab1TYsaFFeOaoLzKtsPQ7Sm2wgfZx564xUDme5gzyqSaDSTuzNaG9mbqjLn9NgH26AHt7p9Q0AlESDJ6gp1p62rQU1H7W69pj2iPAlUnf6l3vTh1Edgws&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "085909 34221",
+    "types": [
+      "bakery",
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store",
+      "supermarket"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5419681,
+      "lng": 76.96167419999999
+    }
+  },
+  {
+    "id": "ChIJ2SWTdtO7BTsRcSd8c415SXQ",
+    "name": "Se7en10 Supermarket",
+    "address": "Tennis Club, Tennis Club Enclave Rd, behind Trivandrum, Jawahar Nagar, Kowdiar, Thiruvananthapuram, Kerala 695003, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.2,
+    "reviews": 513,
+    "score": 87,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHoDt5pt9ELPSu_hai7u8_WPMzx10PQLpwzTMxzzI8drsBpJyyBOMSZwsIN3b-Eb0jonEMn7kb8hIqpThE8tZHbA5Ssj6xp-EMhMwRIholHR-64PoBmfUYK70p8497x4oWx2EcWrEVcwi_xn3qtbPe9UCl0ICTE2z4J45ziHv2uK-JFmCHEueOKY96GLFcyzlIzOM6zE0cf__YmHVN9HdUpkDGZ35GWYKikDLaMpyh0c8FdvuC-eXmvYoii38Fu5hzZ5wq-v5_3NkGWP70-mWRniPUHYB2RNzUwGkTsBZrI3F5XIE4xwsKjkyrpI37msgYKifBXWFAgZ6R8NvyWK7vqbms3EGeg6pe-m-jmDXK6IVFw2JKL4-PFH4FsExoQWNP21CHP8cp8B1_viKlTm0KGGschIpI1hu11J75DX4PfG4g&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "085929 91191",
+    "types": [
+      "bakery",
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5193389,
+      "lng": 76.9617854
+    }
+  },
+  {
+    "id": "ChIJAX4jOyS7BTsRoeaJiFR4WZY",
+    "name": "Kunnil Hypermarket",
+    "address": "Kunnil Heights YMR LANE, Kuravankonam, Kavu Road, Kowdiar, Thiruvananthapuram, Kerala 695003, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.1,
+    "reviews": 2267,
+    "score": 86,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrB9J1BY9XOtwvHZxV3A2QAYtvlbV56JJKu_DwWr3AFtT72LYwO9Yh3acSYRkVJVEeFR6oEds9srm2ASP88l66IZxd4-U5T6a-TJUwSB-PPcDOsudiBoqlmjUn9TY3CoHb8gbeFSloamx0TfOyACidFuCKVWxxpk0av0QvOKxZxg3ksc0-jfCjvpC-QuxmhEKwjoMntSoP7Qfm6TxmFqCYjV7aKEFguf2lyr28_Fagozo7mWDx2YmGjCeDbxnQyFQKRrDMTEk8Cs3QoFl5b40WAetSWDPtCjI5-XmbzWbSeFw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://www.kunnilhypermarkets.com/",
+    "phone": "098473 99911",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store",
+      "supermarket"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5215055,
+      "lng": 76.9517771
+    }
+  },
+  {
+    "id": "ChIJG25f1sS-BTsRAQWYRtr3e7A",
+    "name": "New Capital Mart Supermarket",
+    "address": "Pangappara, Thiruvananthapuram, Kerala 695581, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.1,
+    "reviews": 189,
+    "score": 86,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrOmgVg4tJEGaCeKrZ6Lbonygh5J1NDm3P8AlLvgXBZeX5ZNuEiJ_6j6diF8E4tRMLGomlqqWe7AV9XeDEbYBogsjn7TzUHKYt-wrN0iqprkegOasc6iuXfGVGMp9B-a-VijzICp8bz2TKq0j-tRZDI2P15B47iVrycT47ETuL6I0NMsdTo-wRi8-L6MOYnT9zMOBNDnQ0Zw6r4Xb3lPCgge3nugG5xFmy_xtVIV5ip7ow3iLAkirV-JsFmoK4h4iRDgzVLImvBg2sS22WKEKEqj76fBntZ0Zd5FEW0lpu6iw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "095676 90909",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5557629,
+      "lng": 76.9036418
+    }
+  },
+  {
+    "id": "ChIJFW9G7ai_BTsRiP0jnX_XfIw",
+    "name": "V-Kay Supermarket",
+    "address": "VKR Complex, 3335/1, National Highway, Kazhakuttam, Vadakkumbhagam, Kazhakkoottam, Thiruvananthapuram, Kerala 695582, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.1,
+    "reviews": 348,
+    "score": 86,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpims6N79Y-AJ3Cqwb38TJS458FK_1oc5qrRpKblH-8PZ_IP75zm64ghI77bUatbHY2Ghx81aWOy91SgGUnMQgQcpJQ76cWmV6JQr06McZ11WmWQnKfrEr4cCKjiPO3HqXTijYekErY_8ZTJtTBmuIHcLs3YUw7hExsEadk6c509mNf8Y63nW6Yy623rioW5JP5irtZ8ncnwLUL-9ArVSNJwnAZ1bJMbtGCdiI2nE_oR06G0HMKmdR4uiEKTdS6exaKKMFshIR4j37PVGg31tN1g2a0ExpgmcqnglViIT2v2xUg9fanacZO8i-DJZkj-gTso6NX_U3IEFuX_GlcT4EGVA9n7evt1pQcpFTgwTG9TZZEZn1Lo8xq5nG9vBQEwjxC4FKtvouIkaFdiT5lEuVKC2HoZ9oLoYFYIfM-MYcHW5A&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "092070 79900",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5751435,
+      "lng": 76.86826409999999
+    }
+  },
+  {
+    "id": "ChIJlcUxAwO7BTsRSaFJSbrGiWw",
+    "name": "SP Margin Free Supermarket",
+    "address": "SOUTH FORT, P.O, Sreevaraham - Muckolakkal Rd, Sreevaraham, Manacaud, Thiruvananthapuram, Kerala 695009, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.1,
+    "reviews": 494,
+    "score": 86,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpDUW1OZV1hs5tMSUegSb1knG1w7sxOhEzTmh_ZO6v5IPzgQppbJfrkYDIkJdF8W-cUFdPfp9PrOtDMBiRRAT-A4bLd7WxFe8KSHe7tIOT9vvGH-CxG-e2KTkyw2sGmfwvDrlxABmj_qbn5jh6axKlTVLFANUM2k5m8XQsCd_QDNQvNtvUFwqnPSHqeQpwvM6KRjpuOh2EThRA3-KGbfLhMGNN8xon6-cb_F7rZmseOYlRyJ72oqmdnZBYm-r9aY2tKMHSWW1cEzO-7izOmGc9Ivc1Uo9m6nXDLlL4yWUbLJB_pVqCwzIX4AAXjne0wLaJAsRtdkt2e6htPpOmWhl6ZGop-DpEbhF91GjFeMp42EkhK3wFLBQqaAODAPnrSMKjUuDjLoYbQ-uVSheNjTTgruFvZf6gdmD8ZehuRoXqw6Nzm&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "094464 23189",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.4788915,
+      "lng": 76.9428355
+    }
+  },
+  {
+    "id": "ChIJU99dYqq_BTsRBe1IPJQDoIk",
+    "name": "S Mart Hypermarket",
+    "address": "Taj Tower, Kazhakuttam Menamkulam Rd, Near Smart Junction, Kazhakuttam, Kazhakkoottam, Thiruvananthapuram, Kerala 695582, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4,
+    "reviews": 2417,
+    "score": 85,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrXHifzv5Ur3fbuwQ_iz1jaf6_IqMvbUqhMM1ATk2dQkKACLUXh33Yk58tJks7R2OEHOnh9vW5clVTenILY7qv5o6UI4d8ivr-0dhE7Ev9ZqzPF8Q18Ukf257dF7NegDvKGB6EiOqx-_qeXDs4OboiEbTUwoNzbJXXKsoBV11-hyVqy69T_UHBnxjWPAtsCXt88GGN3FdqEJldrshoaWram3aP-NegK0AJX9ju5c9ZrmCHuwmJxdKCuFvubDqOirkl_1vz7k5XMUDzV-2L8fga3akA6hVHRpsXrZ5QhXHtljFXlyPbQ-ZAbQyjaF82Gv8QLd9pm_c3s4L3GYr7S37I7utje3q7F2PRCHHR1PD7mkrl87FjoPC8Ae6Z0e5r-d9ergklM8r-vQA0GRbrrEXsFMR6TCnmx4q-xvGLxwE3hOV8p&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://smarthyperonline.com/",
+    "phone": "094465 14131",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "shopping_mall",
+      "store",
+      "supermarket"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Shopping"
+    ],
+    "coordinates": {
+      "lat": 8.5688432,
+      "lng": 76.8711646
+    }
+  },
+  {
+    "id": "ChIJw2SOn_K_BTsRopIxLyShag4",
+    "name": "Sha Margin Free Supermarket Kazhakkoottam",
+    "address": "HV4G+C3M, Railway station Rd #2, Pallinada, Kazhakkoottam, Thiruvananthapuram, Kerala 695582, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4,
+    "reviews": 445,
+    "score": 85,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHoel70DzWpspF62eRE6YquGfWh1ZIjz94bLFHRmUDgmlYgCF0su988gvMdJGEANO3ovO_BHxypsoAV8vQbCXUD4BJstP1Ja-BJsW1IMZVJ2wJaok0o-y-fxrr5fXLsJ-h5DZfdfNenuUBaAyguX8uQrylBnb3FpJultbjhi-Iimg2h5KBItI30BKE1i-TnLxwcr5VWq3CGoAPIFo6RxTR8SPBQxTkhXBqSsZkqYTBR8WZ1XwjsbEQtcPluxAPe5GZPBJWSvR5QuE8hK1MBd7IgzXPTbcW14ItZc7M3TBeQCEI8OOrw_6F8N7XlYSXC11D8cNBKCEnspJylRnJbfAAQeTjbfHT0c9NJBS-Hq1MC4I7CX2FZkeQR6XBMYahZfIj1_06_tigttDJRYoPIvpwt0cur3hezLUMkuk_HT8BHT0L__&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "094961 01244",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5565341,
+      "lng": 76.8753431
+    }
+  },
+  {
+    "id": "ChIJf9MtG_C_BTsRMcP1hIQneT8",
+    "name": "Fiow Mart, Trivandrum",
+    "address": "Chithira nagar, Kulathoor, Kazhakkoottam, Thiruvananthapuram, Kerala 695583, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4,
+    "reviews": 353,
+    "score": 85,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrCd1OjbX9QbGItZOYtv-M4RoZQ0xUsuFJNCgdPX63tNW9JcTsc_mZfgSYCuH6yGJ-p-pLvuM3eAsBddNaAyuxY4KI1mbXCEbIvD8CcJ-LeBJlrsFvmVR1sP4k78MviZTTUkmeOcGQImNBJk3YQ9F1Wnocwlu9DlOyYb8vJPYrdUJvU0QLefF2pPg5es2TdkoTnTPTSzMnrZSTd3qp06K_DXtm2OMj9N_fQo85JQkweGwBbajGg2lZD5NxkLTkZ5VnP_6xsyZai2PxG0i9bmqhMJiImx8iH3FXjTx51CCgOBw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "087146 43097",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "restaurant",
+      "store",
+      "supermarket"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Dining Available"
+    ],
+    "coordinates": {
+      "lat": 8.537623,
+      "lng": 76.879042
+    }
+  },
+  {
+    "id": "ChIJW_rxlVe5BTsRTA9uJUsn5LM",
+    "name": "Kunnil Margin Free Market",
+    "address": "Kunnil Building, Medical College Ulloor Rd, Ulloor, Thiruvananthapuram, Kerala 695011, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4,
+    "reviews": 1433,
+    "score": 85,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqbMiuce1yuloyjkxktX65jvUBcgNhaYtQlWiikJRY_Gnw1OuOWWIpWfUp5VbsLCEbIbDn4x8BpVcDjls01GKJe78_GOkggEsZCdUeO0cklipTG1JiNBzv3eF06roRj2JF03X4Yvgv9Vbyk1mlPz0xXTn3VUi2oT3ThgvUa_feQnCrktxspS2PCSqqQkHawCX5lrfOhGse8S3g2ioYqkMq7UthmacxyMKGxO--tWOnRuM3Js--cNuYuNc2IUXkwMaJM6oF_-TjsSwf0FXj_7-Bd3iapLHI5r3BDiM6eh3hNTVEkpIZlR08gvXKRlifKUPgeKn801RWOYrUga3TmaCJ6X7CKvuF80kASmKLQTmE5ZibjwlgTjji0Qg-8OY5tqKAaRupzuO1F88cO8975bQWmKM6BvRL5ciaqjunEojMTw1gw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "0471 255 4120",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.526249,
+      "lng": 76.9282735
+    }
+  },
+  {
+    "id": "ChIJu7rArKS7BTsR6SodS-2Lnic",
+    "name": "Nilgiri's Supermarket",
+    "address": "Ground Floor, QRS Square, 25, Mahatma Gandhi Rd, Puthenchanthai, Santhi Nagar, Pulimoodu, Thiruvananthapuram, Kerala 695001, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4,
+    "reviews": 725,
+    "score": 85,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHp6X_9os3Pc5AZPvnTq4U_cy9nCCm65ngPLEoo1R1Ym6XoHXX-iL1_jpa151zvHdVM8jjaDZl3-5lMw3nBTeivmkVB680xaJY9AIAN0N_Ox2iVFN74ILn0S2jACl9BNmaZcBK6aGx56q9o3J-zDpCbXP_n0FXJWG0XSfZ_EHs4Frvj6fU9QRcQ7iW6DV7GduLLf55aGzw1BxZ8zTTUYLbtDgmis7mH9dZ0JeMATYLjq_5hGfXsQvjHjeIKjchz1wcq8oHhcvBe93DVupvbk8zE8HYoNuR5ZBfGuqw9_PWehEdYva7zHw-KdYHjNlReK5aXjU3e9hOnFZZlFAGWuLcHFO2IKiBEePk56w0NGdJ-aEW3PidLvPjCsJZExQEsBaIe7eDzMl4mgZr0MqH0nMOkX_YywE_8ETHE5Rn4uwTc&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": null,
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store",
+      "supermarket"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.4932901,
+      "lng": 76.9475539
+    }
+  },
+  {
+    "id": "ChIJA7Axjme5BTsRgj0IzJ4bk30",
+    "name": "Kunnil Margin Free Supermarket",
+    "address": "Kunnil Building, Opp MG College, State Highway 1, Paruthippara, Chempakassery Nagar, Paruthippara, Thiruvananthapuram, Kerala 695004, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4,
+    "reviews": 1834,
+    "score": 85,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqWg09dzLT6qlSrBFP1V_CbZrNGajkp5opiAaK5nSeARCpvxW7gpT5U_olOuyzVxgUb1m-eUAcJF7iaPFHprSbdTzKr2OGT1cTSi1FMm2DbnmMMy2RR0A5pS0mSktWjh4AE4co0UIx10BTA7MlfR5G9LxfgpT1RzM1qBcuUOOHlKgQ7ZtwdIt513o39WEKSgCj-cbeiyNhsYtsFAlMVv8sjZGb0uf53bvzkBys6r5peJPN5w3jU7F6uYw8_e4P9YNf59UNze1y1_g1ZKiCBI2IKRzaDztRKPbNqSpReg-dCKIKBu6F2K7Io6MN2TufGqBgmAgrgZKQ4CiqBJuAoLA81-Vk2tq8Cjgc2SKlmScyslmv4jI9BhGcJQ8eAmW73_nPTzYZyZNW9hIlizsucQc5yGKref26FRnAYWXyxSRnWKWk&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://www.kunnilhypermarket.com/",
+    "phone": "0471 255 0062",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store",
+      "supermarket"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5339785,
+      "lng": 76.9419326
+    }
+  },
+  {
+    "id": "ChIJTbyRDia7BTsRbNilMF_0Mhg",
+    "name": "SP SUPER MART Trivandrum",
+    "address": "TC: 1643, Karthika Apartments, NARIKKAL, Kattaikonam, Chanthavila, Thiruvananthapuram, Kerala 695584, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4,
+    "reviews": 98,
+    "score": 84,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrmyZ4JQAat7Tib0NpNU_pnFjdEF9oTzhCJG251an5DYhWbzKYt8xDHpW5rLpRc8dGfRP_d8y64tvwVj44S2OA1oIFWju2sJAKsR9SmXkSqJ-GYbw-9EdVra4sccgZm4sMA1wcJ5-pyhKitYHwsaiUn_8X1b-p6Cuw7Gt5pOD_4QAhG52Mg9KegXFX2POBDmyUsrIK4g8glpXRkYBzqrQK8gUo4iazYoVvy56J6dw_bunpIsrqygkRoa8y1eVXMrcS1jRbPatyqj-pCJrYKQYIEJUWrAPsSS4yE5Eib5xEnOdrMRCP-hi1AXG_yf-J0GiDQkCYLHdHgoE6k-V92iWeRHgvI-7-FGkXdaZXjpGeyaO1LBEDpsPv40BB8b6W_nmlMVopPSEHueLQ8R64kz5rGdh0Ww7T-CHRljbWX_DEUx28&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "090488 73432",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.596705799999999,
+      "lng": 76.8925646
+    }
+  },
+  {
+    "id": "ChIJUwX1zsy5BTsRlg60tvJK-pY",
+    "name": "Bemart Hypermarket",
+    "address": "GWVR+6R, Mayuram, Nalanchira, Paruthippara, Thiruvananthapuram, Kerala 695015, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 3.9,
+    "reviews": 725,
+    "score": 79,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHppiBYFHv8i8ApMxTY4pJvoDDAav-XBnsq4p6G9Cd9WdYShE5qFraXDag6anAOSOWIzNF0Yl5gwPcPucNhaMyQ-BaRt8uyxLPFysxWqQCWRAJqwpuh5n4bXiD6qQ_CZ7ukG40RVLt7iBNOHWKAT61jkpmZCM1TqIAMDhqM_L9woPXxMUzq6-6NRfKsevtzx_xbwBI8eMuleUb0diiY4zR01Sy71moJaWQGWDLMSrKgtDYn5rcJoQgJ41oClgZ4fOKRzvvdn9HSsZeCNvELPs0w6fH7s8RjdZdZ179XTNViLqg&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://instagram.com/bemarthypermart?utm_medium=copy_link",
+    "phone": null,
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.540456599999999,
+      "lng": 76.94149639999999
+    }
+  },
+  {
+    "id": "ChIJ27KaHNG_BTsR3IcY6FZRqpQ",
+    "name": "WE MART SUPERMARKET",
+    "address": "Substation, Bus Stop, Salem - Kochi Highway, Technopark Campus, Thiruvananthapuram, Kerala 695582, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 3.9,
+    "reviews": 330,
+    "score": 79,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqEZ-0UJmSwzGKjNqPic3qBP5nneXxmEI-neKS8Fcaege-3yhBw0WP3qUoZYesos51VzVcTHSuT7UZan6tSpljK8V2a5JNe4Pj03FxIXMxVlc7kMwp7fE90OXeZ4H2Qbsh2s4L9ry0qARywZks-tQLHVE3PNEFnSWnFQKClPvEeWxjU7I4LDTgPDuZ69DNZlo_AnXD-27aADzEH4aIdc-sGRHOuUn24PuArcnYP7-woNxmdUMSQONeI6GbhDsT60hgdDOQgmuxd22NNVorW3kKYEVNh0cs1k6g-w_5OeWqfgg&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "080754 49415",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5652645,
+      "lng": 76.8784129
+    }
+  },
+  {
+    "id": "ChIJq6qatF-5BTsRxi8U8zuu2Pg",
+    "name": "Reliance SMART Bazaar",
+    "address": "Ground Floor, School, Pattom - Kowdiar Rd, near Saint Marys Lane, NSP Nagar, Kesavadasapuram, Thiruvananthapuram, Kerala 695004, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 3.9,
+    "reviews": 11822,
+    "score": 79,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrc6SXhVPTUHIpsI82fjNzhDZ3Qiu3GpWR6HLiloiSPifQ0pA--PkFNjT-AfX8fUgNDO_lum-qztjK0f1Oo00u7O_npXSHheOFTIblo5uSvp8ylyH5WOF1cBGCLfBOqPSScl9hER9M_DMrshlIBe-FHtDIXatLfqYLvI_b0ex99XyQaWxdVvJ3ddblxExfVO3H89N1V7QbqVTl48OXaYK8aX_0zBh-Tg6TDw3_FZ76Z7EioWS82nBvyQoO2vtnbcBEBkoS_CY-cmaFhyxVQbg6xPqDZmpidZcHqJUFA1KmOa5lYRJnL-5s4P934aaaweDXY8m4Utg5j5eU54qgaWshPxvuogyXxo8A6mw7akznSDJ3y7JyjYoZoXld3NNMN7JhFZANI5Rx52znjMBGoju48VGHHR3b9iWtBeANd3vHkSR1fitlQMPY0v3UJpHya&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://stores.reliancesmartbazaar.com/reliance-smart-bazaar-hypermarket-kesavadasapuram-thiruvananthapuram-280639/Home",
+    "phone": "1800 891 0001",
+    "types": [
+      "convenience_store",
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "health",
+      "home_goods_store",
+      "point_of_interest",
+      "store",
+      "supermarket"
+    ],
+    "vibes": [
+      "Established",
+      "Health",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.5277523,
+      "lng": 76.9395787
+    }
+  },
+  {
+    "id": "ChIJz_PAQc--BTsRpIaW4nqIJ9I",
+    "name": "Dhanya Supermarket",
+    "address": "Near St Christopher Church, Chavadimukku, Sreekaryam, Thiruvananthapuram, Kerala 695017, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 3.9,
+    "reviews": 1187,
+    "score": 79,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrlIqxeSnIOBwl3u1FU3U2VoS_qpM9RNiRrird0tq5W_5_9XLPwYy7sEr7QRqEq3v3G1ZOG2DA65jzvUYxjmH5C0qfYkeN6-GY4m5qV4cam2ZnPmheSjjHjEx8C8acQIcj-oRzH93q0DyEFfopcJuq7gycSNnN5fVGXfLRMVyoMwBQ976akPh8JMNL27cTrPKkmvIHBLC2Cc1UtCOYLbP008EdX0HHACUzLfPcs5L3vji7lLfIn6Ty2oY94rk1yaqhEeR_ldLHFLiZvjErWJQT8bZwjBsorAhYU9EgkTTWUNrK-AarHXvHYHkTIWXY0Y4jvufKMtLGgGgZMXs4x6fE2TADf7-sRMY7RcvSZ743Nr4sLvnQC92nr1MJsRLO1bQZ09B6UcWXK6MWRGdqfiY-PnyDYafVrgbD1gBhpSKPycds&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "094000 09213",
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store",
+      "supermarket"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.552227,
+      "lng": 76.90784300000001
+    }
+  },
+  {
+    "id": "ChIJ4RvJ9Bi_BTsRlIUCP2Wd-1M",
+    "name": "John's Hyper market Kazhakuttam",
+    "address": "HVCC+M4X TYRE PLAZA, BENEATH OFFICE, LANE, Kazhakuttam, Vadakkumbhagam, Mallappally, Thiruvananthapuram, Kerala 695582, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 3.9,
+    "reviews": 92,
+    "score": 77,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHomycn82Mat4gxtcENCqI8q6iLzwp-GCm-yKF7p8pDmgvAZUunSi-1fYfKZTvBlRcSXoNTaV-9HboE3RMCVv8bXk5QfFL4Pp_oBCpcMiB540ebRqfalroEJnXZLVyCd75qi1ejQBGiQvYPc4LXgwuQ3a-sqW0-KNXuj8oXpOZ7TJDQNMusRfrHgKU93On7bVtfomc_-fSmoUWBWLED8Vp43yN0KDqlbpu_59OrDxZ4OYyqEwrSl1WXOhJ8_4vGsBarD0oy6UYhy7rZ57OA0Xh4xww4c4K6G08VKxcgBJj4Bqohl3gljnU51g8kRUMKuwC7-AgXrw2wmY5F3t7kt-EKN5gRMOeNq7Y679iOidsDiJCPA0uoTzFbRQjcUqfHtwFV-NnwQ3X8F4xEhOWk4PZnpkJmYrdt5jg03wvqcbmKzt648&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": null,
+    "types": [
+      "establishment",
+      "food",
+      "grocery_or_supermarket",
+      "point_of_interest",
+      "store",
+      "supermarket"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5718876,
+      "lng": 76.87029249999999
+    }
+  }
+]

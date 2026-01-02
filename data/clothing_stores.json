@@ -1,0 +1,654 @@
+[
+  {
+    "id": "ChIJwWqPLJC5BTsRDSWhq5aAaMc",
+    "name": "Blue Sapphire Style House Kesavadasapuram",
+    "address": "TC 14, Rajeevam, 4622, near Paragon Resturant, Pattom P.O, Kesavadasapuram, Thiruvananthapuram, Kerala 695004, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 5,
+    "reviews": 155,
+    "score": 100,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrlhFjJt0oX4uTgQ23xTxzFZwIgVV9NxM7hLrXLNwRs4di3SaLeIMMsJePiVnsmsJk_v2hlZzeSp2DsaaJyYGonxpWpUk-a_R62BDNkz_6PpSYXMQTbi9BE5wEGmP1XahxKvYvtMfC7iElYBHAyYXn_qeMfKZxqoEsyvJGN8L8EaBIIglAQRDylrU4K0KtX11bGlbgth94EHomFYeupCgfq6IHokzwDHUxsSfI0vQR9LO-_jrLIqlaTwAdRDqldo3w6iQWonDFGK4pdgzS4I0BP9_ZS5ASS-pCx_yA8FFXv5w&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://www.bluesapphire.style/",
+    "phone": "098476 54321",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5291031,
+      "lng": 76.9345738
+    }
+  },
+  {
+    "id": "ChIJRZRABTC7BTsRsz_FokebG6U",
+    "name": "Iktara Boutique",
+    "address": "TC 16/4463, MADHAV MANDIR, Near GG Hospital, Murinjapalam, Thiruvananthapuram, Kerala 695011, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.9,
+    "reviews": 168,
+    "score": 99,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHryNsdGKliUeFUHInU1bB-ctt4V6JcWCbsSSMkj3JU0qZQEnmb_ebwLgXlxpx7A5GhnkDZPpwBjr51c2gPFhPSfOK55tuC4SLy3TxGYfioXaNd0lOfWmifNeojV2z6PCZAd7UAAgiJrZog_lv-syWyTz2tCkvlePerQWMmoZfCCq9qKC-UcRzI6hrzXpgza3_teOxKRxtm5G0JYWuUWStVFk3ZoUT1UotnkbDtGiaxXGbCXG7fzsZkFWmgDWkYyagpqJUqGJua3CVmgcaNAsv9ejRr2ge_8h6jihbWDXZ7QZg&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "090484 24014",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.515769700000002,
+      "lng": 76.9340962
+    }
+  },
+  {
+    "id": "ChIJwWDXf8C7BTsR39gpAiEeSus",
+    "name": "Zahra Fashion Studio",
+    "address": "TC39/353(3, Kothuval St, Chalai, Thiruvananthapuram, Kerala 695036, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.9,
+    "reviews": 120,
+    "score": 99,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpNOErkCbmR7da4hRi7rdSSrx9TOKcAArpsEhyac6XMHYy1Avmjjsgg83iE4mlz4Sec3oto-ErjD3I5UWnmI2ytN25WXbVyyiHgTydLvy2AkJ6c1oOZYxQdBsb3BkHh5vKbjmnvzA0hwsc5gPon0hY4VOZmDMWkE3z_rlms-jhcpXwdTUE4uIztbJfsrCJFgJkr5ksGMUsYE75B5jtHOTmOrSzSvlkweWCAeJI1ujljxiNslYtg5kCD6qmidz0Axr9-RJeRUB3smy97wqpNjs2o_Q0VQsni5LETShnJOCVgJ2gU-E07yhETMGJmHFOyi33YGxEzqsEfLEwzMR5emzBcwcfSpD6_5x1YsdF6qUCBTQ64xlUsl_QjE4hSlK_uU7Ansrchp8ehaToNNfK4TBAcDt7mtG9SY_BMl0qeUbFEkA&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "099614 64066",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.4808305,
+      "lng": 76.9503785
+    }
+  },
+  {
+    "id": "ChIJWQX4DpG7BTsRqTH7pOhf2t0",
+    "name": "Le Panache Trivandrum",
+    "address": "Junction, opp. Rahath Hotel, Manacaud, Thiruvananthapuram, Kerala 695009, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.8,
+    "reviews": 148,
+    "score": 98,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrJRqRoMyuCnAky6EYoZ2Sn9GZlmz7XhSMekVXgj2xSeQvNp2szDIfRjJ7mdbL58lgfmTXS4_SNg9FZAKWk4gdFuY39hdz1U8I0PanjPWcDftvj3QN2B6Y04oihOToIaFOsKSL2bUqiGvahllHpm794hPFR2AxtzkChN5uhlfGQC10vfTnBYGHr87dvxoB6BtmHtHC1mFZZBX35EiYIzgZYDAsZ7tnH2HzrPw7jMNKUIkGw-0C7yMogNnO6qdIvgN8_d4NBCK34chfSn-a210iDQZIRGNZZWK1omUNjdC8iXA&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "094870 57633",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.475367799999999,
+      "lng": 76.9475398
+    }
+  },
+  {
+    "id": "ChIJiW8Etay7BTsRUCnbBhoXrk8",
+    "name": "Azura Fashion Hub",
+    "address": "Ground floor,nikunjam royal apartment,dpi road,thycaud p o, vazhuthacaud, 695014, DPI, Thycaud, Thiruvananthapuram, Kerala 695014, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.8,
+    "reviews": 158,
+    "score": 98,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHowMXtfhHxkk7CX8gq7ekODz_YR7fDQq_1b9RC0kJHIgi9-mItCO1GJutoYRfPVkaFE2kmw1JNB22V-FgE2Ckj22_XWM3IKV6Skf1cn0LbFxA3OrbqGn2zjXZcQULUKI1Lrp0rl0uSAiz41McPOFRo2lunIZtAbO3WMlKX4rmZKUO9Wo06t6vZWZGxnAHtiMlBJUhS9LglM0wDXIRx9EW33zG15ZjTduk4VsKVrWggXtP27rqnExYrfi0tCQD103gM52-zs2mrRw4hNCvSM_mpNf6exm833yjaisIGh4SN_TA&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "062824 42660",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.4966584,
+      "lng": 76.9614657
+    }
+  },
+  {
+    "id": "ChIJU6-4eWC9BTsRia866hk_Mdk",
+    "name": "Raivaah - The Fashion Atelier",
+    "address": "Ground Floor, Kannamoola Tower, Junction Medical College, T C 94/88(2, P O, Kannammoola, Thiruvananthapuram, Kerala 695011, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.8,
+    "reviews": 156,
+    "score": 98,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpaV_CBAcPSgmy3VpaIFlKDNuz__lT2WHSZEeI3rQo_LaDux-DRqvMV43RF0pv4QxnIGv4JHjIoxMydnRRvqmXF_RZQeYRhpaj64ell7MtAsfaEIkVTxpmAv53EGPtop9BrDlQPIFuMBrSiJf8UQVc5cvY0ImhIjTA3HCJEZ6E-0SPktL-guoptcGKd5EIiYejbfPvGz-zb5PvCThr4IgE2Inu8rCYPwZCzJvPcY2ljNn3L4LDyrqFIDfoIT1yxqZ-VIJ4iCUMSCmzLTmAUWoyqt_FjioTmG7XeftHBMa0YIA&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://www.instagram.com/_raivaah_/",
+    "phone": "073069 95177",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5037539,
+      "lng": 76.9330629
+    }
+  },
+  {
+    "id": "ChIJBRVT1y26BTsRNFuyHrU7zkg",
+    "name": "Archers Lounge",
+    "address": "Near Sunny Diamonds, Marappalam Rd, opposite Sree Balasubramanya Swami Temple, Pattom, Thiruvananthapuram, Kerala 695004, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.8,
+    "reviews": 551,
+    "score": 98,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHoPz90HdQDr-lNzRVVUO7BdOc8Yt7Im_UHNjgQ43SwhBhlUgh2Z66y972AZg98qregy3Aj5F9WBsqH1jdyvjYXO12MT5BfuHwAn3Bt9n6nuzVhTWf3Yi6vFpQMBelrIx291kbxSMbqT75GE-fbgLLYgXGMJOk6JmyFORwBgbJV4Kwi_Oe35a47obv2CEbCQqxq4QNnhIxOBJJwoFYemK8sfF5OExLh8MWNce9aEtCvl6UO0PKzii89_-_-TMSWBQZ40ktFE44_zGSdSJ0whtouJUD8TWEe7frs1xSwjX8rtgA&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://www.archerslounge.com/",
+    "phone": "097453 22151",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "home_goods_store",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.519575999999999,
+      "lng": 76.94322059999999
+    }
+  },
+  {
+    "id": "ChIJq2O37l66BTsRPftWzTwJNhA",
+    "name": "ALIKA FASHION STORE",
+    "address": "Mudra 162, Mudavanmugal, Kesari Nagar, Poojapura, Thiruvananthapuram, Kerala 695012, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.8,
+    "reviews": 203,
+    "score": 98,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpT8JxVBG5d6yfbA5WNraohH72n7IF0JSI2yOV_FYSl5N3f86zw59TG24wi2nKe8fGCa5z9Vle0YyS34pswI1mpDUFm0c3IdpE23ZMH6roBGvF_7xCRViIPHL9OXiYtN2REilvJkEp9bU0Xs_mA8nqUKQLDpylEvdB_9hdBr9BtzujWCv8qfRXCEUphm0-Yr5zvnwObhgVA2WMrNH-0Ems6rImZCeQIq7fUWKgHPtBm2swnlfH6YeGDH-JBMjR_TtfN4yQ-4ZUSLMHrWsbvXqilLclq2PXkTbek3_4LmjVK_w&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://www.alika.in/",
+    "phone": "081570 25332",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.4870779,
+      "lng": 76.98308159999999
+    }
+  },
+  {
+    "id": "ChIJBVBCTru7BTsRh80SxXJe86o",
+    "name": "Ray World",
+    "address": "Mahatma Gandhi Rd, Santhi Nagar, Pulimoodu, Thiruvananthapuram, Kerala 695001, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.8,
+    "reviews": 1245,
+    "score": 98,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrc9I1FfGdehdiR5gWA7eOylaq50s8kasb8wlYsM6bmRG-MylhUsS1HHqUBVeEkTfpEWQhPnmIs5Uh5NkqyRI67-ofrSP9zWnoAcIAuVspmVNxXXv1xnF1weBwaV6EEVi0TSYkOsYRTm4cRfaWnXWjD-sKt-YR23UbTwM1BHxb_txNEafJi0l7icM8ERZVSxJKLynuitjq3UtiOUtlg2DOvcm5ATARY2vO0hrdBuuRNzJ-eG45MU9jUj20UFX5LPNBhH1-MIAmrAbyn4X93g-DXWmwGHKCW_0nd0uPgnTKG1hGOVhXPpfavb4ZuBtAoJSO1_Xr62OJv7YS7YYI9eZJILcFXu2G5A7XVKRXVe-odaRV1C20SZi8Y4u0JrENJ4qcrghXiGf8mPTFbzIKLmgOxgqE8oBZd2xmWQnnaOXJcrw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://www.facebook.com/letsfollowrayworld",
+    "phone": "075919 10191",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "home_goods_store",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.4936535,
+      "lng": 76.94784779999999
+    }
+  },
+  {
+    "id": "ChIJ3SunxoW9BTsRfrM8hS5ngHg",
+    "name": "Beyond Threads Boutique",
+    "address": "Bethel building Pulyanarkotta, Prasanth Nagar, Aakkulam, Thiruvananthapuram, Kerala 695011, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.7,
+    "reviews": 151,
+    "score": 97,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrqXA34udNdgN3uzRUvr5s1XrJQyuCWb3y-yDzjqiLqkJaO3M9LP2nk83h3t-0wBYUczbKfwkNrrlkQCQuAzHDqrT2axATAIbb4RQ384pKAyd5waSOZWZj6y37ZS6KnHL0v9m_0m1A8LUgZiliOnPkZF3tqpNCzx6s2ZD3y3hhnxm0TKKKhEb75EXvo3OAjSJj2xSjH3-6oo6I1YI0GPrpsgNNFNQ0p0u2eh7ltOBNys4hMLUvOzvyd1FUoHYRoBl3ddQN1eEYLrD5XzFbyXfhGPXy88pou3A-d6gUxDOv3uw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "098471 16305",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.522693499999999,
+      "lng": 76.9128582
+    }
+  },
+  {
+    "id": "ChIJB8BEMvu7BTsRyMHdyHkljpc",
+    "name": "Timoraah Boutique",
+    "address": "Ground Floor, SS Plaza, near St Joseph's Church, Pallinada, Kazhakkoottam, Thiruvananthapuram, Kerala 695582, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.6,
+    "reviews": 154,
+    "score": 96,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHog3MHK9VxCEwrODHij5IbeNRXyB2yMEJkbHeE5PUVcQfG1bGit1QREQAD_p2ePSykpFFUYIrK9NnAu8J2cx_F0zmXwli4klOs-KfgsvA0d-HxQ974Yon2IetG3usYd27fdd1Q4BQneBxNFim3QCXQCUOwsNP_kvxvwsc_a38fvNW7BhbnAkXlIioqcpXdxHx_3P3OdUffVsNgSZ8Lo6ei4ld1MLFW7rnqpgO6ZdGNf3d4S2_zqrmEpX9yw0nBrSVf2AQb1abk5_HnruHv2LU2hhsuZarUmFKlmGQ7TbTkZ65LLW9TkkwGU_hStMCTiNarYMHOjWxS04B9VREW2CiB66i9WlL2fvnSEFn0t49LGJPSc9CscjNeZWXT1PjLhVOrrBiQEzmS0bYuw8CvbZuE9Tz8VmuZbIV2UFYWDYb6gSA&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://www.facebook.com/timoraahbysonia/",
+    "phone": "094465 58293",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.558872,
+      "lng": 76.8750611
+    }
+  },
+  {
+    "id": "ChIJuz6vTAO7BTsRttEcGbSLxnw",
+    "name": "Lash Boutique",
+    "address": "opp. CSI Church, Kannammoola, Thiruvananthapuram, Kerala 695011, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.6,
+    "reviews": 802,
+    "score": 96,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrFMUhRCHebJ4zAwDnxnhbPyTEjFiV_fYwEMoM1EwutZ3xfPhaASgLSdq5fbFh6xAVFjm9fJ_kMCbRC0NgnW2SX1dpsrrrXSQLtsWQSPiFzvY-7UiCP4p02fAKulvRWgWPjPHxK51nqIRPiub9bDpxiR6XMDvD38ZAqkXNUjLAxVrU_zwQR5P1mYXUm_jwIbm6oSd2IiI3hK9AlQyoL-lYpcQ4sbUkMoJnbY-ggS2QsXTy7jQbKJEunh4vC2xqS50-37OStljdAl6VKCcGo5VUWgYZ8FZ1TrHdCkOWuAq7uew&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://thelashonline.com/",
+    "phone": "099957 82624",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5077685,
+      "lng": 76.9303059
+    }
+  },
+  {
+    "id": "ChIJ6yH-8c6_BTsRxFD0rbokii8",
+    "name": "Asthra Fashion Hub",
+    "address": "near Aj Hospital, Kazhakuttam, Kazhakkoottam, Thiruvananthapuram, Kerala 695582, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.5,
+    "reviews": 134,
+    "score": 95,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpbi_nYOeHh3OfxK8CAbNeFfLIwm_IhzsZm4AHisFHMUCgdjt54YKRHRNmB_S2eADTxm7U_9iOvffGb6A4KFYQLydRXFB4rQ4ZIjVYdp_IfGVwAi9anYO5cxTLkszVXi2e2MWkEfdrbW1jVl51L1ttwMpF-ys8I3eFpuzZAMBdEaNGvXoRwfA899emB4XWm2hGsjR_RA7A5TWSZ1p5IwVGRNXBsFa8tjjb622_lXXzEzwuO1twZm5Y64DGXAH5jJtn4IUQPCv-qgQqTyEjZlHCLWhcuPZxAPzSrg_S1yeAoxg&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://instagram.com/asthrafashionhub?igshid=YmMyMTA2M2Y=",
+    "phone": "079073 50610",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "home_goods_store",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.568571500000001,
+      "lng": 76.8729185
+    }
+  },
+  {
+    "id": "ChIJO3yOxpW7BTsR1_hTXQ5CI6Q",
+    "name": "Avanthika Boutique",
+    "address": "Avanthika Boutique,, 1st Floor Gauri Krishna, PRA : 37, Cotton hill Edappazhinji Road, Shasthamangalam PO, Vazhuthacaud, Thiruvananthapuram, Kerala 695010, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.5,
+    "reviews": 192,
+    "score": 95,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHogY4DmX1vDiDFKLg8qyWIomHQJTKjfGWFioVXfDgVtQjaOFqZRdNqUe9uldhSy5i56Y4EitJwFEq1J5GWyE4sNnjhgc06KvYQVqaYg2NCJ9PffOH7x1yM6fvasOX53-_pefG2W8XhMGjFKwd4pqs48-Str11XAfRp3ixc4Jlef37xtywSwC6SnrcERO4c9NMAGS9sShv7IPlBtlijv1s4JO1ez29YTq5ZU7GxOAW5P6o0JFnTMgtLFVGV633P2rHoRDM24YrfDGp8RvUhXpTObmsndwqM7CE4Am66PxCsp_w&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "079077 50168",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5034144,
+      "lng": 76.9661544
+    }
+  },
+  {
+    "id": "ChIJuQ2xAqG5BTsRMN6c1FkCkOE",
+    "name": "Minnaram designer Boutique",
+    "address": "Vrindavan Gardens, Pattom, Thiruvananthapuram, Kerala 695004, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.5,
+    "reviews": 411,
+    "score": 95,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrNSm1gSDVahMg9L1lf6KegwggBO976D2iOSicJh23zZ8yTgGAzQ-hpr7wFtN_jHZ2zRW4JNagLwiT-yzMoQ9ZT63Q-MkKVc1byz8zyErKZNCQcn078tFQkaWfgYdz7ARtpY9Ixd7EZlbFwm9qt-rJ877cKAooRIEoeaxz0ScPWQJvs7ldIxntHXhneujuUl3wLgEqhK3hYuNhnBmy2VjxvMKReb3piWlb2pl8zA2Zsx-GqdFsqa9TsGhFhx5nxqhV5sA_BWt7A7lBtGlxi3KmPBgjYjpkYAxjnqXM0yuHB8w&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "073067 93976",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5180441,
+      "lng": 76.9413969
+    }
+  },
+  {
+    "id": "ChIJ59Pg6lK7BTsRSnzQfcdOlA8",
+    "name": "AALAA BOUTIQUE by Surumi Hashim",
+    "address": "Statue, Tutors Ln, Opposite Secretariat, Palayam, Thiruvananthapuram, Kerala 695001, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.5,
+    "reviews": 624,
+    "score": 95,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrB9_HMQxbiXoFWS1VCOtFDuiNFTH1dcLPAG6kYw2z53MtenNHt6PMaUj5uXqfTJC7jOo-ZNXGM7kfFAZksTuQnoa0GhIFZJW07xY45YWX9EHsW7QAbpXwfRAtn4jFQIGFzZfm9iitI2VfQExZ_N31QfO8Yxtw8L_Sn_Tx920iau_3hKi7BYHTgc_3xTD6ojcN_CZ2KmpJW7Y3lwAZJxkxS7jmqwZ0OkGWKCZa09f6CcawQE-HCRbyl-O3-0anFHWaMxLYw-lEQRObv7gyi0sew6Av5WpIcZHM_PmIaeJIzUw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "080890 30304",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.4984256,
+      "lng": 76.9474496
+    }
+  },
+  {
+    "id": "ChIJSwFsfL-7BTsRQOYln9Klay0",
+    "name": "Jiniees Women Store",
+    "address": "opp. Petrol Pump, Bakery, Vazhuthacaud, Thiruvananthapuram, Kerala 695014, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.9,
+    "reviews": 77,
+    "score": 92,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrLM85j96rD-ELYQYGobsaMvXeYiELahLv0HCMl904FPT1uLzQdU9Iyy8B2Cfki3rU3gCAgWk5hGFGQWa-y68OmOaBIQFU31WNTJFutYAUFdnyst0nWGjBh6HR3zCLUn5WfzvmjSjGdE9Zxsay64GLQ1mPgPUIJaARd6Zv3YkY8UYfNVWzpEfrOaq3YMqMFJ3wrRztWQ2nqra06Hzhcw-WPJN86FWXswweftkUy4nKsgjiTNroK9rApIyVcOtnsRDcaxFXDsh_U9KlRdMiSGwgifJ86eZZDMlOteyi3ivGVvw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "070340 62244",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5009224,
+      "lng": 76.95856859999999
+    }
+  },
+  {
+    "id": "ChIJ8_WQWJ6_BTsRdnZyTyBcpsI",
+    "name": "Tesoro - The Feminine World | Fashion Store | Stylish Ornaments",
+    "address": "First Floor, Adi Arcade, N.H Road, Kazhakuttam, Kazhakkoottam, Thiruvananthapuram, Kerala 695582, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.8,
+    "reviews": 70,
+    "score": 89,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqzgb9P19Fgg6LyfLgUUJpvXjBDYsiULBX9lGs4Z0UAKnXNsUhg2pEftjxfL2PDdiN3K83rS51gbSrZun7hPzfSkEZUB9ZDe-S5spiul8FzRclz4pYDybPIXtAmz64cS1HSYzawvjz33z1x_nuoyTNJEKJzfM2yWQpPYhbNho7Dh2JJTmXB9Yn9_-XFxOz3zI6BZoa7rj5DM516ChFrk3KM1OjoUXZkEQ-Ca2lHSWIyoyBtRzMoHdIefa0SptEc1GycNMBb4XyfI0kpeFNXDFAZIZFyLDTQvBmhIiu1cTGiVw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://www.mytesoro.in/",
+    "phone": "062381 53217",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "jewelry_store",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5671807,
+      "lng": 76.87385189999999
+    }
+  },
+  {
+    "id": "ChIJ59FoQjG6BTsRNg0QkXB1YG4",
+    "name": "Aham Designer Boutique and Retail Outlet",
+    "address": "TC 22/2463-1, Sankar Rd, Sasthamangalam, Thiruvananthapuram, Kerala 695010, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.3,
+    "reviews": 1596,
+    "score": 88,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHoFAqSchU5OEY6cHWz2Z0LjJXKbUXSp3so4R6pZAycJ9mWJt4NleLOSH3eia_4y_SYGFVo6cST7hxlV6r61H6an8REyV0_qXvpKqtrhg5f4oQPTbev4ASAO6DP5GjFOhcZGIznupv33BB8AYesFI1dUR2R4fof1cNAxiXhicINIpu7xBqjS7Qh1j72vKbVYprGtm0OoklzdT1Fxf38OWXptelmOPrp0GZXBpDiZ3qJJrWjCUI0pvscRiL1XWjKXQNzP30MW-BBCKZdpmxFaGYENE99FN4tg17TCC7Y-kDvNhLgVLmBWHyx-fboPPf-Tai0nyy7ppPlWooeyP48SI6onBdY7zecP_E2VGl5iLwPtRWP-xiObiZavNuhlfYWeq8XI8XhXCsdjt8iyu-B546NcpDyd-8K3yTCpv9m6YzU5lw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://aham.store/",
+    "phone": "098461 99926",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5091848,
+      "lng": 76.97130279999999
+    }
+  },
+  {
+    "id": "ChIJHSepYEu6BTsRLe4PcrW9i8Q",
+    "name": "Amolika Designer Store",
+    "address": "main gate carmel school, Evra 352, evra road, Cotton Hill, Vazhuthacaud, Thiruvananthapuram, Kerala 695014, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.3,
+    "reviews": 653,
+    "score": 88,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpgYCBXtAY1Eb0WGlgNRQy1YVhkeNiYf34mN734NUnHpzphszrGdblLcfVjvDCnrr6OQBhW0r-oW68mLucAOozSrTzXzzj3iZjJXx6iuz46LIDFfJrY5HcNwhXxg1s_Xn1iBqDL5sRbQ4rPisyqvPEGMrEZjwK0CPwfLlsc7LxDgN_fGUaZRtXjPst8ot6KsQUCUTB-O9UcQYGWa3qDi_dw9Rttnw6KWL-YNxAWxL86b8qnVQltj_51uPBQN_S7XH6luOVT5yIeAZkMLXIj97e2d2lsR-OrMI7XqfR00fNqGmk9zy-X0xVhMrgozleaQZsHAhYmZ9-B5N2afE7QHQtBOwS47VA17ulnU22bOuHZfkxa5un1S67McfgjYJBg6VOhyn4jnsTTAj4RuY7daY-VPQ914SKp4kewYNEm_30MbH-GLP8ixved_t1HUnge&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "094972 73890",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.4994522,
+      "lng": 76.9658267
+    }
+  },
+  {
+    "id": "ChIJBcoUbuC7BTsRcBvdPsXmQoM",
+    "name": "AMBIANCE LADIES STORE",
+    "address": "Lekshmi Nagar, Pattom, Thiruvananthapuram, Kerala 695004, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.2,
+    "reviews": 164,
+    "score": 87,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHp_RlmCKMem96Z9lK9zn5679D0ZcRtQJl8ywFSnpcr5p4upeMZ98G_5FnKwzOgmVqurCHMoQNhJL43opwQIdpBEv311WYq0vpnlxoOxa_JkvtYVf55OqQkIh0nEgivQs4H6bvdLFIwAd5yhXf6d14dFb7vvs1V9pEPDNJ6bthC-3B_ZXfbhLraoVYUpnzUcj6Hdpbl_tmzNDCFOgWHpVU72xqgOhtFvfHJKvA_23CThLgPKLZ0EUbo4_WQ2jXK19_TmDtqSLlPyRwImW4NKHNd3_bL3RpqD9Wbqccmhcjc7ww&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "096339 95598",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5234138,
+      "lng": 76.9405474
+    }
+  },
+  {
+    "id": "ChIJJzHK8FS7BTsR016-_5yRFDg",
+    "name": "Vastraa Trivandrum",
+    "address": "Govt. Press road Jn, near Santha Paint House, Santhi Nagar, Pulimoodu, Thiruvananthapuram, Kerala 695001, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.8,
+    "reviews": 56,
+    "score": 85,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqhgGelD1tw-U84Qcl3_HXtYtEI-PJTkuLnrFIF72Pna59cHalZkrAIXn7w4I6YgaaWyUymJobZGk4ilqhe-4vCSjscgmThRbAJ-L0TVqC3ZioeYDZTPWpPo3TvX_Ef6IwVVxrTlR3cp8TjGI1YRpnObU0QR78rp64tR19_u3Lk5gI29v-_LXaNU3HUYizhfJdMnoYCHOJ5fCvkaJXg3wf57TVUSrqjhEBhvUfr_qZeaXO_qsZLVv90ouQ2EnJozRTsKrVoaQt9QVNCbg9jxLJhFWxEP23uKRdzyERrAIauYg&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "095673 00696",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.4948347,
+      "lng": 76.9483711
+    }
+  },
+  {
+    "id": "ChIJD99SvjO6BTsRKvXIIrCbFMA",
+    "name": "Vedhika",
+    "address": "SFS Icon, Vellayambalam - Sasthamangalam Rd, opposite Axis Bank, Sasthamangalam, Thiruvananthapuram, Kerala 695010, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4,
+    "reviews": 262,
+    "score": 85,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqpZxVmB_6k_eXg27sc2iSq6ekBipSgO4sJC8ZDbuGrPO47l0QYvcTErfL5eIRyjAf5Qq6Y4X-WoNlwrpzCMP5HPbHxH3_SeaEziQMaVW-oHiDHYINsMfi74gCXJ5nJJZXU_-o8Rcyh8rJoSjGXYk7yAg79h_laii6w7-0cKcawdYMg6G-G_eMYspW6bwrALMQvzsSw77XTUFRLqCq5OCdRKqQiJwmHb9x2_EYdK61pVvwMPlY2tq9_5xaflXK0pic_I4dO6JnCcNSpJJQjbJkzL7nviRFtIZtWb5XKlmXbeQ&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://www.vedhika.in/?utm_source=GMBlisting&utm_medium=organic",
+    "phone": "086069 91020",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5114851,
+      "lng": 76.96840399999999
+    }
+  },
+  {
+    "id": "ChIJ____v1i5BTsRqEfNKBXmknM",
+    "name": "Ethnic Weaves Boutique",
+    "address": "Columbia Villa, near Bank of Baroda, Kesavadasapuram, Thiruvananthapuram, Kerala 695004, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4,
+    "reviews": 360,
+    "score": 85,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrQq4jSZMJobFoSXBqdbA26QGMlQ9004PSPwvhvLchBm3b78ofpRkoimEr9ziUgZ2iNvqerNmA1XW-V1OmfZf557wJ2qJEzvAprhB3n64oou5CYSjcdkYMqOJC5V2s0MwM4Ao_J8iub-KBQY-XPvDXCYJwpjlZ6xMGlkZcrY5nU8XzoWMWoQM5wjDGcJZJCQlT5Qbgubxz6LH8JQ5NjsPZ0QJHPahVgDNAdyiW8Bsg0muD-SqT70th8hMjwgFLtyRMNRo1Uhck4vpkg3VWi-nPi5aSvp8_neGs6ztZSnZ1tyQ&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "098460 14489",
+    "types": [
+      "clothing_store",
+      "establishment",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit",
+      "Retail"
+    ],
+    "coordinates": {
+      "lat": 8.5305708,
+      "lng": 76.9386365
+    }
+  }
+]

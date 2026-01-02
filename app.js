@@ -95,10 +95,14 @@ function route() {
         console.log('[Debug] Routing to Boutiques');
         updateMetadata("Top Boutiques", "Discover unique fashion and designer boutiques in the city.");
         renderBoutiquesView();
-    } else if (hash === '/specialty-shops') {
-        console.log('[Debug] Routing to Specialty Shops');
-        updateMetadata("Specialty Shops", "Curated specialty stores and unique gift shops.");
-        renderSpecialtyShopsView();
+    } else if (hash === '/supermarkets') {
+        console.log('[Debug] Routing to Supermarkets');
+        updateMetadata("Top Supermarkets", "Best grocery stores and hypermarkets in Trivandrum.");
+        renderSupermarketsView();
+    } else if (hash === '/clothing-stores') {
+        console.log('[Debug] Routing to Clothing Stores');
+        updateMetadata("Clothing Stores", "Fashion boutiques and apparel shops.");
+        renderClothingStoresView();
     } else if (hash === '/shop') {
         console.log('[Debug] Routing to Shop Category');
         updateMetadata("Lifestyle & Shopping", "The best shopping destinations in Thiruvananthapuram.");
@@ -111,6 +115,22 @@ function route() {
         console.log('[Debug] Routing to Religious Sites');
         updateMetadata("Religious Sites", "The city's most significant and beautiful religious landmarks.");
         renderReligiousSitesView();
+    } else if (hash === '/art-galleries') {
+        console.log('[Debug] Routing to Art Galleries');
+        updateMetadata("Art Galleries", "Art galleries and exhibition spaces in Trivandrum.");
+        renderArtGalleriesView();
+    } else if (hash === '/cultural-centers') {
+        console.log('[Debug] Routing to Cultural Centers');
+        updateMetadata("Cultural Centers", "Arts, crafts and cultural institutions.");
+        renderCulturalCentersView();
+    } else if (hash === '/theatres') {
+        console.log('[Debug] Routing to Theatres');
+        updateMetadata("Theatres & Auditoriums", "Performance venues and drama centers.");
+        renderTheatresView();
+    } else if (hash === '/landmarks') {
+        console.log('[Debug] Routing to Landmarks');
+        updateMetadata("Landmarks", "Palaces, monuments and historic buildings.");
+        renderLandmarksView();
     } else if (hash === '/culture') {
         console.log('[Debug] Routing to Culture Category');
         updateMetadata("Culture & Heritage", "Discover the cultural soul of Thiruvananthapuram.");
@@ -119,10 +139,38 @@ function route() {
         console.log('[Debug] Routing to Healthcare');
         updateMetadata("Healthcare Guide", "Top hospitals, clinics, and medical facilities.");
         renderHealthcareView();
-    } else if (hash === '/education') {
-        console.log('[Debug] Routing to Education');
-        updateMetadata("Education & Schools", "Ranked list of top schools and educational institutions.");
-        renderEducationView();
+    } else if (hash === '/ayurveda') {
+        console.log('[Debug] Routing to Ayurveda');
+        updateMetadata("Ayurveda & Spa", "Traditional wellness and rejuvenation centers.");
+        renderAyurvedaView();
+    } else if (hash === '/yoga') {
+        console.log('[Debug] Routing to Yoga');
+        updateMetadata("Yoga & Meditation", "Ashrams, yoga centers and spiritual retreats.");
+        renderYogaView();
+    } else if (hash === '/beaches') {
+        console.log('[Debug] Routing to Beaches');
+        updateMetadata("Beaches", "Scenic coastal getaways in Trivandrum.");
+        renderBeachesView();
+    } else if (hash === '/nature-sanctuaries') {
+        console.log('[Debug] Routing to Nature Sanctuaries');
+        updateMetadata("Wildlife & Nature", "Sanctuaries, forests and nature reserves.");
+        renderNatureSanctuariesView();
+    } else if (hash === '/backwaters') {
+        console.log('[Debug] Routing to Backwaters');
+        updateMetadata("Backwaters", "Lakes, lagoons and boating experiences.");
+        renderBackwatersView();
+    } else if (hash === '/sports-clubs') {
+        console.log('[Debug] Routing to Sports Clubs');
+        updateMetadata("Sports Clubs", "Tennis, badminton, golf and more.");
+        renderSportsClubsView();
+    } else if (hash === '/training-academies') {
+        console.log('[Debug] Routing to Training Academies');
+        updateMetadata("Training Academies", "Sports coaching and skill development.");
+        renderTrainingAcademiesView();
+    } else if (hash === '/adventure-sports') {
+        console.log('[Debug] Routing to Adventure Sports');
+        updateMetadata("Adventure Sports", "Kayaking, water sports and outdoor activities.");
+        renderAdventureSportsView();
     } else if (hash.startsWith('/entity/')) {
         const parts = hash.replace('/entity/', '').split('/');
         const category = parts[0];
@@ -139,7 +187,20 @@ function route() {
             case 'museums': renderMuseumDetail(entityId); break;
             case 'religious_sites': renderReligiousSiteDetail(entityId); break;
             case 'healthcare': renderHealthcareDetail(entityId); break;
-            case 'education': renderEducationDetail(entityId); break;
+            case 'supermarkets': renderGenericEntityDetail(entityId, 'supermarkets', 'data/supermarkets.json'); break;
+            case 'clothing_stores': renderGenericEntityDetail(entityId, 'clothing_stores', 'data/clothing_stores.json'); break;
+            case 'art_galleries': renderGenericEntityDetail(entityId, 'art_galleries', 'data/art_galleries.json'); break;
+            case 'cultural_centers': renderGenericEntityDetail(entityId, 'cultural_centers', 'data/cultural_centers.json'); break;
+            case 'theatres': renderGenericEntityDetail(entityId, 'theatres', 'data/music_drama_centers.json'); break;
+            case 'landmarks': renderGenericEntityDetail(entityId, 'landmarks', 'data/landmarks.json'); break;
+            case 'beaches': renderGenericEntityDetail(entityId, 'beaches', 'data/beaches.json'); break;
+            case 'nature_sanctuaries': renderGenericEntityDetail(entityId, 'nature_sanctuaries', 'data/nature_sanctuaries.json'); break;
+            case 'backwaters': renderGenericEntityDetail(entityId, 'backwaters', 'data/backwaters.json'); break;
+            case 'sports_clubs': renderGenericEntityDetail(entityId, 'sports_clubs', 'data/sports_clubs.json'); break;
+            case 'training_academies': renderGenericEntityDetail(entityId, 'training_academies', 'data/training_academies.json'); break;
+            case 'adventure_sports': renderGenericEntityDetail(entityId, 'adventure_sports', 'data/adventure_sports.json'); break;
+            case 'ayurveda': renderGenericEntityDetail(entityId, 'ayurveda', 'data/ayurveda_wellness.json'); break;
+            case 'yoga': renderGenericEntityDetail(entityId, 'yoga', 'data/yoga_meditation.json'); break;
             default: app.innerHTML = '<div class="error">Unknown category</div>';
         }
     } else if (hash === '/admin') {

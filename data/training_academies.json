@@ -1,0 +1,405 @@
+[
+  {
+    "id": "ChIJAylum8e_BTsROm1tiWy6igw",
+    "name": "BROTHERS BOXING ACADEMY",
+    "address": "Technopark Phase III Main Rd, Kulathoor, Kazhakkoottam, Thiruvananthapuram, Kerala 695583, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 5,
+    "reviews": 1143,
+    "score": 100,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqrIndz17jBJ4Bde9-v7RFzKdZPqyW-T9_FpqfxUEhXG3oF5eIEzqWv5hSvWJhbOd-nV8SLotXxYXSAY_-OKNMC5iwhYNG4l0LjYUC8CYhGg6FGJ06m4-yI3g1DT9rFIw1OrFROk_Ljzf-C_TM5tQG__RPjw2AlnOk7JXUR6v3vP2IJUE0Ip7MC1hgfuDA-Bw7y9K3wFNqiUREeY0HnUV2X4HezquBZbz5AmZuoWl7M3wcj0ra2BHnLB1lnBQW1UYVwJZFPpwaLdZq6R7Q46yMPWTwLYE48c9tgCxQn8oIcvZdl9HrcxryBaB_eO0wew7GskCivVt9HGYmmMDNMmBPfWmn0NcMzwao_zlS3leLXoDjo2FVyF9LjJUk7KAd_fgZUBkz49FNXerXuulttp954ldNcyfxHchzrDBpHAuWv0d7U&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "081130 85990",
+    "types": [
+      "establishment",
+      "gym",
+      "health",
+      "point_of_interest",
+      "school"
+    ],
+    "vibes": [
+      "Established",
+      "Fitness",
+      "Health"
+    ],
+    "coordinates": {
+      "lat": 8.5476834,
+      "lng": 76.8780866
+    }
+  },
+  {
+    "id": "ChIJB5o9tB67BTsRZYHeGpIzonM",
+    "name": "Capital Football Academy",
+    "address": "Nandanam, Kowdiar.p.o, Pandits Colony Extension, Kowdiar, Thiruvananthapuram, Kerala 695003, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 5,
+    "reviews": 114,
+    "score": 100,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHoGDm1NJaVGNwzDOgMdTD1CywoYMcOewTKu5ZixwJE-MWDMS2VDAsafK2mmzVwSPAsz8CR-fTKFjfEBLYsu_rIimakzPehZJknAbqSeTSnRNo638gJHJVO7nBrhQg2gmOe87GREeJyf_YUcN5a8ebxUk2ApHzw2QhMX9gIxxX83caxMRv_OLPFLzq4EzVud_b7OeB9hggRQWnYqyUAqzf1x4YvqZKMBRiMe1JbBElkGDWw0gO28a-GO3UhYe-miU3SZ0S-eltGJPVakywqLBrV3qlBW5d-lNmfvt0FgeDaIHQ&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://capitalfootballacademy.com/",
+    "phone": "095622 48669",
+    "types": [
+      "establishment",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.5218907,
+      "lng": 76.9608721
+    }
+  },
+  {
+    "id": "ChIJPzTamtW_BTsRYLxqY3lDxxE",
+    "name": "Epic cricket academy",
+    "address": "TC-98, 3479, Kallingal Rd, near Toyota showroom, Technopark Campus, Kulathoor, Kazhakkoottam, Thiruvananthapuram, Kerala 695583, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.8,
+    "reviews": 192,
+    "score": 98,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHo9PFDGJCG09_G-y-7lTVpzLEtnk1oEYkfSEQ4bx5PAWwlCxXMsp5GQPlyPm9-K77u58Gs_S8pc6Bz2850S_u975_H_tR-eLn59t_fZ9fBd0_d_i-FSKx8BulaYUctROUKxphL8fhkyMVecgo6M-C_kUP7zvnFQzvlC7kjdLblSsqKf0B5g3v39c0fVZ5-eKIz8aJsPphcO3xnTmS3qeshtDow0nb5al16YSh9t59LjPZc3EKm5zlhY1XjHOLRmvleaMDecHNf3epR0F1isa-Sj4nGnhrG--yr3JExSu-U&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "090617 60042",
+    "types": [
+      "establishment",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.5506431,
+      "lng": 76.8785671
+    }
+  },
+  {
+    "id": "ChIJ99AFz8a5BTsRwqblCyqYMbM",
+    "name": "Trivandrum Sports Arena",
+    "address": "Grace Gardens Pallimukku, Vazhayila - Kallayam Rd, Kudappanakunnu, Thiruvananthapuram, Kerala 695043, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.8,
+    "reviews": 159,
+    "score": 98,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHp8Dsv7Ydq8yYu7ir-5FhnDriNNMel3aGC6O3cpFpGm0PP5v9pXeuv81eXNk6a0G8F_KMi21DhOlq41rr5QJ93HWyuv1iplfA2IeMZZ1dXhhXHB8gpiqgxfNodX0kCijLNZQjIcXsPJDMlB9-O4jnHHhv4uwMjJ48fWlV4R7eQzXXoCwGVBQDHyQqEysc5yU17WHgX-ALFb6ff27luoLVFa3t27WelRTRKnktatxgR_-jf7Oomo1UpjgTiNGSKkXIhTb5KUbIzrEnUJcNAuTbrrxzFT71_-OLrSpg50odrn5LIdmt6_8G5gm_ftm2htVc5U6GHdfu1IaXLYAsVBwUshAKCPka4zTCRXKVi94It0QMQnxqLA-6EZmGzejQsrKTQYlLwygQGbKBy202P3jb04WB_Ikbg8dRRR3NzVdcVcf9Nl&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://playo.co/venue?venueId=4d933c6f-d0c6-4e7a-8eb2-c05eae1409a1",
+    "phone": "090209 05326",
+    "types": [
+      "establishment",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.5608697,
+      "lng": 76.9646569
+    }
+  },
+  {
+    "id": "ChIJu0N4fUa7BTsRhBsyNWzjPz8",
+    "name": "Ashes Indoor Sports Hub & Ashes Cricket Academy",
+    "address": "Trikkannapuram, Park Junction, Thiruvananthapuram, Kerala 695032, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.7,
+    "reviews": 215,
+    "score": 97,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqtwlF1TDJqVOzdqpXEgIGZq0sB7XkD_buic0UJSdt1Rv194sD8U9iMRwhj-zLUvbXiDn0zEULdSr2w3AhaOMvs-HTRaTZ49MPee9Kueo-tTD8QhJeZj4v5jXKUW3H23b0h69O_NxV7Kr4P0fu5Tpgvjq9WDUvHu-C_MobQnhzHrFa4bWKNQWLI9dB8y8Obqxb7G_tOc8v0uvgZfCIty-seRGjIchLoJJtvHIlC0BqGVN2qXz_5bEyO4ufj18jHW4WQsJrHcy_sX7Vbp6ankGtzgfTzIP6LobkgSH4ZquNIHg&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "073568 20569",
+    "types": [
+      "establishment",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.479525899999999,
+      "lng": 77.0019813
+    }
+  },
+  {
+    "id": "ChIJu494xTy6BTsRgTiaPDqEE18",
+    "name": "Love All Sports",
+    "address": "Anand Ln, near Corporation Swimming Pool, PTP Nagar, Karimankulam, Thiruvananthapuram, Kerala 695013, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.6,
+    "reviews": 662,
+    "score": 96,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHos6K8n2Zcf3IFg9juxVyFmnCjk4l0DKJdPGq1EYuSQCwHc-zuDRm_VB2kJdS7ogC8gIq5CL5HGXIvi8ZJMjT51_fFgj_5kXC8gpFaLvUPlI6i32LzbMQ4Wr_rsvlBnTuWWD90HoC0eVnQNZsGO0xmD8F-nJ-NolUSLVwYHf9znhOoCfQf2WkOBU-J4Yrji1t7bA3Gw2sMX1jlYhyJy75JZfqq9rtE2jtPkZr-LvYkp4P9zF3LbZE-q0-0SSbQoA99Z51J0GJe518gHyP6NR4NVmgMVU9W-1590m4EyiYm3qw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://www.luvall.in/",
+    "phone": "081299 34638",
+    "types": [
+      "establishment",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.515241999999999,
+      "lng": 76.983571
+    }
+  },
+  {
+    "id": "ChIJnftWmEm_BTsRG8aGES7LxTY",
+    "name": "Khel Academy",
+    "address": "Behind, Police Station-KTDC Rd, Kazhakuttam, Thiruvananthapuram, Kerala 695582, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.5,
+    "reviews": 927,
+    "score": 95,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHqT8UCRzBs7EbjnuD-EKYOx36JW9s-eFRb8EK5-WWCLjyWOh55X78nnqCZPp43s1Wl-uCXYTDcfjv-pMUbpkGre5FvgrhPzGtzjvZH1kJObhq10OrZaaJybUkFn5smHSXWjiOpPz5w2mwcxWPmAmizG3R3IrzoLVIUjVty6brauS9VOPavIPvkq3as4CjczhB1AhKmOCKeostwUSpC31XbWHn-_M3gsR6I8eGZBYkgBs0kzjXeLx5JJwL3HvPXWJlDZxeGZvv9Uw0kwFnlGnruXuId5ZKfes3aYnbIN0IPbvxtm81SZBccjCacgMDvsqFL5O4QvcqdYF2uYXZx-ZYG7El8B477RniMaKVb9x710sLgBLUhO_fqzC0gPMyzEx83wzMxv2UYEs5RnT1awZni13RJc_xwyqFdyj9HiDyElDg&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "080862 52602",
+    "types": [
+      "establishment",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.5698501,
+      "lng": 76.8698718
+    }
+  },
+  {
+    "id": "ChIJ7ap8ifK7BTsRQKViRag85pA",
+    "name": "Dev physical training academy(DPTA)",
+    "address": "Sai Krishna Building, near indiabulls home loan, PMG, Thiruvananthapuram, Kerala 695033, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.9,
+    "reviews": 79,
+    "score": 93,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrOqKA77XXdLPrTUvxgvR_l__WOMhbZ11L5SK5DVVl5iBmdJNi3SSjHxwaBg6E1mbR5jMobZXSzxraOG9iygKxqAIM4ete6h9xtfYdFoebtL57tf6zow23xz4BEsYURdcJtIQ1JPIaxu9AEvTIrfmvCT1gwMp-591o_iuyLGIZknGSuzDqOKFh3gRkAHIY3dBKMeH4Nq-onYwNbF9uViO6QWJZuO9-zdRbiRECTV9M5C5HMT002_1Oo_BvQDdc8OhEVqPmz8JeTaOc2XzDCI6kgQia1vcnWNmDEL05S9egThIgOzwPrDzNh6GsgeCyFmiNrXUjBy-_JgXQ8j9ybK1HsNrgaFaOSEsw7i7Wg_HBQomgq1pIB1Zs60RjQpmN5RNfA3ZyX0zsT0FCryZU0u503nb2S-iXBpXjIbizuig34bxAx&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "085478 87794",
+    "types": [
+      "establishment",
+      "health",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Health",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.5105458,
+      "lng": 76.9485466
+    }
+  },
+  {
+    "id": "ChIJc5mBx4m_BTsRdNYoM4HzWC8",
+    "name": "Bellinturf Sports club",
+    "address": "Aakkulam, Thiruvananthapuram, Kerala 695017, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.4,
+    "reviews": 744,
+    "score": 89,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpsjBf4e1mb4NQqqPVSK0HVNTQ9jZuOkJEhKm2DFlBdJPVWP8WtxUGFSigWFuMG9j1KejyV6m4it8jTXP5eLarTOl8e4TUrjEo9ak9SGSM3n7jm6R8Zo5vznXoIhXtZL-FAa0fibNleOYiHHtXnDaiuDK5ExTx8ncrMml_UGbKOOsta-LgxLLBn5ORSRO6TU4rJOUqshE6bT2nHJSADZBVdzWY3Ivr52zYGIDffDLtV_vH8Fmj1uBWhJgUcrsLiuRdyzVoQMr7PEv6L7oWAaagIYvXyQIU3lFxruP6RVps2NA&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "093880 00333",
+    "types": [
+      "establishment",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.5245132,
+      "lng": 76.90145679999999
+    }
+  },
+  {
+    "id": "ChIJ86_p1CK7BTsRTzvo6A671cA",
+    "name": "The Oxford Sunrise Shuttle (Toss) Academy| Badminton Academy in Trivandrum",
+    "address": "Oxford School Road, Near National College, Kallattumukku, PO, National Nagar, Manacaud, Thiruvananthapuram, Kerala 695009, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.4,
+    "reviews": 297,
+    "score": 89,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHozESPUyb2HBeo0lxmKAL1z0hcgVe0P_G9KSiz7ihWTahNYzMbmHQCyHiL0CVnqR2Z-VKm4M5DefoxhgXUemeq1294zYbVXm1Y6q3MqQafaB8bnCnq_HOgtDsy2DJT5Kf4kGEWGCvRsenddufkqi8vyu0-vacd_GjLUnYx0mlQaWEA8_8RZIjdxNQ4TW5A7QlT78Z4cDri1M-_UaaYnCNpgu2eUJsjW_CENMG9jZ_yil5XoPY-S71uE3ypVYe9HGKifbLw9wq2FIMI8BO5UW_s0BV5moWZuEAYUPqzm83SrdQ&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://tossacademy.com/",
+    "phone": "085908 75735",
+    "types": [
+      "establishment",
+      "gym",
+      "health",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Fitness",
+      "Health"
+    ],
+    "coordinates": {
+      "lat": 8.459007699999999,
+      "lng": 76.9526217
+    }
+  },
+  {
+    "id": "ChIJGyiGyzu7BTsR2Ve10AzvOWQ",
+    "name": "Winnerland international sports academy",
+    "address": "UPS Ln, near UPS School, Ambalathara, Thiruvananthapuram, Kerala 695026, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.4,
+    "reviews": 328,
+    "score": 89,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpqv3gCWKf5MpSMWg5vKllr3yzwIL85eaXMks2Xx3BwMygCwMYmNHwl2eReo_el3Z4G1eSjVJbZULsv25BikfiU48S_25sB9jabiGXExE7SdTGCZNA1sap5nX7CwYOGgOv_aORLCXw4I-eVl7Ib6aK0A3GtfuAM9F0i9b0A9Vi-M8Bx9matQBz-9QY4E98-MfEn09395Z_S8HGTeirdKTLdor79oAvscx6iAxQ6PPatJH9poJilLKsOVxMk1s2Z31i342sO2BKvdDqZvG_G-knpZVQkdH24F0J6aTDThGQ6YA&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://www.winnerland.in/",
+    "phone": "097449 77797",
+    "types": [
+      "establishment",
+      "general_contractor",
+      "gym",
+      "health",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Fitness",
+      "Health"
+    ],
+    "coordinates": {
+      "lat": 8.4532293,
+      "lng": 76.94815
+    }
+  },
+  {
+    "id": "ChIJAW32Cfi5BTsRPpHGPFoKOHk",
+    "name": "Olympus Sports Centre",
+    "address": "Bhasi Nagar, Ulloor, Thiruvananthapuram, Kerala 695011, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.8,
+    "reviews": 68,
+    "score": 88,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHoJmc82wCPmghsAp8Fg8_FDyvqgy2DQf5rAso_AtDWMcO67LTobEwthg-A2NtEOcR8aVd4g-uhiwZmvT8uwiqJBBJ9QbXPhfIDPFb4hnahjF0hbmA2sci-TwUqOtceDvI6_gyiqx5wiICtRzoprNC-if3if9WE4GZizQlZdUvahbw5UzBkM9pCcwzFtgMnGeZcqtNyR8qQKUTtwo6gmHKTAdHneIbHdi_WMSDI2A3AfM6AW1d-Na8uREdc0KtXYiSXP2yOMukaP8oNwv3zrEGvLaDThkMM1boga5k5ZJDWQ4hJD7lh34Ftv-fq1-N1FLgowkRYt90e5jr7RNdCV25_9MvYlyR4hXiSuSydvhVMMzDDztUYuuFWQ_cVSaBgESLTjd4aqxFWPBij3zG6k8y6MOe6KNMOe4_4yKa55M8Z8iw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "http://www.olympussportscentre.in/",
+    "phone": "088485 09072",
+    "types": [
+      "doctor",
+      "establishment",
+      "food",
+      "health",
+      "point_of_interest",
+      "store"
+    ],
+    "vibes": [
+      "Established",
+      "Health",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.5338622,
+      "lng": 76.92749130000001
+    }
+  },
+  {
+    "id": "ChIJ_dkHUfq_BTsRSXhK_EEpHWs",
+    "name": "Maidan Sports & United Badminton Academy",
+    "address": "Greenfield Stadium, beside Sportshub, Karyavattom, Thiruvananthapuram, Kerala 695581, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.6,
+    "reviews": 68,
+    "score": 86,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrMTVPU7AdZxHRFfustsOJHJ7d1k2n3nREEBvMRg-VJykDLsG7ccBc21qSiB4LdY-u9Cy15HHRRshm7QSjQLX3J-XGK1DKIsAu-o5pGIP_Q_Qvbkb2N6pShP2WPo5av3AXHydEG8LdKqQBm7O5Z8A-rxc1qr7QsyZTMzfJCrJCaJMwmqXJcLe7iKA8Zi7rFUJX7yyQPucyaH8L9Q-U62JJlLBoEqF5ZkH1IopPSaHJASKw5hSoiGJNU6lkvWDQaOEdDs_yf5XAq-9imePl7rqaFrVoIPLIIrC5mC1aPrKJ5GIqZYjQRxN4hJ6yC9iy46GcgFlyOHMcY1d_F-MkDyBNgOHgIh0WFvTL-SgfSTfh2ZGGg7vM2MAm2Jrq61j01X0YzLBW8EytjUu4FA4eypCUzb0L9LHJAkCdAiuG7YqPzTDTq&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://maidansports.com/",
+    "phone": null,
+    "types": [
+      "establishment",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.5720871,
+      "lng": 76.8853386
+    }
+  },
+  {
+    "id": "ChIJGY6GFF67BTsRzN2zhS6McC8",
+    "name": "Pro Street Football Academy",
+    "address": "OC Street, Jawahar Nagar, Sasthamangalam, Thiruvananthapuram, Kerala 695003, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.9,
+    "reviews": 55,
+    "score": 86,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHpSsGQ-BuIAh8GAJMA4aDDkT1dVyCRwlXnsFrtWSBQGUW7_-npa-eg2aaepWNzvuNXEa9ZKgaNLlB1aHg5vMXBT8VLSBVIRYq3y3Mkk_W6N2wbLWUKMMwArtA75PythDBuhR0O36IzpJHwr3oAjAiBS_9bVsSSW9tx_eqQ4qzLuLSl7pzB_Jr5YiJDs1Ax1JbSjZFgP83UomhAmhi_k5fYySQsO7hkSiNNFxuWV2kALaNTSZh4wmQLhvVrAb41wLhz8_bpbBzo1nDZ8_OO1uj_fzN_5PXuZqFOaQzONfTB-OWpm31BsY7Tp-s4QQ95CHeSV3Ub0kE3HGFcFruAOil08MSnWTJu-3Ha2KkfvmwzAGF4TBg5o6AsizVDimL2NVE8lCFYkTRjicQuuJApcMfrNgYq3EuqTJIX9Q53oKDGr7Q&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": "095395 39326",
+    "types": [
+      "establishment",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.518038599999999,
+      "lng": 76.9692347
+    }
+  },
+  {
+    "id": "ChIJqzKM3Oa_BTsRy6ghxVuQgbU",
+    "name": "Atleta Sports Hub",
+    "address": "LNCPE RA - 113A, Perumanchira,, Kizhakkumbhagam, Near Neeli Amman kovil, Kazhakoottam, Pavithram, Thiruvananthapuram, Kerala 695582, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.1,
+    "reviews": 408,
+    "score": 86,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHrbhNec2v71jBaF3wz4P2yL7AgcPGKpKqk8r53RoYV1UdkyugbqY26g4r3xr_r3U92q3gIA2fxYHuD8LEGGbRL1QiqYC-QkHaH-npSqBOoz7ot-uPzqIzk2umP9lI-W4zvLhaCcV0VLYWvYj3-qGOpczf2iRR83ky1Ji_pG_e_CAl5pFlKZMMOcjOmGwC3TphiePFTWL4k_9F3vhkrvZ0PHmid9BDHsVnXtS24HgWdse-0jLEyoALG4pKEVmHvbyiZ-mpukXBEshAkOv6Q_xxe6t8n94HbxLiynUv3yF4iN3bfU2vl9z_rltmrW3jU31He8eCT_r9I4q2wtEiwt52n6yKO3HEGmI-dXg8jutXQAQYhfVWYxkFLCssQ1fdP3Kk9Zd9n1UiITB1JWBgH9CCrey8UlmGQr5N0eRTq7xNXuNw&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": null,
+    "phone": null,
+    "types": [
+      "establishment",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.568170199999999,
+      "lng": 76.8779807
+    }
+  },
+  {
+    "id": "ChIJJ-rb7F-9BTsR4xZ-jBnpmAY",
+    "name": "Falcon Badminton Academy",
+    "address": "Mukkad Lane, Anayara, Thiruvananthapuram, Kerala 695029, India",
+    "locality": "Thiruvananthapuram",
+    "rating": 4.2,
+    "reviews": 76,
+    "score": 80,
+    "image": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AZLasHoD1pI9tOpM77yeDxbDAcGuRPTsDtjwjHEqHCg-0TdjEDd7ZG7UQtmduO5d-soEP92xOPBPU1deC471zrH-E_00_kw7pg7MZfnuhqXEItLXJPebxv8YjkK5jYXjcj9v9u5H95XU2tTp9MY0Ktd2KgABJ-dUR0_NFJapQOwgS_zAJgVJwY2HT2ZcXSbNYKj595Y5Y7uDkvZis9GjPboJ8C0OX8ydimX3T2aLN5998BcGkVDadR1knNoEMW0lw91ZEQNXDls5g9JPwWyjTtB2b5_S33t52tWK79PpFQ74a7FYSyt9eUlq7bIKtxQ8BT1LL5dDXYsvbjqmXHXL5YW3Y4_nzCXO42nSLoE4dnG7jsTHmD_Foq0Kv4GjteQ4S9nOax9g6QGIM74I6NUvHchUu_xK7ZwGEoAw698XPZEgcsBIAIMd&key=AIzaSyCxkCgpESLmnZ3XmgYJPNHS-Q9RmiKl7b0",
+    "website": "https://www.falconbadminton.com/",
+    "phone": "085901 18984",
+    "types": [
+      "establishment",
+      "point_of_interest"
+    ],
+    "vibes": [
+      "Established",
+      "Must Visit"
+    ],
+    "coordinates": {
+      "lat": 8.510996,
+      "lng": 76.9151703
+    }
+  }
+]

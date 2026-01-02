@@ -278,13 +278,176 @@ function renderHealthcareView() {
     });
 }
 
-function renderEducationView() {
-    renderCategoryView('education', {
-        title: "Education",
-        subtitle: "Ranked by student reviews, not academic performance",
+// ========================================
+// NEW SHOP CATEGORIES
+// ========================================
+
+function renderSupermarketsView() {
+    renderCategoryView('supermarkets', {
+        title: "Top Supermarkets",
+        subtitle: "Best Grocery Stores & Hypermarkets",
         icon: "",
-        filename: "data/education.json",
-        badgeColor: "#6366f1",
+        filename: "data/supermarkets.json",
+        badgeColor: "#22c55e",
+        metrics: ['rating', 'popularity', 'sentiment']
+    });
+}
+
+function renderClothingStoresView() {
+    renderCategoryView('clothing_stores', {
+        title: "Clothing Stores",
+        subtitle: "Fashion Boutiques & Apparel Shops",
+        icon: "",
+        filename: "data/clothing_stores.json",
+        badgeColor: "#f472b6",
+        metrics: ['rating', 'popularity', 'sentiment']
+    });
+}
+
+// ========================================
+// NEW CULTURE CATEGORIES
+// ========================================
+
+function renderArtGalleriesView() {
+    renderCategoryView('art_galleries', {
+        title: "Art Galleries",
+        subtitle: "Art Galleries & Exhibition Spaces",
+        icon: "",
+        filename: "data/art_galleries.json",
+        badgeColor: "#a855f7",
+        metrics: ['rating', 'popularity', 'sentiment']
+    });
+}
+
+function renderCulturalCentersView() {
+    renderCategoryView('cultural_centers', {
+        title: "Cultural Centers",
+        subtitle: "Arts, Crafts & Cultural Institutions",
+        icon: "",
+        filename: "data/cultural_centers.json",
+        badgeColor: "#f97316",
+        metrics: ['rating', 'popularity', 'sentiment']
+    });
+}
+
+function renderTheatresView() {
+    renderCategoryView('theatres', {
+        title: "Theatres & Auditoriums",
+        subtitle: "Performance Venues & Drama Centers",
+        icon: "",
+        filename: "data/music_drama_centers.json",
+        badgeColor: "#dc2626",
+        metrics: ['rating', 'popularity', 'sentiment']
+    });
+}
+
+function renderLandmarksView() {
+    renderCategoryView('landmarks', {
+        title: "Landmarks",
+        subtitle: "Palaces, Monuments & Historic Buildings",
+        icon: "",
+        filename: "data/landmarks.json",
+        badgeColor: "#ca8a04",
+        metrics: ['rating', 'popularity', 'sentiment']
+    });
+}
+
+// ========================================
+// NATURE CATEGORIES (NEW)
+// ========================================
+
+function renderBeachesView() {
+    renderCategoryView('beaches', {
+        title: "Beaches",
+        subtitle: "Scenic Coastal Getaways",
+        icon: "",
+        filename: "data/beaches.json",
+        badgeColor: "#0891b2",
+        metrics: ['rating', 'popularity', 'sentiment']
+    });
+}
+
+function renderNatureSanctuariesView() {
+    renderCategoryView('nature_sanctuaries', {
+        title: "Wildlife & Nature",
+        subtitle: "Sanctuaries, Forests & Nature Reserves",
+        icon: "",
+        filename: "data/nature_sanctuaries.json",
+        badgeColor: "#16a34a",
+        metrics: ['rating', 'popularity', 'sentiment']
+    });
+}
+
+function renderBackwatersView() {
+    renderCategoryView('backwaters', {
+        title: "Backwaters",
+        subtitle: "Lakes, Lagoons & Boating Experiences",
+        icon: "",
+        filename: "data/backwaters.json",
+        badgeColor: "#0284c7",
+        metrics: ['rating', 'popularity', 'sentiment']
+    });
+}
+
+// ========================================
+// SPORTS CATEGORIES (NEW)
+// ========================================
+
+function renderSportsClubsView() {
+    renderCategoryView('sports_clubs', {
+        title: "Sports Clubs",
+        subtitle: "Tennis, Badminton, Golf & More",
+        icon: "",
+        filename: "data/sports_clubs.json",
+        badgeColor: "#059669",
+        metrics: ['rating', 'popularity', 'sentiment']
+    });
+}
+
+function renderTrainingAcademiesView() {
+    renderCategoryView('training_academies', {
+        title: "Training Academies",
+        subtitle: "Sports Coaching & Skill Development",
+        icon: "",
+        filename: "data/training_academies.json",
+        badgeColor: "#7c3aed",
+        metrics: ['rating', 'popularity', 'sentiment']
+    });
+}
+
+function renderAdventureSportsView() {
+    renderCategoryView('adventure_sports', {
+        title: "Adventure Sports",
+        subtitle: "Kayaking, Water Sports & Outdoor Activities",
+        icon: "",
+        filename: "data/adventure_sports.json",
+        badgeColor: "#ea580c",
+        metrics: ['rating', 'popularity', 'sentiment']
+    });
+}
+
+// ========================================
+// WELLNESS CATEGORIES (NEW)
+// ========================================
+
+function renderAyurvedaView() {
+    renderCategoryView('ayurveda', {
+        title: "Ayurveda & Spa",
+        subtitle: "Traditional Wellness & Rejuvenation Centers",
+        icon: "",
+        filename: "data/ayurveda_wellness.json",
+        badgeColor: "#65a30d",
+        metrics: ['rating', 'popularity', 'sentiment']
+    });
+}
+
+function renderYogaView() {
+    renderCategoryView('yoga', {
+        title: "Yoga & Meditation",
+        subtitle: "Ashrams, Yoga Centers & Spiritual Retreats",
+        icon: "",
+        filename: "data/yoga_meditation.json",
+        badgeColor: "#8b5cf6",
         metrics: ['rating', 'popularity', 'sentiment']
     });
 }
