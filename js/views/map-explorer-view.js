@@ -357,8 +357,9 @@ function computeLocalityFacilities() {
             if (category === 'localities') continue;
 
             const nearby = (entities || []).filter(entity => {
-                const eLat = entity.location?.lat;
-                const eLng = entity.location?.lng;
+                // Support both 'location' and 'coordinates' property names
+                const eLat = entity.location?.lat || entity.coordinates?.lat;
+                const eLng = entity.location?.lng || entity.coordinates?.lng;
                 if (!eLat || !eLng) return false;
                 return haversineDistance(lat, lng, eLat, eLng) <= 3;
             });
@@ -390,8 +391,9 @@ async function addCategoryToMap(category) {
             lat = entity.latitude || entity.data?.latitude;
             lng = entity.longitude || entity.data?.longitude;
         } else {
-            lat = entity.location?.lat;
-            lng = entity.location?.lng;
+            // Support both 'location' and 'coordinates' property names
+            lat = entity.location?.lat || entity.coordinates?.lat;
+            lng = entity.location?.lng || entity.coordinates?.lng;
         }
 
         if (lat && lng) {
