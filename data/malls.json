@@ -99,39 +99,6 @@
     }
   },
   {
-    "id": "ChIJGSYga7i7BTsRhxDU357DBlo",
-    "name": "Connemara Market",
-    "score": 85.3,
-    "rating": 4,
-    "reviews": 7197,
-    "price_level": null,
-    "address": "Palayam Market Road, University of Kerala Senate House Campus, Palayam, Thiruvananthapuram, Kerala 695034, India",
-    "image": "images/places/AZLasHosz5OZbMhk.jpg",
-    "category": "malls",
-    "vibes": [
-      "Budget Friendly",
-      "Traditional"
-    ],
-    "website": null,
-    "phone": "099954 86825",
-    "map_url": "https://www.google.com/maps/place/?q=place_id:ChIJGSYga7i7BTsRhxDU357DBlo",
-    "metrics": {
-      "sentiment": 85,
-      "popularity": 7197,
-      "convenience": 5
-    },
-    "locality": "Palayam",
-    "types": [
-      "market",
-      "point_of_interest",
-      "establishment"
-    ],
-    "location": {
-      "lat": 8.5030904,
-      "lng": 76.9509492
-    }
-  },
-  {
     "id": "ChIJ-Ww4w5G7BTsRPZVa65UoxQI",
     "name": "Saphalyam Shopping Complex",
     "score": 85.3,
