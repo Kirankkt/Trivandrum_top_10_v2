@@ -14,19 +14,21 @@ async function renderMethodologyView() {
                 <!-- Category Tabs -->
                 <div class="methodology-tabs">
                     <button class="methodology-tab active" data-tab="localities">Localities</button>
-                    <button class="methodology-tab" data-tab="restaurants">Dining</button>
+                    <button class="methodology-tab" data-tab="dining">Dining</button>
                     <button class="methodology-tab" data-tab="shopping">Shopping</button>
                     <button class="methodology-tab" data-tab="culture">Culture</button>
-                    <button class="methodology-tab" data-tab="services">Services</button>
+                    <button class="methodology-tab" data-tab="nature">Nature</button>
+                    <button class="methodology-tab" data-tab="sports">Sports</button>
+                    <button class="methodology-tab" data-tab="wellness">Wellness</button>
                 </div>
 
                 <!-- LOCALITIES TAB -->
                 <div class="methodology-tab-content active" id="localities-tab">
                     <section class="methodology-section">
                         <h2>Locality Rankings Overview</h2>
-                        <p>Our locality rankings are based entirely on <strong>objective, API-sourced data</strong>. 
+                        <p>Our locality rankings are based entirely on <strong>objective, API-sourced data</strong>.
                         We do not use AI-generated scores, subjective ratings, or editorial opinions.</p>
-                        
+
                         <div class="highlight-box">
                             <strong>Key Principle:</strong> Every data point comes from a verifiable API source with explicit formulas.
                         </div>
@@ -57,7 +59,7 @@ async function renderMethodologyView() {
                     <section class="methodology-section">
                         <h2>Scoring Categories (6 Metrics)</h2>
                         <p>The overall score (0-10) is a weighted average of 6 categories:</p>
-                        
+
                         <div class="categories-breakdown">
                             <div class="category-row">
                                 <div class="category-icon"></div>
@@ -67,40 +69,40 @@ async function renderMethodologyView() {
                                     <code>Score = 10 - (travel_time / 6)</code>
                                 </div>
                             </div>
-                            
+
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Amenities <span class="weight-badge">25%</span></h3>
                                     <p>Schools, hospitals, supermarkets, pharmacies, restaurants, gyms</p>
-                                    <code>Score = (count × 0.6) + (avg_rating × 0.4)</code>
+                                    <code>Score = (count x 0.6) + (avg_rating x 0.4)</code>
                                 </div>
                             </div>
-                            
+
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Safety <span class="weight-badge">15%</span></h3>
                                     <p>Police stations and fire stations within 5km radius</p>
-                                    <code>Score = (police × 0.7) + (fire × 0.3)</code>
+                                    <code>Score = (police x 0.7) + (fire x 0.3)</code>
                                 </div>
                             </div>
-                            
+
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Environment <span class="weight-badge">15%</span></h3>
                                     <p>Parks, noise level (distance from major roads), flood safety (elevation)</p>
-                                    <code>Score = (green × 0.4) + (noise × 0.3) + (flood × 0.3)</code>
+                                    <code>Score = (green x 0.4) + (noise x 0.3) + (flood x 0.3)</code>
                                 </div>
                             </div>
-                            
+
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
                                     <h3>Economy <span class="weight-badge">15%</span></h3>
                                     <p>Job proximity (weighted travel to employment hubs), commercial activity</p>
-                                    <code>Score = (jobs × 0.5) + (commercial × 0.3) + (developer × 0.2)</code>
+                                    <code>Score = (jobs x 0.5) + (commercial x 0.3) + (developer x 0.2)</code>
                                 </div>
                             </div>
 
@@ -117,7 +119,7 @@ async function renderMethodologyView() {
                 </div>
 
                 <!-- DINING TAB (Restaurants, Cafes, Hotels) -->
-                <div class="methodology-tab-content" id="restaurants-tab">
+                <div class="methodology-tab-content" id="dining-tab">
                     <section class="methodology-section">
                         <h2>Dining & Stay Rankings</h2>
                         <p>Rankings for <strong>Restaurants, Cafes, and Hotels</strong> use 6 metrics each,
@@ -187,38 +189,41 @@ async function renderMethodologyView() {
                 <div class="methodology-tab-content" id="shopping-tab">
                     <section class="methodology-section">
                         <h2>Shopping Rankings</h2>
-                        <p>Rankings for <strong>Malls, Boutiques, and Specialty Shops</strong> use 3 core metrics.</p>
+                        <p>Rankings for <strong>Malls, Clothing Stores, Supermarkets, and Specialty Shops</strong> use 3 core metrics derived from Google Places data.</p>
 
                         <div class="highlight-box">
-                            <strong>Quality Threshold:</strong> Minimum 50 reviews required for inclusion.
+                            <strong>What We Rank:</strong> Malls (9), Clothing Stores, Supermarkets, and Specialty Shops covering books, electronics, ayurvedic products, and more.
                         </div>
                     </section>
 
                     <section class="methodology-section">
-                        <h2>Scoring (3 Metrics)</h2>
+                        <h2>Scoring Formula</h2>
+                        <p>Each place receives a score (0-100) based on:</p>
 
                         <div class="categories-breakdown">
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
-                                    <h3>Rating <span class="weight-badge">~34%</span></h3>
-                                    <p>Google Maps rating (1-5 stars)</p>
+                                    <h3>Rating <span class="weight-badge">50%</span></h3>
+                                    <p>Google Maps rating (1-5 stars), normalized to 0-50 points</p>
+                                    <code>Rating Score = (rating / 5) x 50</code>
                                 </div>
                             </div>
 
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
-                                    <h3>Popularity <span class="weight-badge">~33%</span></h3>
-                                    <p>Number of reviews indicating foot traffic</p>
+                                    <h3>Popularity <span class="weight-badge">30%</span></h3>
+                                    <p>Review count on logarithmic scale (prevents mega-chains from dominating)</p>
+                                    <code>Popularity = min(30, (log10(reviews) - 1) / 2.7 x 30)</code>
                                 </div>
                             </div>
 
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
-                                    <h3>Sentiment <span class="weight-badge">~33%</span></h3>
-                                    <p>Positive review sentiment</p>
+                                    <h3>Sentiment Bonus <span class="weight-badge">20%</span></h3>
+                                    <p>Bonus points for exceptional ratings (4.7+: 20pts, 4.5+: 17pts, 4.3+: 14pts)</p>
                                 </div>
                             </div>
                         </div>
@@ -228,101 +233,183 @@ async function renderMethodologyView() {
                 <!-- CULTURE TAB -->
                 <div class="methodology-tab-content" id="culture-tab">
                     <section class="methodology-section">
-                        <h2>Culture Rankings</h2>
-                        <p>Rankings for <strong>Museums and Religious Sites</strong> use 3 core metrics.</p>
+                        <h2>Culture & Heritage Rankings</h2>
+                        <p>Rankings for <strong>Landmarks, Museums, Theatres, Art Galleries, and Religious Sites</strong> use the same objective scoring system.</p>
 
                         <div class="highlight-box">
-                            <strong>Quality Threshold:</strong> Minimum 50 reviews required for inclusion.
+                            <strong>What We Rank:</strong> Historical landmarks, museums, cultural centers, performance venues (music/drama), art galleries, temples, churches, and mosques.
                         </div>
                     </section>
 
                     <section class="methodology-section">
-                        <h2>Scoring (3 Metrics)</h2>
+                        <h2>Scoring Formula</h2>
 
                         <div class="categories-breakdown">
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
-                                    <h3>Rating <span class="weight-badge">~34%</span></h3>
-                                    <p>Google Maps rating (1-5 stars)</p>
+                                    <h3>Rating <span class="weight-badge">50%</span></h3>
+                                    <p>Google Maps rating reflecting visitor satisfaction</p>
                                 </div>
                             </div>
 
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
-                                    <h3>Popularity <span class="weight-badge">~33%</span></h3>
-                                    <p>Visitor reviews and foot traffic</p>
+                                    <h3>Popularity <span class="weight-badge">30%</span></h3>
+                                    <p>Visitor reviews on logarithmic scale</p>
                                 </div>
                             </div>
 
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
-                                    <h3>Sentiment <span class="weight-badge">~33%</span></h3>
-                                    <p>Positive visitor experience</p>
+                                    <h3>Sentiment Bonus <span class="weight-badge">20%</span></h3>
+                                    <p>Additional points for exceptional visitor experiences</p>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="highlight-box warning-box">
+                            <strong>Note:</strong> Rankings reflect visitor experience and popularity, not historical significance or architectural merit which cannot be objectively measured via APIs.
                         </div>
                     </section>
                 </div>
 
-                <!-- SERVICES TAB -->
-                <div class="methodology-tab-content" id="services-tab">
+                <!-- NATURE TAB -->
+                <div class="methodology-tab-content" id="nature-tab">
                     <section class="methodology-section">
-                        <h2>Services Rankings</h2>
-                        <p>Rankings for <strong>Healthcare and Education</strong> use 3 core metrics.</p>
+                        <h2>Nature & Outdoors Rankings</h2>
+                        <p>Rankings for <strong>Beaches, Wildlife Sanctuaries, and Backwaters</strong> help you discover Trivandrum's natural beauty.</p>
 
-                        <div class="highlight-box warning-box">
-                            <strong>Important Disclaimer:</strong> These rankings are based on Google reviews reflecting
-                            <em>patient/student experience</em>, not clinical outcomes or academic performance.
-                            A friendly receptionist can boost a clinic's ranking; board exam results don't affect school rankings.
+                        <div class="highlight-box">
+                            <strong>What We Rank:</strong> Beaches along the coast, wildlife sanctuaries and nature reserves, and Kerala's famous backwater destinations accessible from Trivandrum.
                         </div>
                     </section>
 
                     <section class="methodology-section">
-                        <h2>Scoring (3 Metrics)</h2>
+                        <h2>Scoring Formula</h2>
 
                         <div class="categories-breakdown">
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
-                                    <h3>Rating <span class="weight-badge">~34%</span></h3>
-                                    <p>Google Maps rating (1-5 stars)</p>
+                                    <h3>Rating <span class="weight-badge">50%</span></h3>
+                                    <p>Visitor ratings reflecting experience quality</p>
                                 </div>
                             </div>
 
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
-                                    <h3>Popularity <span class="weight-badge">~33%</span></h3>
-                                    <p>Number of reviews</p>
+                                    <h3>Popularity <span class="weight-badge">30%</span></h3>
+                                    <p>Number of reviews (logarithmic scale)</p>
                                 </div>
                             </div>
 
                             <div class="category-row">
                                 <div class="category-icon"></div>
                                 <div class="category-details">
-                                    <h3>Sentiment <span class="weight-badge">~33%</span></h3>
-                                    <p>Patient/student satisfaction from reviews</p>
+                                    <h3>Sentiment Bonus <span class="weight-badge">20%</span></h3>
+                                    <p>Bonus for highly-rated destinations</p>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="highlight-box warning-box">
+                            <strong>Limitations:</strong> Rankings are based on Google reviews, not factors like water quality, wildlife diversity, or crowd levels which require on-ground assessment.
+                        </div>
+                    </section>
+                </div>
+
+                <!-- SPORTS TAB -->
+                <div class="methodology-tab-content" id="sports-tab">
+                    <section class="methodology-section">
+                        <h2>Sports & Recreation Rankings</h2>
+                        <p>Rankings for <strong>Sports Clubs, Adventure Sports, and Training Academies</strong> for active lifestyles.</p>
+
+                        <div class="highlight-box">
+                            <strong>What We Rank:</strong> Sports clubs and fitness centers, adventure sports operators (parasailing, kayaking, trekking), and professional training academies for various sports.
                         </div>
                     </section>
 
                     <section class="methodology-section">
-                        <h2>What These Rankings Measure</h2>
-                        <div class="sources-grid">
-                            <div class="source-card">
-                                <h3>Healthcare</h3>
-                                <p><strong>Measures:</strong> Staff friendliness, wait times, facility cleanliness, appointment ease</p>
-                                <p><strong>Does NOT measure:</strong> Medical expertise, treatment success rates, clinical outcomes</p>
+                        <h2>Scoring Formula</h2>
+
+                        <div class="categories-breakdown">
+                            <div class="category-row">
+                                <div class="category-icon"></div>
+                                <div class="category-details">
+                                    <h3>Rating <span class="weight-badge">50%</span></h3>
+                                    <p>Member/customer satisfaction ratings</p>
+                                </div>
                             </div>
-                            <div class="source-card">
-                                <h3>Education</h3>
-                                <p><strong>Measures:</strong> Campus experience, facilities, student satisfaction</p>
-                                <p><strong>Does NOT measure:</strong> Board exam results, placement rates, academic rigor</p>
+
+                            <div class="category-row">
+                                <div class="category-icon"></div>
+                                <div class="category-details">
+                                    <h3>Popularity <span class="weight-badge">30%</span></h3>
+                                    <p>Review volume indicating active membership</p>
+                                </div>
                             </div>
+
+                            <div class="category-row">
+                                <div class="category-icon"></div>
+                                <div class="category-details">
+                                    <h3>Sentiment Bonus <span class="weight-badge">20%</span></h3>
+                                    <p>Bonus for exceptional experiences</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="highlight-box warning-box">
+                            <strong>Limitations:</strong> Rankings reflect customer experience, not coaching quality, equipment standards, or safety certifications which require expert assessment.
+                        </div>
+                    </section>
+                </div>
+
+                <!-- WELLNESS TAB -->
+                <div class="methodology-tab-content" id="wellness-tab">
+                    <section class="methodology-section">
+                        <h2>Wellness Rankings</h2>
+                        <p>Rankings for <strong>Healthcare, Ayurveda & Spa, and Yoga & Meditation</strong> centers.</p>
+
+                        <div class="highlight-box">
+                            <strong>What We Rank:</strong> Hospitals and clinics, traditional Ayurvedic treatment centers and spas, yoga studios and meditation retreats.
+                        </div>
+                    </section>
+
+                    <section class="methodology-section">
+                        <h2>Scoring Formula</h2>
+
+                        <div class="categories-breakdown">
+                            <div class="category-row">
+                                <div class="category-icon"></div>
+                                <div class="category-details">
+                                    <h3>Rating <span class="weight-badge">50%</span></h3>
+                                    <p>Patient/visitor satisfaction ratings</p>
+                                </div>
+                            </div>
+
+                            <div class="category-row">
+                                <div class="category-icon"></div>
+                                <div class="category-details">
+                                    <h3>Popularity <span class="weight-badge">30%</span></h3>
+                                    <p>Review count on logarithmic scale</p>
+                                </div>
+                            </div>
+
+                            <div class="category-row">
+                                <div class="category-icon"></div>
+                                <div class="category-details">
+                                    <h3>Sentiment Bonus <span class="weight-badge">20%</span></h3>
+                                    <p>Bonus for highly-rated facilities</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="highlight-box warning-box">
+                            <strong>Important Healthcare Disclaimer:</strong> Healthcare rankings reflect <em>patient experience</em> (staff friendliness, wait times, facility cleanliness) — NOT clinical outcomes, medical expertise, or treatment success rates. A hospital with a friendly receptionist may rank higher than one with better surgeons. Always consult medical professionals for health decisions.
                         </div>
                     </section>
                 </div>
@@ -330,11 +417,12 @@ async function renderMethodologyView() {
                 <!-- Common Footer -->
                 <section class="methodology-section methodology-footer">
                     <h2>Full Transparency</h2>
-                    <p>All data collection scripts and formulas are open source. Customize weights 
-                    from each category's dedicated page to match your personal priorities.</p>
-                    
+                    <p>We believe in complete honesty about what our rankings can and cannot measure. Our scores are objective and verifiable, but they only capture what Google's APIs provide — primarily ratings and review counts from visitors.</p>
+
+                    <p>Use the <strong>Customize</strong> feature on each category page to adjust weights based on your personal priorities.</p>
+
                     <div class="cta-buttons">
-                        <a href="#/" class="btn-primary"><span class="ui-arrow-left"></span> Back to Home</a>
+                        <a href="#/" class="btn-primary">Back to Home</a>
                     </div>
                 </section>
             </div>

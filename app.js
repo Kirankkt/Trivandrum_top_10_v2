@@ -93,10 +93,10 @@ function route() {
         console.log('[Debug] Routing to About Rankings');
         updateMetadata("About Our Rankings", "How we calculate our rankings using data-driven metrics and objective algorithms.");
         renderMethodologyView();
-    } else if (hash === '/about') {
-        console.log('[Debug] Routing to About');
-        updateMetadata("About Trivandrum Top 10", "Learn about our mission to provide objective, data-driven rankings for Kerala's capital city.");
-        renderAboutView();
+    } else if (hash === '/contact' || hash === '/about') {
+        console.log('[Debug] Routing to Contact');
+        updateMetadata("Contact Us", "Get in touch with the Trivandrum Top 10 team.");
+        renderContactView();
     } else if (hash.startsWith('/compare/')) {
         const category = hash.replace('/compare/', '');
         console.log('[Debug] Routing to Compare:', category);
