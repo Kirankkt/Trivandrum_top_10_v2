@@ -29,35 +29,6 @@
     }
   },
   {
-    "id": "ChIJw53uI-25BTsRb51bTZnB3IQ",
-    "name": "Nadan Restaurant",
-    "score": 80.5,
-    "rating": 4.8,
-    "reviews": 1445,
-    "price_level": 2,
-    "address": "Lawish Groceries- RESTAURANT, Kesavadasapuram-Ulloor Rd, Kesavadasapuram, Thiruvananthapuram, Kerala 695004, India",
-    "image": "images/places/AZLasHpoiTpW6Loq.jpg",
-    "category": "restaurants",
-    "vibes": [
-      "Work Friendly",
-      "Family",
-      "Trendy"
-    ],
-    "website": null,
-    "phone": null,
-    "map_url": null,
-    "metrics": {
-      "sentiment": 30.3,
-      "popularity": 1445,
-      "convenience": 8
-    },
-    "locality": "Kesavadasapuram",
-    "location": {
-      "lat": 8.5290014,
-      "lng": 76.9344385
-    }
-  },
-  {
     "id": "ChIJ7UB_kq-7BTsRgD8-oW6durU",
     "name": "Cafe Jade - All Day Dining (24X7)",
     "score": 77.1,
