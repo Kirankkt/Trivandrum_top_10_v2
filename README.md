@@ -2,7 +2,7 @@
 
 A data-driven ranking platform for Kerala's capital city. Objective, API-sourced rankings for localities, restaurants, hotels, and 20+ categories.
 
-**Live Site**: [trivandrum-top-10.vercel.app](https://trivandrum-top-10.vercel.app) (or your deployed URL)
+**Live Site**: https://trivandrumtop10.netlify.app/
 
 ## Features
 
