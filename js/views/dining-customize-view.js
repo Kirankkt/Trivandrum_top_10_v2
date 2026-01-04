@@ -428,7 +428,9 @@ async function renderDiningCustomizeView(type) {
     }
 
     // Get saved weights or use balanced preset as default (which sums to exactly 100%)
-    const storageKey = `${type}Weights`;
+    // Use underscored key to match category-stub-views.js storage format
+    const storageType = fileNameMap[type] || type;
+    const storageKey = `${storageType}Weights`;
     const savedWeights = JSON.parse(localStorage.getItem(storageKey));
     const balancedPreset = config.presets.balanced;
 

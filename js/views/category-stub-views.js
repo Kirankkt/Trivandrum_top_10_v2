@@ -41,7 +41,7 @@ async function renderCategoryView(type, config) {
 
         // Customized ranking indicator
         const customizedIndicator = isCustomized ? `
-            <span class="customized-indicator">Custom weights active</span>
+            <span class="customized-indicator">✓ Custom</span>
             <button class="btn-restore-small" id="restore-default-btn">Reset</button>
         ` : '';
 
