@@ -807,6 +807,9 @@ async function renderMapExplorerView() {
                 await toggleCategory(highlightCategory, true);
             }
 
+            // Store highlighted marker ID globally to prevent tooltip from closing
+            window._highlightedMarkerId = highlightId;
+
             // Function to find and highlight the marker
             const highlightMarker = () => {
                 // First try global cache
@@ -829,48 +832,34 @@ async function renderMapExplorerView() {
                     const targetLatLng = targetMarker.getLatLng();
                     mapInstance.setView(targetLatLng, 16);
 
-                    // Unbind existing tooltip and rebind with permanent:true for highlight
-                    const tooltipContent = targetMarker.getTooltip() ? targetMarker.getTooltip().getContent() : '';
-                    if (tooltipContent) {
-                        targetMarker.unbindTooltip();
-                        targetMarker.bindTooltip(tooltipContent, {
-                            permanent: true,
-                            direction: 'top',
-                            className: 'interactive-tooltip highlighted-tooltip',
-                            interactive: true,
-                            offset: [0, -2],
-                            opacity: 1.0
-                        });
-                        targetMarker.openTooltip();
+                    // Fire mouseover event to trigger the existing tooltip logic
+                    targetMarker.fire('mouseover');
 
-                        // After 5 seconds, revert to hover behavior
-                        setTimeout(() => {
-                            if (targetMarker.getTooltip()) {
-                                targetMarker.unbindTooltip();
-                                targetMarker.bindTooltip(tooltipContent, {
-                                    permanent: false,
-                                    direction: 'top',
-                                    className: 'interactive-tooltip',
-                                    interactive: true,
-                                    offset: [0, -2],
-                                    opacity: 1.0,
-                                    sticky: false
-                                });
-                            }
-                        }, 5000);
+                    // Keep firing to prevent close timer from working
+                    const keepOpenInterval = setInterval(() => {
+                        if (targetMarker.isTooltipOpen && !targetMarker.isTooltipOpen()) {
+                            targetMarker.fire('mouseover');
+                        }
+                    }, 500);
+
+                    // Stop keeping open after 5 seconds
+                    setTimeout(() => {
+                        clearInterval(keepOpenInterval);
+                        window._highlightedMarkerId = null;
+                    }, 5000);
+
+                    // Scroll map container into view
+                    const mapContainer = document.getElementById('explorer-map');
+                    if (mapContainer) {
+                        mapContainer.scrollIntoView({ behavior: 'instant', block: 'start' });
                     }
-
-                    // Force scroll to top
-                    window.scrollTo(0, 0);
-                    document.body.scrollTop = 0;
-                    document.documentElement.scrollTop = 0;
 
                     return true;
                 }
                 return false;
             };
 
-            // Wait for map to be ready, then highlight
+            // Wait for markers to be created, then highlight
             setTimeout(() => {
                 if (!highlightMarker()) {
                     setTimeout(() => {
@@ -879,14 +868,16 @@ async function renderMapExplorerView() {
                         }
                     }, 800);
                 }
-            }, 300);
+            }, 500);
         }
 
-        // Force scroll to top multiple times to overcome any async rendering
-        window.scrollTo(0, 0);
-        setTimeout(() => { window.scrollTo(0, 0); document.documentElement.scrollTop = 0; }, 200);
-        setTimeout(() => { window.scrollTo(0, 0); document.documentElement.scrollTop = 0; }, 500);
-        setTimeout(() => { window.scrollTo(0, 0); document.documentElement.scrollTop = 0; }, 1000);
+        // Scroll map container into view
+        setTimeout(() => {
+            const mapContainer = document.getElementById('explorer-map');
+            if (mapContainer) {
+                mapContainer.scrollIntoView({ behavior: 'instant', block: 'start' });
+            }
+        }, 300);
     } catch (error) {
         console.error('Error rendering map explorer:', error);
         app.innerHTML = `
