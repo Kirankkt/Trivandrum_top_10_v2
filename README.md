@@ -130,7 +130,7 @@ All data is sourced from public APIs:
 - **Google Elevation API**: Flood risk assessment
 - **OpenAQ API**: Air quality data
 
-No sponsored placements. No paid rankings.
+Trusted data. Local focus. Fresh rankings.
 
 ## Contributing
 

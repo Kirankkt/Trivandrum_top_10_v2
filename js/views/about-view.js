@@ -56,7 +56,7 @@ function renderContactView() {
                     <h2>About the Project</h2>
                     <p>Trivandrum Top 10 is a data-driven ranking platform for Kerala's capital city. We use objective, API-sourced data from Google Maps to rank localities, restaurants, hotels, and more.</p>
 
-                    <p>No sponsored placements. No paid rankings. Just transparent, algorithmic scores based on real user reviews and verifiable metrics.</p>
+                    <p>Transparent, algorithmic scores based on real user reviews and verifiable metrics. Trusted data with a local focus.</p>
 
                     <div class="highlight-box">
                         <strong>Our Promise:</strong> Complete transparency in how we calculate rankings. See our <a href="#/methodology">Methodology</a> page for full details.
