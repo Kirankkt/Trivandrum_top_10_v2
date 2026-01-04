@@ -1,50 +1,77 @@
+// Production Mode - set to true for production builds
+const IS_PRODUCTION = true;
+
+// Conditional debug logging
+function debugLog(...args) {
+    if (!IS_PRODUCTION) {
+        console.log(...args);
+    }
+}
+
+// Global Error Handlers
+window.onerror = function(message, source, lineno, colno, error) {
+    console.error('[Global Error]', message, 'at', source, lineno);
+    // Optionally track errors via analytics
+    if (window.analytics && window.analytics.trackEvent) {
+        window.analytics.trackEvent('error', { message: message?.toString().substring(0, 200), source });
+    }
+    return false; // Don't suppress error in console
+};
+
+window.addEventListener('unhandledrejection', function(event) {
+    console.error('[Unhandled Promise Rejection]', event.reason);
+    if (window.analytics && window.analytics.trackEvent) {
+        window.analytics.trackEvent('error', { message: 'Promise rejection: ' + event.reason?.toString().substring(0, 200) });
+    }
+});
+
 // Simple Router
 function route() {
     // Decode the hash to handle URL-encoded characters (e.g., %2F for /)
     const rawHash = window.location.hash.slice(1) || '/';
     const hash = decodeURIComponent(rawHash);
-    console.log('[Debug] Route called. Hash:', hash);
+    debugLog('[Debug] Route called. Hash:', hash);
     const app = document.getElementById('app');
 
     // Handle different routes
     if (hash === '/' || hash === '') {
-        console.log('[Debug] Routing to Home');
+        debugLog('[Debug] Routing to Home');
         updateMetadata("Best Experiences in Kerala's Capital", "Discover the top restaurants, cafes, hotels, and attractions in Thiruvananthapuram.");
         renderHomeView();
     } else if (hash === '/customize/restaurants') {
-        console.log('[Debug] Routing to Customize Restaurants');
+        debugLog('[Debug] Routing to Customize Restaurants');
         updateMetadata("Customize Restaurant Weights");
         renderDiningCustomizeView('restaurants');
     } else if (hash === '/customize/cafes') {
-        console.log('[Debug] Routing to Customize Cafes');
+        debugLog('[Debug] Routing to Customize Cafes');
         updateMetadata("Customize Cafe Weights");
         renderDiningCustomizeView('cafes');
     } else if (hash === '/customize/hotels') {
-        console.log('[Debug] Routing to Customize Hotels');
+        debugLog('[Debug] Routing to Customize Hotels');
         updateMetadata("Customize Hotel Weights");
         renderDiningCustomizeView('hotels');
     } else if (hash === '/customize/malls') {
-        console.log('[Debug] Routing to Customize Malls');
+        debugLog('[Debug] Routing to Customize Malls');
         updateMetadata("Customize Mall Weights");
         renderDiningCustomizeView('malls');
     } else if (hash === '/customize/specialty-shops') {
-        console.log('[Debug] Routing to Customize Specialty Shops');
+        debugLog('[Debug] Routing to Customize Specialty Shops');
         updateMetadata("Customize Specialty Shop Weights");
         renderDiningCustomizeView('specialty-shops');
     } else if (hash === '/customize/museums') {
-        console.log('[Debug] Routing to Customize Museums');
+        debugLog('[Debug] Routing to Customize Museums');
         updateMetadata("Customize Museum Weights");
         renderDiningCustomizeView('museums');
     } else if (hash === '/customize/religious-sites') {
-        console.log('[Debug] Routing to Customize Religious Sites');
+        debugLog('[Debug] Routing to Customize Religious Sites');
         updateMetadata("Customize Religious Site Weights");
         renderDiningCustomizeView('religious-sites');
     } else if (hash === '/customize/healthcare') {
-        console.log('[Debug] Routing to Customize Healthcare');
+        debugLog('[Debug] Routing to Customize Healthcare');
         updateMetadata("Customize Healthcare Weights");
         renderDiningCustomizeView('healthcare');
     } else if (hash === '/customize/education') {
-        console.log('[Debug] Routing to Customize Education');
+        debugLog('[Debug] Routing to Customize Education');
         updateMetadata("Customize Education Weights");
         renderDiningCustomizeView('education');
     } else if (hash === '/customize/supermarkets') {
@@ -90,16 +117,16 @@ function route() {
         updateMetadata("Customize Yoga Weights");
         renderDiningCustomizeView('yoga');
     } else if (hash === '/methodology' || hash === '/about-rankings') {
-        console.log('[Debug] Routing to About Rankings');
+        debugLog('[Debug] Routing to About Rankings');
         updateMetadata("About Our Rankings", "How we calculate our rankings using data-driven metrics and objective algorithms.");
         renderMethodologyView();
     } else if (hash === '/contact' || hash === '/about') {
-        console.log('[Debug] Routing to Contact');
+        debugLog('[Debug] Routing to Contact');
         updateMetadata("Contact Us", "Get in touch with the Trivandrum Top 10 team.");
         renderContactView();
     } else if (hash.startsWith('/compare/')) {
         const category = hash.replace('/compare/', '');
-        console.log('[Debug] Routing to Compare:', category);
+        debugLog('[Debug] Routing to Compare:', category);
         updateMetadata("Compare " + category.charAt(0).toUpperCase() + category.slice(1), "Side-by-side comparison");
         renderCompareView(category);
     } else if (hash === '/compare') {
@@ -110,23 +137,23 @@ function route() {
             document.getElementById('app').innerHTML = '<div class="compare-empty"><h2>Nothing to Compare</h2><p>Add items to compare from any category page.</p><a href="#/" class="btn-primary">Browse Categories</a></div>';
         }
     } else if (hash === '/map' || hash.startsWith('/map?')) {
-        console.log('[Debug] Routing to Map');
+        debugLog('[Debug] Routing to Map');
         updateMetadata("Interactive Map", "Explore Thiruvananthapuram's top localities and attractions on our interactive map.");
         renderMapView();
     } else if (hash === '/restaurants') {
-        console.log('[Debug] Routing to Restaurants');
+        debugLog('[Debug] Routing to Restaurants');
         updateMetadata("Best Restaurants in Trivandrum", "The top 10 dining spots in Thiruvananthapuram, ranked by quality, vibe, and value.");
         renderDiningView('restaurants');
     } else if (hash === '/hotels') {
-        console.log('[Debug] Routing to Hotels');
+        debugLog('[Debug] Routing to Hotels');
         updateMetadata("Best Hotels in Trivandrum", "The city's best stays, from luxury resorts to premium boutiques.");
         renderDiningView('hotels');
     } else if (hash === '/cafes') {
-        console.log('[Debug] Routing to Cafes');
+        debugLog('[Debug] Routing to Cafes');
         updateMetadata("Top Cafes", "Discover the best cafes in Trivandrum for coffee, workspace, and vibes.");
         renderDiningView('cafes');
     } else if (hash === '/malls') {
-        console.log('[Debug] Routing to Malls');
+        debugLog('[Debug] Routing to Malls');
         updateMetadata("Best Malls", "Top shopping malls and retail centers in Trivandrum.");
         renderMallsView();
     } else if (hash === '/boutiques') {
@@ -134,86 +161,86 @@ function route() {
         window.location.hash = '/clothing-stores';
         return;
     } else if (hash === '/supermarkets') {
-        console.log('[Debug] Routing to Supermarkets');
+        debugLog('[Debug] Routing to Supermarkets');
         updateMetadata("Top Supermarkets", "Best grocery stores and hypermarkets in Trivandrum.");
         renderSupermarketsView();
     } else if (hash === '/clothing-stores') {
-        console.log('[Debug] Routing to Clothing Stores');
+        debugLog('[Debug] Routing to Clothing Stores');
         updateMetadata("Clothing Stores", "Fashion boutiques and apparel shops.");
         renderClothingStoresView();
     } else if (hash === '/shop') {
-        console.log('[Debug] Routing to Shop Category');
+        debugLog('[Debug] Routing to Shop Category');
         updateMetadata("Lifestyle & Shopping", "The best shopping destinations in Thiruvananthapuram.");
         renderShopCategoryView();
     } else if (hash === '/museums') {
-        console.log('[Debug] Routing to Museums');
+        debugLog('[Debug] Routing to Museums');
         updateMetadata("Top Museums", "Explore the rich history and art of Trivandrum through its museums.");
         renderMuseumsView();
     } else if (hash === '/religious-sites') {
-        console.log('[Debug] Routing to Religious Sites');
+        debugLog('[Debug] Routing to Religious Sites');
         updateMetadata("Religious Sites", "The city's most significant and beautiful religious landmarks.");
         renderReligiousSitesView();
     } else if (hash === '/art-galleries') {
-        console.log('[Debug] Routing to Art Galleries');
+        debugLog('[Debug] Routing to Art Galleries');
         updateMetadata("Art Galleries", "Art galleries and exhibition spaces in Trivandrum.");
         renderArtGalleriesView();
     } else if (hash === '/cultural-centers') {
-        console.log('[Debug] Routing to Cultural Centers');
+        debugLog('[Debug] Routing to Cultural Centers');
         updateMetadata("Cultural Centers", "Arts, crafts and cultural institutions.");
         renderCulturalCentersView();
     } else if (hash === '/theatres') {
-        console.log('[Debug] Routing to Theatres');
+        debugLog('[Debug] Routing to Theatres');
         updateMetadata("Theatres & Auditoriums", "Performance venues and drama centers.");
         renderTheatresView();
     } else if (hash === '/landmarks') {
-        console.log('[Debug] Routing to Landmarks');
+        debugLog('[Debug] Routing to Landmarks');
         updateMetadata("Landmarks", "Palaces, monuments and historic buildings.");
         renderLandmarksView();
     } else if (hash === '/culture') {
-        console.log('[Debug] Routing to Culture Category');
+        debugLog('[Debug] Routing to Culture Category');
         updateMetadata("Culture & Heritage", "Discover the cultural soul of Thiruvananthapuram.");
         renderCultureCategoryView();
     } else if (hash === '/healthcare') {
-        console.log('[Debug] Routing to Healthcare');
+        debugLog('[Debug] Routing to Healthcare');
         updateMetadata("Healthcare Guide", "Top hospitals, clinics, and medical facilities.");
         renderHealthcareView();
     } else if (hash === '/ayurveda') {
-        console.log('[Debug] Routing to Ayurveda');
+        debugLog('[Debug] Routing to Ayurveda');
         updateMetadata("Ayurveda & Spa", "Traditional wellness and rejuvenation centers.");
         renderAyurvedaView();
     } else if (hash === '/yoga') {
-        console.log('[Debug] Routing to Yoga');
+        debugLog('[Debug] Routing to Yoga');
         updateMetadata("Yoga & Meditation", "Ashrams, yoga centers and spiritual retreats.");
         renderYogaView();
     } else if (hash === '/beaches') {
-        console.log('[Debug] Routing to Beaches');
+        debugLog('[Debug] Routing to Beaches');
         updateMetadata("Beaches", "Scenic coastal getaways in Trivandrum.");
         renderBeachesView();
     } else if (hash === '/nature-sanctuaries') {
-        console.log('[Debug] Routing to Nature Sanctuaries');
+        debugLog('[Debug] Routing to Nature Sanctuaries');
         updateMetadata("Wildlife & Nature", "Sanctuaries, forests and nature reserves.");
         renderNatureSanctuariesView();
     } else if (hash === '/backwaters') {
-        console.log('[Debug] Routing to Backwaters');
+        debugLog('[Debug] Routing to Backwaters');
         updateMetadata("Backwaters", "Lakes, lagoons and boating experiences.");
         renderBackwatersView();
     } else if (hash === '/sports-clubs') {
-        console.log('[Debug] Routing to Sports Clubs');
+        debugLog('[Debug] Routing to Sports Clubs');
         updateMetadata("Sports Clubs", "Tennis, badminton, golf and more.");
         renderSportsClubsView();
     } else if (hash === '/training-academies') {
-        console.log('[Debug] Routing to Training Academies');
+        debugLog('[Debug] Routing to Training Academies');
         updateMetadata("Training Academies", "Sports coaching and skill development.");
         renderTrainingAcademiesView();
     } else if (hash === '/adventure-sports') {
-        console.log('[Debug] Routing to Adventure Sports');
+        debugLog('[Debug] Routing to Adventure Sports');
         updateMetadata("Adventure Sports", "Kayaking, water sports and outdoor activities.");
         renderAdventureSportsView();
     } else if (hash.startsWith('/entity/')) {
         const parts = hash.replace('/entity/', '').split('/');
         const category = parts[0];
         const entityId = parts.slice(1).join('/');
-        console.log('[Debug] Routing to Entity Detail:', category, entityId);
+        debugLog('[Debug] Routing to Entity Detail:', category, entityId);
 
         switch (category) {
             case 'restaurants': renderRestaurantDetail(entityId); break;
@@ -242,11 +269,11 @@ function route() {
             default: app.innerHTML = '<div class="error">Unknown category</div>';
         }
     } else if (hash === '/admin') {
-        console.log('[Debug] Routing to Admin Dashboard');
+        debugLog('[Debug] Routing to Admin Dashboard');
         updateMetadata("Admin Dashboard", "Project analytics and management.");
         renderAdminView();
     } else {
-        console.log('[Debug] 404 Not Found');
+        debugLog('[Debug] 404 Not Found');
         app.innerHTML = '<div class="error">Page not found</div>';
     }
 

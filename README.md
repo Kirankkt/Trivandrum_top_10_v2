@@ -33,7 +33,7 @@ A data-driven ranking platform for Kerala's capital city. Objective, API-sourced
 - **Maps**: Google Maps JavaScript API
 - **Data**: Static JSON files (API-sourced)
 - **Analytics**: Supabase (PostgreSQL + Edge Functions)
-- **Hosting**: Vercel / GitHub Pages
+- **Hosting**: Netlify
 
 ## Project Structure
 
@@ -84,7 +84,7 @@ trivandrum-top-10/
 - **Popularity** (30%): Review count (logarithmic scale)
 - **Sentiment** (20%): Bonus for exceptional ratings (4.5+)
 
-See the [Methodology page](https://trivandrum-top-10.vercel.app/#/methodology) for full details.
+See the [Methodology page](https://trivandrumtop10.netlify.app/#/methodology) for full details.
 
 ## Local Development
 
