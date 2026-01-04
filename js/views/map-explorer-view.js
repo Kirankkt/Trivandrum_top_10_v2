@@ -555,10 +555,12 @@ function getCategoryCounts() {
 async function renderMapExplorerView() {
     const app = document.getElementById('app');
 
-    // Force scroll to top immediately (multiple methods for cross-browser)
+    // Force scroll to top - disable smooth scrolling temporarily
+    const html = document.documentElement;
+    html.style.scrollBehavior = 'auto';
     window.scrollTo(0, 0);
+    html.scrollTop = 0;
     document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
 
     app.innerHTML = '<div class="loading">Loading map data...</div>';
 
@@ -807,9 +809,6 @@ async function renderMapExplorerView() {
                 await toggleCategory(highlightCategory, true);
             }
 
-            // Store highlighted marker ID globally to prevent tooltip from closing
-            window._highlightedMarkerId = highlightId;
-
             // Function to find and highlight the marker
             const highlightMarker = () => {
                 // First try global cache
@@ -832,26 +831,19 @@ async function renderMapExplorerView() {
                     const targetLatLng = targetMarker.getLatLng();
                     mapInstance.setView(targetLatLng, 16);
 
-                    // Fire mouseover event to trigger the existing tooltip logic
-                    targetMarker.fire('mouseover');
+                    // TOOLTIP: Directly manipulate the tooltip to make it permanent
+                    const tooltip = targetMarker.getTooltip();
+                    if (tooltip) {
+                        tooltip.options.permanent = true;
+                        targetMarker.openTooltip();
 
-                    // Keep firing to prevent close timer from working
-                    const keepOpenInterval = setInterval(() => {
-                        if (targetMarker.isTooltipOpen && !targetMarker.isTooltipOpen()) {
-                            targetMarker.fire('mouseover');
-                        }
-                    }, 500);
-
-                    // Stop keeping open after 5 seconds
-                    setTimeout(() => {
-                        clearInterval(keepOpenInterval);
-                        window._highlightedMarkerId = null;
-                    }, 5000);
-
-                    // Scroll map container into view
-                    const mapContainer = document.getElementById('explorer-map');
-                    if (mapContainer) {
-                        mapContainer.scrollIntoView({ behavior: 'instant', block: 'start' });
+                        // Revert to hover mode after 6 seconds
+                        setTimeout(() => {
+                            if (tooltip) {
+                                tooltip.options.permanent = false;
+                                targetMarker.closeTooltip();
+                            }
+                        }, 6000);
                     }
 
                     return true;
@@ -859,25 +851,40 @@ async function renderMapExplorerView() {
                 return false;
             };
 
-            // Wait for markers to be created, then highlight
+            // Wait for markers to be fully created, then highlight
             setTimeout(() => {
                 if (!highlightMarker()) {
                     setTimeout(() => {
                         if (!highlightMarker()) {
-                            setTimeout(highlightMarker, 1500);
+                            setTimeout(highlightMarker, 2000);
                         }
-                    }, 800);
+                    }, 1000);
                 }
-            }, 500);
+            }, 600);
         }
 
-        // Scroll map container into view
-        setTimeout(() => {
-            const mapContainer = document.getElementById('explorer-map');
-            if (mapContainer) {
-                mapContainer.scrollIntoView({ behavior: 'instant', block: 'start' });
-            }
-        }, 300);
+        // SCROLL FIX: Disable smooth scroll, force to top, then re-enable
+        const forceScrollToTop = () => {
+            const html = document.documentElement;
+            const originalBehavior = html.style.scrollBehavior;
+            html.style.scrollBehavior = 'auto';
+
+            window.scrollTo(0, 0);
+            html.scrollTop = 0;
+            document.body.scrollTop = 0;
+
+            // Re-enable smooth scroll after a moment
+            setTimeout(() => {
+                html.style.scrollBehavior = originalBehavior || '';
+            }, 100);
+        };
+
+        // Force scroll multiple times to ensure it sticks
+        forceScrollToTop();
+        setTimeout(forceScrollToTop, 200);
+        setTimeout(forceScrollToTop, 500);
+        setTimeout(forceScrollToTop, 1000);
+        setTimeout(forceScrollToTop, 1500);
     } catch (error) {
         console.error('Error rendering map explorer:', error);
         app.innerHTML = `
