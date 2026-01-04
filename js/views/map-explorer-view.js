@@ -307,7 +307,7 @@ async function loadAllData() {
 
     isDataLoading = true;
     globalMarkers = {}; // Clear global markers on reload
-    console.log('[Debug] Loading all map data...');
+    if (typeof debugLog === 'function') debugLog('[Debug] Loading all map data...');
 
     // Load localities first
     const rankingsData = await loadRankings();
@@ -555,6 +555,9 @@ function getCategoryCounts() {
 async function renderMapExplorerView() {
     const app = document.getElementById('app');
 
+    // Scroll to top immediately
+    window.scrollTo(0, 0);
+
     app.innerHTML = '<div class="loading">Loading map data...</div>';
 
     try {
@@ -797,47 +800,44 @@ async function renderMapExplorerView() {
 
         // Perform highlighting if parameters exist
         if (highlightId && highlightCategory) {
-            console.log('[Debug] Highlighting entity:', highlightCategory, highlightId);
+            if (typeof debugLog === 'function') debugLog('[Debug] Highlighting entity:', highlightCategory, highlightId);
 
             // Ensure category is loaded
             if (!activeCategories.has(highlightCategory)) {
                 await toggleCategory(highlightCategory, true);
             }
 
-            // Wait specifically for rendering to settle
+            // Wait for markers to be created
             setTimeout(() => {
                 const layerGroup = categoryLayers[highlightCategory];
                 const targetMarker = globalMarkers[highlightId];
 
-                if (targetMarker && layerGroup) {
-                    console.log('[Debug] Target marker found in cache:', highlightId);
+                if (targetMarker) {
+                    if (typeof debugLog === 'function') debugLog('[Debug] Target marker found:', highlightId);
 
-                    // 1. Zoom and frame the layer
-                    if (layerGroup.getBounds && layerGroup.getBounds().isValid()) {
-                        mapInstance.fitBounds(layerGroup.getBounds().pad(0.1));
-                    }
+                    // Zoom directly to the specific marker at a good zoom level
+                    const targetLatLng = targetMarker.getLatLng();
+                    mapInstance.setView(targetLatLng, 16, { animate: true });
 
-                    // 2. Reveal and open popup
-                    if (layerGroup.zoomToShowLayer) {
-                        layerGroup.zoomToShowLayer(targetMarker, () => {
-                            targetMarker.openPopup();
-                        });
-                    } else {
-                        mapInstance.setView(targetMarker.getLatLng(), 15);
-                        setTimeout(() => targetMarker.openPopup(), 100);
-                    }
+                    // Open the popup after a brief delay to let the map settle
+                    setTimeout(() => {
+                        targetMarker.openPopup();
+                        // Scroll to top again to ensure map is visible
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }, 300);
                 } else {
-                    console.warn('[Debug] Target marker NOT found in cache:', highlightId);
-                    // Fallback to text search if cache failed for some reason
+                    console.warn('[Debug] Target marker NOT found:', highlightId);
+                    // Fallback: search through layer group
                     if (layerGroup && layerGroup.eachLayer) {
                         layerGroup.eachLayer(marker => {
-                            if (marker.options.entityId === highlightId) {
-                                marker.openPopup();
+                            if (marker.options && marker.options.entityId === highlightId) {
+                                mapInstance.setView(marker.getLatLng(), 16, { animate: true });
+                                setTimeout(() => marker.openPopup(), 300);
                             }
                         });
                     }
                 }
-            }, 1000); // Increased timeout for stability
+            }, 800);
         }
     } catch (error) {
         console.error('Error rendering map explorer:', error);
