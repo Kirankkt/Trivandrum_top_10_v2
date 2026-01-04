@@ -555,8 +555,10 @@ function getCategoryCounts() {
 async function renderMapExplorerView() {
     const app = document.getElementById('app');
 
-    // Scroll to top immediately
+    // Force scroll to top immediately (multiple methods for cross-browser)
     window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 
     app.innerHTML = '<div class="loading">Loading map data...</div>';
 
@@ -800,45 +802,59 @@ async function renderMapExplorerView() {
 
         // Perform highlighting if parameters exist
         if (highlightId && highlightCategory) {
-            if (typeof debugLog === 'function') debugLog('[Debug] Highlighting entity:', highlightCategory, highlightId);
-
-            // Ensure category is loaded
+            // Ensure category is loaded first
             if (!activeCategories.has(highlightCategory)) {
                 await toggleCategory(highlightCategory, true);
             }
 
-            // Wait for markers to be created
-            setTimeout(() => {
-                const layerGroup = categoryLayers[highlightCategory];
-                const targetMarker = globalMarkers[highlightId];
+            // Function to find and highlight the marker
+            const highlightMarker = () => {
+                // First try global cache
+                let targetMarker = globalMarkers[highlightId];
 
-                if (targetMarker) {
-                    if (typeof debugLog === 'function') debugLog('[Debug] Target marker found:', highlightId);
-
-                    // Zoom directly to the specific marker at a good zoom level
-                    const targetLatLng = targetMarker.getLatLng();
-                    mapInstance.setView(targetLatLng, 16, { animate: true });
-
-                    // Open the popup after a brief delay to let the map settle
-                    setTimeout(() => {
-                        targetMarker.openPopup();
-                        // Scroll to top again to ensure map is visible
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }, 300);
-                } else {
-                    console.warn('[Debug] Target marker NOT found:', highlightId);
-                    // Fallback: search through layer group
+                // If not in cache, search through the layer group
+                if (!targetMarker) {
+                    const layerGroup = categoryLayers[highlightCategory];
                     if (layerGroup && layerGroup.eachLayer) {
                         layerGroup.eachLayer(marker => {
                             if (marker.options && marker.options.entityId === highlightId) {
-                                mapInstance.setView(marker.getLatLng(), 16, { animate: true });
-                                setTimeout(() => marker.openPopup(), 300);
+                                targetMarker = marker;
                             }
                         });
                     }
                 }
-            }, 800);
+
+                if (targetMarker) {
+                    // Zoom to the marker
+                    const targetLatLng = targetMarker.getLatLng();
+                    mapInstance.setView(targetLatLng, 16);
+
+                    // Open the TOOLTIP (not popup - markers use tooltips)
+                    setTimeout(() => {
+                        targetMarker.openTooltip();
+                    }, 200);
+
+                    return true;
+                }
+                return false;
+            };
+
+            // Try immediately, then retry with delays to handle async loading
+            if (!highlightMarker()) {
+                setTimeout(() => {
+                    if (!highlightMarker()) {
+                        setTimeout(highlightMarker, 1000);
+                    }
+                }, 500);
+            }
         }
+
+        // Ensure page is scrolled to top after everything is set up
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }, 100);
     } catch (error) {
         console.error('Error rendering map explorer:', error);
         app.innerHTML = `
