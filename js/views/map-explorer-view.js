@@ -436,7 +436,9 @@ async function addCategoryToMap(category) {
 
             marker.on('mouseout', function () {
                 closeTimer = setTimeout(() => {
-                    this.closeTooltip();
+                    if (!this.options?.pinnedTooltip) {
+                        this.closeTooltip();
+                    }
                 }, 1000); // 1.0s grace period
             });
 
@@ -450,7 +452,9 @@ async function addCategoryToMap(category) {
 
                     tooltipEl.onmouseleave = () => {
                         closeTimer = setTimeout(() => {
-                            mRef.closeTooltip();
+                            if (!mRef.options?.pinnedTooltip) {
+                                mRef.closeTooltip();
+                            }
                         }, 1000);
                     };
 
@@ -561,6 +565,7 @@ async function renderMapExplorerView() {
     window.scrollTo(0, 0);
     html.scrollTop = 0;
     document.body.scrollTop = 0;
+    if (app) app.scrollTop = 0;
 
     app.innerHTML = '<div class="loading">Loading map data...</div>';
 
@@ -736,6 +741,12 @@ async function renderMapExplorerView() {
         </div>
     `;
 
+        // Ensure we start the map view at the top (hash navigation can preserve prior scroll position)
+        window.scrollTo(0, 0);
+        html.scrollTop = 0;
+        document.body.scrollTop = 0;
+        if (app) app.scrollTop = 0;
+
         // Proper cleanup of previous map instance
         if (mapInstance) {
             mapInstance.remove();
@@ -831,19 +842,40 @@ async function renderMapExplorerView() {
                     const targetLatLng = targetMarker.getLatLng();
                     mapInstance.setView(targetLatLng, 16);
 
-                    // TOOLTIP: Directly manipulate the tooltip to make it permanent
+                    // Pin the highlighted tooltip so the listing name is visible without hover
+                    Object.values(globalMarkers).forEach(m => {
+                        if (m?.options?.pinnedTooltip) {
+                            m.options.pinnedTooltip = false;
+                            const t = m.getTooltip?.();
+                            if (t) t.options.permanent = false;
+                            m.setZIndexOffset?.(0);
+                            m.closeTooltip?.();
+                        }
+                    });
+
                     const tooltip = targetMarker.getTooltip();
                     if (tooltip) {
-                        tooltip.options.permanent = true;
-                        targetMarker.openTooltip();
+                        targetMarker.options.pinnedTooltip = true;
+                        targetMarker.setZIndexOffset(1000);
 
-                        // Revert to hover mode after 6 seconds
-                        setTimeout(() => {
-                            if (tooltip) {
-                                tooltip.options.permanent = false;
-                                targetMarker.closeTooltip();
-                            }
-                        }, 6000);
+                        const openPinnedTooltip = () => {
+                            tooltip.options.permanent = true;
+                            targetMarker.openTooltip();
+                        };
+
+                        // Open after the zoom/pan settles to avoid flaky "no label" cases
+                        mapInstance.once('moveend', openPinnedTooltip);
+                        setTimeout(openPinnedTooltip, 50);
+
+                        // Unpin when user clicks elsewhere on the map
+                        const unpin = () => {
+                            targetMarker.options.pinnedTooltip = false;
+                            tooltip.options.permanent = false;
+                            targetMarker.closeTooltip();
+                            targetMarker.setZIndexOffset(0);
+                            mapInstance.off('click', unpin);
+                        };
+                        mapInstance.on('click', unpin);
                     }
 
                     return true;
@@ -872,6 +904,9 @@ async function renderMapExplorerView() {
             window.scrollTo(0, 0);
             html.scrollTop = 0;
             document.body.scrollTop = 0;
+            const appEl = document.getElementById('app');
+            if (appEl) appEl.scrollTop = 0;
+            document.querySelector('.map-category-toggles')?.scrollTo?.(0, 0);
 
             // Re-enable smooth scroll after a moment
             setTimeout(() => {
