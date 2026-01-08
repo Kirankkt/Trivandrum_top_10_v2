@@ -1,61 +1,5 @@
 [
   {
-    "id": "ChIJ-dWc4rqxBzsRc3MHKmzVxEA",
-    "name": "Idukki Wildlife Sanctuary",
-    "address": "QXJ7+XP3, Vellappara Road, Painavu, Idukki, Kerala 685603, India",
-    "locality": "Idukki",
-    "rating": 4.5,
-    "reviews": 7041,
-    "score": 92,
-    "image": "images/places/AZLasHqnAS8mdBsI.jpg",
-    "website": "http://idukki.nic.in/",
-    "phone": "094479 79094",
-    "types": [
-      "establishment",
-      "park",
-      "point_of_interest",
-      "tourist_attraction",
-      "zoo"
-    ],
-    "vibes": [
-      "Established",
-      "Outdoor",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 9.782397999999999,
-      "lng": 76.964306
-    }
-  },
-  {
-    "id": "ChIJb8wt48SBBzsRpoyIcK425WM",
-    "name": "Chinnar Wildlife Sanctuary",
-    "address": "8644+PC6, Munnar - Udumalpet Rd, Munnar, Kerala 685612, India",
-    "locality": "Munnar",
-    "rating": 4.4,
-    "reviews": 4395,
-    "score": 87.4,
-    "image": "images/places/AZLasHo5ttLumWuI.jpg",
-    "website": "https://www.chinnar.in/",
-    "phone": "085476 03199",
-    "types": [
-      "establishment",
-      "park",
-      "point_of_interest",
-      "tourist_attraction",
-      "zoo"
-    ],
-    "vibes": [
-      "Established",
-      "Outdoor",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 10.3067974,
-      "lng": 77.2060241
-    }
-  },
-  {
     "id": "ChIJVyTw_NW7BTsRq_bxU7n6ZqM",
     "name": "Thiruvananthapuram Zoo",
     "address": "GX63+6XP, Kanaka Nagar, Nanthancodu, Thiruvananthapuram, Kerala 695033, India",
@@ -104,113 +48,6 @@
     "coordinates": {
       "lat": 8.5340563,
       "lng": 77.14562459999999
-    }
-  },
-  {
-    "id": "ChIJiYwIivL3BjsRe8aNoLkGhB8",
-    "name": "Periyar National Park",
-    "address": "Kerala, India",
-    "locality": "Kerala",
-    "rating": 4.3,
-    "reviews": 16352,
-    "score": 87,
-    "image": "images/places/AZLasHr07sZ1sFSb.jpg",
-    "website": "https://www.periyartigerreserve.org/",
-    "phone": "085476 03066",
-    "types": [
-      "establishment",
-      "park",
-      "point_of_interest",
-      "tourist_attraction"
-    ],
-    "vibes": [
-      "Established",
-      "Outdoor",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 9.4631378,
-      "lng": 77.2286518
-    }
-  },
-  {
-    "id": "ChIJR6i32CdjBjsRYKtkitb7ZPw",
-    "name": "Konni Reserve Forest",
-    "address": "35JC+257, Konni Achankovil Road, Aruvappulam, Kerala 689699, India",
-    "locality": "Aruvappulam",
-    "rating": 4.5,
-    "reviews": 1053,
-    "score": 84.5,
-    "image": "images/places/AZLasHobSXd_Jlv8.jpg",
-    "website": "http://www.forest.kerala.gov.in/index.php/reserve-notifications/territorial/konni",
-    "phone": "0468 224 2233",
-    "types": [
-      "establishment",
-      "park",
-      "point_of_interest",
-      "tourist_attraction"
-    ],
-    "vibes": [
-      "Established",
-      "Outdoor",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 9.080029999999999,
-      "lng": 77.170433
-    }
-  },
-  {
-    "id": "ChIJ1S7Asz1_BjsRHMPTvhPcsew",
-    "name": "Thenmala Reserve Forest",
-    "address": "248P+VR6, Rd to Palaruvi Waterfalls, Kerala, India",
-    "locality": "Rd to Palaruvi Waterfalls",
-    "rating": 4.4,
-    "reviews": 2180,
-    "score": 84,
-    "image": "images/places/AZLasHqI_XCnvsdq.jpg",
-    "website": "http://www.thenmalaecotourism.org/",
-    "phone": null,
-    "types": [
-      "establishment",
-      "point_of_interest",
-      "tourist_attraction"
-    ],
-    "vibes": [
-      "Established",
-      "Must Visit",
-      "Tourist Spot"
-    ],
-    "coordinates": {
-      "lat": 9.0171528,
-      "lng": 77.1370115
-    }
-  },
-  {
-    "id": "ChIJj5J6tMg2BDsRz7ctSBm1ssY",
-    "name": "Mundanthurai Tiger Reserve",
-    "address": "Ambasamudram - Papanasam - Upper Dam Rd, Papanasam R.F., Tamil Nadu 627425, India",
-    "locality": "Papanasam R.F.",
-    "rating": 4.4,
-    "reviews": 2068,
-    "score": 83.7,
-    "image": "images/places/AZLasHoW40Lw88nd.jpg",
-    "website": "https://kmtr.co.in/",
-    "phone": "094889 12270",
-    "types": [
-      "establishment",
-      "park",
-      "point_of_interest",
-      "tourist_attraction"
-    ],
-    "vibes": [
-      "Established",
-      "Outdoor",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 8.68834,
-      "lng": 77.3094674
     }
   },
   {
@@ -270,7 +107,7 @@
     "id": "ChIJF3zxH4bKBTsRuh8J7TM05G4",
     "name": "Peppara Wildlife Sanctuary, Vithura",
     "address": "J4FQ+659, Kerala 695551, India",
-    "locality": "J4FQ+659",
+    "locality": "Vithura",
     "rating": 4.3,
     "reviews": 1593,
     "score": 81.5,
@@ -293,64 +130,10 @@
     }
   },
   {
-    "id": "ChIJ3_aJNtPipzsRwu6MYIJUp8M",
-    "name": "Peechi-Vazhani Wildlife Sanctuary",
-    "address": "FCMM+97V, Chimmini Dam Road, Pariyaram, Kerala 680304, India",
-    "locality": "Pariyaram",
-    "rating": 4.3,
-    "reviews": 1284,
-    "score": 80.4,
-    "image": "images/places/AZLasHr-J_R2t4Xz.jpg",
-    "website": "http://www.forest.kerala.gov.in/index.php/thrissur",
-    "phone": "094900 22369",
-    "types": [
-      "establishment",
-      "park",
-      "point_of_interest",
-      "zoo"
-    ],
-    "vibes": [
-      "Established",
-      "Outdoor",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 10.4834794,
-      "lng": 76.43317309999999
-    }
-  },
-  {
-    "id": "ChIJdS50RessBDsRIrl0s_laps0",
-    "name": "Shendurney Wildlife Sanctuary",
-    "address": "Shendurney Wild life division, Thenmala, V659+42J, 691308, India",
-    "locality": "V659+42J",
-    "rating": 4.4,
-    "reviews": 928,
-    "score": 79.9,
-    "image": "images/places/AZLasHq7vXPobEUw.jpg",
-    "website": null,
-    "phone": "094479 79081",
-    "types": [
-      "establishment",
-      "park",
-      "point_of_interest",
-      "tourist_attraction"
-    ],
-    "vibes": [
-      "Established",
-      "Outdoor",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 8.857828699999999,
-      "lng": 77.2175223
-    }
-  },
-  {
     "id": "ChIJ2VAuvYYyBDsRNVCJel40nXQ",
-    "name": "AGASTHYAMALAI BIOSPHERE RESERVE VITHURA",
+    "name": "Agasthyamalai Biosphere Reserve",
     "address": "Q6GH+92J, Kerala 691310, India",
-    "locality": "Q6GH+92J",
+    "locality": "Vithura",
     "rating": 4.7,
     "reviews": 135,
     "score": 79.6,

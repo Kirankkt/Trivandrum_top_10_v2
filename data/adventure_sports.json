@@ -1,83 +1,5 @@
 [
   {
-    "id": "ChIJOe-4EZLlBTsRIuxf-oL-NP4",
-    "name": "Mangrove Village Adventure Park",
-    "address": "near Mangrove Cafe, Vadakke, mukke kadav, Nedungolam, Paravoor, Kerala 691571, India",
-    "locality": "Paravoor",
-    "rating": 4.9,
-    "reviews": 6517,
-    "score": 99,
-    "image": "images/places/AZLasHpOAPCGwNgV.jpg",
-    "website": "https://www.mvapark.com/",
-    "phone": "085906 78894",
-    "types": [
-      "amusement_park",
-      "establishment",
-      "lodging",
-      "point_of_interest",
-      "tourist_attraction"
-    ],
-    "vibes": [
-      "Established",
-      "Stay Options",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 8.8442104,
-      "lng": 76.6804525
-    }
-  },
-  {
-    "id": "ChIJXeGKKX7lBTsRDtqna53W9nI",
-    "name": "Mangrove Dreams Adventure Water sports",
-    "address": "Mangrove Dreams, po, Nedungolam, Paravoor, Kerala 691571, India",
-    "locality": "Paravoor",
-    "rating": 4.9,
-    "reviews": 1913,
-    "score": 94.4,
-    "image": "images/places/AZLasHrMbSgigWh3.jpg",
-    "website": "https://www.mangrovedreams.com/",
-    "phone": "091887 96186",
-    "types": [
-      "amusement_park",
-      "establishment",
-      "point_of_interest"
-    ],
-    "vibes": [
-      "Established",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 8.8439366,
-      "lng": 76.6800513
-    }
-  },
-  {
-    "id": "ChIJs1xOV-nlBTsRfaTIp65MqaQ",
-    "name": "mangrove aquaventures | kayaking | Boating | Varkala | Kollam.",
-    "address": "Vadakkemukku, near Kariyilakallu toddy shop, P.O., S, Nedungolam, Paravur, Kerala 691334, India",
-    "locality": "Paravur",
-    "rating": 4.8,
-    "reviews": 1308,
-    "score": 91.5,
-    "image": "images/places/AZLasHrCPdYjSbTK.jpg",
-    "website": "http://mangroveaquaventures.com/",
-    "phone": "080890 52220",
-    "types": [
-      "establishment",
-      "point_of_interest",
-      "travel_agency"
-    ],
-    "vibes": [
-      "Established",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 8.8456118,
-      "lng": 76.6882778
-    }
-  },
-  {
     "id": "ChIJkX8aZF7pBTsRMjBjzB_Uzfg",
     "name": "Nova Boat Club Kayaking & Golden Island Boating",
     "address": "Arun Bose Bose Nivas, Panayil Kadavu Rd, Panayil, Vakkom, Kerala 695308, India",
@@ -100,34 +22,6 @@
     "coordinates": {
       "lat": 8.7001289,
       "lng": 76.7523851
-    }
-  },
-  {
-    "id": "ChIJ-xzwXwDlBTsRe1fN-msQBOk",
-    "name": "Mangrove view",
-    "address": "Mangrove Vw Rd, Perumpuzha, Paravur, Kerala 691301, India",
-    "locality": "Paravur",
-    "rating": 5,
-    "reviews": 694,
-    "score": 90.5,
-    "image": "images/places/AZLasHp-j_1CM9MD.jpg",
-    "website": "https://mangroveview.com/",
-    "phone": "090721 19677",
-    "types": [
-      "campground",
-      "establishment",
-      "lodging",
-      "park",
-      "point_of_interest"
-    ],
-    "vibes": [
-      "Established",
-      "Stay Options",
-      "Outdoor"
-    ],
-    "coordinates": {
-      "lat": 8.8339233,
-      "lng": 76.670531
     }
   },
   {
@@ -307,31 +201,6 @@
     }
   },
   {
-    "id": "ChIJhREacNPkBTsR03ugsyCiSYM",
-    "name": "Syzygy Ecosports",
-    "address": "Lakshmipuram Thoppu, Thanni Pozhikkara Coastal Road, Kerala 691303, India",
-    "locality": "Thanni Pozhikkara Coastal Road",
-    "rating": 4.8,
-    "reviews": 433,
-    "score": 86.2,
-    "image": "images/places/AZLasHrTagF0B7Cf.jpg",
-    "website": "https://syzy.gy/",
-    "phone": "099167 99949",
-    "types": [
-      "establishment",
-      "point_of_interest",
-      "travel_agency"
-    ],
-    "vibes": [
-      "Established",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 8.8223562,
-      "lng": 76.6436958
-    }
-  },
-  {
     "id": "ChIJ5co7s2CuBTsRGuOFGIQW220",
     "name": "Academy for Mountaineering and Adventure Sports",
     "address": "Alummoodu, Neyyattinkara, Kerala 695121, India",
@@ -402,31 +271,6 @@
     "coordinates": {
       "lat": 8.735904099999999,
       "lng": 76.7044433
-    }
-  },
-  {
-    "id": "ChIJD6hudG_lBTsRHa3HJOjGNk8",
-    "name": "Kayabay Adventure",
-    "address": "KayaBay Vadakke Mukku, P.O, Nedungolam, Kollam, Kerala 691334, India",
-    "locality": "Kollam",
-    "rating": 4.9,
-    "reviews": 192,
-    "score": 83.3,
-    "image": "images/places/AZLasHqaE9XJXNMR.jpg",
-    "website": "http://kayabayadventure.com/",
-    "phone": null,
-    "types": [
-      "establishment",
-      "point_of_interest",
-      "travel_agency"
-    ],
-    "vibes": [
-      "Established",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 8.8443946,
-      "lng": 76.6840567
     }
   },
   {
@@ -503,32 +347,6 @@
     }
   },
   {
-    "id": "ChIJxwmjgcN_CDsRtYZFnometQ0",
-    "name": "Kumarakom Adventure Club",
-    "address": "Cheepunkal, Kavanattinkara, Kumarakom, Kerala 686563, India",
-    "locality": "Kumarakom",
-    "rating": 4.8,
-    "reviews": 86,
-    "score": 78.4,
-    "image": "images/places/AZLasHpo5GQKrCrY.jpg",
-    "website": "http://www.rajadhaniholidays.com/",
-    "phone": "095390 24444",
-    "types": [
-      "establishment",
-      "point_of_interest",
-      "school",
-      "travel_agency"
-    ],
-    "vibes": [
-      "Established",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 9.642973,
-      "lng": 76.41929619999999
-    }
-  },
-  {
     "id": "ChIJufck9RvvBTsRFLve-43v59M",
     "name": "CanFly Adventure",
     "address": "Varkala Helipad Road, Varkala, Kerala 695141, India",
@@ -550,31 +368,6 @@
     "coordinates": {
       "lat": 8.7355526,
       "lng": 76.70452689999999
-    }
-  },
-  {
-    "id": "ChIJrd2VeUXlBTsRK0OMGn4aMYs",
-    "name": "Varkala Mangrove kayaking",
-    "address": "PO, Nedungolam, Paravoor, Kerala 691334, India",
-    "locality": "Paravoor",
-    "rating": 4.4,
-    "reviews": 83,
-    "score": 68.2,
-    "image": "images/places/AZLasHrPFeKKoTUb.jpg",
-    "website": null,
-    "phone": "087145 85511",
-    "types": [
-      "establishment",
-      "point_of_interest",
-      "travel_agency"
-    ],
-    "vibes": [
-      "Established",
-      "Must Visit"
-    ],
-    "coordinates": {
-      "lat": 8.8384767,
-      "lng": 76.6774095
     }
   },
   {
