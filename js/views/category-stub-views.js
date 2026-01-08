@@ -210,6 +210,7 @@ function renderMallsView() {
         subtitle: "Best Shopping Destinations in Trivandrum",
         icon: "",
         filename: "data/malls.json",
+        heroImage: "images/heroes/malls.webp",
         badgeColor: "#8b5cf6",
         metrics: ['rating', 'popularity', 'sentiment']
     });
@@ -236,6 +237,7 @@ function renderMuseumsView() {
         subtitle: "Explore Trivandrum's Rich Heritage",
         icon: "",
         filename: "data/museums.json",
+        heroImage: "images/heroes/culture.webp",
         badgeColor: "#0ea5e9",
         metrics: ['rating', 'popularity', 'sentiment']
     });
@@ -247,6 +249,7 @@ function renderReligiousSitesView() {
         subtitle: "Temples, Churches & Mosques",
         icon: "",
         filename: "data/religious_sites.json",
+        heroImage: "images/heroes/religious-sites.webp",
         badgeColor: "#ef4444",
         metrics: ['rating', 'popularity', 'sentiment']
     });
@@ -262,6 +265,7 @@ function renderHealthcareView() {
         subtitle: "Ranked by patient experience reviews, not clinical outcomes",
         icon: "",
         filename: "data/healthcare.json",
+        heroImage: "images/heroes/healthcare.webp",
         badgeColor: "#10b981",
         metrics: ['rating', 'popularity', 'sentiment']
     });
@@ -277,6 +281,7 @@ function renderSupermarketsView() {
         subtitle: "Best Grocery Stores & Hypermarkets",
         icon: "",
         filename: "data/supermarkets.json",
+        heroImage: "images/heroes/supermarkets.webp",
         badgeColor: "#22c55e",
         metrics: ['rating', 'popularity', 'sentiment']
     });
@@ -288,6 +293,7 @@ function renderClothingStoresView() {
         subtitle: "Fashion Boutiques & Apparel Shops",
         icon: "",
         filename: "data/clothing_stores.json",
+        heroImage: "images/heroes/clothing-stores.webp",
         badgeColor: "#f472b6",
         metrics: ['rating', 'popularity', 'sentiment']
     });
@@ -314,6 +320,7 @@ function renderCulturalCentersView() {
         subtitle: "Arts, Crafts & Cultural Institutions",
         icon: "",
         filename: "data/cultural_centers.json",
+        heroImage: "images/heroes/cultural-centers.webp",
         badgeColor: "#f97316",
         metrics: ['rating', 'popularity', 'sentiment']
     });
@@ -325,6 +332,7 @@ function renderTheatresView() {
         subtitle: "Performance Venues & Drama Centers",
         icon: "",
         filename: "data/music_drama_centers.json",
+        heroImage: "images/heroes/theatres.webp",
         badgeColor: "#dc2626",
         metrics: ['rating', 'popularity', 'sentiment']
     });
@@ -336,6 +344,7 @@ function renderLandmarksView() {
         subtitle: "Palaces, Monuments & Historic Buildings",
         icon: "",
         filename: "data/landmarks.json",
+        heroImage: "images/heroes/landmarks.webp",
         badgeColor: "#ca8a04",
         metrics: ['rating', 'popularity', 'sentiment']
     });
@@ -351,6 +360,7 @@ function renderBeachesView() {
         subtitle: "Scenic Coastal Getaways",
         icon: "",
         filename: "data/beaches.json",
+        heroImage: "images/heroes/beaches.webp",
         badgeColor: "#0891b2",
         metrics: ['rating', 'popularity', 'sentiment']
     });
@@ -362,6 +372,7 @@ function renderNatureSanctuariesView() {
         subtitle: "Sanctuaries, Forests & Nature Reserves",
         icon: "",
         filename: "data/nature_sanctuaries.json",
+        heroImage: "images/heroes/nature-sanctuaries.webp",
         badgeColor: "#16a34a",
         metrics: ['rating', 'popularity', 'sentiment']
     });
@@ -373,6 +384,7 @@ function renderBackwatersView() {
         subtitle: "Lakes, Lagoons & Boating Experiences",
         icon: "",
         filename: "data/backwaters.json",
+        heroImage: "images/heroes/backwaters.webp",
         badgeColor: "#0284c7",
         metrics: ['rating', 'popularity', 'sentiment']
     });
@@ -388,6 +400,7 @@ function renderSportsClubsView() {
         subtitle: "Tennis, Badminton, Golf & More",
         icon: "",
         filename: "data/sports_clubs.json",
+        heroImage: "images/heroes/sports-clubs.webp",
         badgeColor: "#059669",
         metrics: ['rating', 'popularity', 'sentiment']
     });
@@ -399,6 +412,7 @@ function renderTrainingAcademiesView() {
         subtitle: "Sports Coaching & Skill Development",
         icon: "",
         filename: "data/training_academies.json",
+        heroImage: "images/heroes/training-academies.webp",
         badgeColor: "#7c3aed",
         metrics: ['rating', 'popularity', 'sentiment']
     });
@@ -425,6 +439,7 @@ function renderAyurvedaView() {
         subtitle: "Traditional Wellness & Rejuvenation Centers",
         icon: "",
         filename: "data/ayurveda_wellness.json",
+        heroImage: "images/heroes/ayurveda.webp",
         badgeColor: "#65a30d",
         metrics: ['rating', 'popularity', 'sentiment']
     });
@@ -449,7 +464,7 @@ function renderShopCategoryView() {
     const app = document.getElementById('app');
 
     const html = `
-        <div class="dining-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/skyline.png') center/cover fixed;">
+        <div class="dining-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/heroes/shopping.webp') center/cover fixed;">
             <div class="hero-content">
                 <h1 style="color: white; text-shadow: 2px 2px 8px rgba(0,0,0,1); font-size: 3.5rem;">Shop</h1>
                 <p class="hero-subtitle" style="color: rgba(255,255,255,0.9); text-shadow: 1px 1px 4px rgba(0,0,0,0.9); font-size: 1.25rem; margin-top: 0.5rem;">Shopping Destinations in Trivandrum</p>
@@ -489,7 +504,7 @@ function renderCultureCategoryView() {
     const app = document.getElementById('app');
 
     const html = `
-        <div class="dining-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/skyline.png') center/cover fixed;">
+        <div class="dining-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/heroes/culture.webp') center/cover fixed;">
             <div class="hero-content">
                 <h1 style="color: white; text-shadow: 2px 2px 8px rgba(0,0,0,1); font-size: 3.5rem;">Culture</h1>
                 <p class="hero-subtitle" style="color: rgba(255,255,255,0.9); text-shadow: 1px 1px 4px rgba(0,0,0,0.9); font-size: 1.25rem; margin-top: 0.5rem;">Heritage & Spiritual Landmarks</p>

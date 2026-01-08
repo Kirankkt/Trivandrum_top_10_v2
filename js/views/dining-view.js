@@ -9,6 +9,7 @@ async function renderDiningView(type, filters = {}) {
             subtitle: "Curated by Taste, Vibe & Authentic Reviews",
             icon: "",
             filename: "data/restaurants.json",
+            heroImage: "images/heroes/restaurants.webp",
             badgeColor: "#ff6b6b"
         },
         cafes: {
@@ -16,6 +17,7 @@ async function renderDiningView(type, filters = {}) {
             subtitle: "Best Spots for Coffee, Work & Conversation",
             icon: "",
             filename: "data/cafes.json",
+            heroImage: "images/heroes/cafes.webp",
             badgeColor: "#4ecdc4"
         },
         hotels: {
@@ -23,6 +25,7 @@ async function renderDiningView(type, filters = {}) {
             subtitle: "Luxury Stays & Premium Comfort",
             icon: "",
             filename: "data/hotels.json",
+            heroImage: "images/heroes/hotels.webp",
             badgeColor: "#f59e0b"
         }
     }[type];
@@ -97,7 +100,7 @@ async function renderDiningView(type, filters = {}) {
         ` : '';
 
         let html = `
-            <div class="dining-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('${top10[0].image}') center/cover fixed;">
+            <div class="dining-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('${config.heroImage}') center/cover fixed;">
                 <div class="hero-content">
                     <h1 style="color: white; text-shadow: 2px 2px 8px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8); font-size: 3.5rem;">${config.title}</h1>
                     <p class="hero-subtitle" style="color: rgba(255,255,255,0.9); text-shadow: 1px 1px 4px rgba(0,0,0,0.9); font-size: 1.25rem; margin-top: 0.5rem;">${config.subtitle}</p>
