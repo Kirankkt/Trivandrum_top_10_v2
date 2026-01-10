@@ -42,7 +42,7 @@
       "Romantic",
       "Trendy"
     ],
-    "website": "https://www.hycinthhotels.com/cafe-jade.html",
+    "website": "https://hycinthhotels.com/dining/#jade",
     "phone": "0471 255 2999",
     "map_url": null,
     "metrics": {
@@ -688,6 +688,264 @@
     "location": {
       "lat": 8.4884766,
       "lng": 76.9398405
+    }
+  },
+  {
+    "id": "ChIJje3cvFW9BTsRgMeORFKgLb0",
+    "name": "O Café (O by Tamara)",
+    "score": 70.2,
+    "rating": 4.5,
+    "reviews": 1057,
+    "price_level": 3,
+    "address": "Oruvathilkotta, Aakkulam, Thiruvananthapuram, Kerala 695029, India",
+    "image": null,
+    "category": "restaurants",
+    "vibes": [
+      "Hotel Dining",
+      "Trendy",
+      "Romantic"
+    ],
+    "website": "https://www.obytamara.com/hotel-trivandrum/restaurants/o-cafe.html",
+    "phone": "080 6555 1111",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 23.3,
+      "popularity": 1057,
+      "convenience": 8
+    },
+    "locality": "Akkulam",
+    "location": {
+      "lat": 8.5126261,
+      "lng": 76.901883
+    }
+  },
+  {
+    "id": "ChIJd-t1JwmlBTsR7AOnkCw2lms",
+    "name": "Bait (Taj Green Cove)",
+    "score": 73.5,
+    "rating": 4.5,
+    "reviews": 1548,
+    "price_level": 4,
+    "address": "Taj Green Cove Resort & Spa G. V. Raja Road, Vattappara, Kovalam, Thiruvananthapuram, Kerala 695527, India",
+    "image": null,
+    "category": "restaurants",
+    "vibes": [
+      "Hotel Dining",
+      "Romantic",
+      "Authentic"
+    ],
+    "website": "https://www.tajhotels.com/en-in/hotels/taj-green-cove/restaurants/bait",
+    "phone": "0471 661 3000",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 23.3,
+      "popularity": 1548,
+      "convenience": 10
+    },
+    "locality": "Kovalam",
+    "location": {
+      "lat": 8.403073,
+      "lng": 76.973487
+    }
+  },
+  {
+    "id": "ChIJdzmVDBa7BTsRT8cPO9Wjzm4",
+    "name": "Mynt (Vivanta Thiruvananthapuram)",
+    "score": 52.1,
+    "rating": 3.9,
+    "reviews": 16,
+    "price_level": 3,
+    "address": "Extra Police Rd, Nandavanam, Palayam, Thiruvananthapuram, Kerala 695033, India",
+    "image": null,
+    "category": "restaurants",
+    "vibes": [
+      "Hotel Dining",
+      "Trendy"
+    ],
+    "website": "https://www.vivantahotels.com/en-in/hotels/vivanta-thiruvananthapuram/restaurants",
+    "phone": "0471 402 2100",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 11.7,
+      "popularity": 16,
+      "convenience": 10
+    },
+    "locality": "Palayam",
+    "location": {
+      "lat": 8.5045827,
+      "lng": 76.9530402
+    }
+  },
+  {
+    "id": "ChIJKdD90KW7BTsRRRY2NwZ3GOc",
+    "name": "Cafe Hive (Apollo Dimora)",
+    "score": 62.8,
+    "rating": 4.3,
+    "reviews": 250,
+    "price_level": 2,
+    "address": "Hotel Dimora, Railway Station Road, opp. Central, Overbridge, Thampanoor, Thiruvananthapuram, Kerala 695001, India",
+    "image": null,
+    "category": "restaurants",
+    "vibes": [
+      "Hotel Dining",
+      "Family",
+      "Trendy"
+    ],
+    "website": null,
+    "phone": "092077 22256",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 18.7,
+      "popularity": 250,
+      "convenience": 10
+    },
+    "locality": "Thampanoor",
+    "location": {
+      "lat": 8.4887787,
+      "lng": 76.9507645
+    }
+  },
+  {
+    "id": "ChIJPROsmAS7BTsRe5QY7UCdiyU",
+    "name": "Baker's Arch Garden Cafe",
+    "score": 66.5,
+    "rating": 4.3,
+    "reviews": 812,
+    "price_level": 2,
+    "address": "18/1400-1, Chandrasekharan Nair Rd, Kowdiar P.O, Kuravankonam, Thiruvananthapuram, Kerala 695004, India",
+    "image": null,
+    "category": "restaurants",
+    "vibes": [
+      "Work Friendly",
+      "Family",
+      "Trendy"
+    ],
+    "website": "https://www.bakersarch.in/",
+    "phone": "087146 42900",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 18.7,
+      "popularity": 812,
+      "convenience": 8
+    },
+    "locality": "Kuravankonam",
+    "location": {
+      "lat": 8.5231929,
+      "lng": 76.9501258
+    }
+  },
+  {
+    "id": "ChIJ_____9i7BTsRYOcrYQMAjrQ",
+    "name": "OldSkool Café & Diner",
+    "score": 66.8,
+    "rating": 4.2,
+    "reviews": 4108,
+    "price_level": 2,
+    "address": "First Floor, TC 18/1820, Pattom-Kowdiar Road, Kuravankonam, Kowdiar, Thiruvananthapuram, Kerala 695003, India",
+    "image": null,
+    "category": "restaurants",
+    "vibes": [
+      "Trendy",
+      "Family",
+      "Work Friendly"
+    ],
+    "website": "https://oldskooldiner.com/",
+    "phone": "097456 69111",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 16.3,
+      "popularity": 4108,
+      "convenience": 8
+    },
+    "locality": "Kuravankonam",
+    "location": {
+      "lat": 8.522522,
+      "lng": 76.9506848
+    }
+  },
+  {
+    "id": "ChIJQ_b63iS7BTsRHe9bIHJdoMQ",
+    "name": "Bab Arabia",
+    "score": 67.5,
+    "rating": 4.2,
+    "reviews": 8629,
+    "price_level": 2,
+    "address": "Pattom - Kowdiar Rd, next to SFS Mayfair Appartment, Marappalam, Thiruvananthapuram, Kerala 695004, India",
+    "image": null,
+    "category": "restaurants",
+    "vibes": [
+      "Family",
+      "Authentic"
+    ],
+    "website": null,
+    "phone": "073567 79888",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 16.3,
+      "popularity": 8629,
+      "convenience": 8
+    },
+    "locality": "Pattom",
+    "location": {
+      "lat": 8.5200539,
+      "lng": 76.9468297
+    }
+  },
+  {
+    "id": "ChIJUZIH5FKlBTsR9qtAshxfQGk",
+    "name": "Catamaran (Gokulam Grand)",
+    "score": 55.8,
+    "rating": 4.2,
+    "reviews": 40,
+    "price_level": 3,
+    "address": "TC 63, 512 TO 523, Beach Rd, Kovalam, Thiruvananthapuram, Kerala 695527, India",
+    "image": null,
+    "category": "restaurants",
+    "vibes": [
+      "Hotel Dining",
+      "Romantic"
+    ],
+    "website": null,
+    "phone": "095390 01475",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 16.3,
+      "popularity": 40,
+      "convenience": 10
+    },
+    "locality": "Kovalam",
+    "location": {
+      "lat": 8.3904034,
+      "lng": 76.976333
+    }
+  },
+  {
+    "id": "ChIJO0UGVCSlBTsRqSiaBI9GYew",
+    "name": "The Terrace (The Leela Raviz)",
+    "score": 50.4,
+    "rating": 3.7,
+    "reviews": 68,
+    "price_level": 4,
+    "address": "At Lobby Level, opposite Infinity Pool, The Raviz, Kovalam, Thiruvananthapuram, Kerala 695527, India",
+    "image": null,
+    "category": "restaurants",
+    "vibes": [
+      "Hotel Dining",
+      "Romantic",
+      "Trendy"
+    ],
+    "website": "http://www.theravizkovalam.com/restaurants-bars/",
+    "phone": "0471 305 1234",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 9.3,
+      "popularity": 68,
+      "convenience": 10
+    },
+    "locality": "Kovalam",
+    "location": {
+      "lat": 8.3938501,
+      "lng": 76.971916
     }
   }
 ]
