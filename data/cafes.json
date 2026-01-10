@@ -723,5 +723,63 @@
       "lat": 8.494671,
       "lng": 76.940407
     }
+  },
+  {
+    "id": "ChIJje3cvFW9BTsRgMeORFKgLb0",
+    "name": "O Café (O by Tamara)",
+    "score": 70.2,
+    "rating": 4.5,
+    "reviews": 1057,
+    "price_level": 3,
+    "address": "Oruvathilkotta, Aakkulam, Thiruvananthapuram, Kerala 695029, India",
+    "image": null,
+    "category": "cafes",
+    "vibes": [
+      "Hotel Dining",
+      "Trendy",
+      "Romantic"
+    ],
+    "website": "https://www.obytamara.com/hotel-trivandrum/restaurants/o-cafe.html",
+    "phone": "080 6555 1111",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 23.3,
+      "popularity": 1057,
+      "convenience": 8
+    },
+    "locality": "Akkulam",
+    "location": {
+      "lat": 8.5126261,
+      "lng": 76.901883
+    }
+  },
+  {
+    "id": "ChIJKdD90KW7BTsRRRY2NwZ3GOc",
+    "name": "Cafe Hive (Apollo Dimora)",
+    "score": 62.8,
+    "rating": 4.3,
+    "reviews": 250,
+    "price_level": 2,
+    "address": "Hotel Dimora, Railway Station Road, opp. Central, Overbridge, Thampanoor, Thiruvananthapuram, Kerala 695001, India",
+    "image": null,
+    "category": "cafes",
+    "vibes": [
+      "Hotel Dining",
+      "Family",
+      "Trendy"
+    ],
+    "website": null,
+    "phone": "092077 22256",
+    "map_url": null,
+    "metrics": {
+      "sentiment": 18.7,
+      "popularity": 250,
+      "convenience": 10
+    },
+    "locality": "Thampanoor",
+    "location": {
+      "lat": 8.4887787,
+      "lng": 76.9507645
+    }
   }
 ]
