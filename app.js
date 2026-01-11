@@ -27,6 +27,9 @@ window.addEventListener('unhandledrejection', function(event) {
 
 // Simple Router
 function route() {
+    // Scroll to top on navigation
+    window.scrollTo(0, 0);
+
     // Decode the hash to handle URL-encoded characters (e.g., %2F for /)
     const rawHash = window.location.hash.slice(1) || '/';
     const hash = decodeURIComponent(rawHash);
