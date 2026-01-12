@@ -6612,6 +6612,17 @@ footer .small {
   border-color: var(--color-primary);
 }
 
+.entity-action-btn.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  border: none;
+}
+
+.entity-action-btn.instagram:hover {
+  background: linear-gradient(45deg, #e6683c 0%, #dc2743 25%, #cc2366 50%, #bc1888 75%, #a01472 100%);
+  transform: translateY(-1px);
+}
+
 /* Nearby Section */
 .entity-nearby-section {
   background: var(--color-bg-secondary);
