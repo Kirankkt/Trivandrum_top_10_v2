@@ -459,36 +459,6 @@
     }
   },
   {
-    "id": "ChIJO7J8jte7BTsRMTYgCWwiul0",
-    "name": "Café Mojo",
-    "score": 61.6,
-    "rating": 4.1,
-    "reviews": 2988,
-    "price_level": 3,
-    "address": "Shaheen Building Pattom Kowdiar Road Near Kuravankonam, Kowdiar, Thiruvananthapuram, Kerala 695003, India",
-    "image": "images/places/AZLasHofkWGeI8em.jpg",
-    "category": "restaurants",
-    "vibes": [
-      "Work Friendly",
-      "Family",
-      "Trendy",
-      "Authentic"
-    ],
-    "website": "https://share.google/nuUjYYOccVldrVYJX",
-    "phone": "0471 243 0437",
-    "map_url": null,
-    "metrics": {
-      "sentiment": 14,
-      "popularity": 2988,
-      "convenience": 8
-    },
-    "locality": "Pattom",
-    "location": {
-      "lat": 8.5239846,
-      "lng": 76.953334
-    }
-  },
-  {
     "id": "ChIJ09tElOS7BTsRyC5Ae_rPOj0",
     "name": "Pankayam",
     "score": 59.7,
@@ -600,35 +570,6 @@
     "location": {
       "lat": 8.5268607,
       "lng": 76.88781089999999
-    }
-  },
-  {
-    "id": "ChIJEYvwzNe7BTsRHGirI5Gjc6g",
-    "name": "Huddles Cafe",
-    "score": 71.7,
-    "rating": 4.4,
-    "reviews": 2683,
-    "price_level": 3,
-    "address": "TC25, First floor, Capitol building, 2850/3-4, Nalanda Ln, Nanthancodu, Thiruvananthapuram, Kerala 695003, India",
-    "image": "images/places/AZLasHppzWCQbZcQ.jpg",
-    "category": "restaurants",
-    "vibes": [
-      "Romantic",
-      "Family",
-      "Trendy"
-    ],
-    "website": "https://huddlescafe.com/",
-    "phone": "081291 21007",
-    "map_url": null,
-    "metrics": {
-      "sentiment": 21,
-      "popularity": 2683,
-      "convenience": 10
-    },
-    "locality": null,
-    "location": {
-      "lat": 8.51374,
-      "lng": 76.9525439
     }
   },
   {

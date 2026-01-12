@@ -229,7 +229,7 @@ async function renderCustomizeView() {
                 <div class="preview-item">
                     <span class="preview-rank">#${i + 1}</span>
                     <span class="preview-name">${loc.name}</span>
-                    <span class="preview-score">${loc.overall_score.toFixed(2)}</span>
+                    <span class="preview-score">${(loc.overall_score || 0).toFixed(2)}</span>
                 </div>
             `;
         });

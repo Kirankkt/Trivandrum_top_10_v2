@@ -50,7 +50,10 @@ function generateCSVReport(allEvents, totalEvents, uniqueSessions, density, devi
     rows.push(['Locality', 'Engagements']);
     const localityCounts = {};
     allEvents.filter(e => e.event_name === 'marker_clicked' && e.metadata?.category === 'localities')
-        .forEach(e => localityCounts[e.metadata.name] = (localityCounts[e.metadata.name] || 0) + 1);
+        .forEach(e => {
+            const name = e.metadata?.name;
+            if (name) localityCounts[name] = (localityCounts[name] || 0) + 1;
+        });
     const sortedLocalities = Object.entries(localityCounts)
         .sort((a, b) => b[1] - a[1])
         .slice(0, 10);
@@ -863,7 +866,10 @@ async function renderAdminView() {
         // Popular Localities
         const localityCounts = {};
         allEvents.filter(e => e.event_name === 'marker_clicked' && e.metadata?.category === 'localities')
-            .forEach(e => localityCounts[e.metadata.name] = (localityCounts[e.metadata.name] || 0) + 1);
+            .forEach(e => {
+            const name = e.metadata?.name;
+            if (name) localityCounts[name] = (localityCounts[name] || 0) + 1;
+        });
         renderBarChart(localityCounts, 'top-localities-chart');
 
         // Feature Heatmap
