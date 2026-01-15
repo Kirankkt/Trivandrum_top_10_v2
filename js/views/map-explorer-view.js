@@ -1,17 +1,10 @@
-// Enhanced Map Explorer - Locality-centric city map
-// Shows localities with nearby facilities, proper navigation to detail pages
+// Enhanced Map Explorer - City map with all categories
+// Shows places with proper navigation to detail pages
 
 /**
  * Category configurations - distinct colors, no similar shades
  */
 const MAP_CATEGORIES = {
-    localities: {
-        label: 'Localities',
-        icon: '',
-        color: '#2563eb', // Blue - distinct from others
-        dataFile: null,
-        detailRoute: '/locality/'
-    },
     restaurants: {
         label: 'Restaurants',
         icon: '',
@@ -178,9 +171,8 @@ const MAP_CATEGORIES = {
 // Global state
 let mapInstance = null;
 let categoryLayers = {};
-let activeCategories = new Set(['localities']);
+let activeCategories = new Set(['restaurants']);
 let allEntityData = {}; // Cache for entity data
-let localityFacilities = {}; // Facilities near each locality
 let globalMarkers = {}; // NEW: ID -> Marker mapping for all categories
 let isDataLoading = false;
 
@@ -230,11 +222,7 @@ function createMarkerIcon(category, size = 'normal') {
  * Navigate to entity detail page
  */
 function navigateToEntity(category, entityId) {
-    if (category === 'localities') {
-        window.location.hash = `/locality/${encodeURIComponent(entityId)}`;
-    } else {
-        window.location.hash = `/entity/${category}/${encodeURIComponent(entityId)}`;
-    }
+    window.location.hash = `/entity/${category}/${encodeURIComponent(entityId)}`;
 }
 
 /**
@@ -255,52 +243,19 @@ function createEntityPopup(entity, category, rank = null) {
         scoreHtml = `<div style="font-size: 14px; color: ${config.color}; font-weight: bold;">Score: ${entity.score}</div>`;
     }
 
-    const entityId = category === 'localities' ? entity.name : entity.id;
-
     return `
         <div style="text-align: center; min-width: 180px; padding: 12px 8px;">
             <div style="font-size: 24px; margin-bottom: 8px;">${config.icon}</div>
             <strong style="font-size: 15px; display: block; margin-bottom: 4px; color: #1e293b;">${entity.name}</strong>
             ${scoreHtml}
             ${ratingHtml}
-            ${entity.locality && category !== 'localities' ? `<div style="font-size: 12px; color: #64748b;">${entity.locality}</div>` : ''}
+            ${entity.locality ? `<div style="font-size: 12px; color: #64748b;">${entity.locality}</div>` : ''}
         </div>
     `;
 }
 
 /**
- * Create locality popup showing nearby facilities
- */
-function createLocalityPopup(locality) {
-    const facilities = localityFacilities[locality.name] || {};
-    const config = MAP_CATEGORIES.localities;
-
-    // Build facility summary
-    let facilitiesHtml = '<div style="display: flex; flex-wrap: wrap; gap: 4px; margin: 8px 0; justify-content: center;">';
-    const categoryOrder = ['restaurants', 'cafes', 'hotels', 'healthcare', 'education', 'malls', 'museums', 'religious_sites'];
-
-    for (const cat of categoryOrder) {
-        const count = facilities[cat]?.length || 0;
-        if (count > 0) {
-            const catConfig = MAP_CATEGORIES[cat];
-            facilitiesHtml += `<span style="background: ${catConfig.color}; color: white; padding: 2px 6px; border-radius: 10px; font-size: 11px;" title="${count} ${catConfig.label}">${catConfig.icon} ${count}</span>`;
-        }
-    }
-    facilitiesHtml += '</div>';
-
-    return `
-        <div style="text-align: center; min-width: 200px; padding: 8px;">
-            <div style="font-size: 24px; margin-bottom: 4px;"></div>
-            <strong style="font-size: 16px; display: block; margin-bottom: 6px; color: #1e293b;">${locality.name}</strong>
-            ${locality.overall_score ? `<div style="font-size: 18px; color: ${config.color}; font-weight: bold; margin-bottom: 4px;">${locality.overall_score.toFixed(1)}/10</div>` : ''}
-            <div style="font-size: 11px; color: #64748b; margin: 4px 0;">Nearby Facilities:</div>
-            ${facilitiesHtml}
-        </div>
-    `;
-}
-
-/**
- * Load all entity data and compute locality facilities
+ * Load all entity data
  */
 async function loadAllData() {
     if (Object.keys(allEntityData).length > 1 && !isDataLoading) return; // Already loaded
@@ -309,13 +264,9 @@ async function loadAllData() {
     globalMarkers = {}; // Clear global markers on reload
     if (typeof debugLog === 'function') debugLog('[Debug] Loading all map data...');
 
-    // Load localities first
-    const rankingsData = await loadRankings();
-    allEntityData.localities = rankingsData?.all_rankings || [];
-
-    // Load all other categories in parallel for speed
+    // Load all categories in parallel for speed
     const loadPromises = Object.entries(MAP_CATEGORIES)
-        .filter(([cat, config]) => cat !== 'localities' && config.dataFile)
+        .filter(([cat, config]) => config.dataFile)
         .map(async ([category, config]) => {
             try {
                 const response = await fetch(config.dataFile);
@@ -329,39 +280,7 @@ async function loadAllData() {
         });
 
     await Promise.all(loadPromises);
-    computeLocalityFacilities();
     isDataLoading = false;
-}
-
-/**
- * Compute what facilities are near each locality (within 3km)
- */
-function computeLocalityFacilities() {
-    localityFacilities = {};
-
-    for (const locality of allEntityData.localities || []) {
-        const lat = locality.latitude || locality.data?.latitude;
-        const lng = locality.longitude || locality.data?.longitude;
-        if (!lat || !lng) continue;
-
-        localityFacilities[locality.name] = {};
-
-        for (const [category, entities] of Object.entries(allEntityData)) {
-            if (category === 'localities') continue;
-
-            const nearby = (entities || []).filter(entity => {
-                // Support both 'location' and 'coordinates' property names
-                const eLat = entity.location?.lat || entity.coordinates?.lat;
-                const eLng = entity.location?.lng || entity.coordinates?.lng;
-                if (!eLat || !eLng) return false;
-                return haversineDistance(lat, lng, eLat, eLng) <= 3;
-            });
-
-            if (nearby.length > 0) {
-                localityFacilities[locality.name][category] = nearby;
-            }
-        }
-    }
 }
 
 /**
@@ -378,26 +297,19 @@ async function addCategoryToMap(category) {
     const config = MAP_CATEGORIES[category];
 
     data.forEach((entity) => {
-        let lat, lng;
-
-        if (category === 'localities') {
-            lat = entity.latitude || entity.data?.latitude;
-            lng = entity.longitude || entity.data?.longitude;
-        } else {
-            // Support both 'location' and 'coordinates' property names
-            lat = entity.location?.lat || entity.coordinates?.lat;
-            lng = entity.location?.lng || entity.coordinates?.lng;
-        }
+        // Support both 'location' and 'coordinates' property names
+        const lat = entity.location?.lat || entity.coordinates?.lat;
+        const lng = entity.location?.lng || entity.coordinates?.lng;
 
         if (lat && lng) {
-            const entityId = category === 'localities' ? entity.name : entity.id;
+            const entityId = entity.id;
             const marker = L.marker([lat, lng], {
                 icon: createMarkerIcon(category),
                 entityId: entityId // Store ID for precise matching
             });
 
             // Setup content for hover and click
-            const content = category === 'localities' ? createLocalityPopup(entity) : createEntityPopup(entity, category);
+            const content = createEntityPopup(entity, category);
 
             // Use Tooltips for hover label (Clean Revert with Fixes)
             marker.bindTooltip(content, {
@@ -543,12 +455,8 @@ function updateUI() {
 function getCategoryCounts() {
     const counts = {};
     for (const [category, data] of Object.entries(allEntityData)) {
-        if (category === 'localities') {
-            counts[category] = (data || []).filter(e => e.latitude || e.data?.latitude).length;
-        } else {
-            // Support both 'location' and 'coordinates' property names
-            counts[category] = (data || []).filter(e => e.location?.lat || e.coordinates?.lat).length;
-        }
+        // Support both 'location' and 'coordinates' property names
+        counts[category] = (data || []).filter(e => e.location?.lat || e.coordinates?.lat).length;
     }
     return counts;
 }
@@ -579,22 +487,13 @@ async function renderMapExplorerView() {
             <div class="map-controls-sidebar">
                 <div class="map-controls-header">
                     <h2>City Explorer</h2>
-                    <p class="map-controls-subtitle">Discover what's in each locality</p>
+                    <p class="map-controls-subtitle">Discover places across the city</p>
                 </div>
 
                 <div class="map-category-toggles">
                     <div class="category-section">
-                        <h4>Localities</h4>
-                        <button class="map-category-toggle active" data-category="localities" style="--toggle-color: ${MAP_CATEGORIES.localities.color}">
-                            <span class="toggle-icon">${MAP_CATEGORIES.localities.icon}</span>
-                            <span class="toggle-label">Localities</span>
-                            <span class="toggle-count">${counts.localities || 0}</span>
-                        </button>
-                    </div>
-
-                    <div class="category-section">
                         <h4>Dining & Stay</h4>
-                        <button class="map-category-toggle" data-category="restaurants" style="--toggle-color: ${MAP_CATEGORIES.restaurants.color}">
+                        <button class="map-category-toggle active" data-category="restaurants" style="--toggle-color: ${MAP_CATEGORIES.restaurants.color}">
                             <span class="toggle-icon">${MAP_CATEGORIES.restaurants.icon}</span>
                             <span class="toggle-label">Restaurants</span>
                             <span class="toggle-count">${counts.restaurants || 0}</span>
@@ -761,12 +660,12 @@ async function renderMapExplorerView() {
         const highlightId = urlParams.get('highlight');
         const highlightCategory = urlParams.get('category');
 
-        if (highlightId && highlightCategory && highlightCategory !== 'localities') {
+        if (highlightId && highlightCategory) {
             // Focus ONLY on the highlighted category
             activeCategories = new Set([highlightCategory]);
             console.log(`[Debug] Focus highlight: ${highlightCategory}`);
         } else {
-            activeCategories = new Set(['localities']);
+            activeCategories = new Set(['restaurants']);
         }
 
         // Initialize map
@@ -783,9 +682,9 @@ async function renderMapExplorerView() {
         }
         updateUI();
 
-        // Fit to localities bounds
-        if (categoryLayers.localities && typeof categoryLayers.localities.getBounds === 'function') {
-            const bounds = categoryLayers.localities.getBounds();
+        // Fit to restaurants bounds if available
+        if (categoryLayers.restaurants && typeof categoryLayers.restaurants.getBounds === 'function') {
+            const bounds = categoryLayers.restaurants.getBounds();
             if (bounds.isValid()) {
                 mapInstance.fitBounds(bounds.pad(0.1));
             }
