@@ -198,14 +198,16 @@ a:hover {
   text-decoration: none;
 }
 
-/* Main Header - Modern Dark */
+/* Main Header - Modern Dark with Transparency */
 .main-header {
-  background: rgba(10, 10, 15, 0.95);
-  backdrop-filter: blur(20px);
-  position: sticky;
+  background: rgba(10, 10, 15, 0.25);
+  backdrop-filter: blur(12px);
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 10000;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header-content {
@@ -225,6 +227,12 @@ a:hover {
 .logo-new:hover {
   text-decoration: none;
   color: white;
+}
+
+.logo-image {
+  height: 45px;
+  width: auto;
+  display: block;
 }
 
 .logo-text-new {
@@ -2228,9 +2236,8 @@ footer .small {
 /* Hero Section */
 .hero-section {
   position: relative;
-  height: 80vh;
-  min-height: 500px;
-  max-height: 800px;
+  height: 100vh;
+  min-height: 600px;
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -2764,7 +2771,12 @@ footer .small {
 
 @media (max-width: 768px) {
   .hero-section {
-    height: 70vh;
+    height: 100vh;
+    min-height: 500px;
+  }
+
+  .logo-image {
+    height: 35px;
   }
 
   .hero-stats {
