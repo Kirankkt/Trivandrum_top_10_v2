@@ -6041,14 +6041,14 @@ footer .small {
 }
 
 .category-hero {
-  height: 420px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-size: cover;
   background-position: center;
   position: relative;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 
 .category-hero-content {
@@ -6127,7 +6127,7 @@ footer .small {
   left: 50%;
   transform: translateX(-50%) translateY(8px);
   min-width: 180px;
-  background: rgba(10, 10, 15, 0.40);
+  background: rgba(10, 10, 15, 0.52);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-lg);
