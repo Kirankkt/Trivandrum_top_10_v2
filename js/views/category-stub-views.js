@@ -31,10 +31,10 @@ async function renderCategoryView(type, config) {
                 const metrics = item.metrics || {};
                 let customScore = 0;
 
-                // Map metric IDs to actual data (must match dining-customize-view.js)
+                // Map metric IDs to 0-100 scale (must match dining-customize-view.js)
                 const metricMapping = {
                     sentiment: metrics.sentiment || 50,
-                    popularity: Math.min((item.reviews || 0) / 100, 100),
+                    popularity: Math.min(Math.log10(Math.max(item.reviews || 1, 1)) * 25, 100),
                     rating: (item.rating || 4) * 20
                 };
 

@@ -39,9 +39,6 @@ async function renderDiningView(type, filters = {}) {
         if (!response.ok) throw new Error("Data not found");
         let data = await response.json();
 
-        // Store original data for filtering
-        const originalData = [...data];
-
         // Get unique localities for filter dropdown
         const localities = [...new Set(data.map(item => item.locality).filter(Boolean))].sort();
 
@@ -76,16 +73,16 @@ async function renderDiningView(type, filters = {}) {
             const metrics = item.metrics || {};
             let customScore = 0;
 
-            // Map metric IDs to actual data (must match dining-customize-view.js)
+            // Map metric IDs to 0-100 scale (must match dining-customize-view.js)
             const metricMapping = {
                 sentiment: metrics.sentiment || 50,
-                popularity: Math.min((item.reviews || 0) / 100, 100),
+                popularity: Math.min(Math.log10(Math.max(item.reviews || 1, 1)) * 25, 100),
                 rating: (item.rating || 4) * 20,
                 value: (5 - (item.price_level || 2)) * 25,
-                convenience: metrics.convenience || 50,
+                convenience: (metrics.convenience || 5) * 10,
                 vibe: (item.vibes?.length || 0) * 20,
                 workspace: (item.vibes?.includes('Work Friendly') ? 80 : 30),
-                location: metrics.convenience || 50,
+                location: (metrics.convenience || 5) * 10,
                 luxury: (item.price_level || 2) * 25
             };
 
@@ -96,6 +93,9 @@ async function renderDiningView(type, filters = {}) {
 
             return { ...item, score: customScore };
         }).sort((a, b) => b.score - a.score);
+
+        // Store recalculated data for filtering (must be AFTER score recalculation)
+        const originalData = [...data];
 
         const allSpots = data;  // Show all items (no longer limited to 20)
         const top10 = allSpots.slice(0, 10);

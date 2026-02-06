@@ -578,16 +578,16 @@ async function renderDiningCustomizeView(type) {
             const metrics = item.metrics || {};
             let customScore = 0;
 
-            // Map metric IDs to actual data fields
+            // Map metric IDs to 0-100 scale (must match dining-view.js)
             const metricMapping = {
                 sentiment: metrics.sentiment || 50,
-                popularity: Math.min((item.reviews || 0) / 100, 100),
+                popularity: Math.min(Math.log10(Math.max(item.reviews || 1, 1)) * 25, 100),
                 rating: (item.rating || 4) * 20,
                 value: (5 - (item.price_level || 2)) * 25,
-                convenience: metrics.convenience || 50,
+                convenience: (metrics.convenience || 5) * 10,
                 vibe: (item.vibes?.length || 0) * 20,
                 workspace: (item.vibes?.includes('Work Friendly') ? 80 : 30),
-                location: metrics.convenience || 50,
+                location: (metrics.convenience || 5) * 10,
                 luxury: (item.price_level || 2) * 25
             };
 
