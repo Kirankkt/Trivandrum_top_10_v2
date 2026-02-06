@@ -60,34 +60,42 @@ async function renderDiningView(type, filters = {}) {
             hotels: ['sentiment', 'popularity', 'rating', 'value', 'location', 'luxury']
         };
 
-        // Apply custom weights if present
-        if (isCustomized) {
-            data = data.map(item => {
-                const metrics = item.metrics || {};
-                let customScore = 0;
-                const totalWeight = Object.values(savedWeights).reduce((a, b) => a + b, 0) || 100;
+        // Balanced preset defaults (must match dining-customize-view.js presets)
+        const balancedPresets = {
+            restaurants: { sentiment: 20, popularity: 15, rating: 25, value: 15, convenience: 10, vibe: 15 },
+            cafes: { sentiment: 15, popularity: 15, rating: 20, value: 20, convenience: 10, workspace: 20 },
+            hotels: { sentiment: 15, popularity: 10, rating: 20, value: 20, location: 25, luxury: 10 }
+        };
 
-                // Map metric IDs to actual data
-                const metricMapping = {
-                    sentiment: metrics.sentiment || 50,
-                    popularity: Math.min((item.reviews || 0) / 100, 100),
-                    rating: (item.rating || 4) * 20,
-                    value: (5 - (item.price_level || 2)) * 25,
-                    convenience: metrics.convenience || 50,
-                    vibe: (item.vibes?.length || 0) * 20,
-                    workspace: (item.vibes?.includes('Work Friendly') ? 80 : 30),
-                    location: metrics.convenience || 50,
-                    luxury: (item.price_level || 2) * 25
-                };
+        // Always calculate scores using the same formula as the customize live preview
+        // Use saved weights if present, otherwise use balanced preset
+        const weights = savedWeights || balancedPresets[type];
+        const totalWeight = Object.values(weights).reduce((a, b) => a + b, 0) || 100;
 
-                metricConfigs[type].forEach(metricId => {
-                    const weight = (savedWeights[metricId] || 0) / totalWeight;
-                    customScore += (metricMapping[metricId] || 50) * weight;
-                });
+        data = data.map(item => {
+            const metrics = item.metrics || {};
+            let customScore = 0;
 
-                return { ...item, score: customScore };
-            }).sort((a, b) => b.score - a.score);
-        }
+            // Map metric IDs to actual data (must match dining-customize-view.js)
+            const metricMapping = {
+                sentiment: metrics.sentiment || 50,
+                popularity: Math.min((item.reviews || 0) / 100, 100),
+                rating: (item.rating || 4) * 20,
+                value: (5 - (item.price_level || 2)) * 25,
+                convenience: metrics.convenience || 50,
+                vibe: (item.vibes?.length || 0) * 20,
+                workspace: (item.vibes?.includes('Work Friendly') ? 80 : 30),
+                location: metrics.convenience || 50,
+                luxury: (item.price_level || 2) * 25
+            };
+
+            metricConfigs[type].forEach(metricId => {
+                const weight = (weights[metricId] || 0) / totalWeight;
+                customScore += (metricMapping[metricId] || 50) * weight;
+            });
+
+            return { ...item, score: customScore };
+        }).sort((a, b) => b.score - a.score);
 
         const allSpots = data;  // Show all items (no longer limited to 20)
         const top10 = allSpots.slice(0, 10);

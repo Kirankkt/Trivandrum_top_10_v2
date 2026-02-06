@@ -18,17 +18,29 @@ async function renderCategoryView(type, config) {
         const savedWeights = JSON.parse(localStorage.getItem(storageKey));
         const isCustomized = savedWeights !== null;
 
-        // Apply custom weights if present (similar to dining-view)
-        if (isCustomized && config.metrics) {
+        // Balanced preset default for simple 3-metric categories
+        const balancedPreset = { rating: 34, popularity: 33, sentiment: 33 };
+
+        // Always calculate scores using the same formula as the customize live preview
+        // Use saved weights if present, otherwise use balanced preset
+        if (config.metrics) {
+            const weights = savedWeights || balancedPreset;
+            const totalWeight = Object.values(weights).reduce((a, b) => a + b, 0) || 100;
+
             data = data.map(item => {
                 const metrics = item.metrics || {};
                 let customScore = 0;
-                const totalWeight = Object.values(savedWeights).reduce((a, b) => a + b, 0) || 100;
+
+                // Map metric IDs to actual data (must match dining-customize-view.js)
+                const metricMapping = {
+                    sentiment: metrics.sentiment || 50,
+                    popularity: Math.min((item.reviews || 0) / 100, 100),
+                    rating: (item.rating || 4) * 20
+                };
 
                 config.metrics.forEach(metricId => {
-                    const weight = (savedWeights[metricId] || 0) / totalWeight;
-                    const metricValue = metrics[metricId] || item[metricId] || 50;
-                    customScore += metricValue * weight;
+                    const weight = (weights[metricId] || 0) / totalWeight;
+                    customScore += (metricMapping[metricId] || 50) * weight;
                 });
 
                 return { ...item, score: customScore };
