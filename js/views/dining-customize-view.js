@@ -581,12 +581,12 @@ async function renderDiningCustomizeView(type) {
             // Map metric IDs to actual data fields
             const metricMapping = {
                 sentiment: metrics.sentiment || 50,
-                popularity: Math.min((item.reviews || 0) / 1000, 100),
+                popularity: Math.min((item.reviews || 0) / 100, 100),
                 rating: (item.rating || 4) * 20,
                 value: (5 - (item.price_level || 2)) * 25,
                 convenience: metrics.convenience || 50,
                 vibe: (item.vibes?.length || 0) * 20,
-                workspace: (item.vibes?.includes('Work Friendly') ? 80 : 20),
+                workspace: (item.vibes?.includes('Work Friendly') ? 80 : 30),
                 location: metrics.convenience || 50,
                 luxury: (item.price_level || 2) * 25
             };
